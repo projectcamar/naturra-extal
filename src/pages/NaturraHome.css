@@ -6,9 +6,13 @@
 /* ---- HERO SECTION ---- */
 .naturra-home__hero {
     position: relative;
-    min-height: 40vh;
+    min-height: calc(100vh - 140px);
+    max-height: 650px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    /* Push content to top */
+    padding-top: 6rem;
+    /* Exact control over distance from top */
     margin-top: 108px;
     overflow: hidden;
     background: linear-gradient(135deg, #f8faf8 0%, #e8f0e8 100%);

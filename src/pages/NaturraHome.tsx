@@ -1,25 +1,78 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import AnnouncementBar from '../components/AnnouncementBar'
 import NaturraHeader from '../components/NaturraHeader'
 import NaturraFooter from '../components/NaturraFooter'
+import { NATURRA_HOME_TRANSLATIONS } from '../utils/NaturraTranslations'
+import { getCurrentLanguage, getStoredLanguage, detectLanguageFromIP, type LanguageCode } from '../utils/languageManager'
+import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
 import './NaturraHome.css'
 
+const OG_LOCALES = ['id_ID', 'en_US', 'ar_SA', 'zh_CN', 'ja_JP', 'es_ES', 'fr_FR', 'ko_KR'] as const
+
 const NaturraHome: React.FC = () => {
+    const location = useLocation()
+    const [language, setLanguage] = useState<LanguageCode>(() => {
+        return getCurrentLanguage(location.pathname, location.search)
+    })
+
+    useEffect(() => {
+        const currentLang = getCurrentLanguage(location.pathname, location.search)
+        if (currentLang !== language) {
+            setLanguage(currentLang)
+        }
+    }, [location.pathname, location.search, language])
+
+    // IP detection for first visit
+    useEffect(() => {
+        const stored = getStoredLanguage()
+        const urlLang = getCurrentLanguage(location.pathname, location.search)
+
+        if (stored || urlLang !== 'en') {
+            return
+        }
+
+        const detectIP = async () => {
+            const ipLang = await detectLanguageFromIP()
+            if (ipLang && !stored) {
+                setLanguage(ipLang)
+            }
+        }
+
+        detectIP()
+    }, [])
+
+    const isIndonesian = language === 'id'
+    const t = NATURRA_HOME_TRANSLATIONS[language] ?? NATURRA_HOME_TRANSLATIONS.en
+    const localeMeta = generateLanguageSpecificMeta(language)
+    const localizedUrls = generateLocalizedUrls(location.pathname, location.search)
+
     return (
         <div className="naturra-home">
-            <Helmet>
+            <AnnouncementBar language={language} isIndonesian={isIndonesian} />
+
+            <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
                 <title>Naturra Extal International | Premium Indonesian Commodity Trading</title>
                 <meta name="description" content="CV Naturra Extal International - Leaders in Indonesian agricultural commodity trading. Premium cocoa, cloves, and cocopeat sourced directly from Indonesian farmers." />
+                <meta httpEquiv="content-language" content={localeMeta.lang} />
+                <link rel="canonical" href={localizedUrls.canonical} />
+                {localizedUrls.alternates.map((alternate) => (
+                    <link key={`home-hreflang-${alternate.hrefLang}`} rel="alternate" hrefLang={alternate.hrefLang} href={alternate.href} />
+                ))}
                 <meta property="og:title" content="Naturra Extal International | Premium Indonesian Commodity Trading" />
                 <meta property="og:description" content="Leaders in Indonesian agricultural commodity trading. Premium cocoa, cloves, and cocopeat sourced directly from Indonesian farmers." />
                 <meta property="og:type" content="website" />
-                <link rel="canonical" href="https://naturra-extal.com/" />
+                <meta property="og:url" content={localizedUrls.canonical} />
+                <meta property="og:locale" content={localeMeta.locale} />
+                {OG_LOCALES.filter(altLocale => altLocale !== localeMeta.locale).map((altLocale) => (
+                    <meta key={`home-og-${altLocale}`} property="og:locale:alternate" content={altLocale} />
+                ))}
             </Helmet>
 
             <NaturraHeader />
 
-            {/* ===== HERO SECTION (ECOM Style) ===== */}
+            {/* ===== HERO SECTION ===== */}
             <section className="naturra-home__hero">
                 <div className="naturra-home__hero-bg">
                     <img
@@ -31,23 +84,18 @@ const NaturraHome: React.FC = () => {
                 <div className="naturra-home__hero-overlay" />
                 <div className="naturra-home__hero-content">
                     <div className="naturra-home__hero-text">
-                        <span className="naturra-home__hero-eyebrow">CV Naturra Extal International</span>
-                        <h1 className="naturra-home__hero-title">
-                            Leaders in<br />
-                            <strong>soft commodity</strong><br />
-                            services
-                        </h1>
+                        <span className="naturra-home__hero-eyebrow">{t.heroEyebrow}</span>
+                        <h1 className="naturra-home__hero-title" dangerouslySetInnerHTML={{ __html: t.heroTitle }} />
                         <p className="naturra-home__hero-desc">
-                            Connecting Indonesia's finest agricultural commodities with global markets.
-                            Specializing in premium cocoa, cloves, and cocopeat.
+                            {t.heroDesc}
                         </p>
                         <div className="naturra-home__hero-actions">
                             <Link to="/products" className="naturra-home__hero-btn naturra-home__hero-btn--primary">
-                                Our Products
+                                {t.btnProducts}
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                             </Link>
                             <Link to="/about" className="naturra-home__hero-btn naturra-home__hero-btn--secondary">
-                                Learn More
+                                {t.btnLearn}
                             </Link>
                         </div>
                     </div>
@@ -59,24 +107,24 @@ const NaturraHome: React.FC = () => {
                 <div className="naturra-home__stats-inner">
                     <div className="naturra-home__stat">
                         <div className="naturra-home__stat-number">3+</div>
-                        <div className="naturra-home__stat-label">Core Products</div>
+                        <div className="naturra-home__stat-label">{t.stat1}</div>
                     </div>
                     <div className="naturra-home__stat">
                         <div className="naturra-home__stat-number">100%</div>
-                        <div className="naturra-home__stat-label">Indonesian Sourced</div>
+                        <div className="naturra-home__stat-label">{t.stat2}</div>
                     </div>
                     <div className="naturra-home__stat">
                         <div className="naturra-home__stat-number">Global</div>
-                        <div className="naturra-home__stat-label">Market Reach</div>
+                        <div className="naturra-home__stat-label">{t.stat3}</div>
                     </div>
                     <div className="naturra-home__stat">
                         <div className="naturra-home__stat-number">Premium</div>
-                        <div className="naturra-home__stat-label">Quality Grade</div>
+                        <div className="naturra-home__stat-label">{t.stat4}</div>
                     </div>
                 </div>
             </section>
 
-            {/* ===== HERITAGE SECTION (ECOM Style - Image 4) ===== */}
+            {/* ===== HERITAGE SECTION ===== */}
             <section className="naturra-home__heritage">
                 <div className="naturra-home__heritage-inner">
                     <div className="naturra-home__heritage-image">
@@ -88,17 +136,10 @@ const NaturraHome: React.FC = () => {
                         <div className="naturra-home__heritage-image-accent" />
                     </div>
                     <div className="naturra-home__heritage-text">
-                        <span className="naturra-home__heritage-eyebrow">Our Heritage</span>
-                        <h2 className="naturra-home__heritage-title">
-                            Carrying on our<br />
-                            <strong>market experience</strong><br />
-                            and family business<br />
-                            heritage.
-                        </h2>
+                        <span className="naturra-home__heritage-eyebrow">{t.heritageEyebrow}</span>
+                        <h2 className="naturra-home__heritage-title" dangerouslySetInnerHTML={{ __html: t.heritageTitle }} />
                         <p className="naturra-home__heritage-desc">
-                            CV Naturra Extal International is an Indonesian-based agricultural commodity trading company.
-                            We specialize in sourcing, processing, and exporting premium Indonesian commodities including
-                            cocoa powder, cloves (cengkeh), and cocopeat to international markets.
+                            {t.heritageDesc}
                         </p>
                         <div className="naturra-home__heritage-features">
                             <div className="naturra-home__heritage-feature">
@@ -107,7 +148,7 @@ const NaturraHome: React.FC = () => {
                                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                                     </svg>
                                 </div>
-                                <span className="naturra-home__heritage-feature-text">Quality<br />Certified</span>
+                                <span className="naturra-home__heritage-feature-text" dangerouslySetInnerHTML={{ __html: t.feat1 }} />
                             </div>
                             <div className="naturra-home__heritage-feature">
                                 <div className="naturra-home__heritage-feature-icon">
@@ -116,7 +157,7 @@ const NaturraHome: React.FC = () => {
                                         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                                     </svg>
                                 </div>
-                                <span className="naturra-home__heritage-feature-text">Global<br />Distribution</span>
+                                <span className="naturra-home__heritage-feature-text" dangerouslySetInnerHTML={{ __html: t.feat2 }} />
                             </div>
                             <div className="naturra-home__heritage-feature">
                                 <div className="naturra-home__heritage-feature-icon">
@@ -127,19 +168,19 @@ const NaturraHome: React.FC = () => {
                                         <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                                     </svg>
                                 </div>
-                                <span className="naturra-home__heritage-feature-text">Farmer<br />Partnerships</span>
+                                <span className="naturra-home__heritage-feature-text" dangerouslySetInnerHTML={{ __html: t.feat3 }} />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* ===== WHO WE ARE / PRODUCT GRID (ECOM Style - Image 4) ===== */}
+            {/* ===== WHO WE ARE GRID ===== */}
             <section className="naturra-home__grid">
                 <div className="naturra-home__grid-inner">
-                    <span className="naturra-home__section-eyebrow">Our Products</span>
+                    <span className="naturra-home__section-eyebrow">{t.whoEyebrow}</span>
                     <h2 className="naturra-home__section-title">
-                        <strong>Who we are</strong>
+                        <strong>{t.whoWeAre}</strong>
                     </h2>
 
                     <div className="naturra-home__product-grid">
@@ -152,14 +193,13 @@ const NaturraHome: React.FC = () => {
                                 loading="lazy"
                             />
                             <div className="naturra-home__product-card-body">
-                                <span className="naturra-home__product-card-tag">HS 1805 &amp; 1806</span>
-                                <h3 className="naturra-home__product-card-name">Cocoa Products</h3>
+                                <span className="naturra-home__product-card-tag">{t.cocoaCategory}</span>
+                                <h3 className="naturra-home__product-card-name">{t.cocoaTitle}</h3>
                                 <p className="naturra-home__product-card-desc">
-                                    Premium cocoa powder — both pure (HS 1805.00.0) and sweetened (HS 1806.00.0).
-                                    Sourced from Indonesia's finest cocoa-producing regions.
+                                    {t.cocoaDesc}
                                 </p>
                                 <span className="naturra-home__product-card-link">
-                                    Learn more
+                                    {t.btnLearn}
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                                 </span>
                             </div>
@@ -169,20 +209,18 @@ const NaturraHome: React.FC = () => {
                         <Link to="/products" className="naturra-home__product-card">
                             <img
                                 className="naturra-home__product-card-image"
-                                src="https://images.unsplash.com/photo-1599909533601-ec6cc tried8a7ab3?w=600&q=80"
+                                src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80"
                                 alt="Indonesian Cloves - Cengkeh"
                                 loading="lazy"
-                                onError={(e) => { (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80' }}
                             />
                             <div className="naturra-home__product-card-body">
-                                <span className="naturra-home__product-card-tag">Premium Grade</span>
-                                <h3 className="naturra-home__product-card-name">Cengkeh (Cloves)</h3>
+                                <span className="naturra-home__product-card-tag">{t.clovesCategory}</span>
+                                <h3 className="naturra-home__product-card-name">{t.clovesTitle}</h3>
                                 <p className="naturra-home__product-card-desc">
-                                    Hand-picked Indonesian cloves known worldwide for their rich aroma and superior quality.
-                                    Ideal for spice trade, cigarettes, and culinary use.
+                                    {t.clovesDesc}
                                 </p>
                                 <span className="naturra-home__product-card-link">
-                                    Learn more
+                                    {t.btnLearn}
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                                 </span>
                             </div>
@@ -197,14 +235,13 @@ const NaturraHome: React.FC = () => {
                                 loading="lazy"
                             />
                             <div className="naturra-home__product-card-body">
-                                <span className="naturra-home__product-card-tag">Eco-Friendly</span>
-                                <h3 className="naturra-home__product-card-name">Cocopeat</h3>
+                                <span className="naturra-home__product-card-tag">{t.cocopeatCategory}</span>
+                                <h3 className="naturra-home__product-card-name">{t.cocopeatTitle}</h3>
                                 <p className="naturra-home__product-card-desc">
-                                    High-quality cocopeat from Indonesian coconut husks. Perfect for horticulture,
-                                    agriculture, and sustainable growing media applications.
+                                    {t.cocopeatDesc}
                                 </p>
                                 <span className="naturra-home__product-card-link">
-                                    Learn more
+                                    {t.btnLearn}
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                                 </span>
                             </div>
@@ -222,34 +259,29 @@ const NaturraHome: React.FC = () => {
                             alt="Sustainable farming practices"
                             loading="lazy"
                         />
-                        <span className="naturra-home__sustainability-badge">Sustainability</span>
+                        <span className="naturra-home__sustainability-badge">{t.sustainBadge}</span>
                     </div>
                     <div className="naturra-home__sustainability-content">
-                        <h3>
-                            Committed to a<br />
-                            <strong>smarter future</strong>
-                        </h3>
+                        <h3 dangerouslySetInnerHTML={{ __html: t.sustainTitle }} />
                         <p>
-                            At Naturra Extal, sustainability isn't just a word — it's how we do business.
-                            We partner directly with Indonesian farmers, ensuring fair trade practices
-                            and environmental stewardship throughout our supply chain.
+                            {t.sustainDesc}
                         </p>
                         <ul className="naturra-home__sustainability-list">
                             <li>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
-                                Direct farmer partnerships across Indonesia
+                                {t.sustainList1}
                             </li>
                             <li>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
-                                Sustainable sourcing and processing methods
+                                {t.sustainList2}
                             </li>
                             <li>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
-                                Fair pricing and transparent supply chain
+                                {t.sustainList3}
                             </li>
                             <li>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
-                                Quality-controlled from farm to export
+                                {t.sustainList4}
                             </li>
                         </ul>
                     </div>
@@ -260,14 +292,10 @@ const NaturraHome: React.FC = () => {
             <section className="naturra-home__cta">
                 <div className="naturra-home__cta-inner">
                     <div>
-                        <span className="naturra-home__cta-eyebrow">Get in Touch</span>
-                        <h2 className="naturra-home__cta-title">
-                            Contact Naturra Extal to<br />
-                            <strong>discuss your commodity needs</strong>
-                        </h2>
+                        <span className="naturra-home__cta-eyebrow">{t.ctaEyebrow}</span>
+                        <h2 className="naturra-home__cta-title" dangerouslySetInnerHTML={{ __html: t.ctaTitle }} />
                         <p className="naturra-home__cta-desc">
-                            Whether you're looking for premium cocoa powder, Indonesian cloves, or cocopeat,
-                            our team is ready to help you find the perfect solution for your business.
+                            {t.ctaDesc}
                         </p>
                         <div className="naturra-home__cta-actions">
                             <a
@@ -276,14 +304,14 @@ const NaturraHome: React.FC = () => {
                                 rel="noopener noreferrer"
                                 className="naturra-home__cta-btn naturra-home__cta-btn--primary"
                             >
-                                WhatsApp Us
+                                {t.ctaBtn1}
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17L17 7M17 7H7M17 7V17" /></svg>
                             </a>
                             <a
-                                href="mailto:naturraextal@gmail.com"
+                                href="mailto:hello@naturraextal.com"
                                 className="naturra-home__cta-btn naturra-home__cta-btn--secondary"
                             >
-                                Email Us
+                                {t.ctaBtn2}
                             </a>
                         </div>
                     </div>
@@ -291,22 +319,22 @@ const NaturraHome: React.FC = () => {
                     <div className="naturra-home__cta-cards">
                         <div className="naturra-home__cta-card">
                             <div className="naturra-home__cta-card-icon">📧</div>
-                            <h4 className="naturra-home__cta-card-title">Email</h4>
-                            <p className="naturra-home__cta-card-desc">naturraextal@gmail.com</p>
+                            <h4 className="naturra-home__cta-card-title">{t.emailTitle}</h4>
+                            <p className="naturra-home__cta-card-desc">hello@naturraextal.com</p>
                         </div>
                         <div className="naturra-home__cta-card">
                             <div className="naturra-home__cta-card-icon">📱</div>
-                            <h4 className="naturra-home__cta-card-title">WhatsApp</h4>
+                            <h4 className="naturra-home__cta-card-title">{t.waTitle}</h4>
                             <p className="naturra-home__cta-card-desc">+62 895-1395-7752</p>
                         </div>
                         <div className="naturra-home__cta-card">
                             <div className="naturra-home__cta-card-icon">🌍</div>
-                            <h4 className="naturra-home__cta-card-title">Global Trade</h4>
-                            <p className="naturra-home__cta-card-desc">Worldwide shipping available</p>
+                            <h4 className="naturra-home__cta-card-title">{t.globalTitle}</h4>
+                            <p className="naturra-home__cta-card-desc">{t.globalDesc}</p>
                         </div>
                         <div className="naturra-home__cta-card">
                             <div className="naturra-home__cta-card-icon">🏢</div>
-                            <h4 className="naturra-home__cta-card-title">Corporate</h4>
+                            <h4 className="naturra-home__cta-card-title">{t.corpTitle}</h4>
                             <p className="naturra-home__cta-card-desc">CV Naturra Extal International</p>
                         </div>
                     </div>

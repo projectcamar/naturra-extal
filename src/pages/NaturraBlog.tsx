@@ -302,8 +302,8 @@ const NaturraBlog: React.FC = () => {
     <div className="blog-page">
       <AnnouncementBar language={language} isIndonesian={isIndonesian} />
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
-        <title>{truncateTitle('Blog Furniture Industrial & Tips Desain - Mangala Living')}</title>
-        <meta name="description" content={truncateMetaDescription('Panduan lengkap furniture industrial untuk cafe, restoran, hotel. Tips memilih furniture besi custom, cara merawat, tren desain 2025, perbandingan material, harga, dan area workshop Bekasi Jakarta. 135+ artikel berbasis pengalaman 25 tahun Mangala Living.')} />
+        <title>{truncateTitle('Blog Furniture Industrial & Tips Desain - Naturra Extal')}</title>
+        <meta name="description" content={truncateMetaDescription('Panduan lengkap furniture industrial untuk cafe, restoran, hotel. Tips memilih furniture besi custom, cara merawat, tren desain 2025, perbandingan material, harga, dan area workshop Bekasi Jakarta. 135+ artikel berbasis pengalaman 25 tahun Naturra Extal.')} />
         <meta name="keywords" content="blog furniture industrial, tips furniture cafe, cara memilih furniture restoran, furniture besi custom panduan, workshop furniture bekasi, harga furniture industrial 2025, tips desain interior industrial, furniture cafe murah, perbandingan furniture besi vs kayu, cara merawat furniture industrial, tren furniture 2025, furniture bekasi guide, furniture jakarta tips, inspirasi desain cafe industrial" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -312,8 +312,8 @@ const NaturraBlog: React.FC = () => {
         {localizedUrls.alternates.map((alternate) => (
           <link key={`blog-hreflang-${alternate.hrefLang}`} rel="alternate" hrefLang={alternate.hrefLang} href={alternate.href} />
         ))}
-        {prevUrl && <link rel="prev" href={`https://mangala-living.com${prevUrl}`} />}
-        {nextUrl && <link rel="next" href={`https://mangala-living.com${nextUrl}`} />}
+        {prevUrl && <link rel="prev" href={`https://Naturra Extal-living.com${prevUrl}`} />}
+        {nextUrl && <link rel="next" href={`https://Naturra Extal-living.com${nextUrl}`} />}
 
         {/* AI Search Optimization: Clear article purpose */}
         <meta property="og:title" content="Blog Furniture Industrial - 135+ Artikel Tips & Panduan Lengkap" />
@@ -332,8 +332,8 @@ const NaturraBlog: React.FC = () => {
         <div className="blog-hero-image">
           <img
             src={heroImage}
-            alt="Blog Furniture Industrial & Tips Desain Cafe Restoran - 135+ Artikel Panduan Lengkap Mangala Living"
-            title="Blog Furniture Industrial - Tips & Panduan Lengkap dari Workshop Bekasi Mangala Living"
+            alt="Blog Furniture Industrial & Tips Desain Cafe Restoran - 135+ Artikel Panduan Lengkap Naturra Extal"
+            title="Blog Furniture Industrial - Tips & Panduan Lengkap dari Workshop Bekasi Naturra Extal"
             loading="eager"
             fetchPriority="high"
             width="1920"
@@ -382,7 +382,7 @@ const NaturraBlog: React.FC = () => {
                   <div className="blog-card-image">
                     <img
                       src={post.image}
-                      alt={`${post.title} - ${post.category} Blog Furniture Industrial Mangala Living`}
+                      alt={`${post.title} - ${post.category} Blog Furniture Industrial Naturra Extal`}
                       title={`${post.title} - ${post.category} Artikel Furniture Industrial`}
                       loading="lazy"
                       width="400"
@@ -392,7 +392,7 @@ const NaturraBlog: React.FC = () => {
                       data-post-slug={post.slug}
                       data-category={post.category}
                     />
-                    <div className="blog-card-badge">MANGALA</div>
+                    <div className="blog-card-badge">Naturra Extal</div>
                   </div>
                   <div className="blog-card-content">
                     <span className="blog-card-category">{post.category.toUpperCase()}</span>

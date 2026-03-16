@@ -301,49 +301,49 @@ const CTA_TRANSLATIONS: Record<LanguageCode, {
 }> = {
   id: {
     title: 'Tertarik dengan Furniture Industrial Kami?',
-    subtitle: 'Kunjungi koleksi lengkap furniture industrial custom berkualitas tinggi dari Mangala Living.',
+    subtitle: 'Kunjungi koleksi lengkap furniture industrial custom berkualitas tinggi dari Naturra Extal.',
     viewAllProducts: 'Lihat Semua Produk',
     contactUs: 'Hubungi Kami'
   },
   en: {
     title: 'Interested in Our Industrial Furniture?',
-    subtitle: 'Visit our complete collection of high-quality custom industrial furniture from Mangala Living.',
+    subtitle: 'Visit our complete collection of high-quality custom industrial furniture from Naturra Extal.',
     viewAllProducts: 'View All Products',
     contactUs: 'Contact Us'
   },
   ar: {
     title: 'هل أنت مهتم بأثاثنا الصناعي؟',
-    subtitle: 'زر مجموعتنا الكاملة من الأثاث الصناعي المخصص عالي الجودة من Mangala Living.',
+    subtitle: 'زر مجموعتنا الكاملة من الأثاث الصناعي المخصص عالي الجودة من Naturra Extal.',
     viewAllProducts: 'عرض جميع المنتجات',
     contactUs: 'اتصل بنا'
   },
   zh: {
     title: '对我们的工业风家具感兴趣吗？',
-    subtitle: '访问我们完整的Mangala Living高品质定制工业风家具系列。',
+    subtitle: '访问我们完整的Naturra Extal高品质定制工业风家具系列。',
     viewAllProducts: '查看所有产品',
     contactUs: '联系我们'
   },
   ja: {
     title: '当社の工業風家具にご興味はありますか？',
-    subtitle: 'Mangala Livingの高品質なカスタム工業風家具の完全なコレクションをご覧ください。',
+    subtitle: 'Naturra Extalの高品質なカスタム工業風家具の完全なコレクションをご覧ください。',
     viewAllProducts: 'すべての製品を見る',
     contactUs: 'お問い合わせ'
   },
   es: {
     title: '¿Interesado en Nuestro Mobiliario Industrial?',
-    subtitle: 'Visite nuestra colección completa de muebles industriales personalizados de alta calidad de Mangala Living.',
+    subtitle: 'Visite nuestra colección completa de muebles industriales personalizados de alta calidad de Naturra Extal.',
     viewAllProducts: 'Ver Todos los Productos',
     contactUs: 'Contáctenos'
   },
   fr: {
     title: 'Intéressé par Notre Mobilier Industriel ?',
-    subtitle: 'Visitez notre collection complète de mobilier industriel sur mesure de haute qualité de Mangala Living.',
+    subtitle: 'Visitez notre collection complète de mobilier industriel sur mesure de haute qualité de Naturra Extal.',
     viewAllProducts: 'Voir Tous les Produits',
     contactUs: 'Nous Contacter'
   },
   ko: {
     title: '저희 산업용 가구에 관심이 있으신가요?',
-    subtitle: 'Mangala Living의 고품질 맞춤형 산업용 가구 컬렉션 전체를 둘러보세요.',
+    subtitle: 'Naturra Extal의 고품질 맞춤형 산업용 가구 컬렉션 전체를 둘러보세요.',
     viewAllProducts: '모든 제품 보기',
     contactUs: '문의하기'
   }
@@ -532,7 +532,7 @@ const NaturraBlogPost: React.FC = () => {
       'kombinasi-kayu-dan-besi-untuk-furniture-modern': 'kombinasi kayu dan besi, furniture modern, material industrial, meja kursi kayu besi',
       'desain-meja-bar-industrial-untuk-ruang-terbatas': 'desain meja bar, meja bar ruang terbatas, meja cafe compact, furniture space efficient'
     }
-    return keywordMap[slug] || `${title}, furniture industrial, furniture besi custom, furniture bekasi, mangala living`
+    return keywordMap[slug] || `${title}, furniture industrial, furniture besi custom, furniture bekasi, Naturra Extal`
   }
 
   // Generate BlogPosting Schema
@@ -540,8 +540,8 @@ const NaturraBlogPost: React.FC = () => {
   const metaDescription = (post.excerpt && post.excerpt.trim().length > 0)
     ? post.excerpt
     : (post.category === 'Export & International'
-      ? `Read: ${post.title} — Practical guide, FAQs, and product references from Mangala Living.`
-      : `Baca: ${post.title} — Panduan praktis, FAQ, dan referensi produk dari Mangala Living.`)
+      ? `Read: ${post.title} — Practical guide, FAQs, and product references from Naturra Extal.`
+      : `Baca: ${post.title} — Panduan praktis, FAQ, dan referensi produk dari Naturra Extal.`)
 
   // Extract FAQ from content for AI Search Optimization (Strategy 1 & 5)
   const extractFAQFromContent = () => {
@@ -588,7 +588,7 @@ const NaturraBlogPost: React.FC = () => {
     <div className="blog-page blog-post-page">
       <AnnouncementBar language={language} isIndonesian={isIndonesian} />
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
-        <title>{truncateTitle(`${post.title} - Mangala Living`)}</title>
+        <title>{truncateTitle(`${post.title} - Naturra Extal`)}</title>
         <meta name="description" content={truncateMetaDescription(metaDescription)} />
         <meta name="keywords" content={generateKeywords(post.slug, post.title)} />
         <meta httpEquiv="content-language" content={localeMeta.lang} />
@@ -607,7 +607,7 @@ const NaturraBlogPost: React.FC = () => {
         <meta property="og:url" content={localizedUrls.canonical} />
         <meta property="og:type" content="article" />
         <meta property="article:published_time" content={post.date} />
-        <meta property="article:author" content={post.author || 'Mangala Living'} />
+        <meta property="article:author" content={post.author || 'Naturra Extal'} />
         <meta property="og:locale" content={localeMeta.locale} />
         <meta property="og:locale:alternate" content="id_ID" />
         <meta property="og:locale:alternate" content="en_US" />
@@ -648,8 +648,8 @@ const NaturraBlogPost: React.FC = () => {
         <div className="blog-post-hero-image">
           <img
             src={post.image}
-            alt={`${post.title} - ${post.category} Industrial Furniture Article by Mangala Living`}
-            title={`${post.title} | Mangala Living`}
+            alt={`${post.title} - ${post.category} Industrial Furniture Article by Naturra Extal`}
+            title={`${post.title} | Naturra Extal`}
             loading="eager"
             fetchPriority="high"
             width="1920"
@@ -664,7 +664,7 @@ const NaturraBlogPost: React.FC = () => {
               {post.title}
             </h1>
             <p className="blog-post-meta">
-              {post.author || 'Mangala Living'} · {formattedDate}
+              {post.author || 'Naturra Extal'} · {formattedDate}
             </p>
           </div>
         </div>
@@ -699,8 +699,8 @@ const NaturraBlogPost: React.FC = () => {
                         <figure className="blog-post-figure">
                           <img
                             src={section.image}
-                            alt={section.imageAlt || `${post.title} - ${section.heading || 'Industrial Furniture Article'} - Mangala Living`}
-                            title={section.imageAlt || `${post.title} - ${section.heading || 'Furniture Industrial Guide'} by Mangala Living`}
+                            alt={section.imageAlt || `${post.title} - ${section.heading || 'Industrial Furniture Article'} - Naturra Extal`}
+                            title={section.imageAlt || `${post.title} - ${section.heading || 'Furniture Industrial Guide'} by Naturra Extal`}
                             loading="lazy"
                             width="800"
                             height="500"
@@ -986,8 +986,8 @@ const NaturraBlogPost: React.FC = () => {
                     <a
                       href={`https://wa.me/+6288801146881?text=${encodeURIComponent(
                         post?.category === 'Export & International'
-                          ? `Hello Mangala Living,\n\nI just read your article: "${post?.title}". I'm interested in industrial furniture for my project. Can I get more information and consultation?\n\nArticle: ${window.location.href}\n\nThank you!`
-                          : `Halo Mangala Living,\n\nSaya baru membaca artikel Anda: "${post?.title}". Saya tertarik dengan furniture industrial untuk project saya. Bisakah saya mendapatkan informasi lebih lanjut dan konsultasi?\n\nArtikel: ${window.location.href}\n\nTerima kasih!`
+                          ? `Hello Naturra Extal,\n\nI just read your article: "${post?.title}". I'm interested in industrial furniture for my project. Can I get more information and consultation?\n\nArticle: ${window.location.href}\n\nThank you!`
+                          : `Halo Naturra Extal,\n\nSaya baru membaca artikel Anda: "${post?.title}". Saya tertarik dengan furniture industrial untuk project saya. Bisakah saya mendapatkan informasi lebih lanjut dan konsultasi?\n\nArtikel: ${window.location.href}\n\nTerima kasih!`
                       )}`}
                       className="sidebar-consultation-btn"
                       onClick={() => trackWhatsAppClick('blog_post_consultation_sidebar', {
