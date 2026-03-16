@@ -6,7 +6,7 @@
 /* ---- HERO SECTION ---- */
 .naturra-home__hero {
     position: relative;
-    min-height: 70vh;
+    min-height: 40vh;
     display: flex;
     align-items: center;
     margin-top: 108px;
@@ -39,7 +39,7 @@
     z-index: 2;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: 1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
