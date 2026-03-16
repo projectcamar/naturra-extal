@@ -37,7 +37,7 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
 }> = {
   id: {
     subtitle: "Kami akan membalas secepat mungkin",
-    initialMessage: "Hai ??! Selamat datang di Mangala Living. Beri tahu saya jika Anda memiliki pertanyaan.\n\nJangan ragu untuk whatsapp di [+6288801146881](https://wa.me/+6288801146881)",
+    initialMessage: "Hai ??! Selamat datang di Naturra Extal. Beri tahu saya jika Anda memiliki pertanyaan.\n\nJangan ragu untuk whatsapp di [+628951395752](https://wa.me/+628951395752)",
     continueWhatsApp: "Lanjutkan di WhatsApp",
     typeMessage: "Ketik pesan Anda...",
     contactUs: "Hubungi Kami",
@@ -45,8 +45,8 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
     nameLabel: "Nama",
     namePlaceholder: "Pastikan untuk menambahkan nama Anda",
     submit: "Kirim",
-    thankYouMessage: (name: string) => `Terima kasih, ${name}! Saya di sini untuk membantu Anda dengan informasi terkait furniture Mangala Living. Bagaimana saya bisa membantu Anda hari ini?`,
-    whatsappRedirectMessage: "Halo, saya tertarik dengan furniture Mangala Living. Bisakah saya mendapatkan informasi lebih lanjut?",
+    thankYouMessage: (name: string) => `Terima kasih, ${name}! Saya di sini untuk membantu Anda dengan informasi terkait furniture Naturra Extal. Bagaimana saya bisa membantu Anda hari ini?`,
+    whatsappRedirectMessage: "Halo, saya tertarik dengan furniture Naturra Extal. Bisakah saya mendapatkan informasi lebih lanjut?",
     simpleResponses: [
       "Terima kasih atas pertanyaan Anda! Untuk informasi lebih lanjut tentang produk furniture industrial kami, silakan hubungi kami langsung di WhatsApp.",
       "Saya senang membantu Anda! Untuk konsultasi produk dan harga, silakan hubungi tim kami di WhatsApp.",
@@ -55,7 +55,7 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
   },
   en: {
     subtitle: "We'll reply as soon as we can",
-    initialMessage: "Hi there ??! Welcome to the Mangala Living. Let me know if you have any questions.\n\nFeel free to whatsapp on [+6288801146881](https://wa.me/+6288801146881)",
+    initialMessage: "Hi there ??! Welcome to the Naturra Extal. Let me know if you have any questions.\n\nFeel free to whatsapp on [+628951395752](https://wa.me/+628951395752)",
     continueWhatsApp: "Continue on WhatsApp",
     typeMessage: "Type your message...",
     contactUs: "Contact Us",
@@ -63,8 +63,8 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
     nameLabel: "Name",
     namePlaceholder: "Make sure to add your name",
     submit: "Submit",
-    thankYouMessage: (name: string) => `Thank you, ${name}! I am here to assist you with information related to Mangala Living furniture. How may I help you today?`,
-    whatsappRedirectMessage: "Hello, I'm interested in Mangala Living furniture. Can I get more information?",
+    thankYouMessage: (name: string) => `Thank you, ${name}! I am here to assist you with information related to Naturra Extal furniture. How may I help you today?`,
+    whatsappRedirectMessage: "Hello, I'm interested in Naturra Extal furniture. Can I get more information?",
     simpleResponses: [
       "Thank you for your question! For more information about our industrial furniture products, please contact us directly on WhatsApp.",
       "I'm happy to help! For product consultation and pricing, please contact our team on WhatsApp.",
@@ -73,7 +73,7 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
   },
   ar: {
     subtitle: "سوف نرد في أقرب وقت ممكن",
-    initialMessage: "مرحباً ??! مرحباً بك في Mangala Living. أخبرني إذا كان لديك أي أسئلة.\n\nلا تتردد في التواصل عبر الواتساب على [+6288801146881](https://wa.me/+6288801146881)",
+    initialMessage: "مرحباً ??! مرحباً بك في Naturra Extal. أخبرني إذا كان لديك أي أسئلة.\n\nلا تتردد في التواصل عبر الواتساب على [+628951395752](https://wa.me/+628951395752)",
     continueWhatsApp: "المتابعة على واتساب",
     typeMessage: "اكتب رسالتك...",
     contactUs: "اتصل بنا",
@@ -81,8 +81,8 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
     nameLabel: "الاسم",
     namePlaceholder: "تأكد من إضافة اسمك",
     submit: "إرسال",
-    thankYouMessage: (name: string) => `شكراً لك، ${name}! أنا هنا لمساعدتك بمعلومات حول أثاث Mangala Living. كيف يمكنني مساعدتك اليوم؟`,
-    whatsappRedirectMessage: "مرحباً، أنا مهتم بأثاث Mangala Living. هل يمكنني الحصول على مزيد من المعلومات؟",
+    thankYouMessage: (name: string) => `شكراً لك، ${name}! أنا هنا لمساعدتك بمعلومات حول أثاث Naturra Extal. كيف يمكنني مساعدتك اليوم؟`,
+    whatsappRedirectMessage: "مرحباً، أنا مهتم بأثاث Naturra Extal. هل يمكنني الحصول على مزيد من المعلومات؟",
     simpleResponses: [
       "شكراً لسؤالك! للحصول على مزيد من المعلومات حول منتجات الأثاث الصناعي لدينا، يرجى الاتصال بنا مباشرة على الواتساب.",
       "أنا سعيد لمساعدتك! للاستشارة حول المنتج والأسعار، يرجى الاتصال بفريقنا على الواتساب.",
@@ -91,7 +91,7 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
   },
   zh: {
     subtitle: "我们会尽快回复",
-    initialMessage: "你好 ??! 欢迎来到 Mangala Living。如果您有任何问题，请告诉我。\n\n欢迎通过 WhatsApp 联系我们： [+6288801146881](https://wa.me/+6288801146881)",
+    initialMessage: "你好 ??! 欢迎来到 Naturra Extal。如果您有任何问题，请告诉我。\n\n欢迎通过 WhatsApp 联系我们： [+628951395752](https://wa.me/+628951395752)",
     continueWhatsApp: "在 WhatsApp 上继续",
     typeMessage: "输入您的消息...",
     contactUs: "联系我们",
@@ -99,8 +99,8 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
     nameLabel: "姓名",
     namePlaceholder: "请确保添加您的姓名",
     submit: "提交",
-    thankYouMessage: (name: string) => `谢谢，${name}！我在这里协助您了解 Mangala Living 家具的相关信息。我今天能如何帮助您？`,
-    whatsappRedirectMessage: "您好，我对 Mangala Living 家具感兴趣。能否获得更多信息？",
+    thankYouMessage: (name: string) => `谢谢，${name}！我在这里协助您了解 Naturra Extal 家具的相关信息。我今天能如何帮助您？`,
+    whatsappRedirectMessage: "您好，我对 Naturra Extal 家具感兴趣。能否获得更多信息？",
     simpleResponses: [
       "感谢您的提问！有关我们工业家具产品的更多信息，请直接在 WhatsApp 上联系我们。",
       "我很乐意帮助您！如需产品咨询和价格，请联系我们的 WhatsApp 团队。",
@@ -109,7 +109,7 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
   },
   ja: {
     subtitle: "できるだけ早く返信いたします",
-    initialMessage: "こんにちは ??! Mangala Living へようこそ。ご質問がございましたら、お知らせください。\n\nWhatsApp でお気軽にご連絡ください： [+6288801146881](https://wa.me/+6288801146881)",
+    initialMessage: "こんにちは ??! Naturra Extal へようこそ。ご質問がございましたら、お知らせください。\n\nWhatsApp でお気軽にご連絡ください： [+628951395752](https://wa.me/+628951395752)",
     continueWhatsApp: "WhatsApp で続ける",
     typeMessage: "メッセージを入力...",
     contactUs: "お問い合わせ",
@@ -117,8 +117,8 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
     nameLabel: "お名前",
     namePlaceholder: "お名前を必ず追加してください",
     submit: "送信",
-    thankYouMessage: (name: string) => `${name} さん、ありがとうございます！Mangala Living の家具に関する情報をお手伝いするためにここにいます。今日はどのようにお手伝いできますか？`,
-    whatsappRedirectMessage: "こんにちは、Mangala Living の家具に興味があります。詳しい情報をいただけますか？",
+    thankYouMessage: (name: string) => `${name} さん、ありがとうございます！Naturra Extal の家具に関する情報をお手伝いするためにここにいます。今日はどのようにお手伝いできますか？`,
+    whatsappRedirectMessage: "こんにちは、Naturra Extal の家具に興味があります。詳しい情報をいただけますか？",
     simpleResponses: [
       "ご質問ありがとうございます！当社のインダストリアル家具製品の詳細については、WhatsApp で直接お問い合わせください。",
       "お手伝いできて光栄です！製品の相談や価格については、WhatsApp でチームにご連絡ください。",
@@ -127,7 +127,7 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
   },
   es: {
     subtitle: "Responderemos lo antes posible",
-    initialMessage: "¡Hola ??! Bienvenido a Mangala Living. Avísame si tienes alguna pregunta.\n\nNo dudes en contactarnos por WhatsApp en [+6288801146881](https://wa.me/+6288801146881)",
+    initialMessage: "¡Hola ??! Bienvenido a Naturra Extal. Avísame si tienes alguna pregunta.\n\nNo dudes en contactarnos por WhatsApp en [+628951395752](https://wa.me/+628951395752)",
     continueWhatsApp: "Continuar en WhatsApp",
     typeMessage: "Escribe tu mensaje...",
     contactUs: "Contáctanos",
@@ -135,8 +135,8 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
     nameLabel: "Nombre",
     namePlaceholder: "Asegúrate de agregar tu nombre",
     submit: "Enviar",
-    thankYouMessage: (name: string) => `¡Gracias, ${name}! Estoy aquí para ayudarte con información sobre muebles Mangala Living. ¿Cómo puedo ayudarte hoy?`,
-    whatsappRedirectMessage: "Hola, estoy interesado en los muebles de Mangala Living. ¿Puedo obtener más información?",
+    thankYouMessage: (name: string) => `¡Gracias, ${name}! Estoy aquí para ayudarte con información sobre muebles Naturra Extal. ¿Cómo puedo ayudarte hoy?`,
+    whatsappRedirectMessage: "Hola, estoy interesado en los muebles de Naturra Extal. ¿Puedo obtener más información?",
     simpleResponses: [
       "¡Gracias por tu pregunta! Para más información sobre nuestros productos de muebles industriales, contáctanos directamente por WhatsApp.",
       "¡Estoy feliz de ayudar! Para consultas de productos y precios, contacta a nuestro equipo por WhatsApp.",
@@ -145,7 +145,7 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
   },
   fr: {
     subtitle: "Nous répondrons dès que possible",
-    initialMessage: "Salut ??! Bienvenue chez Mangala Living. Faites-moi savoir si vous avez des questions.\n\nN'hésitez pas à nous contacter sur WhatsApp au [+6288801146881](https://wa.me/+6288801146881)",
+    initialMessage: "Salut ??! Bienvenue chez Naturra Extal. Faites-moi savoir si vous avez des questions.\n\nN'hésitez pas à nous contacter sur WhatsApp au [+628951395752](https://wa.me/+628951395752)",
     continueWhatsApp: "Continuer sur WhatsApp",
     typeMessage: "Tapez votre message...",
     contactUs: "Nous contacter",
@@ -153,8 +153,8 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
     nameLabel: "Nom",
     namePlaceholder: "Assurez-vous d'ajouter votre nom",
     submit: "Envoyer",
-    thankYouMessage: (name: string) => `Merci, ${name} ! Je suis là pour vous aider avec des informations sur les meubles Mangala Living. Comment puis-je vous aider aujourd'hui ?`,
-    whatsappRedirectMessage: "Bonjour, je suis intéressé par les meubles Mangala Living. Puis-je obtenir plus d'informations ?",
+    thankYouMessage: (name: string) => `Merci, ${name} ! Je suis là pour vous aider avec des informations sur les meubles Naturra Extal. Comment puis-je vous aider aujourd'hui ?`,
+    whatsappRedirectMessage: "Bonjour, je suis intéressé par les meubles Naturra Extal. Puis-je obtenir plus d'informations ?",
     simpleResponses: [
       "Merci pour votre question ! Pour plus d'informations sur nos produits de mobilier industriel, contactez-nous directement sur WhatsApp.",
       "Je suis ravi de vous aider ! Pour les consultations de produits et les prix, contactez notre équipe sur WhatsApp.",
@@ -163,7 +163,7 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
   },
   ko: {
     subtitle: "최대한 빨리 답변드리겠습니다",
-    initialMessage: "안녕하세요 ??! Mangala Living에 오신 것을 환영합니다. 궁금한 점이 있으시면 알려주세요.\n\nWhatsApp으로 연락주세요: [+6288801146881](https://wa.me/+6288801146881)",
+    initialMessage: "안녕하세요 ??! Naturra Extal에 오신 것을 환영합니다. 궁금한 점이 있으시면 알려주세요.\n\nWhatsApp으로 연락주세요: [+628951395752](https://wa.me/+628951395752)",
     continueWhatsApp: "WhatsApp에서 계속하기",
     typeMessage: "메시지를 입력하세요...",
     contactUs: "문의하기",
@@ -171,8 +171,8 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
     nameLabel: "이름",
     namePlaceholder: "이름을 반드시 추가하세요",
     submit: "제출",
-    thankYouMessage: (name: string) => `${name}님, 감사합니다! Mangala Living 가구에 대한 정보를 도와드리기 위해 여기 있습니다. 오늘 어떻게 도와드릴까요?`,
-    whatsappRedirectMessage: "안녕하세요, Mangala Living 가구에 관심이 있습니다. 더 많은 정보를 받을 수 있을까요?",
+    thankYouMessage: (name: string) => `${name}님, 감사합니다! Naturra Extal 가구에 대한 정보를 도와드리기 위해 여기 있습니다. 오늘 어떻게 도와드릴까요?`,
+    whatsappRedirectMessage: "안녕하세요, Naturra Extal 가구에 관심이 있습니다. 더 많은 정보를 받을 수 있을까요?",
     simpleResponses: [
       "질문해 주셔서 감사합니다! 산업용 가구 제품에 대한 자세한 내용은 WhatsApp으로 직접 문의해 주세요.",
       "도와드릴 수 있어 기쁩니다! 제품 상담 및 가격은 WhatsApp으로 팀에 연락해 주세요.",
@@ -189,7 +189,7 @@ const WhatsAppButton: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: 'Hello! How may I help you with your furniture needs at Mangala Living?',
+      text: 'Hello! How may I help you with your furniture needs at Naturra Extal?',
       isUser: false,
       timestamp: new Date()
     }
@@ -256,7 +256,7 @@ const WhatsAppButton: React.FC = () => {
       userInfo: userInfo.isCompleted ? { name: userInfo.name, email: userInfo.email } : null
     })
     const whatsappMessage = t.whatsappRedirectMessage
-    const whatsappUrl = `https://wa.me/+6288801146881?text=${encodeURIComponent(whatsappMessage)}`
+    const whatsappUrl = `https://wa.me/+628951395752?text=${encodeURIComponent(whatsappMessage)}`
     window.open(whatsappUrl, '_blank')
   }
 
@@ -403,7 +403,7 @@ const WhatsAppButton: React.FC = () => {
             <div className="chat-header-content">
               <div className="chat-title">
                 <Bot size={16} />
-                <span>Mangala Living</span>
+                <span>Naturra Extal</span>
               </div>
               <div className="chat-subtitle">
                 {t.subtitle}

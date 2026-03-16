@@ -41,7 +41,7 @@ const AdminBlogManager: React.FC = () => {
         const basePosts: BlogPost[] = BLOG_POSTS.map(p => ({ ...p, status: 'synced' as const }))
 
         // 2. Load from localStorage (overrides/new drafts)
-        const savedPosts = localStorage.getItem('mangala_blog_drafts')
+        const savedPosts = localStorage.getItem('NATURRA_blog_drafts')
         if (savedPosts) {
             try {
                 const parsedDrafts = JSON.parse(savedPosts) as BlogPost[]
@@ -70,7 +70,7 @@ const AdminBlogManager: React.FC = () => {
     useEffect(() => {
         if (!isLoading) {
             const drafts = posts.filter(p => p.status === 'draft')
-            localStorage.setItem('mangala_blog_drafts', JSON.stringify(drafts))
+            localStorage.setItem('NATURRA_blog_drafts', JSON.stringify(drafts))
         }
     }, [posts, isLoading])
 
@@ -160,7 +160,7 @@ const AdminBlogManager: React.FC = () => {
                 // Mark all as synced and clear local drafts
                 const syncedPosts = posts.map(p => ({ ...p, status: 'synced' as const }))
                 setPosts(syncedPosts)
-                localStorage.removeItem('mangala_blog_drafts')
+                localStorage.removeItem('NATURRA_blog_drafts')
 
                 setMessage({
                     type: 'success',
@@ -376,11 +376,11 @@ const AdminBlogManager: React.FC = () => {
                         align-items: center;
                         justify-content: center;
                         background: #f8f9fa;
-                        color: #8B7355;
+                        color: #004D2C;
                     }
                     .loader {
                         border: 4px solid #f3f3f3;
-                        border-top: 4px solid #8B7355;
+                        border-top: 4px solid #004D2C;
                         
                         width: 40px;
                         height: 40px;
@@ -396,7 +396,7 @@ const AdminBlogManager: React.FC = () => {
     return (
         <div className="admin-dashboard admin-blog-manager">
             <Helmet>
-                <title>{view === 'list' ? 'Blog Manager' : 'Edit Post'} | Mangala Admin</title>
+                <title>{view === 'list' ? 'Blog Manager' : 'Edit Post'} | NATURRA Admin</title>
             </Helmet>
 
             <header className="admin-header">
@@ -500,7 +500,7 @@ const AdminBlogManager: React.FC = () => {
                                             <td className="actions-cell">
                                                 {post.status !== 'draft' && (
                                                     <a
-                                                        href={`https://mangala-living.com/blog/${post.slug}`}
+                                                        href={`https://NATURRA-EXTAL.com/blog/${post.slug}`}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         className="action-btn preview"
@@ -863,7 +863,7 @@ const AdminBlogManager: React.FC = () => {
                     margin-bottom: 20px; 
                     color: #2c3e50; 
                     font-size: 1.1rem;
-                    border-bottom: 2px solid #8B7355;
+                    border-bottom: 2px solid #004D2C;
                     padding-bottom: 10px;
                 }
                 .editor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -875,11 +875,11 @@ const AdminBlogManager: React.FC = () => {
                     border: 1px solid #ddd;
                     
                     font-size: 1rem;
-                    outline-color: #8B7355;
+                    outline-color: #004D2C;
                     background: #fff;
                     transition: border 0.2s;
                 }
-                .input-group input:focus { border-color: #8B7355; }
+                .input-group input:focus { border-color: #004D2C; }
                 
                 .editor-notice {
                     margin-top: 30px;
@@ -949,7 +949,7 @@ const AdminBlogManager: React.FC = () => {
                 .posts-table td { padding: 18px 20px; border-bottom: 1px solid #f4f4f4; font-size: 0.95rem; }
                 .post-title-cell { display: flex; align-items: center; gap: 12px; font-weight: 600; color: #2C3E50; }
                 .post-title-cell span { max-width: 400px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-                .cat-badge { background: #f0ede9; color: #8B7355; padding: 5px 12px;  font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+                .cat-badge { background: #f0ede9; color: #004D2C; padding: 5px 12px;  font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
                 
                 .actions-cell { display: flex; gap: 12px; }
                 .action-btn { background: #f8f9fa; border: 1px solid #eee; cursor: pointer; padding: 8px;  transition: 0.2s; }
@@ -959,7 +959,7 @@ const AdminBlogManager: React.FC = () => {
                 .action-btn.delete:hover { background: #c0392b; color: #fff; }
                 
                 .save-btn {
-                  background: #8B7355;
+                  background: #004D2C;
                   color: #fff;
                   border: none;
                   padding: 10px 20px;
@@ -1016,8 +1016,8 @@ const AdminBlogManager: React.FC = () => {
                 .status-badge.draft { background: #e67e22; } /* Orange */
                 .status-badge.synced { background: #27ae60; } /* Green */
                 
-                .action-btn.preview { color: #8B7355; margin-right: 8px; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px;  border: 1.5px solid #eee; transition: 0.2s; }
-                .action-btn.preview:hover { background: #fdfaf7; border-color: #8B7355; }
+                .action-btn.preview { color: #004D2C; margin-right: 8px; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px;  border: 1.5px solid #eee; transition: 0.2s; }
+                .action-btn.preview:hover { background: #fdfaf7; border-color: #004D2C; }
 
                 /* Pagination Styles */
                 .pagination-wrapper { 
@@ -1041,7 +1041,7 @@ const AdminBlogManager: React.FC = () => {
                     font-size: 0.8rem;
                     transition: 0.2s;
                 }
-                .size-btn.active { background: #8B7355; color: #fff; border-color: #8B7355; }
+                .size-btn.active { background: #004D2C; color: #fff; border-color: #004D2C; }
                 
                 .page-btns { display: flex; align-items: center; gap: 15px; }
                 .nav-btn {
@@ -1053,12 +1053,12 @@ const AdminBlogManager: React.FC = () => {
                     font-size: 0.85rem;
                     transition: 0.2s;
                 }
-                .nav-btn:hover:not(:disabled) { border-color: #8B7355; color: #8B7355; }
+                .nav-btn:hover:not(:disabled) { border-color: #004D2C; color: #004D2C; }
                 .nav-btn:disabled { opacity: 0.5; cursor: not-allowed; }
                 .page-num { font-size: 0.9rem; font-weight: 600; color: #2C3E50; }
 
                 .back-link { background: #fff; border: 1px solid #ddd; color: #444; cursor: pointer; padding: 8px;  margin-right: 15px; transition: 0.2s; }
-                .back-link:hover { background: #f8f9fa; border-color: #8B7355; color: #8B7355; }
+                .back-link:hover { background: #f8f9fa; border-color: #004D2C; color: #004D2C; }
 
                 /* Compact Editor Styles */
                 .editor-grid-compact { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
@@ -1067,14 +1067,14 @@ const AdminBlogManager: React.FC = () => {
                 .input-group-compact input, .input-group-compact select, .input-group-compact textarea { 
                     padding: 8px 12px; border: 1.5px solid #eee;  font-size: 0.9rem; transition: 0.2s; background: #fff;
                 }
-                .input-group-compact input:focus, .input-group-compact select:focus, .input-group-compact textarea:focus { border-color: #8B7355; outline: none; box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1); }
+                .input-group-compact input:focus, .input-group-compact select:focus, .input-group-compact textarea:focus { border-color: #004D2C; outline: none; box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1); }
                 .span-2 { grid-column: span 2; }
                 .span-3 { grid-column: span 3; }
                 
                 .input-with-action { display: flex; gap: 8px; }
                 .input-with-action input { flex: 1; }
                 .action-input-btn { 
-                    display: flex; align-items: center; gap: 6px; padding: 0 15px; background: #8B7355; color: #fff; 
+                    display: flex; align-items: center; gap: 6px; padding: 0 15px; background: #004D2C; color: #fff; 
                     border: none;  cursor: pointer; font-size: 0.8rem; font-weight: 600; white-space: nowrap; transition: 0.2s;
                 }
                 .action-input-btn:hover:not(:disabled) { background: #6F5C44; transform: translateY(-1px); }

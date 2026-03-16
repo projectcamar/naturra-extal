@@ -12,6 +12,8 @@ import './App.css'
 import NaturraHome from './pages/NaturraHome'
 const NaturraAbout = lazy(() => import('./pages/NaturraAbout'))
 const NaturraProducts = lazy(() => import('./pages/NaturraProducts'))
+const NaturraBlog = lazy(() => import('./pages/NaturraBlog'))
+const NaturraBlogPost = lazy(() => import('./pages/NaturraBlogPost'))
 
 // ===== MANGALA LIVING - Legacy Pages (kept intact) =====
 import Home from './pages/Home'
@@ -160,6 +162,16 @@ function App() {
               <NaturraProducts />
             </Suspense>
           } />
+          <Route path="/blog" element={
+            <Suspense fallback={<Loading />}>
+              <NaturraBlog />
+            </Suspense>
+          } />
+          <Route path="/blog/:slug" element={
+            <Suspense fallback={<Loading />}>
+              <NaturraBlogPost />
+            </Suspense>
+          } />
 
           {/* ===== MANGALA LIVING - Legacy Routes (kept intact) ===== */}
           <Route path="/mangala" element={<Home />} />
@@ -228,12 +240,12 @@ function App() {
               <Partnership />
             </Suspense>
           } />
-          <Route path="/blog" element={
+          <Route path="/mangala/blog" element={
             <Suspense fallback={<Loading />}>
               <Blog />
             </Suspense>
           } />
-          <Route path="/blog/:slug" element={
+          <Route path="/mangala/blog/:slug" element={
             <Suspense fallback={<Loading />}>
               <BlogPost />
             </Suspense>

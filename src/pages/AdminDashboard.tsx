@@ -13,13 +13,13 @@ const AdminDashboard: React.FC = () => {
     return (
         <div className="admin-dashboard">
             <Helmet>
-                <title>Admin Dashboard | Mangala Living</title>
+                <title>Admin Dashboard | Naturra Extal</title>
                 <meta name="robots" content="noindex, nofollow" />
             </Helmet>
 
             <header className="admin-header">
                 <div className="admin-header-title">
-                    <h1>MANGALA <span style={{ color: '#8B7355' }}>LIVING</span></h1>
+                    <h1>NATURRA <span style={{ color: '#004D2C' }}>EXTAL</span></h1>
                 </div>
 
                 <div className="admin-user-nav">
@@ -37,7 +37,7 @@ const AdminDashboard: React.FC = () => {
             <main className="admin-main">
                 <div className="welcome-banner">
                     <h2>Welcome to your Dashboard</h2>
-                    <p>This is the beginning of the Mangala Living administration portal. From here, you will soon be able to manage products, content, and track site activity.</p>
+                    <p>This is the beginning of the Naturra Extal administration portal. From here, you will soon be able to manage products, content, and track site activity.</p>
                 </div>
 
                 <div className="dashboard-stats">
@@ -94,7 +94,7 @@ const AdminDashboard: React.FC = () => {
             </main>
 
             <footer style={{ padding: '40px', textAlign: 'center', color: '#888', fontSize: '0.85rem' }}>
-                &copy; {new Date().getFullYear()} Mangala Living Admin Portal • Powered by Vercel
+                &copy; {new Date().getFullYear()} Naturra Extal Admin Portal • Powered by Vercel
             </footer>
         </div>
     )

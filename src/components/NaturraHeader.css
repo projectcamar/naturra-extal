@@ -44,7 +44,7 @@
 }
 
 .naturra-header__topbar-left a {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   transition: color 0.2s;
   display: flex;
@@ -61,7 +61,7 @@
   gap: 1rem;
   align-items: center;
   font-size: 0.7rem;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Main Nav */
@@ -214,8 +214,15 @@
 }
 
 @keyframes naturra-slideIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .naturra-header__mobile-menu.open {
@@ -287,16 +294,16 @@
   .naturra-header__nav {
     display: none;
   }
-  
+
   .naturra-header__cta {
     display: none;
   }
-  
+
   .naturra-header__mobile-toggle {
     display: block;
   }
-  
-  .naturra-header__topbar-right {
+
+  .naturra-header__company-name {
     display: none;
   }
 }
@@ -306,12 +313,12 @@
     padding: 0 1rem;
     height: 60px;
   }
-  
+
   .naturra-header__topbar-inner {
     padding: 0 1rem;
     justify-content: center;
   }
-  
+
   .naturra-header__topbar-left {
     gap: 1rem;
     font-size: 0.65rem;
@@ -320,13 +327,329 @@
   .naturra-header__logo-name {
     font-size: 0.95rem;
   }
-  
+
   .naturra-header__logo-tagline {
     font-size: 0.5rem;
   }
-  
+
   .naturra-header__logo-icon svg {
     width: 28px;
     height: 28px;
+  }
+}
+
+/* Header Actions */
+.naturra-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Search Button */
+.naturra-search-btn {
+  background: none;
+  border: none;
+  color: #1a1a1a;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.naturra-search-btn:hover {
+  color: #004D2C;
+  transform: scale(1.05);
+}
+
+/* Search Modal */
+.naturra-search-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 77, 44, 0.95);
+  z-index: 2000;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.naturra-search-backdrop.closing {
+  opacity: 0;
+}
+
+.naturra-search-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.naturra-search-container.closing {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.naturra-search-content {
+  width: 100%;
+  max-width: 800px;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.naturra-search-close {
+  position: absolute;
+  top: -60px;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.naturra-search-close:hover {
+  transform: rotate(90deg);
+}
+
+.naturra-search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 10px;
+  transition: border-color 0.3s;
+}
+
+.naturra-search-input-wrapper:focus-within {
+  border-color: #fff;
+}
+
+.naturra-search-icon {
+  color: #fff;
+  opacity: 0.7;
+  margin-right: 15px;
+}
+
+.naturra-search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  outline: none;
+}
+
+.naturra-search-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.naturra-search-submit {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  transition: transform 0.2s;
+}
+
+.naturra-search-submit:hover {
+  transform: scale(1.1);
+}
+
+.naturra-search-results {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.naturra-search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 4px;
+  /* Slight rounding for items inside modal */
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.naturra-search-result-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.result-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.result-cat {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+}
+
+.naturra-search-suggestions {
+  margin-top: 2rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.naturra-search-suggestions a {
+  color: #fff;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+
+.naturra-search-suggestions a:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Language Switcher */
+.naturra-header__language-switcher {
+  position: relative;
+}
+
+.naturra-language-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.naturra-language-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.naturra-language-dropdown {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  min-width: 140px;
+  z-index: 2000;
+  animation: naturra-slideDown 0.2s ease;
+}
+
+@keyframes naturra-slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.naturra-language-option {
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #333;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s, color 0.2s;
+}
+
+.naturra-language-option:hover {
+  background: #f5f5f5;
+  color: #004D2C;
+}
+
+/* Flags (assuming mangala living global classes still exist, if not, fallback circles) */
+.flag {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  background-color: #ddd;
+}
+
+.flag-id {
+  background-image: url('https://flagcdn.com/w20/id.png');
+}
+
+.flag-us {
+  background-image: url('https://flagcdn.com/w20/us.png');
+}
+
+.flag-ar {
+  background-image: url('https://flagcdn.com/w20/sa.png');
+}
+
+.flag-zh {
+  background-image: url('https://flagcdn.com/w20/cn.png');
+}
+
+.flag-ja {
+  background-image: url('https://flagcdn.com/w20/jp.png');
+}
+
+.flag-es {
+  background-image: url('https://flagcdn.com/w20/es.png');
+}
+
+.flag-fr {
+  background-image: url('https://flagcdn.com/w20/fr.png');
+}
+
+.flag-ko {
+  background-image: url('https://flagcdn.com/w20/kr.png');
+}
+
+@media (max-width: 640px) {
+  .naturra-search-input {
+    font-size: 1.5rem;
+  }
+
+  .naturra-search-close {
+    top: -40px;
+    font-size: 2.5rem;
   }
 }

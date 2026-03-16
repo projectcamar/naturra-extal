@@ -14,7 +14,7 @@
     margin: 0 auto;
     padding: 4rem 2rem 3rem;
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr;
     gap: 3rem;
 }
 
@@ -143,7 +143,142 @@
     color: #4ade80;
 }
 
+/* Subscribe Form */
+.naturra-footer__subscribe {
+    display: flex;
+    flex-direction: column;
+}
+
+.naturra-footer__subscribe-desc {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 1.25rem;
+}
+
+.naturra-footer__form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.naturra-footer__form-group input {
+    width: 100%;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.naturra-footer__form-group input:focus {
+    outline: none;
+    border-color: #4ade80;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.naturra-footer__submit {
+    padding: 12px;
+    background: #4ade80;
+    color: #0a1f14;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 5px;
+}
+
+.naturra-footer__submit.loading {
+    background: #ccc;
+    cursor: wait;
+}
+
+.naturra-footer__submit.success {
+    background: #10b981;
+    color: #fff;
+}
+
+.naturra-footer__submit:hover:not(:disabled) {
+    background: #22c55e;
+}
+
+/* SEO Details Accordion */
+.naturra-footer__seo {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: #08170f;
+}
+
+.naturra-footer__seo-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.naturra-footer__seo-details {
+    padding: 1.5rem 0;
+}
+
+.naturra-footer__seo-details summary {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    list-style: none;
+    /* Custom arrow handling usually needed, but basic works */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.naturra-footer__seo-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.naturra-footer__seo-details summary::after {
+    content: '+';
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.naturra-footer__seo-details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.naturra-footer__seo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 10px 20px;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.naturra-footer__seo-link {
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    transition: color 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.naturra-footer__seo-link:hover {
+    color: #4ade80;
+}
+
 /* Responsive */
+@media (max-width: 1200px) {
+    .naturra-footer__main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
 @media (max-width: 1024px) {
     .naturra-footer__main {
         grid-template-columns: 1fr 1fr;

@@ -397,7 +397,7 @@
 }
 
 .logo-icon {
-  background: linear-gradient(135deg, #8B7355, #A0826D);
+  background: linear-gradient(135deg, #004D2C, #00663B);
   color: white;
   width: 40px;
   height: 40px;
@@ -653,12 +653,12 @@
 }
 
 .product-link {
-  color: #8B7355;
+  color: #004D2C;
   text-decoration: none;
   font-weight: 600;
   padding: 3px 6px;
   
-  background: rgba(139, 115, 85, 0.1);
+  background: rgba(0, 77, 44, 0.1);
   transition: all 0.3s ease;
   display: inline-block;
   margin: 2px 0;
@@ -666,7 +666,7 @@
 }
 
 .product-link:hover {
-  background: rgba(139, 115, 85, 0.2);
+  background: rgba(0, 77, 44, 0.2);
   transform: translateY(-1px);
 }
 
