@@ -1,0 +1,512 @@
+/* ============================================
+   NATURRA EXTAL - PRODUCTS PAGE STYLES
+   Layout: Barry Callebaut product grid (Image 3)
+   Design: ECOM green corporate palette
+   ============================================ */
+
+/* ---- HERO ---- */
+.naturra-products__hero {
+    margin-top: 108px;
+    background: #f8faf8;
+    padding: 3rem 0 2rem;
+}
+
+.naturra-products__hero-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.naturra-products__hero-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 0.5rem 0;
+}
+
+.naturra-products__hero-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #777;
+}
+
+/* ---- CATEGORY TABS (Barry Callebaut style) ---- */
+.naturra-products__tabs {
+    background: #f8faf8;
+    padding: 0 0 2rem;
+}
+
+.naturra-products__tabs-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.naturra-products__tab {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.6rem 1.5rem;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.naturra-products__tab:hover {
+    border-color: #004D2C;
+    color: #004D2C;
+}
+
+.naturra-products__tab.active {
+    background: #004D2C;
+    color: #fff;
+    border-color: #004D2C;
+}
+
+/* ---- MAIN PRODUCTS LAYOUT ---- */
+.naturra-products__content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 3rem;
+}
+
+/* ---- SIDEBAR (Barry Callebaut filter style) ---- */
+.naturra-products__sidebar {
+    padding-top: 0.5rem;
+}
+
+.naturra-products__filter-group {
+    margin-bottom: 2rem;
+}
+
+.naturra-products__filter-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.naturra-products__filter-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #555;
+    padding: 0.4rem 0;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.naturra-products__filter-option:hover {
+    color: #004D2C;
+}
+
+.naturra-products__filter-option input[type="checkbox"] {
+    accent-color: #004D2C;
+}
+
+.naturra-products__filter-option.active {
+    color: #004D2C;
+    font-weight: 500;
+}
+
+/* ---- PRODUCT GRID (Barry Callebaut style) ---- */
+.naturra-products__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.naturra-products__card {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.naturra-products__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.naturra-products__card-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    background: #f5f5f0;
+}
+
+.naturra-products__card-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.naturra-products__card:hover .naturra-products__card-image {
+    transform: scale(1.05);
+}
+
+.naturra-products__card-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #004D2C;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+}
+
+.naturra-products__card-body {
+    padding: 1.25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.naturra-products__card-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 0.5rem 0;
+}
+
+.naturra-products__card-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: #777;
+    margin: 0 0 1rem 0;
+    flex: 1;
+}
+
+.naturra-products__card-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.naturra-products__card-spec {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #004D2C;
+    background: #e8f5e8;
+    padding: 3px 8px;
+}
+
+.naturra-products__card-actions {
+    display: flex;
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.naturra-products__card-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.naturra-products__card-btn--primary {
+    background: #004D2C;
+    color: #fff;
+}
+
+.naturra-products__card-btn--primary:hover {
+    background: #006B3E;
+}
+
+.naturra-products__card-btn--secondary {
+    background: transparent;
+    color: #004D2C;
+    border: 1px solid #004D2C;
+}
+
+.naturra-products__card-btn--secondary:hover {
+    background: #004D2C;
+    color: #fff;
+}
+
+/* ---- PRODUCT DETAIL SECTIONS ---- */
+.naturra-products__detail-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.naturra-products__detail-section:nth-child(odd) {
+    background: #f8faf8;
+}
+
+.naturra-products__detail-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.naturra-products__detail-inner.reverse {
+    direction: rtl;
+}
+
+.naturra-products__detail-inner.reverse>* {
+    direction: ltr;
+}
+
+.naturra-products__detail-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.naturra-products__detail-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #004D2C;
+    margin-bottom: 0.75rem;
+}
+
+.naturra-products__detail-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+}
+
+.naturra-products__detail-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.naturra-products__detail-specs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.naturra-products__detail-specs-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.naturra-products__detail-specs-list li svg {
+    width: 16px;
+    height: 16px;
+    color: #004D2C;
+    flex-shrink: 0;
+}
+
+/* ---- CTA ---- */
+.naturra-products__cta {
+    background: #004D2C;
+    padding: 4rem 0;
+}
+
+.naturra-products__cta-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.naturra-products__cta-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 1rem 0;
+}
+
+.naturra-products__cta-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.naturra-products__cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.naturra-products__cta-btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0.875rem 2rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.naturra-products__cta-btn--white {
+    background: #fff;
+    color: #004D2C;
+}
+
+.naturra-products__cta-btn--white:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.naturra-products__cta-btn--outline {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.naturra-products__cta-btn--outline:hover {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 1024px) {
+    .naturra-products__hero {
+        margin-top: 96px;
+    }
+
+    .naturra-products__content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .naturra-products__sidebar {
+        display: none;
+    }
+
+    .naturra-products__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .naturra-products__detail-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .naturra-products__detail-inner.reverse {
+        direction: ltr;
+    }
+}
+
+@media (max-width: 768px) {
+    .naturra-products__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .naturra-products__hero-title {
+        font-size: 2rem;
+    }
+
+    .naturra-products__card-image {
+        height: 180px;
+    }
+
+    .naturra-products__detail-image img {
+        height: 280px;
+    }
+
+    .naturra-products__detail-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .naturra-products__hero {
+        margin-top: 90px;
+        padding: 2rem 0 1rem;
+    }
+
+    .naturra-products__hero-inner,
+    .naturra-products__tabs-inner,
+    .naturra-products__detail-inner,
+    .naturra-products__cta-inner {
+        padding: 0 1rem;
+    }
+
+    .naturra-products__content {
+        padding: 0 1rem 3rem;
+    }
+
+    .naturra-products__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .naturra-products__card-image {
+        height: 220px;
+    }
+
+    .naturra-products__hero-title {
+        font-size: 1.6rem;
+    }
+
+    .naturra-products__tabs-inner {
+        gap: 0.5rem;
+    }
+
+    .naturra-products__tab {
+        font-size: 0.7rem;
+        padding: 0.5rem 1rem;
+    }
+}

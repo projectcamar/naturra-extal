@@ -1,0 +1,461 @@
+/* ============================================
+   NATURRA EXTAL - ABOUT PAGE STYLES
+   Layout: Pipiltin Cocoa style (Image 2)
+   Design: ECOM green corporate palette
+   ============================================ */
+
+/* ---- HERO ---- */
+.naturra-about__hero {
+    margin-top: 108px;
+    background: #004D2C;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.naturra-about__hero::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+}
+
+.naturra-about__hero-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.naturra-about__hero-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 1rem;
+}
+
+.naturra-about__hero-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+}
+
+.naturra-about__hero-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 700px;
+}
+
+/* ---- SOURCED FROM FARMERS (Pipiltin map section style) ---- */
+.naturra-about__sourcing {
+    padding: 5rem 0;
+    background: #f8faf8;
+}
+
+.naturra-about__sourcing-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.naturra-about__sourcing-image {
+    position: relative;
+}
+
+.naturra-about__sourcing-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.naturra-about__sourcing-text h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #004D2C;
+    margin: 0 0 1rem 0;
+    line-height: 1.15;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.naturra-about__sourcing-text p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* ---- INDONESIA DIVERSITY (Pipiltin grid) ---- */
+.naturra-about__diversity {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.naturra-about__diversity-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.naturra-about__diversity-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.naturra-about__diversity-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 3rem;
+}
+
+.naturra-about__diversity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.naturra-about__diversity-card {
+    border-bottom: 3px solid #004D2C;
+    padding-bottom: 1.5rem;
+}
+
+.naturra-about__diversity-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 0.75rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.naturra-about__diversity-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: #666;
+    margin: 0;
+}
+
+/* ---- IMAGE ROW (like Pipiltin farm shots) ---- */
+.naturra-about__image-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin: 3rem 0 0 0;
+}
+
+.naturra-about__image-row img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ---- JOURNEY SECTION (Pipiltin "Our Journey" style) ---- */
+.naturra-about__journey {
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.naturra-about__journey-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.naturra-about__journey-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.naturra-about__journey-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 40, 20, 0.85);
+    z-index: 1;
+}
+
+.naturra-about__journey-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.naturra-about__journey-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 1rem;
+}
+
+.naturra-about__journey-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 1rem 0;
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+
+.naturra-about__journey-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---- PROCESS SECTION (like Pipiltin "Bean to Bar") ---- */
+.naturra-about__process {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.naturra-about__process-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.naturra-about__process-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem 0;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.naturra-about__process-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 3rem;
+}
+
+.naturra-about__process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.naturra-about__process-step {
+    text-align: center;
+}
+
+.naturra-about__process-step-number {
+    width: 50px;
+    height: 50px;
+    background: #004D2C;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+}
+
+.naturra-about__process-step h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 0.5rem 0;
+}
+
+.naturra-about__process-step p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: #777;
+    margin: 0;
+}
+
+/* ---- CONTACT SECTION (Pipiltin "Contact Us" style) ---- */
+.naturra-about__contact {
+    background: #004D2C;
+    padding: 4rem 0;
+}
+
+.naturra-about__contact-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+}
+
+.naturra-about__contact-col h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 0.75rem 0;
+}
+
+.naturra-about__contact-col p,
+.naturra-about__contact-col a {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #fff;
+    line-height: 1.7;
+    text-decoration: none;
+    display: block;
+}
+
+.naturra-about__contact-col a:hover {
+    color: #4ade80;
+}
+
+.naturra-about__contact-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.naturra-about__contact-social a {
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+}
+
+.naturra-about__contact-social a:hover {
+    color: #4ade80;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 1024px) {
+    .naturra-about__hero {
+        margin-top: 96px;
+    }
+
+    .naturra-about__sourcing-inner,
+    .naturra-about__journey-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .naturra-about__process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .naturra-about__contact-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .naturra-about__hero-title {
+        font-size: 2rem;
+    }
+
+    .naturra-about__diversity-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .naturra-about__image-row {
+        grid-template-columns: 1fr;
+    }
+
+    .naturra-about__image-row img {
+        height: 220px;
+    }
+
+    .naturra-about__sourcing-text h2 {
+        font-size: 1.75rem;
+    }
+
+    .naturra-about__process-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .naturra-about__journey-heading {
+        font-size: 1.75rem;
+    }
+
+    .naturra-about__sourcing-image img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .naturra-about__hero {
+        margin-top: 90px;
+        padding: 3rem 0;
+    }
+
+    .naturra-about__hero-title {
+        font-size: 1.6rem;
+    }
+
+    .naturra-about__hero-inner,
+    .naturra-about__sourcing-inner,
+    .naturra-about__diversity-inner,
+    .naturra-about__journey-inner,
+    .naturra-about__process-inner,
+    .naturra-about__contact-inner {
+        padding: 0 1rem;
+    }
+
+    .naturra-about__diversity,
+    .naturra-about__process,
+    .naturra-about__sourcing,
+    .naturra-about__journey {
+        padding: 3rem 0;
+    }
+
+    .naturra-about__process-grid {
+        grid-template-columns: 1fr;
+    }
+}

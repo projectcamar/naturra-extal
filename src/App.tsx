@@ -8,7 +8,12 @@ import { enableImageProtection, addImageProtectionStyles } from './utils/imagePr
 import { initializeGlobalWhatsAppTracking } from './utils/globalWhatsAppTracking'
 import './App.css'
 
-// Critical components loaded immediately - NO LAZY LOADING for Home
+// ===== NATURRA EXTAL - Primary Landing Pages =====
+import NaturraHome from './pages/NaturraHome'
+const NaturraAbout = lazy(() => import('./pages/NaturraAbout'))
+const NaturraProducts = lazy(() => import('./pages/NaturraProducts'))
+
+// ===== MANGALA LIVING - Legacy Pages (kept intact) =====
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import WhatsAppButton from './components/WhatsAppButton'
@@ -143,8 +148,21 @@ function App() {
         <ScrollToTop />
         <SingaporeLanguageModal />
         <Routes>
-          {/* Home - Load immediately (no suspense) */}
-          <Route path="/" element={<Home />} />
+          {/* ===== NATURRA EXTAL - Primary Routes ===== */}
+          <Route path="/" element={<NaturraHome />} />
+          <Route path="/about" element={
+            <Suspense fallback={<Loading />}>
+              <NaturraAbout />
+            </Suspense>
+          } />
+          <Route path="/products" element={
+            <Suspense fallback={<Loading />}>
+              <NaturraProducts />
+            </Suspense>
+          } />
+
+          {/* ===== MANGALA LIVING - Legacy Routes (kept intact) ===== */}
+          <Route path="/mangala" element={<Home />} />
           <Route path="/id" element={<Home />} />
           <Route path="/eng" element={<Home />} />
           <Route path="/ar" element={<Home />} />
@@ -195,7 +213,7 @@ function App() {
               <Contact />
             </Suspense>
           } />
-          <Route path="/about" element={
+          <Route path="/mangala/about" element={
             <Suspense fallback={<Loading />}>
               <About />
             </Suspense>

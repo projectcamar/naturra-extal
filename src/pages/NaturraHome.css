@@ -1,0 +1,739 @@
+/* ============================================
+   NATURRA EXTAL - HOME PAGE STYLES
+   Design: ECOM-style (Image 1 & 4)
+   ============================================ */
+
+/* ---- HERO SECTION ---- */
+.naturra-home__hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    margin-top: 108px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f8faf8 0%, #e8f0e8 100%);
+}
+
+.naturra-home__hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.naturra-home__hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.naturra-home__hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0, 30, 15, 0.7) 0%, rgba(0, 30, 15, 0.3) 60%, rgba(0, 30, 15, 0.1) 100%);
+    z-index: 1;
+}
+
+.naturra-home__hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.naturra-home__hero-text {
+    max-width: 600px;
+    color: #fff;
+}
+
+.naturra-home__hero-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+}
+
+.naturra-home__hero-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.15;
+    margin: 0 0 1.5rem 0;
+    color: #fff;
+}
+
+.naturra-home__hero-title strong {
+    font-weight: 700;
+}
+
+.naturra-home__hero-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+    max-width: 480px;
+}
+
+.naturra-home__hero-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.naturra-home__hero-btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0.875rem 2rem;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.naturra-home__hero-btn--primary {
+    background: #fff;
+    color: #004D2C;
+}
+
+.naturra-home__hero-btn--primary:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.naturra-home__hero-btn--secondary {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.naturra-home__hero-btn--secondary:hover {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ---- STATS BAR ---- */
+.naturra-home__stats {
+    background: #004D2C;
+    padding: 2rem 0;
+}
+
+.naturra-home__stats-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.naturra-home__stat {
+    text-align: center;
+    color: #fff;
+}
+
+.naturra-home__stat-number {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.naturra-home__stat-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* ---- HERITAGE / ABOUT PREVIEW ---- */
+.naturra-home__heritage {
+    padding: 6rem 0;
+    background: #fff;
+}
+
+.naturra-home__heritage-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.naturra-home__heritage-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.naturra-home__heritage-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.naturra-home__heritage-image-accent {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 120px;
+    height: 120px;
+    background: #004D2C;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.naturra-home__heritage-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #004D2C;
+    margin-bottom: 1rem;
+}
+
+.naturra-home__heritage-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin: 0 0 1.5rem 0;
+}
+
+.naturra-home__heritage-title strong {
+    font-weight: 700;
+}
+
+.naturra-home__heritage-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.naturra-home__heritage-features {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.naturra-home__heritage-feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.naturra-home__heritage-feature-icon {
+    width: 40px;
+    height: 40px;
+    background: #e8f5e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #004D2C;
+    flex-shrink: 0;
+}
+
+.naturra-home__heritage-feature-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.3;
+}
+
+/* ---- WHO WE ARE / GRID SECTION ---- */
+.naturra-home__grid {
+    padding: 6rem 0;
+    background: #f8faf8;
+}
+
+.naturra-home__grid-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.naturra-home__section-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #004D2C;
+    margin-bottom: 0.75rem;
+}
+
+.naturra-home__section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin: 0 0 3rem 0;
+}
+
+.naturra-home__section-title strong {
+    font-weight: 700;
+}
+
+.naturra-home__product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.naturra-home__product-card {
+    background: #fff;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.naturra-home__product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.naturra-home__product-card-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.naturra-home__product-card-body {
+    padding: 1.5rem;
+}
+
+.naturra-home__product-card-tag {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #004D2C;
+    background: #e8f5e8;
+    padding: 4px 10px;
+    margin-bottom: 0.75rem;
+}
+
+.naturra-home__product-card-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 0.5rem 0;
+}
+
+.naturra-home__product-card-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #777;
+    margin: 0 0 1rem 0;
+}
+
+.naturra-home__product-card-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #004D2C;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: gap 0.3s;
+}
+
+.naturra-home__product-card:hover .naturra-home__product-card-link {
+    gap: 8px;
+}
+
+/* ---- CTA / CONTACT SECTION ---- */
+.naturra-home__cta {
+    background: #004D2C;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.naturra-home__cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+}
+
+.naturra-home__cta-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.naturra-home__cta-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 1rem;
+}
+
+.naturra-home__cta-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #fff;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+}
+
+.naturra-home__cta-title strong {
+    font-weight: 700;
+}
+
+.naturra-home__cta-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+}
+
+.naturra-home__cta-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.naturra-home__cta-btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0.875rem 2rem;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.naturra-home__cta-btn--primary {
+    background: #fff;
+    color: #004D2C;
+}
+
+.naturra-home__cta-btn--primary:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.naturra-home__cta-btn--secondary {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.naturra-home__cta-btn--secondary:hover {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.naturra-home__cta-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.naturra-home__cta-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 1.5rem;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.naturra-home__cta-card:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.naturra-home__cta-card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.naturra-home__cta-card-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 0.25rem 0;
+}
+
+.naturra-home__cta-card-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+/* ---- SUSTAINABILITY BANNER ---- */
+.naturra-home__sustainability {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.naturra-home__sustainability-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.naturra-home__sustainability-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.naturra-home__sustainability-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.naturra-home__sustainability-badge {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background: #004D2C;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.naturra-home__sustainability-content h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin: 0 0 1rem 0;
+    line-height: 1.3;
+}
+
+.naturra-home__sustainability-content h3 strong {
+    font-weight: 700;
+}
+
+.naturra-home__sustainability-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.naturra-home__sustainability-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.naturra-home__sustainability-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.naturra-home__sustainability-list li svg {
+    width: 18px;
+    height: 18px;
+    color: #004D2C;
+    flex-shrink: 0;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 1024px) {
+    .naturra-home__hero {
+        min-height: 70vh;
+        margin-top: 96px;
+    }
+
+    .naturra-home__hero-title {
+        font-size: 2.5rem;
+    }
+
+    .naturra-home__heritage-inner {
+        gap: 3rem;
+    }
+
+    .naturra-home__heritage-title {
+        font-size: 2rem;
+    }
+
+    .naturra-home__product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .naturra-home__cta-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .naturra-home__sustainability-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .naturra-home__hero {
+        min-height: 60vh;
+    }
+
+    .naturra-home__hero-title {
+        font-size: 2rem;
+    }
+
+    .naturra-home__hero-desc {
+        font-size: 0.9rem;
+    }
+
+    .naturra-home__hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .naturra-home__stats-inner {
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .naturra-home__stat-number {
+        font-size: 1.5rem;
+    }
+
+    .naturra-home__heritage-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .naturra-home__heritage-image img {
+        height: 300px;
+    }
+
+    .naturra-home__heritage-features {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .naturra-home__product-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .naturra-home__cta-title {
+        font-size: 1.75rem;
+    }
+
+    .naturra-home__cta-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .naturra-home__section-title {
+        font-size: 1.75rem;
+    }
+
+    .naturra-home__heritage,
+    .naturra-home__grid,
+    .naturra-home__sustainability {
+        padding: 4rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .naturra-home__hero {
+        min-height: 55vh;
+        margin-top: 90px;
+    }
+
+    .naturra-home__hero-content {
+        padding: 2rem 1rem;
+    }
+
+    .naturra-home__hero-title {
+        font-size: 1.6rem;
+    }
+
+    .naturra-home__stats-inner {
+        gap: 1.5rem;
+    }
+
+    .naturra-home__stat-number {
+        font-size: 1.25rem;
+    }
+
+    .naturra-home__stat-label {
+        font-size: 0.65rem;
+    }
+
+    .naturra-home__heritage-inner,
+    .naturra-home__grid-inner,
+    .naturra-home__cta-inner,
+    .naturra-home__sustainability-inner {
+        padding: 0 1rem;
+    }
+
+    .naturra-home__cta-cards {
+        grid-template-columns: 1fr;
+    }
+}

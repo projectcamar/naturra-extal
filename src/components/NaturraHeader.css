@@ -1,0 +1,332 @@
+/* ============================================
+   NATURRA EXTAL - HEADER STYLES
+   Design: ECOM-style clean green corporate
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.naturra-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.naturra-header.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Top Bar */
+.naturra-header__topbar {
+  background: #004D2C;
+  color: #fff;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  padding: 6px 0;
+}
+
+.naturra-header__topbar-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.naturra-header__topbar-left {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.naturra-header__topbar-left a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.naturra-header__topbar-left a:hover {
+  color: #fff;
+}
+
+.naturra-header__topbar-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.7);
+}
+
+/* Main Nav */
+.naturra-header__main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+
+.naturra-header__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #004D2C;
+}
+
+.naturra-header__logo-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.naturra-header__logo-icon svg {
+  width: 36px;
+  height: 36px;
+}
+
+.naturra-header__logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.naturra-header__logo-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  color: #004D2C;
+}
+
+.naturra-header__logo-tagline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #6B7B6E;
+}
+
+/* Navigation */
+.naturra-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.naturra-header__nav-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  position: relative;
+  transition: color 0.2s;
+  letter-spacing: 0.01em;
+}
+
+.naturra-header__nav-link:hover,
+.naturra-header__nav-link.active {
+  color: #004D2C;
+}
+
+.naturra-header__nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1.25rem;
+  right: 1.25rem;
+  height: 2px;
+  background: #004D2C;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.naturra-header__nav-link:hover::after,
+.naturra-header__nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* CTA Button */
+.naturra-header__cta {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  background: #004D2C;
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: background 0.3s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.naturra-header__cta:hover {
+  background: #006B3E;
+  transform: translateY(-1px);
+}
+
+/* Mobile Menu Toggle */
+.naturra-header__mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #004D2C;
+}
+
+.naturra-header__mobile-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile Menu */
+.naturra-header__mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 2000;
+  flex-direction: column;
+  padding: 2rem;
+  animation: naturra-slideIn 0.3s ease;
+}
+
+@keyframes naturra-slideIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.naturra-header__mobile-menu.open {
+  display: flex;
+}
+
+.naturra-header__mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.naturra-header__mobile-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #004D2C;
+}
+
+.naturra-header__mobile-close svg {
+  width: 24px;
+  height: 24px;
+}
+
+.naturra-header__mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.naturra-header__mobile-nav-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  transition: color 0.2s;
+}
+
+.naturra-header__mobile-nav-link:hover,
+.naturra-header__mobile-nav-link.active {
+  color: #004D2C;
+}
+
+.naturra-header__mobile-cta {
+  margin-top: 2rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  background: #004D2C;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 0.03em;
+  transition: background 0.3s;
+}
+
+.naturra-header__mobile-cta:hover {
+  background: #006B3E;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .naturra-header__nav {
+    display: none;
+  }
+  
+  .naturra-header__cta {
+    display: none;
+  }
+  
+  .naturra-header__mobile-toggle {
+    display: block;
+  }
+  
+  .naturra-header__topbar-right {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .naturra-header__main {
+    padding: 0 1rem;
+    height: 60px;
+  }
+  
+  .naturra-header__topbar-inner {
+    padding: 0 1rem;
+    justify-content: center;
+  }
+  
+  .naturra-header__topbar-left {
+    gap: 1rem;
+    font-size: 0.65rem;
+  }
+
+  .naturra-header__logo-name {
+    font-size: 0.95rem;
+  }
+  
+  .naturra-header__logo-tagline {
+    font-size: 0.5rem;
+  }
+  
+  .naturra-header__logo-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+}
