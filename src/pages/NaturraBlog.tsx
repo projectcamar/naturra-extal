@@ -157,83 +157,83 @@ const BLOG_INTRO_TRANSLATIONS: Record<
     ]
   },
   es: {
-    mainTitle: '135+ Artículos sobre Muebles Industriales: Guía Completa desde nuestro Taller en Bekasi',
+    mainTitle: '100+ Artículos sobre Materias Primas Globales: Guía de Exportación de Naturra Extal',
     introParagraph:
-      'Encuentra respuestas claras y prácticas a tus dudas sobre muebles industriales. Cada artículo está basado en proyectos reales: más de 1.000 trabajos realizados desde 1999 en el área de Yakarta (Jabodetabek).',
+      'Descubre perspectivas profundas sobre el comercio de materias primas agrícolas de Indonesia. Nuestros artículos se basan en la experiencia exportando cacao, clavo y cocopeat premium a mercados globales.',
     bullets: [
       {
-        title: 'Consejos y Guías Prácticas',
+        title: 'Consejos y Guías de Abastecimiento',
         description:
-          'Cómo elegir, mantener y sacar el máximo provecho a los muebles industriales en tu negocio'
+          'Cómo seleccionar, verificar y garantizar la calidad de las materias primas agrícolas premium de Indonesia'
       },
       {
-        title: 'Comparación de Materiales y Precios',
+        title: 'Perspectivas de Mercado y Calidad',
         description:
-          'Datos objetivos sobre acero vs madera, muebles a medida vs estándar, powder coating vs pintura convencional'
+          'Información objetiva sobre especificaciones del cacao (HS 1805/1806), estándares del clavo y aplicaciones del cocopeat'
       },
       {
-        title: 'Guías por Zonas',
+        title: 'Guías de Exportación y Logística',
         description:
-          'Cobertura detallada para Bekasi, Cikarang y Yakarta con apoyo de taller cercano'
+          'Comprensión de regulaciones de exportación, envíos globales y alianzas con agricultores locales'
       },
       {
-        title: 'Inspiración de Diseño',
+        title: 'Actualizaciones de la Industria y Tendencias',
         description:
-          'Tendencias 2025, combinaciones de materiales y optimización de distribución para cafés y restaurantes'
+          'Tendencias de materias primas 2025, prácticas de sostenibilidad y dinámicas de la cadena de suministro global'
       }
     ]
   },
   fr: {
-    mainTitle: '135+ Articles sur le mobilier industriel : guide complet depuis notre atelier de Bekasi',
+    mainTitle: '100+ Articles sur les Matières Premières Mondiales : Guide d\'Export de Naturra Extal',
     introParagraph:
-      'Trouvez des réponses précises et concrètes à toutes vos questions sur le mobilier industriel. Chaque article s’appuie sur des projets réels : plus de 1 000 réalisations depuis 1999 dans la région de Jakarta (Jabodetabek).',
+      'Découvrez des analyses approfondies sur le commerce des matières premières agricoles indonésiennes. Nos articles s\'appuient sur notre expérience dans l\'exportation de cacao, clous de girofle et cocopeat premium vers les marchés mondiaux.',
     bullets: [
       {
-        title: 'Conseils & Guides Pratiques',
+        title: 'Conseils & Guides d\'Approvisionnement',
         description:
-          'Comment choisir, entretenir et optimiser le mobilier industriel pour votre café, restaurant, bureau ou hôtel'
+          'Comment sélectionner, vérifier et garantir la qualité des matières premières agricoles premium d\'Indonésie'
       },
       {
-        title: 'Comparatifs Matériaux & Prix',
+        title: 'Analyse Marché & Qualité',
         description:
-          'Analyse objective acier vs bois, sur‑mesure vs prêt‑à‑l’emploi, powder coating vs peinture classique'
+          'Informations objectives sur les spécifications du cacao (HS 1805/1806), les standards du girofle et les applications du cocopeat'
       },
       {
-        title: 'Guides Locaux',
+        title: 'Guides Export & Logistique',
         description:
-          'Couverture détaillée de Bekasi, Cikarang et Jakarta avec indication de l’atelier le plus proche'
+          'Compréhension des réglementations export, de l\'expédition mondiale et des partenariats avec les agriculteurs locaux'
       },
       {
-        title: 'Inspiration Design',
+        title: 'Actualités Industrie & Tendances',
         description:
-          'Tendances 2025, associations de matériaux et optimisation des plans pour cafés et restaurants'
+          'Tendances matières premières 2025, pratiques de durabilité et dynamiques des chaînes d\'approvisionnement mondiales'
       }
     ]
   },
   ko: {
-    mainTitle: '135편 이상의 산업용 가구 블로그: 베카시 공방에서 전하는 완전 가이드',
+    mainTitle: '100편 이상의 글로벌 원자재 블로그: Naturra Extal의 수출 가이드',
     introParagraph:
-      '산업용 가구에 대한 궁금증을 실제 현장 경험을 바탕으로 정리했습니다. 1999년 이후 자보데타벡 전역에서 1,000개 이상의 프로젝트를 수행한 노하우를 글로 담았습니다.',
+      '인도네시아 농산물 원자재 거래에 대한 심층적인 인사이트를 발견하세요. 당사의 아티클은 코코아, 정향, 코코피트 프리미엄 제품을 글로벌 시장에 수출한 경험을 바탕으로 작성되었습니다.',
     bullets: [
       {
-        title: '실전 팁 & 가이드',
+        title: '조달 팁 & 가이드',
         description:
-          '카페·레스토랑·오피스·호텔에 맞는 산업용 가구 선택, 관리, 활용 방법'
+          '인도네시아의 프리미엄 농산물의 선택, 검증 및 품질 보장 방법'
       },
       {
-        title: '자재 & 가격 비교',
+        title: '시장 & 품질 인사이트',
         description:
-          '철제 vs 원목, 맞춤 제작 vs 기성품, 파우더 코팅 vs 일반 도장에 대한 객관적인 비교'
+          '코코아 사양(HS 1805/1806), 정향 기준 및 코코피트 응용에 대한 객관적 정보'
       },
       {
-        title: '로컬 서비스 지역 안내',
+        title: '수출 & 물류 가이드',
         description:
-          '베카시, 치카랑, 자카르타 등 서비스 가능 지역과 인근 공방 정보'
+          '수출 규정 이해, 글로벌 운송, 현지 농부와의 파트너십'
       },
       {
-        title: '디자인 인스피레이션',
+        title: '업계 & 트렌드 업데이트',
         description:
-          '2025년 트렌드, 소재 조합, 카페·레스토랑 공간 레이아웃 최적화 아이디어'
+          '2025년 원자재 트렌드, 지속 가능성 실천, 글로벌 공급망 역학'
       }
     ]
   }
@@ -274,7 +274,6 @@ const NaturraBlog: React.FC = () => {
     }
   }, [location.pathname, location.search, language])
 
-  const isIndonesian = language === 'id'
   const postsPerPage = 8
   const rawPage = Number.parseInt(searchParams.get('page') || '1', 10)
   const totalPages = getTotalPages(postsPerPage)
@@ -290,7 +289,7 @@ const NaturraBlog: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [currentPage])
 
-  const localeMeta = generateLanguageSpecificMeta(isIndonesian)
+  const localeMeta = generateLanguageSpecificMeta(language)
   const localizedUrls = generateLocalizedUrls(location.pathname, location.search)
   const intro = BLOG_INTRO_TRANSLATIONS[language] ?? BLOG_INTRO_TRANSLATIONS.en
   const paginationTexts = BLOG_PAGINATION_TRANSLATIONS[language] ?? BLOG_PAGINATION_TRANSLATIONS.en
