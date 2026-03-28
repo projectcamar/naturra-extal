@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router-dom'
-import { FileText, MessageCircle, Truck, Wrench } from 'lucide-react'
+import { FileText, MessageCircle, Truck, ClipboardCheck, Building } from 'lucide-react'
 import NaturraFooter from '../components/NaturraFooter'
 import NaturraHeader from '../components/NaturraHeader'
-import heroImage from '../assets/main-hero-image.webp'
-import showroomImage from '../assets/Bench-corner-kursi-sudut-kursi-santai.webp'
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
 import { trackWhatsAppClick } from '../utils/whatsappTracking'
 import { getCurrentLanguage, getStoredLanguage, detectLanguageFromIP, type LanguageCode } from '../utils/languageManager'
@@ -26,14 +24,11 @@ const NaturraCustomOrder: React.FC = () => {
     }
   }, [location.pathname, location.search, language])
 
-  // IP detection for first visit (only if no stored preference)
   useEffect(() => {
     const stored = getStoredLanguage()
     const urlLang = getCurrentLanguage(location.pathname, location.search)
 
-    if (stored || urlLang !== 'en') {
-      return
-    }
+    if (stored || urlLang !== 'en') return
 
     const detectIP = async () => {
       const ipLang = await detectLanguageFromIP()
@@ -41,13 +36,16 @@ const NaturraCustomOrder: React.FC = () => {
         setLanguage(ipLang)
       }
     }
-
     detectIP()
   }, [])
-  const t = CUSTOM_ORDER_TRANSLATIONS[language] ?? CUSTOM_ORDER_TRANSLATIONS.en
 
+  const t = CUSTOM_ORDER_TRANSLATIONS[language] ?? CUSTOM_ORDER_TRANSLATIONS.en
   const localeMeta = generateLanguageSpecificMeta(language)
   const localizedUrls = generateLocalizedUrls(location.pathname, location.search)
+
+  const handleWhatsAppClick = () => {
+    trackWhatsAppClick('Custom Order Page CTA')
+  }
 
   return (
     <div className="custom-order-page">
@@ -68,8 +66,6 @@ const NaturraCustomOrder: React.FC = () => {
         ))}
         <meta property="og:url" content={localizedUrls.canonical} />
         <meta property="og:locale" content={localeMeta.locale} />
-        <meta property="og:locale:alternate" content="id_ID" />
-        <meta property="og:locale:alternate" content="en_US" />
         <meta property="og:title" content={t.meta.title} />
         <meta property="og:description" content={t.meta.description} />
       </Helmet>
@@ -79,13 +75,11 @@ const NaturraCustomOrder: React.FC = () => {
       <section className="custom-order-hero">
         <div className="custom-order-hero-image">
           <img
-            src={heroImage}
+            src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1920"
             alt={t.hero.imageAlt}
             title={t.hero.imageTitle}
             loading="eager"
             fetchPriority="high"
-            width="1920"
-            height="1080"
           />
           <div className="custom-order-hero-overlay"></div>
         </div>
@@ -109,9 +103,10 @@ const NaturraCustomOrder: React.FC = () => {
             </div>
             <div className="custom-order-message-image-wrapper">
               <img
-                src={showroomImage}
+                src="https://images.unsplash.com/photo-1596541223130-5d5644a5a6fc?auto=format&fit=crop&q=80&w=800"
                 alt={t.message.imageAlt}
                 className="custom-order-message-image"
+                loading="lazy"
               />
             </div>
           </div>
@@ -131,13 +126,13 @@ const NaturraCustomOrder: React.FC = () => {
           <h2 className="custom-order-process-main-title">{t.process.title}</h2>
 
           <div className="custom-order-process-grid">
-            {t.process.steps.map((step) => (
+            {t.process.steps.map((step, index) => (
               <div className="custom-order-process-item" key={step.title}>
                 <div className="custom-order-process-icon">
-                  {step.title === t.process.steps[0].title && <MessageCircle size={48} strokeWidth={1.5} />}
-                  {step.title === t.process.steps[1].title && <FileText size={48} strokeWidth={1.5} />}
-                  {step.title === t.process.steps[2].title && <Wrench size={48} strokeWidth={1.5} />}
-                  {step.title === t.process.steps[3].title && <Truck size={48} strokeWidth={1.5} />}
+                  {index === 0 && <MessageCircle size={48} strokeWidth={1.5} />}
+                  {index === 1 && <FileText size={48} strokeWidth={1.5} />}
+                  {index === 2 && <ClipboardCheck size={48} strokeWidth={1.5} />}
+                  {index === 3 && <Truck size={48} strokeWidth={1.5} />}
                 </div>
                 <h3 className="custom-order-process-item-title">{step.title}</h3>
                 <p className="custom-order-process-item-description">{step.description}</p>
@@ -149,38 +144,29 @@ const NaturraCustomOrder: React.FC = () => {
 
       <section className="custom-order-cta-section">
         <div className="custom-order-cta-container">
-          <h2 className="custom-order-cta-title">{t.cta.title}</h2>
-          <p className="custom-order-cta-intro">{t.cta.intro}</p>
-
-          <div className="custom-order-locations">
-            <div className="custom-order-location">
-              <h3>{t.cta.workshopHeading}</h3>
-              <p>
-                <a
-                  href="https://maps.app.goo.gl/ABqcrJ4Wv864RrjT9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Jl. Raya Setu Cibitung - Bekasi, Telajung, Kec. Cikarang Bar., Kabupaten Bekasi, Jawa Barat
-                  17320
-                </a>
-              </p>
-              <p className="footer-phone">+628951395752</p>
-            </div>
-          </div>
-
-          <p className="custom-order-cta-description">{t.cta.workshopParagraph}</p>
-
-          <div className="custom-order-cta-buttons">
+          <div className="custom-order-cta-content">
+            <h2 className="custom-order-cta-title">{t.cta.title}</h2>
+            <p className="custom-order-cta-intro">{t.cta.intro}</p>
             <a
-              href="https://wa.me/+628951395752"
+              href="https://wa.me/6289513957752?text=Hello%20Naturra%20Extal,%20I%20would%20like%20to%20send%20a%20quotation%20request%20for%20commodity%20products."
               target="_blank"
               rel="noopener noreferrer"
-              className="custom-order-btn"
-              onClick={() => trackWhatsAppClick('custom_order_page_cta')}
+              className="custom-order-whatsapp-btn"
+              onClick={handleWhatsAppClick}
             >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
               {t.cta.button}
             </a>
+          </div>
+          <div className="custom-order-cta-info">
+            <h3 className="custom-order-cta-heading">
+              <Building size={28} />
+              {t.cta.workshopHeading}
+            </h3>
+            <span className="custom-order-cta-label">{t.cta.workshopLabel}</span>
+            <p className="custom-order-cta-paragraph">{t.cta.workshopParagraph}</p>
           </div>
         </div>
       </section>

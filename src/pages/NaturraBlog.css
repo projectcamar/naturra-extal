@@ -215,39 +215,39 @@
 }
 
 @media (max-width: 768px) {
-  .blog-hero {
+  .naturra-blog-hero {
     height: 300px;
   }
 
-  .blog-hero-title {
+  .naturra-blog-hero-title {
     font-size: 2.5rem;
   }
 
-  .blog-content-section {
+  .naturra-blog-content-section {
     padding: 50px 0;
   }
 
-  .blog-main-title {
+  .naturra-blog-main-title {
     font-size: 1.8rem;
     margin-bottom: 40px;
   }
 
-  .blog-grid {
+  .naturra-blog-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
-  .blog-card-image {
+  .naturra-blog-card-image {
     height: 200px;
   }
 
-  .blog-pagination {
+  .naturra-blog-pagination {
     flex-wrap: wrap;
     gap: 6px;
     justify-content: center;
   }
 
-  .pagination-btn {
+  .naturra-pagination-btn {
     padding: 8px 15px;
     font-size: 0.85rem;
     min-width: 40px;
@@ -272,7 +272,7 @@
     letter-spacing: 0.1em;
   }
 
-  .blog-grid {
+  .naturra-blog-grid {
     grid-template-columns: 1fr;
   }
 

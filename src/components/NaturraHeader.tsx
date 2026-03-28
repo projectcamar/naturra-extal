@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Search, ChevronDown } from 'lucide-react'
-import { storeLanguage } from '../utils/languageManager'
+import { storeLanguage, getCurrentLanguage, type LanguageCode } from '../utils/languageManager'
 import { trackEvent } from '../utils/analytics'
 import { NATURRA_PRODUCTS } from '../data/naturraProducts'
 import './NaturraHeader.css'
@@ -33,8 +33,8 @@ const NaturraHeader: React.FC<NaturraHeaderProps> = ({ isIndonesian = false, lan
   const location = useLocation()
   const navigate = useNavigate()
 
-  const currentLang = language // Simplified for now, relies on wrapper or url
-  const t = translations[currentLang]
+  const currentLangCode = getCurrentLanguage(location.pathname, location.search) || language
+  const t = translations[currentLangCode] || translations.en
 
   const getCurrentLanguageFromUrl = () => {
     const path = location.pathname

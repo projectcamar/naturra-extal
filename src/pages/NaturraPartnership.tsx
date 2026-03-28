@@ -3,12 +3,6 @@ import { useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import NaturraHeader from '../components/NaturraHeader'
 import NaturraFooter from '../components/NaturraFooter'
-import heroImage from '../assets/main-hero-image.webp'
-import projectVideo from '../assets/meja-makan-industrial.mp4'
-import experienceImage from '../assets/Hollowline-Display-Rack.webp'
-import collaborationImage from '../assets/Meja-Kerja-Rak-Meja-Belajar-custom.webp'
-import flexibilityImage from '../assets/Kabinet-Industrial-Dapur.webp'
-import scaleImage from '../assets/Meja-makan-industrial-150x60x90-2 kursi.webp'
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
 import { trackWhatsAppClick } from '../utils/whatsappTracking'
 import { getCurrentLanguage, getStoredLanguage, detectLanguageFromIP, type LanguageCode } from '../utils/languageManager'
@@ -54,6 +48,10 @@ const NaturraPartnership: React.FC = () => {
   const localeMeta = generateLanguageSpecificMeta(language)
   const localizedUrls = generateLocalizedUrls(location.pathname, location.search)
 
+  const handleWhatsAppClick = () => {
+    trackWhatsAppClick('Partnership Page CTA')
+  }
+
   return (
     <div className="partnership-page">
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
@@ -78,16 +76,11 @@ const NaturraPartnership: React.FC = () => {
       <section className="partnership-hero">
         <div className="partnership-hero-image">
           <img
-            src={heroImage}
-            alt="Partnership Naturra Extal - Kerja Sama Workshop Furniture Industrial Bekasi"
-            title="Partnership - Partner with Naturra Extal Industrial Furniture Manufacturer"
+            src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1920"
+            alt={translations.heroTitle}
+            title={translations.heroTitle}
             loading="eager"
             fetchPriority="high"
-            width="1920"
-            height="1080"
-            itemProp="image"
-            data-image-type="partnership-hero"
-            data-category="partnership"
           />
           <div className="partnership-hero-overlay"></div>
         </div>
@@ -101,28 +94,22 @@ const NaturraPartnership: React.FC = () => {
         <div className="partnership-main-container">
           <div className="partnership-main-content">
             <div className="partnership-main-text">
-              <h2 className="partnership-main-title">{translations.mainTitle}</h2>
+              <h2 className="partnership-section-title">{translations.mainTitle}</h2>
               <div className="partnership-main-body">
                 {translations.mainParagraphs.map((paragraph, index) => (
-                  <p key={index} className="partnership-main-paragraph">
+                  <p key={index} className="partnership-paragraph">
                     {paragraph}
                   </p>
                 ))}
               </div>
             </div>
-            <div className="partnership-main-media-wrapper">
-              <video
-                src={projectVideo}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="partnership-main-video"
-                aria-label={isIndonesian ? 'Video produk furniture industrial Naturra Extal' : 'Naturra Extal industrial furniture product video'}
-              >
-                <source src={projectVideo} type="video/mp4" />
-                {isIndonesian ? 'Browser Anda tidak mendukung video.' : 'Your browser does not support the video tag.'}
-              </video>
+            <div className="partnership-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1621217646581-bcbe05ff19ee?auto=format&fit=crop&q=80&w=800"
+                alt="Agricultural processing and sorting"
+                className="partnership-image"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -131,23 +118,22 @@ const NaturraPartnership: React.FC = () => {
       {/* Experience Section */}
       <section className="partnership-experience-section">
         <div className="partnership-experience-container">
-          <h2 className="partnership-experience-title">{translations.experienceTitle}</h2>
-
           <div className="partnership-experience-layout">
-            <div className="partnership-experience-image-wrapper">
-              <img
-                src={experienceImage}
-                alt={isIndonesian ? 'Pengalaman Produksi Furniture Industrial - Hollowline Display Rack' : 'Industrial Furniture Production Experience - Hollowline Display Rack'}
-                className="partnership-experience-image"
-                loading="lazy"
-              />
-            </div>
             <div className="partnership-experience-content">
+              <h2 className="partnership-section-title">{translations.experienceTitle}</h2>
               {translations.experienceParagraphs.map((paragraph, index) => (
-                <p key={index} className="partnership-experience-description">
+                <p key={index} className="partnership-paragraph">
                   {paragraph}
                 </p>
               ))}
+            </div>
+            <div className="partnership-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1582218155981-0675ea108dca?auto=format&fit=crop&q=80&w=800"
+                alt="Global export shipping containers"
+                className="partnership-image"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -156,22 +142,21 @@ const NaturraPartnership: React.FC = () => {
       {/* Collaboration Section */}
       <section className="partnership-collaboration-section">
         <div className="partnership-collaboration-container">
-          <h2 className="partnership-collaboration-title">{translations.collaborationTitle}</h2>
-          <p className="partnership-collaboration-subtitle">{translations.collaborationSubtitle}</p>
-
           <div className="partnership-collaboration-layout">
             <div className="partnership-collaboration-content">
+              <span className="partnership-section-subtitle">{translations.collaborationSubtitle}</span>
+              <h2 className="partnership-section-title">{translations.collaborationTitle}</h2>
               {translations.collaborationParagraphs.map((paragraph, index) => (
-                <p key={index} className="partnership-collaboration-description">
+                <p key={index} className="partnership-paragraph">
                   {paragraph}
                 </p>
               ))}
             </div>
-            <div className="partnership-collaboration-image-wrapper">
+            <div className="partnership-image-wrapper">
               <img
-                src={collaborationImage}
-                alt={isIndonesian ? 'Kolaborasi Custom Design - Meja Kerja Industrial' : 'Custom Design Collaboration - Industrial Work Desk'}
-                className="partnership-collaboration-image"
+                src="https://images.unsplash.com/photo-1596541223130-5d5644a5a6fc?auto=format&fit=crop&q=80&w=800"
+                alt="Commodities stored in warehouse"
+                className="partnership-image"
                 loading="lazy"
               />
             </div>
@@ -182,23 +167,22 @@ const NaturraPartnership: React.FC = () => {
       {/* Flexibility Section */}
       <section className="partnership-flexibility-section">
         <div className="partnership-flexibility-container">
-          <h2 className="partnership-flexibility-title">{translations.flexibilityTitle}</h2>
-
           <div className="partnership-flexibility-layout">
-            <div className="partnership-flexibility-image-wrapper">
-              <img
-                src={flexibilityImage}
-                alt={isIndonesian ? 'Fleksibilitas Produksi - Kabinet Industrial Dapur' : 'Production Flexibility - Industrial Kitchen Cabinet'}
-                className="partnership-flexibility-image"
-                loading="lazy"
-              />
-            </div>
             <div className="partnership-flexibility-content">
+              <h2 className="partnership-section-title">{translations.flexibilityTitle}</h2>
               {translations.flexibilityParagraphs.map((paragraph, index) => (
-                <p key={index} className="partnership-flexibility-description">
+                <p key={index} className="partnership-paragraph">
                   {paragraph}
                 </p>
               ))}
+            </div>
+            <div className="partnership-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1499558913904-206263eb210b?auto=format&fit=crop&q=80&w=800"
+                alt="Flexible agricultural supply chain"
+                className="partnership-image"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -207,25 +191,22 @@ const NaturraPartnership: React.FC = () => {
       {/* Scale Section */}
       <section className="partnership-scale-section">
         <div className="partnership-scale-container">
-          <h2 className="partnership-scale-title">{translations.scaleTitle}</h2>
-
-          <div className="partnership-scale-image-wrapper">
-            <img
-              src={scaleImage}
-              alt={isIndonesian ? 'Berbagai Skala Proyek - Dining Set Industrial' : 'Various Project Scales - Industrial Dining Set'}
-              className="partnership-scale-image"
-              loading="lazy"
-            />
-          </div>
-
-          <div className="partnership-scale-content">
-            <p className="partnership-scale-description">
-              {translations.scaleDescription}
-            </p>
-
-            <p className="partnership-scale-question">
-              {translations.scaleQuestion}
-            </p>
+          <div className="partnership-scale-layout">
+            <div className="partnership-scale-content">
+              <h2 className="partnership-section-title">{translations.scaleTitle}</h2>
+              <p className="partnership-paragraph">{translations.scaleDescription}</p>
+              <h3 className="partnership-section-subtitle" style={{ fontSize: '1.2rem', marginTop: '20px' }}>
+                {translations.scaleQuestion}
+              </h3>
+            </div>
+            <div className="partnership-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1548848222-777651a084eb?auto=format&fit=crop&q=80&w=800"
+                alt="Scaling global supply chain"
+                className="partnership-image"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -234,61 +215,19 @@ const NaturraPartnership: React.FC = () => {
       <section className="partnership-cta-section">
         <div className="partnership-cta-container">
           <h2 className="partnership-cta-title">{translations.ctaTitle}</h2>
-          <p className="partnership-cta-description">
-            {translations.ctaDescription}
-          </p>
-
-          <div className="partnership-cta-buttons">
-            <a
-              href="https://wa.me/+628951395752"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="partnership-cta-button"
-              onClick={() => trackWhatsAppClick('partnership_page_cta')}
-            >
-              {translations.ctaButton}
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Info */}
-      <section className="partnership-contact-section">
-        <div className="partnership-contact-container">
-          <h2 className="partnership-contact-title">{translations.contactTitle}</h2>
-          <div className="partnership-contact-info">
-            <div style={{ marginBottom: '16px' }}>
-              <strong style={{ color: '#004D2C', display: 'block', marginBottom: '8px' }}>
-                Workshop Bekasi:
-              </strong>
-              <p className="partnership-contact-address">
-                <a
-                  href="https://maps.app.goo.gl/5Bc5ymfVtAYRPtpK7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: '#2c2c2c', textDecoration: 'underline' }}
-                >
-                  Jl. Raya Setu Cibitung - Bekasi, Telajung, Kec. Cikarang Bar., Kabupaten Bekasi, Jawa Barat 17320
-                </a>
-              </p>
-            </div>
-            <p className="partnership-contact-phone">
-              <a
-                href="https://wa.me/+628951395752"
-                style={{ color: '#004D2C', textDecoration: 'underline' }}
-                onClick={() => trackWhatsAppClick('partnership_page_contact_info')}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                +628951395752
-              </a>
-            </p>
-            <p className="partnership-contact-email">
-              <a href="mailto:hello@naturraextal.com" style={{ color: '#004D2C', textDecoration: 'underline' }}>
-                hello@naturraextal.com
-              </a>
-            </p>
-          </div>
+          <p className="partnership-cta-description">{translations.ctaDescription}</p>
+          <a
+            href="https://wa.me/6289513957752?text=Hello%20Naturra%20Extal,%20I%20would%20like%20to%20discuss%20a%20B2B%20partnership%20for%20commodity%20sourcing."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="partnership-whatsapp-btn"
+            onClick={handleWhatsAppClick}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            {translations.ctaButton}
+          </a>
         </div>
       </section>
 

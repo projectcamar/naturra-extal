@@ -43,7 +43,6 @@ const NaturraHome: React.FC = () => {
         detectIP()
     }, [])
 
-    const isIndonesian = language === 'id'
     const t = NATURRA_HOME_TRANSLATIONS[language] ?? NATURRA_HOME_TRANSLATIONS.en
     const localeMeta = generateLanguageSpecificMeta(language)
     const localizedUrls = generateLocalizedUrls(location.pathname, location.search)
@@ -187,7 +186,7 @@ const NaturraHome: React.FC = () => {
                         <Link to="/products" className="naturra-home__product-card">
                             <img
                                 className="naturra-home__product-card-image"
-                                src="https://images.unsplash.com/photo-1610611424854-5e07f4b2c5b6?w=600&q=80"
+                                src="https://images.unsplash.com/photo-1613919920110-394ffdc5bfaa?w=600&q=80"
                                 alt="Indonesian Cocoa Products"
                                 loading="lazy"
                             />

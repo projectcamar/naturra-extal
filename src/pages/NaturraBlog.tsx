@@ -326,8 +326,8 @@ const NaturraBlog: React.FC = () => {
       <NaturraHeader />
 
       {/* Hero Section */}
-      <section className="blog-hero">
-        <div className="blog-hero-image">
+      <section className="naturra-blog-hero">
+        <div className="naturra-blog-hero-image">
           <img
             src={heroImage}
             alt="Global Commodity Export Blog & Market Insights - Naturra Extal"
@@ -340,44 +340,44 @@ const NaturraBlog: React.FC = () => {
             data-image-type="blog-hero"
             data-category="blog"
           />
-          <div className="blog-hero-overlay"></div>
+          <div className="naturra-blog-hero-overlay"></div>
         </div>
-        <div className="blog-hero-content">
-          <h1 className="blog-hero-title">Blog & Article</h1>
+        <div className="naturra-blog-hero-content">
+          <h1 className="naturra-blog-hero-title">Blog & Article</h1>
         </div>
       </section>
 
       {/* Blog Content Section */}
-      <section className="blog-content-section">
+      <section className="naturra-blog-content-section">
         <div className="blog-container">
           {/* AI Search Optimized: Clear intent and value proposition */}
-          <h2 className="blog-main-title">{intro.mainTitle}</h2>
-          <div style={{
-            maxWidth: '900px',
-            margin: '0 auto 3rem',
-            padding: '1.5rem',
-            background: '#e8f0e8',
-            borderRadius: '8px',
-            borderLeft: '4px solid #004D2C'
-          }}>
-            <p style={{ margin: '0 0 1rem', fontSize: '1rem', lineHeight: '1.6', color: '#004D2C' }}>
-              {intro.introParagraph}
-            </p>
-            <ul style={{ margin: 0, paddingLeft: '1.5rem', fontSize: '0.95rem', lineHeight: '1.7', color: '#555' }}>
-              {intro.bullets.map((item, index) => (
-                <li key={index}>
-                  <strong style={{ color: '#004D2C' }}>{item.title}:</strong> {item.description}
-                </li>
-              ))}
-            </ul>
+          <h2 className="naturra-blog-main-title">{intro.mainTitle}</h2>
+
+          <div className="naturra-blog-intro">
+            <div className="naturra-blog-intro-bg">
+              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200" alt="Agriculture Background" loading="lazy" />
+              <div className="naturra-blog-intro-overlay"></div>
+            </div>
+            <div className="naturra-blog-intro-content">
+              <p className="naturra-blog-intro-text">
+                {intro.introParagraph}
+              </p>
+              <ul className="naturra-blog-intro-list">
+                {intro.bullets.map((item, index) => (
+                  <li key={index}>
+                    <strong>{item.title}:</strong> {item.description}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Blog Grid */}
-          <div className="blog-grid">
+          <div className="naturra-blog-grid">
             {posts.map((post) => (
-              <article key={post.id} className="blog-card">
-                <Link to={`/blog/${post.slug}`} className="blog-card-link">
-                  <div className="blog-card-image">
+              <article key={post.id} className="naturra-blog-card">
+                <Link to={`/blog/${post.slug}`} className="naturra-blog-card-link">
+                  <div className="naturra-blog-card-image">
                     <img
                       src={post.image}
                       alt={`${post.title} - ${post.category} Commodity Blog Naturra Extal`}
@@ -390,11 +390,11 @@ const NaturraBlog: React.FC = () => {
                       data-post-slug={post.slug}
                       data-category={post.category}
                     />
-                    <div className="blog-card-badge">Naturra Extal</div>
+                    <div className="naturra-blog-card-badge">Naturra Extal</div>
                   </div>
-                  <div className="blog-card-content">
-                    <span className="blog-card-category">{post.category.toUpperCase()}</span>
-                    <h3 className="blog-card-title">{post.title}</h3>
+                  <div className="naturra-blog-card-content">
+                    <span className="naturra-blog-card-category">{post.category.toUpperCase()}</span>
+                    <h3 className="naturra-blog-card-title">{post.title}</h3>
                   </div>
                 </Link>
               </article>
@@ -403,11 +403,11 @@ const NaturraBlog: React.FC = () => {
 
           {/* Pagination - Compact Version */}
           {totalPages > 1 && (
-            <nav className="blog-pagination" aria-label="Blog pagination">
+            <nav className="naturra-blog-pagination" aria-label="Blog pagination">
               {currentPage > 1 && (
                 <Link
                   to={buildPageUrl(currentPage - 1)}
-                  className="pagination-btn pagination-prev"
+                  className="naturra-pagination-btn naturra-pagination-prev"
                   aria-label="Previous page"
                 >
                   {paginationTexts.prev}
@@ -443,7 +443,7 @@ const NaturraBlog: React.FC = () => {
                 return pages.map((page, index) => {
                   if (page === '...') {
                     return (
-                      <span key={`ellipsis-${index}`} className="pagination-ellipsis" aria-hidden="true">
+                      <span key={`ellipsis-${index}`} className="naturra-pagination-ellipsis" aria-hidden="true">
                         ...
                       </span>
                     )
@@ -454,7 +454,7 @@ const NaturraBlog: React.FC = () => {
                     <Link
                       key={pageNumber}
                       to={buildPageUrl(pageNumber)}
-                      className={`pagination-btn pagination-number ${currentPage === pageNumber ? 'active' : ''}`}
+                      className={`naturra-pagination-btn naturra-pagination-number ${currentPage === pageNumber ? 'active' : ''}`}
                       aria-current={currentPage === pageNumber ? 'page' : undefined}
                     >
                       {formatPageNumber(pageNumber)}
@@ -466,7 +466,7 @@ const NaturraBlog: React.FC = () => {
               {currentPage < totalPages && (
                 <Link
                   to={buildPageUrl(currentPage + 1)}
-                  className="pagination-btn pagination-next"
+                  className="naturra-pagination-btn naturra-pagination-next"
                   aria-label="Next page"
                 >
                   {paginationTexts.next}
@@ -490,7 +490,7 @@ const NaturraBlog: React.FC = () => {
                 border: 'none',
                 padding: '1rem 0',
                 cursor: 'pointer',
-                color: '#2C3E50',
+                color: '#004D2C',
                 fontSize: '1.1rem',
                 fontWeight: 600
               }}
