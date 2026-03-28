@@ -371,10 +371,7 @@ const ProductCategory: React.FC = () => {
 
   // Check if category exists in CATEGORY_MAP - if not, redirect to 404 to prevent Soft 404
   const categoryName = category ? CATEGORY_MAP[category] : null
-  if (!category || !categoryName) {
-    return <Navigate to="/404-not-found" replace />
-  }
-  const localizedCategoryName = getLocalizedCategoryName(categoryName, language)
+  const localizedCategoryName = categoryName ? getLocalizedCategoryName(categoryName, language) : ''
 
   // Language detection - instant, no async needed!
   useEffect(() => {
@@ -434,6 +431,7 @@ const ProductCategory: React.FC = () => {
   }, [language])
 
   const filteredProducts = useMemo(() => {
+    if (!categoryName) return []
     let products = ALL_PRODUCTS.filter(product =>
       product.categories.some(cat => cat.toLowerCase() === categoryName.toLowerCase())
     )
@@ -493,6 +491,10 @@ const ProductCategory: React.FC = () => {
         <Footer isIndonesian={isIndonesian} language={language} />
       </div>
     )
+  }
+
+  if (!category || !categoryName) {
+    return <Navigate to="/404-not-found" replace />
   }
 
   return (

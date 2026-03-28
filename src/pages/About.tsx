@@ -6,8 +6,8 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { generateFAQSchema, generateLocalBusinessStructuredData } from '../utils/structuredData'
 import { getFAQBySlug } from '../data/faq'
-import heroImage from '../assets/main-hero-image.webp'
-import showroomImage from '../assets/Bench-corner-kursi-sudut-kursi-santai.webp'
+// legacy mangala image import removed
+// legacy mangala image import removed
 import logoILW from '../assets/LOGO-ILW-800.png'
 import logoSVLK from '../assets/SVLK-LOGO-INDONESIA.png'
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'

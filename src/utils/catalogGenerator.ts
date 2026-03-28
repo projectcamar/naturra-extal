@@ -438,7 +438,7 @@ const content = {
     visitDesc: 'Workshop kami terbuka untuk kunjungan. Anda bisa melihat langsung proses produksi, sample material, dan portfolio project kami. Hubungi sebelumnya untuk membuat appointment.',
 
     websiteTitle: 'Website & Online',
-    website: 'www.mangala-living.com',
+    website: 'www.naturraextal.com',
     websiteNote: 'Lihat portfolio lengkap, artikel furniture tips, dan update produk terbaru',
 
     exportExp: '• Export Experience: Malaysia, Singapura, Australia',
@@ -458,7 +458,7 @@ const content = {
     // ─────────────────────────── Call to Actions ───────────────────────────
     cta1: '• WhatsApp kami untuk konsultasi & quotation gratis',
     cta2: '• Kunjungi workshop kami di Bekasi untuk lihat produk langsung',
-    cta3: '• Eksplor koleksi lengkap di www.mangala-living.com',
+    cta3: '• Eksplor koleksi lengkap di www.naturraextal.com',
   },
 
   en: {
@@ -573,7 +573,7 @@ const content = {
     visitDesc: 'Our workshop is open for visits. You can see the production process, material samples, and our project portfolio firsthand. Contact us beforehand to make an appointment.',
 
     websiteTitle: 'Website & Online',
-    website: 'www.mangala-living.com',
+    website: 'www.naturraextal.com',
     websiteNote: 'View complete portfolio, furniture tips articles, and latest product updates',
 
     exportExp: '• Export Experience: Malaysia, Singapore, Australia',
@@ -593,7 +593,7 @@ const content = {
     // ─────────────────────────── Call to Actions ───────────────────────────
     cta1: '• WhatsApp us for free consultation & quotation',
     cta2: '• Visit our workshop in Bekasi to see products directly',
-    cta3: '• Explore full collection at www.mangala-living.com',
+    cta3: '• Explore full collection at www.naturraextal.com',
   },
 
   ar: {
@@ -708,7 +708,7 @@ const content = {
     visitDesc: 'ورشتنا مفتوحة للزيارات. يمكنك رؤية عملية الإنتاج وعينات المواد ومحفظة مشاريعنا بشكل مباشر. اتصل بنا مسبقًا لتحديد موعد.',
 
     websiteTitle: 'الموقع الإلكتروني والإنترنت',
-    website: 'www.mangala-living.com',
+    website: 'www.naturraextal.com',
     websiteNote: 'عرض المحفظة الكاملة ومقالات نصائح الأثاث وأحدث تحديثات المنتجات',
 
     exportExp: '• خبرة التصدير: ماليزيا، سنغافورة، أستراليا',
@@ -728,7 +728,7 @@ const content = {
     // ─────────────────────────── Call to Actions ───────────────────────────
     cta1: '• راسلنا على WhatsApp للحصول على استشارة وعرض أسعار مجاني',
     cta2: '• قم بزيارة ورشتنا في بيكاسي لرؤية المنتجات مباشرة',
-    cta3: '• استكشف المجموعة الكاملة على www.mangala-living.com',
+    cta3: '• استكشف المجموعة الكاملة على www.naturraextal.com',
   },
 
   zh: {
@@ -805,7 +805,7 @@ const content = {
     visitTitle: '来访我们',
     visitDesc: '我们的工作坊欢迎参观。您可以直接看到生产过程、材料样品和我们的项目作品集。请提前联系预约。',
     websiteTitle: '网站和在线',
-    website: 'www.mangala-living.com',
+    website: 'www.naturraextal.com',
     websiteNote: '查看完整作品集、家具技巧文章和最新产品更新',
     exportExp: '• 出口经验：马来西亚、新加坡、澳大利亚',
     workshopSize: '• 工作坊：500平方米，18人生产团队',
@@ -819,7 +819,7 @@ const content = {
     priceFormat: '起价',
     cta1: '• 通过WhatsApp联系我们获取免费咨询和报价',
     cta2: '• 访问我们在勿加泗的工作坊直接查看产品',
-    cta3: '• 在www.mangala-living.com探索完整系列',
+    cta3: '• 在www.naturraextal.com探索完整系列',
   },
 
   ja: {
@@ -896,7 +896,7 @@ const content = {
     visitTitle: 'ご来訪ください',
     visitDesc: '当社の工房は訪問を歓迎しています。生産プロセス、材料サンプル、プロジェクトポートフォリオを直接ご覧いただけます。事前にご連絡の上、予約してください。',
     websiteTitle: 'ウェブサイトとオンライン',
-    website: 'www.mangala-living.com',
+    website: 'www.naturraextal.com',
     websiteNote: '完全なポートフォリオ、家具ヒント記事、最新製品更新をご覧ください',
     exportExp: '• 輸出経験：マレーシア、シンガポール、オーストラリア',
     workshopSize: '• 工房：500㎡、18人の生産チーム',
@@ -910,7 +910,7 @@ const content = {
     priceFormat: '～から',
     cta1: '• 無料相談と見積もりのためWhatsAppでご連絡ください',
     cta2: '• ブカシの工房を訪問して製品を直接ご覧ください',
-    cta3: '• www.mangala-living.comで完全なコレクションをご覧ください',
+    cta3: '• www.naturraextal.comで完全なコレクションをご覧ください',
   },
 
   es: {
@@ -994,7 +994,7 @@ const content = {
     visitTitle: 'Visítenos',
     visitDesc: 'Nuestro taller está abierto para visitas. Puede ver el proceso de producción, muestras de materiales y el portafolio de nuestros proyectos de primera mano. Contáctenos de antemano para hacer una cita.',
     websiteTitle: 'Sitio Web y En Línea',
-    website: 'www.mangala-living.com',
+    website: 'www.naturraextal.com',
     websiteNote: 'Vea el portafolio completo, artículos de consejos de muebles y las últimas actualizaciones de productos',
     exportExp: '• Experiencia de Exportación: Malasia, Singapur, Australia',
     workshopSize: '• Taller: 500m² con un equipo de producción de 18 personas',
@@ -1007,7 +1007,7 @@ const content = {
     priceFormat: 'Desde',
     cta1: '• Envíanos un mensaje por WhatsApp para consulta y cotización gratuitas',
     cta2: '• Visita nuestro taller en Bekasi para ver los productos directamente',
-    cta3: '• Explora la colección completa en www.mangala-living.com',
+    cta3: '• Explora la colección completa en www.naturraextal.com',
   },
 
   fr: {
@@ -1085,7 +1085,7 @@ const content = {
     visitTitle: 'Visitez-nous',
     visitDesc: 'Notre atelier est ouvert aux visites. Vous pouvez voir le processus de production, les échantillons de matériaux et le portefeuille de nos projets de première main. Contactez-nous à l\'avance pour prendre rendez-vous.',
     websiteTitle: 'Site Web et En Ligne',
-    website: 'www.mangala-living.com',
+    website: 'www.naturraextal.com',
     websiteNote: 'Consultez le portefeuille complet, les articles de conseils sur les meubles et les dernières mises à jour de produits',
     exportExp: '• Expérience d\'Exportation : Malaisie, Singapour, Australie',
     workshopSize: '• Atelier : 500m² avec une équipe de production de 18 personnes',
@@ -1096,7 +1096,7 @@ const content = {
     priceFormat: 'À partir de',
     cta1: '• Envoyez-nous un message sur WhatsApp pour une consultation et un devis gratuits',
     cta2: '• Visitez notre atelier à Bekasi pour voir les produits directement',
-    cta3: '• Explorez la collection complète sur www.mangala-living.com',
+    cta3: '• Explorez la collection complète sur www.naturraextal.com',
   },
 
   ko: {
@@ -1173,7 +1173,7 @@ const content = {
     visitTitle: '방문해 주세요',
     visitDesc: '우리 공방은 방문을 환영합니다. 생산 공정, 재료 샘플 및 프로젝트 포트폴리오를 직접 볼 수 있습니다. 사전에 연락하여 약속을 잡으세요.',
     websiteTitle: '웹사이트 및 온라인',
-    website: 'www.mangala-living.com',
+    website: 'www.naturraextal.com',
     websiteNote: '전체 포트폴리오, 가구 팁 기사 및 최신 제품 업데이트 보기',
     exportExp: '• 수출 경험: 말레이시아, 싱가포르, 호주',
     workshopSize: '• 공방: 500㎡, 18인 생산팀',
@@ -1184,7 +1184,7 @@ const content = {
     priceFormat: '부터',
     cta1: '• 무료 상담 및 견적을 위해 WhatsApp으로 문의하세요',
     cta2: '• 브카시 공방을 방문하여 제품을 직접 확인하세요',
-    cta3: '• www.mangala-living.com에서 전체 컬렉션을 탐색하세요',
+    cta3: '• www.naturraextal.com에서 전체 컬렉션을 탐색하세요',
   }
 }
 
@@ -1435,9 +1435,9 @@ export const generateCatalog = async (preferredLanguage?: 'id' | 'en' | 'ar' | '
       doc.setTextColor(...colors.textLight)
       setF('normal')
       doc.setFontSize(10)
-      doc.textWithLink('www.mangala-living.com', pageWidth / 2, 232, {
+      doc.textWithLink('www.naturraextal.com', pageWidth / 2, 232, {
         align: 'center',
-        url: 'https://mangala-living.com'
+        url: 'https://naturraextal.com'
       })
 
       // Bottom decorative line
@@ -1753,7 +1753,7 @@ export const generateCatalog = async (preferredLanguage?: 'id' | 'en' | 'ar' | '
             doc.setTextColor(...colors.textDark)
 
             const productName = product.name.length > 28 ? product.name.substring(0, 25) + '...' : product.name
-            const productUrl = `https://mangala-living.com/product/${product.slug}`
+            const productUrl = `https://naturraextal.com/product/${product.slug}`
 
             const nameLines = doc.splitTextToSize(productName, imgWidth)
             const nameYPos = yPos + imgHeight + 8
@@ -2011,7 +2011,7 @@ export const generateCatalog = async (preferredLanguage?: 'id' | 'en' | 'ar' | '
       doc.setTextColor(...colors.goldAccent)
       doc.textWithLink(processRTLText(t.website, lang), pageWidth / 2, yPos, {
         align: 'center',
-        url: 'https://mangala-living.com'
+        url: 'https://naturraextal.com'
       })
       yPos += 15
 

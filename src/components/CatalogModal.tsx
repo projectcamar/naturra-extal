@@ -6,9 +6,9 @@ import { trackEvent } from '../utils/analytics'
 import { getLanguageFromLocation, type LanguageCode } from '../utils/languageManager'
 
 // Import multiple product images for collage
-import catalogPreview1 from '../assets/Bench-corner-kursi-sudut-kursi-santai.webp'
-import catalogPreview2 from '../assets/meja-industrial-mejamakan.webp'
-import catalogPreview3 from '../assets/Kursi-Bar-kursi-stall-chair.webp'
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
 
 interface CatalogModalProps {
   show?: boolean

@@ -5,7 +5,7 @@ import { Clock, MapPin, Phone, Mail, Globe } from 'lucide-react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import ServiceAreasSection from '../components/ServiceAreasSection'
-import heroImage from '../assets/main-hero-image.webp'
+// legacy mangala image import removed
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
 import { trackWhatsAppClick } from '../utils/whatsappTracking'
 import { getCurrentLanguage, getStoredLanguage, detectLanguageFromIP, type LanguageCode } from '../utils/languageManager'

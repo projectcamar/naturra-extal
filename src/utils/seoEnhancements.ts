@@ -17,17 +17,17 @@ export const generateEnhancedOrganizationSchema = () => {
       "Mangala Furniture Industrial",
       "Workshop Furniture Besi Bekasi"
     ],
-    "url": "https://mangala-living.com",
+    "url": "https://naturraextal.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://mangala-living.com/logo.png",
+      "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
       "width": 250,
       "height": 60,
       ...DEFAULT_IMAGE_RIGHTS_METADATA
     },
     "image": {
       "@type": "ImageObject",
-      "url": "https://mangala-living.com/og-image.jpg",
+      "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
       "width": 1200,
       "height": 630,
       ...DEFAULT_IMAGE_RIGHTS_METADATA
@@ -121,7 +121,7 @@ export const generateEnhancedOrganizationSchema = () => {
     "brand": {
       "@type": "Brand",
       "name": "Mangala Living",
-      "logo": "https://mangala-living.com/logo.png",
+      "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
       "slogan": "Premium Industrial Furniture Since 1999"
     },
     "makesOffer": [
@@ -182,7 +182,7 @@ export const generateBreadcrumbSchema = (items: Array<{ name: string; url: strin
       "@type": "ListItem",
       "position": index + 1,
       "name": item.name,
-      "item": `https://mangala-living.com${item.url}`
+      "item": `https://naturraextal.com${item.url}`
     }))
   }
 }
@@ -203,19 +203,19 @@ export const generateWebPageSchema = (page: {
     "@type": "WebPage",
     "name": page.title,
     "description": page.description,
-    "url": `https://mangala-living.com${page.url}`,
+    "url": `https://naturraextal.com${page.url}`,
     "inLanguage": "id-ID",
     "isPartOf": {
       "@type": "WebSite",
       "name": "Mangala Living",
-      "url": "https://mangala-living.com"
+      "url": "https://naturraextal.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Mangala Living",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://mangala-living.com/logo.png",
+        "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
         ...DEFAULT_IMAGE_RIGHTS_METADATA
       }
     },
@@ -314,10 +314,10 @@ export const generateOGTags = (params: {
     'og:type': params.type || 'website',
     'og:title': params.title,
     'og:description': params.description,
-    'og:image': params.image || 'https://mangala-living.com/og-image.jpg',
+    'og:image': params.image || 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200',
     'og:image:width': '1200',
     'og:image:height': '630',
-    'og:url': `https://mangala-living.com${params.url}`,
+    'og:url': `https://naturraextal.com${params.url}`,
     'og:site_name': 'Mangala Living',
     'og:locale': 'id_ID'
   }
@@ -335,7 +335,7 @@ export const generateTwitterTags = (params: {
     'twitter:card': 'summary_large_image',
     'twitter:title': params.title,
     'twitter:description': params.description,
-    'twitter:image': params.image || 'https://mangala-living.com/og-image.jpg',
+    'twitter:image': params.image || 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200',
     'twitter:site': '@mangalaliving'
   }
 }
@@ -387,7 +387,7 @@ export const generateVideoSchema = (video: {
       "name": "Mangala Living",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://mangala-living.com/logo.png",
+        "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
         ...DEFAULT_IMAGE_RIGHTS_METADATA
       }
     }
@@ -412,7 +412,7 @@ export const generateItemListSchema = (params: {
       "@type": "ListItem",
       "position": item.position,
       "name": item.name,
-      "url": `https://mangala-living.com${item.url}`,
+      "url": `https://naturraextal.com${item.url}`,
       ...(item.image && { image: item.image })
     }))
   }
@@ -500,7 +500,7 @@ export const generateArticleSchema = (article: {
       "name": "Mangala Living",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://mangala-living.com/logo.png",
+        "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
         "width": 250,
         "height": 60,
         ...DEFAULT_IMAGE_RIGHTS_METADATA
@@ -508,7 +508,7 @@ export const generateArticleSchema = (article: {
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://mangala-living.com${article.url}`
+      "@id": `https://naturraextal.com${article.url}`
     },
     "articleSection": article.category,
     "inLanguage": "id-ID",
@@ -533,17 +533,17 @@ export const generateEnhancedLocalBusinessSchema = () => {
     "image": [
       {
         "@type": "ImageObject",
-        "url": "https://mangala-living.com/og-image.jpg",
+        "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
         ...DEFAULT_IMAGE_RIGHTS_METADATA
       },
       {
         "@type": "ImageObject",
-        "url": "https://mangala-living.com/assets/main-hero-image.webp",
+        "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1920",
         ...DEFAULT_IMAGE_RIGHTS_METADATA
       }
     ],
-    "@id": "https://mangala-living.com",
-    "url": "https://mangala-living.com",
+    "@id": "https://naturraextal.com",
+    "url": "https://naturraextal.com",
     "telephone": "+6288801146881",
     "priceRange": "Rp 1.500.000 - Rp 15.000.000",
     "address": {

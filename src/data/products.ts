@@ -1,21 +1,21 @@
 // Import images
-import mejaMakanImage from '../assets/meja-industrial-mejamakan.webp'
-import kabinetLemariImage from '../assets/Kabinet-Lemari-industrial.webp'
-import mejaKerjaImage from '../assets/Meja-Kerja-Rak-Meja-Belajar-custom.webp'
-import mejaMakanSetImage from '../assets/Meja-makan-industrial-150x60x90-2 kursi.webp'
-import gantunganBajuImage from '../assets/gantungan-baju-industrial.webp'
-import balconyBarTableImage from '../assets/balcony-bar-table.webp'
-import frameLoftBookshelfImage from '../assets/frame-Loft-Bookshelf.webp'
-import barChairImage from '../assets/Kursi-Barstool-Besi-Behel.webp'
-import hollowlineDisplayRackImage from '../assets/Hollowline-Display-Rack.webp'
-import steelframeOutdoorBarSetImage from '../assets/Steelfram-Outdoor-Bar-Set.webp'
-import kabinetDapurImage from '../assets/Kabinet-Industrial-Dapur.webp'
-import kursiBarStallImage from '../assets/Kursi-Bar-kursi-stall-chair.webp'
-import rakDisplayPartisiImage from '../assets/rak-display-partisi-industrial-besi.webp'
-import rakGantungIndustrialImage from '../assets/rak-gantung-industrial.webp'
-import daybedBoneOnlyImage from '../assets/industrial-daybed-boneonly.webp'
-import loungeSetCoffeeTableImage from '../assets/longue-set-coffee-table.webp'
-import benchCornerImage from '../assets/Bench-corner-kursi-sudut-kursi-santai.webp'
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
 
 // Import videos
 import kabinetDapurVideo from '../assets/Kabinet-Industrial-Dapur.mp4'

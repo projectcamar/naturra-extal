@@ -8,9 +8,9 @@ export const generateAIOptimizedStructuredData = () => {
     "name": "Mangala Living",
     "alternateName": ["Mangala Living Furniture", "Industrial Furniture Indonesia", "Furniture Besi Custom"],
     "description": "Premium Industrial Scandinavian Furniture manufacturer specializing in custom steel furniture for cafes, restaurants, hotels, and offices. Established 1999 in Bekasi, Indonesia. Serving customers across Indonesia and internationally.",
-    "url": "https://mangala-living.com",
-    "logo": "https://mangala-living.com/logo.png",
-    "image": "https://mangala-living.com/og-image.jpg",
+    "url": "https://naturraextal.com",
+    "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
     "foundingDate": "1999",
     "founder": {
       "@type": "Person",
@@ -62,7 +62,7 @@ export const generateAIOptimizedStructuredData = () => {
               "priceCurrency": "IDR",
               "availability": "https://schema.org/InStock",
               "priceValidUntil": "2026-12-31",
-              "url": "https://mangala-living.com/shop"
+              "url": "https://naturraextal.com/shop"
             },
             "aggregateRating": {
               "@type": "AggregateRating",
@@ -77,7 +77,7 @@ export const generateAIOptimizedStructuredData = () => {
           "priceCurrency": "IDR",
           "availability": "https://schema.org/InStock",
           "priceValidUntil": "2026-12-31",
-          "url": "https://mangala-living.com/shop",
+          "url": "https://naturraextal.com/shop",
           "hasMerchantReturnPolicy": {
             "@type": "MerchantReturnPolicy",
             "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
@@ -196,7 +196,7 @@ export const generateProductStructuredData = (product: any) => {
     "name": product.name,
     "description": product.description || `Industrial furniture ${product.name} by Mangala Living. Premium quality furniture made in Indonesia since 1999.`,
     "image": imageUrl,
-    "url": `https://mangala-living.com/product/${product.slug}`,
+    "url": `https://naturraextal.com/product/${product.slug}`,
     "brand": {
       "@type": "Brand",
       "name": "Mangala Living"
@@ -204,9 +204,9 @@ export const generateProductStructuredData = (product: any) => {
     "manufacturer": {
       "@type": "Organization",
       "name": "Mangala Living",
-      "url": "https://mangala-living.com",
-      "logo": "https://mangala-living.com/logo.png",
-      "image": "https://mangala-living.com/og-image.jpg"
+      "url": "https://naturraextal.com",
+      "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
+      "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200"
     },
     "category": product.categories?.[0] || "Industrial Furniture",
     "keywords": [
@@ -222,7 +222,7 @@ export const generateProductStructuredData = (product: any) => {
       "priceCurrency": "IDR",
       "availability": "https://schema.org/InStock",
       "priceValidUntil": "2026-12-31",
-      "url": `https://mangala-living.com/product/${product.slug}`,
+      "url": `https://naturraextal.com/product/${product.slug}`,
       "hasMerchantReturnPolicy": {
         "@type": "MerchantReturnPolicy",
         "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
@@ -266,9 +266,9 @@ export const generateProductStructuredData = (product: any) => {
       "seller": {
         "@type": "Organization",
         "name": "Mangala Living",
-        "url": "https://mangala-living.com",
-        "logo": "https://mangala-living.com/logo.png",
-        "image": "https://mangala-living.com/og-image.jpg",
+        "url": "https://naturraextal.com",
+        "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
+        "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
         "description": "Premium Industrial Scandinavian Furniture for Coffee Shops, Restaurants & Offices. Custom Solutions Since 1999."
       }
     },
@@ -343,19 +343,19 @@ export const generateWebSiteStructuredData = () => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Mangala Living",
-    "url": "https://mangala-living.com",
+    "url": "https://naturraextal.com",
     "description": "Industrial Furniture Besi Custom Indonesia - Manufacturer sejak 1999",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://mangala-living.com/search?q={search_term_string}",
+      "target": "https://naturraextal.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Mangala Living",
-      "url": "https://mangala-living.com",
-      "logo": "https://mangala-living.com/logo.png",
-      "image": "https://mangala-living.com/og-image.jpg"
+      "url": "https://naturraextal.com",
+      "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
+      "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200"
     }
   }
 }

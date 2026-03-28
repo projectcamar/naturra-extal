@@ -1,6 +1,6 @@
 import { type LanguageCode } from './languageManager'
 
-const BASE_URL = 'https://mangala-living.com'
+const BASE_URL = 'https://naturraextal.com'
 
 const LANGUAGE_PATH_PREFIXES: Record<LanguageCode, string> = {
   id: '/id',
@@ -292,7 +292,7 @@ export const getProductImageUrl = (imagePath: string, slug?: string): string => 
   
   // Try to get filename from slug mapping first
   if (slug && PRODUCT_IMAGE_MAP[slug]) {
-    return `https://mangala-living.com/assets/${PRODUCT_IMAGE_MAP[slug]}`
+    return `https://naturraextal.com/assets/${PRODUCT_IMAGE_MAP[slug]}`
   }
   
   // Extract filename from webpack import path (e.g., /assets/frame-Loft-Bookshelf.webp)
@@ -307,7 +307,7 @@ export const getProductImageUrl = (imagePath: string, slug?: string): string => 
   
   // If filename already includes extension, use it directly
   if (filename.includes('.')) {
-    return `https://mangala-living.com/assets/${filename}`
+    return `https://naturraextal.com/assets/${filename}`
   }
   
   // Fallback: try to construct from path
@@ -315,10 +315,10 @@ export const getProductImageUrl = (imagePath: string, slug?: string): string => 
     const parts = imagePath.split('assets')
     if (parts.length > 1) {
       const assetPath = parts[1].startsWith('/') ? parts[1] : `/${parts[1]}`
-      return `https://mangala-living.com${assetPath}`
+      return `https://naturraextal.com${assetPath}`
     }
   }
   
   // Default: assume it's in assets folder
-  return `https://mangala-living.com/assets/${filename}`
+  return `https://naturraextal.com/assets/${filename}`
 }

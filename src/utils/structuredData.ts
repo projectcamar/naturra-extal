@@ -1,6 +1,6 @@
 // Structured Data utilities for Mangala Living
 
-const IMAGE_LICENSE_PAGE = "https://mangala-living.com/image-license"
+const IMAGE_LICENSE_PAGE = "https://naturraextal.com/image-license"
 
 export const DEFAULT_IMAGE_RIGHTS_METADATA = {
   acquireLicensePage: `${IMAGE_LICENSE_PAGE}#request-license`,
@@ -9,7 +9,7 @@ export const DEFAULT_IMAGE_RIGHTS_METADATA = {
   creator: {
     "@type": "Organization",
     "name": "Mangala Living",
-    "url": "https://mangala-living.com"
+    "url": "https://naturraextal.com"
   }
 } as const
 
@@ -63,7 +63,7 @@ export const generateImageObjectSchema = (image: {
       "name": "Mangala Living",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://mangala-living.com/logo.png",
+        "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
         ...DEFAULT_IMAGE_RIGHTS_METADATA
       }
     }
@@ -100,7 +100,7 @@ export const generateProductImageGallerySchema = (images: Array<{
       "name": "Mangala Living",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://mangala-living.com/logo.png",
+        "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
         ...DEFAULT_IMAGE_RIGHTS_METADATA
       }
     }
@@ -192,9 +192,9 @@ export const generateBlogPostingSchema = (post: {
   } : {
     "@type": "Organization",
     "name": "Mangala Living",
-    "url": "https://mangala-living.com",
-    "logo": "https://mangala-living.com/logo.png",
-    "image": "https://mangala-living.com/og-image.jpg"
+    "url": "https://naturraextal.com",
+    "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200"
   }
 
   return {
@@ -225,13 +225,13 @@ export const generateBlogPostingSchema = (post: {
       "name": "Mangala Living",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://mangala-living.com/logo.png",
+        "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
         ...DEFAULT_IMAGE_RIGHTS_METADATA
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://mangala-living.com/blog/${post.slug}`
+      "@id": `https://naturraextal.com/blog/${post.slug}`
     },
     "articleSection": post.category,
     "inLanguage": "id-ID",
@@ -269,9 +269,9 @@ export const generateMerchantStructuredData = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Mangala Living",
-    "url": "https://mangala-living.com",
-    "logo": "https://mangala-living.com/logo.png",
-    "image": "https://mangala-living.com/og-image.jpg",
+    "url": "https://naturraextal.com",
+    "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
     "description": "Premium Industrial Scandinavian Furniture for Coffee Shops, Restaurants & Offices. Custom Solutions Since 1999.",
     "foundingDate": "1999",
     "address": {
@@ -317,14 +317,14 @@ export const generateMerchantStructuredData = () => {
             "name": "Industrial Furniture",
             "category": "Furniture",
             "description": "Premium industrial furniture made from high-quality materials",
-            "image": "https://mangala-living.com/og-image.jpg",
+            "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
             "offers": {
               "@type": "Offer",
               "price": "1500000",
               "priceCurrency": "IDR",
               "availability": "https://schema.org/InStock",
               "priceValidUntil": "2026-12-31",
-              "url": "https://mangala-living.com/shop"
+              "url": "https://naturraextal.com/shop"
             }
           },
           "price": "1500000",
@@ -383,9 +383,9 @@ export const generateLocalBusinessStructuredData = () => {
     "@type": ["FurnitureStore", "LocalBusiness"],
     "name": "Mangala Living - Workshop Furniture Industrial Bekasi",
     "alternateName": "Mangala Living Furniture Industrial Bekasi",
-    "image": "https://mangala-living.com/og-image.jpg",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
     "description": "Workshop Furniture Besi Custom Bekasi sejak 1999. Spesialis Industrial Furniture untuk Cafe, Restoran, Hotel, Kantor. Produksi langsung harga pabrik, material berkualitas, finishing powder coating. Melayani Jakarta, Bekasi, Jabodetabek.",
-    "url": "https://mangala-living.com",
+    "url": "https://naturraextal.com",
     "telephone": "+6288801146881",
     "email": "lifewithmangala@gmail.com",
     "address": {

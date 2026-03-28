@@ -1,6 +1,6 @@
 import React from 'react'
 import '../pages/About.css'
-import showroomImage from '../assets/hero-messagefrommangala.webp'
+// legacy mangala image import removed
 
 interface MessageSectionProps {
   isIndonesian?: boolean

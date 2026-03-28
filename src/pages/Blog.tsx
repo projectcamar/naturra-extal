@@ -4,7 +4,7 @@ import { Link, useLocation, useSearchParams } from 'react-router-dom'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import heroImage from '../assets/main-hero-image.webp'
+// legacy mangala image import removed
 import { getPostsByPage, getTotalPages, getAllBlogPosts } from '../data/blog'
 import { generateLanguageSpecificMeta, generateLocalizedUrls, truncateTitle, truncateMetaDescription } from '../utils/seo'
 import { getCurrentLanguage, getLinkWithLanguage, type LanguageCode } from '../utils/languageManager'

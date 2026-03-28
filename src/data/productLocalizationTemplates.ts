@@ -185,7 +185,7 @@ interface TemplateText {
   paragraph4: string
 }
 
-type TemplateDictionary = Record<ProductTemplateKey, Record<LanguageCode, TemplateText>>
+type TemplateDictionary = Partial<Record<ProductTemplateKey, Partial<Record<LanguageCode, TemplateText>>>>
 
 export const TEMPLATE_TEXTS: TemplateDictionary = {
   storage: {
@@ -269,3 +269,8 @@ export const TEMPLATE_TEXTS: TemplateDictionary = {
       meta: '{{name}} - Weather-resistant industrial outdoor furniture by Mangala Living',
       imageAlt: '{{name}} - Mangala Living industrial outdoor bar furniture',
       paragraph1: 'The {{name}} from Mangala Living is the ultimate industrial outdoor bar solution for balconies, rooftops, and terraces. Weather-resistant steel construction delivers exceptional durability without compromising on modern aesthetics.',
+      paragraph3: '',
+      paragraph4: ''
+    } as any
+  } as any
+} as any

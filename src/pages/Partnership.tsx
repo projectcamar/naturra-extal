@@ -3,12 +3,12 @@ import { useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import heroImage from '../assets/main-hero-image.webp'
+// legacy mangala image import removed
 import projectVideo from '../assets/meja-makan-industrial.mp4'
-import experienceImage from '../assets/Hollowline-Display-Rack.webp'
-import collaborationImage from '../assets/Meja-Kerja-Rak-Meja-Belajar-custom.webp'
-import flexibilityImage from '../assets/Kabinet-Industrial-Dapur.webp'
-import scaleImage from '../assets/Meja-makan-industrial-150x60x90-2 kursi.webp'
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
+// legacy mangala image import removed
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
 import { trackWhatsAppClick } from '../utils/whatsappTracking'
 import { getCurrentLanguage, getStoredLanguage, detectLanguageFromIP, type LanguageCode } from '../utils/languageManager'

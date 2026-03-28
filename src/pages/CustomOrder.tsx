@@ -4,8 +4,8 @@ import { useLocation } from 'react-router-dom'
 import { FileText, MessageCircle, Truck, Wrench } from 'lucide-react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-import heroImage from '../assets/main-hero-image.webp'
-import showroomImage from '../assets/Bench-corner-kursi-sudut-kursi-santai.webp'
+// legacy mangala image import removed
+// legacy mangala image import removed
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
 import { trackWhatsAppClick } from '../utils/whatsappTracking'
 import { getCurrentLanguage, getStoredLanguage, detectLanguageFromIP, type LanguageCode } from '../utils/languageManager'
