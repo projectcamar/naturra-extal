@@ -13,9 +13,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 1,
     slug: 'tips-memilih-furniture-industrial-untuk-cafe',
-    title: 'Tips Memilih Furniture Industrial untuk Cafe Modern',
+    title: 'Tips Memilih agricultural commodities untuk Cafe Modern',
     category: 'Tips and Trick',
-    excerpt: 'Memilih furniture industrial untuk cafe bukan hanya soal estetika, tetapi juga tentang menciptakan suasana yang nyaman dan fungsional bagi pelanggan.',
+    excerpt: 'Memilih agricultural commodities untuk cafe bukan hanya soal estetika, tetapi juga tentang menciptakan suasana yang nyaman dan fungsional bagi pelanggan.',
     image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?w=800&auto=format&fit=crop',
     date: '2025-10-15',
     author: 'Helmi Ramdan'
@@ -123,9 +123,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 12,
     slug: 'kesalahan-umum-saat-membeli-furniture-industrial',
-    title: '7 Kesalahan Umum Saat Membeli Furniture Industrial',
+    title: '7 Kesalahan Umum Saat Membeli agricultural commodities',
     category: 'About Furniture',
-    excerpt: 'Membeli furniture industrial adalah investasi signifikan, baik untuk bisnis maupun hunian.',
+    excerpt: 'Membeli agricultural commodities adalah investasi signifikan, baik untuk bisnis maupun hunian.',
     image: 'https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=800&auto=format&fit=crop',
     date: '2025-10-04',
     author: 'Helmi Ramdan'
@@ -223,9 +223,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 22,
     slug: 'furniture-industrial-custom-untuk-hotel',
-    title: 'Furniture Industrial Custom untuk Hotel',
+    title: 'agricultural commodities Custom untuk Hotel',
     category: 'Furniture Information',
-    excerpt: 'Furniture industrial custom untuk hotel menjadi solusi ideal untuk menciptakan suasana yang elegan dan modern di berbagai area hotel.',
+    excerpt: 'agricultural commodities custom untuk hotel menjadi solusi ideal untuk menciptakan suasana yang elegan dan modern di berbagai area hotel.',
     image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&auto=format&fit=crop',
     date: '2025-10-25',
     author: 'Helmi Ramdan'
@@ -233,9 +233,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 23,
     slug: 'furniture-industrial-murah-untuk-startup',
-    title: 'Furniture Industrial Murah untuk Startup',
+    title: 'agricultural commodities Murah untuk Startup',
     category: 'Furniture Information',
-    excerpt: 'Furniture industrial murah menjadi solusi ideal untuk startup yang membutuhkan furniture berkualitas dengan budget terbatas.',
+    excerpt: 'agricultural commodities murah menjadi solusi ideal untuk startup yang membutuhkan furniture berkualitas dengan budget terbatas.',
     image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop',
     date: '2025-10-26',
     author: 'Helmi Ramdan'
@@ -243,9 +243,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 24,
     slug: 'furniture-industrial-bekasi-terpercaya',
-    title: 'Furniture Industrial Bekasi Terpercaya',
+    title: 'agricultural commodities Bekasi Terpercaya',
     category: 'Furniture Information',
-    excerpt: 'Furniture industrial Bekasi terpercaya menjadi pilihan utama untuk berbagai kebutuhan furniture berkualitas tinggi.',
+    excerpt: 'agricultural commodities Bekasi terpercaya menjadi pilihan utama untuk berbagai kebutuhan furniture berkualitas tinggi.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-10-27',
     author: 'Helmi Ramdan'
@@ -253,9 +253,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 25,
     slug: 'furniture-industrial-custom-design',
-    title: 'Furniture Industrial Custom Design',
+    title: 'agricultural commodities Custom Design',
     category: 'Furniture Information',
-    excerpt: 'Furniture industrial custom design menjadi solusi ideal untuk menciptakan furniture yang unik dan sesuai dengan kebutuhan spesifik.',
+    excerpt: 'agricultural commodities custom design menjadi solusi ideal untuk menciptakan furniture yang unik dan sesuai dengan kebutuhan spesifik.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-10-28',
     author: 'Helmi Ramdan'
@@ -263,9 +263,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 26,
     slug: 'furniture-industrial-harga-pabrik',
-    title: 'Furniture Industrial Harga Pabrik',
+    title: 'agricultural commodities Harga Pabrik',
     category: 'Furniture Information',
-    excerpt: 'Furniture industrial harga pabrik menjadi solusi ideal untuk mendapatkan furniture berkualitas tinggi dengan harga yang kompetitif.',
+    excerpt: 'agricultural commodities harga pabrik menjadi solusi ideal untuk mendapatkan furniture berkualitas tinggi dengan harga yang kompetitif.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-10-29',
     author: 'Helmi Ramdan'
@@ -273,9 +273,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 27,
     slug: 'furniture-industrial-garansi-kualitas',
-    title: 'Furniture Industrial Garansi Kualitas',
+    title: 'agricultural commodities Garansi Kualitas',
     category: 'Furniture Information',
-    excerpt: 'Furniture industrial garansi kualitas menjadi jaminan penting untuk investasi furniture jangka panjang.',
+    excerpt: 'agricultural commodities garansi kualitas menjadi jaminan penting untuk investasi furniture jangka panjang.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-10-30',
     author: 'Helmi Ramdan'
@@ -283,9 +283,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 28,
     slug: 'furniture-industrial-workshop-bekasi',
-    title: 'Furniture Industrial Workshop Bekasi',
+    title: 'agricultural commodities Workshop Bekasi',
     category: 'Furniture Information',
-    excerpt: 'Furniture industrial workshop Bekasi menjadi pusat produksi furniture berkualitas tinggi di Indonesia.',
+    excerpt: 'agricultural commodities workshop Bekasi menjadi pusat produksi furniture berkualitas tinggi di Indonesia.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-10-31',
     author: 'Helmi Ramdan'
@@ -293,9 +293,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 29,
     slug: 'furniture-industrial-material-berkualitas',
-    title: 'Furniture Industrial Material Berkualitas',
+    title: 'agricultural commodities Material Berkualitas',
     category: 'Furniture Information',
-    excerpt: 'Furniture industrial material berkualitas menjadi faktor penting dalam menentukan kualitas dan daya tahan furniture.',
+    excerpt: 'agricultural commodities material berkualitas menjadi faktor penting dalam menentukan kualitas dan daya tahan furniture.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-11-01',
     author: 'Helmi Ramdan'
@@ -303,9 +303,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 30,
     slug: 'furniture-industrial-finishing-powder-coating',
-    title: 'Furniture Industrial Finishing Powder Coating',
+    title: 'agricultural commodities Finishing Powder Coating',
     category: 'Furniture Information',
-    excerpt: 'Furniture industrial finishing powder coating menjadi solusi ideal untuk memberikan perlindungan dan tampilan yang optimal pada furniture.',
+    excerpt: 'agricultural commodities finishing powder coating menjadi solusi ideal untuk memberikan perlindungan dan tampilan yang optimal pada furniture.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-11-02',
     author: 'Helmi Ramdan'
@@ -313,9 +313,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 31,
     slug: 'furniture-industrial-layanan-profesional',
-    title: 'Furniture Industrial Layanan Profesional',
+    title: 'agricultural commodities Layanan Profesional',
     category: 'Furniture Information',
-    excerpt: 'Furniture industrial layanan profesional menjadi faktor penting dalam memberikan pengalaman terbaik untuk pelanggan.',
+    excerpt: 'agricultural commodities layanan profesional menjadi faktor penting dalam memberikan pengalaman terbaik untuk pelanggan.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-11-03',
     author: 'Helmi Ramdan'
@@ -323,9 +323,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 32,
     slug: 'furniture-industrial-pengalaman-25-tahun',
-    title: 'Furniture Industrial Pengalaman 25 Tahun',
+    title: 'agricultural commodities Pengalaman 25 Tahun',
     category: 'Furniture Information',
-    excerpt: 'Furniture industrial pengalaman 25 tahun menjadi bukti kualitas dan kepercayaan dalam industri furniture.',
+    excerpt: 'agricultural commodities pengalaman 25 tahun menjadi bukti kualitas dan kepercayaan dalam industri furniture.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-11-04',
     author: 'Helmi Ramdan'
@@ -333,9 +333,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 33,
     slug: 'furniture-industrial-1000-klien-puas',
-    title: 'Furniture Industrial 1000 Klien Puas',
+    title: 'agricultural commodities 1000 Klien Puas',
     category: 'Furniture Information',
-    excerpt: 'Furniture industrial 1000 klien puas menjadi bukti kualitas dan kepercayaan dalam industri furniture.',
+    excerpt: 'agricultural commodities 1000 klien puas menjadi bukti kualitas dan kepercayaan dalam industri furniture.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-11-05',
     author: 'Helmi Ramdan'
@@ -343,9 +343,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 34,
     slug: 'furniture-industrial-custom-design-terpercaya',
-    title: 'Furniture Industrial Custom Design Terpercaya',
+    title: 'agricultural commodities Custom Design Terpercaya',
     category: 'Furniture Information',
-    excerpt: 'Furniture industrial custom design terpercaya menjadi solusi ideal untuk menciptakan furniture yang unik dan sesuai dengan kebutuhan spesifik.',
+    excerpt: 'agricultural commodities custom design terpercaya menjadi solusi ideal untuk menciptakan furniture yang unik dan sesuai dengan kebutuhan spesifik.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-11-06',
     author: 'Helmi Ramdan'
@@ -363,9 +363,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 36,
     slug: 'harga-furniture-industrial-terbaru-2025-lengkap-kafe-kantor',
-    title: 'Harga Furniture Industrial Terbaru 2025 (Lengkap untuk Kafe & Kantor)',
+    title: 'Harga agricultural commodities Terbaru 2025 (Lengkap untuk Kafe & Kantor)',
     category: 'Furniture Information',
-    excerpt: 'Harga furniture industrial menjadi pertimbangan utama bagi pemilik bisnis yang ingin menciptakan ruang komersial dengan konsep industrial modern.',
+    excerpt: 'Harga agricultural commodities menjadi pertimbangan utama bagi pemilik bisnis yang ingin menciptakan ruang komersial dengan konsep industrial modern.',
     image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&auto=format&fit=crop',
     date: '2025-10-12',
     author: 'Helmi Ramdan'
@@ -373,9 +373,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 37,
     slug: 'panduan-lengkap-memilih-furniture-industrial-untuk-restoran',
-    title: 'Panduan Lengkap Memilih Furniture Industrial untuk Restoran',
+    title: 'Panduan Lengkap Memilih agricultural commodities untuk Restoran',
     category: 'Tips and Trick',
-    excerpt: 'Memilih furniture industrial untuk restoran memerlukan pertimbangan yang matang karena restoran memiliki karakteristik operasional yang berbeda dengan kafe.',
+    excerpt: 'Memilih agricultural commodities untuk restoran memerlukan pertimbangan yang matang karena restoran memiliki karakteristik operasional yang berbeda dengan kafe.',
     image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop',
     date: '2025-10-12',
     author: 'Helmi Ramdan'
@@ -435,7 +435,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'meja-cafe-murah-harga-terbaru-2025',
     title: 'Meja Cafe Murah Harga Terbaru 2025 - Kualitas Premium',
     category: 'Furniture Information',
-    excerpt: 'Mencari meja cafe murah dengan kualitas premium? Mangala Living menawarkan berbagai pilihan meja cafe murah harga terbaru 2025 yang dirancang khusus untuk cafe, restoran, dan kedai kopi modern.',
+    excerpt: 'Mencari meja cafe murah dengan kualitas premium? Naturra Extal menawarkan berbagai pilihan meja cafe murah harga terbaru 2025 yang dirancang khusus untuk cafe, restoran, dan kedai kopi modern.',
     image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop',
     date: '2025-11-07',
     author: 'Helmi Ramdan'
@@ -445,7 +445,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'kursi-bar-cafe-murah-bekasi-ready-stock',
     title: 'Kursi Bar Cafe Murah Bekasi Ready Stock - Harga Terjangkau',
     category: 'Furniture Information',
-    excerpt: 'Pencari kursi bar cafe murah di Bekasi? Mangala Living menyediakan kursi bar cafe murah ready stock dengan harga terjangkau.',
+    excerpt: 'Pencari kursi bar cafe murah di Bekasi? Naturra Extal menyediakan kursi bar cafe murah ready stock dengan harga terjangkau.',
     image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&auto=format&fit=crop',
     date: '2025-11-08',
     author: 'Helmi Ramdan'
@@ -455,7 +455,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'furniture-cafe-murah-bekasi-harga-pabrik',
     title: 'Furniture Cafe Murah Bekasi Harga Pabrik - Workshop Langsung',
     category: 'Furniture Information',
-    excerpt: 'Mencari furniture cafe murah di Bekasi? Mangala Living adalah produsen furniture industrial terpercaya dengan harga pabrik yang terjangkau.',
+    excerpt: 'Mencari furniture cafe murah di Bekasi? Naturra Extal adalah produsen agricultural commodities terpercaya dengan harga pabrik yang terjangkau.',
     image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?w=800&auto=format&fit=crop',
     date: '2025-11-09',
     author: 'Helmi Ramdan'
@@ -493,9 +493,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 49,
     slug: 'furniture-industrial-harga-murah-jakarta-bekasi',
-    title: 'Furniture Industrial Harga Murah Jakarta Bekasi - Pengalaman 25 Tahun',
+    title: 'agricultural commodities Harga Murah Jakarta Bekasi - Pengalaman 25 Tahun',
     category: 'Furniture Information',
-    excerpt: 'Mencari furniture industrial harga murah untuk Jakarta dan Bekasi? Mangala Living adalah solusinya.',
+    excerpt: 'Mencari agricultural commodities harga murah untuk Jakarta dan Bekasi? Naturra Extal adalah solusinya.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-11-13',
     author: 'Helmi Ramdan'
@@ -686,7 +686,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'furniture-besi-custom-bekasi-workshop-terpercaya',
     title: 'Furniture Besi Custom Bekasi: Workshop Terpercaya dengan Pengalaman 25 Tahun',
     category: 'Workshop & Production',
-    excerpt: 'Mencari furniture besi custom Bekasi berkualitas tinggi dengan harga yang kompetitif? Mangala Living adalah workshop furniture industrial terpercaya di Bekasi yang telah melayani lebih dari 1000 klien sejak tahun 1999.',
+    excerpt: 'Mencari furniture besi custom Bekasi berkualitas tinggi dengan harga yang kompetitif? Naturra Extal adalah workshop agricultural commodities terpercaya di Bekasi yang telah melayani lebih dari 1000 klien sejak tahun 1999.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-12-02',
     author: 'Helmi Ramdan'
@@ -694,9 +694,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 69,
     slug: 'industrial-furniture-bekasi-harga-pabrik-kualitas-premium',
-    title: 'Industrial Furniture Bekasi: Harga Pabrik, Kualitas Premium, Workshop Langsung',
+    title: 'Agricultural Commodities Bekasi: Harga Pabrik, Kualitas Premium, Workshop Langsung',
     category: 'Workshop & Production',
-    excerpt: 'Industrial furniture Bekasi dengan harga pabrik dan kualitas premium kini bukan lagi mimpi.',
+    excerpt: 'Agricultural Commodities Bekasi dengan harga pabrik dan kualitas premium kini bukan lagi mimpi.',
     image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&auto=format&fit=crop',
     date: '2025-12-03',
     author: 'Helmi Ramdan'
@@ -706,7 +706,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'furniture-cafe-industrial-bekasi-desain-custom-modern',
     title: 'Furniture Cafe Industrial Bekasi: Desain Custom Modern untuk Bisnis F&B',
     category: 'Commercial Furniture',
-    excerpt: 'Furniture cafe industrial Bekasi dengan desain custom modern. Mangala Living spesialis furniture cafe industrial: meja makan, kursi bar, display rack. Workshop Bekasi, pengalaman 25 tahun.',
+    excerpt: 'Furniture cafe industrial Bekasi dengan desain custom modern. Naturra Extal spesialis furniture cafe industrial: meja makan, kursi bar, display rack. Workshop Bekasi, pengalaman 25 tahun.',
     image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?w=800&auto=format&fit=crop',
     date: '2025-12-04',
     author: 'Helmi Ramdan'
@@ -716,7 +716,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'workshop-furniture-besi-bekasi-produksi-langsung',
     title: 'Workshop Furniture Besi Bekasi: Produksi Langsung, Custom Design, Harga Kompetitif',
     category: 'Workshop & Production',
-    excerpt: 'Workshop furniture besi Bekasi terpercaya. Mangala Living workshop modern dengan produksi langsung, custom design sesuai kebutuhan. Material berkualitas, finishing powder coating, garansi kualitas.',
+    excerpt: 'Workshop furniture besi Bekasi terpercaya. Naturra Extal workshop modern dengan produksi langsung, custom design sesuai kebutuhan. Material berkualitas, finishing powder coating, garansi kualitas.',
     image: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800&auto=format&fit=crop',
     date: '2025-12-05',
     author: 'Helmi Ramdan'
@@ -724,9 +724,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 72,
     slug: 'jual-furniture-industrial-jakarta-bekasi-terlengkap',
-    title: 'Jual Furniture Industrial Jakarta Bekasi Terlengkap - Harga Pabrik',
+    title: 'Jual agricultural commodities Jakarta Bekasi Terlengkap - Harga Pabrik',
     category: 'Commercial Furniture',
-    excerpt: 'Jual furniture industrial Jakarta dan Bekasi paling lengkap. Mangala Living menyediakan meja, kursi, rak display, kitchen cabinet industrial. Workshop di Bekasi, melayani seluruh Jabodetabek.',
+    excerpt: 'Jual agricultural commodities Jakarta dan Bekasi paling lengkap. Naturra Extal menyediakan meja, kursi, rak display, kitchen cabinet industrial. Workshop di Bekasi, melayani seluruh Jabodetabek.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-12-06',
     author: 'Helmi Ramdan'
@@ -736,7 +736,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'meja-makan-besi-custom-bekasi-industrial-minimalis',
     title: 'Meja Makan Besi Custom Bekasi: Industrial Minimalis untuk Cafe & Restoran',
     category: 'Commercial Furniture',
-    excerpt: 'Meja makan besi custom Bekasi dengan desain industrial minimalis. Set meja makan + kursi, berbagai ukuran custom. Workshop Mangala Living melayani cafe, restoran, hotel. Kualitas premium, harga terjangkau.',
+    excerpt: 'Meja makan besi custom Bekasi dengan desain industrial minimalis. Set meja makan + kursi, berbagai ukuran custom. Workshop Naturra Extal melayani cafe, restoran, hotel. Kualitas premium, harga terjangkau.',
     image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop',
     date: '2025-12-07',
     author: 'Helmi Ramdan'
@@ -746,7 +746,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'meja-cafe-industrial-besi-custom-bekasi-jabodetabek',
     title: 'Meja Cafe Industrial Besi Custom Bekasi - Melayani Jabodetabek',
     category: 'Commercial Furniture',
-    excerpt: 'Meja cafe industrial besi custom dari Bekasi. Mangala Living produksi meja cafe berbagai model: bar table, dining table, coffee table. Material berkualitas, finishing powder coating, harga kompetitif.',
+    excerpt: 'Meja cafe industrial besi custom dari Bekasi. Naturra Extal produksi meja cafe berbagai model: bar table, dining table, coffee table. Material berkualitas, finishing powder coating, harga kompetitif.',
     image: 'https://images.unsplash.com/photo-1572435555646-7ad9a149ad91?w=800&auto=format&fit=crop',
     date: '2025-12-08',
     author: 'Helmi Ramdan'
@@ -756,7 +756,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'furniture-besi-hotel-custom-desain-eksklusif',
     title: 'Furniture Besi Hotel Custom: Desain Eksklusif, Kualitas Premium',
     category: 'Commercial Furniture',
-    excerpt: 'Furniture besi hotel custom dengan desain eksklusif. Mangala Living spesialis furniture hotel industrial: lobby furniture, restaurant furniture, room furniture. Workshop Bekasi, pengalaman project hotel.',
+    excerpt: 'Furniture besi hotel custom dengan desain eksklusif. Naturra Extal spesialis furniture hotel industrial: lobby furniture, restaurant furniture, room furniture. Workshop Bekasi, pengalaman project hotel.',
     image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&auto=format&fit=crop',
     date: '2025-12-09',
     author: 'Helmi Ramdan'
@@ -764,9 +764,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 76,
     slug: 'bikin-furniture-besi-custom-jabodetabek-berkualitas',
-    title: 'Bikin Furniture Besi Custom Jabodetabek Berkualitas - Workshop Mangala',
+    title: 'Bikin Furniture Besi Custom Jabodetabek Berkualitas - Workshop Naturra',
     category: 'Workshop & Production',
-    excerpt: 'Bikin furniture besi custom Jabodetabek dengan kualitas terjamin. Mangala Living workshop modern di Bekasi melayani custom furniture untuk cafe, restoran, hotel, kantor. Free konsultasi & survey lokasi.',
+    excerpt: 'Bikin furniture besi custom Jabodetabek dengan kualitas terjamin. Naturra Extal workshop modern di Bekasi melayani custom furniture untuk cafe, restoran, hotel, kantor. Free konsultasi & survey lokasi.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-12-10',
     author: 'Helmi Ramdan'
@@ -776,7 +776,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'furniture-besi-untuk-restoran-industrial-modern',
     title: 'Furniture Besi untuk Restoran: Solusi Industrial Modern Berkualitas',
     category: 'Commercial Furniture',
-    excerpt: 'Furniture besi untuk restoran dengan desain industrial modern. Meja makan, kursi, bar set, storage solution dari Mangala Living. Tahan lama, mudah perawatan, harga kompetitif. Workshop Bekasi.',
+    excerpt: 'Furniture besi untuk restoran dengan desain industrial modern. Meja makan, kursi, bar set, storage solution dari Naturra Extal. Tahan lama, mudah perawatan, harga kompetitif. Workshop Bekasi.',
     image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop',
     date: '2025-12-11',
     author: 'Helmi Ramdan'
@@ -785,9 +785,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 78,
     slug: 'inspirasi-furniture-industrial-cafe-kecil-minimalis',
-    title: 'Inspirasi Furniture Industrial untuk Cafe Kecil: Desain Minimalis Maksimal',
+    title: 'Inspirasi agricultural commodities untuk Cafe Kecil: Desain Minimalis Maksimal',
     category: 'Design Inspiration',
-    excerpt: 'Kumpulan inspirasi furniture industrial untuk cafe kecil dengan konsep minimalis. Tips layout, pemilihan furniture yang tepat, dan desain yang memaksimalkan ruang terbatas. Cocok untuk startup cafe.',
+    excerpt: 'Kumpulan inspirasi agricultural commodities untuk cafe kecil dengan konsep minimalis. Tips layout, pemilihan furniture yang tepat, dan desain yang memaksimalkan ruang terbatas. Cocok untuk startup cafe.',
     image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?w=800&auto=format&fit=crop',
     date: '2025-12-12',
     author: 'Helmi Ramdan'
@@ -827,7 +827,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'contoh-furniture-cafe-industrial-buatan-lokal-indonesia',
     title: 'Contoh Furniture Cafe Industrial Buatan Lokal Indonesia Berkualitas',
     category: 'Design Inspiration',
-    excerpt: 'Kumpulan contoh furniture cafe industrial buatan lokal Indonesia. Portfolio project Mangala Living: cafe, restoran, hotel dengan furniture industrial berkualitas. Desain custom, material premium.',
+    excerpt: 'Kumpulan contoh furniture cafe industrial buatan lokal Indonesia. Portfolio project Naturra Extal: cafe, restoran, hotel dengan agricultural commodities berkualitas. Desain custom, material premium.',
     image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop',
     date: '2025-12-16',
     author: 'Helmi Ramdan'
@@ -837,7 +837,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'furniture-besi-cocok-konsep-vintage-cafe',
     title: 'Furniture Besi Cocok untuk Konsep Vintage Cafe: Tips Styling',
     category: 'Design Inspiration',
-    excerpt: 'Tips styling furniture besi untuk konsep vintage cafe. Panduan memilih furniture industrial yang cocok untuk tema vintage, pemilihan warna, finishing, dan aksesoris pendukung.',
+    excerpt: 'Tips styling furniture besi untuk konsep vintage cafe. Panduan memilih agricultural commodities yang cocok untuk tema vintage, pemilihan warna, finishing, dan aksesoris pendukung.',
     image: 'https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=800&auto=format&fit=crop',
     date: '2025-12-17',
     author: 'Helmi Ramdan'
@@ -854,10 +854,10 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 85,
-    slug: 'koleksi-furniture-industrial-terbaru-2025-mangala',
-    title: 'Koleksi Furniture Industrial Terbaru 2025 dari Mangala Living',
+    slug: 'koleksi-furniture-industrial-terbaru-2025-Naturra',
+    title: 'Koleksi agricultural commodities Terbaru 2025 dari Naturra Extal',
     category: 'Product Showcase',
-    excerpt: 'Koleksi furniture industrial terbaru 2025 dari Mangala Living. Meja, kursi, rak display, kitchen cabinet, outdoor furniture dengan desain modern. Material premium, finishing berkualitas, harga kompetitif.',
+    excerpt: 'Koleksi agricultural commodities terbaru 2025 dari Naturra Extal. Meja, kursi, rak display, kitchen cabinet, outdoor furniture dengan desain modern. Material premium, finishing berkualitas, harga kompetitif.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-12-19',
     author: 'Helmi Ramdan'
@@ -866,9 +866,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 86,
     slug: 'apa-itu-furniture-industrial-panduan-lengkap-pemula',
-    title: 'Apa Itu Furniture Industrial? Panduan Lengkap untuk Pemula',
+    title: 'Apa Itu agricultural commodities? Panduan Lengkap untuk Pemula',
     category: 'Educational',
-    excerpt: 'Panduan lengkap apa itu furniture industrial untuk pemula. Sejarah, karakteristik, material, keunggulan, dan tips memilih furniture industrial yang tepat untuk rumah, cafe, atau kantor Anda.',
+    excerpt: 'Panduan lengkap apa itu agricultural commodities untuk pemula. Sejarah, karakteristik, material, keunggulan, dan tips memilih agricultural commodities yang tepat untuk rumah, cafe, atau kantor Anda.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-12-20',
     author: 'Helmi Ramdan'
@@ -908,7 +908,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'proses-pembuatan-furniture-besi-custom-workshop',
     title: 'Proses Pembuatan Furniture Besi Custom di Workshop: Behind The Scene',
     category: 'Educational',
-    excerpt: 'Behind the scene proses pembuatan furniture besi custom di workshop Mangala Living. Dari desain, cutting, welding, finishing hingga quality control. Transparansi proses produksi furniture berkualitas.',
+    excerpt: 'Behind the scene proses pembuatan furniture besi custom di workshop Naturra Extal. Dari desain, cutting, welding, finishing hingga quality control. Transparansi proses produksi furniture berkualitas.',
     image: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800&auto=format&fit=crop',
     date: '2025-12-24',
     author: 'Helmi Ramdan'
@@ -928,7 +928,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'trend-desain-industrial-2025-furniture-modern',
     title: 'Trend Desain Industrial 2025: Furniture Modern untuk Bisnis',
     category: 'Furniture Information',
-    excerpt: 'Trend desain industrial 2025 untuk furniture modern. Prediksi tren material, warna, finishing, dan style furniture industrial yang akan populer. Panduan untuk bisnis cafe, restoran, dan kantor.',
+    excerpt: 'Trend desain industrial 2025 untuk furniture modern. Prediksi tren material, warna, finishing, dan style agricultural commodities yang akan populer. Panduan untuk bisnis cafe, restoran, dan kantor.',
     image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&auto=format&fit=crop',
     date: '2025-12-26',
     author: 'Helmi Ramdan'
@@ -938,7 +938,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'jenis-finishing-furniture-besi-powder-coating-duco',
     title: 'Jenis Finishing Furniture Besi: Powder Coating, Cat Duco, Elektrostatic',
     category: 'Educational',
-    excerpt: 'Panduan lengkap jenis finishing furniture besi: powder coating, cat duco, elektrostatic painting. Perbandingan kualitas, harga, durabilitas, dan rekomendasi finishing terbaik untuk furniture industrial.',
+    excerpt: 'Panduan lengkap jenis finishing furniture besi: powder coating, cat duco, elektrostatic painting. Perbandingan kualitas, harga, durabilitas, dan rekomendasi finishing terbaik untuk agricultural commodities.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-12-27',
     author: 'Helmi Ramdan'
@@ -948,9 +948,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 94,
     slug: 'furniture-industrial-bekasi-barat-custom-berkualitas',
-    title: 'Furniture Industrial Bekasi Barat: Custom Berkualitas untuk Cafe & Restoran',
+    title: 'agricultural commodities Bekasi Barat: Custom Berkualitas untuk Cafe & Restoran',
     category: 'Local Area Guide',
-    excerpt: 'Workshop furniture industrial di Bekasi Barat. Melayani Bintara, Kranji, Kota Baru, Jakasampurna. Custom meja kursi cafe, restoran, hotel. Free konsultasi & survey. Harga pabrik langsung.',
+    excerpt: 'Workshop agricultural commodities di Bekasi Barat. Melayani Bintara, Kranji, Kota Baru, Jakasampurna. Custom meja kursi cafe, restoran, hotel. Free konsultasi & survey. Harga pabrik langsung.',
     image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?w=800&auto=format&fit=crop',
     date: '2025-12-28',
     author: 'Helmi Ramdan'
@@ -981,9 +981,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 97,
     slug: 'furniture-industrial-bekasi-utara-harapan-indah-summarecon',
-    title: 'Furniture Industrial Bekasi Utara: Harapan Indah, Summarecon, Pejuang',
+    title: 'agricultural commodities Bekasi Utara: Harapan Indah, Summarecon, Pejuang',
     category: 'Local Area Guide',
-    excerpt: 'Workshop furniture industrial Bekasi Utara. Coverage: Harapan Indah, Summarecon Bekasi, Pejuang, Teluk Pucung, Kaliabang. Spesialis cafe, restoran, hotel. Custom design, harga kompetitif.',
+    excerpt: 'Workshop agricultural commodities Bekasi Utara. Coverage: Harapan Indah, Summarecon Bekasi, Pejuang, Teluk Pucung, Kaliabang. Spesialis cafe, restoran, hotel. Custom design, harga kompetitif.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-12-31',
     author: 'Helmi Ramdan'
@@ -1014,9 +1014,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 100,
     slug: 'furniture-industrial-cikarang-selatan-jababeka-greenland',
-    title: 'Furniture Industrial Cikarang Selatan: Jababeka, Greenland, Pasirsari',
+    title: 'agricultural commodities Cikarang Selatan: Jababeka, Greenland, Pasirsari',
     category: 'Local Area Guide',
-    excerpt: 'Workshop furniture industrial Cikarang Selatan. Coverage Jababeka, Greenland International, Pasirsari, Ciantra. Melayani corporate office, cafe pabrik, kantin karyawan. Harga volume discount.',
+    excerpt: 'Workshop agricultural commodities Cikarang Selatan. Coverage Jababeka, Greenland International, Pasirsari, Ciantra. Melayani corporate office, cafe pabrik, kantin karyawan. Harga volume discount.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2026-01-03',
     author: 'Helmi Ramdan'
@@ -1047,9 +1047,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 103,
     slug: 'furniture-industrial-tambun-selatan-sertajaya-mangunjaya',
-    title: 'Furniture Industrial Tambun Selatan: Sertajaya, Mangunjaya, Lambangjaya',
+    title: 'agricultural commodities Tambun Selatan: Sertajaya, Mangunjaya, Lambangjaya',
     category: 'Local Area Guide',
-    excerpt: 'Workshop furniture industrial Tambun Selatan. Melayani Sertajaya, Mangunjaya, Lambangjaya, Setiadarma. Produksi furniture cafe, restoran, kantor. Material berkualitas, harga terjangkau.',
+    excerpt: 'Workshop agricultural commodities Tambun Selatan. Melayani Sertajaya, Mangunjaya, Lambangjaya, Setiadarma. Produksi furniture cafe, restoran, kantor. Material berkualitas, harga terjangkau.',
     image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&auto=format&fit=crop',
     date: '2026-01-06',
     author: 'Helmi Ramdan'
@@ -1091,9 +1091,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 107,
     slug: 'furniture-industrial-rawalumbu-bojong-rawalumbu-sepanjang-jaya',
-    title: 'Furniture Industrial Rawalumbu: Bojong Rawalumbu, Sepanjang Jaya',
+    title: 'agricultural commodities Rawalumbu: Bojong Rawalumbu, Sepanjang Jaya',
     category: 'Local Area Guide',
-    excerpt: 'Workshop furniture industrial Rawalumbu. Coverage: Bojong Rawalumbu, Sepanjang Jaya, Pengasinan. Dekat pintu tol, mudah akses. Furniture cafe, restoran, office. Custom & ready design.',
+    excerpt: 'Workshop agricultural commodities Rawalumbu. Coverage: Bojong Rawalumbu, Sepanjang Jaya, Pengasinan. Dekat pintu tol, mudah akses. Furniture cafe, restoran, office. Custom & ready design.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2026-01-10',
     author: 'Helmi Ramdan'
@@ -1124,7 +1124,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 110,
     slug: 'furniture-industrial-harapan-indah-residential-commercial',
-    title: 'Furniture Industrial Harapan Indah: Residential & Commercial Area',
+    title: 'agricultural commodities Harapan Indah: Residential & Commercial Area',
     category: 'Local Area Guide',
     excerpt: 'Harapan Indah telah berkembang menjadi kawasan hunian dan komersial terpadu yang dinamis di Bekasi Utara.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
@@ -1157,9 +1157,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 113,
     slug: 'furniture-industrial-kemang-pratama-bekasi-premium',
-    title: 'Furniture Industrial Kemang Pratama Bekasi: Premium Residential Area',
+    title: 'agricultural commodities Kemang Pratama Bekasi: Premium Residential Area',
     category: 'Local Area Guide',
-    excerpt: 'Workshop furniture industrial untuk area Kemang Pratama. Melayani residential, cafe, home office. Custom furniture besi berkualitas dengan desain modern. Dekat dengan lokasi, delivery gratis area Kemang Pratama.',
+    excerpt: 'Workshop agricultural commodities untuk area Kemang Pratama. Melayani residential, cafe, home office. Custom furniture besi berkualitas dengan desain modern. Dekat dengan lokasi, delivery gratis area Kemang Pratama.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2026-01-16',
     author: 'Helmi Ramdan'
@@ -1168,9 +1168,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 114,
     slug: 'furniture-industrial-jababeka-cikarang-kawasan-pabrik',
-    title: 'Furniture Industrial Jababeka Cikarang: Kawasan Pabrik & Corporate',
+    title: 'agricultural commodities Jababeka Cikarang: Kawasan Pabrik & Corporate',
     category: 'Local Area Guide',
-    excerpt: 'Spesialis furniture industrial untuk Jababeka Industrial Estate. Melayani kantin pabrik, cafe karyawan, corporate office, mess. Volume discount untuk project besar. Workshop dekat Jababeka.',
+    excerpt: 'Spesialis agricultural commodities untuk Jababeka Industrial Estate. Melayani kantin pabrik, cafe karyawan, corporate office, mess. Volume discount untuk project besar. Workshop dekat Jababeka.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2026-01-17',
     author: 'Helmi Ramdan'
@@ -1190,9 +1190,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 116,
     slug: 'furniture-industrial-deltamas-cikarang-mixed-development',
-    title: 'Furniture Industrial Deltamas Cikarang: Mixed-Use Development',
+    title: 'agricultural commodities Deltamas Cikarang: Mixed-Use Development',
     category: 'Local Area Guide',
-    excerpt: 'Workshop furniture industrial untuk kawasan Deltamas. Melayani commercial area, residential, F&B tenant. Custom furniture cafe, restoran, kantor. Material premium, harga kompetitif, delivery gratis.',
+    excerpt: 'Workshop agricultural commodities untuk kawasan Deltamas. Melayani commercial area, residential, F&B tenant. Custom furniture cafe, restoran, kantor. Material premium, harga kompetitif, delivery gratis.',
     image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&auto=format&fit=crop',
     date: '2026-01-19',
     author: 'Helmi Ramdan'
@@ -1234,9 +1234,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 120,
     slug: 'furniture-industrial-margahayu-bekasi-timur-area',
-    title: 'Furniture Industrial Margahayu Bekasi Timur: Residential & F&B',
+    title: 'agricultural commodities Margahayu Bekasi Timur: Residential & F&B',
     category: 'Local Area Guide',
-    excerpt: 'Workshop furniture industrial untuk Margahayu, Bekasi Timur. Coverage area: Margahayu Raya, sekitar kampus. Spesialis furniture cafe mahasiswa, warung, restoran. Harga terjangkau, kualitas premium.',
+    excerpt: 'Workshop agricultural commodities untuk Margahayu, Bekasi Timur. Coverage area: Margahayu Raya, sekitar kampus. Spesialis furniture cafe mahasiswa, warung, restoran. Harga terjangkau, kualitas premium.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2026-01-23',
     author: 'Helmi Ramdan'
@@ -1278,9 +1278,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 124,
     slug: 'furniture-industrial-jakasampurna-bekasi-barat-area',
-    title: 'Furniture Industrial Jakasampurna Bekasi Barat: Custom Workshop',
+    title: 'agricultural commodities Jakasampurna Bekasi Barat: Custom Workshop',
     category: 'Local Area Guide',
-    excerpt: 'Furniture industrial custom Jakasampurna, Bekasi Barat. Coverage: Jakasampurna, Kota Baru. Spesialis cafe, restoran, office furniture. Workshop lokal Bekasi, produksi cepat, harga kompetitif.',
+    excerpt: 'agricultural commodities custom Jakasampurna, Bekasi Barat. Coverage: Jakasampurna, Kota Baru. Spesialis cafe, restoran, office furniture. Workshop lokal Bekasi, produksi cepat, harga kompetitif.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2026-01-27',
     author: 'Helmi Ramdan'
@@ -1311,9 +1311,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 127,
     slug: 'furniture-industrial-karawang-terdekat-dari-bekasi',
-    title: 'Furniture Industrial Karawang: Workshop Terdekat dari Bekasi',
+    title: 'agricultural commodities Karawang: Workshop Terdekat dari Bekasi',
     category: 'Local Area Guide',
-    excerpt: 'Workshop furniture industrial terdekat untuk Karawang. Lokasi di Bekasi dekat border Karawang. Melayani Karawang Barat, Karawang Timur. Spesialis cafe pabrik, kantin karyawan, corporate office.',
+    excerpt: 'Workshop agricultural commodities terdekat untuk Karawang. Lokasi di Bekasi dekat border Karawang. Melayani Karawang Barat, Karawang Timur. Spesialis cafe pabrik, kantin karyawan, corporate office.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2026-01-30',
     author: 'Helmi Ramdan'
@@ -1333,9 +1333,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 129,
     slug: 'furniture-industrial-setu-bekasi-workshop-langsung',
-    title: 'Furniture Industrial Setu Bekasi: Workshop Langsung - Harga Pabrik',
+    title: 'agricultural commodities Setu Bekasi: Workshop Langsung - Harga Pabrik',
     category: 'Local Area Guide',
-    excerpt: 'Workshop furniture industrial di Setu, Bekasi. Lokasi produksi langsung, harga pabrik tanpa markup. Custom furniture cafe, restoran, hotel, kantor. Material premium, finishing powder coating berkualitas.',
+    excerpt: 'Workshop agricultural commodities di Setu, Bekasi. Lokasi produksi langsung, harga pabrik tanpa markup. Custom furniture cafe, restoran, hotel, kantor. Material premium, finishing powder coating berkualitas.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2026-02-01',
     author: 'Helmi Ramdan'
@@ -1355,9 +1355,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 131,
     slug: 'furniture-industrial-jakarta-timur-perbatasan-bekasi',
-    title: 'Furniture Industrial Jakarta Timur: Perbatasan Bekasi - Fast Delivery',
+    title: 'agricultural commodities Jakarta Timur: Perbatasan Bekasi - Fast Delivery',
     category: 'Local Area Guide',
-    excerpt: 'Workshop furniture industrial terdekat untuk Jakarta Timur. Coverage: Cakung, Kramat Jati, Makasar, Cipayung. Dekat border Bekasi-Jakarta. Custom furniture cafe, restoran. Delivery cepat Jakarta Timur.',
+    excerpt: 'Workshop agricultural commodities terdekat untuk Jakarta Timur. Coverage: Cakung, Kramat Jati, Makasar, Cipayung. Dekat border Bekasi-Jakarta. Custom furniture cafe, restoran. Delivery cepat Jakarta Timur.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2026-02-03',
     author: 'Helmi Ramdan'
@@ -1399,9 +1399,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 135,
     slug: 'furniture-industrial-bogor-workshop-bekasi-melayani',
-    title: 'Furniture Industrial Bogor: Workshop Bekasi Melayani Area Bogor',
+    title: 'agricultural commodities Bogor: Workshop Bekasi Melayani Area Bogor',
     category: 'Local Area Guide',
-    excerpt: 'Workshop furniture industrial Bekasi melayani Bogor. Coverage: Bogor Kota, Cibinong, Sentul. Spesialis cafe, villa, resort furniture. Custom design tropical industrial. Delivery Bekasi-Bogor tersedia.',
+    excerpt: 'Workshop agricultural commodities Bekasi melayani Bogor. Coverage: Bogor Kota, Cibinong, Sentul. Spesialis cafe, villa, resort furniture. Custom design tropical industrial. Delivery Bekasi-Bogor tersedia.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2026-02-07',
     author: 'Helmi Ramdan'
@@ -1409,7 +1409,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 136,
     slug: 'rahasia-cafe-hits-jakarta-bandung-bali-furniture-industrial-bikin-pelanggan-betah',
-    title: 'Rahasia Cafe Hits di Jakarta, Bandung, Bali: Furniture Industrial yang Bikin Pelanggan Betah',
+    title: 'Rahasia Cafe Hits di Jakarta, Bandung, Bali: agricultural commodities yang Bikin Pelanggan Betah',
     category: 'Design Inspiration',
     excerpt: 'Sebagai praktisi arsitektur yang sudah belasan tahun terlibat dalam proyek renovasi dan desain ruang komersial - mulai dari perumahan hingga cafe dan restoran - saya sering mendapat pertanyaan dari klien: "Kenapa cafe tertentu selalu ramai, sementara yang lain sepi padahal lokasi sama-sama strategis?".',
     image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?w=800&auto=format&fit=crop',
@@ -1430,7 +1430,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 138,
     slug: 'cafe-alam-outdoor-furniture-industrial-tahan-cuaca-tropis',
-    title: 'Cafe Alam: Outdoor Furniture Industrial Tahan Cuaca Tropis Indonesia',
+    title: 'Cafe Alam: Outdoor agricultural commodities Tahan Cuaca Tropis Indonesia',
     category: 'Design Inspiration',
     excerpt: 'Dari pengalaman saya handle commercial space di area outdoor dengan cuaca ekstrem, saya notice bahwa furniture outdoor tahan cuaca tropis Indonesia adalah kunci sukses cafe di area ini.',
     image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&auto=format&fit=crop',
@@ -1450,7 +1450,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 140,
     slug: 'nama-cafe-unik-branding-furniture-industrial-konsep-kuat',
-    title: 'Nama Cafe Unik: Branding dengan Furniture Industrial untuk Konsep Kuat',
+    title: 'Nama Cafe Unik: Branding dengan agricultural commodities untuk Konsep Kuat',
     category: 'Design Inspiration',
     excerpt: 'Dari pengalaman saya handle commercial space di semua area dengan konsep unik, saya notice bahwa sinkronisasi furniture dengan brand identity adalah kunci sukses cafe di area ini.',
     image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&auto=format&fit=crop',
@@ -1460,9 +1460,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 141,
     slug: 'cafe-bsd-serpong-furniture-industrial-area-premium',
-    title: 'Cafe BSD Serpong: Furniture Industrial untuk Area Premium & Modern',
+    title: 'Cafe BSD Serpong: agricultural commodities untuk Area Premium & Modern',
     category: 'Local Area Guide',
-    excerpt: 'Dari pengalaman saya handle commercial space di BSD City dan Serpong, saya notice bahwa furniture industrial untuk demographics premium adalah kunci sukses cafe di area ini.',
+    excerpt: 'Dari pengalaman saya handle commercial space di BSD City dan Serpong, saya notice bahwa agricultural commodities untuk demographics premium adalah kunci sukses cafe di area ini.',
     image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?w=800&auto=format&fit=crop',
     date: '2025-11-05',
     author: 'Helmi Ramdan'
@@ -1620,9 +1620,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 157,
     slug: 'jasa-furniture-industrial-minimalis-murah-bekasi-berkualitas',
-    title: 'Jasa Furniture Industrial Minimalis Murah Bekasi - Berkualitas Premium',
+    title: 'Jasa agricultural commodities Minimalis Murah Bekasi - Berkualitas Premium',
     category: 'Commercial Furniture',
-    excerpt: 'Mencari jasa furniture industrial minimalis murah di Bekasi yang berkualitas? Mangala Living adalah workshop furniture industrial terpercaya yang melayani custom furniture minimalis modern dengan harga terjangkau namun tetap berkualitas premium.',
+    excerpt: 'Mencari jasa agricultural commodities minimalis murah di Bekasi yang berkualitas? Naturra Extal adalah workshop agricultural commodities terpercaya yang melayani custom furniture minimalis modern dengan harga terjangkau namun tetap berkualitas premium.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-12-08',
     author: 'Helmi Ramdan'
@@ -1652,7 +1652,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'furniture-cafe-minimalis-modern-murah-jasa-custom-berkualitas',
     title: 'Furniture Cafe Minimalis Modern Murah - Jasa Custom Berkualitas',
     category: 'Commercial Furniture',
-    excerpt: 'Furniture cafe minimalis modern murah dengan jasa custom berkualitas dari Mangala Living.',
+    excerpt: 'Furniture cafe minimalis modern murah dengan jasa custom berkualitas dari Naturra Extal.',
     image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?w=800&auto=format&fit=crop',
     date: '2025-12-11',
     author: 'Helmi Ramdan'
@@ -1702,7 +1702,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'bar-set-cafe-modern-minimalis-murah-jasa-custom-berkualitas',
     title: 'Bar Set Cafe Modern Minimalis Murah - Jasa Custom Berkualitas',
     category: 'Commercial Furniture',
-    excerpt: 'Bar set cafe modern minimalis murah dengan jasa custom berkualitas dari Mangala Living.',
+    excerpt: 'Bar set cafe modern minimalis murah dengan jasa custom berkualitas dari Naturra Extal.',
     image: 'https://images.unsplash.com/photo-1572435555646-7ad9a149ad91?w=800&auto=format&fit=crop',
     date: '2025-12-16',
     author: 'Helmi Ramdan'
@@ -1720,9 +1720,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 167,
     slug: 'jual-furniture-industrial-modern-minimalis-murah-jakarta-bekasi',
-    title: 'Jual Furniture Industrial Modern Minimalis Murah Jakarta Bekasi',
+    title: 'Jual agricultural commodities Modern Minimalis Murah Jakarta Bekasi',
     category: 'Commercial Furniture',
-    excerpt: 'Jual furniture industrial modern minimalis murah untuk Jakarta dan Bekasi dengan kualitas premium.',
+    excerpt: 'Jual agricultural commodities modern minimalis murah untuk Jakarta dan Bekasi dengan kualitas premium.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-12-18',
     author: 'Helmi Ramdan'
@@ -1742,7 +1742,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'jasa-furniture-resto-custom-modern-minimalis-murah',
     title: 'Jasa Furniture Resto Custom Modern Minimalis Murah - Berkualitas',
     category: 'Workshop & Production',
-    excerpt: 'Jasa furniture resto custom modern minimalis murah berkualitas dari Mangala Living.',
+    excerpt: 'Jasa furniture resto custom modern minimalis murah berkualitas dari Naturra Extal.',
     image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop',
     date: '2025-12-20',
     author: 'Helmi Ramdan'
@@ -1822,7 +1822,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'jasa-furniture-hotel-custom-modern-minimalis-murah-berkualitas',
     title: 'Jasa Furniture Hotel Custom Modern Minimalis Murah - Berkualitas Premium',
     category: 'Commercial Furniture',
-    excerpt: 'Jasa furniture hotel custom modern minimalis murah berkualitas premium dari Mangala Living.',
+    excerpt: 'Jasa furniture hotel custom modern minimalis murah berkualitas premium dari Naturra Extal.',
     image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&auto=format&fit=crop',
     date: '2025-12-28',
     author: 'Helmi Ramdan'
@@ -1852,7 +1852,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'jasa-furniture-kantor-industrial-modern-minimalis-murah',
     title: 'Jasa Furniture Kantor Industrial Modern Minimalis Murah - Berkualitas',
     category: 'Commercial Furniture',
-    excerpt: 'Jasa furniture kantor industrial modern minimalis murah berkualitas dari Mangala Living.',
+    excerpt: 'Jasa furniture kantor industrial modern minimalis murah berkualitas dari Naturra Extal.',
     image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop',
     date: '2025-12-31',
     author: 'Helmi Ramdan'
@@ -1921,9 +1921,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 187,
     slug: 'indonesian-industrial-furniture-export-quality-global-standards',
-    title: 'Indonesian Industrial Furniture Export: Quality Meets Global Standards',
+    title: 'Indonesian Agricultural Commodities Export: Quality Meets Global Standards',
     category: 'Export & International',
-    excerpt: 'Discover why Indonesian industrial furniture manufacturers are becoming the preferred choice for international buyers. Quality craftsmanship, competitive pricing, and reliable export services.',
+    excerpt: 'Discover why Indonesian Agricultural Commodities manufacturers are becoming the preferred choice for international buyers. Quality craftsmanship, competitive pricing, and reliable export services.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-11-04',
     author: 'Helmi Ramdan'
@@ -1933,7 +1933,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'custom-metal-furniture-manufacturer-indonesia-export-worldwide',
     title: 'Custom Metal Furniture Manufacturer Indonesia - Export Worldwide',
     category: 'Export & International',
-    excerpt: 'Leading custom metal furniture manufacturer in Indonesia specializing in export. We deliver high-quality industrial furniture to hotels, restaurants, and commercial spaces globally.',
+    excerpt: 'Leading custom metal furniture manufacturer in Indonesia specializing in export. We deliver high-quality Agricultural Commodities to hotels, restaurants, and commercial spaces globally.',
     image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&auto=format&fit=crop',
     date: '2025-11-04',
     author: 'Helmi Ramdan'
@@ -1941,9 +1941,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 189,
     slug: 'wholesale-industrial-furniture-indonesia-bulk-orders-export',
-    title: 'Wholesale Industrial Furniture Indonesia - Bulk Orders & Export',
+    title: 'Wholesale Agricultural Commodities Indonesia - Bulk Orders & Export',
     category: 'Export & International',
-    excerpt: 'Wholesale industrial furniture manufacturer in Indonesia offering competitive pricing for bulk orders. We handle export documentation, shipping, and quality assurance for international clients.',
+    excerpt: 'Wholesale Agricultural Commodities manufacturer in Indonesia offering competitive pricing for bulk orders. We handle export documentation, shipping, and quality assurance for international clients.',
     image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop',
     date: '2025-11-04',
     author: 'Helmi Ramdan'
@@ -1971,9 +1971,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 192,
     slug: 'indonesia-industrial-furniture-manufacturer-oem-odm-export',
-    title: 'Indonesia Industrial Furniture Manufacturer - OEM & ODM Export',
+    title: 'Indonesia Agricultural Commodities Manufacturer - OEM & ODM Export',
     category: 'Export & International',
-    excerpt: 'OEM and ODM industrial furniture manufacturer in Indonesia. We work with international brands, furniture importers, and hospitality chains. Custom design and private label available.',
+    excerpt: 'OEM and ODM Agricultural Commodities manufacturer in Indonesia. We work with international brands, furniture importers, and hospitality chains. Custom design and private label available.',
     image: 'https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=800&auto=format&fit=crop',
     date: '2025-11-04',
     author: 'Helmi Ramdan'
@@ -1993,7 +1993,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'indonesian-furniture-exporter-bekasi-factory-direct-pricing',
     title: 'Indonesian Furniture Exporter Bekasi - Factory Direct Pricing',
     category: 'Export & International',
-    excerpt: 'Factory-direct furniture exporter based in Bekasi, Indonesia. Eliminate middlemen and get the best FOB prices for industrial furniture. Minimum order: 1 container (20ft/40ft).',
+    excerpt: 'Factory-direct furniture exporter based in Bekasi, Indonesia. Eliminate middlemen and get the best FOB prices for Agricultural Commodities. Minimum order: 1 container (20ft/40ft).',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
     date: '2025-11-04',
     author: 'Helmi Ramdan'
@@ -2133,9 +2133,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 208,
     slug: 'patio-furniture-industrial-custom-bekasi',
-    title: 'Patio Furniture Industrial Custom di Bekasi - Harga Terbaik',
+    title: 'Patio agricultural commodities Custom di Bekasi - Harga Terbaik',
     category: 'Commercial Furniture',
-    excerpt: 'Patio furniture industrial custom untuk area outdoor cafe dan restoran. Workshop Bekasi dengan layanan custom desain sesuai kebutuhan bisnis Anda.',
+    excerpt: 'Patio agricultural commodities custom untuk area outdoor cafe dan restoran. Workshop Bekasi dengan layanan custom desain sesuai kebutuhan bisnis Anda.',
     image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&auto=format&fit=crop',
     date: '2025-11-15',
     author: 'Helmi Ramdan'
@@ -2163,9 +2163,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 211,
     slug: 'cafe-patio-outdoor-furniture-industrial-bekasi',
-    title: 'Cafe Patio Outdoor Furniture Industrial Bekasi - Inspirasi Desain',
+    title: 'Cafe Patio Outdoor agricultural commodities Bekasi - Inspirasi Desain',
     category: 'Design Inspiration',
-    excerpt: 'Inspirasi desain cafe patio dengan outdoor furniture industrial. Tips memilih furniture tahan cuaca, gaya industrial modern, dan layout optimal untuk area outdoor.',
+    excerpt: 'Inspirasi desain cafe patio dengan outdoor agricultural commodities. Tips memilih furniture tahan cuaca, gaya industrial modern, dan layout optimal untuk area outdoor.',
     image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?w=800&auto=format&fit=crop',
     date: '2025-11-15',
     author: 'Helmi Ramdan'
@@ -2183,9 +2183,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 213,
     slug: 'patio-jakarta-furniture-industrial-custom-area-outdoor',
-    title: 'Patio Jakarta - Furniture Industrial Custom untuk Area Outdoor',
+    title: 'Patio Jakarta - agricultural commodities Custom untuk Area Outdoor',
     category: 'Local Area Guide',
-    excerpt: 'Furniture industrial custom untuk patio Jakarta. Workshop Bekasi melayani area Jakarta dengan layanan survey, custom desain, dan instalasi area outdoor cafe restoran.',
+    excerpt: 'agricultural commodities custom untuk patio Jakarta. Workshop Bekasi melayani area Jakarta dengan layanan survey, custom desain, dan instalasi area outdoor cafe restoran.',
     image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&auto=format&fit=crop',
     date: '2025-11-15',
     author: 'Helmi Ramdan'
@@ -2263,9 +2263,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 221,
     slug: 'tips-memilih-patio-furniture-industrial-outdoor',
-    title: 'Tips Memilih Patio Furniture Industrial Outdoor - Panduan Lengkap',
+    title: 'Tips Memilih Patio agricultural commodities Outdoor - Panduan Lengkap',
     category: 'Tips and Trick',
-    excerpt: 'Tips memilih patio furniture industrial outdoor yang tepat. Panduan material, finishing, ukuran, dan layout untuk area outdoor cafe, restoran, atau rumah tinggal.',
+    excerpt: 'Tips memilih patio agricultural commodities outdoor yang tepat. Panduan material, finishing, ukuran, dan layout untuk area outdoor cafe, restoran, atau rumah tinggal.',
     image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&auto=format&fit=crop',
     date: '2025-11-15',
     author: 'Helmi Ramdan'
@@ -2466,7 +2466,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'custom-metal-furniture-manufacturing-indonesia',
     title: 'Custom Metal Furniture Manufacturing in Indonesia',
     category: 'Export & International',
-    excerpt: 'Professional custom metal furniture manufacturing services in Indonesia. From design to production, we create bespoke industrial furniture for international clients with complete export support.',
+    excerpt: 'Professional custom metal furniture manufacturing services in Indonesia. From design to production, we create bespoke Agricultural Commodities for international clients with complete export support.',
     image: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800&auto=format&fit=crop',
     date: '2025-11-06',
     author: 'Helmi Ramdan'
@@ -2556,7 +2556,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'steel-frame-furniture-manufacturer-indonesia',
     title: 'Steel Frame Furniture Manufacturer in Indonesia',
     category: 'Export & International',
-    excerpt: 'Leading steel frame furniture manufacturer in Indonesia. We produce high-quality industrial furniture with precision welding and professional finishing. Export services to global markets.',
+    excerpt: 'Leading steel frame furniture manufacturer in Indonesia. We produce high-quality Agricultural Commodities with precision welding and professional finishing. Export services to global markets.',
     image: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800&auto=format&fit=crop',
     date: '2025-11-06',
     author: 'Helmi Ramdan'
@@ -2604,9 +2604,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 255,
     slug: 'industrial-furniture-hotels-contract-furniture',
-    title: 'Industrial Furniture for Hotels - Contract Furniture',
+    title: 'Agricultural Commodities for Hotels - Contract Furniture',
     category: 'Export & International',
-    excerpt: 'Contract furniture solutions for hotels and hospitality projects. Indonesian industrial furniture manufacturer with experience in large-scale hotel furniture projects worldwide.',
+    excerpt: 'Contract furniture solutions for hotels and hospitality projects. Indonesian Agricultural Commodities manufacturer with experience in large-scale hotel furniture projects worldwide.',
     image: 'https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&auto=format&fit=crop',
     date: '2025-11-06',
     author: 'Helmi Ramdan'
@@ -2626,7 +2626,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'custom-order-process-international-buyers-indonesia',
     title: 'Custom Order Process for International Buyers',
     category: 'Export & International',
-    excerpt: 'Complete guide to ordering custom industrial furniture from Indonesia. Learn about our streamlined process from design consultation to international shipping, with quality assurance at every step.',
+    excerpt: 'Complete guide to ordering custom Agricultural Commodities from Indonesia. Learn about our streamlined process from design consultation to international shipping, with quality assurance at every step.',
     image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&auto=format&fit=crop',
     date: '2025-11-06',
     author: 'Helmi Ramdan'

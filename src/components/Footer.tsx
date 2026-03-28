@@ -108,10 +108,10 @@ const Footer: React.FC<FooterProps> = ({ language = 'en' }) => {
         <div className="footer-grid">
           {/* Brand Section */}
           <div className="footer-brand">
-            <h2 className="footer-logo">MANGALA</h2>
+            <h2 className="footer-logo">Naturra</h2>
             <p className="footer-description">
               {language === 'id'
-                ? "Pilihan terbaik untuk furniture industrial scandinavian premium sejak 1999. Melayani coffee shop, restoran, dan bisnis di seluruh Indonesia. Pesanan custom diterima."
+                ? "Pilihan terbaik untuk agricultural commodities scandinavian premium sejak 1999. Melayani coffee shop, restoran, dan bisnis di seluruh Indonesia. Pesanan custom diterima."
                 : language === 'ar'
                   ? "خيارك الأفضل للأثاث الصناعي الاسكندنافي الفاخر منذ عام 1999. نخدم المقاهي والمطاعم والأعمال في جميع أنحاء إندونيسيا وجاكرتا والأسواق الدولية الرئيسية. نرحب بالطلبات المخصصة."
                   : language === 'zh'
@@ -130,8 +130,8 @@ const Footer: React.FC<FooterProps> = ({ language = 'en' }) => {
             <div className="footer-contact-info">
               <h4>{language === 'id' ? "Hubungi Kami" : language === 'ar' ? "اتصل بنا" : language === 'zh' ? "联系我们" : language === 'ja' ? "お問い合わせ" : language === 'es' ? "Contáctenos" : language === 'fr' ? "Contactez-nous" : language === 'ko' ? "연락처" : "Contact Us"}</h4>
               <p>
-                <a href="mailto:lifewithmangala@gmail.com" style={{ color: 'inherit', textDecoration: 'underline' }}>
-                  lifewithmangala@gmail.com
+                <a href="mailto:lifewithNaturra@gmail.com" style={{ color: 'inherit', textDecoration: 'underline' }}>
+                  lifewithNaturra@gmail.com
                 </a>
               </p>
               <p>
@@ -146,10 +146,10 @@ const Footer: React.FC<FooterProps> = ({ language = 'en' }) => {
                 </a>
               </p>
               <div className="footer-social-icons">
-                <a href="https://instagram.com/mangala_living" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a href="https://instagram.com/Naturra_living" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <Instagram size={20} />
                 </a>
-                <a href="https://facebook.com/mangalaliving" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <a href="https://facebook.com/Naturraliving" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <Facebook size={20} />
                 </a>
               </div>
@@ -340,7 +340,7 @@ const Footer: React.FC<FooterProps> = ({ language = 'en' }) => {
         </div>
 
         <div className="footer-bottom">
-          <p>Copyright 2025 Mangala Living. All rights reserved.</p>
+          <p>Copyright 2025 Naturra Extal. All rights reserved.</p>
         </div>
       </div>
     </footer>

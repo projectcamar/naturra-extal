@@ -28,14 +28,14 @@ const products = ALL_PRODUCTS.slice(8, 28)
 const OurProductsSection: React.FC<OurProductsSectionProps> = ({ isIndonesian = false, language = 'en' }) => {
   const getTitle = () => {
     switch (language) {
-      case 'id': return 'Koleksi Produk: Bar Set, Lounge Set, Storage & Furniture Industrial'
+      case 'id': return 'Koleksi Produk: Bar Set, Lounge Set, Storage & agricultural commodities'
       case 'ar': return 'مجموعتنا: طقم بار، طقم صالة، تخزين وأثاث صناعي'
       case 'zh': return '我们的系列：吧台套装、休息区套装、储物和工业家具'
       case 'ja': return 'コレクション：バーセット、ラウンジセット、収納、インダストリアル家具'
       case 'es': return 'Nuestra Colección: Set de Bar, Set de Sala, Almacenamiento y Muebles Industriales'
       case 'fr': return 'Notre Collection: Set de Bar, Set de Salon, Rangement et Mobilier Industriel'
       case 'ko': return '우리의 컨렉션: 바 세트, 라운지 세트, 수납 및 산업용 가구'
-      default: return 'Our Collection: Bar Set, Lounge Set, Storage & Industrial Furniture'
+      default: return 'Our Collection: Bar Set, Lounge Set, Storage & Agricultural Commodities'
     }
   }
 
@@ -126,8 +126,8 @@ const OurProductsSection: React.FC<OurProductsSectionProps> = ({ isIndonesian = 
                 <div className="product-image-wrapper-full">
                   <img
                     src={product.image}
-                    alt={`${translatedName} - Industrial Furniture ${product.category} Mangala Living Workshop Bekasi`}
-                    title={`${translatedName} - Custom Industrial Furniture from Mangala Living`}
+                    alt={`${translatedName} - Agricultural Commodities ${product.category} Naturra Extal Workshop Bekasi`}
+                    title={`${translatedName} - Custom Agricultural Commodities from Naturra Extal`}
                     className="product-image-full"
                     loading="lazy"
                     width="400"

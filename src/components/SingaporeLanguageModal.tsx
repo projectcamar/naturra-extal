@@ -4,7 +4,7 @@ import './SingaporeLanguageModal.css'
 import { detectVisitorLocation } from '../utils/geolocation'
 import { storeLanguage, type LanguageCode } from '../utils/languageManager'
 
-const SG_LANG_CHOICE_KEY = 'mangala_sg_lang_choice'
+const SG_LANG_CHOICE_KEY = 'Naturra_sg_lang_choice'
 
 const SingaporeLanguageModal: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -98,16 +98,16 @@ const SingaporeLanguageModal: React.FC = () => {
       >
         <div className="sg-lang-modal-header">
           <div className="sg-lang-badge">
-            <div>MANGALA EXPORT &amp; INTERNATIONAL</div>
-            <div className="sg-lang-badge-zh">MANGALA出口与国际</div>
+            <div>Naturra EXPORT &amp; INTERNATIONAL</div>
+            <div className="sg-lang-badge-zh">Naturra出口与国际</div>
           </div>
           <h2 id="sg-lang-modal-title">
             <div>Welcome Singapore buyer!</div>
             <div className="sg-lang-title-zh">欢迎新加坡买家！</div>
           </h2>
           <p className="sg-lang-subtitle">
-            <div>Welcome to Mangala Living. Please choose your preferred language for this site.</div>
-            <div className="sg-lang-subtitle-zh">欢迎来到Mangala Living。请选择您偏好的网站语言。</div>
+            <div>Welcome to Naturra Extal. Please choose your preferred language for this site.</div>
+            <div className="sg-lang-subtitle-zh">欢迎来到Naturra Extal。请选择您偏好的网站语言。</div>
           </p>
         </div>
 

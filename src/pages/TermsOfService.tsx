@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-// legacy mangala image import removed
+// legacy Naturra image import removed
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
 import { trackWhatsAppClick } from '../utils/whatsappTracking'
 import { getCurrentLanguage, getStoredLanguage, detectLanguageFromIP, type LanguageCode } from '../utils/languageManager'
@@ -72,8 +72,8 @@ const TermsOfService: React.FC = () => {
         <div className="terms-hero-image">
           <img
             src={heroImage}
-            alt="Terms of Service - Syarat dan Ketentuan Mangala Living Furniture Industrial"
-            title="Terms of Service - Terms and Conditions for Mangala Living Products"
+            alt="Terms of Service - Syarat dan Ketentuan Naturra Extal agricultural commodities"
+            title="Terms of Service - Terms and Conditions for Naturra Extal Products"
             loading="eager"
             fetchPriority="high"
             width="1920"
@@ -348,7 +348,7 @@ const TermsOfService: React.FC = () => {
             <section className="terms-section">
               <h2>{t.sections.findUs.title}</h2>
               <div className="workshop-info">
-                <h3>Mangala Living</h3>
+                <h3>Naturra Extal</h3>
                 <div style={{ marginBottom: '16px' }}>
                   <strong style={{ color: '#8B7355', display: 'block', marginBottom: '8px' }}>
                     {t.sections.findUs.workshopLabel}
@@ -376,8 +376,8 @@ const TermsOfService: React.FC = () => {
                   </a>
                 </p>
                 <p className="workshop-email">
-                  <a href="mailto:lifewithmangala@gmail.com" style={{ color: '#8B7355', textDecoration: 'underline' }}>
-                    lifewithmangala@gmail.com
+                  <a href="mailto:lifewithNaturra@gmail.com" style={{ color: '#8B7355', textDecoration: 'underline' }}>
+                    lifewithNaturra@gmail.com
                   </a>
                 </p>
                 <p className="workshop-hours">

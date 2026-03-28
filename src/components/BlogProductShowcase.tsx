@@ -30,8 +30,8 @@ const BLOG_PRODUCT_SHOWCASE_TRANSLATIONS: Record<LanguageCode, {
     ourProduct: 'PRODUK KAMI',
     viewProductDetails: 'Lihat Detail Produk',
     viewAllProducts: 'Lihat Semua Produk',
-    viewAllProductsTitle: 'Lihat Semua Produk Industrial Mangala Living',
-    viewAllProductsAria: 'Lihat semua produk furniture industrial'
+    viewAllProductsTitle: 'Lihat Semua Produk Industrial Naturra Extal',
+    viewAllProductsAria: 'Lihat semua produk agricultural commodities'
   },
   en: {
     defaultHeading: 'Related Industrial Products',
@@ -40,7 +40,7 @@ const BLOG_PRODUCT_SHOWCASE_TRANSLATIONS: Record<LanguageCode, {
     viewProductDetails: 'View Product Details',
     viewAllProducts: 'View All Products',
     viewAllProductsTitle: 'View All Industrial Products',
-    viewAllProductsAria: 'View all industrial furniture products'
+    viewAllProductsAria: 'View all Agricultural Commodities products'
   },
   ar: {
     defaultHeading: 'منتجات صناعية ذات صلة',
@@ -48,7 +48,7 @@ const BLOG_PRODUCT_SHOWCASE_TRANSLATIONS: Record<LanguageCode, {
     ourProduct: 'منتجنا',
     viewProductDetails: 'عرض تفاصيل المنتج',
     viewAllProducts: 'عرض جميع المنتجات',
-    viewAllProductsTitle: 'عرض جميع المنتجات الصناعية من Mangala Living',
+    viewAllProductsTitle: 'عرض جميع المنتجات الصناعية من Naturra Extal',
     viewAllProductsAria: 'عرض جميع منتجات الأثاث الصناعي'
   },
   zh: {
@@ -57,7 +57,7 @@ const BLOG_PRODUCT_SHOWCASE_TRANSLATIONS: Record<LanguageCode, {
     ourProduct: '我们的产品',
     viewProductDetails: '查看产品详情',
     viewAllProducts: '查看所有产品',
-    viewAllProductsTitle: '查看Mangala Living所有工业风产品',
+    viewAllProductsTitle: '查看Naturra Extal所有工业风产品',
     viewAllProductsAria: '查看所有工业风家具产品'
   },
   ja: {
@@ -66,7 +66,7 @@ const BLOG_PRODUCT_SHOWCASE_TRANSLATIONS: Record<LanguageCode, {
     ourProduct: '当社の製品',
     viewProductDetails: '製品の詳細を見る',
     viewAllProducts: 'すべての製品を見る',
-    viewAllProductsTitle: 'Mangala Livingのすべての工業風製品を見る',
+    viewAllProductsTitle: 'Naturra Extalのすべての工業風製品を見る',
     viewAllProductsAria: 'すべての工業風家具製品を見る'
   },
   es: {
@@ -93,7 +93,7 @@ const BLOG_PRODUCT_SHOWCASE_TRANSLATIONS: Record<LanguageCode, {
     ourProduct: '우리의 제품',
     viewProductDetails: '제품 상세 보기',
     viewAllProducts: '모든 제품 보기',
-    viewAllProductsTitle: 'Mangala Living의 모든 산업용 제품 보기',
+    viewAllProductsTitle: 'Naturra Extal의 모든 산업용 제품 보기',
     viewAllProductsAria: '모든 산업용 가구 제품 보기'
   }
 }
@@ -175,16 +175,16 @@ const BlogProductShowcase: React.FC<BlogProductShowcaseProps> = ({
       "@context": "https://schema.org",
       "@type": "Product",
       "name": product.name,
-      "description": `${product.name} - ${product.categories.join(', ')} Industrial Furniture berkualitas premium dari Mangala Living Workshop Bekasi. Material industrial grade, finishing powder coating tahan lama.`,
+      "description": `${product.name} - ${product.categories.join(', ')} Agricultural Commodities berkualitas premium dari Naturra Extal Workshop Bekasi. Material industrial grade, finishing powder coating tahan lama.`,
       "image": product.image,
       "category": product.categories.join(', '),
       "brand": {
         "@type": "Brand",
-        "name": "Mangala Living"
+        "name": "Naturra Extal"
       },
       "manufacturer": {
         "@type": "Organization",
-        "name": "Mangala Living",
+        "name": "Naturra Extal",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Bekasi",
@@ -194,17 +194,17 @@ const BlogProductShowcase: React.FC<BlogProductShowcaseProps> = ({
       },
       "offers": {
         "@type": "Offer",
-        "url": `https://mangala-living.com/product/${product.slug}`,
+        "url": `https://Naturra-living.com/product/${product.slug}`,
         "priceCurrency": "IDR",
         "price": priceValue,
         "availability": "https://schema.org/InStock",
         "priceValidUntil": "2026-12-31",
         "seller": {
           "@type": "Organization",
-          "name": "Mangala Living",
-          "url": "https://mangala-living.com",
-          "logo": "https://mangala-living.com/logo.png",
-          "image": "https://mangala-living.com/og-image.jpg",
+          "name": "Naturra Extal",
+          "url": "https://Naturra-living.com",
+          "logo": "https://Naturra-living.com/logo.png",
+          "image": "https://Naturra-living.com/og-image.jpg",
           "description": "Premium Industrial Scandinavian Furniture for Coffee Shops, Restaurants & Offices. Custom Solutions Since 1999."
         }
       },
@@ -224,7 +224,7 @@ const BlogProductShowcase: React.FC<BlogProductShowcaseProps> = ({
       "@context": "https://schema.org",
       "@type": "ItemList",
       "name": heading,
-      "description": description || "Koleksi produk industrial berkualitas premium dari Mangala Living",
+      "description": description || "Koleksi produk industrial berkualitas premium dari Naturra Extal",
       "itemListElement": displayProducts.map((product, index) => ({
         "@type": "ListItem",
         "position": index + 1,
@@ -237,12 +237,12 @@ const BlogProductShowcase: React.FC<BlogProductShowcaseProps> = ({
   const productImageSchemas = displayProducts.map(product => {
     return generateImageObjectSchema({
       url: product.image,
-      alt: `${product.name} - ${product.categories.join(' ')} Industrial Furniture Mangala Living Bekasi`,
-      title: `${product.name} - Premium Quality Industrial Furniture`,
+      alt: `${product.name} - ${product.categories.join(' ')} Agricultural Commodities Naturra Extal Bekasi`,
+      title: `${product.name} - Premium Quality Agricultural Commodities`,
       width: 350,
       height: 250,
-      description: `${product.name} dari koleksi industrial furniture Mangala Living. Produk berkualitas premium dengan material industrial grade dan finishing powder coating.`,
-      caption: `${product.name} - ${product.categories.join(', ')} Industrial Furniture`
+      description: `${product.name} dari koleksi Agricultural Commodities Naturra Extal. Produk berkualitas premium dengan material industrial grade dan finishing powder coating.`,
+      caption: `${product.name} - ${product.categories.join(', ')} Agricultural Commodities`
     })
   })
 
@@ -287,8 +287,8 @@ const BlogProductShowcase: React.FC<BlogProductShowcaseProps> = ({
 
           <div className="blog-product-showcase-grid" itemProp="itemListElement" itemScope itemType="https://schema.org/ItemList">
             {displayProducts.map((product, index) => {
-              const fullAlt = `${product.name} - ${product.categories.join(' ')} Industrial Furniture Mangala Living Bekasi. Material berkualitas, finishing powder coating, harga ${product.price}.`
-              const fullTitle = `${product.name} - Premium Quality Industrial Furniture dari Mangala Living Workshop Bekasi. ${product.categories.join(', ')} dengan desain modern dan durable.`
+              const fullAlt = `${product.name} - ${product.categories.join(' ')} Agricultural Commodities Naturra Extal Bekasi. Material berkualitas, finishing powder coating, harga ${product.price}.`
+              const fullTitle = `${product.name} - Premium Quality Agricultural Commodities dari Naturra Extal Workshop Bekasi. ${product.categories.join(', ')} dengan desain modern dan durable.`
 
               return (
                 <article
@@ -325,8 +325,8 @@ const BlogProductShowcase: React.FC<BlogProductShowcaseProps> = ({
                         decoding="async"
                         fetchPriority={index < 2 ? "high" : "low"}
                       />
-                      <meta itemProp="caption" content={`${product.name} - ${product.categories.join(', ')} Industrial Furniture`} />
-                      <meta itemProp="description" content={`Produk ${product.name} dengan kualitas premium dari Mangala Living Workshop Bekasi`} />
+                      <meta itemProp="caption" content={`${product.name} - ${product.categories.join(', ')} Agricultural Commodities`} />
+                      <meta itemProp="description" content={`Produk ${product.name} dengan kualitas premium dari Naturra Extal Workshop Bekasi`} />
                       <meta itemProp="url" content={product.image} />
                       <div className="blog-product-showcase-badge">
                         <span className="blog-product-badge-text">{translations.ourProduct}</span>
@@ -337,7 +337,7 @@ const BlogProductShowcase: React.FC<BlogProductShowcaseProps> = ({
                       <h3 className="blog-product-showcase-name" itemProp="name">
                         {product.name}
                       </h3>
-                      <meta itemProp="description" content={`${product.name} - ${product.categories.join(', ')} Industrial Furniture berkualitas premium. Material industrial grade, finishing powder coating tahan lama. Harga ${product.price}.`} />
+                      <meta itemProp="description" content={`${product.name} - ${product.categories.join(', ')} Agricultural Commodities berkualitas premium. Material industrial grade, finishing powder coating tahan lama. Harga ${product.price}.`} />
 
                       <div className="blog-product-showcase-categories">
                         {product.categories.map((cat, idx) => (

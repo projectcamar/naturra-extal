@@ -191,64 +191,64 @@ export const TEMPLATE_TEXTS: TemplateDictionary = {
   storage: {
     en: {
       shortLabel: 'Industrial Storage Solution',
-      caption: '{{name}} - Industrial storage solution from Mangala Living | Bekasi Workshop Indonesia',
-      meta: '{{name}} - Custom industrial storage furniture by Mangala Living Bekasi',
-      imageAlt: '{{name}} - Premium industrial storage furniture from Mangala Living',
-      paragraph1: 'The {{name}} from Mangala Living is the perfect industrial storage solution for modern spaces. A robust steel structure and clean geometry deliver generous capacity together with striking industrial aesthetics.',
+      caption: '{{name}} - Industrial storage solution from Naturra Extal | Bekasi Workshop Indonesia',
+      meta: '{{name}} - Custom industrial storage furniture by Naturra Extal Bekasi',
+      imageAlt: '{{name}} - Premium industrial storage furniture from Naturra Extal',
+      paragraph1: 'The {{name}} from Naturra Extal is the perfect industrial storage solution for modern spaces. A robust steel structure and clean geometry deliver generous capacity together with striking industrial aesthetics.',
       paragraph3: 'Ideal for offices, cafes, restaurants, and retail environments, it keeps equipment organized while reinforcing the visual identity of the interior.',
       paragraph4: 'Built to commercial-grade standards, it withstands heavy daily use and retains its finish, making it a smart long-term investment for any professional space.'
     },
     id: {
       shortLabel: 'Solusi Penyimpanan Industrial',
-      caption: '{{name}} - Solusi penyimpanan industrial dari Mangala Living | Workshop Bekasi Indonesia',
-      meta: '{{name}} - Furniture penyimpanan industrial custom Mangala Living Bekasi',
-      imageAlt: '{{name}} - Furniture penyimpanan industrial premium Mangala Living',
-      paragraph1: '{{name}} dari Mangala Living adalah solusi penyimpanan industrial sempurna untuk ruang modern. Struktur baja kokoh dengan garis tegas menghadirkan kapasitas besar dan estetika industrial yang kuat.',
+      caption: '{{name}} - Solusi penyimpanan industrial dari Naturra Extal | Workshop Bekasi Indonesia',
+      meta: '{{name}} - Furniture penyimpanan industrial custom Naturra Extal Bekasi',
+      imageAlt: '{{name}} - Furniture penyimpanan industrial premium Naturra Extal',
+      paragraph1: '{{name}} dari Naturra Extal adalah solusi penyimpanan industrial sempurna untuk ruang modern. Struktur baja kokoh dengan garis tegas menghadirkan kapasitas besar dan estetika industrial yang kuat.',
       paragraph3: 'Ideal untuk kantor, kafe, restoran, dan retail, menjaga peralatan tetap rapi sekaligus memperkuat identitas visual interior.',
       paragraph4: 'Dibuat dengan standar komersial, tahan penggunaan harian intensif dan menjaga finishing tetap prima, menjadi investasi jangka panjang yang cerdas.'
     },
     ar: {
       shortLabel: 'حل تخزين صناعي',
-      caption: '{{name}} - حل تخزين صناعي من Mangala Living | ورشة بوقاسي إندونيسيا',
-      meta: '{{name}} - أثاث تخزين صناعي مخصص من Mangala Living في بوقاسي',
-      imageAlt: '{{name}} - أثاث تخزين صناعي فاخر من Mangala Living',
-      paragraph1: '{{name}} من Mangala Living هو الحل المثالي للتخزين الصناعي في المساحات الحديثة. يجمع بين هيكل فولاذي متين وخطوط نظيفة ليقدم سعة كبيرة وطابعًا صناعياً لافتاً.',
+      caption: '{{name}} - حل تخزين صناعي من Naturra Extal | ورشة بوقاسي إندونيسيا',
+      meta: '{{name}} - أثاث تخزين صناعي مخصص من Naturra Extal في بوقاسي',
+      imageAlt: '{{name}} - أثاث تخزين صناعي فاخر من Naturra Extal',
+      paragraph1: '{{name}} من Naturra Extal هو الحل المثالي للتخزين الصناعي في المساحات الحديثة. يجمع بين هيكل فولاذي متين وخطوط نظيفة ليقدم سعة كبيرة وطابعًا صناعياً لافتاً.',
       paragraph3: 'مثالي للمكاتب والمقاهي والمطاعم ومتاجر البيع بالتجزئة، يحافظ على تنظيم الأدوات بينما يعزز الهوية البصرية للمساحة.',
       paragraph4: 'مصمم وفق معايير الاستخدام التجاري، يتحمل الاستخدام اليومي المكثف ويحافظ على تشطيبه، مما يجعله استثمارًا طويل الأمد لأي مساحة مهنية.'
     },
     zh: {
       shortLabel: '工业储物方案',
-      caption: '{{name}} - Mangala Living 工业储物方案 | 勿加泗工坊 印度尼西亚',
-      meta: '{{name}} - Mangala Living 勿加泗定制工业储物家具',
-      imageAlt: '{{name}} - Mangala Living 高端工业储物家具',
-      paragraph1: '{{name}} 是 Mangala Living 为现代空间打造的理想工业储物方案。坚固的钢结构搭配干练的线条，兼具大容量与鲜明的工业美感。',
+      caption: '{{name}} - Naturra Extal 工业储物方案 | 勿加泗工坊 印度尼西亚',
+      meta: '{{name}} - Naturra Extal 勿加泗定制工业储物家具',
+      imageAlt: '{{name}} - Naturra Extal 高端工业储物家具',
+      paragraph1: '{{name}} 是 Naturra Extal 为现代空间打造的理想工业储物方案。坚固的钢结构搭配干练的线条，兼具大容量与鲜明的工业美感。',
       paragraph3: '非常适合办公室、咖啡馆、餐厅及零售空间，在保持整洁有序的同时强化整体视觉风格。',
       paragraph4: '按照商用级标准打造，经得起高频日常使用并保持精致外观，是值得信赖的长期投资。'
     },
     ja: {
       shortLabel: 'インダストリアル収納ソリューション',
-      caption: '{{name}} - Mangala Living のインダストリアル収納ソリューション | ベカシ工房 インドネシア',
-      meta: '{{name}} - Mangala Living ベカシが手掛けるカスタム工業収納家具',
-      imageAlt: '{{name}} - Mangala Living のプレミアム工業収納家具',
-      paragraph1: 'Mangala Living の{{name}}は、現代空間に最適なインダストリアル収納ソリューションです。重厚なスチール構造とシャープなラインが、大容量とアイコニックなインダストリアル美を両立させます。',
+      caption: '{{name}} - Naturra Extal のインダストリアル収納ソリューション | ベカシ工房 インドネシア',
+      meta: '{{name}} - Naturra Extal ベカシが手掛けるカスタム工業収納家具',
+      imageAlt: '{{name}} - Naturra Extal のプレミアム工業収納家具',
+      paragraph1: 'Naturra Extal の{{name}}は、現代空間に最適なインダストリアル収納ソリューションです。重厚なスチール構造とシャープなラインが、大容量とアイコニックなインダストリアル美を両立させます。',
       paragraph3: 'オフィスやカフェ、レストラン、リテール空間に最適で、収納をスマートに保ちながら空間のビジュアルアイデンティティを引き立てます。',
       paragraph4: '商業グレード仕様で設計され、ハードな日常使用にも耐え、仕上げの美しさを長く保つ長期的な投資アイテムです。'
     },
     es: {
       shortLabel: 'Solución de almacenamiento industrial',
-      caption: '{{name}} - Solución de almacenamiento industrial de Mangala Living | Taller Bekasi Indonesia',
-      meta: '{{name}} - Mueble de almacenamiento industrial personalizado por Mangala Living Bekasi',
-      imageAlt: '{{name}} - Mueble de almacenamiento industrial premium de Mangala Living',
-      paragraph1: 'El {{name}} de Mangala Living es la solución de almacenamiento industrial perfecta para espacios modernos. Combina un bastidor de acero robusto con líneas limpias para ofrecer gran capacidad y un estilo industrial impactante.',
+      caption: '{{name}} - Solución de almacenamiento industrial de Naturra Extal | Taller Bekasi Indonesia',
+      meta: '{{name}} - Mueble de almacenamiento industrial personalizado por Naturra Extal Bekasi',
+      imageAlt: '{{name}} - Mueble de almacenamiento industrial premium de Naturra Extal',
+      paragraph1: 'El {{name}} de Naturra Extal es la solución de almacenamiento industrial perfecta para espacios modernos. Combina un bastidor de acero robusto con líneas limpias para ofrecer gran capacidad y un estilo industrial impactante.',
       paragraph3: 'Ideal para oficinas, cafeterías, restaurantes y comercios, mantiene todo organizado mientras refuerza la identidad visual del interior.',
       paragraph4: 'Diseñado con estándares de uso comercial, resiste el ritmo diario y conserva su acabado, siendo una inversión a largo plazo para cualquier negocio.'
     },
     fr: {
       shortLabel: 'Solution de rangement industrielle',
-      caption: '{{name}} - Solution de rangement industrielle par Mangala Living | Atelier Bekasi Indonésie',
-      meta: '{{name}} - Meuble de rangement industriel sur mesure par Mangala Living Bekasi',
-      imageAlt: '{{name}} - Meuble de rangement industriel premium Mangala Living',
-      paragraph1: 'Le {{name}} signé Mangala Living est la solution de rangement industrielle idéale pour les espaces contemporains. Sa structure en acier robuste et ses lignes épurées offrent une grande capacité tout en affichant un style résolument industriel.',
+      caption: '{{name}} - Solution de rangement industrielle par Naturra Extal | Atelier Bekasi Indonésie',
+      meta: '{{name}} - Meuble de rangement industriel sur mesure par Naturra Extal Bekasi',
+      imageAlt: '{{name}} - Meuble de rangement industriel premium Naturra Extal',
+      paragraph1: 'Le {{name}} signé Naturra Extal est la solution de rangement industrielle idéale pour les espaces contemporains. Sa structure en acier robuste et ses lignes épurées offrent une grande capacité tout en affichant un style résolument industriel.',
       paragraph3: 'Parfait pour les bureaux, cafés, restaurants ou boutiques, il organise chaque élément tout en renforçant l’identité visuelle de votre intérieur.',
       paragraph4: 'Conçu selon des standards professionnels, il supporte une utilisation intensive tout en conservant son fini, garantissant un investissement rentable sur la durée.'
     },
@@ -265,10 +265,10 @@ export const TEMPLATE_TEXTS: TemplateDictionary = {
   outdoor: {
     en: {
       shortLabel: 'Industrial Outdoor Bar Solution',
-      caption: '{{name}} - Industrial outdoor bar solution by Mangala Living | Bekasi Workshop Indonesia',
-      meta: '{{name}} - Weather-resistant industrial outdoor furniture by Mangala Living',
-      imageAlt: '{{name}} - Mangala Living industrial outdoor bar furniture',
-      paragraph1: 'The {{name}} from Mangala Living is the ultimate industrial outdoor bar solution for balconies, rooftops, and terraces. Weather-resistant steel construction delivers exceptional durability without compromising on modern aesthetics.',
+      caption: '{{name}} - Industrial outdoor bar solution by Naturra Extal | Bekasi Workshop Indonesia',
+      meta: '{{name}} - Weather-resistant industrial outdoor furniture by Naturra Extal',
+      imageAlt: '{{name}} - Naturra Extal industrial outdoor bar furniture',
+      paragraph1: 'The {{name}} from Naturra Extal is the ultimate industrial outdoor bar solution for balconies, rooftops, and terraces. Weather-resistant steel construction delivers exceptional durability without compromising on modern aesthetics.',
       paragraph3: '',
       paragraph4: ''
     } as any

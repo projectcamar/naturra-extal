@@ -1,6 +1,6 @@
 // ══════════════════════════════════════════════════════════════════════════════
-// MANGALA LIVING PREMIUM CATALOG GENERATOR 2025
-// World-Class Industrial Furniture Catalog with Elegant Typography
+// Naturra Extal PREMIUM CATALOG GENERATOR 2025
+// World-Class Agricultural Commodities Catalog with Elegant Typography
 // ══════════════════════════════════════════════════════════════════════════════
 
 // Lazy load PDF dependencies to reduce initial bundle size
@@ -311,7 +311,7 @@ const prepareLanguageFont = async (doc: any, lang: 'id' | 'en' | 'ar' | 'zh' | '
 // Get language preference from localStorage
 const getLanguagePreference = (): 'id' | 'en' | 'ar' | 'zh' | 'ja' | 'es' | 'fr' | 'ko' => {
   try {
-    const stored = localStorage.getItem('mangala_lang_preference')
+    const stored = localStorage.getItem('Naturra_lang_preference')
     if (stored === 'id' || stored === 'en' || stored === 'ar' || stored === 'zh' || stored === 'ja' || stored === 'es' || stored === 'fr' || stored === 'ko') {
       return stored as 'id' | 'en' | 'ar' | 'zh' | 'ja' | 'es' | 'fr' | 'ko'
     }
@@ -328,22 +328,22 @@ const getLanguagePreference = (): 'id' | 'en' | 'ar' | 'zh' | 'ja' | 'es' | 'fr'
 const content = {
   id: {
     // ─────────────────────────── Cover Page ───────────────────────────
-    title1: 'MANGALA',
+    title1: 'Naturra',
     title2: 'LIVING',
-    subtitle: 'Katalog Furniture Industrial Premium 2025',
-    tagline: 'Keahlian Lebih dari 25 Tahun dalam Craftsmanship Furniture Industrial & Scandinavian',
+    subtitle: 'Katalog agricultural commodities Premium 2025',
+    tagline: 'Keahlian Lebih dari 25 Tahun dalam Craftsmanship agricultural commodities & Scandinavian',
     since: 'Sejak 1999',
     workshop: 'Workshop & Showroom Bekasi',
     address: 'Jl. Raya Setu Cibitung, Bekasi, Jawa Barat 17320',
-    copyright: '© 2025 Mangala Living. Hak Cipta Dilindungi.',
+    copyright: '© 2025 Naturra Extal. Hak Cipta Dilindungi.',
 
     // ─────────────────────────── Welcome Page ───────────────────────────
-    welcomeTitle: 'Selamat Datang di Mangala Living',
-    welcomeSubtitle: 'Craftsmen Furniture Industrial Terpercaya Indonesia',
+    welcomeTitle: 'Selamat Datang di Naturra Extal',
+    welcomeSubtitle: 'Craftsmen agricultural commodities Terpercaya Indonesia',
 
-    welcomeIntro: 'Terima kasih telah mengunduh katalog resmi Mangala Living 2025. Kami bangga mempersembahkan koleksi furniture industrial premium yang dirancang dengan dedikasi penuh untuk memenuhi kebutuhan bisnis dan hunian modern Anda.',
+    welcomeIntro: 'Terima kasih telah mengunduh katalog resmi Naturra Extal 2025. Kami bangga mempersembahkan koleksi agricultural commodities premium yang dirancang dengan dedikasi penuh untuk memenuhi kebutuhan bisnis dan hunian modern Anda.',
 
-    welcomePara1: 'Selama lebih dari 25 tahun, Mangala Living telah menjadi pilihan utama para arsitek, desainer interior, pemilik cafe, restoran, hotel, kantor, dan pemilik rumah yang menghargai kualitas sejati. Kami bukan sekadar pembuat furniture—kami adalah craftsmen yang memahami bahwa setiap sudut ruang memiliki cerita, setiap kursi harus nyaman, dan setiap meja harus kokoh bertahan puluhan tahun.',
+    welcomePara1: 'Selama lebih dari 25 tahun, Naturra Extal telah menjadi pilihan utama para arsitek, desainer interior, pemilik cafe, restoran, hotel, kantor, dan pemilik rumah yang menghargai kualitas sejati. Kami bukan sekadar pembuat furniture—kami adalah craftsmen yang memahami bahwa setiap sudut ruang memiliki cerita, setiap kursi harus nyaman, dan setiap meja harus kokoh bertahan puluhan tahun.',
 
     welcomePara2: 'Di workshop seluas 500m² yang berlokasi strategis di Bekasi, tim produksi kami yang terdiri dari 10 tukang las berpengalaman, 5 tukang kayu ahli, dan 3 finishing specialist bekerja dengan standar kualitas ekspor. Setiap potongan besi hollow yang kami las, setiap kayu solid yang kami bentuk, dan setiap lapisan powder coating yang kami aplikasikan—semuanya melalui quality control ketat untuk memastikan produk yang sampai ke tangan Anda adalah yang terbaik.',
 
@@ -356,10 +356,10 @@ const content = {
     welcomeCTA: 'Hubungi kami hari ini untuk konsultasi gratis, diskusikan kebutuhan furniture Anda, atau kunjungi workshop kami untuk melihat langsung kualitas produk yang kami tawarkan.',
 
     welcomeSignature: 'Hormat kami,',
-    welcomeTeam: 'Tim Mangala Living',
+    welcomeTeam: 'Tim Naturra Extal',
 
     // ─────────────────────────── Why Choose Us Page ───────────────────────────
-    whyChooseTitle: 'Mengapa Memilih Mangala Living?',
+    whyChooseTitle: 'Mengapa Memilih Naturra Extal?',
     whyChooseSubtitle: '6 Keunggulan yang Membedakan Kami dari Kompetitor',
 
     reason1Title: '1. Kualitas Ekspor Premium yang Terjamin',
@@ -382,7 +382,7 @@ const content = {
 
     // ─────────────────────────── Product Categories ───────────────────────────
     categories: 'Kategori Produk',
-    categoriesDesc: 'Furniture Industrial Premium untuk Berbagai Kebutuhan',
+    categoriesDesc: 'agricultural commodities Premium untuk Berbagai Kebutuhan',
 
     // ─────────────────────────── Pricing Guide ───────────────────────────
     pricingTitle: 'Panduan Harga Estimasi',
@@ -423,12 +423,12 @@ const content = {
     whatsappResponse: 'Response time: 1-3 jam (jam kerja)',
 
     emailTitle: 'Email Resmi',
-    emailGeneral: 'lifewithmangala@gmail.com',
-    emailSales: 'lifewithmangala@gmail.com',
+    emailGeneral: 'lifewithNaturra@gmail.com',
+    emailSales: 'lifewithNaturra@gmail.com',
     emailNote: 'Untuk quotation, partnership, atau inquiry',
 
     addressTitle: 'Workshop & Showroom',
-    addressFull1: 'Mangala Living Workshop',
+    addressFull1: 'Naturra Extal Workshop',
     addressFull2: 'Jl. Raya Setu Cibitung, Telajung',
     addressFull3: 'Kec. Cikarang Barat, Kabupaten Bekasi',
     addressFull4: 'Jawa Barat 17320, Indonesia',
@@ -463,22 +463,22 @@ const content = {
 
   en: {
     // ─────────────────────────── Cover Page ───────────────────────────
-    title1: 'MANGALA',
+    title1: 'Naturra',
     title2: 'LIVING',
-    subtitle: 'Premium Industrial Furniture Catalog 2025',
+    subtitle: 'Premium Agricultural Commodities Catalog 2025',
     tagline: 'Over 25 Years of Expertise in Industrial & Scandinavian Furniture Craftsmanship',
     since: 'Since 1999',
     workshop: 'Workshop & Showroom Bekasi',
     address: 'Jl. Raya Setu Cibitung, Bekasi, West Java 17320',
-    copyright: '© 2025 Mangala Living. All Rights Reserved.',
+    copyright: '© 2025 Naturra Extal. All Rights Reserved.',
 
     // ─────────────────────────── Welcome Page ───────────────────────────
-    welcomeTitle: 'Welcome to Mangala Living',
-    welcomeSubtitle: 'Indonesia\'s Trusted Industrial Furniture Craftsmen',
+    welcomeTitle: 'Welcome to Naturra Extal',
+    welcomeSubtitle: 'Indonesia\'s Trusted Agricultural Commodities Craftsmen',
 
-    welcomeIntro: 'Thank you for downloading the official Mangala Living 2025 catalog. We are proud to present our premium industrial furniture collection, designed with full dedication to meet the needs of your modern business and residence.',
+    welcomeIntro: 'Thank you for downloading the official Naturra Extal 2025 catalog. We are proud to present our premium Agricultural Commodities collection, designed with full dedication to meet the needs of your modern business and residence.',
 
-    welcomePara1: 'For over 25 years, Mangala Living has been the top choice for architects, interior designers, cafe owners, restaurants, hotels, offices, and homeowners who appreciate true quality. We are not just furniture makers—we are craftsmen who understand that every corner of space has a story, every chair must be comfortable, and every table must stand strong for decades.',
+    welcomePara1: 'For over 25 years, Naturra Extal has been the top choice for architects, interior designers, cafe owners, restaurants, hotels, offices, and homeowners who appreciate true quality. We are not just furniture makers—we are craftsmen who understand that every corner of space has a story, every chair must be comfortable, and every table must stand strong for decades.',
 
     welcomePara2: 'In our 500m² workshop strategically located in Bekasi, our production team consisting of 10 experienced welders, 5 skilled carpenters, and 3 finishing specialists work with export quality standards. Every piece of hollow steel we weld, every solid wood we shape, and every layer of powder coating we apply—all go through strict quality control to ensure the product that reaches you is the best.',
 
@@ -491,10 +491,10 @@ const content = {
     welcomeCTA: 'Contact us today for a free consultation, discuss your furniture needs, or visit our workshop to see firsthand the quality of the products we offer.',
 
     welcomeSignature: 'Best regards,',
-    welcomeTeam: 'Mangala Living Team',
+    welcomeTeam: 'Naturra Extal Team',
 
     // ─────────────────────────── Why Choose Us Page ───────────────────────────
-    whyChooseTitle: 'Why Choose Mangala Living?',
+    whyChooseTitle: 'Why Choose Naturra Extal?',
     whyChooseSubtitle: '6 Advantages That Set Us Apart from Competitors',
 
     reason1Title: '1. Guaranteed Premium Export Quality',
@@ -517,7 +517,7 @@ const content = {
 
     // ─────────────────────────── Product Categories ───────────────────────────
     categories: 'Product Categories',
-    categoriesDesc: 'Premium Industrial Furniture for Various Needs',
+    categoriesDesc: 'Premium Agricultural Commodities for Various Needs',
 
     // ─────────────────────────── Pricing Guide ───────────────────────────
     pricingTitle: 'Estimated Price Guide',
@@ -558,12 +558,12 @@ const content = {
     whatsappResponse: 'Response time: 1-3 hours (working hours)',
 
     emailTitle: 'Official Email',
-    emailGeneral: 'lifewithmangala@gmail.com',
-    emailSales: 'lifewithmangala@gmail.com',
+    emailGeneral: 'lifewithNaturra@gmail.com',
+    emailSales: 'lifewithNaturra@gmail.com',
     emailNote: 'For quotation, partnership, or inquiry',
 
     addressTitle: 'Workshop & Showroom',
-    addressFull1: 'Mangala Living Workshop',
+    addressFull1: 'Naturra Extal Workshop',
     addressFull2: 'Jl. Raya Setu Cibitung, Telajung',
     addressFull3: 'Kec. Cikarang Barat, Kabupaten Bekasi',
     addressFull4: 'West Java 17320, Indonesia',
@@ -598,22 +598,22 @@ const content = {
 
   ar: {
     // ─────────────────────────── Cover Page ───────────────────────────
-    title1: 'MANGALA',
+    title1: 'Naturra',
     title2: 'LIVING',
     subtitle: 'كتالوج الأثاث الصناعي المتميز 2025',
     tagline: 'أكثر من 25 عامًا من الخبرة في صناعة الأثاث الصناعي والإسكندنافي',
     since: 'منذ 1999',
     workshop: 'ورشة وصالة عرض بيكاسي',
     address: 'Jl. Raya Setu Cibitung, Bekasi, West Java 17320',
-    copyright: '© 2025 Mangala Living. جميع الحقوق محفوظة.',
+    copyright: '© 2025 Naturra Extal. جميع الحقوق محفوظة.',
 
     // ─────────────────────────── Welcome Page ───────────────────────────
-    welcomeTitle: 'مرحبًا بكم في Mangala Living',
+    welcomeTitle: 'مرحبًا بكم في Naturra Extal',
     welcomeSubtitle: 'حرفيو الأثاث الصناعي الموثوقون في إندونيسيا',
 
-    welcomeIntro: 'شكرًا لتحميل كتالوg Mangala Living الرسمي لعام 2025. نفخر بتقديم مجموعة الأثاث الصناعي المتميزة المصممة بتفانٍ كامل لتلبية احتياجات أعمالك ومنزلك الحديث.',
+    welcomeIntro: 'شكرًا لتحميل كتالوg Naturra Extal الرسمي لعام 2025. نفخر بتقديم مجموعة الأثاث الصناعي المتميزة المصممة بتفانٍ كامل لتلبية احتياجات أعمالك ومنزلك الحديث.',
 
-    welcomePara1: 'لأكثر من 25 عامًا، كانت Mangala Living الخيار الأول للمهندسين المعماريين ومصممي الديكور الداخلي وأصحاب المقاهي والمطاعم والفنادق والمكاتب وأصحاب المنازل الذين يقدرون الجودة الحقيقية. نحن لسنا مجرد صانعي أثاث - نحن حرفيون نفهم أن كل زاوية في المساحة لها قصة، وأن كل كرسي يجب أن يكون مريحًا، وأن كل طاولة يجب أن تصمد لعقود.',
+    welcomePara1: 'لأكثر من 25 عامًا، كانت Naturra Extal الخيار الأول للمهندسين المعماريين ومصممي الديكور الداخلي وأصحاب المقاهي والمطاعم والفنادق والمكاتب وأصحاب المنازل الذين يقدرون الجودة الحقيقية. نحن لسنا مجرد صانعي أثاث - نحن حرفيون نفهم أن كل زاوية في المساحة لها قصة، وأن كل كرسي يجب أن يكون مريحًا، وأن كل طاولة يجب أن تصمد لعقود.',
 
     welcomePara2: 'في ورشتنا التي تبلغ مساحتها 500 متر مربع في موقع استراتيجي في بيكاسي، يعمل فريق الإنتاج لدينا المكون من 10 لحامين ذوي خبرة و 5 نجارين ماهرين و 3 متخصصين في التشطيب وفقًا لمعايير جودة التصدير. كل قطعة من الفولاذ المجوف التي نلحمها، وكل خشب صلب نشكله، وكل طبقة من الطلاء المسحوق التي نطبقها - كلها تخضع لرقابة صارمة على الجودة لضمان أن المنتج الذي يصل إليك هو الأفضل.',
 
@@ -626,10 +626,10 @@ const content = {
     welcomeCTA: 'اتصل بنا اليوم للحصول على استشارة مجانية، ومناقشة احتياجاتك من الأثاث، أو زيارة ورشتنا لرؤية جودة المنتجات التي نقدمها بشكل مباشر.',
 
     welcomeSignature: 'مع أطيب التحيات،',
-    welcomeTeam: 'فريق Mangala Living',
+    welcomeTeam: 'فريق Naturra Extal',
 
     // ─────────────────────────── Why Choose Us Page ───────────────────────────
-    whyChooseTitle: 'لماذا تختار Mangala Living؟',
+    whyChooseTitle: 'لماذا تختار Naturra Extal؟',
     whyChooseSubtitle: '6 مزايا تميزنا عن المنافسين',
 
     reason1Title: '1. جودة تصدير متميزة مضمونة',
@@ -693,12 +693,12 @@ const content = {
     whatsappResponse: 'وقت الاستجابة: 1-3 ساعات (ساعات العمل)',
 
     emailTitle: 'البريد الإلكتروني الرسمي',
-    emailGeneral: 'lifewithmangala@gmail.com',
-    emailSales: 'lifewithmangala@gmail.com',
+    emailGeneral: 'lifewithNaturra@gmail.com',
+    emailSales: 'lifewithNaturra@gmail.com',
     emailNote: 'لعروض الأسعار أو الشراكة أو الاستفسار',
 
     addressTitle: 'الورشة وصالة العرض',
-    addressFull1: 'ورشة Mangala Living',
+    addressFull1: 'ورشة Naturra Extal',
     addressFull2: 'Jl. Raya Setu Cibitung, Telajung',
     addressFull3: 'Kec. Cikarang Barat, Kabupaten Bekasi',
     addressFull4: 'West Java 17320, Indonesia',
@@ -732,26 +732,26 @@ const content = {
   },
 
   zh: {
-    title1: 'MANGALA',
+    title1: 'Naturra',
     title2: 'LIVING',
     subtitle: '2025高端工业家具目录',
     tagline: '25年以上工业和斯堪的纳维亚家具工艺专业经验',
     since: '始于1999年',
     workshop: '勿加泗工作坊与展厅',
     address: 'Jl. Raya Setu Cibitung, Bekasi, West Java 17320',
-    copyright: '© 2025 Mangala Living. 版权所有',
-    welcomeTitle: '欢迎来到Mangala Living',
+    copyright: '© 2025 Naturra Extal. 版权所有',
+    welcomeTitle: '欢迎来到Naturra Extal',
     welcomeSubtitle: '印度尼西亚值得信赖的工业家具工匠',
-    welcomeIntro: '感谢您下载2025年Mangala Living官方目录。我们自豪地展示我们的高端工业家具系列，全心全意为您的现代商业和住宅需求而设计。',
-    welcomePara1: '25年来，Mangala Living一直是建筑师、室内设计师、咖啡馆、餐厅、酒店、办公室业主和重视真正品质的房主的首选。我们不仅仅是家具制造商——我们是工匠，深知每个空间角落都有故事，每把椅子必须舒适，每张桌子必须能坚固使用数十年。',
+    welcomeIntro: '感谢您下载2025年Naturra Extal官方目录。我们自豪地展示我们的高端工业家具系列，全心全意为您的现代商业和住宅需求而设计。',
+    welcomePara1: '25年来，Naturra Extal一直是建筑师、室内设计师、咖啡馆、餐厅、酒店、办公室业主和重视真正品质的房主的首选。我们不仅仅是家具制造商——我们是工匠，深知每个空间角落都有故事，每把椅子必须舒适，每张桌子必须能坚固使用数十年。',
     welcomePara2: '在我们位于勿加泗战略位置的500平方米工作坊内，我们的生产团队由10名经验丰富的焊工、5名技艺精湛的木匠和3名整理专家组成，按照出口质量标准工作。我们焊接的每一根空心钢管、塑造的每一块实木、涂抹的每一层粉末涂层——所有都经过严格的质量控制，确保送到您手中的产品是最好的。',
     welcomePara3: '我们的系列涵盖多种类别：时尚耐用的咖啡馆和餐厅家具、防风雨长达7年的庭院和户外家具、符合人体工程学且提高生产力的办公家具、温馨舒适的住宅家具、五星级酒店款待家具，以及最大化您视觉营销的零售展示解决方案。',
     welcomePara4: '我们理解每个项目都有独特需求。因此，除了您在本目录中看到的现货外，我们还提供定制订单服务，包括各种优质材料选择：来自PT Krakatau Steel的4x4cm至6x6cm空心钢管、A级实木（柚木、桃花心木、松盖）、Jotun/Nippon粉末涂层（50+种颜色选择），以及高质量进口五金件。',
     welcomePara5: '我们的价格直接来自工厂——没有中间商加价。采用50%定金和安装后50%结算的支付系统，加上2年结构保修和1年整理保修，您将获得家具投资的最佳价值。勿加泗、东雅加达和芝加让地区甚至享受免费送货和勘察！',
     welcomeCTA: '立即联系我们获取免费咨询，讨论您的家具需求，或访问我们的工作坊亲眼看看我们提供的产品质量。',
     welcomeSignature: '此致敬礼，',
-    welcomeTeam: 'Mangala Living团队',
-    whyChooseTitle: '为什么选择Mangala Living？',
+    welcomeTeam: 'Naturra Extal团队',
+    whyChooseTitle: '为什么选择Naturra Extal？',
     whyChooseSubtitle: '6大优势使我们脱颖而出',
     reason1Title: '1. 保证的高端出口质量',
     reason1Desc: '每件产品都采用最优质材料制作：来自PT Krakatau Steel的防锈空心钢和实心钢棒、经过窑干工艺的A级实木以确保尺寸稳定性、Jotun或Nippon出口标准粉末涂层（60-80微米厚度）具有抗紫外线和防风雨功能。我们使用与出口到马来西亚、新加坡和澳大利亚的家具相同的标准。',
@@ -793,11 +793,11 @@ const content = {
     whatsappHours: '周一至周六：08.00 - 17.00 WIB',
     whatsappResponse: '响应时间：1-3小时（工作时间）',
     emailTitle: '官方邮箱',
-    emailGeneral: 'lifewithmangala@gmail.com',
-    emailSales: 'lifewithmangala@gmail.com',
+    emailGeneral: 'lifewithNaturra@gmail.com',
+    emailSales: 'lifewithNaturra@gmail.com',
     emailNote: '用于报价、合作或咨询',
     addressTitle: '工作坊和展厅',
-    addressFull1: 'Mangala Living工作坊',
+    addressFull1: 'Naturra Extal工作坊',
     addressFull2: 'Jl. Raya Setu Cibitung, Telajung',
     addressFull3: 'Kec. Cikarang Barat, Kabupaten Bekasi',
     addressFull4: 'West Java 17320, Indonesia',
@@ -823,26 +823,26 @@ const content = {
   },
 
   ja: {
-    title1: 'MANGALA',
+    title1: 'Naturra',
     title2: 'LIVING',
     subtitle: 'プレミアム インダストリアル家具カタログ 2025',
     tagline: '25年以上のインダストリアル・スカンジナビア家具製作の専門知識',
     since: '1999年創業',
     workshop: 'ブカシ工房・ショールーム',
     address: 'Jl. Raya Setu Cibitung, Bekasi, West Java 17320',
-    copyright: '© 2025 Mangala Living. 無断複写・転載を禁じます。',
-    welcomeTitle: 'Mangala Livingへようこそ',
+    copyright: '© 2025 Naturra Extal. 無断複写・転載を禁じます。',
+    welcomeTitle: 'Naturra Extalへようこそ',
     welcomeSubtitle: 'インドネシアで信頼されるインダストリアル家具職人',
-    welcomeIntro: 'Mangala Living 2025年公式カタログをダウンロードいただき、ありがとうございます。現代的なビジネスと住宅のニーズに応えるため、心を込めてデザインされたプレミアム インダストリアル家具コレクションをご紹介いたします。',
-    welcomePara1: '25年以上にわたり、Mangala Livingは建築家、インテリアデザイナー、カフェオーナー、レストラン、ホテル、オフィス、そして本物の品質を大切にする住宅オーナーの第一の選択肢となってきました。私たちは単なる家具メーカーではありません——空間のあらゆる角には物語があり、あらゆる椅子は快適でなければならず、あらゆるテーブルは何十年も耐えなければならないことを理解する職人です。',
+    welcomeIntro: 'Naturra Extal 2025年公式カタログをダウンロードいただき、ありがとうございます。現代的なビジネスと住宅のニーズに応えるため、心を込めてデザインされたプレミアム インダストリアル家具コレクションをご紹介いたします。',
+    welcomePara1: '25年以上にわたり、Naturra Extalは建築家、インテリアデザイナー、カフェオーナー、レストラン、ホテル、オフィス、そして本物の品質を大切にする住宅オーナーの第一の選択肢となってきました。私たちは単なる家具メーカーではありません——空間のあらゆる角には物語があり、あらゆる椅子は快適でなければならず、あらゆるテーブルは何十年も耐えなければならないことを理解する職人です。',
     welcomePara2: 'ブカシの戦略的な場所にある500平方メートルの工房で、10名の経験豊富な溶接工、5名の熟練大工、3名の仕上げスペシャリストからなる生産チームが輸出品質基準で作業しています。私たちが溶接するすべての中空鋼管、成形するすべての無垢材、塗布するすべてのパウダーコーティング層——すべてが厳格な品質管理を経て、お客様に届く製品が最高品質であることを保証します。',
     welcomePara3: '当社のコレクションは様々なカテゴリーに及びます：スタイリッシュで耐久性のあるカフェ・レストラン家具、最大7年間の耐候性を持つパティオ・アウトドア家具、人間工学的で生産性の高いオフィス家具、温かく快適な住宅家具、五つ星ホテルのホスピタリティ家具、そしてビジュアルマーチャンダイジングを最大化する小売ディスプレイソリューション。',
     welcomePara4: '私たちは各プロジェクトに固有のニーズがあることを理解しています。したがって、本カタログに掲載されている既製品に加え、様々なプレミアム素材オプションを使用したカスタムオーダーも承っています：PT Krakatau Steelの4x4cmから6x6cmの中空鋼管、Aグレードの無垢材（チーク、マホガニー、スンガイ）、50以上の色選択肢を持つJotun/Nipponパウダーコーティング、そして高品質な輸入金具。',
     welcomePara5: '当社の価格は工場直販——中間業者のマークアップはありません。50%の手付金と設置後50%の決済システム、さらに2年間の構造保証と1年間の仕上げ保証により、家具投資の最高の価値を得られます。ブカシ、東ジャカルタ、チカランエリアでは無料配送と調査も提供しています！',
     welcomeCTA: '無料相談、家具ニーズの相談、または工房訪問で製品品質を直接ご確認ください。今すぐお問い合わせください。',
     welcomeSignature: '敬具',
-    welcomeTeam: 'Mangala Livingチーム',
-    whyChooseTitle: 'Mangala Livingを選ぶ理由',
+    welcomeTeam: 'Naturra Extalチーム',
+    whyChooseTitle: 'Naturra Extalを選ぶ理由',
     whyChooseSubtitle: '競合他社と一線を画す6つの利点',
     reason1Title: '1. 保証されたプレミアム輸出品質',
     reason1Desc: 'すべての製品は最高級の材料で作られています：PT Krakatau Steelの錆びにくい中空鋼とソリッドバー、寸法安定性のための窯乾燥プロセスを経たAグレードの無垢材、UV耐性と耐候性を持つ60-80ミクロン厚のJotunまたはNippon輸出規格パウダーコーティング。マレーシア、シンガポール、オーストラリアへの家具輸出と同じ基準を使用しています。',
@@ -884,11 +884,11 @@ const content = {
     whatsappHours: '月曜日～土曜日：08.00 - 17.00 WIB',
     whatsappResponse: '応答時間：1-3時間（営業時間内）',
     emailTitle: '公式メール',
-    emailGeneral: 'lifewithmangala@gmail.com',
-    emailSales: 'lifewithmangala@gmail.com',
+    emailGeneral: 'lifewithNaturra@gmail.com',
+    emailSales: 'lifewithNaturra@gmail.com',
     emailNote: '見積もり、パートナーシップ、またはお問い合わせ用',
     addressTitle: '工房・ショールーム',
-    addressFull1: 'Mangala Living工房',
+    addressFull1: 'Naturra Extal工房',
     addressFull2: 'Jl. Raya Setu Cibitung, Telajung',
     addressFull3: 'Kec. Cikarang Barat, Kabupaten Bekasi',
     addressFull4: 'West Java 17320, Indonesia',
@@ -915,30 +915,30 @@ const content = {
 
   es: {
     // ─────────────────────────── Cover Page ───────────────────────────
-    title1: 'MANGALA',
+    title1: 'Naturra',
     title2: 'LIVING',
     subtitle: 'Catálogo de Muebles Industriales Premium 2025',
     tagline: 'Más de 25 Años de Experiencia en Artesanía de Muebles Industriales y Escandinavos',
     since: 'Desde 1999',
     workshop: 'Taller y Showroom en Bekasi',
     address: 'Jl. Raya Setu Cibitung, Bekasi, West Java 17320',
-    copyright: '© 2025 Mangala Living. Todos los derechos reservados.',
+    copyright: '© 2025 Naturra Extal. Todos los derechos reservados.',
 
     // ─────────────────────────── Welcome Page ───────────────────────────
-    welcomeTitle: 'Bienvenido a Mangala Living',
+    welcomeTitle: 'Bienvenido a Naturra Extal',
     welcomeSubtitle: 'Artesanos de Muebles Industriales de Confianza en Indonesia',
-    welcomeIntro: 'Gracias por descargar el catálogo oficial de Mangala Living 2025. Nos enorgullece presentar nuestra colección de muebles industriales premium, diseñada con total dedicación para satisfacer las necesidades de su negocio y residencia moderna.',
-    welcomePara1: 'Durante más de 25 años, Mangala Living ha sido la primera opción para arquitectos, diseñadores de interiores, propietarios de cafeterías, restaurantes, hoteles, oficinas y propietarios de viviendas que aprecian la verdadera calidad. No somos solo fabricantes de muebles: somos artesanos que entienden que cada rincón del espacio tiene una historia, cada silla debe ser cómoda y cada mesa debe ser resistente durante décadas.',
+    welcomeIntro: 'Gracias por descargar el catálogo oficial de Naturra Extal 2025. Nos enorgullece presentar nuestra colección de muebles industriales premium, diseñada con total dedicación para satisfacer las necesidades de su negocio y residencia moderna.',
+    welcomePara1: 'Durante más de 25 años, Naturra Extal ha sido la primera opción para arquitectos, diseñadores de interiores, propietarios de cafeterías, restaurantes, hoteles, oficinas y propietarios de viviendas que aprecian la verdadera calidad. No somos solo fabricantes de muebles: somos artesanos que entienden que cada rincón del espacio tiene una historia, cada silla debe ser cómoda y cada mesa debe ser resistente durante décadas.',
     welcomePara2: 'En nuestro taller de 500m² ubicado estratégicamente en Bekasi, nuestro equipo de producción compuesto por 10 soldadores experimentados, 5 carpinteros calificados y 3 especialistas en acabado trabaja con estándares de calidad de exportación. Cada pieza de acero hueco que soldamos, cada madera maciza que damos forma y cada capa de recubrimiento en polvo que aplicamos, todo pasa por un estricto control de calidad para garantizar que el producto que llega a usted sea el mejor.',
     welcomePara3: 'Nuestra colección abarca varias categorías: muebles para cafés y restaurantes elegantes y duraderos, muebles para patio y exteriores resistentes a la intemperie hasta por 7 años, muebles de oficina ergonómicos y productivos, muebles residenciales cálidos y cómodos, muebles de hospitalidad hotelera de cinco estrellas y soluciones de exhibición minorista que maximizan su merchandising visual.',
     welcomePara4: 'Entendemos que cada proyecto tiene necesidades únicas. Por lo tanto, además del stock listo que ve en este catálogo, también servimos pedidos personalizados con varias opciones de materiales premium: acero hueco de 4x4cm a 6x6cm de PT Krakatau Steel, madera maciza de grado A (teck, acajou, sungkai), recubrimiento en polvo Jotun/Nippon con más de 50 opciones de colores y herrajes importados de alta calidad.',
     welcomePara5: 'Nuestros precios son directos de fábrica, sin marcado de intermediarios. Con un sistema de pago del 50% de anticipo y el 50% de liquidación después de la instalación, más una garantía estructural de 2 años y una garantía de acabado de 1 año, obtienes el mejor valor para tu inversión en muebles. ¡Las áreas de Bekasi, este de Yakarta y Cikarang incluso obtienen entrega y levantamiento GRATIS!',
     welcomeCTA: 'Contáctenos hoy para una consulta gratuita, analice sus necesidades de muebles o visite nuestro taller para ver de primera mano la calidad de los productos que ofrecemos.',
     welcomeSignature: 'Atentamente,',
-    welcomeTeam: 'Equipo Mangala Living',
+    welcomeTeam: 'Equipo Naturra Extal',
 
     // ─────────────────────────── Why Choose Us Page ───────────────────────────
-    whyChooseTitle: '¿Por qué elegir Mangala Living?',
+    whyChooseTitle: '¿Por qué elegir Naturra Extal?',
     whyChooseSubtitle: '6 Ventajas que nos Distinguent de la Competencia',
     reason1Title: '1. Calidad de Exportación Premium Garantizada',
     reason1Desc: 'Cada producto está fabricado con los mejores materiales: acero hueco y barras sólidas de PT Krakatau Steel resistentes a la oxidación, madera maciza de grado A que ha pasado por un proceso de secado en horno para la estabilidad dimensional, recubrimiento en polvo estándar de exportación Jotun o Nippon con un espesor de 60-80 micrones resistente a los rayos UV y la intemperie. Utilizamos los mismos estándares que las exportaciones de muebles a Malasia, Singapur y Australia.',
@@ -982,11 +982,11 @@ const content = {
     whatsappHours: 'Lunes - Sábado: 08.00 - 17.00 WIB',
     whatsappResponse: 'Tiempo de respuesta: 1-3 horas (horario laboral)',
     emailTitle: 'Correo Electrónico Oficial',
-    emailGeneral: 'lifewithmangala@gmail.com',
-    emailSales: 'lifewithmangala@gmail.com',
+    emailGeneral: 'lifewithNaturra@gmail.com',
+    emailSales: 'lifewithNaturra@gmail.com',
     emailNote: 'Para cotización, asociación o consulta',
     addressTitle: 'Taller y Showroom',
-    addressFull1: 'Taller Mangala Living',
+    addressFull1: 'Taller Naturra Extal',
     addressFull2: 'Jl. Raya Setu Cibitung, Telajung',
     addressFull3: 'Kec. Cikarang Barat, Kabupaten Bekasi',
     addressFull4: 'West Java 17320, Indonesia',
@@ -1012,26 +1012,26 @@ const content = {
 
   fr: {
     // ─────────────────────────── Cover Page ───────────────────────────
-    title1: 'MANGALA',
+    title1: 'Naturra',
     title2: 'LIVING',
     subtitle: 'Catalogue de Meubles Industriels Premium 2025',
     tagline: 'Plus de 25 Ans d\'Expertise en Artisanat de Meubles Industriels et Scandinaves',
     since: 'Depuis 1999',
     workshop: 'Atelier et Showroom à Bekasi',
     address: 'Jl. Raya Setu Cibitung, Bekasi, West Java 17320',
-    copyright: '© 2025 Mangala Living. Tous droits réservés.',
-    welcomeTitle: 'Bienvenue chez Mangala Living',
+    copyright: '© 2025 Naturra Extal. Tous droits réservés.',
+    welcomeTitle: 'Bienvenue chez Naturra Extal',
     welcomeSubtitle: 'Artisans de Meubles Industriels de Confiance en Indonésie',
-    welcomeIntro: 'Merci d\'avoir téléchargé le catalogue officiel Mangala Living 2025. Nous sommes fiers de présenter notre collection de meubles industriels premium, conçue avec un dévouement total pour répondre aux besoins de votre entreprise et de votre résidence moderne.',
-    welcomePara1: 'Depuis plus de 25 ans, Mangala Living est le premier choix des architectes, designers d\'intérieur, propriétaires de cafés, restaurants, hôtels, bureaux et propriétaires de maisons qui apprécient la vraie qualité. Nous ne sommes pas seulement des fabricants de meubles, nous sommes des artisans qui comprennent que chaque coin d\'espace a une histoire, que chaque chaise doit être confortable et que chaque table doit résister pendant des décennies.',
+    welcomeIntro: 'Merci d\'avoir téléchargé le catalogue officiel Naturra Extal 2025. Nous sommes fiers de présenter notre collection de meubles industriels premium, conçue avec un dévouement total pour répondre aux besoins de votre entreprise et de votre résidence moderne.',
+    welcomePara1: 'Depuis plus de 25 ans, Naturra Extal est le premier choix des architectes, designers d\'intérieur, propriétaires de cafés, restaurants, hôtels, bureaux et propriétaires de maisons qui apprécient la vraie qualité. Nous ne sommes pas seulement des fabricants de meubles, nous sommes des artisans qui comprennent que chaque coin d\'espace a une histoire, que chaque chaise doit être confortable et que chaque table doit résister pendant des décennies.',
     welcomePara2: 'Dans notre atelier de 500m² situé stratégiquement à Bekasi, notre équipe de production composée de 10 soudeurs expérimentés, 5 menuisiers qualifiés et 3 spécialistes en finition travaille selon des normes de qualité d\'exportation. Chaque morceau d\'acier creux que nous soudons, chaque bois massif que nous façonnons et chaque couche de revêtement en poudre que nous appliquons, tout passe par un contrôle de qualité strict pour garantir que le produit qui vous parvient est le meilleur.',
     welcomePara3: 'Notre collection couvre diverses catégories : meubles élégants et durables pour cafés et restaurants, meubles de patio et d\'extérieur résistants aux intempéries jusqu\'à 7 ans, meubles de bureau ergonomiques et productifs, meubles résidentiels chaleureux et confortables, meubles d\'hospitalité hôtelière cinq étoiles et solutions d\'affichage au détail qui maximisent votre merchandising visuel.',
     welcomePara4: 'Nous comprenons que chaque projet a des besoins uniques. Par conséquent, en plus du stock prêt que vous voyez dans ce catalogue, nous servons également des commandes personnalisées avec diverses options de matériaux premium : acier creux de 4x4cm à 6x6cm de PT Krakatau Steel, bois massif de qualité A (teck, acajou, sungkai), revêtement en poudre Jotun/Nippon avec plus de 50 choix de couleurs et quincaillerie importée de haute qualité.',
     welcomePara5: 'Nos prix sont directs d\'usine, sans majoration d\'intermédiaire. Avec un système de paiement de 50% d\'acompte et 50% de règlement après installation, plus une garantie structurelle de 2 ans et une garantie de finition d\'1 an, vous obtenez la meilleure valeur pour votre investissement en meubles. Les zones de Bekasi, Est de Jakarta et Cikarang bénéficient même d\'une livraison et d\'un relevé GRATUITS !',
     welcomeCTA: 'Contactez-nous aujourd\'hui pour une consultation gratuite, discutez de vos besoins en meubles ou visitez notre atelier pour voir de première main la qualité des produits que nous offrons.',
     welcomeSignature: 'Cordialement,',
-    welcomeTeam: 'Équipe Mangala Living',
-    whyChooseTitle: 'Pourquoi choisir Mangala Living ?',
+    welcomeTeam: 'Équipe Naturra Extal',
+    whyChooseTitle: 'Pourquoi choisir Naturra Extal ?',
     whyChooseSubtitle: '6 Avantages qui nous Distinguent de la Concurrence',
     reason1Title: '1. Qualité d\'Exportation Premium Garantie',
     reason1Desc: 'Chaque produit est fabriqué avec les meilleurs matériaux : acier creux et barres solides de PT Krakatau Steel résistants à la rouille, bois massif de qualité A ayant subi un processus de séchage au four pour la stabilité dimensionnelle, revêtement en poudre standard d\'exportation Jotun ou Nippon avec une épaisseur de 60-80 microns résistant aux UV et aux intempéries. Nous utilisons les mêmes normes que les exportations de meubles vers la Malaisie, Singapour et l\'Australie.',
@@ -1073,11 +1073,11 @@ const content = {
     whatsappHours: 'Lundi - Samedi : 08.00 - 17.00 WIB',
     whatsappResponse: 'Temps de réponse : 1-3 heures (heures de travail)',
     emailTitle: 'Email Officiel',
-    emailGeneral: 'lifewithmangala@gmail.com',
-    emailSales: 'lifewithmangala@gmail.com',
+    emailGeneral: 'lifewithNaturra@gmail.com',
+    emailSales: 'lifewithNaturra@gmail.com',
     emailNote: 'Pour devis, partenariat ou demande',
     addressTitle: 'Atelier et Showroom',
-    addressFull1: 'Atelier Mangala Living',
+    addressFull1: 'Atelier Naturra Extal',
     addressFull2: 'Jl. Raya Setu Cibitung, Telajung',
     addressFull3: 'Kec. Cikarang Barat, Kabupaten Bekasi',
     addressFull4: 'West Java 17320, Indonesia',
@@ -1100,26 +1100,26 @@ const content = {
   },
 
   ko: {
-    title1: 'MANGALA',
+    title1: 'Naturra',
     title2: 'LIVING',
     subtitle: '프리미엄 인더스트리얼 가구 카탈로그 2025',
     tagline: '25년 이상의 인더스트리얼 및 스칸디나비아 가구 제작 전문 지식',
     since: '1999년 설립',
     workshop: '브카시 공방 및 쇼룸',
     address: 'Jl. Raya Setu Cibitung, Bekasi, West Java 17320',
-    copyright: '© 2025 Mangala Living. 모든 권리 보유.',
-    welcomeTitle: 'Mangala Living에 오신 것을 환영합니다',
+    copyright: '© 2025 Naturra Extal. 모든 권리 보유.',
+    welcomeTitle: 'Naturra Extal에 오신 것을 환영합니다',
     welcomeSubtitle: '인도네시아에서 신뢰받는 인더스트리얼 가구 장인',
-    welcomeIntro: 'Mangala Living 2025 공식 카탈로그를 다운로드해 주셔서 감사합니다. 현대적인 비즈니스와 주거 공간의 요구를 충족시키기 위해 전심으로 디자인된 프리미엄 인더스트리얼 가구 컬렉션을 자랑스럽게 선보입니다.',
-    welcomePara1: '25년 이상 동안 Mangala Living은 진정한 품질을 중시하는 건축가, 인테리어 디자이너, 카페 소유자, 레스토랑, 호텔, 사무실 및 주택 소유자들의 최우선 선택이 되어 왔습니다. 우리는 단순한 가구 제조업체가 아닙니다—공간의 모든 모서리에 이야기가 있고, 모든 의자는 편안해야 하며, 모든 테이블은 수십 년 동안 튼튼해야 한다는 것을 이해하는 장인입니다.',
+    welcomeIntro: 'Naturra Extal 2025 공식 카탈로그를 다운로드해 주셔서 감사합니다. 현대적인 비즈니스와 주거 공간의 요구를 충족시키기 위해 전심으로 디자인된 프리미엄 인더스트리얼 가구 컬렉션을 자랑스럽게 선보입니다.',
+    welcomePara1: '25년 이상 동안 Naturra Extal은 진정한 품질을 중시하는 건축가, 인테리어 디자이너, 카페 소유자, 레스토랑, 호텔, 사무실 및 주택 소유자들의 최우선 선택이 되어 왔습니다. 우리는 단순한 가구 제조업체가 아닙니다—공간의 모든 모서리에 이야기가 있고, 모든 의자는 편안해야 하며, 모든 테이블은 수십 년 동안 튼튼해야 한다는 것을 이해하는 장인입니다.',
     welcomePara2: '브카시의 전략적 위치에 있는 500㎡ 공방에서 경험 많은 용접공 10명, 숙련된 목수 5명, 마무리 전문가 3명으로 구성된 생산팀이 수출 품질 기준으로 작업하고 있습니다. 우리가 용접하는 모든 중공 강철, 성형하는 모든 원목, 도포하는 모든 분체 도장층—모두 엄격한 품질 관리를 거쳐 고객에게 도착하는 제품이 최고임을 보장합니다.',
     welcomePara3: '우리의 컬렉션은 다양한 카테고리를 포괄합니다: 스타일리시하고 내구성 있는 카페 및 레스토랑 가구, 최대 7년간 내후성을 가진 파티오 및 야외 가구, 인체공학적이고 생산적인 사무실 가구, 따뜻하고 편안한 주거용 가구, 5성급 호텔 환대 가구, 그리고 시각적 머천다이징을 극대화하는 소매 디스플레이 솔루션.',
     welcomePara4: '우리는 각 프로젝트에 고유한 요구사항이 있다는 것을 이해합니다. 따라서 본 카탈로그에서 보시는 기성품 외에도 다양한 프리미엄 재료 옵션을 사용한 맞춤 주문을 제공합니다: PT Krakatau Steel의 4x4cm~6x6cm 중공 강철, A등급 원목(티크, 마호가니, 숭가이), 50가지 이상의 색상 선택이 가능한 Jotun/Nippon 분체 도장, 그리고 고품질 수입 하드웨어.',
     welcomePara5: '우리의 가격은 공장 직접 판매입니다—중간상의 마크업이 없습니다. 50% 계약금과 설치 후 50% 정산 시스템, 2년 구조 보증 및 1년 마무리 보증으로 가구 투자에 최고의 가치를 얻으실 수 있습니다. 브카시, 동부 자카르타, 치카랑 지역은 무료 배송 및 현장 조사 혜택도 받으실 수 있습니다!',
     welcomeCTA: '무료 상담, 가구 요구사항 논의 또는 공방 방문을 통해 우리가 제공하는 제품의 품질을 직접 확인하시려면 오늘 연락주세요.',
     welcomeSignature: '감사합니다,',
-    welcomeTeam: 'Mangala Living 팀',
-    whyChooseTitle: 'Mangala Living을 선택하는 이유',
+    welcomeTeam: 'Naturra Extal 팀',
+    whyChooseTitle: 'Naturra Extal을 선택하는 이유',
     whyChooseSubtitle: '경쟁사와 차별화되는 6가지 장점',
     reason1Title: '1. 보장된 프리미엄 수출 품질',
     reason1Desc: '모든 제품은 최고급 재료로 제작됩니다: 녹슬지 않는 PT Krakatau Steel의 중공 강철 및 솔리드 바, 치수 안정성을 위한 가마 건조 공정을 거친 A등급 원목, UV 및 내후성이 있는 60-80미크론 두께의 Jotun 또는 Nippon 수출 기준 분체 도장. 우리는 말레이시아, 싱가포르, 호주로 수출하는 가구와 동일한 기준을 사용합니다.',
@@ -1161,11 +1161,11 @@ const content = {
     whatsappHours: '월요일 - 토요일: 08.00 - 17.00 WIB',
     whatsappResponse: '응답 시간: 1-3시간 (근무 시간)',
     emailTitle: '공식 이메일',
-    emailGeneral: 'lifewithmangala@gmail.com',
-    emailSales: 'lifewithmangala@gmail.com',
+    emailGeneral: 'lifewithNaturra@gmail.com',
+    emailSales: 'lifewithNaturra@gmail.com',
     emailNote: '견적, 파트너십 또는 문의용',
     addressTitle: '공방 및 쇼룸',
-    addressFull1: 'Mangala Living 공방',
+    addressFull1: 'Naturra Extal 공방',
     addressFull2: 'Jl. Raya Setu Cibitung, Telajung',
     addressFull3: 'Kec. Cikarang Barat, Kabupaten Bekasi',
     addressFull4: 'West Java 17320, Indonesia',
@@ -1337,15 +1337,15 @@ export const generateCatalog = async (preferredLanguage?: 'id' | 'en' | 'ar' | '
       doc.setLineWidth(1)
       doc.line(pageWidth / 2 - 40, 45, pageWidth / 2 + 40, 45)
 
-      // Brand name - MANGALA
+      // Brand name - Naturra
       doc.setTextColor(...colors.textLight)
       doc.setFontSize(60)
       setF('bold')
       try {
-        doc.text(processRTLText(t.title1 || 'MANGALA', lang), pageWidth / 2, 75, { align: 'center' })
+        doc.text(processRTLText(t.title1 || 'Naturra', lang), pageWidth / 2, 75, { align: 'center' })
       } catch (e) {
         console.error('[PDF] Error rendering title1:', e)
-        doc.text('MANGALA', pageWidth / 2, 75, { align: 'center' })
+        doc.text('Naturra', pageWidth / 2, 75, { align: 'center' })
       }
 
       // Brand name - LIVING with letter spacing
@@ -1427,9 +1427,9 @@ export const generateCatalog = async (preferredLanguage?: 'id' | 'en' | 'ar' | '
         align: 'center',
         url: 'https://wa.me/+6288801146881'
       })
-      doc.textWithLink('lifewithmangala@gmail.com', pageWidth / 2, 220, {
+      doc.textWithLink('lifewithNaturra@gmail.com', pageWidth / 2, 220, {
         align: 'center',
-        url: 'mailto:lifewithmangala@gmail.com'
+        url: 'mailto:lifewithNaturra@gmail.com'
       })
 
       doc.setTextColor(...colors.textLight)
@@ -1951,12 +1951,12 @@ export const generateCatalog = async (preferredLanguage?: 'id' | 'en' | 'ar' | '
       doc.setTextColor(...colors.textLight)
       doc.textWithLink(processRTLText(t.emailGeneral, lang), pageWidth / 2, yPos, {
         align: 'center',
-        url: 'mailto:lifewithmangala@gmail.com'
+        url: 'mailto:lifewithNaturra@gmail.com'
       })
       yPos += 7
       doc.textWithLink(processRTLText(t.emailSales, lang), pageWidth / 2, yPos, {
         align: 'center',
-        url: 'mailto:lifewithmangala@gmail.com'
+        url: 'mailto:lifewithNaturra@gmail.com'
       })
       yPos += 8
 
@@ -2038,16 +2038,16 @@ export const generateCatalog = async (preferredLanguage?: 'id' | 'en' | 'ar' | '
 
       // Save PDF with language-specific filename
       const fileNames = {
-        id: 'Katalog-Mangala-Living-2025.pdf',
-        en: 'Mangala-Living-Catalog-2025.pdf',
-        ar: 'Mangala-Living-Catalog-2025-AR.pdf',
-        zh: 'Mangala-Living-Catalog-2025-ZH.pdf',
-        ja: 'Mangala-Living-Catalog-2025-JA.pdf',
-        es: 'Mangala-Living-Catalog-2025-ES.pdf',
-        fr: 'Mangala-Living-Catalog-2025-FR.pdf',
-        ko: 'Mangala-Living-Catalog-2025-KO.pdf'
+        id: 'Katalog-Naturra-Living-2025.pdf',
+        en: 'Naturra-Living-Catalog-2025.pdf',
+        ar: 'Naturra-Living-Catalog-2025-AR.pdf',
+        zh: 'Naturra-Living-Catalog-2025-ZH.pdf',
+        ja: 'Naturra-Living-Catalog-2025-JA.pdf',
+        es: 'Naturra-Living-Catalog-2025-ES.pdf',
+        fr: 'Naturra-Living-Catalog-2025-FR.pdf',
+        ko: 'Naturra-Living-Catalog-2025-KO.pdf'
       }
-      const fileName = fileNames[lang] || 'Mangala-Living-Catalog-2025.pdf'
+      const fileName = fileNames[lang] || 'Naturra-Living-Catalog-2025.pdf'
       console.log(`[PDF] Saving PDF as: ${fileName}`)
       console.log(`[PDF] Total pages: ${doc.getNumberOfPages()}`)
       console.log(`[PDF] Language: ${lang}, Content keys count: ${Object.keys(t).length}`)

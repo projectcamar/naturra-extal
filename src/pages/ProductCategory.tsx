@@ -167,18 +167,18 @@ const CATEGORY_UI_TRANSLATIONS: Record<
     priceHigh: 'Harga: Tinggi ke Rendah',
     noResults: 'Tidak ada produk ditemukan',
     home: 'Beranda',
-    pageTitle: (category) => `${category} Industrial Bekasi - Furniture Berkualitas | Mangala Living`,
+    pageTitle: (category) => `${category} Industrial Bekasi - Furniture Berkualitas | Naturra Extal`,
     metaDescription: (category, count) =>
-      `${category} industrial custom dari Mangala Living Bekasi. Harga pabrik, kualitas premium, pengalaman 25+ tahun. Workshop langsung melayani Jabodetabek. ${count} produk tersedia.`,
+      `${category} industrial custom dari Naturra Extal Bekasi. Harga pabrik, kualitas premium, pengalaman 25+ tahun. Workshop langsung melayani Jabodetabek. ${count} produk tersedia.`,
     metaKeywords: (category) =>
-      `${category.toLowerCase()} industrial bekasi, ${category.toLowerCase()} custom, furniture industrial bekasi, furniture besi custom, mangala living`,
-    ogTitle: (category) => `${category} Industrial - Mangala Living Bekasi`,
+      `${category.toLowerCase()} industrial bekasi, ${category.toLowerCase()} custom, agricultural commodities bekasi, furniture besi custom, Naturra Extal`,
+    ogTitle: (category) => `${category} Industrial - Naturra Extal Bekasi`,
     ogDescription: (category) => `${category} industrial custom dengan harga pabrik. Workshop di Bekasi, pengalaman 25+ tahun.`,
-    twitterTitle: (category) => `${category} Industrial - Mangala Living`,
+    twitterTitle: (category) => `${category} Industrial - Naturra Extal`,
     twitterDescription: (category, count) => `${count} produk ${category} industrial berkualitas premium.`,
-    collectionName: (category) => `${category} Furniture Industrial - Mangala Living`,
+    collectionName: (category) => `${category} agricultural commodities - Naturra Extal`,
     collectionDescription: (category, count) =>
-      `Koleksi ${category} furniture industrial. Kualitas premium, harga pabrik, pengalaman 25+ tahun. Workshop Bekasi melayani Jabodetabek. ${count} produk.`
+      `Koleksi ${category} agricultural commodities. Kualitas premium, harga pabrik, pengalaman 25+ tahun. Workshop Bekasi melayani Jabodetabek. ${count} produk.`
   },
   en: {
     loading: 'Loading...',
@@ -190,18 +190,18 @@ const CATEGORY_UI_TRANSLATIONS: Record<
     priceHigh: 'Price: High to Low',
     noResults: 'No products found',
     home: 'Home',
-    pageTitle: (category) => `${category} Industrial Furniture Bekasi - Premium Quality | Mangala Living`,
+    pageTitle: (category) => `${category} Agricultural Commodities Bekasi - Premium Quality | Naturra Extal`,
     metaDescription: (category, count) =>
-      `${category} industrial custom furniture by Mangala Living Bekasi. Factory-direct pricing, premium quality, 25+ years experience. Serving Jabodetabek. ${count} products available.`,
+      `${category} industrial custom furniture by Naturra Extal Bekasi. Factory-direct pricing, premium quality, 25+ years experience. Serving Jabodetabek. ${count} products available.`,
     metaKeywords: (category) =>
-      `${category.toLowerCase()} industrial furniture, ${category.toLowerCase()} bekasi, custom industrial furniture, mangala living`,
-    ogTitle: (category) => `${category} Industrial - Mangala Living Bekasi`,
-    ogDescription: (category) => `${category} industrial furniture with factory-direct pricing. Bekasi workshop with 25+ years of experience.`,
-    twitterTitle: (category) => `${category} Industrial - Mangala Living`,
-    twitterDescription: (category, count) => `${count} premium ${category} industrial furniture products.`,
-    collectionName: (category) => `${category} Industrial Furniture - Mangala Living`,
+      `${category.toLowerCase()} Agricultural Commodities, ${category.toLowerCase()} bekasi, custom Agricultural Commodities, Naturra Extal`,
+    ogTitle: (category) => `${category} Industrial - Naturra Extal Bekasi`,
+    ogDescription: (category) => `${category} Agricultural Commodities with factory-direct pricing. Bekasi workshop with 25+ years of experience.`,
+    twitterTitle: (category) => `${category} Industrial - Naturra Extal`,
+    twitterDescription: (category, count) => `${count} premium ${category} Agricultural Commodities products.`,
+    collectionName: (category) => `${category} Agricultural Commodities - Naturra Extal`,
     collectionDescription: (category, count) =>
-      `Collection of ${category} industrial furniture. Premium quality, factory prices, 25+ years experience. Bekasi workshop serving Jabodetabek. ${count} items.`
+      `Collection of ${category} Agricultural Commodities. Premium quality, factory prices, 25+ years experience. Bekasi workshop serving Jabodetabek. ${count} items.`
   },
   ar: {
     loading: 'جارٍ التحميل...',
@@ -213,16 +213,16 @@ const CATEGORY_UI_TRANSLATIONS: Record<
     priceHigh: 'السعر: من الأعلى إلى الأقل',
     noResults: 'لم يتم العثور على منتجات',
     home: 'الصفحة الرئيسية',
-    pageTitle: (category) => `${category} أثاث صناعي بيكاسي - جودة متميزة | Mangala Living`,
+    pageTitle: (category) => `${category} أثاث صناعي بيكاسي - جودة متميزة | Naturra Extal`,
     metaDescription: (category, count) =>
-      `${category} أثاث صناعي مخصص من Mangala Living في بيكاسي. أسعار المصنع، جودة عالية، خبرة لأكثر من 25 سنة. نخدم منطقة جاكرتا الكبرى. يتوفر ${count} منتج.`,
+      `${category} أثاث صناعي مخصص من Naturra Extal في بيكاسي. أسعار المصنع، جودة عالية، خبرة لأكثر من 25 سنة. نخدم منطقة جاكرتا الكبرى. يتوفر ${count} منتج.`,
     metaKeywords: (category) =>
-      `${category} اثاث صناعي، ${category} بيكاسي، اثاث صناعي مخصص، Mangala Living`,
-    ogTitle: (category) => `${category} أثاث صناعي - Mangala Living بيكاسي`,
+      `${category} اثاث صناعي، ${category} بيكاسي، اثاث صناعي مخصص، Naturra Extal`,
+    ogTitle: (category) => `${category} أثاث صناعي - Naturra Extal بيكاسي`,
     ogDescription: (category) => `أثاث ${category} صناعي بأسعار المصنع. ورشة بيكاسي بخبرة تتجاوز 25 عاماً.`,
-    twitterTitle: (category) => `${category} أثاث صناعي - Mangala Living`,
+    twitterTitle: (category) => `${category} أثاث صناعي - Naturra Extal`,
     twitterDescription: (category, count) => `${count} منتج ${category} صناعي بجودة متميزة.`,
-    collectionName: (category) => `${category} أثاث صناعي - Mangala Living`,
+    collectionName: (category) => `${category} أثاث صناعي - Naturra Extal`,
     collectionDescription: (category, count) =>
       `مجموعة ${category} من الأثاث الصناعي. جودة متميزة وأسعار المصنع وخبرة 25+ عاماً. ورشة بيكاسي تخدم جاكرتا الكبرى. ${count} عنصر.`
   },
@@ -236,16 +236,16 @@ const CATEGORY_UI_TRANSLATIONS: Record<
     priceHigh: '价格：从高到低',
     noResults: '未找到产品',
     home: '首页',
-    pageTitle: (category) => `${category} 工业风家具 Bekasi - 高品质定制 | Mangala Living`,
+    pageTitle: (category) => `${category} 工业风家具 Bekasi - 高品质定制 | Naturra Extal`,
     metaDescription: (category, count) =>
-      `${category} 工业风定制家具，由 Mangala Living Bekasi 制作。工厂直供，优质做工，25+ 年经验。服务雅加达大都市区。共有 ${count} 件产品。`,
+      `${category} 工业风定制家具，由 Naturra Extal Bekasi 制作。工厂直供，优质做工，25+ 年经验。服务雅加达大都市区。共有 ${count} 件产品。`,
     metaKeywords: (category) =>
-      `${category} 工业家具, ${category} Bekasi, 定制工业家具, Mangala Living`,
-    ogTitle: (category) => `${category} 工业家具 - Mangala Living Bekasi`,
+      `${category} 工业家具, ${category} Bekasi, 定制工业家具, Naturra Extal`,
+    ogTitle: (category) => `${category} 工业家具 - Naturra Extal Bekasi`,
     ogDescription: (category) => `${category} 工业家具，工厂直供，Bekasi 工坊拥有 25+ 年经验。`,
-    twitterTitle: (category) => `${category} 工业家具 - Mangala Living`,
+    twitterTitle: (category) => `${category} 工业家具 - Naturra Extal`,
     twitterDescription: (category, count) => `${count} 款优质 ${category} 工业风家具。`,
-    collectionName: (category) => `${category} 工业家具 - Mangala Living`,
+    collectionName: (category) => `${category} 工业家具 - Naturra Extal`,
     collectionDescription: (category, count) =>
       `${category} 工业家具系列。优质工艺，工厂价格，25+ 年经验。Bekasi 工坊服务雅加达地区。共 ${count} 件。`
   },
@@ -259,16 +259,16 @@ const CATEGORY_UI_TRANSLATIONS: Record<
     priceHigh: '価格: 高い順',
     noResults: '商品が見つかりません',
     home: 'ホーム',
-    pageTitle: (category) => `${category} 工業家具 ベカシ - プレミアム品質 | Mangala Living`,
+    pageTitle: (category) => `${category} 工業家具 ベカシ - プレミアム品質 | Naturra Extal`,
     metaDescription: (category, count) =>
-      `${category} の工業系カスタム家具。Mangala Living ベカシ工房。工場直販、プレミアム品質、25年以上の経験。ジャボデタベック全域対応。${count} 商品。`,
+      `${category} の工業系カスタム家具。Naturra Extal ベカシ工房。工場直販、プレミアム品質、25年以上の経験。ジャボデタベック全域対応。${count} 商品。`,
     metaKeywords: (category) =>
-      `${category} 工業家具, ${category} ベカシ, カスタム工業家具, Mangala Living`,
-    ogTitle: (category) => `${category} 工業家具 - Mangala Living ベカシ`,
+      `${category} 工業家具, ${category} ベカシ, カスタム工業家具, Naturra Extal`,
+    ogTitle: (category) => `${category} 工業家具 - Naturra Extal ベカシ`,
     ogDescription: (category) => `工場直販の ${category} 工業家具。ベカシ工房、25年以上の経験。`,
-    twitterTitle: (category) => `${category} 工業家具 - Mangala Living`,
+    twitterTitle: (category) => `${category} 工業家具 - Naturra Extal`,
     twitterDescription: (category, count) => `高品質な ${category} 工業家具を ${count} 点ご用意しています。`,
-    collectionName: (category) => `${category} 工業家具 - Mangala Living`,
+    collectionName: (category) => `${category} 工業家具 - Naturra Extal`,
     collectionDescription: (category, count) =>
       `${category} 工業家具のコレクション。プレミアム品質、工場価格、25年以上の経験。ベカシ工房がジャボデタベック対応。${count} 点。`
   },
@@ -282,16 +282,16 @@ const CATEGORY_UI_TRANSLATIONS: Record<
     priceHigh: 'Precio: de mayor a menor',
     noResults: 'No se encontraron productos',
     home: 'Inicio',
-    pageTitle: (category) => `${category} Muebles Industriales Bekasi - Calidad Premium | Mangala Living`,
+    pageTitle: (category) => `${category} Muebles Industriales Bekasi - Calidad Premium | Naturra Extal`,
     metaDescription: (category, count) =>
-      `${category} muebles industriales personalizados de Mangala Living Bekasi. Precios de fábrica, calidad premium, más de 25 años de experiencia. Servicio en Jabodetabek. ${count} productos disponibles.`,
+      `${category} muebles industriales personalizados de Naturra Extal Bekasi. Precios de fábrica, calidad premium, más de 25 años de experiencia. Servicio en Jabodetabek. ${count} productos disponibles.`,
     metaKeywords: (category) =>
-      `${category.toLowerCase()} muebles industriales, ${category.toLowerCase()} bekasi, muebles industriales personalizados, mangala living`,
-    ogTitle: (category) => `${category} Industrial - Mangala Living Bekasi`,
+      `${category.toLowerCase()} muebles industriales, ${category.toLowerCase()} bekasi, muebles industriales personalizados, Naturra Extal`,
+    ogTitle: (category) => `${category} Industrial - Naturra Extal Bekasi`,
     ogDescription: (category) => `Muebles industriales ${category} con precios directos de fábrica. Taller en Bekasi con más de 25 años de experiencia.`,
-    twitterTitle: (category) => `${category} Industrial - Mangala Living`,
+    twitterTitle: (category) => `${category} Industrial - Naturra Extal`,
     twitterDescription: (category, count) => `${count} productos industriales ${category} de calidad premium.`,
-    collectionName: (category) => `${category} Muebles Industriales - Mangala Living`,
+    collectionName: (category) => `${category} Muebles Industriales - Naturra Extal`,
     collectionDescription: (category, count) =>
       `Colección de muebles industriales ${category}. Calidad premium, precios de fábrica y más de 25 años de experiencia. Taller en Bekasi para Jabodetabek. ${count} artículos.`
   },
@@ -305,16 +305,16 @@ const CATEGORY_UI_TRANSLATIONS: Record<
     priceHigh: 'Prix : du plus élevé au plus bas',
     noResults: 'Aucun produit trouvé',
     home: 'Accueil',
-    pageTitle: (category) => `${category} Mobilier Industriel Bekasi - Qualité Premium | Mangala Living`,
+    pageTitle: (category) => `${category} Mobilier Industriel Bekasi - Qualité Premium | Naturra Extal`,
     metaDescription: (category, count) =>
-      `${category} mobilier industriel sur mesure par Mangala Living Bekasi. Prix d'usine, qualité premium, plus de 25 ans d'expérience. Service Jabodetabek. ${count} produits disponibles.`,
+      `${category} mobilier industriel sur mesure par Naturra Extal Bekasi. Prix d'usine, qualité premium, plus de 25 ans d'expérience. Service Jabodetabek. ${count} produits disponibles.`,
     metaKeywords: (category) =>
-      `${category.toLowerCase()} mobilier industriel, ${category.toLowerCase()} bekasi, mobilier industriel sur mesure, mangala living`,
-    ogTitle: (category) => `${category} Industriel - Mangala Living Bekasi`,
+      `${category.toLowerCase()} mobilier industriel, ${category.toLowerCase()} bekasi, mobilier industriel sur mesure, Naturra Extal`,
+    ogTitle: (category) => `${category} Industriel - Naturra Extal Bekasi`,
     ogDescription: (category) => `Mobilier industriel ${category} avec prix d'usine. Atelier de Bekasi avec plus de 25 ans d'expérience.`,
-    twitterTitle: (category) => `${category} Industriel - Mangala Living`,
+    twitterTitle: (category) => `${category} Industriel - Naturra Extal`,
     twitterDescription: (category, count) => `${count} produits industriels ${category} de qualité premium.`,
-    collectionName: (category) => `${category} Mobilier Industriel - Mangala Living`,
+    collectionName: (category) => `${category} Mobilier Industriel - Naturra Extal`,
     collectionDescription: (category, count) =>
       `Collection de mobilier industriel ${category}. Qualité premium, prix d'usine, plus de 25 ans d'expérience. Atelier de Bekasi pour Jabodetabek. ${count} articles.`
   },
@@ -328,16 +328,16 @@ const CATEGORY_UI_TRANSLATIONS: Record<
     priceHigh: '가격: 높은 순',
     noResults: '상품을 찾을 수 없습니다',
     home: '홈',
-    pageTitle: (category) => `${category} 산업용 가구 베카시 - 프리미엄 품질 | Mangala Living`,
+    pageTitle: (category) => `${category} 산업용 가구 베카시 - 프리미엄 품질 | Naturra Extal`,
     metaDescription: (category, count) =>
-      `${category} 산업용 맞춤 가구, Mangala Living Bekasi 제작. 공장 직영 가격, 프리미엄 품질, 25년 이상 경험. 자보데타벡 전역 서비스. 총 ${count}개 제품.`,
+      `${category} 산업용 맞춤 가구, Naturra Extal Bekasi 제작. 공장 직영 가격, 프리미엄 품질, 25년 이상 경험. 자보데타벡 전역 서비스. 총 ${count}개 제품.`,
     metaKeywords: (category) =>
-      `${category} 산업 가구, ${category} 베카시, 맞춤 산업 가구, mangala living`,
-    ogTitle: (category) => `${category} 산업 가구 - Mangala Living Bekasi`,
+      `${category} 산업 가구, ${category} 베카시, 맞춤 산업 가구, Naturra Extal`,
+    ogTitle: (category) => `${category} 산업 가구 - Naturra Extal Bekasi`,
     ogDescription: (category) => `공장 직영 가격의 ${category} 산업 가구. 베카시 공방, 25년 이상의 경험.`,
-    twitterTitle: (category) => `${category} 산업 가구 - Mangala Living`,
+    twitterTitle: (category) => `${category} 산업 가구 - Naturra Extal`,
     twitterDescription: (category, count) => `프리미엄 ${category} 산업 가구 ${count}개.`,
-    collectionName: (category) => `${category} 산업 가구 - Mangala Living`,
+    collectionName: (category) => `${category} 산업 가구 - Naturra Extal`,
     collectionDescription: (category, count) =>
       `${category} 산업 가구 컬렉션. 프리미엄 품질, 공장 가격, 25년 이상 경험. 베카시 공방이 자보데타벡을 지원. 총 ${count}개.`
   }
@@ -536,13 +536,13 @@ const ProductCategory: React.FC = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": uiTranslations.home,
-                "item": "https://mangala-living.com/"
+                "item": "https://Naturra-living.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": localizedCategoryName,
-                "item": `https://mangala-living.com/product-category/${category}`
+                "item": `https://Naturra-living.com/product-category/${category}`
               }
             ]
           })}
@@ -555,7 +555,7 @@ const ProductCategory: React.FC = () => {
             "@type": "CollectionPage",
             "name": uiTranslations.collectionName(localizedCategoryName),
             "description": uiTranslations.collectionDescription(localizedCategoryName, filteredProducts.length),
-            "url": `https://mangala-living.com/product-category/${category}`,
+            "url": `https://Naturra-living.com/product-category/${category}`,
             "mainEntity": {
               "@type": "ItemList",
               "numberOfItems": filteredProducts.length,
@@ -565,7 +565,7 @@ const ProductCategory: React.FC = () => {
                 "item": {
                   "@type": "Product",
                   "name": product.name,
-                  "url": `https://mangala-living.com/product/${product.slug}`,
+                  "url": `https://Naturra-living.com/product/${product.slug}`,
                   "image": product.image,
                   "offers": {
                     "@type": "Offer",
@@ -630,8 +630,8 @@ const ProductCategory: React.FC = () => {
                   <div className="category-product-image">
                     <img
                       src={product.image}
-                      alt={`${translatedName} - ${localizedCategoryName} Industrial Furniture Collection Mangala Living`}
-                      title={`${translatedName} - ${localizedCategoryName} Premium Furniture from Mangala Living Workshop Bekasi`}
+                      alt={`${translatedName} - ${localizedCategoryName} Agricultural Commodities Collection Naturra Extal`}
+                      title={`${translatedName} - ${localizedCategoryName} Premium Furniture from Naturra Extal Workshop Bekasi`}
                       loading="lazy"
                       width="300"
                       height="200"

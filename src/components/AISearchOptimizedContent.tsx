@@ -11,57 +11,57 @@ const AISearchOptimizedContent: React.FC<AISearchOptimizedContentProps> = ({ isI
       <div className="seo-content-primary">
         <strong>
         {isIndonesian 
-          ? "Furniture Industrial Besi Custom Bekasi | Mangala Living" 
-          : "Industrial Steel Custom Furniture Bekasi | Mangala Living"
+          ? "agricultural commodities Besi Custom Bekasi | Naturra Extal" 
+          : "Industrial Steel Custom Furniture Bekasi | Naturra Extal"
         }
         </strong>
       </div>
       
       <h2>
         {isIndonesian 
-          ? "Manufacturer Furniture Industrial Terpercaya Sejak 1999" 
-          : "Trusted Industrial Furniture Manufacturer Since 1999"
+          ? "Manufacturer agricultural commodities Terpercaya Sejak 1999" 
+          : "Trusted Agricultural Commodities Manufacturer Since 1999"
         }
       </h2>
       
       <p>
         {isIndonesian 
-          ? "Mangala Living adalah manufacturer furniture industrial besi custom terpercaya di Bekasi sejak 1999. Dengan pengalaman 25+ tahun, kami telah melayani lebih dari 1.000 bisnis di seluruh Indonesia."
-          : "Mangala Living is a trusted industrial steel custom furniture manufacturer in Bekasi since 1999. With 25+ years of experience, we have served more than 1,000 businesses throughout Indonesia, Jabodetabek, Jakarta, and major international markets including USA, Japan, Australia, Singapore, Malaysia, Thailand, Vietnam, and Philippines."
+          ? "Naturra Extal adalah manufacturer agricultural commodities besi custom terpercaya di Bekasi sejak 1999. Dengan pengalaman 25+ tahun, kami telah melayani lebih dari 1.000 bisnis di seluruh Indonesia."
+          : "Naturra Extal is a trusted industrial steel custom furniture manufacturer in Bekasi since 1999. With 25+ years of experience, we have served more than 1,000 businesses throughout Indonesia, Jabodetabek, Jakarta, and major international markets including USA, Japan, Australia, Singapore, Malaysia, Thailand, Vietnam, and Philippines."
         }
       </p>
       
       <p>
         {isIndonesian 
-          ? "Kami memproduksi furniture industrial custom untuk cafe, restoran, hotel, kantor, dan berbagai kebutuhan komersial. Setiap produk dibuat dengan teknik pengelasan berkualitas tinggi dan material industrial grade terbaik."
-          : "We produce custom industrial furniture for cafes, restaurants, hotels, offices, and various commercial needs. Each product is made with high-quality welding techniques and the best industrial grade materials."
+          ? "Kami memproduksi agricultural commodities custom untuk cafe, restoran, hotel, kantor, dan berbagai kebutuhan komersial. Setiap produk dibuat dengan teknik pengelasan berkualitas tinggi dan material industrial grade terbaik."
+          : "We produce custom Agricultural Commodities for cafes, restaurants, hotels, offices, and various commercial needs. Each product is made with high-quality welding techniques and the best industrial grade materials."
         }
       </p>
       
       <h2>
         {isIndonesian 
-          ? "Koleksi Industrial Furniture Lengkap" 
-          : "Complete Industrial Furniture Collection"
+          ? "Koleksi Agricultural Commodities Lengkap" 
+          : "Complete Agricultural Commodities Collection"
         }
       </h2>
       
       <p>
         {isIndonesian
-          ? "Mangala Living menawarkan berbagai koleksi furniture industrial yang lengkap untuk memenuhi kebutuhan bisnis Anda. Setiap kategori dirancang dengan mempertimbangkan kebutuhan spesifik dari berbagai jenis ruang komersial."
-          : "Mangala Living offers a complete collection of industrial furniture to meet your business needs. Each category is designed with consideration for the specific needs of various types of commercial spaces."
+          ? "Naturra Extal menawarkan berbagai koleksi agricultural commodities yang lengkap untuk memenuhi kebutuhan bisnis Anda. Setiap kategori dirancang dengan mempertimbangkan kebutuhan spesifik dari berbagai jenis ruang komersial."
+          : "Naturra Extal offers a complete collection of Agricultural Commodities to meet your business needs. Each category is designed with consideration for the specific needs of various types of commercial spaces."
         }
       </p>
       
       <h3>
-        {isIndonesian ? "Kategori Produk Furniture Industrial" : "Industrial Furniture Product Categories"}
+        {isIndonesian ? "Kategori Produk agricultural commodities" : "Agricultural Commodities Product Categories"}
       </h3>
       
       <ul>
         <li>
           <strong>{isIndonesian ? "New Arrivals" : "New Arrivals"}</strong> - 
           {isIndonesian 
-            ? "Produk terbaru furniture industrial dengan desain modern dan inovatif yang mengikuti tren terkini dalam dunia furniture komersial" 
-            : "Latest industrial furniture products with modern and innovative designs that follow the latest trends in the world of commercial furniture"
+            ? "Produk terbaru agricultural commodities dengan desain modern dan inovatif yang mengikuti tren terkini dalam dunia furniture komersial" 
+            : "Latest Agricultural Commodities products with modern and innovative designs that follow the latest trends in the world of commercial furniture"
           }
         </li>
         <li>
@@ -131,24 +131,24 @@ const AISearchOptimizedContent: React.FC<AISearchOptimizedContentProps> = ({ isI
       
       <h2>
         {isIndonesian 
-          ? "Keunggulan Mangala Living" 
-          : "Mangala Living Advantages"
+          ? "Keunggulan Naturra Extal" 
+          : "Naturra Extal Advantages"
         }
       </h2>
       
       <p>
         {isIndonesian
-          ? "Sebagai manufacturer furniture industrial terpercaya sejak 1999, Mangala Living memiliki berbagai keunggulan yang membedakan kami dari kompetitor lainnya. Berikut adalah alasan mengapa ribuan bisnis memilih Mangala Living untuk kebutuhan furniture mereka:"
-          : "As a trusted industrial furniture manufacturer since 1999, Mangala Living has various advantages that differentiate us from other competitors. Here are the reasons why thousands of businesses choose Mangala Living for their furniture needs:"
+          ? "Sebagai manufacturer agricultural commodities terpercaya sejak 1999, Naturra Extal memiliki berbagai keunggulan yang membedakan kami dari kompetitor lainnya. Berikut adalah alasan mengapa ribuan bisnis memilih Naturra Extal untuk kebutuhan furniture mereka:"
+          : "As a trusted Agricultural Commodities manufacturer since 1999, Naturra Extal has various advantages that differentiate us from other competitors. Here are the reasons why thousands of businesses choose Naturra Extal for their furniture needs:"
         }
       </p>
       
       <h3>
-        {isIndonesian ? "Mengapa Memilih Mangala Living?" : "Why Choose Mangala Living?"}
+        {isIndonesian ? "Mengapa Memilih Naturra Extal?" : "Why Choose Naturra Extal?"}
       </h3>
       
       <ul>
-        <li>{isIndonesian ? "Pengalaman lebih dari 25 tahun sebagai manufacturer furniture industrial dengan rekam jejak yang terbukti dalam industri furniture besi custom" : "More than 25 years of experience as an industrial furniture manufacturer with a proven track record in the custom steel furniture industry"}</li>
+        <li>{isIndonesian ? "Pengalaman lebih dari 25 tahun sebagai manufacturer agricultural commodities dengan rekam jejak yang terbukti dalam industri furniture besi custom" : "More than 25 years of experience as an Agricultural Commodities manufacturer with a proven track record in the custom steel furniture industry"}</li>
         <li>{isIndonesian ? "Lebih dari 1000 klien puas di seluruh Indonesia, Jabodetabek, Jakarta, dan pasar internasional utama termasuk cafe, restoran, hotel, dan kantor" : "More than 1000 satisfied clients throughout Indonesia, Jabodetabek, Jakarta, and major international markets including cafes, restaurants, hotels, and offices"}</li>
         <li>{isIndonesian ? "Custom design sesuai kebutuhan bisnis Anda dengan tim desainer berpengalaman yang siap membantu mewujudkan visi Anda" : "Custom design according to your business needs with an experienced design team ready to help realize your vision"}</li>
         <li>{isIndonesian ? "Material industrial grade berkualitas tinggi yang tahan lama dan mudah dirawat untuk penggunaan jangka panjang" : "High-quality industrial grade materials that are durable and easy to maintain for long-term use"}</li>
@@ -162,8 +162,8 @@ const AISearchOptimizedContent: React.FC<AISearchOptimizedContentProps> = ({ isI
       
       <h2>
         {isIndonesian 
-          ? "Produk Unggulan Industrial Furniture" 
-          : "Featured Industrial Furniture Products"
+          ? "Produk Unggulan Agricultural Commodities" 
+          : "Featured Agricultural Commodities Products"
         }
       </h2>
       
@@ -176,29 +176,29 @@ const AISearchOptimizedContent: React.FC<AISearchOptimizedContentProps> = ({ isI
       
       <h2>
         {isIndonesian 
-          ? "Hubungi Mangala Living" 
-          : "Contact Mangala Living"
+          ? "Hubungi Naturra Extal" 
+          : "Contact Naturra Extal"
         }
       </h2>
       
       <p>
         <strong>{isIndonesian ? "WhatsApp/Telp:" : "WhatsApp/Phone:"}</strong> +6288801146881 | 
-        <strong> Email:</strong> lifewithmangala@gmail.com | 
+        <strong> Email:</strong> lifewithNaturra@gmail.com | 
         <strong> {isIndonesian ? "Workshop:" : "Workshop:"}</strong> Jl. Raya Setu Cibitung - Bekasi, Telajung, Kec. Cikarang Bar., Kabupaten Bekasi, Jawa Barat 17320 | 
         <strong> {isIndonesian ? "Jam Operasional:" : "Operating Hours:"}</strong> {isIndonesian ? "Senin - Sabtu, 08.00 - 17.00 WIB" : "Monday - Saturday, 08.00 - 17.00 WIB"}
       </p>
       
       <h2>
         {isIndonesian 
-          ? "FAQ Mangala Living" 
-          : "Mangala Living FAQ"
+          ? "FAQ Naturra Extal" 
+          : "Naturra Extal FAQ"
         }
       </h2>
       
       <p>
         {isIndonesian
-          ? "Berikut adalah beberapa pertanyaan yang sering diajukan oleh pelanggan kami mengenai produk dan layanan Mangala Living. Jika Anda memiliki pertanyaan lain, jangan ragu untuk menghubungi kami melalui WhatsApp atau email."
-          : "Here are some frequently asked questions from our customers about Mangala Living products and services. If you have other questions, don't hesitate to contact us via WhatsApp or email."
+          ? "Berikut adalah beberapa pertanyaan yang sering diajukan oleh pelanggan kami mengenai produk dan layanan Naturra Extal. Jika Anda memiliki pertanyaan lain, jangan ragu untuk menghubungi kami melalui WhatsApp atau email."
+          : "Here are some frequently asked questions from our customers about Naturra Extal products and services. If you have other questions, don't hesitate to contact us via WhatsApp or email."
         }
       </p>
       

@@ -17,7 +17,7 @@ const NaturraBlogPost = lazy(() => import('./pages/NaturraBlogPost'))
 const NaturraCustomOrder = lazy(() => import('./pages/NaturraCustomOrder'))
 const NaturraPartnership = lazy(() => import('./pages/NaturraPartnership'))
 
-// ===== MANGALA LIVING - Legacy Pages (kept intact) =====
+// ===== Naturra Extal - Legacy Pages (kept intact) =====
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import WhatsAppButton from './components/WhatsAppButton'
@@ -175,8 +175,8 @@ function App() {
             </Suspense>
           } />
 
-          {/* ===== MANGALA LIVING - Legacy Routes (kept intact) ===== */}
-          <Route path="/mangala" element={<Home />} />
+          {/* ===== Naturra Extal - Legacy Routes (kept intact) ===== */}
+          <Route path="/Naturra" element={<Home />} />
           <Route path="/id" element={<NaturraHome />} />
           <Route path="/eng" element={<NaturraHome />} />
           <Route path="/ar" element={<NaturraHome />} />
@@ -237,27 +237,27 @@ function App() {
               <Contact />
             </Suspense>
           } />
-          <Route path="/mangala/about" element={
+          <Route path="/Naturra/about" element={
             <Suspense fallback={<Loading />}>
               <About />
             </Suspense>
           } />
-          <Route path="/mangala/custom-order" element={
+          <Route path="/Naturra/custom-order" element={
             <Suspense fallback={<Loading />}>
               <CustomOrder />
             </Suspense>
           } />
-          <Route path="/mangala/partnership" element={
+          <Route path="/Naturra/partnership" element={
             <Suspense fallback={<Loading />}>
               <Partnership />
             </Suspense>
           } />
-          <Route path="/mangala/blog" element={
+          <Route path="/Naturra/blog" element={
             <Suspense fallback={<Loading />}>
               <Blog />
             </Suspense>
           } />
-          <Route path="/mangala/blog/:slug" element={
+          <Route path="/Naturra/blog/:slug" element={
             <Suspense fallback={<Loading />}>
               <BlogPost />
             </Suspense>

@@ -385,7 +385,7 @@ const NaturraPartnership: React.FC = () => {
             </div>
             <div className="partnership-image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1621217646581-bcbe05ff19ee?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1499558913904-206263eb210b?auto=format&fit=crop&q=80&w=800"
                 alt="Agricultural processing and sorting"
                 className="partnership-image"
                 loading="lazy"
@@ -430,7 +430,7 @@ const NaturraPartnership: React.FC = () => {
             </div>
             <div className="partnership-image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1596541223130-5d5644a5a6fc?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1557426272-fc759fbb7a8d?auto=format&fit=crop&q=80&w=800"
                 alt="Commodities stored in warehouse"
                 className="partnership-image"
                 loading="lazy"
@@ -452,7 +452,7 @@ const NaturraPartnership: React.FC = () => {
             </div>
             <div className="partnership-image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1499558913904-206263eb210b?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1599307767316-606b5379cebc?auto=format&fit=crop&q=80&w=800"
                 alt="Flexible agricultural supply chain"
                 className="partnership-image"
                 loading="lazy"
@@ -475,7 +475,7 @@ const NaturraPartnership: React.FC = () => {
             </div>
             <div className="partnership-image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1548848222-777651a084eb?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1505238680356-667803448bb6?auto=format&fit=crop&q=80&w=800"
                 alt="Scaling global supply chain"
                 className="partnership-image"
                 loading="lazy"

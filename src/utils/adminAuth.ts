@@ -3,7 +3,7 @@
  * Manages admin session in sessionStorage
  */
 
-const ADMIN_TOKEN_KEY = 'mangala_admin_token';
+const ADMIN_TOKEN_KEY = 'Naturra_admin_token';
 
 export const setAdminSession = (token: string) => {
     sessionStorage.setItem(ADMIN_TOKEN_KEY, token);
@@ -18,7 +18,7 @@ export const isAdminAuthenticated = () => {
     if (!token) return false;
 
     // Basic check - in a real app we'd verify the token with the backend or check expiry
-    return token.startsWith('mangala_admin_session_');
+    return token.startsWith('Naturra_admin_session_');
 };
 
 export const logoutAdmin = () => {

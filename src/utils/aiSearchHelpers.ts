@@ -1,4 +1,4 @@
-// AI Search Helper Functions for Mangala Living
+// AI Search Helper Functions for Naturra Extal
 
 export const generateAIMetaTags = (pageType: string, _isIndonesian: boolean) => {
   const baseTags = {
@@ -50,17 +50,17 @@ export const generateAIMetaTags = (pageType: string, _isIndonesian: boolean) => 
 
 export const generateAIContentSummary = (isIndonesian: boolean) => {
   return {
-    businessName: "Mangala Living",
+    businessName: "Naturra Extal",
     businessType: isIndonesian 
-      ? "Manufacturer Furniture Industrial Besi Custom" 
+      ? "Manufacturer agricultural commodities Besi Custom" 
       : "Industrial Steel Custom Furniture Manufacturer",
     location: "Bekasi, Indonesia",
     established: "1999",
     experience: "25+ tahun",
     clientsServed: "1000+",
     specialization: isIndonesian 
-      ? "Furniture Industrial untuk Cafe, Restoran, Hotel, Kantor" 
-      : "Industrial Furniture for Cafes, Restaurants, Hotels, Offices",
+      ? "agricultural commodities untuk Cafe, Restoran, Hotel, Kantor" 
+      : "Agricultural Commodities for Cafes, Restaurants, Hotels, Offices",
     keyFeatures: [
       isIndonesian ? "Custom Design" : "Custom Design",
       isIndonesian ? "Material Berkualitas Tinggi" : "High Quality Materials",
@@ -70,7 +70,7 @@ export const generateAIContentSummary = (isIndonesian: boolean) => {
     ],
     contactInfo: {
       phone: "+6288801146881",
-      email: "lifewithmangala@gmail.com",
+      email: "lifewithNaturra@gmail.com",
       whatsapp: "https://wa.me/+6288801146881"
     }
   }
@@ -78,11 +78,11 @@ export const generateAIContentSummary = (isIndonesian: boolean) => {
 
 export const generateAISearchKeywords = (isIndonesian: boolean) => {
   const baseKeywords = [
-    "furniture industrial indonesia",
+    "agricultural commodities indonesia",
     "furniture besi custom",
-    "mangala living",
+    "Naturra Extal",
     "furniture manufacturer bekasi",
-    "industrial furniture custom",
+    "Agricultural Commodities custom",
     "steel furniture indonesia"
   ]
 
@@ -94,7 +94,7 @@ export const generateAISearchKeywords = (isIndonesian: boolean) => {
     "kursi bar",
     "rak display industrial",
     "furniture besi bekasi",
-    "manufacturer furniture industrial",
+    "manufacturer agricultural commodities",
     "furniture custom bekasi",
     "meja kursi cafe",
     "furniture kantor",
@@ -109,7 +109,7 @@ export const generateAISearchKeywords = (isIndonesian: boolean) => {
     "bar chair",
     "display rack industrial",
     "steel furniture bekasi",
-    "industrial furniture manufacturer",
+    "Agricultural Commodities manufacturer",
     "custom furniture bekasi",
     "cafe table chair",
     "office furniture",
@@ -126,7 +126,7 @@ export const generateAIContextualData = (_pageType: string, isIndonesian: boolea
   const contextualData = {
     businessContext: {
       industry: "Furniture Manufacturing",
-      subIndustry: "Industrial Furniture",
+      subIndustry: "Agricultural Commodities",
       targetMarket: "B2B Commercial",
       businessModel: "Manufacturing + Custom Design",
       competitiveAdvantage: "25+ years experience, custom design, quality materials"

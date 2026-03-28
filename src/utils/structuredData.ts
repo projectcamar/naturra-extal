@@ -1,14 +1,14 @@
-// Structured Data utilities for Mangala Living
+// Structured Data utilities for Naturra Extal
 
 const IMAGE_LICENSE_PAGE = "https://naturraextal.com/image-license"
 
 export const DEFAULT_IMAGE_RIGHTS_METADATA = {
   acquireLicensePage: `${IMAGE_LICENSE_PAGE}#request-license`,
   license: `${IMAGE_LICENSE_PAGE}#usage-terms`,
-  copyrightNotice: "Copyright 1999-2025 Mangala Living. All image rights reserved.",
+  copyrightNotice: "Copyright 1999-2025 Naturra Extal. All image rights reserved.",
   creator: {
     "@type": "Organization",
-    "name": "Mangala Living",
+    "name": "Naturra Extal",
     "url": "https://naturraextal.com"
   }
 } as const
@@ -48,19 +48,19 @@ export const generateImageObjectSchema = (image: {
     "@type": "ImageObject",
     "url": image.url,
     "contentUrl": image.contentUrl || image.url,
-    "caption": image.caption || image.alt || image.title || "Industrial Furniture by Mangala Living",
-    "description": image.description || image.alt || image.title || "Premium Industrial Furniture from Mangala Living Workshop Bekasi",
+    "caption": image.caption || image.alt || image.title || "Agricultural Commodities by Naturra Extal",
+    "description": image.description || image.alt || image.title || "Premium Agricultural Commodities from Naturra Extal Workshop Bekasi",
     ...(image.width && { "width": image.width }),
     ...(image.height && { "height": image.height }),
-    "creditText": "Mangala Living",
+    "creditText": "Naturra Extal",
     "copyrightHolder": {
       "@type": "Organization",
-      "name": "Mangala Living"
+      "name": "Naturra Extal"
     },
     ...rightsMetadata,
     "publisher": {
       "@type": "Organization",
-      "name": "Mangala Living",
+      "name": "Naturra Extal",
       "logo": {
         "@type": "ImageObject",
         "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
@@ -85,19 +85,19 @@ export const generateProductImageGallerySchema = (images: Array<{
     "@type": "ImageObject",
     "url": img.url,
     "contentUrl": img.url,
-    "caption": img.alt || `${productName} - Image ${index + 1} - Mangala Living`,
-    "description": img.title || img.alt || `${productName} Premium Industrial Furniture - Mangala Living`,
+    "caption": img.alt || `${productName} - Image ${index + 1} - Naturra Extal`,
+    "description": img.title || img.alt || `${productName} Premium Agricultural Commodities - Naturra Extal`,
     ...(img.width && { "width": img.width }),
     ...(img.height && { "height": img.height }),
-    "creditText": "Mangala Living",
+    "creditText": "Naturra Extal",
     "copyrightHolder": {
       "@type": "Organization",
-      "name": "Mangala Living"
+      "name": "Naturra Extal"
     },
     ...DEFAULT_IMAGE_RIGHTS_METADATA,
     "publisher": {
       "@type": "Organization",
-      "name": "Mangala Living",
+      "name": "Naturra Extal",
       "logo": {
         "@type": "ImageObject",
         "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
@@ -140,7 +140,7 @@ export const generateBlogPostingSchema = (post: {
       "Infrastructure Engineering",
       "Construction",
       "Furniture Design",
-      "Industrial Furniture",
+      "Agricultural Commodities",
       "Space Planning",
       "Project Management"
     ],
@@ -191,7 +191,7 @@ export const generateBlogPostingSchema = (post: {
     }
   } : {
     "@type": "Organization",
-    "name": "Mangala Living",
+    "name": "Naturra Extal",
     "url": "https://naturraextal.com",
     "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
     "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200"
@@ -206,14 +206,14 @@ export const generateBlogPostingSchema = (post: {
       "@type": "ImageObject",
       "url": post.image,
       "contentUrl": post.image,
-      "caption": `${post.title} - ${post.category} Blog Furniture Industrial`,
+      "caption": `${post.title} - ${post.category} Blog agricultural commodities`,
       "description": post.excerpt,
       "width": 1200,
       "height": 630,
-      "creditText": "Mangala Living",
+      "creditText": "Naturra Extal",
       "copyrightHolder": {
         "@type": "Organization",
-        "name": "Mangala Living"
+        "name": "Naturra Extal"
       },
       ...DEFAULT_IMAGE_RIGHTS_METADATA
     },
@@ -222,7 +222,7 @@ export const generateBlogPostingSchema = (post: {
     "author": authorSchema,
     "publisher": {
       "@type": "Organization",
-      "name": "Mangala Living",
+      "name": "Naturra Extal",
       "logo": {
         "@type": "ImageObject",
         "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
@@ -236,7 +236,7 @@ export const generateBlogPostingSchema = (post: {
     "articleSection": post.category,
     "inLanguage": "id-ID",
     "keywords": [
-      "furniture industrial",
+      "agricultural commodities",
       "furniture besi custom",
       "furniture bekasi",
       "meja industrial",
@@ -252,7 +252,7 @@ export const generateFAQSchema = (faqs: Array<{ question: string; answer: string
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "name": "Mangala Living FAQ",
+    "name": "Naturra Extal FAQ",
     "mainEntity": faqs.map(faq => ({
       "@type": "Question",
       "name": faq.question,
@@ -268,7 +268,7 @@ export const generateMerchantStructuredData = () => {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Mangala Living",
+    "name": "Naturra Extal",
     "url": "https://naturraextal.com",
     "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
     "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
@@ -285,38 +285,38 @@ export const generateMerchantStructuredData = () => {
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "telephone": "+6288801146881",
+        "telephone": "6289513957752",
         "contactType": "customer service",
-        "email": "lifewithmangala@gmail.com",
+        "email": "hello@naturraextal.com",
         "availableLanguage": ["Indonesian", "English"],
         "areaServed": "ID"
       },
       {
         "@type": "ContactPoint",
-        "telephone": "+6288801146881",
+        "telephone": "6289513957752",
         "contactType": "sales",
-        "email": "lifewithmangala@gmail.com",
+        "email": "hello@naturraextal.com",
         "availableLanguage": ["Indonesian", "English"],
         "areaServed": "ID"
       }
     ],
     "sameAs": [
-      "https://www.instagram.com/mangalaliving",
-      "https://www.facebook.com/mangalaliving",
-      "https://wa.me/+6288801146881"
+      "https://www.instagram.com/Naturraliving",
+      "https://www.facebook.com/Naturraliving",
+      "https://wa.me/6289513957752"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Industrial Furniture Collection",
-      "description": "Complete collection of industrial furniture for commercial and residential use",
+      "name": "Agricultural Commodities Collection",
+      "description": "Complete collection of Agricultural Commodities for commercial and residential use",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Product",
-            "name": "Industrial Furniture",
+            "name": "Agricultural Commodities",
             "category": "Furniture",
-            "description": "Premium industrial furniture made from high-quality materials",
+            "description": "Premium Agricultural Commodities made from high-quality materials",
             "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
             "offers": {
               "@type": "Offer",
@@ -381,13 +381,13 @@ export const generateLocalBusinessStructuredData = () => {
   return {
     "@context": "https://schema.org",
     "@type": ["FurnitureStore", "LocalBusiness"],
-    "name": "Mangala Living - Workshop Furniture Industrial Bekasi",
-    "alternateName": "Mangala Living Furniture Industrial Bekasi",
+    "name": "Naturra Extal - Workshop agricultural commodities Bekasi",
+    "alternateName": "Naturra Extal agricultural commodities Bekasi",
     "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
-    "description": "Workshop Furniture Besi Custom Bekasi sejak 1999. Spesialis Industrial Furniture untuk Cafe, Restoran, Hotel, Kantor. Produksi langsung harga pabrik, material berkualitas, finishing powder coating. Melayani Jakarta, Bekasi, Jabodetabek.",
+    "description": "Workshop Furniture Besi Custom Bekasi sejak 1999. Spesialis Agricultural Commodities untuk Cafe, Restoran, Hotel, Kantor. Produksi langsung harga pabrik, material berkualitas, finishing powder coating. Melayani Jakarta, Bekasi, Jabodetabek.",
     "url": "https://naturraextal.com",
-    "telephone": "+6288801146881",
-    "email": "lifewithmangala@gmail.com",
+    "telephone": "6289513957752",
+    "email": "hello@naturraextal.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Jl. Raya Setu Cikarang Bar.",
@@ -458,7 +458,7 @@ export const generateLocalBusinessStructuredData = () => {
       },
       "geoRadius": "100000"
     },
-    "slogan": "Furniture Industrial Bekasi - Workshop Terpercaya Sejak 1999",
+    "slogan": "agricultural commodities Bekasi - Workshop Terpercaya Sejak 1999",
     "foundingDate": "1999",
     "openingHoursSpecification": [
       {
@@ -480,7 +480,7 @@ export const generateLocalBusinessStructuredData = () => {
     "hasMap": "https://maps.app.goo.gl/5Bc5ymfVtAYRPtpK7",
     "brand": {
       "@type": "Brand",
-      "name": "Mangala Living"
+      "name": "Naturra Extal"
     },
     "makesOffer": [
       {
@@ -495,8 +495,8 @@ export const generateLocalBusinessStructuredData = () => {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Industrial Furniture Bekasi",
-          "description": "Produksi furniture industrial dengan desain modern dan material berkualitas"
+          "name": "Agricultural Commodities Bekasi",
+          "description": "Produksi agricultural commodities dengan desain modern dan material berkualitas"
         }
       },
       {
@@ -508,7 +508,7 @@ export const generateLocalBusinessStructuredData = () => {
         }
       }
     ],
-    "keywords": "furniture besi custom bekasi, industrial furniture bekasi, furniture cafe industrial bekasi, workshop furniture besi bekasi, jual furniture industrial jakarta bekasi, meja makan besi custom bekasi, meja cafe industrial besi, furniture besi hotel custom, bikin furniture besi custom jabodetabek, furniture besi untuk restoran, furniture bekasi barat, furniture bekasi timur, furniture bekasi selatan, furniture bekasi utara, furniture cikarang barat, furniture cikarang utara, furniture cikarang selatan, furniture cikarang timur, furniture cikarang pusat, furniture harapan indah, furniture summarecon bekasi, furniture jatiasih, furniture pekayon, furniture tambun, furniture pondok gede, furniture mustika jaya, furniture rawalumbu, furniture medan satria, furniture lippo cikarang, furniture jababeka, furniture grand galaxy city, furniture galaxy bekasi, furniture kemang pratama, furniture deltamas, furniture ejip, furniture greenland cikarang, furniture mm2100, furniture jakarta timur, furniture jakarta pusat, furniture jakarta selatan, furniture depok, furniture bogor, furniture karawang, furniture cibitung, furniture setu, furniture kranji, furniture bintara, furniture kayuringin, furniture pekayon jaya, furniture margahayu, furniture kaliabang"
+    "keywords": "furniture besi custom bekasi, Agricultural Commodities bekasi, furniture cafe industrial bekasi, workshop furniture besi bekasi, jual agricultural commodities jakarta bekasi, meja makan besi custom bekasi, meja cafe industrial besi, furniture besi hotel custom, bikin furniture besi custom jabodetabek, furniture besi untuk restoran, furniture bekasi barat, furniture bekasi timur, furniture bekasi selatan, furniture bekasi utara, furniture cikarang barat, furniture cikarang utara, furniture cikarang selatan, furniture cikarang timur, furniture cikarang pusat, furniture harapan indah, furniture summarecon bekasi, furniture jatiasih, furniture pekayon, furniture tambun, furniture pondok gede, furniture mustika jaya, furniture rawalumbu, furniture medan satria, furniture lippo cikarang, furniture jababeka, furniture grand galaxy city, furniture galaxy bekasi, furniture kemang pratama, furniture deltamas, furniture ejip, furniture greenland cikarang, furniture mm2100, furniture jakarta timur, furniture jakarta pusat, furniture jakarta selatan, furniture depok, furniture bogor, furniture karawang, furniture cibitung, furniture setu, furniture kranji, furniture bintara, furniture kayuringin, furniture pekayon jaya, furniture margahayu, furniture kaliabang"
   }
 }
 
@@ -567,10 +567,10 @@ export const generateServiceAreaSchema = () => {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "Furniture Besi Custom & Industrial Furniture Manufacturing",
+    "serviceType": "Furniture Besi Custom & Agricultural Commodities Manufacturing",
     "provider": {
       "@type": "LocalBusiness",
-      "name": "Mangala Living",
+      "name": "Naturra Extal",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Jl. Raya Setu Cikarang Bar.",

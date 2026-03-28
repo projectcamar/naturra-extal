@@ -186,7 +186,7 @@ const NaturraHome: React.FC = () => {
                         <Link to="/products" className="naturra-home__product-card">
                             <img
                                 className="naturra-home__product-card-image"
-                                src="https://images.unsplash.com/photo-1613919920110-394ffdc5bfaa?w=600&q=80"
+                                src="https://images.unsplash.com/photo-1582218155981-0675ea108dca?w=800&q=80"
                                 alt="Indonesian Cocoa Products"
                                 loading="lazy"
                             />

@@ -205,8 +205,8 @@ const SIDEBAR_FEATURES_TRANSLATIONS: Record<LanguageCode, {
 }
 
 const BLOG_PRODUCT_SHOWCASE_DESCRIPTION: Record<LanguageCode, string> = {
-  id: "Jelajahi koleksi furniture industrial premium kami yang dirancang khusus untuk mempercantik dan memperkuat karakter bisnis Anda.",
-  en: "Explore our premium industrial furniture collection designed to enhance and strengthen your business character.",
+  id: "Jelajahi koleksi agricultural commodities premium kami yang dirancang khusus untuk mempercantik dan memperkuat karakter bisnis Anda.",
+  en: "Explore our premium Agricultural Commodities collection designed to enhance and strengthen your business character.",
   ar: "استكشف مجموعتنا المتميزة من الأثاث الصناعي المصممة لتعزيز وتقوية شخصية عملك.",
   zh: "探索我们的优质工业家具系列，旨在增强和加强您的业务特色。",
   ja: "あなたのビジネスキャラクターを強化し、強化するために設計されたプレミアム工業家具コレクションをご覧ください。",
@@ -632,7 +632,7 @@ const NaturraBlogPost: React.FC = () => {
         <div className="blog-post-hero-image">
           <img
             src={post.image}
-            alt={`${post.title} - ${post.category} Industrial Furniture Article by Naturra Extal`}
+            alt={`${post.title} - ${post.category} Agricultural Commodities Article by Naturra Extal`}
             title={`${post.title} | Naturra Extal`}
             loading="eager"
             fetchPriority="high"
@@ -683,8 +683,8 @@ const NaturraBlogPost: React.FC = () => {
                         <figure className="blog-post-figure">
                           <img
                             src={section.image}
-                            alt={section.imageAlt || `${post.title} - ${section.heading || 'Industrial Furniture Article'} - Naturra Extal`}
-                            title={section.imageAlt || `${post.title} - ${section.heading || 'Furniture Industrial Guide'} by Naturra Extal`}
+                            alt={section.imageAlt || `${post.title} - ${section.heading || 'Agricultural Commodities Article'} - Naturra Extal`}
+                            title={section.imageAlt || `${post.title} - ${section.heading || 'agricultural commodities Guide'} by Naturra Extal`}
                             loading="lazy"
                             width="800"
                             height="500"
@@ -970,8 +970,8 @@ const NaturraBlogPost: React.FC = () => {
                     <a
                       href={`https://wa.me/+6288801146881?text=${encodeURIComponent(
                         post?.category === 'Export & International'
-                          ? `Hello Naturra Extal,\n\nI just read your article: "${post?.title}". I'm interested in industrial furniture for my project. Can I get more information and consultation?\n\nArticle: ${window.location.href}\n\nThank you!`
-                          : `Halo Naturra Extal,\n\nSaya baru membaca artikel Anda: "${post?.title}". Saya tertarik dengan furniture industrial untuk project saya. Bisakah saya mendapatkan informasi lebih lanjut dan konsultasi?\n\nArtikel: ${window.location.href}\n\nTerima kasih!`
+                          ? `Hello Naturra Extal,\n\nI just read your article: "${post?.title}". I'm interested in Agricultural Commodities for my project. Can I get more information and consultation?\n\nArticle: ${window.location.href}\n\nThank you!`
+                          : `Halo Naturra Extal,\n\nSaya baru membaca artikel Anda: "${post?.title}". Saya tertarik dengan agricultural commodities untuk project saya. Bisakah saya mendapatkan informasi lebih lanjut dan konsultasi?\n\nArtikel: ${window.location.href}\n\nTerima kasih!`
                       )}`}
                       className="sidebar-consultation-btn"
                       onClick={() => trackWhatsAppClick('blog_post_consultation_sidebar', {

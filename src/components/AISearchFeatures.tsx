@@ -9,23 +9,23 @@ const AISearchFeatures: React.FC<AISearchFeaturesProps> = ({ isIndonesian }) => 
     <div style={{ display: 'none' }} aria-hidden="true">
       {/* AI Search Contextual Information */}
       <div itemScope itemType="https://schema.org/Organization">
-        <meta itemProp="name" content="Mangala Living" />
-        <meta itemProp="url" content="https://mangala-living.com" />
+        <meta itemProp="name" content="Naturra Extal" />
+        <meta itemProp="url" content="https://Naturra-living.com" />
         <meta itemProp="description" content={
           isIndonesian 
-            ? "Manufacturer furniture industrial besi custom terpercaya di Bekasi sejak 1999"
+            ? "Manufacturer agricultural commodities besi custom terpercaya di Bekasi sejak 1999"
             : "Trusted industrial steel custom furniture manufacturer in Bekasi since 1999"
         } />
         <meta itemProp="foundingDate" content="1999" />
         <meta itemProp="numberOfEmployees" content="25-50" />
         <meta itemProp="areaServed" content="Indonesia, USA, Japan, Australia, Singapore, Malaysia, Thailand, Vietnam, Philippines, Jabodetabek, Jakarta" />
-        <meta itemProp="serviceType" content="Industrial Furniture Manufacturing" />
+        <meta itemProp="serviceType" content="Agricultural Commodities Manufacturing" />
         <meta itemProp="priceRange" content="$$" />
         <meta itemProp="currenciesAccepted" content="IDR" />
         <meta itemProp="paymentAccepted" content="Cash, Bank Transfer, Credit Card" />
         <meta itemProp="openingHours" content="Mo-Sa 08:00-17:00" />
         <meta itemProp="telephone" content="+6288801146881" />
-        <meta itemProp="email" content="lifewithmangala@gmail.com" />
+        <meta itemProp="email" content="lifewithNaturra@gmail.com" />
         <meta itemProp="address" content="Jl. Raya Setu Cikarang Bar., Bekasi, Jawa Barat 17320, Indonesia" />
         <meta itemProp="latitude" content="-6.2088" />
         <meta itemProp="longitude" content="107.1602" />
@@ -33,14 +33,14 @@ const AISearchFeatures: React.FC<AISearchFeaturesProps> = ({ isIndonesian }) => 
 
       {/* Business Context for AI */}
       <div itemScope itemType="https://schema.org/LocalBusiness">
-        <meta itemProp="name" content="Mangala Living" />
+        <meta itemProp="name" content="Naturra Extal" />
         <meta itemProp="description" content={
           isIndonesian 
-            ? "Furniture industrial besi custom untuk cafe, restoran, hotel, dan kantor"
+            ? "agricultural commodities besi custom untuk cafe, restoran, hotel, dan kantor"
             : "Industrial steel custom furniture for cafes, restaurants, hotels, and offices"
         } />
         <meta itemProp="priceRange" content="Rp 500.000 - Rp 10.000.000" />
-        <meta itemProp="hasOfferCatalog" content="Industrial Furniture Collection" />
+        <meta itemProp="hasOfferCatalog" content="Agricultural Commodities Collection" />
         <meta itemProp="makesOffer" content="Custom Furniture Design, Furniture Installation" />
         <meta itemProp="areaServed" content="Indonesia, USA, Japan, Australia, Singapore, Malaysia, Thailand, Vietnam, Philippines, Jabodetabek, Jakarta" />
         <meta itemProp="availableLanguage" content="Indonesian, English" />
@@ -48,11 +48,11 @@ const AISearchFeatures: React.FC<AISearchFeaturesProps> = ({ isIndonesian }) => 
 
       {/* Product Categories for AI Understanding */}
       <div itemScope itemType="https://schema.org/ItemList">
-        <meta itemProp="name" content="Industrial Furniture Categories" />
+        <meta itemProp="name" content="Agricultural Commodities Categories" />
         <meta itemProp="description" content={
           isIndonesian 
-            ? "Kategori furniture industrial yang tersedia di Mangala Living"
-            : "Available industrial furniture categories at Mangala Living"
+            ? "Kategori agricultural commodities yang tersedia di Naturra Extal"
+            : "Available Agricultural Commodities categories at Naturra Extal"
         } />
         <meta itemProp="numberOfItems" content="10" />
         <div itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
@@ -105,7 +105,7 @@ const AISearchFeatures: React.FC<AISearchFeaturesProps> = ({ isIndonesian }) => 
             ? "Layanan desain furniture custom sesuai kebutuhan bisnis Anda"
             : "Custom furniture design service according to your business needs"
         } />
-        <meta itemProp="provider" content="Mangala Living" />
+        <meta itemProp="provider" content="Naturra Extal" />
         <meta itemProp="areaServed" content="Indonesia, USA, Japan, Australia, Singapore, Malaysia, Thailand, Vietnam, Philippines, Jabodetabek, Jakarta" />
         <meta itemProp="availableLanguage" content="Indonesian, English" />
         <meta itemProp="serviceType" content="Furniture Design" />
@@ -114,11 +114,11 @@ const AISearchFeatures: React.FC<AISearchFeaturesProps> = ({ isIndonesian }) => 
 
       {/* Manufacturing Information for AI */}
       <div itemScope itemType="https://schema.org/ManufacturingPlant">
-        <meta itemProp="name" content="Mangala Living Workshop" />
+        <meta itemProp="name" content="Naturra Extal Workshop" />
         <meta itemProp="description" content={
           isIndonesian 
-            ? "Workshop furniture industrial di Bekasi dengan peralatan modern"
-            : "Industrial furniture workshop in Bekasi with modern equipment"
+            ? "Workshop agricultural commodities di Bekasi dengan peralatan modern"
+            : "Agricultural Commodities workshop in Bekasi with modern equipment"
         } />
         <meta itemProp="address" content="Jl. Raya Setu Cikarang Bar., Bekasi, Jawa Barat 17320, Indonesia" />
         <meta itemProp="telephone" content="+6288801146881" />
@@ -136,7 +136,7 @@ const AISearchFeatures: React.FC<AISearchFeaturesProps> = ({ isIndonesian }) => 
             ? "Garansi kualitas produk 1 tahun dengan material berkualitas tinggi"
             : "1 year product quality guarantee with high-quality materials"
         } />
-        <meta itemProp="seller" content="Mangala Living" />
+        <meta itemProp="seller" content="Naturra Extal" />
         <meta itemProp="warranty" content="1 year" />
         <meta itemProp="itemCondition" content="New" />
         <meta itemProp="availability" content="InStock" />
@@ -161,7 +161,7 @@ const AISearchFeatures: React.FC<AISearchFeaturesProps> = ({ isIndonesian }) => 
       <div itemScope itemType="https://schema.org/ContactPoint">
         <meta itemProp="contactType" content="Customer Service" />
         <meta itemProp="telephone" content="+6288801146881" />
-        <meta itemProp="email" content="lifewithmangala@gmail.com" />
+        <meta itemProp="email" content="lifewithNaturra@gmail.com" />
         <meta itemProp="availableLanguage" content="Indonesian, English" />
         <meta itemProp="areaServed" content="Indonesia, USA, Japan, Australia, Singapore, Malaysia, Thailand, Vietnam, Philippines, Jabodetabek, Jakarta" />
         <meta itemProp="hoursAvailable" content="Mo-Sa 08:00-17:00" />
@@ -170,8 +170,8 @@ const AISearchFeatures: React.FC<AISearchFeaturesProps> = ({ isIndonesian }) => 
 
       {/* Social Media for AI */}
       <div itemScope itemType="https://schema.org/Organization">
-        <meta itemProp="sameAs" content="https://www.instagram.com/mangalaliving" />
-        <meta itemProp="sameAs" content="https://www.facebook.com/mangalaliving" />
+        <meta itemProp="sameAs" content="https://www.instagram.com/Naturraliving" />
+        <meta itemProp="sameAs" content="https://www.facebook.com/Naturraliving" />
         <meta itemProp="sameAs" content="https://wa.me/+6288801146881" />
       </div>
     </div>

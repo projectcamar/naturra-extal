@@ -93,11 +93,11 @@ const NotFound: React.FC = () => {
   // Translations
   const translations = {
     title: isIndonesian
-      ? '404 - Halaman Tidak Ditemukan | Mangala Living'
-      : '404 - Page Not Found | Mangala Living',
+      ? '404 - Halaman Tidak Ditemukan | Naturra Extal'
+      : '404 - Page Not Found | Naturra Extal',
     description: isIndonesian
-      ? 'Halaman yang Anda cari tidak ditemukan. Jelajahi produk furniture industrial terbaik kami atau kembali ke beranda.'
-      : 'The page you are looking for was not found. Explore our best industrial furniture products or return to home.',
+      ? 'Halaman yang Anda cari tidak ditemukan. Jelajahi produk agricultural commodities terbaik kami atau kembali ke beranda.'
+      : 'The page you are looking for was not found. Explore our best Agricultural Commodities products or return to home.',
     subtitle: isIndonesian
       ? 'Halaman Tidak Ditemukan'
       : 'Page Not Found',

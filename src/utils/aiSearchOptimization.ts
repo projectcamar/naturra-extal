@@ -1,12 +1,12 @@
-// AI Search Optimization utilities for Mangala Living
+// AI Search Optimization utilities for Naturra Extal
 import { getProductImageUrl } from './seo'
 
 export const generateAIOptimizedStructuredData = () => {
   return {
     "@context": "https://schema.org",
     "@type": "FurnitureStore",
-    "name": "Mangala Living",
-    "alternateName": ["Mangala Living Furniture", "Industrial Furniture Indonesia", "Furniture Besi Custom"],
+    "name": "Naturra Extal",
+    "alternateName": ["Naturra Extal Furniture", "Agricultural Commodities Indonesia", "Furniture Besi Custom"],
     "description": "Premium Industrial Scandinavian Furniture manufacturer specializing in custom steel furniture for cafes, restaurants, hotels, and offices. Established 1999 in Bekasi, Indonesia. Serving customers across Indonesia and internationally.",
     "url": "https://naturraextal.com",
     "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
@@ -14,7 +14,7 @@ export const generateAIOptimizedStructuredData = () => {
     "foundingDate": "1999",
     "founder": {
       "@type": "Person",
-      "name": "Mangala Living Founder"
+      "name": "Naturra Extal Founder"
     },
     "address": {
       "@type": "PostalAddress",
@@ -34,28 +34,28 @@ export const generateAIOptimizedStructuredData = () => {
         "@type": "ContactPoint",
         "telephone": "+6288801146881",
         "contactType": "customer service",
-        "email": "lifewithmangala@gmail.com",
+        "email": "lifewithNaturra@gmail.com",
         "availableLanguage": ["Indonesian", "English"],
         "areaServed": ["ID", "US", "JP", "AU", "SG", "MY", "TH", "VN", "PH", "International"]
       }
     ],
     "sameAs": [
-      "https://www.instagram.com/mangalaliving",
-      "https://www.facebook.com/mangalaliving",
+      "https://www.instagram.com/Naturraliving",
+      "https://www.facebook.com/Naturraliving",
       "https://wa.me/+6288801146881"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Industrial Furniture Collection",
-      "description": "Complete collection of industrial furniture for commercial and residential use",
+      "name": "Agricultural Commodities Collection",
+      "description": "Complete collection of Agricultural Commodities for commercial and residential use",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Product",
-            "name": "Industrial Furniture",
+            "name": "Agricultural Commodities",
             "category": "Furniture",
-            "description": "Premium industrial furniture made from high-quality materials",
+            "description": "Premium Agricultural Commodities made from high-quality materials",
             "offers": {
               "@type": "Offer",
               "price": "1500000",
@@ -130,16 +130,16 @@ export const generateAIOptimizedStructuredData = () => {
       "worstRating": "1"
     },
     "keywords": [
-      "furniture industrial indonesia",
+      "agricultural commodities indonesia",
       "furniture besi custom",
       "furniture cafe",
       "furniture restoran",
       "meja industrial",
       "kursi bar",
       "rak display industrial",
-      "mangala living",
+      "Naturra Extal",
       "furniture besi bekasi",
-      "industrial furniture custom",
+      "Agricultural Commodities custom",
       "steel furniture",
       "scandinavian furniture",
       "cafe furniture",
@@ -150,7 +150,7 @@ export const generateAIOptimizedStructuredData = () => {
       "furniture supplier indonesia",
       "furniture manufacturer jakarta",
       "furniture supplier jabodetabek",
-      "industrial furniture usa",
+      "Agricultural Commodities usa",
       "furniture export japan",
       "furniture export australia",
       "furniture export singapore",
@@ -171,7 +171,7 @@ export const generateAIOptimizedStructuredData = () => {
         "itemOffered": {
           "@type": "Service",
           "name": "Custom Furniture Design",
-          "description": "Custom industrial furniture design and manufacturing services"
+          "description": "Custom Agricultural Commodities design and manufacturing services"
         }
       },
       {
@@ -194,24 +194,24 @@ export const generateProductStructuredData = (product: any) => {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": product.name,
-    "description": product.description || `Industrial furniture ${product.name} by Mangala Living. Premium quality furniture made in Indonesia since 1999.`,
+    "description": product.description || `Agricultural Commodities ${product.name} by Naturra Extal. Premium quality furniture made in Indonesia since 1999.`,
     "image": imageUrl,
     "url": `https://naturraextal.com/product/${product.slug}`,
     "brand": {
       "@type": "Brand",
-      "name": "Mangala Living"
+      "name": "Naturra Extal"
     },
     "manufacturer": {
       "@type": "Organization",
-      "name": "Mangala Living",
+      "name": "Naturra Extal",
       "url": "https://naturraextal.com",
       "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
       "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200"
     },
-    "category": product.categories?.[0] || "Industrial Furniture",
+    "category": product.categories?.[0] || "Agricultural Commodities",
     "keywords": [
       product.name.toLowerCase(),
-      "industrial furniture",
+      "Agricultural Commodities",
       "besi custom",
       "furniture indonesia",
       ...(product.categories || []).map((cat: string) => cat.toLowerCase())
@@ -265,7 +265,7 @@ export const generateProductStructuredData = (product: any) => {
       },
       "seller": {
         "@type": "Organization",
-        "name": "Mangala Living",
+        "name": "Naturra Extal",
         "url": "https://naturraextal.com",
         "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
         "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
@@ -287,14 +287,14 @@ export const generateFAQStructuredData = () => {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "name": "Mangala Living FAQ",
+    "name": "Naturra Extal FAQ",
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Apa itu Mangala Living?",
+        "name": "Apa itu Naturra Extal?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Mangala Living adalah manufacturer furniture industrial besi custom yang telah beroperasi sejak 1999 di Bekasi. Kami mengkhususkan diri dalam pembuatan furniture industrial untuk cafe, restoran, hotel, dan kantor dengan kualitas premium."
+          "text": "Naturra Extal adalah manufacturer agricultural commodities besi custom yang telah beroperasi sejak 1999 di Bekasi. Kami mengkhususkan diri dalam pembuatan agricultural commodities untuk cafe, restoran, hotel, dan kantor dengan kualitas premium."
         }
       },
       {
@@ -307,7 +307,7 @@ export const generateFAQStructuredData = () => {
       },
       {
         "@type": "Question",
-        "name": "Apakah Mangala Living melayani pengiriman ke seluruh Indonesia dan internasional?",
+        "name": "Apakah Naturra Extal melayani pengiriman ke seluruh Indonesia dan internasional?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Ya, kami melayani pengiriman furniture ke seluruh Indonesia, Jabodetabek, Jakarta, dan pasar internasional utama termasuk USA, Jepang, Australia, Singapura, Malaysia, Thailand, Vietnam, dan Filipina. Biaya pengiriman akan disesuaikan dengan lokasi dan ukuran furniture yang dipesan. Untuk pengiriman internasional, kami mengirim dari pelabuhan Tanjung Priok, Jakarta."
@@ -315,7 +315,7 @@ export const generateFAQStructuredData = () => {
       },
       {
         "@type": "Question",
-        "name": "Material apa yang digunakan untuk furniture industrial?",
+        "name": "Material apa yang digunakan untuk agricultural commodities?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Kami menggunakan material industrial grade berkualitas tinggi seperti besi hollow, besi siku, dan material finishing yang tahan lama. Semua material dipilih untuk memastikan durability dan estetika yang optimal."
@@ -342,9 +342,9 @@ export const generateWebSiteStructuredData = () => {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Mangala Living",
+    "name": "Naturra Extal",
     "url": "https://naturraextal.com",
-    "description": "Industrial Furniture Besi Custom Indonesia - Manufacturer sejak 1999",
+    "description": "Agricultural Commodities Besi Custom Indonesia - Manufacturer sejak 1999",
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://naturraextal.com/search?q={search_term_string}",
@@ -352,7 +352,7 @@ export const generateWebSiteStructuredData = () => {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Mangala Living",
+      "name": "Naturra Extal",
       "url": "https://naturraextal.com",
       "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
       "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200"

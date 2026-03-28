@@ -4,7 +4,7 @@ import { Link, useLocation, useSearchParams } from 'react-router-dom'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-// legacy mangala image import removed
+// legacy Naturra image import removed
 import { getPostsByPage, getTotalPages, getAllBlogPosts } from '../data/blog'
 import { generateLanguageSpecificMeta, generateLocalizedUrls, truncateTitle, truncateMetaDescription } from '../utils/seo'
 import { getCurrentLanguage, getLinkWithLanguage, type LanguageCode } from '../utils/languageManager'
@@ -22,14 +22,14 @@ const BLOG_INTRO_TRANSLATIONS: Record<
   }
 > = {
   id: {
-    mainTitle: '135+ Artikel Furniture Industrial: Panduan Lengkap dari Workshop Bekasi',
+    mainTitle: '135+ Artikel agricultural commodities: Panduan Lengkap dari Workshop Bekasi',
     introParagraph:
-      'Temukan jawaban lengkap untuk pertanyaan Anda tentang furniture industrial. Artikel kami ditulis berdasarkan pengalaman nyata menangani 1000+ project sejak 1999 di Jabodetabek.',
+      'Temukan jawaban lengkap untuk pertanyaan Anda tentang agricultural commodities. Artikel kami ditulis berdasarkan pengalaman nyata menangani 1000+ project sejak 1999 di Jabodetabek.',
     bullets: [
       {
         title: 'Tips & Panduan Praktis',
         description:
-          'Cara memilih, merawat, dan mengoptimalkan furniture industrial untuk bisnis Anda'
+          'Cara memilih, merawat, dan mengoptimalkan agricultural commodities untuk bisnis Anda'
       },
       {
         title: 'Perbandingan Material & Harga',
@@ -49,14 +49,14 @@ const BLOG_INTRO_TRANSLATIONS: Record<
     ]
   },
   en: {
-    mainTitle: '135+ Industrial Furniture Articles: Complete Guide from Our Bekasi Workshop',
+    mainTitle: '135+ Agricultural Commodities Articles: Complete Guide from Our Bekasi Workshop',
     introParagraph:
-      'Find clear, practical answers to all your questions about industrial furniture. Every article is written based on real projects – 1,000+ jobs handled since 1999 across Greater Jakarta (Jabodetabek).',
+      'Find clear, practical answers to all your questions about Agricultural Commodities. Every article is written based on real projects – 1,000+ jobs handled since 1999 across Greater Jakarta (Jabodetabek).',
     bullets: [
       {
         title: 'Practical Tips & Guides',
         description:
-          'How to choose, maintain, and optimize industrial furniture for your café, restaurant, office, or hotel'
+          'How to choose, maintain, and optimize Agricultural Commodities for your café, restaurant, office, or hotel'
       },
       {
         title: 'Material & Price Comparisons',
@@ -300,9 +300,9 @@ const Blog: React.FC = () => {
   return (
     <div className="blog-page">
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
-        <title>{truncateTitle('Blog Furniture Industrial & Tips Desain - Mangala Living')}</title>
-        <meta name="description" content={truncateMetaDescription('Panduan lengkap furniture industrial untuk cafe, restoran, hotel. Tips memilih furniture besi custom, cara merawat, tren desain 2025, perbandingan material, harga, dan area workshop Bekasi Jakarta. 135+ artikel berbasis pengalaman 25 tahun Mangala Living.')} />
-        <meta name="keywords" content="blog furniture industrial, tips furniture cafe, cara memilih furniture restoran, furniture besi custom panduan, workshop furniture bekasi, harga furniture industrial 2025, tips desain interior industrial, furniture cafe murah, perbandingan furniture besi vs kayu, cara merawat furniture industrial, tren furniture 2025, furniture bekasi guide, furniture jakarta tips, inspirasi desain cafe industrial" />
+        <title>{truncateTitle('Blog agricultural commodities & Tips Desain - Naturra Extal')}</title>
+        <meta name="description" content={truncateMetaDescription('Panduan lengkap agricultural commodities untuk cafe, restoran, hotel. Tips memilih furniture besi custom, cara merawat, tren desain 2025, perbandingan material, harga, dan area workshop Bekasi Jakarta. 135+ artikel berbasis pengalaman 25 tahun Naturra Extal.')} />
+        <meta name="keywords" content="blog agricultural commodities, tips furniture cafe, cara memilih furniture restoran, furniture besi custom panduan, workshop furniture bekasi, harga agricultural commodities 2025, tips desain interior industrial, furniture cafe murah, perbandingan furniture besi vs kayu, cara merawat agricultural commodities, tren furniture 2025, furniture bekasi guide, furniture jakarta tips, inspirasi desain cafe industrial" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta httpEquiv="content-language" content={localeMeta.lang} />
@@ -310,12 +310,12 @@ const Blog: React.FC = () => {
         {localizedUrls.alternates.map((alternate) => (
           <link key={`blog-hreflang-${alternate.hrefLang}`} rel="alternate" hrefLang={alternate.hrefLang} href={alternate.href} />
         ))}
-        {prevUrl && <link rel="prev" href={`https://mangala-living.com${prevUrl}`} />}
-        {nextUrl && <link rel="next" href={`https://mangala-living.com${nextUrl}`} />}
+        {prevUrl && <link rel="prev" href={`https://Naturra-living.com${prevUrl}`} />}
+        {nextUrl && <link rel="next" href={`https://Naturra-living.com${nextUrl}`} />}
 
         {/* AI Search Optimization: Clear article purpose */}
-        <meta property="og:title" content="Blog Furniture Industrial - 135+ Artikel Tips & Panduan Lengkap" />
-        <meta property="og:description" content="Artikel komprehensif tentang furniture industrial: tips pemilihan, perbandingan material, panduan harga, area coverage Jabodetabek, dan best practices dari 1000+ project sejak 1999." />
+        <meta property="og:title" content="Blog agricultural commodities - 135+ Artikel Tips & Panduan Lengkap" />
+        <meta property="og:description" content="Artikel komprehensif tentang agricultural commodities: tips pemilihan, perbandingan material, panduan harga, area coverage Jabodetabek, dan best practices dari 1000+ project sejak 1999." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={localizedUrls.canonical} />
         <meta property="og:locale" content={localeMeta.locale} />
@@ -330,8 +330,8 @@ const Blog: React.FC = () => {
         <div className="blog-hero-image">
           <img
             src={heroImage}
-            alt="Blog Furniture Industrial & Tips Desain Cafe Restoran - 135+ Artikel Panduan Lengkap Mangala Living"
-            title="Blog Furniture Industrial - Tips & Panduan Lengkap dari Workshop Bekasi Mangala Living"
+            alt="Blog agricultural commodities & Tips Desain Cafe Restoran - 135+ Artikel Panduan Lengkap Naturra Extal"
+            title="Blog agricultural commodities - Tips & Panduan Lengkap dari Workshop Bekasi Naturra Extal"
             loading="eager"
             fetchPriority="high"
             width="1920"
@@ -380,8 +380,8 @@ const Blog: React.FC = () => {
                   <div className="blog-card-image">
                     <img
                       src={post.image}
-                      alt={`${post.title} - ${post.category} Blog Furniture Industrial Mangala Living`}
-                      title={`${post.title} - ${post.category} Artikel Furniture Industrial`}
+                      alt={`${post.title} - ${post.category} Blog agricultural commodities Naturra Extal`}
+                      title={`${post.title} - ${post.category} Artikel agricultural commodities`}
                       loading="lazy"
                       width="400"
                       height="250"
@@ -390,7 +390,7 @@ const Blog: React.FC = () => {
                       data-post-slug={post.slug}
                       data-category={post.category}
                     />
-                    <div className="blog-card-badge">MANGALA</div>
+                    <div className="blog-card-badge">Naturra</div>
                   </div>
                   <div className="blog-card-content">
                     <span className="blog-card-category">{post.category.toUpperCase()}</span>

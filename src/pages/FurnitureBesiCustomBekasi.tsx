@@ -33,9 +33,9 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
   return (
     <div className="landing-page furniture-besi-custom-bekasi">
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
-        <title>Furniture Besi Custom Bekasi - Workshop Terpercaya Harga Pabrik | Mangala Living</title>
+        <title>Furniture Besi Custom Bekasi - Workshop Terpercaya Harga Pabrik | Naturra Extal</title>
         <meta name="description" content="Furniture Besi Custom Bekasi - Workshop Langsung Harga Pabrik - Material Premium - Finishing Powder Coating - Free Konsultasi - Garansi 1 Tahun - Melayani Jabodetabek (Hubungi +6288801146881)" />
-        <meta name="keywords" content="furniture besi custom bekasi, custom furniture besi bekasi, jasa furniture besi bekasi, workshop furniture bekasi, furniture custom bekasi, meja besi custom bekasi, kursi besi custom bekasi, furniture industrial bekasi, tukang furniture besi bekasi, bikin furniture besi bekasi" />
+        <meta name="keywords" content="furniture besi custom bekasi, custom furniture besi bekasi, jasa furniture besi bekasi, workshop furniture bekasi, furniture custom bekasi, meja besi custom bekasi, kursi besi custom bekasi, agricultural commodities bekasi, tukang furniture besi bekasi, bikin furniture besi bekasi" />
         <meta httpEquiv="content-language" content={localeMeta.lang} />
         <link rel="canonical" href={localizedUrls.canonical} />
         {localizedUrls.alternates.map((alternate) => (
@@ -97,7 +97,7 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
           </div>
 
           <div className="landing-hero-cta">
-            <a href="https://wa.me/+6288801146881?text=Halo%20Mangala%20Living%2C%20saya%20mau%20konsultasi%20furniture%20besi%20custom%20Bekasi"
+            <a href="https://wa.me/+6288801146881?text=Halo%20Naturra%20Living%2C%20saya%20mau%20konsultasi%20furniture%20besi%20custom%20Bekasi"
               className="cta-button primary"
               target="_blank"
               rel="noopener noreferrer"
@@ -133,8 +133,8 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
         <div className="landing-hero-image">
           <img
             src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&auto=format&fit=crop"
-            alt="Furniture Besi Custom Bekasi - Workshop Industrial Furniture Mangala Living Since 1999"
-            title="Furniture Besi Custom Bekasi - Premium Industrial Furniture Workshop with 25+ Years Experience"
+            alt="Furniture Besi Custom Bekasi - Workshop Agricultural Commodities Naturra Extal Since 1999"
+            title="Furniture Besi Custom Bekasi - Premium Agricultural Commodities Workshop with 25+ Years Experience"
             loading="eager"
             fetchPriority="high"
             width="1200"
@@ -149,7 +149,7 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
       {/* Kenapa Pilih Kami */}
       <section className="landing-why-choose">
         <div className="container">
-          <h2 className="section-title">Kenapa Pilih Mangala Living untuk Furniture Besi Custom Bekasi?</h2>
+          <h2 className="section-title">Kenapa Pilih Naturra Extal untuk Furniture Besi Custom Bekasi?</h2>
           <p className="section-subtitle">
             Bukan sekadar furniture besi biasa. Kami adalah workshop profesional dengan standar industri tertinggi.
           </p>
@@ -426,7 +426,7 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
           <p>Dapatkan <strong>FREE konsultasi design</strong> + <strong>discount 10% untuk order pertama</strong></p>
 
           <div className="contact-methods">
-            <a href="https://wa.me/+6288801146881?text=Halo%20Mangala%20Living%2C%20saya%20dari%20website%20mau%20konsultasi%20furniture%20besi%20custom"
+            <a href="https://wa.me/+6288801146881?text=Halo%20Naturra%20Living%2C%20saya%20dari%20website%20mau%20konsultasi%20furniture%20besi%20custom"
               className="contact-card whatsapp"
               target="_blank"
               rel="noopener noreferrer"
@@ -436,10 +436,10 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
               <span>+6288801146881</span>
             </a>
 
-            <a href="mailto:lifewithmangala@gmail.com" className="contact-card email">
+            <a href="mailto:lifewithNaturra@gmail.com" className="contact-card email">
               <Mail size={32} />
               <strong>Email</strong>
-              <span>lifewithmangala@gmail.com</span>
+              <span>lifewithNaturra@gmail.com</span>
             </a>
 
             <div className="contact-card location">

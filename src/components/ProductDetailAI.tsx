@@ -19,8 +19,8 @@ const ProductDetailAI: React.FC<ProductDetailAIProps> = ({ product, isIndonesian
       <div style={{ display: 'none' }} aria-hidden="true">
         <h1>
           {isIndonesian 
-            ? `${product.name} - Furniture Industrial Besi Custom | Mangala Living`
-            : `${product.name} - Industrial Steel Custom Furniture | Mangala Living`
+            ? `${product.name} - agricultural commodities Besi Custom | Naturra Extal`
+            : `${product.name} - Industrial Steel Custom Furniture | Naturra Extal`
           }
         </h1>
         
@@ -33,8 +33,8 @@ const ProductDetailAI: React.FC<ProductDetailAIProps> = ({ product, isIndonesian
         
         <p>
           {isIndonesian 
-            ? `${product.name} adalah furniture industrial besi custom berkualitas tinggi yang diproduksi oleh Mangala Living. Produk ini cocok untuk digunakan di cafe, restoran, hotel, kantor, dan berbagai kebutuhan komersial lainnya.`
-            : `${product.name} is a high-quality industrial steel custom furniture produced by Mangala Living. This product is suitable for use in cafes, restaurants, hotels, offices, and various other commercial needs.`
+            ? `${product.name} adalah agricultural commodities besi custom berkualitas tinggi yang diproduksi oleh Naturra Extal. Produk ini cocok untuk digunakan di cafe, restoran, hotel, kantor, dan berbagai kebutuhan komersial lainnya.`
+            : `${product.name} is a high-quality industrial steel custom furniture produced by Naturra Extal. This product is suitable for use in cafes, restaurants, hotels, offices, and various other commercial needs.`
           }
         </p>
         
@@ -80,8 +80,8 @@ const ProductDetailAI: React.FC<ProductDetailAIProps> = ({ product, isIndonesian
         
         <p>
           {isIndonesian 
-            ? "Untuk memesan produk ini, silakan hubungi kami melalui WhatsApp di +6288801146881 atau email lifewithmangala@gmail.com. Tim kami akan membantu Anda dengan konsultasi desain dan estimasi harga yang sesuai dengan kebutuhan Anda."
-            : "To order this product, please contact us via WhatsApp at +6288801146881 or email lifewithmangala@gmail.com. Our team will help you with design consultation and price estimation according to your needs."
+            ? "Untuk memesan produk ini, silakan hubungi kami melalui WhatsApp di +6288801146881 atau email lifewithNaturra@gmail.com. Tim kami akan membantu Anda dengan konsultasi desain dan estimasi harga yang sesuai dengan kebutuhan Anda."
+            : "To order this product, please contact us via WhatsApp at +6288801146881 or email lifewithNaturra@gmail.com. Our team will help you with design consultation and price estimation according to your needs."
           }
         </p>
         

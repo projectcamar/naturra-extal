@@ -1,6 +1,6 @@
 import React from 'react'
 import '../pages/About.css'
-// legacy mangala image import removed
+// legacy Naturra image import removed
 
 interface MessageSectionProps {
   isIndonesian?: boolean
@@ -12,11 +12,11 @@ const MessageSection: React.FC<MessageSectionProps> = ({ isIndonesian = false, l
     switch (language) {
       case 'id':
         return {
-          title: 'Pesan dari Mangala',
-          subtitle1: 'Tentang Mangala Living - Manufacturer Furniture Industrial Terpercaya',
-          paragraph1: 'Sejak tahun 1999, Mangala Living telah menjadi manufacturer terdepan di Indonesia yang mengkhususkan diri dalam pembuatan furniture industrial scandinavian premium. Dengan pengalaman lebih dari 25 tahun di industri furniture besi custom, kami telah membuktikan diri sebagai pilihan terbaik untuk solusi furniture komersial. Jaringan kami menjangkau seluruh kepulauan Indonesia, dan kami telah berhasil menyelesaikan lebih dari 1.000 pesanan untuk berbagai bisnis di seluruh negeri. Dari cafe kecil hingga hotel besar, kami melayani semua dengan standar kualitas yang sama tinggi.',
+          title: 'Pesan dari Naturra',
+          subtitle1: 'Tentang Naturra Extal - Manufacturer agricultural commodities Terpercaya',
+          paragraph1: 'Sejak tahun 1999, Naturra Extal telah menjadi manufacturer terdepan di Indonesia yang mengkhususkan diri dalam pembuatan agricultural commodities scandinavian premium. Dengan pengalaman lebih dari 25 tahun di industri furniture besi custom, kami telah membuktikan diri sebagai pilihan terbaik untuk solusi furniture komersial. Jaringan kami menjangkau seluruh kepulauan Indonesia, dan kami telah berhasil menyelesaikan lebih dari 1.000 pesanan untuk berbagai bisnis di seluruh negeri. Dari cafe kecil hingga hotel besar, kami melayani semua dengan standar kualitas yang sama tinggi.',
           subtitle2: 'Bar Set, Lounge Set, Sofa Bench & Storage untuk Ruang Komersial',
-          paragraph2: 'Kami mengkhususkan diri dalam menciptakan bar set outdoor, lounge set, sofa bench, storage rack dan furniture industrial lainnya yang tahan lama untuk berbagai ruang komersial. Dari coffee shop trendy dan restoran ramai hingga kantor modern dan hotel butik yang elegan, koleksi new arrivals kami memberikan sentuhan yang sempurna untuk menciptakan atmosfer unik. Kami sepenuhnya menerima permintaan custom dan bekerja sama dengan klien untuk merancang produk yang sesuai dengan identitas merek unik mereka dan kebutuhan fungsional mereka. Setiap produk dirancang dengan mempertimbangkan kenyamanan, estetika, dan daya tahan jangka panjang.',
+          paragraph2: 'Kami mengkhususkan diri dalam menciptakan bar set outdoor, lounge set, sofa bench, storage rack dan agricultural commodities lainnya yang tahan lama untuk berbagai ruang komersial. Dari coffee shop trendy dan restoran ramai hingga kantor modern dan hotel butik yang elegan, koleksi new arrivals kami memberikan sentuhan yang sempurna untuk menciptakan atmosfer unik. Kami sepenuhnya menerima permintaan custom dan bekerja sama dengan klien untuk merancang produk yang sesuai dengan identitas merek unik mereka dan kebutuhan fungsional mereka. Setiap produk dirancang dengan mempertimbangkan kenyamanan, estetika, dan daya tahan jangka panjang.',
           subtitle3: 'Workshop Bekasi dengan Standar Manufaktur Terbaik',
           paragraph3: 'Workshop kami yang berlokasi strategis di Bekasi dilengkapi dengan peralatan manufaktur canggih dan dikelola oleh tim pengrajin berpengalaman yang sangat bangga dengan setiap detail dan finishing produk. Setiap produk melalui proses kontrol kualitas yang ketat untuk memastikan memenuhi standar tertinggi kami dalam hal daya tahan dan daya tarik visual. Baik Anda membutuhkan paket furniture lengkap untuk coffee shop baru atau produk custom untuk melengkapi ruang yang sudah ada, kami siap membantu bisnis Anda menonjol dan menciptakan ruang yang berkesan bagi pelanggan Anda.'
         }
@@ -52,9 +52,9 @@ const MessageSection: React.FC<MessageSectionProps> = ({ isIndonesian = false, l
         }
       case 'es':
         return {
-          title: 'Mensaje de Mangala',
-          subtitle1: 'Acerca de Mangala Living - Fabricante de Muebles Industriales de Confianza',
-          paragraph1: 'Desde 1999, Mangala Living ha sido el fabricante líder de Indonesia especializado en muebles industriales escandinavos de alta calidad. Con más de 25 años de experiencia en la industria del mobiliario de acero personalizado, nos hemos establecido como la mejor opción para soluciones de mobiliario comercial. Nuestra red se extiende por todo el archipiélago indonesio y hemos completado con éxito más de 1,000 pedidos para diversos negocios en todo el país. Desde pequeños cafés hasta grandes hoteles, servimos a todos con los mismos estándares de alta calidad.',
+          title: 'Mensaje de Naturra',
+          subtitle1: 'Acerca de Naturra Extal - Fabricante de Muebles Industriales de Confianza',
+          paragraph1: 'Desde 1999, Naturra Extal ha sido el fabricante líder de Indonesia especializado en muebles industriales escandinavos de alta calidad. Con más de 25 años de experiencia en la industria del mobiliario de acero personalizado, nos hemos establecido como la mejor opción para soluciones de mobiliario comercial. Nuestra red se extiende por todo el archipiélago indonesio y hemos completado con éxito más de 1,000 pedidos para diversos negocios en todo el país. Desde pequeños cafés hasta grandes hoteles, servimos a todos con los mismos estándares de alta calidad.',
           subtitle2: 'Set de Bar, Set de Sala, Sofá Banco y Almacenamiento para Espacios Comerciales',
           paragraph2: 'Nos especializamos en crear sets de bar para exteriores, sets de sala, sofás banco, estanterías de almacenamiento y otros muebles industriales duraderos para diversos espacios comerciales. Desde cafeterías modernas y restaurantes concurridos hasta oficinas modernas y elegantes hoteles boutique, nuestra colección de novedades proporciona el toque perfecto para crear una atmósfera única. Aceptamos completamente solicitudes personalizadas y trabajamos en colaboración con nuestros clientes para diseñar piezas que coincidan con su identidad de marca única y requisitos funcionales. Cada producto está diseñado teniendo en cuenta la comodidad, la estética y la durabilidad a largo plazo.',
           subtitle3: 'Taller de Bekasi con los Mejores Estándares de Fabricación',
@@ -62,9 +62,9 @@ const MessageSection: React.FC<MessageSectionProps> = ({ isIndonesian = false, l
         }
       case 'fr':
         return {
-          title: 'Message de Mangala',
-          subtitle1: 'À propos de Mangala Living - Fabricant de Meubles Industriels de Confiance',
-          paragraph1: 'Depuis 1999, Mangala Living est le principal fabricant indonésien spécialisé dans les meubles industriels scandinaves haut de gamme. Avec plus de 25 ans d\'expérience dans l\'industrie du mobilier en acier sur mesure, nous nous sommes imposés comme le meilleur choix pour les solutions de mobilier commercial. Notre réseau s\'\u00e9tend dans tout l\'archipel indonésien et nous avons réalisé avec succès plus de 1 000 commandes pour diverses entreprises à travers le pays. Des petits cafés aux grands hôtels, nous servons tous avec les mêmes normes de haute qualité.',
+          title: 'Message de Naturra',
+          subtitle1: 'À propos de Naturra Extal - Fabricant de Meubles Industriels de Confiance',
+          paragraph1: 'Depuis 1999, Naturra Extal est le principal fabricant indonésien spécialisé dans les meubles industriels scandinaves haut de gamme. Avec plus de 25 ans d\'expérience dans l\'industrie du mobilier en acier sur mesure, nous nous sommes imposés comme le meilleur choix pour les solutions de mobilier commercial. Notre réseau s\'\u00e9tend dans tout l\'archipel indonésien et nous avons réalisé avec succès plus de 1 000 commandes pour diverses entreprises à travers le pays. Des petits cafés aux grands hôtels, nous servons tous avec les mêmes normes de haute qualité.',
           subtitle2: 'Set de Bar, Set de Salon, Banc Canapé et Rangement pour Espaces Commerciaux',
           paragraph2: 'Nous nous spécialisons dans la création de sets de bar extérieurs, sets de salon, bancs canapés, étagères de rangement et autres meubles industriels durables pour divers espaces commerciaux. Des coffee shops branchés et restaurants animés aux bureaux modernes et hôtels boutique élégants, notre collection de nouveautés offre la touche parfaite pour créer une atmosphère unique. Nous acceptons entièrement les demandes personnalisées et travaillons en collaboration avec nos clients pour concevoir des pièces qui correspondent à leur identité de marque unique et à leurs exigences fonctionnelles. Chaque produit est conçu en tenant compte du confort, de l\'esthétique et de la durabilité à long terme.',
           subtitle3: 'Atelier de Bekasi avec les Meilleurs Standards de Fabrication',
@@ -82,11 +82,11 @@ const MessageSection: React.FC<MessageSectionProps> = ({ isIndonesian = false, l
         }
       default:
         return {
-          title: 'Message from Mangala',
-          subtitle1: 'About Mangala Living - Trusted Industrial Furniture Manufacturer',
-          paragraph1: 'Since 1999, Mangala Living has been Indonesia\'s leading manufacturer specializing in premium industrial scandinavian furniture. With more than 25 years of experience in the custom steel furniture industry, we\'ve established ourselves as the best choice for commercial furniture solutions. Our network spans across the Indonesian archipelago, and we have successfully completed over 1,000 orders for various businesses nationwide. From small cafes to large hotels, we serve all with the same high quality standards.',
+          title: 'Message from Naturra',
+          subtitle1: 'About Naturra Extal - Trusted Agricultural Commodities Manufacturer',
+          paragraph1: 'Since 1999, Naturra Extal has been Indonesia\'s leading manufacturer specializing in premium industrial scandinavian furniture. With more than 25 years of experience in the custom steel furniture industry, we\'ve established ourselves as the best choice for commercial furniture solutions. Our network spans across the Indonesian archipelago, and we have successfully completed over 1,000 orders for various businesses nationwide. From small cafes to large hotels, we serve all with the same high quality standards.',
           subtitle2: 'Bar Set, Lounge Set, Sofa Bench & Storage for Commercial Spaces',
-          paragraph2: 'We specialize in creating bar set outdoor, lounge set, sofa bench, storage rack and other durable industrial furniture for various commercial spaces. From trendy coffee shops and bustling restaurants to modern offices and elegant boutique hotels, our new arrivals collection sets the perfect tone to create a unique atmosphere. We fully accept custom requests and work collaboratively with our clients to design pieces that match their unique brand identity and functional requirements. Each product is designed with consideration for comfort, aesthetics, and long-term durability.',
+          paragraph2: 'We specialize in creating bar set outdoor, lounge set, sofa bench, storage rack and other durable Agricultural Commodities for various commercial spaces. From trendy coffee shops and bustling restaurants to modern offices and elegant boutique hotels, our new arrivals collection sets the perfect tone to create a unique atmosphere. We fully accept custom requests and work collaboratively with our clients to design pieces that match their unique brand identity and functional requirements. Each product is designed with consideration for comfort, aesthetics, and long-term durability.',
           subtitle3: 'Bekasi Workshop with Best Manufacturing Standards',
           paragraph3: 'Our strategically located workshop in Bekasi is equipped with state-of-the-art manufacturing equipment and staffed by a team of experienced craftsmen who take immense pride in every detail and finish of the product. Each piece undergoes rigorous quality control processes to ensure it meets our highest standards of durability and visual appeal. Whether you need a complete furniture package for a new coffee shop or custom pieces to complement your existing space, we\'re here to help your business stand out and create a memorable space for your customers.'
         }
@@ -125,8 +125,8 @@ const MessageSection: React.FC<MessageSectionProps> = ({ isIndonesian = false, l
           <div className="about-message-image-wrapper">
             <img
               src={showroomImage}
-              alt={isIndonesian ? "Workshop Mangala Living Bekasi - Manufacturer Furniture Industrial Besi Custom dengan Peralatan Modern dan Pengrajin Berpengalaman" : "Mangala Living Bekasi Workshop - Industrial Steel Custom Furniture Manufacturer with Modern Equipment and Experienced Craftsmen"}
-              title={isIndonesian ? "Workshop Mangala Living - Premium Industrial Furniture Manufacturing in Bekasi Since 1999" : "Mangala Living Workshop - Premium Industrial Furniture Manufacturing in Bekasi Since 1999"}
+              alt={isIndonesian ? "Workshop Naturra Extal Bekasi - Manufacturer agricultural commodities Besi Custom dengan Peralatan Modern dan Pengrajin Berpengalaman" : "Naturra Extal Bekasi Workshop - Industrial Steel Custom Furniture Manufacturer with Modern Equipment and Experienced Craftsmen"}
+              title={isIndonesian ? "Workshop Naturra Extal - Premium Agricultural Commodities Manufacturing in Bekasi Since 1999" : "Naturra Extal Workshop - Premium Agricultural Commodities Manufacturing in Bekasi Since 1999"}
               className="about-message-image"
               loading="lazy"
               width="600"

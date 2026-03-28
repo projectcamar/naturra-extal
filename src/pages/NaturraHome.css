@@ -390,7 +390,7 @@
     width: 600px;
     height: 600px;
     background: rgba(255, 255, 255, 0.03);
-    border-radius: 50%;
+    border-radius: 0;
 }
 
 .naturra-home__cta-inner {
@@ -512,7 +512,7 @@
 .naturra-home__cta-card-desc {
     font-family: 'Inter', sans-serif;
     font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
     margin: 0;
 }
 

@@ -91,7 +91,7 @@
 
 .custom-order-message-image-wrapper {
   position: relative;
-  border-radius: 12px;
+  border-radius: 0;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 77, 44, 0.1);
 }
@@ -169,7 +169,7 @@
 .custom-order-process-item {
   background: #ffffff;
   padding: 40px 30px;
-  border-radius: 12px;
+  border-radius: 0;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -248,7 +248,7 @@
   background-color: #25D366;
   color: #ffffff;
   padding: 16px 36px;
-  border-radius: 8px;
+  border-radius: 0;
   font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
@@ -266,7 +266,7 @@
 .custom-order-cta-info {
   background: rgba(255, 255, 255, 0.1);
   padding: 40px;
-  border-radius: 12px;
+  border-radius: 0;
   backdrop-filter: blur(10px);
 }
 

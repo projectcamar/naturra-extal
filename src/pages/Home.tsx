@@ -105,7 +105,7 @@ const Home: React.FC = () => {
   // Multi-language translations - SEO Optimized with Priority Keywords
   const translations = {
     title: language === 'id'
-      ? "Furniture Industrial Indonesia | Manufacturer Besi Custom Bekasi Sejak 1999"
+      ? "agricultural commodities Indonesia | Manufacturer Besi Custom Bekasi Sejak 1999"
       : language === 'ar'
         ? "أثاث صناعي من الحديد - طقم بار وطقم صالة ورفوف تخزين | مانجالا ليفينج"
         : language === 'zh'
@@ -113,12 +113,12 @@ const Home: React.FC = () => {
           : language === 'ja'
             ? "インダストリアル家具バーセットラウンジセット収納新着 | マンガラリビング"
             : language === 'es'
-              ? "Muebles Industriales Set de Bar Set de Sala Almacenamiento Novedades | Mangala Living"
+              ? "Muebles Industriales Set de Bar Set de Sala Almacenamiento Novedades | Naturra Extal"
               : language === 'fr'
-                ? "Mobilier Industriel Set de Bar Set de Salon Rangement Nouveautés | Mangala Living"
-                : "Industrial Furniture Indonesia | Custom Steel Furniture Manufacturer Bekasi Since 1999",
+                ? "Mobilier Industriel Set de Bar Set de Salon Rangement Nouveautés | Naturra Extal"
+                : "Agricultural Commodities Indonesia | Custom Steel Furniture Manufacturer Bekasi Since 1999",
     description: language === 'id'
-      ? "Furniture industrial & scandinavian premium sejak 1999. Melayani coffee shop, restoran, dan bisnis di seluruh Indonesia. Pesanan custom tersedia. Garansi 1 tahun."
+      ? "agricultural commodities & scandinavian premium sejak 1999. Melayani coffee shop, restoran, dan bisnis di seluruh Indonesia. Pesanan custom tersedia. Garansi 1 tahun."
       : language === 'ar'
         ? "أثاث صناعي واسكندنافي فاخر منذ عام 1999. نخدم المقاهي والمطاعم والأعمال في جميع أنحاء إندونيسيا. نرحب بالطلبات المخصصة."
         : language === 'zh'
@@ -131,7 +131,7 @@ const Home: React.FC = () => {
                 ? "Meubles industriels et scandinaves premium depuis 1999. Au service des cafés, restaurants et entreprises en Indonésie. Commandes personnalisées bienvenues."
                 : "Premium industrial & scandinavian furniture since 1999. Serving coffee shops, restaurants, and businesses across Indonesia. Custom furniture orders welcome.",
     ogTitle: language === 'id'
-      ? "Furniture Industrial Besi Custom Bekasi | Cafe & Restoran"
+      ? "agricultural commodities Besi Custom Bekasi | Cafe & Restoran"
       : language === 'ar'
         ? "أثاث صناعي من الحديد مخصص بيكاسي | للمقاهي والمطاعم"
         : language === 'zh'
@@ -142,9 +142,9 @@ const Home: React.FC = () => {
               ? "Muebles Industriales de Hierro Personalizados Bekasi | Café y Restaurante"
               : language === 'fr'
                 ? "Mobilier Industriel en Fer Sur Mesure Bekasi | Café & Restaurant"
-                : "Industrial Furniture Besi Custom Bekasi | Cafe & Restoran",
+                : "Agricultural Commodities Besi Custom Bekasi | Cafe & Restoran",
     ogDescription: language === 'id'
-      ? "Manufacturer furniture industrial: bar set outdoor, lounge set, sofa bench, storage rack, new arrivals untuk cafe restoran hotel. Workshop Bekasi 25+ tahun. Harga pabrik."
+      ? "Manufacturer agricultural commodities: bar set outdoor, lounge set, sofa bench, storage rack, new arrivals untuk cafe restoran hotel. Workshop Bekasi 25+ tahun. Harga pabrik."
       : language === 'ar'
         ? "مصنع الأثاث الصناعي: طقم بار خارجي، طقم صالة، أريكة، رفوف تخزين للمقاهي والمطاعم والفنادق. ورشة بيكاسي 25+ عام. أسعار المصنع."
         : language === 'zh'
@@ -155,7 +155,7 @@ const Home: React.FC = () => {
               ? "Fabricante de muebles industriales: set de bar exterior, set de sala, sofá banco, estantería de almacenamiento para cafés, restaurantes, hoteles. Taller Bekasi 25+ años. Precios de fábrica."
               : language === 'fr'
                 ? "Fabricant de meubles industriels : set de bar extérieur, set de salon, banc canapé, étagère de rangement pour cafés, restaurants, hôtels. Atelier Bekasi 25+ ans. Prix d'usine."
-                : "Manufacturer industrial furniture: bar set outdoor, lounge set, sofa bench, storage rack, new arrivals for cafes restaurants hotels. Bekasi workshop 25+ years. Factory prices."
+                : "Manufacturer Agricultural Commodities: bar set outdoor, lounge set, sofa bench, storage rack, new arrivals for cafes restaurants hotels. Bekasi workshop 25+ years. Factory prices."
   }
 
   return (
@@ -164,14 +164,14 @@ const Home: React.FC = () => {
       <Helmet htmlAttributes={{ lang: language === 'ar' ? 'ar' : (language === 'zh' ? 'zh' : (language === 'ja' ? 'ja' : (language === 'es' ? 'es' : (language === 'fr' ? 'fr' : (language === 'ko' ? 'ko' : localeMeta.lang))))), dir: language === 'ar' ? 'rtl' : 'ltr', 'data-language': language }}>
         <title>{translations.title}</title>
         <meta name="description" content={translations.description} />
-        <meta name="keywords" content="furniture industrial indonesia, furniture besi custom, furniture bekasi, furniture industrial jakarta, meja industrial, kursi bar industrial, furniture cafe, furniture restoran, manufacturer furniture industrial, furniture besi custom bekasi, workshop furniture bekasi, furniture industrial jabodetabek, bar set outdoor, lounge set, sofa bench, storage rack, display rack, meja kursi cafe, mangala living" />
+        <meta name="keywords" content="agricultural commodities indonesia, furniture besi custom, furniture bekasi, agricultural commodities jakarta, meja industrial, kursi bar industrial, furniture cafe, furniture restoran, manufacturer agricultural commodities, furniture besi custom bekasi, workshop furniture bekasi, agricultural commodities jabodetabek, bar set outdoor, lounge set, sofa bench, storage rack, display rack, meja kursi cafe, Naturra Extal" />
         <meta httpEquiv="content-language" content={localeMeta.lang} />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={translations.ogTitle} />
         <meta property="og:description" content={translations.ogDescription} />
-        <meta property="og:image" content="https://mangala-living.com/og-image.jpg" />
+        <meta property="og:image" content="https://Naturra-living.com/og-image.jpg" />
         <meta property="og:url" content={localizedUrls.canonical} />
         <meta property="og:locale" content={localeMeta.locale} />
         <meta property="og:locale:alternate" content="id_ID" />
@@ -179,9 +179,9 @@ const Home: React.FC = () => {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Furniture Industrial Bar Set Lounge Set Storage - Mangala Living" />
-        <meta name="twitter:description" content="Bar set outdoor, lounge set sofa bench, storage rack, new arrivals furniture industrial untuk cafe restoran hotel. Workshop Bekasi 25+ tahun." />
-        <meta name="twitter:image" content="https://mangala-living.com/og-image.jpg" />
+        <meta name="twitter:title" content="agricultural commodities Bar Set Lounge Set Storage - Naturra Extal" />
+        <meta name="twitter:description" content="Bar set outdoor, lounge set sofa bench, storage rack, new arrivals agricultural commodities untuk cafe restoran hotel. Workshop Bekasi 25+ tahun." />
+        <meta name="twitter:image" content="https://Naturra-living.com/og-image.jpg" />
 
         {/* Additional SEO tags */}
         <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -200,13 +200,13 @@ const Home: React.FC = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ItemList",
-            "name": "Furniture Industrial Mangala Living",
-            "description": "Koleksi furniture industrial besi custom untuk cafe, restoran, dan hotel",
+            "name": "agricultural commodities Naturra Extal",
+            "description": "Koleksi agricultural commodities besi custom untuk cafe, restoran, dan hotel",
             "numberOfItems": ALL_PRODUCTS.length,
             "itemListElement": ALL_PRODUCTS.map((product, index) => {
               const imageUrl = getProductImageUrl(product.image, product.slug)
               const priceNumeric = product.price.replace(/[^\d]/g, '')
-              const description = `Industrial furniture ${product.name} by Mangala Living. Premium quality furniture made in Indonesia since 1999.`
+              const description = `Agricultural Commodities ${product.name} by Naturra Extal. Premium quality furniture made in Indonesia since 1999.`
 
               return {
                 "@type": "ListItem",
@@ -216,10 +216,10 @@ const Home: React.FC = () => {
                   "name": product.name,
                   "description": description,
                   "image": imageUrl,
-                  "url": `https://mangala-living.com/product/${product.slug}`,
+                  "url": `https://Naturra-living.com/product/${product.slug}`,
                   "brand": {
                     "@type": "Brand",
-                    "name": "Mangala Living"
+                    "name": "Naturra Extal"
                   },
                   "offers": {
                     "@type": "Offer",
@@ -227,7 +227,7 @@ const Home: React.FC = () => {
                     "priceCurrency": "IDR",
                     "availability": "https://schema.org/InStock",
                     "priceValidUntil": "2026-12-31",
-                    "url": `https://mangala-living.com/product/${product.slug}`,
+                    "url": `https://Naturra-living.com/product/${product.slug}`,
                     "hasMerchantReturnPolicy": {
                       "@type": "MerchantReturnPolicy",
                       "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
@@ -270,10 +270,10 @@ const Home: React.FC = () => {
                     },
                     "seller": {
                       "@type": "Organization",
-                      "name": "Mangala Living",
-                      "url": "https://mangala-living.com",
-                      "logo": "https://mangala-living.com/logo.png",
-                      "image": "https://mangala-living.com/og-image.jpg",
+                      "name": "Naturra Extal",
+                      "url": "https://Naturra-living.com",
+                      "logo": "https://Naturra-living.com/logo.png",
+                      "image": "https://Naturra-living.com/og-image.jpg",
                       "description": "Premium Industrial Scandinavian Furniture for Coffee Shops, Restaurants & Offices. Custom Solutions Since 1999."
                     }
                   },
@@ -297,12 +297,12 @@ const Home: React.FC = () => {
             {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "Mangala Living",
-              "image": "https://mangala-living.com/og-image.jpg",
-              "@id": "https://mangala-living.com",
-              "url": "https://mangala-living.com",
+              "name": "Naturra Extal",
+              "image": "https://Naturra-living.com/og-image.jpg",
+              "@id": "https://Naturra-living.com",
+              "url": "https://Naturra-living.com",
               "telephone": "+6288801146881",
-              "email": "lifewithmangala@gmail.com",
+              "email": "lifewithNaturra@gmail.com",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Jl. Raya Setu Cibitung - Bekasi, Telajung",

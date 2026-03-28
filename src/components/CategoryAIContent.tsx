@@ -21,8 +21,8 @@ const CategoryAIContent: React.FC<CategoryAIContentProps> = ({ category, product
   const getCategoryDescription = () => {
     const descriptions: { [key: string]: { id: string; en: string } } = {
       'New Arrivals': {
-        id: 'Koleksi terbaru furniture industrial dari Mangala Living. Produk-produk inovatif dengan desain modern dan material berkualitas tinggi. Update koleksi kami setiap bulan dengan model terkini yang mengikuti tren furniture industrial internasional.',
-        en: 'Latest industrial furniture collection from Mangala Living. Innovative products with modern design and high-quality materials. We update our collection monthly with the latest models following international industrial furniture trends.'
+        id: 'Koleksi terbaru agricultural commodities dari Naturra Extal. Produk-produk inovatif dengan desain modern dan material berkualitas tinggi. Update koleksi kami setiap bulan dengan model terkini yang mengikuti tren agricultural commodities internasional.',
+        en: 'Latest Agricultural Commodities collection from Naturra Extal. Innovative products with modern design and high-quality materials. We update our collection monthly with the latest models following international Agricultural Commodities trends.'
       },
       'Lounge Set': {
         id: 'Lounge set industrial untuk area santai cafe, hotel, dan kantor. Terdiri dari sofa, kursi lounge, coffee table dengan rangka besi kokoh dan cushion nyaman. Cocok untuk area waiting room, lobby hotel, atau cafe lounge yang mengutamakan kenyamanan pelanggan.',
@@ -41,7 +41,7 @@ const CategoryAIContent: React.FC<CategoryAIContentProps> = ({ category, product
         en: 'Industrial bar sets consisting of high bar tables and bar chairs (barstools) for cafes, bars, and modern restaurants. Hollow steel material with durable powder coating. Footrest available for comfort. Standard height 110cm (bar table) and 75cm (bar chair). Minimalist industrial design suitable for bar counter areas.'
       },
       'Outdoor': {
-        id: 'Outdoor furniture industrial tahan cuaca untuk area teras, balcony, rooftop, dan garden. Material besi dengan finishing powder coating outdoor-grade yang anti karat, tahan hujan, dan panas. Cocok untuk cafe outdoor, restoran garden, hotel pool area. Maintenance mudah cukup lap bersih. Bertahan 5-8 tahun outdoor dengan perawatan minimal.',
+        id: 'Outdoor agricultural commodities tahan cuaca untuk area teras, balcony, rooftop, dan garden. Material besi dengan finishing powder coating outdoor-grade yang anti karat, tahan hujan, dan panas. Cocok untuk cafe outdoor, restoran garden, hotel pool area. Maintenance mudah cukup lap bersih. Bertahan 5-8 tahun outdoor dengan perawatan minimal.',
         en: 'Weather-resistant industrial outdoor furniture for terrace, balcony, rooftop, and garden areas. Steel material with outdoor-grade powder coating that is rust-resistant, rain and heat resistant. Suitable for outdoor cafes, garden restaurants, hotel pool areas. Easy maintenance, just wipe clean. Lasts 5-8 years outdoors with minimal maintenance.'
       },
       'Daybed': {
@@ -136,8 +136,8 @@ const CategoryAIContent: React.FC<CategoryAIContentProps> = ({ category, product
         
         <p>
           {isIndonesian 
-            ? `Kami memiliki ${productCount} produk dalam kategori ${category}. Semua produk bisa custom ukuran, warna, dan desain sesuai kebutuhan bisnis Anda. Produksi di workshop Mangala Living Bekasi dengan pengalaman 25+ tahun.`
-            : `We have ${productCount} products in the ${category} category. All products can be customized in size, color, and design according to your business needs. Manufactured at Mangala Living Bekasi workshop with 25+ years of experience.`
+            ? `Kami memiliki ${productCount} produk dalam kategori ${category}. Semua produk bisa custom ukuran, warna, dan desain sesuai kebutuhan bisnis Anda. Produksi di workshop Naturra Extal Bekasi dengan pengalaman 25+ tahun.`
+            : `We have ${productCount} products in the ${category} category. All products can be customized in size, color, and design according to your business needs. Manufactured at Naturra Extal Bekasi workshop with 25+ years of experience.`
           }
         </p>
       </section>
@@ -146,7 +146,7 @@ const CategoryAIContent: React.FC<CategoryAIContentProps> = ({ category, product
       <section>
         <h3>
           {isIndonesian 
-            ? `Harga ${category} Industrial Furniture` 
+            ? `Harga ${category} Agricultural Commodities` 
             : `Industrial ${category} Furniture Prices`
           }
         </h3>
@@ -184,8 +184,8 @@ const CategoryAIContent: React.FC<CategoryAIContentProps> = ({ category, product
         </h3>
         <p>
           {isIndonesian 
-            ? `${category} industrial dari Mangala Living cocok untuk:`
-            : `Industrial ${category} from Mangala Living is suitable for:`
+            ? `${category} industrial dari Naturra Extal cocok untuk:`
+            : `Industrial ${category} from Naturra Extal is suitable for:`
           }
         </p>
         <ul>
@@ -235,13 +235,13 @@ const CategoryAIContent: React.FC<CategoryAIContentProps> = ({ category, product
       <section>
         <h3>
           {isIndonesian 
-            ? `Order ${category} dari Mangala Living Bekasi` 
-            : `Order ${category} from Mangala Living Bekasi`
+            ? `Order ${category} dari Naturra Extal Bekasi` 
+            : `Order ${category} from Naturra Extal Bekasi`
           }
         </h3>
         <p>
           <strong>WhatsApp/Telp:</strong> +6288801146881<br/>
-          <strong>Email:</strong> lifewithmangala@gmail.com<br/>
+          <strong>Email:</strong> lifewithNaturra@gmail.com<br/>
           <strong>{isIndonesian ? 'Workshop:' : 'Workshop:'}</strong> Jl. Raya Setu Cibitung - Bekasi, Jawa Barat<br/>
           <strong>{isIndonesian ? 'Jam Operasional:' : 'Operating Hours:'}</strong> {isIndonesian ? 'Senin - Sabtu, 08.00 - 17.00 WIB' : 'Monday - Saturday, 08.00 - 17.00 WIB'}
         </p>
@@ -287,8 +287,8 @@ const CategoryAIContent: React.FC<CategoryAIContentProps> = ({ category, product
             {` ${category.toLowerCase()}, ${category.toLowerCase()} bekasi, ${category.toLowerCase()} industrial, 
             ${category.toLowerCase()} custom, ${category.toLowerCase()} murah, jual ${category.toLowerCase()}, 
             harga ${category.toLowerCase()}, ${category.toLowerCase()} jakarta, ${category.toLowerCase()} cafe, 
-            ${category.toLowerCase()} restoran, ${category.toLowerCase()} hotel, furniture industrial bekasi, 
-            furniture besi custom, workshop furniture bekasi, mangala living, ${category.toLowerCase()} berkualitas, 
+            ${category.toLowerCase()} restoran, ${category.toLowerCase()} hotel, agricultural commodities bekasi, 
+            furniture besi custom, workshop furniture bekasi, Naturra Extal, ${category.toLowerCase()} berkualitas, 
             ${category.toLowerCase()} tahan lama, ${category.toLowerCase()} powder coating, order ${category.toLowerCase()}, 
             bikin ${category.toLowerCase()} custom, ${category.toLowerCase()} jabodetabek`}
           </small>

@@ -5,7 +5,7 @@ import { Clock, MapPin, Phone, Mail, Globe } from 'lucide-react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import ServiceAreasSection from '../components/ServiceAreasSection'
-// legacy mangala image import removed
+// legacy Naturra image import removed
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
 import { trackWhatsAppClick } from '../utils/whatsappTracking'
 import { getCurrentLanguage, getStoredLanguage, detectLanguageFromIP, type LanguageCode } from '../utils/languageManager'
@@ -52,9 +52,9 @@ type ShippingTranslation = {
 const SHIPPING_TRANSLATIONS: Record<LanguageCode, ShippingTranslation> = {
   en: {
     meta: {
-      title: 'Shipping Information - Mangala Living',
+      title: 'Shipping Information - Naturra Extal',
       description:
-        'Complete information about furniture shipping from Mangala Living. Shipping times, costs, and international shipping procedures.',
+        'Complete information about furniture shipping from Naturra Extal. Shipping times, costs, and international shipping procedures.',
       keywords: 'furniture shipping, international shipping, furniture export, shipping times'
     },
     heroTitle: 'Shipping Information',
@@ -106,9 +106,9 @@ const SHIPPING_TRANSLATIONS: Record<LanguageCode, ShippingTranslation> = {
   },
   id: {
     meta: {
-      title: 'Informasi Pengiriman - Mangala Living',
+      title: 'Informasi Pengiriman - Naturra Extal',
       description:
-        'Informasi lengkap tentang pengiriman furniture dari Mangala Living. Waktu pengiriman, biaya, dan prosedur pengiriman internasional.',
+        'Informasi lengkap tentang pengiriman furniture dari Naturra Extal. Waktu pengiriman, biaya, dan prosedur pengiriman internasional.',
       keywords: 'pengiriman furniture, shipping furniture, ekspor furniture, pengiriman internasional'
     },
     heroTitle: 'Informasi Pengiriman',
@@ -160,9 +160,9 @@ const SHIPPING_TRANSLATIONS: Record<LanguageCode, ShippingTranslation> = {
   },
   ar: {
     meta: {
-      title: 'معلومات الشحن - Mangala Living',
+      title: 'معلومات الشحن - Naturra Extal',
       description:
-        'معلومات كاملة عن شحن الأثاث من Mangala Living. أوقات الشحن، التكاليف، وإجراءات الشحن الدولي.',
+        'معلومات كاملة عن شحن الأثاث من Naturra Extal. أوقات الشحن، التكاليف، وإجراءات الشحن الدولي.',
       keywords: 'شحن الأثاث، تصدير الأثاث، الشحن الدولي، أوقات الشحن'
     },
     heroTitle: 'معلومات الشحن',
@@ -213,9 +213,9 @@ const SHIPPING_TRANSLATIONS: Record<LanguageCode, ShippingTranslation> = {
   },
   zh: {
     meta: {
-      title: '运输信息 - Mangala Living',
+      title: '运输信息 - Naturra Extal',
       description:
-        'Mangala Living 家具运输的完整说明。运输时间、费用以及国际运输流程。',
+        'Naturra Extal 家具运输的完整说明。运输时间、费用以及国际运输流程。',
       keywords: '家具运输, 国际运输, 家具出口, 运输时间'
     },
     heroTitle: '运输信息',
@@ -266,9 +266,9 @@ const SHIPPING_TRANSLATIONS: Record<LanguageCode, ShippingTranslation> = {
   },
   ja: {
     meta: {
-      title: '配送情報 - Mangala Living',
+      title: '配送情報 - Naturra Extal',
       description:
-        'Mangala Living の家具配送に関する詳細情報。配送時間、費用、国際配送の手順についてご案内します。',
+        'Naturra Extal の家具配送に関する詳細情報。配送時間、費用、国際配送の手順についてご案内します。',
       keywords: '家具 配送, 国際配送, 家具輸出, 配送時間'
     },
     heroTitle: '配送情報',
@@ -319,9 +319,9 @@ const SHIPPING_TRANSLATIONS: Record<LanguageCode, ShippingTranslation> = {
   },
   es: {
     meta: {
-      title: 'Información de Envío - Mangala Living',
+      title: 'Información de Envío - Naturra Extal',
       description:
-        'Información completa sobre el envío de muebles de Mangala Living. Tiempos de entrega, costos y procedimientos de envío internacional.',
+        'Información completa sobre el envío de muebles de Naturra Extal. Tiempos de entrega, costos y procedimientos de envío internacional.',
       keywords: 'envío de muebles, exportación de muebles, envío internacional, tiempos de envío'
     },
     heroTitle: 'Información de Envío',
@@ -372,9 +372,9 @@ const SHIPPING_TRANSLATIONS: Record<LanguageCode, ShippingTranslation> = {
   },
   fr: {
     meta: {
-      title: 'Informations sur la Livraison - Mangala Living',
+      title: 'Informations sur la Livraison - Naturra Extal',
       description:
-        'Informations complètes sur l’expédition de meubles Mangala Living : délais, coûts et procédures de livraison internationale.',
+        'Informations complètes sur l’expédition de meubles Naturra Extal : délais, coûts et procédures de livraison internationale.',
       keywords: 'expédition de meubles, exportation de meubles, livraison internationale, délais de livraison'
     },
     heroTitle: 'Informations sur la Livraison',
@@ -426,9 +426,9 @@ const SHIPPING_TRANSLATIONS: Record<LanguageCode, ShippingTranslation> = {
   },
   ko: {
     meta: {
-      title: '배송 정보 - Mangala Living',
+      title: '배송 정보 - Naturra Extal',
       description:
-        'Mangala Living 가구 배송에 대한 전체 안내. 배송 기간, 비용, 국제 배송 절차를 확인하세요.',
+        'Naturra Extal 가구 배송에 대한 전체 안내. 배송 기간, 비용, 국제 배송 절차를 확인하세요.',
       keywords: '가구 배송, 국제 배송, 가구 수출, 배송 기간'
     },
     heroTitle: '배송 정보',
@@ -550,8 +550,8 @@ const ShippingInformation: React.FC = () => {
         <div className="shipping-hero-image">
           <img
             src={heroImage}
-            alt="Shipping Information - Informasi Pengiriman Furniture Industrial Mangala Living Seluruh Indonesia"
-            title="Shipping Information - Delivery Service for Industrial Furniture Across Indonesia"
+            alt="Shipping Information - Informasi Pengiriman agricultural commodities Naturra Extal Seluruh Indonesia"
+            title="Shipping Information - Delivery Service for Agricultural Commodities Across Indonesia"
             loading="eager"
             fetchPriority="high"
             width="1920"
@@ -691,10 +691,10 @@ const ShippingInformation: React.FC = () => {
                 <h3 className="shipping-contact-label">{t.contactSection.emailLabel}</h3>
                 <p className="shipping-contact-value">
                   <a
-                    href="mailto:lifewithmangala@gmail.com"
+                    href="mailto:lifewithNaturra@gmail.com"
                     style={{ color: '#8B7355', textDecoration: 'underline' }}
                   >
-                    lifewithmangala@gmail.com
+                    lifewithNaturra@gmail.com
                   </a>
                 </p>
               </div>
@@ -708,12 +708,12 @@ const ShippingInformation: React.FC = () => {
                 <h3 className="shipping-contact-label">{t.contactSection.websiteLabel}</h3>
                 <p className="shipping-contact-value">
                   <a
-                    href="https://www.mangalaliving.com"
+                    href="https://www.Naturraliving.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ color: '#8B7355', textDecoration: 'underline' }}
                   >
-                    www.mangalaliving.com
+                    www.Naturraliving.com
                   </a>
                 </p>
               </div>

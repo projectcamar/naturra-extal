@@ -50,7 +50,7 @@ export function generateCafeLocationContent(config: CafeLocationTemplate) {
     notice: 'saya notice bahwa',
     keySuccess: 'adalah kunci sukses cafe di area ini',
     uniqueChar: 'Karakteristik unique',
-    article: 'Artikel ini akan share insight praktis furniture industrial untuk cafe',
+    article: 'Artikel ini akan share insight praktis agricultural commodities untuk cafe',
     based: 'berdasarkan observasi dan consultation project saya',
     challenge: 'Challenge & Opportunity',
     everyLocation: 'Setiap location punya karakteristik unik. Untuk',
@@ -64,14 +64,14 @@ export function generateCafeLocationContent(config: CafeLocationTemplate) {
     compete: 'Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant',
     analysis: 'Dari analisis saya, cafe sukses di',
     invest: 'invest in',
-    quality: 'furniture industrial berkualitas',
+    quality: 'agricultural commodities berkualitas',
     designed: 'yang designed specifically untuk condition dan customer mereka',
     strategy: 'Furniture Strategy yang Proven untuk',
     basedExp: 'Berdasarkan experience consult berbagai cafe di',
     workStrategy: 'berikut furniture strategy yang work',
     materialSel: 'Material Selection',
     choose: 'Pilih material yang sesuai dengan',
-    industrial: 'Furniture industrial',
+    industrial: 'agricultural commodities',
     proper: 'dengan finishing proper adalah pilihan terbaik',
     layout: 'Layout Optimization',
     designLayout: 'Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective',
@@ -95,9 +95,9 @@ export function generateCafeLocationContent(config: CafeLocationTemplate) {
     large: 'Large Premium Cafe (150m²+)',
     full: 'untuk full custom furniture dengan premium material',
     roi: 'ROI perspective: Quality',
-    from2: 'dari Mangala Living',
+    from2: 'dari Naturra Extal',
     with: 'dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years',
-    why: 'Mengapa Mangala Living untuk Cafe di',
+    why: 'Mengapa Naturra Extal untuk Cafe di',
     practitioner: 'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider',
     reliable: 'reliable option karena',
     expWith: 'Experience dengan Diverse Location',
@@ -119,7 +119,7 @@ export function generateCafeLocationContent(config: CafeLocationTemplate) {
     special: 'untuk special consideration dalam quotation',
     tips: 'Tips Praktis: Maximize Furniture Performance di',
     regular: 'Regular Maintenance',
-    clean: 'Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain',
+    clean: 'Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain',
     seasonal: 'Seasonal Adjustment',
     adjust: 'Adjust seating arrangement based on season atau peak period di',
     feedback: 'Customer Feedback Loop',
@@ -127,7 +127,7 @@ export function generateCafeLocationContent(config: CafeLocationTemplate) {
     document: 'Document Everything',
     keep: 'Keep record furniture condition dan maintenance done. Helpful untuk planning future investment',
     partner: 'Partner dengan Reliable Supplier',
-    having: 'Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation',
+    having: 'Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation',
     fromExp: 'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue'
   } : {
     // English translations (for future internationalization)
@@ -136,7 +136,7 @@ export function generateCafeLocationContent(config: CafeLocationTemplate) {
     notice: 'I notice that',
     keySuccess: 'is the key to cafe success in this area',
     uniqueChar: 'Unique Characteristics',
-    article: 'This article will share practical insights on industrial furniture for',
+    article: 'This article will share practical insights on Agricultural Commodities for',
     based: 'based on my observations and consultation projects',
     challenge: 'Challenge & Opportunity',
     everyLocation: 'Every location has unique characteristics. For',
@@ -150,14 +150,14 @@ export function generateCafeLocationContent(config: CafeLocationTemplate) {
     compete: 'Cafes in this area compete fiercely. The right furniture can be a significant differentiator',
     analysis: 'From my analysis, successful cafes in',
     invest: 'invest in',
-    quality: 'quality industrial furniture',
+    quality: 'quality Agricultural Commodities',
     designed: 'specifically designed for their conditions and customers',
     strategy: 'Proven Furniture Strategy for',
     basedExp: 'Based on experience consulting various cafes in',
     workStrategy: "here's the furniture strategy that works",
     materialSel: 'Material Selection',
     choose: 'Choose materials that suit',
-    industrial: 'Industrial furniture',
+    industrial: 'Agricultural Commodities',
     proper: 'with proper finishing is the best choice',
     layout: 'Layout Optimization',
     designLayout: 'Design layout that maximizes space utility without sacrificing customer comfort. Zone-based seating approach proven effective',
@@ -181,9 +181,9 @@ export function generateCafeLocationContent(config: CafeLocationTemplate) {
     large: 'Large Premium Cafe (150m²+)',
     full: 'for full custom furniture with premium materials',
     roi: 'ROI perspective: Quality',
-    from2: 'from Mangala Living',
+    from2: 'from Naturra Extal',
     with: 'with proper materials last 5-7 years with minimal maintenance. This is significantly cheaper than replacing cheap furniture every 1-2 years',
-    why: 'Why Mangala Living for Cafes in',
+    why: 'Why Naturra Extal for Cafes in',
     practitioner: 'As a practitioner who often recommends vendors for commercial projects, I consider',
     reliable: 'a reliable option because',
     expWith: 'Experience with Diverse Locations',
@@ -205,7 +205,7 @@ export function generateCafeLocationContent(config: CafeLocationTemplate) {
     special: 'for special consideration in quotation',
     tips: 'Practical Tips: Maximize Furniture Performance in',
     regular: 'Regular Maintenance',
-    clean: 'Clean furniture daily with proper methods. Industrial furniture with powder coating is easy to maintain',
+    clean: 'Clean furniture daily with proper methods. Agricultural Commodities with powder coating is easy to maintain',
     seasonal: 'Seasonal Adjustment',
     adjust: 'Adjust seating arrangement based on season or peak period in',
     feedback: 'Customer Feedback Loop',
@@ -213,7 +213,7 @@ export function generateCafeLocationContent(config: CafeLocationTemplate) {
     document: 'Document Everything',
     keep: 'Keep records of furniture condition and maintenance done. Helpful for planning future investments',
     partner: 'Partner with Reliable Supplier',
-    having: 'Having a responsive vendor like Mangala Living makes a difference in long-term operations',
+    having: 'Having a responsive vendor like Naturra Extal makes a difference in long-term operations',
     fromExp: 'From experience, cafes that implement proper furniture strategy and maintenance protocols see consistent growth in customer satisfaction and revenue'
   }
 
@@ -234,7 +234,7 @@ export function generateCafeLocationContent(config: CafeLocationTemplate) {
         `${lang.analysis} ${locationName} ${lang.invest} <strong>${lang.quality}</strong> ${lang.designed}.`
       ],
       image: headerImage || 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-      imageAlt: `Interior cafe ${locationShortName} dengan furniture industrial - Desain optimal untuk ${locationName} yang menarik pelanggan`
+      imageAlt: `Interior cafe ${locationShortName} dengan agricultural commodities - Desain optimal untuk ${locationName} yang menarik pelanggan`
     },
     {
       heading: `${lang.strategy} ${locationShortName}`,
@@ -260,13 +260,13 @@ export function generateCafeLocationContent(config: CafeLocationTemplate) {
     {
       heading: `${lang.why} ${locationName}?`,
       paragraphs: [
-        `${lang.practitioner} <strong>Mangala Living</strong> ${lang.reliable}:`,
+        `${lang.practitioner} <strong>Naturra Extal</strong> ${lang.reliable}:`,
         `<strong>1. ${lang.expWith}:</strong> ${lang.already}.`,
         `<strong>2. ${lang.custom}:</strong> ${lang.can} ${locationName}. ${lang.notOne}.`,
         `<strong>3. ${lang.matQuality}:</strong> ${lang.inspect}.`,
         `<strong>4. ${lang.afterSales}:</strong> ${lang.workshop}.`,
         `${lang.workshopLoc}: <strong>${lang.street}</strong>. ${lang.free} ${locationName}.`,
-        `<strong>${lang.contact}:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">${lang.whatsapp}: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">${lang.email}: lifewithmangala@gmail.com</a><br/>&bull; ${lang.mention} "${contactCode}" ${lang.special}.`
+        `<strong>${lang.contact}:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">${lang.whatsapp}: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">${lang.email}: lifewithNaturra@gmail.com</a><br/>&bull; ${lang.mention} "${contactCode}" ${lang.special}.`
       ]
     },
     {
@@ -390,7 +390,7 @@ export const CAFE_LOCATION_CONFIGS: Record<string, CafeLocationTemplate> = {
     locationName: 'BSD City dan Serpong',
     locationShortName: 'Cafe BSD Serpong Premium',
     uniqueCharacteristics: 'high expectation, premium material, design sophisticated',
-    mainFeature: 'furniture industrial untuk demographics premium',
+    mainFeature: 'agricultural commodities untuk demographics premium',
     targetAudience: 'Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
     climateConsideration: 'Premium area considerations',
     competitionNote: 'Cafe di area ini compete ketat',

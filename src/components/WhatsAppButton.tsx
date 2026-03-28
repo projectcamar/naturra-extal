@@ -37,7 +37,7 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
 }> = {
   id: {
     subtitle: "Kami akan membalas secepat mungkin",
-    initialMessage: "Hai ??! Selamat datang di Naturra Extal. Beri tahu saya jika Anda memiliki pertanyaan.\n\nJangan ragu untuk whatsapp di [+628951395752](https://wa.me/+628951395752)",
+    initialMessage: "Hai 👋! Selamat datang di Naturra Extal. Beri tahu saya jika Anda memiliki pertanyaan.\n\nJangan ragu untuk whatsapp di [+628951395752](https://wa.me/+628951395752)",
     continueWhatsApp: "Lanjutkan di WhatsApp",
     typeMessage: "Ketik pesan Anda...",
     contactUs: "Hubungi Kami",
@@ -55,7 +55,7 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
   },
   en: {
     subtitle: "We'll reply as soon as we can",
-    initialMessage: "Hi there ??! Welcome to the Naturra Extal. Let me know if you have any questions.\n\nFeel free to whatsapp on [+628951395752](https://wa.me/+628951395752)",
+    initialMessage: "Hi there 👋! Welcome to the Naturra Extal. Let me know if you have any questions.\n\nFeel free to whatsapp on [+628951395752](https://wa.me/+628951395752)",
     continueWhatsApp: "Continue on WhatsApp",
     typeMessage: "Type your message...",
     contactUs: "Contact Us",
@@ -73,7 +73,7 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
   },
   ar: {
     subtitle: "سوف نرد في أقرب وقت ممكن",
-    initialMessage: "مرحباً ??! مرحباً بك في Naturra Extal. أخبرني إذا كان لديك أي أسئلة.\n\nلا تتردد في التواصل عبر الواتساب على [+628951395752](https://wa.me/+628951395752)",
+    initialMessage: "مرحباً 👋! مرحباً بك في Naturra Extal. أخبرني إذا كان لديك أي أسئلة.\n\nلا تتردد في التواصل عبر الواتساب على [+628951395752](https://wa.me/+628951395752)",
     continueWhatsApp: "المتابعة على واتساب",
     typeMessage: "اكتب رسالتك...",
     contactUs: "اتصل بنا",
@@ -91,7 +91,7 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
   },
   zh: {
     subtitle: "我们会尽快回复",
-    initialMessage: "你好 ??! 欢迎来到 Naturra Extal。如果您有任何问题，请告诉我。\n\n欢迎通过 WhatsApp 联系我们： [+628951395752](https://wa.me/+628951395752)",
+    initialMessage: "你好 👋! 欢迎来到 Naturra Extal。如果您有任何问题，请告诉我。\n\n欢迎通过 WhatsApp 联系我们： [+628951395752](https://wa.me/+628951395752)",
     continueWhatsApp: "在 WhatsApp 上继续",
     typeMessage: "输入您的消息...",
     contactUs: "联系我们",
@@ -109,7 +109,7 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
   },
   ja: {
     subtitle: "できるだけ早く返信いたします",
-    initialMessage: "こんにちは ??! Naturra Extal へようこそ。ご質問がございましたら、お知らせください。\n\nWhatsApp でお気軽にご連絡ください： [+628951395752](https://wa.me/+628951395752)",
+    initialMessage: "こんにちは 👋! Naturra Extal へようこそ。ご質問がございましたら、お知らせください。\n\nWhatsApp でお気軽にご連絡ください： [+628951395752](https://wa.me/+628951395752)",
     continueWhatsApp: "WhatsApp で続ける",
     typeMessage: "メッセージを入力...",
     contactUs: "お問い合わせ",
@@ -127,7 +127,7 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
   },
   es: {
     subtitle: "Responderemos lo antes posible",
-    initialMessage: "¡Hola ??! Bienvenido a Naturra Extal. Avísame si tienes alguna pregunta.\n\nNo dudes en contactarnos por WhatsApp en [+628951395752](https://wa.me/+628951395752)",
+    initialMessage: "¡Hola 👋! Bienvenido a Naturra Extal. Avísame si tienes alguna pregunta.\n\nNo dudes en contactarnos por WhatsApp en [+628951395752](https://wa.me/+628951395752)",
     continueWhatsApp: "Continuar en WhatsApp",
     typeMessage: "Escribe tu mensaje...",
     contactUs: "Contáctanos",
@@ -145,7 +145,7 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
   },
   fr: {
     subtitle: "Nous répondrons dès que possible",
-    initialMessage: "Salut ??! Bienvenue chez Naturra Extal. Faites-moi savoir si vous avez des questions.\n\nN'hésitez pas à nous contacter sur WhatsApp au [+628951395752](https://wa.me/+628951395752)",
+    initialMessage: "Salut 👋! Bienvenue chez Naturra Extal. Faites-moi savoir si vous avez des questions.\n\nN'hésitez pas à nous contacter sur WhatsApp au [+628951395752](https://wa.me/+628951395752)",
     continueWhatsApp: "Continuer sur WhatsApp",
     typeMessage: "Tapez votre message...",
     contactUs: "Nous contacter",
@@ -163,7 +163,7 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
   },
   ko: {
     subtitle: "최대한 빨리 답변드리겠습니다",
-    initialMessage: "안녕하세요 ??! Naturra Extal에 오신 것을 환영합니다. 궁금한 점이 있으시면 알려주세요.\n\nWhatsApp으로 연락주세요: [+628951395752](https://wa.me/+628951395752)",
+    initialMessage: "안녕하세요 👋! Naturra Extal에 오신 것을 환영합니다. 궁금한 점이 있으시면 알려주세요.\n\nWhatsApp으로 연락주세요: [+628951395752](https://wa.me/+628951395752)",
     continueWhatsApp: "WhatsApp에서 계속하기",
     typeMessage: "메시지를 입력하세요...",
     contactUs: "문의하기",

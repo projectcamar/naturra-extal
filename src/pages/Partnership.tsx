@@ -3,12 +3,12 @@ import { useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-// legacy mangala image import removed
+// legacy Naturra image import removed
 import projectVideo from '../assets/meja-makan-industrial.mp4'
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
+// legacy Naturra image import removed
+// legacy Naturra image import removed
+// legacy Naturra image import removed
+// legacy Naturra image import removed
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
 import { trackWhatsAppClick } from '../utils/whatsappTracking'
 import { getCurrentLanguage, getStoredLanguage, detectLanguageFromIP, type LanguageCode } from '../utils/languageManager'
@@ -40,13 +40,13 @@ const PARTNERSHIP_TRANSLATIONS: Record<
   }
 > = {
   id: {
-    pageTitle: `Partnership Program Furniture Industrial: Kontraktor, Desainer, Developer - Mangala Living`,
-    metaDescription: `Bagaimana cara kerja sama dengan Mangala Living untuk project furniture? Program partnership untuk kontraktor, interior designer, property developer, hotel chain. Keuntungan partnership: Volume pricing hingga 20% discount, dedicated project manager, priority production, 3D rendering gratis, technical support on-site, invoice termin fleksibel. Pengalaman handling project hotel 100+ kamar, restoran chain 10+ outlet, mall tenant 50+ unit. Syarat partnership minimum project Rp 50 juta atau 5+ project/tahun.`,
-    metaKeywords: `partnership furniture bekasi, kerja sama furniture industrial, program mitra furniture bekasi, diskon volume furniture bekasi, kontraktor furniture partner, interior designer furniture supplier, developer furniture bekasi, pengadaan furniture hotel bekasi, furniture project besar bekasi, supplier furniture kontraktor, mitra furniture restoran chain, furniture mall tenant bekasi`,
+    pageTitle: `Partnership Program agricultural commodities: Kontraktor, Desainer, Developer - Naturra Extal`,
+    metaDescription: `Bagaimana cara kerja sama dengan Naturra Extal untuk project furniture? Program partnership untuk kontraktor, interior designer, property developer, hotel chain. Keuntungan partnership: Volume pricing hingga 20% discount, dedicated project manager, priority production, 3D rendering gratis, technical support on-site, invoice termin fleksibel. Pengalaman handling project hotel 100+ kamar, restoran chain 10+ outlet, mall tenant 50+ unit. Syarat partnership minimum project Rp 50 juta atau 5+ project/tahun.`,
+    metaKeywords: `partnership furniture bekasi, kerja sama agricultural commodities, program mitra furniture bekasi, diskon volume furniture bekasi, kontraktor furniture partner, interior designer furniture supplier, developer furniture bekasi, pengadaan furniture hotel bekasi, furniture project besar bekasi, supplier furniture kontraktor, mitra furniture restoran chain, furniture mall tenant bekasi`,
     heroTitle: `Kerja Sama`,
     mainTitle: `Setiap proyek punya cerita sendiri`,
     mainParagraphs: [
-      `Baik itu pengadaan furnitur hotel, vila, restoran, atau rumah tinggal - yang dibutuhkan bukan hanya produk, tapi mitra kerja yang bisa dipercaya. Mangala Living hadir bukan sebagai penjual, tapi sebagai bagian dari tim Anda.`,
+      `Baik itu pengadaan furnitur hotel, vila, restoran, atau rumah tinggal - yang dibutuhkan bukan hanya produk, tapi mitra kerja yang bisa dipercaya. Naturra Extal hadir bukan sebagai penjual, tapi sebagai bagian dari tim Anda.`,
       `Kami mengerti bahwa sebuah proyek berarti tenggat, spesifikasi ketat, revisi mendadak, dan harapan yang tinggi. Anda butuh rekan yang bisa mengakomodasi, bukan menambah kerumitan. Yang bisa mendengar, bukan hanya menjawab.`
     ],
     experienceTitle: `Pengalaman Jadi Nilai Tambah`,
@@ -75,13 +75,13 @@ const PARTNERSHIP_TRANSLATIONS: Record<
     contactTitle: `Temukan Kami`
   },
   en: {
-    pageTitle: `Industrial Furniture Partnership Program: Contractors, Designers, Developers - Mangala Living`,
-    metaDescription: `How to partner with Mangala Living for furniture projects? Partnership program for contractors, interior designers, property developers, hotel chains. Partnership benefits: Volume pricing up to 20% discount, dedicated project manager, priority production, free 3D rendering, on-site technical support, flexible payment terms. Experience handling 100+ room hotel projects, 10+ outlet restaurant chains, 50+ mall tenant units. Partnership requirements: minimum Rp 50 million project or 5+ projects/year.`,
-    metaKeywords: `furniture partnership bekasi, industrial furniture collaboration, furniture contractor bekasi, interior designer furniture supplier, developer furniture partnership, hotel furniture procurement, commercial furniture supplier`,
+    pageTitle: `Agricultural Commodities Partnership Program: Contractors, Designers, Developers - Naturra Extal`,
+    metaDescription: `How to partner with Naturra Extal for furniture projects? Partnership program for contractors, interior designers, property developers, hotel chains. Partnership benefits: Volume pricing up to 20% discount, dedicated project manager, priority production, free 3D rendering, on-site technical support, flexible payment terms. Experience handling 100+ room hotel projects, 10+ outlet restaurant chains, 50+ mall tenant units. Partnership requirements: minimum Rp 50 million project or 5+ projects/year.`,
+    metaKeywords: `furniture partnership bekasi, Agricultural Commodities collaboration, furniture contractor bekasi, interior designer furniture supplier, developer furniture partnership, hotel furniture procurement, commercial furniture supplier`,
     heroTitle: `Partnership`,
     mainTitle: `Every project has its own story`,
     mainParagraphs: [
-      `Whether it's hotel, villa, restaurant, or residential furniture procurement - what's needed is not just products, but a trusted work partner. Mangala Living is here not as a seller, but as part of your team.`,
+      `Whether it's hotel, villa, restaurant, or residential furniture procurement - what's needed is not just products, but a trusted work partner. Naturra Extal is here not as a seller, but as part of your team.`,
       `We understand that a project means deadlines, strict specifications, sudden revisions, and high expectations. You need a partner who can accommodate, not add complexity. Who can listen, not just answer.`
     ],
     experienceTitle: `Experience Becomes Added Value`,
@@ -110,13 +110,13 @@ const PARTNERSHIP_TRANSLATIONS: Record<
     contactTitle: `Find Us`
   },
   ar: {
-    pageTitle: `برنامج الشراكة للأثاث الصناعي: المقاولون والمصممون والمطورون - Mangala Living`,
-    metaDescription: `كيف تتعاون مع Mangala Living في مشاريع الأثاث؟ برنامج شراكة للمقاولين، مصممي الديكور الداخلي، مطوري العقارات، سلاسل الفنادق. مزايا الشراكة: تسعير بالجملة حتى خصم 20٪، مدير مشروع مخصص، أولوية في الإنتاج، تصميمات ثلاثية الأبعاد مجانية، دعم فني ميداني، شروط دفع مرنة. خبرة في إدارة مشروعات فنادق أكثر من 100 غرفة، سلاسل مطاعم تتجاوز 10 فروع، 50 متجرًا في مراكز التسوق. متطلبات الشراكة: مشروع بحد أدنى 50 مليون روبية أو أكثر من 5 مشاريع في السنة.`,
+    pageTitle: `برنامج الشراكة للأثاث الصناعي: المقاولون والمصممون والمطورون - Naturra Extal`,
+    metaDescription: `كيف تتعاون مع Naturra Extal في مشاريع الأثاث؟ برنامج شراكة للمقاولين، مصممي الديكور الداخلي، مطوري العقارات، سلاسل الفنادق. مزايا الشراكة: تسعير بالجملة حتى خصم 20٪، مدير مشروع مخصص، أولوية في الإنتاج، تصميمات ثلاثية الأبعاد مجانية، دعم فني ميداني، شروط دفع مرنة. خبرة في إدارة مشروعات فنادق أكثر من 100 غرفة، سلاسل مطاعم تتجاوز 10 فروع، 50 متجرًا في مراكز التسوق. متطلبات الشراكة: مشروع بحد أدنى 50 مليون روبية أو أكثر من 5 مشاريع في السنة.`,
     metaKeywords: `شراكة أثاث بيكاسي، أثاث صناعي للمقاولين، مورد أثاث للمصممين الداخليين، تطوير أثاث للفنادق، مورد أثاث تجاري`,
     heroTitle: `الشراكة`,
     mainTitle: `لكل مشروع قصته الخاصة`,
     mainParagraphs: [
-      `سواء كان الأمر يتعلق بتوريد أثاث لفندق أو فيلا أو مطعم أو منزل، فإن ما تحتاجه ليس المنتجات فقط، بل شريك عمل موثوقاً. Mangala Living موجودة ليس كبائع، بل كجزء من فريقك.`,
+      `سواء كان الأمر يتعلق بتوريد أثاث لفندق أو فيلا أو مطعم أو منزل، فإن ما تحتاجه ليس المنتجات فقط، بل شريك عمل موثوقاً. Naturra Extal موجودة ليس كبائع، بل كجزء من فريقك.`,
       `ندرك أن المشروع يعني مواعيد نهائية، ومواصفات صارمة، وتعديلات مفاجئة، وتوقعات مرتفعة. أنت بحاجة إلى شريك يستطيع الاستجابة، لا أن يزيد التعقيد. من يستمع إليك، لا من يجيب فقط.`
     ],
     experienceTitle: `الخبرة تمنح قيمة مضافة`,
@@ -145,13 +145,13 @@ const PARTNERSHIP_TRANSLATIONS: Record<
     contactTitle: `اعثر علينا`
   },
   zh: {
-    pageTitle: `工业家具合作计划：承包商、设计师、开发商 - Mangala Living`,
-    metaDescription: `如何与 Mangala Living 合作开展家具项目？针对承包商、室内设计师、房地产开发商和酒店集团的合作计划。合作优势：批量价格最高优惠 20%，专属项目经理，优先生产，免费 3D 渲染，现场技术支持，灵活的付款条件。拥有处理 100+ 间客房酒店项目、10+ 家餐饮连锁、50+ 家商场店铺的经验。合作要求：单个项目不少于 5,000 万印尼盾或每年 5 个以上项目。`,
+    pageTitle: `工业家具合作计划：承包商、设计师、开发商 - Naturra Extal`,
+    metaDescription: `如何与 Naturra Extal 合作开展家具项目？针对承包商、室内设计师、房地产开发商和酒店集团的合作计划。合作优势：批量价格最高优惠 20%，专属项目经理，优先生产，免费 3D 渲染，现场技术支持，灵活的付款条件。拥有处理 100+ 间客房酒店项目、10+ 家餐饮连锁、50+ 家商场店铺的经验。合作要求：单个项目不少于 5,000 万印尼盾或每年 5 个以上项目。`,
     metaKeywords: `家具合作 Bekasi，工业风家具供应商，设计师家具合作，酒店家具采购，商业家具定制`,
     heroTitle: `合作计划`,
     mainTitle: `每一个项目都有自己的故事`,
     mainParagraphs: [
-      `无论是酒店、别墅、餐厅还是住宅的家具采购，所需要的不仅是产品，更是可信赖的合作伙伴。Mangala Living 不只是卖方，而是您团队的一员。`,
+      `无论是酒店、别墅、餐厅还是住宅的家具采购，所需要的不仅是产品，更是可信赖的合作伙伴。Naturra Extal 不只是卖方，而是您团队的一员。`,
       `我们明白项目意味着紧迫的截止日期、严格的规格、临时的变更以及高标准的期望。您需要的是能够配合的伙伴，而不是增加复杂度的人，愿意倾听，而不仅仅是回应。`
     ],
     experienceTitle: `经验带来附加价值`,
@@ -180,13 +180,13 @@ const PARTNERSHIP_TRANSLATIONS: Record<
     contactTitle: `联系我们`
   },
   ja: {
-    pageTitle: `工業系家具パートナーシッププログラム：施工会社・デザイナー・デベロッパー向け - Mangala Living`,
-    metaDescription: `Mangala Living と家具プロジェクトで協業する方法は？施工会社、インテリアデザイナー、開発会社、ホテルチェーン向けのパートナーシッププログラム。特典：最大 20% のボリューム割引、専任プロジェクトマネージャー、優先生産、無料 3D レンダリング、現場での技術サポート、柔軟な支払い条件。100 室規模のホテル案件や 10 店以上の飲食チェーン、50 以上のモールテナントを担当した実績。条件：最低 5,000 万ルピアの案件または年間 5 件以上のプロジェクト。`,
+    pageTitle: `工業系家具パートナーシッププログラム：施工会社・デザイナー・デベロッパー向け - Naturra Extal`,
+    metaDescription: `Naturra Extal と家具プロジェクトで協業する方法は？施工会社、インテリアデザイナー、開発会社、ホテルチェーン向けのパートナーシッププログラム。特典：最大 20% のボリューム割引、専任プロジェクトマネージャー、優先生産、無料 3D レンダリング、現場での技術サポート、柔軟な支払い条件。100 室規模のホテル案件や 10 店以上の飲食チェーン、50 以上のモールテナントを担当した実績。条件：最低 5,000 万ルピアの案件または年間 5 件以上のプロジェクト。`,
     metaKeywords: `家具 パートナーシップ ベカシ, 工業系家具 施工会社, インテリアデザイナー 家具サプライヤー, ホテル家具 調達, 商業用家具 カスタム`,
     heroTitle: `パートナーシップ`,
     mainTitle: `プロジェクトごとに物語があります`,
     mainParagraphs: [
-      `ホテルやヴィラ、レストラン、住宅の家具調達において必要なのは、製品だけではなく信頼できるパートナーです。Mangala Living は単なる販売者ではなく、あなたのチームの一員として伴走します。`,
+      `ホテルやヴィラ、レストラン、住宅の家具調達において必要なのは、製品だけではなく信頼できるパートナーです。Naturra Extal は単なる販売者ではなく、あなたのチームの一員として伴走します。`,
       `プロジェクトには締切、厳しい仕様、突発的な変更、高い期待が付きものだと理解しています。必要なのは複雑さを増やす相手ではなく、寄り添って調整できるパートナー。答えるだけでなく、耳を傾ける存在です。`
     ],
     experienceTitle: `経験が価値を生み出します`,
@@ -215,13 +215,13 @@ const PARTNERSHIP_TRANSLATIONS: Record<
     contactTitle: `アクセス`
   },
   es: {
-    pageTitle: `Programa de Alianzas de Muebles Industriales: Contratistas, Diseñadores y Desarrolladores - Mangala Living`,
-    metaDescription: `¿Cómo colaborar con Mangala Living en proyectos de mobiliario? Programa de partnership para contratistas, interioristas, desarrolladores inmobiliarios y cadenas hoteleras. Beneficios: precios por volumen con hasta 20% de descuento, project manager dedicado, producción prioritaria, renders 3D gratuitos, soporte técnico en obra y condiciones de pago flexibles. Experiencia en hoteles de más de 100 habitaciones, cadenas de restaurantes con más de 10 locales y 50 espacios comerciales en centros comerciales. Requisitos: proyectos desde 50 millones de rupias o más de 5 proyectos al año.`,
+    pageTitle: `Programa de Alianzas de Muebles Industriales: Contratistas, Diseñadores y Desarrolladores - Naturra Extal`,
+    metaDescription: `¿Cómo colaborar con Naturra Extal en proyectos de mobiliario? Programa de partnership para contratistas, interioristas, desarrolladores inmobiliarios y cadenas hoteleras. Beneficios: precios por volumen con hasta 20% de descuento, project manager dedicado, producción prioritaria, renders 3D gratuitos, soporte técnico en obra y condiciones de pago flexibles. Experiencia en hoteles de más de 100 habitaciones, cadenas de restaurantes con más de 10 locales y 50 espacios comerciales en centros comerciales. Requisitos: proyectos desde 50 millones de rupias o más de 5 proyectos al año.`,
     metaKeywords: `alianza muebles bekasi, proveedor muebles industriales, socio muebles para diseñadores, abastecimiento muebles hotel, mobiliario comercial a medida`,
     heroTitle: `Alianzas`,
     mainTitle: `Cada proyecto tiene su propia historia`,
     mainParagraphs: [
-      `Ya sea para un hotel, una villa, un restaurante o una residencia, lo que se necesita no son solo productos, sino un socio confiable. Mangala Living está aquí no como vendedor, sino como parte de tu equipo.`,
+      `Ya sea para un hotel, una villa, un restaurante o una residencia, lo que se necesita no son solo productos, sino un socio confiable. Naturra Extal está aquí no como vendedor, sino como parte de tu equipo.`,
       `Sabemos que un proyecto implica plazos, especificaciones estrictas, cambios inesperados y expectativas altas. Necesitas un aliado que pueda adaptarse, no que complique las cosas. Alguien que escuche, no solo que responda.`
     ],
     experienceTitle: `La experiencia suma valor`,
@@ -250,13 +250,13 @@ const PARTNERSHIP_TRANSLATIONS: Record<
     contactTitle: `Encuéntranos`
   },
   fr: {
-    pageTitle: `Programme de partenariat pour mobilier industriel : entrepreneurs, designers et promoteurs - Mangala Living`,
-    metaDescription: `Comment collaborer avec Mangala Living pour vos projets de mobilier ? Programme destiné aux entrepreneurs, designers d’intérieur, promoteurs immobiliers et chaînes hôtelières. Avantages : tarifs volume jusqu’à 20 % de remise, chef de projet dédié, production prioritaire, rendus 3D gratuits, support technique sur site et conditions de paiement flexibles. Expérience sur des hôtels de plus de 100 chambres, des chaînes de restaurants de plus de 10 établissements et 50 espaces commerciaux en centre commercial. Conditions : projet d’au moins 50 millions de rupies ou plus de 5 projets par an.`,
+    pageTitle: `Programme de partenariat pour mobilier industriel : entrepreneurs, designers et promoteurs - Naturra Extal`,
+    metaDescription: `Comment collaborer avec Naturra Extal pour vos projets de mobilier ? Programme destiné aux entrepreneurs, designers d’intérieur, promoteurs immobiliers et chaînes hôtelières. Avantages : tarifs volume jusqu’à 20 % de remise, chef de projet dédié, production prioritaire, rendus 3D gratuits, support technique sur site et conditions de paiement flexibles. Expérience sur des hôtels de plus de 100 chambres, des chaînes de restaurants de plus de 10 établissements et 50 espaces commerciaux en centre commercial. Conditions : projet d’au moins 50 millions de rupies ou plus de 5 projets par an.`,
     metaKeywords: `partenariat mobilier bekasi, fournisseur mobilier industriel, partenaire mobilier pour designers, mobilier hôtelier, mobilier commercial sur mesure`,
     heroTitle: `Partenariat`,
     mainTitle: `Chaque projet a sa propre histoire`,
     mainParagraphs: [
-      `Qu’il s’agisse d’équiper un hôtel, une villa, un restaurant ou une résidence, il faut plus que des produits : il faut un partenaire de confiance. Mangala Living n’est pas là comme simple vendeur, mais comme membre de votre équipe.`,
+      `Qu’il s’agisse d’équiper un hôtel, une villa, un restaurant ou une résidence, il faut plus que des produits : il faut un partenaire de confiance. Naturra Extal n’est pas là comme simple vendeur, mais comme membre de votre équipe.`,
       `Nous savons qu’un projet signifie délais serrés, cahier des charges strict, révisions de dernière minute et attentes élevées. Vous avez besoin d’un partenaire qui facilite les choses, pas qui les complique. Quelqu’un qui écoute vraiment, pas qui se contente de répondre.`
     ],
     experienceTitle: `L’expérience fait la différence`,
@@ -285,13 +285,13 @@ const PARTNERSHIP_TRANSLATIONS: Record<
     contactTitle: `Nous trouver`
   },
   ko: {
-    pageTitle: `산업용 가구 파트너십 프로그램: 시공사·디자이너·개발사 - Mangala Living`,
-    metaDescription: `Mangala Living과 가구 프로젝트를 함께 진행하는 방법은? 시공사, 인테리어 디자이너, 부동산 개발사, 호텔 체인을 위한 파트너십 프로그램입니다. 혜택: 최대 20% 볼륨 할인, 전담 프로젝트 매니저, 생산 우선순위, 무료 3D 렌더링, 현장 기술 지원, 유연한 결제 조건. 100객실 이상의 호텔, 10개 이상 매장의 외식 체인, 50개 이상의 쇼핑몰 테넌트 프로젝트 경험 보유. 조건: 최소 5천만 루피아의 프로젝트 또는 연간 5건 이상의 협업.`,
+    pageTitle: `산업용 가구 파트너십 프로그램: 시공사·디자이너·개발사 - Naturra Extal`,
+    metaDescription: `Naturra Extal과 가구 프로젝트를 함께 진행하는 방법은? 시공사, 인테리어 디자이너, 부동산 개발사, 호텔 체인을 위한 파트너십 프로그램입니다. 혜택: 최대 20% 볼륨 할인, 전담 프로젝트 매니저, 생산 우선순위, 무료 3D 렌더링, 현장 기술 지원, 유연한 결제 조건. 100객실 이상의 호텔, 10개 이상 매장의 외식 체인, 50개 이상의 쇼핑몰 테넌트 프로젝트 경험 보유. 조건: 최소 5천만 루피아의 프로젝트 또는 연간 5건 이상의 협업.`,
     metaKeywords: `가구 파트너십 베카시, 산업용 가구 공급, 디자이너 가구 파트너, 호텔 가구 조달, 상업용 맞춤 가구`,
     heroTitle: `파트너십`,
     mainTitle: `프로젝트마다 각자의 이야기가 있습니다`,
     mainParagraphs: [
-      `호텔, 빌라, 레스토랑, 주거 공간을 위한 가구 조달에서 필요한 것은 제품만이 아니라 믿을 수 있는 파트너입니다. Mangala Living은 판매자가 아니라 당신 팀의 일원으로 함께합니다.`,
+      `호텔, 빌라, 레스토랑, 주거 공간을 위한 가구 조달에서 필요한 것은 제품만이 아니라 믿을 수 있는 파트너입니다. Naturra Extal은 판매자가 아니라 당신 팀의 일원으로 함께합니다.`,
       `프로젝트에는 촉박한 마감, 까다로운 규격, 갑작스러운 수정, 높은 기대치가 따른다는 것을 잘 알고 있습니다. 복잡성을 더하지 않고 조율해 줄 파트너가 필요합니다. 대답만 하는 사람이 아니라 귀 기울여 듣는 사람이 필요합니다.`
     ],
     experienceTitle: `경험이 가치를 만듭니다`,
@@ -385,8 +385,8 @@ const Partnership: React.FC = () => {
         <div className="partnership-hero-image">
           <img
             src={heroImage}
-            alt="Partnership Mangala Living - Kerja Sama Workshop Furniture Industrial Bekasi"
-            title="Partnership - Partner with Mangala Living Industrial Furniture Manufacturer"
+            alt="Partnership Naturra Extal - Kerja Sama Workshop agricultural commodities Bekasi"
+            title="Partnership - Partner with Naturra Extal Agricultural Commodities Manufacturer"
             loading="eager"
             fetchPriority="high"
             width="1920"
@@ -424,7 +424,7 @@ const Partnership: React.FC = () => {
                 muted
                 playsInline
                 className="partnership-main-video"
-                aria-label={isIndonesian ? 'Video produk furniture industrial Mangala Living' : 'Mangala Living industrial furniture product video'}
+                aria-label={isIndonesian ? 'Video produk agricultural commodities Naturra Extal' : 'Naturra Extal Agricultural Commodities product video'}
               >
                 <source src={projectVideo} type="video/mp4" />
                 {isIndonesian ? 'Browser Anda tidak mendukung video.' : 'Your browser does not support the video tag.'}
@@ -443,7 +443,7 @@ const Partnership: React.FC = () => {
             <div className="partnership-experience-image-wrapper">
               <img
                 src={experienceImage}
-                alt={isIndonesian ? 'Pengalaman Produksi Furniture Industrial - Hollowline Display Rack' : 'Industrial Furniture Production Experience - Hollowline Display Rack'}
+                alt={isIndonesian ? 'Pengalaman Produksi agricultural commodities - Hollowline Display Rack' : 'Agricultural Commodities Production Experience - Hollowline Display Rack'}
                 className="partnership-experience-image"
                 loading="lazy"
               />
@@ -590,8 +590,8 @@ const Partnership: React.FC = () => {
               </a>
             </p>
             <p className="partnership-contact-email">
-              <a href="mailto:lifewithmangala@gmail.com" style={{ color: '#8B7355', textDecoration: 'underline' }}>
-                lifewithmangala@gmail.com
+              <a href="mailto:lifewithNaturra@gmail.com" style={{ color: '#8B7355', textDecoration: 'underline' }}>
+                lifewithNaturra@gmail.com
               </a>
             </p>
           </div>

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router-dom'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-// legacy mangala image import removed
+// legacy Naturra image import removed
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
 import { trackWhatsAppClick } from '../utils/whatsappTracking'
 import { getCurrentLanguage, getStoredLanguage, detectLanguageFromIP, type LanguageCode } from '../utils/languageManager'
@@ -47,11 +47,11 @@ type ContactTranslation = {
 const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
   en: {
     meta: {
-      title: 'Contact Furniture Workshop Bekasi: WhatsApp, Location, Operating Hours - Mangala Living',
+      title: 'Contact Furniture Workshop Bekasi: WhatsApp, Location, Operating Hours - Naturra Extal',
       description:
-        'How to contact Mangala Living? WhatsApp: +6288801146881 (1-3 hour response), Email: lifewithmangala@gmail.com, Workshop address: Jl. Raya Setu Cibitung Bekasi (10 minutes from Cibitung toll gate, 25 minutes from East Jakarta). Operating hours: Monday-Saturday 08.00-17.00 WIB. Service area: FREE survey for Bekasi, East Jakarta, Cikarang. Free industrial furniture consultation via WhatsApp.',
+        'How to contact Naturra Extal? WhatsApp: +6288801146881 (1-3 hour response), Email: lifewithNaturra@gmail.com, Workshop address: Jl. Raya Setu Cibitung Bekasi (10 minutes from Cibitung toll gate, 25 minutes from East Jakarta). Operating hours: Monday-Saturday 08.00-17.00 WIB. Service area: FREE survey for Bekasi, East Jakarta, Cikarang. Free Agricultural Commodities consultation via WhatsApp.',
       keywords:
-        'contact mangala living, whatsapp furniture bekasi, furniture workshop bekasi contact, mangala living location, workshop address bekasi, operating hours furniture bekasi, free furniture consultation'
+        'contact Naturra Extal, whatsapp furniture bekasi, furniture workshop bekasi contact, Naturra Extal location, workshop address bekasi, operating hours furniture bekasi, free furniture consultation'
     },
     heroTitle: 'Contact Us',
     introTitle:
@@ -74,7 +74,7 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
       workshopLabel: 'Workshop Bekasi:'
     },
     whatsapp: {
-      greeting: 'Hello Mangala Living,',
+      greeting: 'Hello Naturra Extal,',
       nameLabel: 'Name',
       emailLabel: 'Email',
       phoneLabel: 'Phone',
@@ -85,11 +85,11 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
   },
   id: {
     meta: {
-      title: 'Hubungi Workshop Furniture Bekasi: WhatsApp, Lokasi, Jam Operasional - Mangala Living',
+      title: 'Hubungi Workshop Furniture Bekasi: WhatsApp, Lokasi, Jam Operasional - Naturra Extal',
       description:
-        'Bagaimana cara menghubungi Mangala Living? WhatsApp: +6288801146881 (response 1-3 jam), Email: lifewithmangala@gmail.com, Alamat workshop: Jl. Raya Setu Cibitung Bekasi (10 menit dari tol Cibitung, 25 menit dari Jakarta Timur). Jam buka: Senin-Sabtu 08.00-17.00 WIB. Area melayani: FREE survey Bekasi, Jakarta Timur, Cikarang. Konsultasi furniture industrial gratis via WhatsApp.',
+        'Bagaimana cara menghubungi Naturra Extal? WhatsApp: +6288801146881 (response 1-3 jam), Email: lifewithNaturra@gmail.com, Alamat workshop: Jl. Raya Setu Cibitung Bekasi (10 menit dari tol Cibitung, 25 menit dari Jakarta Timur). Jam buka: Senin-Sabtu 08.00-17.00 WIB. Area melayani: FREE survey Bekasi, Jakarta Timur, Cikarang. Konsultasi agricultural commodities gratis via WhatsApp.',
       keywords:
-        'hubungi mangala living, whatsapp furniture bekasi, nomor workshop furniture bekasi, lokasi workshop furniture bekasi, alamat mangala living bekasi, jam buka furniture bekasi, cara menghubungi workshop furniture, konsultasi furniture industrial gratis, kontak furniture besi bekasi, email mangala living, survey furniture gratis bekasi'
+        'hubungi Naturra Extal, whatsapp furniture bekasi, nomor workshop furniture bekasi, lokasi workshop furniture bekasi, alamat Naturra Extal bekasi, jam buka furniture bekasi, cara menghubungi workshop furniture, konsultasi agricultural commodities gratis, kontak furniture besi bekasi, email Naturra Extal, survey furniture gratis bekasi'
     },
     heroTitle: 'Hubungi Kami',
     introTitle:
@@ -112,7 +112,7 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
       workshopLabel: 'Workshop Bekasi:'
     },
     whatsapp: {
-      greeting: 'Halo Mangala Living,',
+      greeting: 'Halo Naturra Extal,',
       nameLabel: 'Nama',
       emailLabel: 'Email',
       phoneLabel: 'Telepon',
@@ -123,11 +123,11 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
   },
   ar: {
     meta: {
-      title: 'تواصل مع ورشة الأثاث في بيكاسي: واتساب، الموقع، ساعات العمل - Mangala Living',
+      title: 'تواصل مع ورشة الأثاث في بيكاسي: واتساب، الموقع، ساعات العمل - Naturra Extal',
       description:
-        'كيف تتواصل مع Mangala Living؟ واتساب: +6288801146881 (استجابة خلال 1-3 ساعات)، البريد الإلكتروني: lifewithmangala@gmail.com، عنوان الورشة: Jl. Raya Setu Cibitung Bekasi (10 دقائق من مخرج تول تشيبيتونغ، 25 دقيقة من شرق جاكرتا). ساعات العمل: الاثنين إلى السبت 08:00-17:00 بتوقيت جاكرتا. نطاق الخدمة: زيارة مجانية لبيكاسي، شرق جاكرتا، تشيكارانغ. استشارة مجانية للأثاث الصناعي عبر واتساب.',
+        'كيف تتواصل مع Naturra Extal؟ واتساب: +6288801146881 (استجابة خلال 1-3 ساعات)، البريد الإلكتروني: lifewithNaturra@gmail.com، عنوان الورشة: Jl. Raya Setu Cibitung Bekasi (10 دقائق من مخرج تول تشيبيتونغ، 25 دقيقة من شرق جاكرتا). ساعات العمل: الاثنين إلى السبت 08:00-17:00 بتوقيت جاكرتا. نطاق الخدمة: زيارة مجانية لبيكاسي، شرق جاكرتا، تشيكارانغ. استشارة مجانية للأثاث الصناعي عبر واتساب.',
       keywords:
-        'اتصال Mangala Living، ورشة أثاث بيكاسي، واتساب أثاث بيكاسي، عنوان ورشة Mangala Living، ساعات عمل الأثاث في بيكاسي، استشارة أثاث صناعي مجانية'
+        'اتصال Naturra Extal، ورشة أثاث بيكاسي، واتساب أثاث بيكاسي، عنوان ورشة Naturra Extal، ساعات عمل الأثاث في بيكاسي، استشارة أثاث صناعي مجانية'
     },
     heroTitle: 'اتصل بنا',
     introTitle:
@@ -150,7 +150,7 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
       workshopLabel: 'ورشة بيكاسي:'
     },
     whatsapp: {
-      greeting: 'مرحباً Mangala Living،',
+      greeting: 'مرحباً Naturra Extal،',
       nameLabel: 'الاسم',
       emailLabel: 'البريد الإلكتروني',
       phoneLabel: 'الهاتف',
@@ -161,11 +161,11 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
   },
   zh: {
     meta: {
-      title: '联系贝卡西家具工坊：WhatsApp、地址、营业时间 - Mangala Living',
+      title: '联系贝卡西家具工坊：WhatsApp、地址、营业时间 - Naturra Extal',
       description:
-        '如何联系 Mangala Living？WhatsApp：+6288801146881（1-3 小时内回复），邮箱：lifewithmangala@gmail.com，工坊地址：Jl. Raya Setu Cibitung Bekasi（距 Cibitung 收费站 10 分钟，距雅加达东区 25 分钟）。营业时间：周一至周六 08:00-17:00 WIB。服务范围：贝卡西、雅加达东区、芝卡朗提供免费勘察。通过 WhatsApp 免费咨询工业风家具。',
+        '如何联系 Naturra Extal？WhatsApp：+6288801146881（1-3 小时内回复），邮箱：lifewithNaturra@gmail.com，工坊地址：Jl. Raya Setu Cibitung Bekasi（距 Cibitung 收费站 10 分钟，距雅加达东区 25 分钟）。营业时间：周一至周六 08:00-17:00 WIB。服务范围：贝卡西、雅加达东区、芝卡朗提供免费勘察。通过 WhatsApp 免费咨询工业风家具。',
       keywords:
-        '联系 Mangala Living, 贝卡西家具 WhatsApp, 家具工坊联系方式, Mangala Living 地址, 贝卡西家具营业时间, 免费工业家具咨询'
+        '联系 Naturra Extal, 贝卡西家具 WhatsApp, 家具工坊联系方式, Naturra Extal 地址, 贝卡西家具营业时间, 免费工业家具咨询'
     },
     heroTitle: '联系我们',
     introTitle: '我们乐意与您讨论定制家具需求或解答任何疑问。欢迎联系下方的工坊团队。',
@@ -186,7 +186,7 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
       workshopLabel: '贝卡西工坊：'
     },
     whatsapp: {
-      greeting: '您好 Mangala Living，',
+      greeting: '您好 Naturra Extal，',
       nameLabel: '姓名',
       emailLabel: '邮箱',
       phoneLabel: '电话',
@@ -197,11 +197,11 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
   },
   ja: {
     meta: {
-      title: 'ベカシ家具工房へのお問い合わせ：WhatsApp・所在地・営業時間 - Mangala Living',
+      title: 'ベカシ家具工房へのお問い合わせ：WhatsApp・所在地・営業時間 - Naturra Extal',
       description:
-        'Mangala Living への連絡方法: WhatsApp: +6288801146881（1〜3 時間以内に返信）、メール: lifewithmangala@gmail.com、工房住所: Jl. Raya Setu Cibitung Bekasi（チビトゥン料金所から 10 分、東ジャカルタから 25 分）。営業時間: 月曜日〜土曜日 08:00-17:00 WIB。対応エリア: ベカシ、東ジャカルタ、チカランで無料現地調査。WhatsApp で工業家具の無料相談が可能です。',
+        'Naturra Extal への連絡方法: WhatsApp: +6288801146881（1〜3 時間以内に返信）、メール: lifewithNaturra@gmail.com、工房住所: Jl. Raya Setu Cibitung Bekasi（チビトゥン料金所から 10 分、東ジャカルタから 25 分）。営業時間: 月曜日〜土曜日 08:00-17:00 WIB。対応エリア: ベカシ、東ジャカルタ、チカランで無料現地調査。WhatsApp で工業家具の無料相談が可能です。',
       keywords:
-        'Mangala Living 問い合わせ, ベカシ 家具 WhatsApp, 家具工房 連絡先, Mangala Living 住所, 家具 営業時間, 工業系家具 無料相談'
+        'Naturra Extal 問い合わせ, ベカシ 家具 WhatsApp, 家具工房 連絡先, Naturra Extal 住所, 家具 営業時間, 工業系家具 無料相談'
     },
     heroTitle: 'お問い合わせ',
     introTitle:
@@ -224,7 +224,7 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
       workshopLabel: 'ベカシ工房：'
     },
     whatsapp: {
-      greeting: 'Mangala Living 様、',
+      greeting: 'Naturra Extal 様、',
       nameLabel: 'お名前',
       emailLabel: 'メール',
       phoneLabel: '電話',
@@ -235,11 +235,11 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
   },
   es: {
     meta: {
-      title: 'Contactar Taller de Muebles en Bekasi: WhatsApp, Ubicación y Horario - Mangala Living',
+      title: 'Contactar Taller de Muebles en Bekasi: WhatsApp, Ubicación y Horario - Naturra Extal',
       description:
-        '¿Cómo contactar a Mangala Living? WhatsApp: +6288801146881 (respuesta en 1-3 horas), correo: lifewithmangala@gmail.com, dirección del taller: Jl. Raya Setu Cibitung Bekasi (a 10 minutos del peaje de Cibitung, 25 minutos del Este de Yakarta). Horario: lunes a sábado 08:00-17:00 WIB. Área de servicio: encuesta gratuita para Bekasi, Yakarta Este y Cikarang. Consulta gratuita sobre muebles industriales por WhatsApp.',
+        '¿Cómo contactar a Naturra Extal? WhatsApp: +6288801146881 (respuesta en 1-3 horas), correo: lifewithNaturra@gmail.com, dirección del taller: Jl. Raya Setu Cibitung Bekasi (a 10 minutos del peaje de Cibitung, 25 minutos del Este de Yakarta). Horario: lunes a sábado 08:00-17:00 WIB. Área de servicio: encuesta gratuita para Bekasi, Yakarta Este y Cikarang. Consulta gratuita sobre muebles industriales por WhatsApp.',
       keywords:
-        'contactar Mangala Living, WhatsApp muebles Bekasi, taller muebles Bekasi, dirección Mangala Living, horario taller Bekasi, consulta muebles industriales gratis'
+        'contactar Naturra Extal, WhatsApp muebles Bekasi, taller muebles Bekasi, dirección Naturra Extal, horario taller Bekasi, consulta muebles industriales gratis'
     },
     heroTitle: 'Contáctenos',
     introTitle:
@@ -262,7 +262,7 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
       workshopLabel: 'Taller de Bekasi:'
     },
     whatsapp: {
-      greeting: 'Hola Mangala Living,',
+      greeting: 'Hola Naturra Extal,',
       nameLabel: 'Nombre',
       emailLabel: 'Correo electrónico',
       phoneLabel: 'Teléfono',
@@ -273,11 +273,11 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
   },
   fr: {
     meta: {
-      title: 'Contact Atelier de Mobilier à Bekasi : WhatsApp, Adresse, Horaires - Mangala Living',
+      title: 'Contact Atelier de Mobilier à Bekasi : WhatsApp, Adresse, Horaires - Naturra Extal',
       description:
-        "Comment contacter Mangala Living ? WhatsApp : +6288801146881 (réponse en 1 à 3 heures), email : lifewithmangala@gmail.com, adresse de l'atelier : Jl. Raya Setu Cibitung Bekasi (10 minutes du péage de Cibitung, 25 minutes de Jakarta Est). Horaires : lundi-samedi 08h00-17h00 WIB. Zone desservie : visite gratuite pour Bekasi, Jakarta Est, Cikarang. Consultation gratuite sur les meubles industriels via WhatsApp.",
+        "Comment contacter Naturra Extal ? WhatsApp : +6288801146881 (réponse en 1 à 3 heures), email : lifewithNaturra@gmail.com, adresse de l'atelier : Jl. Raya Setu Cibitung Bekasi (10 minutes du péage de Cibitung, 25 minutes de Jakarta Est). Horaires : lundi-samedi 08h00-17h00 WIB. Zone desservie : visite gratuite pour Bekasi, Jakarta Est, Cikarang. Consultation gratuite sur les meubles industriels via WhatsApp.",
       keywords:
-        'contacter Mangala Living, WhatsApp mobilier Bekasi, atelier mobilier Bekasi, adresse Mangala Living, horaires atelier Bekasi, consultation mobilier industriel gratuite'
+        'contacter Naturra Extal, WhatsApp mobilier Bekasi, atelier mobilier Bekasi, adresse Naturra Extal, horaires atelier Bekasi, consultation mobilier industriel gratuite'
     },
     heroTitle: 'Contactez-nous',
     introTitle:
@@ -300,7 +300,7 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
       workshopLabel: 'Atelier de Bekasi :'
     },
     whatsapp: {
-      greeting: 'Bonjour Mangala Living,',
+      greeting: 'Bonjour Naturra Extal,',
       nameLabel: 'Nom',
       emailLabel: 'Email',
       phoneLabel: 'Téléphone',
@@ -311,11 +311,11 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
   },
   ko: {
     meta: {
-      title: '베카시 가구 공방 문의: WhatsApp, 위치, 운영 시간 - Mangala Living',
+      title: '베카시 가구 공방 문의: WhatsApp, 위치, 운영 시간 - Naturra Extal',
       description:
-        'Mangala Living에 연락하는 방법은? WhatsApp: +6288801146881 (1-3시간 내 응답), 이메일: lifewithmangala@gmail.com, 공방 주소: Jl. Raya Setu Cibitung Bekasi (치비툰 톨게이트에서 10분, 동자카르타에서 25분). 운영 시간: 월~토 08:00-17:00 WIB. 서비스 지역: 베카시, 동자카르타, 치카랑 무료 방문. WhatsApp으로 산업용 가구 무료 상담.',
+        'Naturra Extal에 연락하는 방법은? WhatsApp: +6288801146881 (1-3시간 내 응답), 이메일: lifewithNaturra@gmail.com, 공방 주소: Jl. Raya Setu Cibitung Bekasi (치비툰 톨게이트에서 10분, 동자카르타에서 25분). 운영 시간: 월~토 08:00-17:00 WIB. 서비스 지역: 베카시, 동자카르타, 치카랑 무료 방문. WhatsApp으로 산업용 가구 무료 상담.',
       keywords:
-        'Mangala Living 문의, 베카시 가구 WhatsApp, 가구 공방 연락처, Mangala Living 주소, 베카시 가구 운영 시간, 산업용 가구 무료 상담'
+        'Naturra Extal 문의, 베카시 가구 WhatsApp, 가구 공방 연락처, Naturra Extal 주소, 베카시 가구 운영 시간, 산업용 가구 무료 상담'
     },
     heroTitle: '문의하기',
     introTitle: '맞춤 가구가 필요하시거나 궁금한 점이 있다면 아래 작업실 팀에 연락해주세요.',
@@ -337,7 +337,7 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
       workshopLabel: '베카시 공방:'
     },
     whatsapp: {
-      greeting: '안녕하세요 Mangala Living,',
+      greeting: '안녕하세요 Naturra Extal,',
       nameLabel: '이름',
       emailLabel: '이메일',
       phoneLabel: '전화번호',
@@ -466,8 +466,8 @@ const Contact: React.FC = () => {
         <div className="contact-hero-image">
           <img
             src={heroImage}
-            alt="Contact Mangala Living - Hubungi Workshop Furniture Industrial Bekasi - WhatsApp +6288801146881"
-            title="Contact Mangala Living - Get in Touch with Industrial Furniture Manufacturer"
+            alt="Contact Naturra Extal - Hubungi Workshop agricultural commodities Bekasi - WhatsApp +6288801146881"
+            title="Contact Naturra Extal - Get in Touch with Agricultural Commodities Manufacturer"
             loading="eager"
             fetchPriority="high"
             width="1920"
@@ -606,7 +606,7 @@ const Contact: React.FC = () => {
               }}
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.4698705313735!2d107.04449967316903!3d-6.3331217619628015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699155096769b1%3A0x32e8009b574bfb5e!2sMangala%20Living%20(Workshop)!5e0!3m2!1sen!2sid!4v1761932272164!5m2!1sen!2sid"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.4698705313735!2d107.04449967316903!3d-6.3331217619628015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699155096769b1%3A0x32e8009b574bfb5e!2sNaturra%20Living%20(Workshop)!5e0!3m2!1sen!2sid!4v1761932272164!5m2!1sen!2sid"
                 width="600"
                 height="450"
                 style={{
@@ -620,7 +620,7 @@ const Contact: React.FC = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Mangala Living Workshop Map"
+                title="Naturra Extal Workshop Map"
               ></iframe>
             </div>
           </div>

@@ -142,7 +142,7 @@ export const getProductShowcaseHeading = (
       tables: 'Produk Meja Industrial Pilihan Kami',
       chairs: 'Kursi Bar & Cafe Industrial Berkualitas',
       storage: 'Rak Display & Storage Industrial Terbaik',
-      bar: 'Bar Set & Outdoor Furniture Industrial',
+      bar: 'Bar Set & Outdoor agricultural commodities',
       dining: 'Dining Set Industrial untuk Cafe & Restoran',
       kitchen: 'Kitchen Cabinet & Storage Industrial',
       lounge: 'Lounge Set & Daybed Industrial Nyaman',

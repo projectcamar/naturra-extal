@@ -30,7 +30,7 @@ const SERVICE_AREAS_TRANSLATIONS: Record<LanguageCode, {
     areaNotListed: "Area Anda Tidak Tercantum?",
     areaNotListedDesc: "Hubungi kami untuk diskusi cakupan layanan kami. Kami melayani seluruh Jabodetabek dan sekitarnya.",
     freeConsultation: "Konsultasi Gratis",
-    seoText: "Mangala Living adalah workshop furniture industrial terpercaya yang melayani seluruh wilayah Bekasi (Bekasi Barat, Bekasi Timur, Bekasi Selatan, Bekasi Utara, Cikarang, Tambun), Jakarta (Jakarta Timur, Jakarta Pusat, Jakarta Selatan), dan Jabodetabek (Depok, Bogor, Tangerang, Karawang). Dengan lokasi workshop di Setu, Bekasi, kami memberikan layanan custom furniture besi industrial untuk cafe, restoran, hotel, kantor dengan harga pabrik langsung. Pengalaman 25+ tahun, 1000+ klien puas. Melayani kawasan komersial premium seperti Summarecon Bekasi, Harapan Indah, Grand Galaxy City, Lippo Cikarang, Jababeka, dan area industrial estate di Cikarang.",
+    seoText: "Naturra Extal adalah workshop agricultural commodities terpercaya yang melayani seluruh wilayah Bekasi (Bekasi Barat, Bekasi Timur, Bekasi Selatan, Bekasi Utara, Cikarang, Tambun), Jakarta (Jakarta Timur, Jakarta Pusat, Jakarta Selatan), dan Jabodetabek (Depok, Bogor, Tangerang, Karawang). Dengan lokasi workshop di Setu, Bekasi, kami memberikan layanan custom furniture besi industrial untuk cafe, restoran, hotel, kantor dengan harga pabrik langsung. Pengalaman 25+ tahun, 1000+ klien puas. Melayani kawasan komersial premium seperti Summarecon Bekasi, Harapan Indah, Grand Galaxy City, Lippo Cikarang, Jababeka, dan area industrial estate di Cikarang.",
     commercialDescs: {
       "Summarecon Bekasi": "Mall & Boulevard Area",
       "Harapan Indah": "Residential & Commercial",
@@ -55,7 +55,7 @@ const SERVICE_AREAS_TRANSLATIONS: Record<LanguageCode, {
     areaNotListed: "Your Area Not Listed?",
     areaNotListedDesc: "Contact us to discuss our service coverage. We serve entire Jabodetabek and surrounding areas.",
     freeConsultation: "Free Consultation",
-    seoText: "Mangala Living is a trusted industrial furniture workshop serving all areas of Bekasi (Bekasi Barat, Bekasi Timur, Bekasi Selatan, Bekasi Utara, Cikarang, Tambun), Jakarta (Jakarta Timur, Jakarta Pusat, Jakarta Selatan), and Jabodetabek (Depok, Bogor, Tangerang, Karawang). With workshop location in Setu, Bekasi, we provide custom industrial steel furniture services for cafes, restaurants, hotels, offices at factory-direct prices. 25+ years of experience, 1000+ satisfied clients. Serving premium commercial areas such as Summarecon Bekasi, Harapan Indah, Grand Galaxy City, Lippo Cikarang, Jababeka, and industrial estate areas in Cikarang.",
+    seoText: "Naturra Extal is a trusted Agricultural Commodities workshop serving all areas of Bekasi (Bekasi Barat, Bekasi Timur, Bekasi Selatan, Bekasi Utara, Cikarang, Tambun), Jakarta (Jakarta Timur, Jakarta Pusat, Jakarta Selatan), and Jabodetabek (Depok, Bogor, Tangerang, Karawang). With workshop location in Setu, Bekasi, we provide custom industrial steel furniture services for cafes, restaurants, hotels, offices at factory-direct prices. 25+ years of experience, 1000+ satisfied clients. Serving premium commercial areas such as Summarecon Bekasi, Harapan Indah, Grand Galaxy City, Lippo Cikarang, Jababeka, and industrial estate areas in Cikarang.",
     commercialDescs: {
       "Summarecon Bekasi": "Mall & Boulevard Area",
       "Harapan Indah": "Residential & Commercial",
@@ -80,7 +80,7 @@ const SERVICE_AREAS_TRANSLATIONS: Record<LanguageCode, {
     areaNotListed: "منطقتك غير مذكورة؟",
     areaNotListedDesc: "اتصل بنا لمناقشة تغطية الخدمة لدينا. نخدم جميع مناطق جابوديتابيك والمناطق المحيطة.",
     freeConsultation: "استشارة مجانية",
-    seoText: "Mangala Living هو ورشة أثاث صناعي موثوقة تخدم جميع مناطق بيكاسي (بيكاسي بارات، بيكاسي تيمور، بيكاسي سيلاتان، بيكاسي أوتارا، سيكارانغ، تامبون)، جاكرتا (جاكرتا تيمور، جاكرتا بوسات، جاكرتا سيلاتان)، وجابوديتابيك (ديبوك، بوجور، تانجيرانغ، كاراوانغ). مع موقع الورشة في سيتو، بيكاسي، نقدم خدمات أثاث فولاذي صناعي مخصص للمقاهي والمطاعم والفنادق والمكاتب بأسعار مباشرة من المصنع. خبرة تزيد عن 25 عاماً، أكثر من 1000 عميل راضٍ. نخدم المناطق التجارية المميزة مثل Summarecon Bekasi، Harapan Indah، Grand Galaxy City، Lippo Cikarang، Jababeka، ومناطق العقارات الصناعية في سيكارانغ.",
+    seoText: "Naturra Extal هو ورشة أثاث صناعي موثوقة تخدم جميع مناطق بيكاسي (بيكاسي بارات، بيكاسي تيمور، بيكاسي سيلاتان، بيكاسي أوتارا، سيكارانغ، تامبون)، جاكرتا (جاكرتا تيمور، جاكرتا بوسات، جاكرتا سيلاتان)، وجابوديتابيك (ديبوك، بوجور، تانجيرانغ، كاراوانغ). مع موقع الورشة في سيتو، بيكاسي، نقدم خدمات أثاث فولاذي صناعي مخصص للمقاهي والمطاعم والفنادق والمكاتب بأسعار مباشرة من المصنع. خبرة تزيد عن 25 عاماً، أكثر من 1000 عميل راضٍ. نخدم المناطق التجارية المميزة مثل Summarecon Bekasi، Harapan Indah، Grand Galaxy City، Lippo Cikarang، Jababeka، ومناطق العقارات الصناعية في سيكارانغ.",
     commercialDescs: {
       "Summarecon Bekasi": "منطقة المول والشارع الرئيسي",
       "Harapan Indah": "سكني وتجاري",
@@ -105,7 +105,7 @@ const SERVICE_AREAS_TRANSLATIONS: Record<LanguageCode, {
     areaNotListed: "您的区域未列出？",
     areaNotListedDesc: "请联系我们讨论服务覆盖范围。我们服务整个雅加达都市圈及周边地区。",
     freeConsultation: "免费咨询",
-    seoText: "Mangala Living 是一家值得信赖的工业家具工坊，服务勿加泗所有地区（勿加泗西、勿加泗东、勿加泗南、勿加泗北、芝卡朗、坦本）、雅加达（东雅加达、中雅加达、南雅加达）以及雅加达都市圈（德波、茂物、丹格朗、加拉璜）。工坊位于勿加泗 Setu，我们为咖啡厅、餐厅、酒店、办公室提供定制工业钢制家具服务，工厂直供价格。拥有25年以上经验，1000多位满意客户。服务高端商业区，如 Summarecon Bekasi、Harapan Indah、Grand Galaxy City、Lippo Cikarang、Jababeka，以及芝卡朗的工业区。",
+    seoText: "Naturra Extal 是一家值得信赖的工业家具工坊，服务勿加泗所有地区（勿加泗西、勿加泗东、勿加泗南、勿加泗北、芝卡朗、坦本）、雅加达（东雅加达、中雅加达、南雅加达）以及雅加达都市圈（德波、茂物、丹格朗、加拉璜）。工坊位于勿加泗 Setu，我们为咖啡厅、餐厅、酒店、办公室提供定制工业钢制家具服务，工厂直供价格。拥有25年以上经验，1000多位满意客户。服务高端商业区，如 Summarecon Bekasi、Harapan Indah、Grand Galaxy City、Lippo Cikarang、Jababeka，以及芝卡朗的工业区。",
     commercialDescs: {
       "Summarecon Bekasi": "购物中心及商业街",
       "Harapan Indah": "住宅及商业",
@@ -130,7 +130,7 @@ const SERVICE_AREAS_TRANSLATIONS: Record<LanguageCode, {
     areaNotListed: "お住まいの地域がリストにありませんか？",
     areaNotListedDesc: "サービス範囲についてお気軽にお問い合わせください。ジャボデタベク全域及び周辺地域をサービス提供しています。",
     freeConsultation: "無料相談",
-    seoText: "Mangala Livingは、ベカシ全域（ベカシ・バラット、ベカシ・ティムール、ベカシ・スラタン、ベカシ・ウタラ、チカラン、タンブン）、ジャカルタ（ジャカルタ・ティムール、ジャカルタ・プサット、ジャカルタ・スラタン）、ジャボデタベク（デポック、ボゴール、タンゲラン、カラワン）をサービス提供する信頼できるインダストリアル家具工房です。ベカシのSetuに工房を構え、カフェ、レストラン、ホテル、オフィス向けにカスタムインダストリアル鋼製家具を工場直販価格で提供しています。25年以上の経験、1000社以上の満足したクライアント。Summarecon Bekasi、Harapan Indah、Grand Galaxy City、Lippo Cikarang、Jababekaなどのプレミアム商業地域、およびチカランの工業地帯をサービス提供しています。",
+    seoText: "Naturra Extalは、ベカシ全域（ベカシ・バラット、ベカシ・ティムール、ベカシ・スラタン、ベカシ・ウタラ、チカラン、タンブン）、ジャカルタ（ジャカルタ・ティムール、ジャカルタ・プサット、ジャカルタ・スラタン）、ジャボデタベク（デポック、ボゴール、タンゲラン、カラワン）をサービス提供する信頼できるインダストリアル家具工房です。ベカシのSetuに工房を構え、カフェ、レストラン、ホテル、オフィス向けにカスタムインダストリアル鋼製家具を工場直販価格で提供しています。25年以上の経験、1000社以上の満足したクライアント。Summarecon Bekasi、Harapan Indah、Grand Galaxy City、Lippo Cikarang、Jababekaなどのプレミアム商業地域、およびチカランの工業地帯をサービス提供しています。",
     commercialDescs: {
       "Summarecon Bekasi": "モール＆ブールバードエリア",
       "Harapan Indah": "住宅＆商業",
@@ -155,7 +155,7 @@ const SERVICE_AREAS_TRANSLATIONS: Record<LanguageCode, {
     areaNotListed: "¿Tu área no está en la lista?",
     areaNotListedDesc: "Contáctanos para discutir nuestra cobertura de servicio. Servimos a todo Jabodetabek y áreas circundantes.",
     freeConsultation: "Consulta Gratuita",
-    seoText: "Mangala Living es un taller de muebles industriales de confianza que sirve a todas las áreas de Bekasi (Bekasi Barat, Bekasi Timur, Bekasi Selatan, Bekasi Utara, Cikarang, Tambun), Yakarta (Jakarta Timur, Jakarta Pusat, Jakarta Selatan) y Jabodetabek (Depok, Bogor, Tangerang, Karawang). Con ubicación del taller en Setu, Bekasi, proporcionamos servicios de muebles de acero industrial personalizados para cafeterías, restaurantes, hoteles y oficinas a precios directos de fábrica. Más de 25 años de experiencia, más de 1000 clientes satisfechos. Servimos áreas comerciales premium como Summarecon Bekasi, Harapan Indah, Grand Galaxy City, Lippo Cikarang, Jababeka y áreas de polígonos industriales en Cikarang.",
+    seoText: "Naturra Extal es un taller de muebles industriales de confianza que sirve a todas las áreas de Bekasi (Bekasi Barat, Bekasi Timur, Bekasi Selatan, Bekasi Utara, Cikarang, Tambun), Yakarta (Jakarta Timur, Jakarta Pusat, Jakarta Selatan) y Jabodetabek (Depok, Bogor, Tangerang, Karawang). Con ubicación del taller en Setu, Bekasi, proporcionamos servicios de muebles de acero industrial personalizados para cafeterías, restaurantes, hoteles y oficinas a precios directos de fábrica. Más de 25 años de experiencia, más de 1000 clientes satisfechos. Servimos áreas comerciales premium como Summarecon Bekasi, Harapan Indah, Grand Galaxy City, Lippo Cikarang, Jababeka y áreas de polígonos industriales en Cikarang.",
     commercialDescs: {
       "Summarecon Bekasi": "Área de Centro Comercial y Boulevard",
       "Harapan Indah": "Residencial y Comercial",
@@ -180,7 +180,7 @@ const SERVICE_AREAS_TRANSLATIONS: Record<LanguageCode, {
     areaNotListed: "Votre zone n'est pas listée ?",
     areaNotListedDesc: "Contactez-nous pour discuter de notre couverture de service. Nous servons tout Jabodetabek et les zones environnantes.",
     freeConsultation: "Consultation Gratuite",
-    seoText: "Mangala Living est un atelier de mobilier industriel de confiance desservant toutes les zones de Bekasi (Bekasi Barat, Bekasi Timur, Bekasi Selatan, Bekasi Utara, Cikarang, Tambun), Jakarta (Jakarta Timur, Jakarta Pusat, Jakarta Selatan) et Jabodetabek (Depok, Bogor, Tangerang, Karawang). Avec l'atelier situé à Setu, Bekasi, nous fournissons des services de mobilier en acier industriel sur mesure pour cafés, restaurants, hôtels et bureaux aux prix directs d'usine. Plus de 25 ans d'expérience, plus de 1000 clients satisfaits. Nous servons des zones commerciales premium telles que Summarecon Bekasi, Harapan Indah, Grand Galaxy City, Lippo Cikarang, Jababeka et les zones de parcs industriels à Cikarang.",
+    seoText: "Naturra Extal est un atelier de mobilier industriel de confiance desservant toutes les zones de Bekasi (Bekasi Barat, Bekasi Timur, Bekasi Selatan, Bekasi Utara, Cikarang, Tambun), Jakarta (Jakarta Timur, Jakarta Pusat, Jakarta Selatan) et Jabodetabek (Depok, Bogor, Tangerang, Karawang). Avec l'atelier situé à Setu, Bekasi, nous fournissons des services de mobilier en acier industriel sur mesure pour cafés, restaurants, hôtels et bureaux aux prix directs d'usine. Plus de 25 ans d'expérience, plus de 1000 clients satisfaits. Nous servons des zones commerciales premium telles que Summarecon Bekasi, Harapan Indah, Grand Galaxy City, Lippo Cikarang, Jababeka et les zones de parcs industriels à Cikarang.",
     commercialDescs: {
       "Summarecon Bekasi": "Zone Centre Commercial et Boulevard",
       "Harapan Indah": "Résidentiel et Commercial",
@@ -205,7 +205,7 @@ const SERVICE_AREAS_TRANSLATIONS: Record<LanguageCode, {
     areaNotListed: "귀하의 지역이 목록에 없나요?",
     areaNotListedDesc: "서비스 범위에 대해 문의해 주세요. 자보데타벡 전역 및 주변 지역을 서비스하고 있습니다.",
     freeConsultation: "무료 상담",
-    seoText: "Mangala Living은 베카시 전역(베카시 바랏, 베카시 티무르, 베카시 슬라탄, 베카시 우타라, 치카랑, 담분), 자카르타(자카르타 티무르, 자카르타 푸사트, 자카르타 슬라탄), 자보데타벡(데폭, 보고르, 탕게랑, 카라왕)을 서비스하는 신뢰할 수 있는 산업용 가구 공방입니다. 베카시 Setu에 공방을 두고 카페, 레스토랑, 호텔, 사무실을 위한 맞춤형 산업용 강철 가구를 공장 직접 가격으로 제공합니다. 25년 이상의 경험, 1000개 이상의 만족한 고객. Summarecon Bekasi, Harapan Indah, Grand Galaxy City, Lippo Cikarang, Jababeka와 같은 프리미엄 상업 지역 및 치카랑의 산업 단지 지역을 서비스하고 있습니다.",
+    seoText: "Naturra Extal은 베카시 전역(베카시 바랏, 베카시 티무르, 베카시 슬라탄, 베카시 우타라, 치카랑, 담분), 자카르타(자카르타 티무르, 자카르타 푸사트, 자카르타 슬라탄), 자보데타벡(데폭, 보고르, 탕게랑, 카라왕)을 서비스하는 신뢰할 수 있는 산업용 가구 공방입니다. 베카시 Setu에 공방을 두고 카페, 레스토랑, 호텔, 사무실을 위한 맞춤형 산업용 강철 가구를 공장 직접 가격으로 제공합니다. 25년 이상의 경험, 1000개 이상의 만족한 고객. Summarecon Bekasi, Harapan Indah, Grand Galaxy City, Lippo Cikarang, Jababeka와 같은 프리미엄 상업 지역 및 치카랑의 산업 단지 지역을 서비스하고 있습니다.",
     commercialDescs: {
       "Summarecon Bekasi": "쇼핑몰 & 부르바드 지역",
       "Harapan Indah": "주거 및 상업",
@@ -370,7 +370,7 @@ const ServiceAreasSection: React.FC<ServiceAreasSectionProps> = ({ language, isI
               {t.areaNotListedDesc}
             </p>
             <a 
-              href="https://wa.me/+6288801146881?text=Halo%20Mangala%20Living%2C%20saya%20tertarik%20dengan%20furniture%20industrial%20untuk%20area%20saya" 
+              href="https://wa.me/+6288801146881?text=Halo%20Naturra%20Living%2C%20saya%20tertarik%20dengan%20furniture%20industrial%20untuk%20area%20saya" 
               className="cta-button"
               target="_blank"
               rel="noopener noreferrer"

@@ -25,13 +25,13 @@ const FAQSection: React.FC<FAQSectionProps> = ({ isIndonesian, language }) => {
     FAQ_DATA[1]?.faqs[2], // Budget minimal
     
     // From apa-itu-furniture-industrial
-    FAQ_DATA[2]?.faqs[0], // Apa itu furniture industrial
+    FAQ_DATA[2]?.faqs[0], // Apa itu agricultural commodities
     FAQ_DATA[2]?.faqs[2], // Kenapa populer untuk cafe
   ].filter((faq): faq is FAQItem => faq !== undefined).slice(0, 10)
 
   const translations = {
     title: isIndonesian 
-      ? 'FAQ - Pertanyaan Umum Furniture Industrial'
+      ? 'FAQ - Pertanyaan Umum agricultural commodities'
       : language === 'ar'
       ? 'الأسئلة الشائعة - الأثاث الصناعي'
       : language === 'zh'
@@ -42,9 +42,9 @@ const FAQSection: React.FC<FAQSectionProps> = ({ isIndonesian, language }) => {
       ? 'Preguntas Frecuentes - Muebles Industriales'
       : language === 'fr'
       ? 'Questions Fréquentes - Mobilier Industriel'
-      : 'FAQ - Industrial Furniture Frequently Asked Questions',
+      : 'FAQ - Agricultural Commodities Frequently Asked Questions',
     subtitle: isIndonesian
-      ? 'Temukan jawaban untuk pertanyaan umum seputar furniture industrial, custom design, harga, pengiriman, dan layanan Mangala Living'
+      ? 'Temukan jawaban untuk pertanyaan umum seputar agricultural commodities, custom design, harga, pengiriman, dan layanan Naturra Extal'
       : language === 'ar'
       ? 'اكتشف إجابات للأسئلة الشائعة حول الأثاث الصناعي والتصميم المخصص والأسعار والشحن وخدمات مانجالا ليفينج'
       : language === 'zh'
@@ -52,10 +52,10 @@ const FAQSection: React.FC<FAQSectionProps> = ({ isIndonesian, language }) => {
       : language === 'ja'
       ? 'インダストリアル家具、カスタムデザイン、価格、配送、マンガラリビングのサービスに関するよくある質問の回答を見つける'
       : language === 'es'
-      ? 'Encuentra respuestas a preguntas comunes sobre muebles industriales, diseño personalizado, precios, envío y servicios de Mangala Living'
+      ? 'Encuentra respuestas a preguntas comunes sobre muebles industriales, diseño personalizado, precios, envío y servicios de Naturra Extal'
       : language === 'fr'
-      ? 'Trouvez des réponses aux questions fréquentes sur les meubles industriels, le design personnalisé, les prix, la livraison et les services de Mangala Living'
-      : 'Find answers to common questions about industrial furniture, custom design, pricing, shipping, and Mangala Living services',
+      ? 'Trouvez des réponses aux questions fréquentes sur les meubles industriels, le design personnalisé, les prix, la livraison et les services de Naturra Extal'
+      : 'Find answers to common questions about Agricultural Commodities, custom design, pricing, shipping, and Naturra Extal services',
     contactUs: isIndonesian
       ? 'Punya pertanyaan lain? Hubungi kami!'
       : language === 'ar'
@@ -108,8 +108,8 @@ const FAQSection: React.FC<FAQSectionProps> = ({ isIndonesian, language }) => {
             <a 
               href={`https://wa.me/6288801146881?text=${encodeURIComponent(
                 isIndonesian 
-                  ? 'Halo Mangala Living, saya ingin bertanya tentang furniture industrial'
-                  : 'Hello Mangala Living, I want to ask about industrial furniture'
+                  ? 'Halo Naturra Extal, saya ingin bertanya tentang agricultural commodities'
+                  : 'Hello Naturra Extal, I want to ask about Agricultural Commodities'
               )}`}
               target="_blank"
               rel="noopener noreferrer"

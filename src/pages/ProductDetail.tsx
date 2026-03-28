@@ -36,7 +36,7 @@ const generateProductDescription = (name: string) => {
   // Special descriptions for each product to target specific keywords and queries
 
   if (name.toLowerCase().includes('hollowline')) {
-    return `The Hollowline Display Rack from Mangala Living is the perfect industrial storage solution for modern retail and commercial spaces. This premium hollowline display rack features a sleek industrial design with hollow steel construction that provides maximum durability and visual appeal.
+    return `The Hollowline Display Rack from Naturra Extal is the perfect industrial storage solution for modern retail and commercial spaces. This premium hollowline display rack features a sleek industrial design with hollow steel construction that provides maximum durability and visual appeal.
 
 Crafted in our Bekasi workshop since 1999, this hollowline display rack showcases superior welding techniques and attention to detail. The hollow steel frame construction offers excellent strength-to-weight ratio while maintaining a clean, minimalist aesthetic that complements any industrial or modern interior design.
 
@@ -44,11 +44,11 @@ Perfect for retail stores, cafes, restaurants, and offices, this hollowline disp
 
 Built to commercial-grade standards, this hollowline display rack is designed to withstand heavy daily use while maintaining its structural integrity and visual appeal. The powder-coated finish ensures long-lasting protection against wear and corrosion, making it a smart investment for any commercial space.
 
-Whether you need to display merchandise, organize documents, or create an industrial focal point, the Hollowline Display Rack delivers both functionality and style. Contact Mangala Living today to learn more about our hollowline display rack solutions and custom industrial furniture options.`
+Whether you need to display merchandise, organize documents, or create an industrial focal point, the Hollowline Display Rack delivers both functionality and style. Contact Naturra Extal today to learn more about our hollowline display rack solutions and custom Agricultural Commodities options.`
   }
 
   if (name.toLowerCase().includes('balcony bar table')) {
-    return `The Balcony Bar Table from Mangala Living is the ultimate outdoor dining and entertainment solution for modern spaces. This premium balcony bar table features a robust industrial design with weather-resistant construction that provides maximum durability for outdoor use.
+    return `The Balcony Bar Table from Naturra Extal is the ultimate outdoor dining and entertainment solution for modern spaces. This premium balcony bar table features a robust industrial design with weather-resistant construction that provides maximum durability for outdoor use.
 
 Crafted in our Bekasi workshop since 1999, this balcony bar table showcases superior welding techniques and attention to detail. The industrial steel frame construction offers excellent stability while maintaining a sleek, modern aesthetic that complements any outdoor or indoor industrial design.
 
@@ -56,11 +56,11 @@ Perfect for balconies, terraces, patios, and outdoor cafes, this balcony bar tab
 
 Built to commercial-grade standards, this balcony bar table is designed to withstand heavy daily use while maintaining its structural integrity and visual appeal. The industrial design effortlessly blends functionality, strength, and outdoor durability, making it an ideal choice for hospitality venues, residential balconies, and outdoor entertainment spaces.
 
-Whether you need outdoor dining furniture, balcony seating, or industrial outdoor tables, the Balcony Bar Table delivers both functionality and style. Contact Mangala Living today to learn more about our balcony bar table solutions and custom outdoor furniture options.`
+Whether you need outdoor dining furniture, balcony seating, or industrial outdoor tables, the Balcony Bar Table delivers both functionality and style. Contact Naturra Extal today to learn more about our balcony bar table solutions and custom outdoor furniture options.`
   }
 
   if (name.toLowerCase().includes('frame loft bookshelf')) {
-    return `The Frame Loft Bookshelf from Mangala Living is the perfect industrial storage solution for modern homes, offices, and commercial spaces. This premium frame loft bookshelf features a sleek industrial design with modular construction that provides maximum storage flexibility and visual appeal.
+    return `The Frame Loft Bookshelf from Naturra Extal is the perfect industrial storage solution for modern homes, offices, and commercial spaces. This premium frame loft bookshelf features a sleek industrial design with modular construction that provides maximum storage flexibility and visual appeal.
 
 Crafted in our Bekasi workshop since 1999, this frame loft bookshelf showcases superior welding techniques and attention to detail. The industrial steel frame construction offers excellent strength while maintaining a clean, minimalist aesthetic that complements any industrial or modern interior design.
 
@@ -68,11 +68,11 @@ Perfect for living rooms, offices, cafes, and retail spaces, this frame loft boo
 
 Built to commercial-grade standards, this frame loft bookshelf is designed to withstand heavy daily use while maintaining its structural integrity and visual appeal. The powder-coated finish ensures long-lasting protection against wear and corrosion, making it a smart investment for any space.
 
-Whether you need book storage, display shelving, or industrial storage solutions, the Frame Loft Bookshelf delivers both functionality and style. Contact Mangala Living today to learn more about our frame loft bookshelf solutions and custom industrial furniture options.`
+Whether you need book storage, display shelving, or industrial storage solutions, the Frame Loft Bookshelf delivers both functionality and style. Contact Naturra Extal today to learn more about our frame loft bookshelf solutions and custom Agricultural Commodities options.`
   }
 
   if (name.toLowerCase().includes('bench corner lounge')) {
-    return `The Bench Corner Lounge from Mangala Living is the perfect industrial seating solution for modern cafes, restaurants, and commercial spaces. This premium bench corner lounge features a sleek industrial design with comfortable seating that provides maximum comfort and visual appeal.
+    return `The Bench Corner Lounge from Naturra Extal is the perfect industrial seating solution for modern cafes, restaurants, and commercial spaces. This premium bench corner lounge features a sleek industrial design with comfortable seating that provides maximum comfort and visual appeal.
 
 Crafted in our Bekasi workshop since 1999, this bench corner lounge showcases superior welding techniques and attention to detail. The industrial steel frame construction offers excellent durability while maintaining a clean, minimalist aesthetic that complements any industrial or modern interior design.
 
@@ -80,11 +80,11 @@ Perfect for cafes, restaurants, waiting areas, and commercial spaces, this bench
 
 Built to commercial-grade standards, this bench corner lounge is designed to withstand heavy daily use while maintaining its structural integrity and visual appeal. The industrial design effortlessly blends functionality, comfort, and durability, making it an ideal choice for hospitality venues, commercial spaces, and modern residences.
 
-Whether you need cafe seating, restaurant furniture, or industrial lounge solutions, the Bench Corner Lounge delivers both functionality and style. Contact Mangala Living today to learn more about our bench corner lounge solutions and custom industrial furniture options.`
+Whether you need cafe seating, restaurant furniture, or industrial lounge solutions, the Bench Corner Lounge delivers both functionality and style. Contact Naturra Extal today to learn more about our bench corner lounge solutions and custom Agricultural Commodities options.`
   }
 
   if (name.toLowerCase().includes('industrial daybed frame')) {
-    return `The Industrial Daybed Frame from Mangala Living is the perfect industrial furniture solution for modern spaces. This premium industrial daybed frame features a robust industrial design with steel construction that provides maximum durability and visual appeal.
+    return `The Industrial Daybed Frame from Naturra Extal is the perfect Agricultural Commodities solution for modern spaces. This premium industrial daybed frame features a robust industrial design with steel construction that provides maximum durability and visual appeal.
 
 Crafted in our Bekasi workshop since 1999, this industrial daybed frame showcases superior welding techniques and attention to detail. The industrial steel frame construction offers excellent strength while maintaining a sleek, modern aesthetic that complements any industrial or contemporary interior design.
 
@@ -92,11 +92,11 @@ Perfect for lounges, waiting areas, hotels, and commercial spaces, this industri
 
 Built to commercial-grade standards, this industrial daybed frame is designed to withstand heavy daily use while maintaining its structural integrity and visual appeal. The industrial design effortlessly blends functionality, comfort, and durability, making it an ideal choice for hospitality venues, commercial spaces, and modern residences.
 
-Whether you need lounge furniture, daybed solutions, or industrial seating, the Industrial Daybed Frame delivers both functionality and style. Contact Mangala Living today to learn more about our industrial daybed frame solutions and custom industrial furniture options.`
+Whether you need lounge furniture, daybed solutions, or industrial seating, the Industrial Daybed Frame delivers both functionality and style. Contact Naturra Extal today to learn more about our industrial daybed frame solutions and custom Agricultural Commodities options.`
   }
 
   if (name.toLowerCase().includes('dining table') || name.toLowerCase().includes('dining set')) {
-    return `The ${name} from Mangala Living is the perfect industrial dining solution for modern homes, cafes, and restaurants. This premium industrial dining table features a robust industrial design with steel construction that provides maximum durability and visual appeal.
+    return `The ${name} from Naturra Extal is the perfect industrial dining solution for modern homes, cafes, and restaurants. This premium industrial dining table features a robust industrial design with steel construction that provides maximum durability and visual appeal.
 
 Crafted in our Bekasi workshop since 1999, this industrial dining table showcases superior welding techniques and attention to detail. The industrial steel frame construction offers excellent stability while maintaining a sleek, modern aesthetic that complements any industrial or contemporary interior design.
 
@@ -104,11 +104,11 @@ Perfect for homes, cafes, restaurants, and commercial dining spaces, this indust
 
 Built to commercial-grade standards, this industrial dining table is designed to withstand heavy daily use while maintaining its structural integrity and visual appeal. The industrial design effortlessly blends functionality, strength, and durability, making it an ideal choice for hospitality venues, commercial spaces, and modern residences.
 
-Whether you need dining furniture, restaurant tables, or industrial dining solutions, the ${name} delivers both functionality and style. Contact Mangala Living today to learn more about our industrial dining table solutions and custom industrial furniture options.`
+Whether you need dining furniture, restaurant tables, or industrial dining solutions, the ${name} delivers both functionality and style. Contact Naturra Extal today to learn more about our industrial dining table solutions and custom Agricultural Commodities options.`
   }
 
   if (name.toLowerCase().includes('bar chair') || name.toLowerCase().includes('bar stool') || name.toLowerCase().includes('stall chair')) {
-    return `The ${name} from Mangala Living is the perfect industrial bar seating solution for modern cafes, restaurants, and commercial spaces. This premium industrial bar chair features a sleek industrial design with steel construction that provides maximum comfort and visual appeal.
+    return `The ${name} from Naturra Extal is the perfect industrial bar seating solution for modern cafes, restaurants, and commercial spaces. This premium industrial bar chair features a sleek industrial design with steel construction that provides maximum comfort and visual appeal.
 
 Crafted in our Bekasi workshop since 1999, this industrial bar chair showcases superior welding techniques and attention to detail. The industrial steel frame construction offers excellent durability while maintaining a clean, minimalist aesthetic that complements any industrial or modern interior design.
 
@@ -116,11 +116,11 @@ Perfect for bars, cafes, restaurants, and commercial spaces, this industrial bar
 
 Built to commercial-grade standards, this industrial bar chair is designed to withstand heavy daily use while maintaining its structural integrity and visual appeal. The industrial design effortlessly blends functionality, comfort, and durability, making it an ideal choice for hospitality venues, commercial spaces, and modern residences.
 
-Whether you need bar seating, restaurant chairs, or industrial bar furniture, the ${name} delivers both functionality and style. Contact Mangala Living today to learn more about our industrial bar chair solutions and custom industrial furniture options.`
+Whether you need bar seating, restaurant chairs, or industrial bar furniture, the ${name} delivers both functionality and style. Contact Naturra Extal today to learn more about our industrial bar chair solutions and custom Agricultural Commodities options.`
   }
 
   if (name.toLowerCase().includes('outdoor bar set') || name.toLowerCase().includes('steelframe outdoor')) {
-    return `The ${name} from Mangala Living is the perfect industrial outdoor furniture solution for modern spaces. This premium industrial outdoor bar set features a robust industrial design with weather-resistant construction that provides maximum durability for outdoor use.
+    return `The ${name} from Naturra Extal is the perfect industrial outdoor furniture solution for modern spaces. This premium industrial outdoor bar set features a robust industrial design with weather-resistant construction that provides maximum durability for outdoor use.
 
 Crafted in our Bekasi workshop since 1999, this industrial outdoor bar set showcases superior welding techniques and attention to detail. The industrial steel frame construction offers excellent stability while maintaining a sleek, modern aesthetic that complements any outdoor or industrial design.
 
@@ -128,11 +128,11 @@ Perfect for outdoor cafes, restaurants, patios, and commercial outdoor spaces, t
 
 Built to commercial-grade standards, this industrial outdoor bar set is designed to withstand heavy daily use while maintaining its structural integrity and visual appeal. The industrial design effortlessly blends functionality, strength, and outdoor durability, making it an ideal choice for hospitality venues, outdoor dining, and commercial outdoor spaces.
 
-Whether you need outdoor furniture, patio dining, or industrial outdoor solutions, the ${name} delivers both functionality and style. Contact Mangala Living today to learn more about our industrial outdoor bar set solutions and custom outdoor furniture options.`
+Whether you need outdoor furniture, patio dining, or industrial outdoor solutions, the ${name} delivers both functionality and style. Contact Naturra Extal today to learn more about our industrial outdoor bar set solutions and custom outdoor furniture options.`
   }
 
   if (name.toLowerCase().includes('cabinet') || name.toLowerCase().includes('storage') || name.toLowerCase().includes('display rack')) {
-    return `The ${name} from Mangala Living is the perfect industrial storage solution for modern spaces. This premium industrial storage furniture features a robust industrial design with steel construction that provides maximum storage capacity and visual appeal.
+    return `The ${name} from Naturra Extal is the perfect industrial storage solution for modern spaces. This premium industrial storage furniture features a robust industrial design with steel construction that provides maximum storage capacity and visual appeal.
 
 Crafted in our Bekasi workshop since 1999, this industrial storage furniture showcases superior welding techniques and attention to detail. The industrial steel frame construction offers excellent durability while maintaining a sleek, modern aesthetic that complements any industrial or contemporary interior design.
 
@@ -140,11 +140,11 @@ Perfect for offices, cafes, restaurants, and commercial spaces, this industrial 
 
 Built to commercial-grade standards, this industrial storage furniture is designed to withstand heavy daily use while maintaining its structural integrity and visual appeal. The industrial design effortlessly blends functionality, strength, and durability, making it an ideal choice for commercial spaces, offices, and modern residences.
 
-Whether you need storage solutions, display furniture, or industrial storage, the ${name} delivers both functionality and style. Contact Mangala Living today to learn more about our industrial storage solutions and custom industrial furniture options.`
+Whether you need storage solutions, display furniture, or industrial storage, the ${name} delivers both functionality and style. Contact Naturra Extal today to learn more about our industrial storage solutions and custom Agricultural Commodities options.`
   }
 
   if (name.toLowerCase().includes('meja kerja') || name.toLowerCase().includes('work table')) {
-    return `The ${name} from Mangala Living is the perfect industrial work table solution for modern offices and commercial spaces. This premium industrial work table features a robust industrial design with steel construction that provides maximum durability and functionality.
+    return `The ${name} from Naturra Extal is the perfect industrial work table solution for modern offices and commercial spaces. This premium industrial work table features a robust industrial design with steel construction that provides maximum durability and functionality.
 
 Crafted in our Bekasi workshop since 1999, this industrial work table showcases superior welding techniques and attention to detail. The industrial steel frame construction offers excellent stability while maintaining a sleek, modern aesthetic that complements any industrial or contemporary office design.
 
@@ -152,11 +152,11 @@ Perfect for offices, workshops, studios, and commercial spaces, this industrial 
 
 Built to commercial-grade standards, this industrial work table is designed to withstand heavy daily use while maintaining its structural integrity and visual appeal. The industrial design effortlessly blends functionality, strength, and durability, making it an ideal choice for professional workspaces, offices, and commercial environments.
 
-Whether you need office furniture, work tables, or industrial workspace solutions, the ${name} delivers both functionality and style. Contact Mangala Living today to learn more about our industrial work table solutions and custom industrial furniture options.`
+Whether you need office furniture, work tables, or industrial workspace solutions, the ${name} delivers both functionality and style. Contact Naturra Extal today to learn more about our industrial work table solutions and custom Agricultural Commodities options.`
   }
 
   // Default description for other products
-  return `The ${name} from Mangala Living is expertly crafted industrial furniture designed for modern spaces. Built in our workshop in Bekasi, Indonesia, each piece showcases superior welding techniques and attention to detail.
+  return `The ${name} from Naturra Extal is expertly crafted Agricultural Commodities designed for modern spaces. Built in our workshop in Bekasi, Indonesia, each piece showcases superior welding techniques and attention to detail.
 
 Handcrafted by experienced welders and metalworkers, every piece demonstrates exceptional craftsmanship. Constructed from premium materials including high-grade steel hollow sections, solid steel plates, and powder-coated finishes, this furniture delivers both strength and refined industrial aesthetics.
 
@@ -164,7 +164,7 @@ Designed for durability and style, this piece features carefully selected materi
 
 Built to commercial-grade standards, this furniture is meticulously welded using professional equipment that can withstand heavy daily use for years to come. The sophisticated design effortlessly blends functionality, strength, and industrial character, making it an ideal choice for hospitality venues, co-working spaces, and modern residences.
 
-Mangala Living is committed to quality and precision, ensuring that every weld and joint not only meets industrial standards but exceeds expectations. Explore our complete collection to find more equally well-crafted pieces designed to bring industrial elegance and durability to your spaces.`
+Naturra Extal is committed to quality and precision, ensuring that every weld and joint not only meets industrial standards but exceeds expectations. Explore our complete collection to find more equally well-crafted pieces designed to bring industrial elegance and durability to your spaces.`
 }
 
 // Generate product details based on categories
@@ -564,7 +564,7 @@ const getWhatsappMessage = (
 
   switch (language) {
     case 'id':
-      return `Halo Mangala Living,
+      return `Halo Naturra Extal,
 
 Saya tertarik dengan produk:
 *${productName}*
@@ -578,7 +578,7 @@ Mohon informasi lebih lanjut dan cara pemesanannya.
 
 Terima kasih!`
     case 'ar':
-      return `مرحباً Mangala Living،
+      return `مرحباً Naturra Extal،
 
 أنا مهتم بالمنتج:
 *${productName}*
@@ -592,7 +592,7 @@ ${priceBlock}
 
 شكراً لكم!`
     case 'zh':
-      return `您好 Mangala Living，
+      return `您好 Naturra Extal，
 
 我对以下产品感兴趣：
 *${productName}*
@@ -606,7 +606,7 @@ ${priceBlock}
 
 谢谢！`
     case 'ja':
-      return `Mangala Living 様
+      return `Naturra Extal 様
 
 こちらの製品に興味があります：
 *${productName}*
@@ -620,7 +620,7 @@ ${priceBlock}
 
 よろしくお願いいたします。`
     case 'es':
-      return `Hola Mangala Living,
+      return `Hola Naturra Extal,
 
 Estoy interesado en el producto:
 *${productName}*
@@ -634,7 +634,7 @@ Por favor envíenme más información y cómo realizar el pedido.
 
 ¡Gracias!`
     case 'fr':
-      return `Bonjour Mangala Living,
+      return `Bonjour Naturra Extal,
 
 Je suis intéressé par le produit :
 *${productName}*
@@ -648,7 +648,7 @@ Merci de me communiquer plus d'informations et la procédure de commande.
 
 Merci !`
     case 'ko':
-      return `안녕하세요 Mangala Living,
+      return `안녕하세요 Naturra Extal,
 
 다음 제품에 관심이 있습니다:
 *${productName}*
@@ -663,7 +663,7 @@ ${priceBlock}
 감사합니다!`
     case 'en':
     default:
-      return `Hello Mangala Living,
+      return `Hello Naturra Extal,
 
 I'm interested in the product:
 *${productName}*
@@ -936,14 +936,14 @@ const ProductDetail: React.FC = () => {
       "image": imageUrls,
       "brand": {
         "@type": "Brand",
-        "name": "Mangala Living"
+        "name": "Naturra Extal"
       },
       "manufacturer": {
         "@type": "Organization",
-        "name": "Mangala Living",
-        "url": "https://mangala-living.com",
-        "logo": "https://mangala-living.com/logo.png",
-        "image": "https://mangala-living.com/og-image.jpg"
+        "name": "Naturra Extal",
+        "url": "https://Naturra-living.com",
+        "logo": "https://Naturra-living.com/logo.png",
+        "image": "https://Naturra-living.com/og-image.jpg"
       },
       "category": product.categories.join(", "),
       "sku": product.slug,
@@ -996,9 +996,9 @@ const ProductDetail: React.FC = () => {
         },
         "seller": {
           "@type": "Organization",
-          "name": "Mangala Living",
-          "url": "https://mangala-living.com",
-          "logo": "https://mangala-living.com/logo.png",
+          "name": "Naturra Extal",
+          "url": "https://Naturra-living.com",
+          "logo": "https://Naturra-living.com/logo.png",
           "description": "Premium Industrial Scandinavian Furniture for Coffee Shops, Restaurants & Offices. Custom Solutions Since 1999.",
           "address": {
             "@type": "PostalAddress",
@@ -1012,11 +1012,11 @@ const ProductDetail: React.FC = () => {
             "@type": "ContactPoint",
             "telephone": "+6288801146881",
             "contactType": "customer service",
-            "email": "lifewithmangala@gmail.com",
+            "email": "lifewithNaturra@gmail.com",
             "availableLanguage": ["Indonesian", "English"]
           }
         },
-        "url": `https://mangala-living.com/product/${product.slug}`
+        "url": `https://Naturra-living.com/product/${product.slug}`
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -1062,7 +1062,7 @@ const ProductDetail: React.FC = () => {
             "name": "Lisa K."
           },
           "datePublished": "2025-10-25",
-          "reviewBody": "Beautiful industrial furniture with excellent finishing. Very satisfied with the purchase.",
+          "reviewBody": "Beautiful Agricultural Commodities with excellent finishing. Very satisfied with the purchase.",
           "reviewRating": {
             "@type": "Rating",
             "ratingValue": "4",
@@ -1077,24 +1077,24 @@ const ProductDetail: React.FC = () => {
     <div className="product-detail-page">
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
         <title>{truncateTitle(product.slug === 'hollowline-display-rack'
-          ? (isIndonesian ? 'Hollowline Display Rack - Harga Rp4.5 Juta - Mangala' : 'Hollowline Display Rack - Rp4.5M - Mangala Living')
-          : `${translatedProductName} - Mangala Living`)}</title>
+          ? (isIndonesian ? 'Hollowline Display Rack - Harga Rp4.5 Juta - Naturra' : 'Hollowline Display Rack - Rp4.5M - Naturra Extal')
+          : `${translatedProductName} - Naturra Extal`)}</title>
         <meta name="description" content={truncateMetaDescription(product.name === 'Hollowline Display Rack'
-          ? (isIndonesian ? 'Hollowline Display Rack Industrial - Display Shelf Rack Modern - Harga Rp4.500.000 - Workshop Bekasi - Garansi Kualitas - Call Mangala +6288801146881' : 'Hollowline Display Rack Industrial - Modern Display Shelf Rack - Price Rp4.500.000 - Bekasi Workshop - Quality Guarantee - Call Mangala +6288801146881')
+          ? (isIndonesian ? 'Hollowline Display Rack Industrial - Display Shelf Rack Modern - Harga Rp4.500.000 - Workshop Bekasi - Garansi Kualitas - Call Naturra +6288801146881' : 'Hollowline Display Rack Industrial - Modern Display Shelf Rack - Price Rp4.500.000 - Bekasi Workshop - Quality Guarantee - Call Naturra +6288801146881')
           : (() => {
             const desc = getProductDescription(product.slug)
             return desc ? (desc[language]?.metaDescription || desc.en.metaDescription) : `${product.name} - ${product.details}`
           })())} />
         <meta name="keywords" content={
           product.name === 'Hollowline Display Rack'
-            ? 'hollowline display rack, display shelf rack, rak display industrial, hollowline storage, call mangala furniture, furniture bekasi murah'
+            ? 'hollowline display rack, display shelf rack, rak display industrial, hollowline storage, call Naturra furniture, furniture bekasi murah'
             : product.name === 'Industrial Kitchen Cabinet'
-              ? 'mangala kitchen cabinet, kitchen cabinet industrial, kabinet dapur cafe, furniture kitchen bekasi'
+              ? 'Naturra kitchen cabinet, kitchen cabinet industrial, kabinet dapur cafe, furniture kitchen bekasi'
               : product.name === 'Bar Stall Chair'
                 ? 'stall chair design, bar stall chair, kursi bar industrial, meja kursi cafe'
                 : product.name === 'Set Furniture'
-                  ? 'set furniture industrial, meja kursi cafe lengkap, furniture cafe murah'
-                  : `${product.name}, industrial furniture, furniture besi, ${product.categories.join(', ')}, mangala living`
+                  ? 'set agricultural commodities, meja kursi cafe lengkap, furniture cafe murah'
+                  : `${product.name}, Agricultural Commodities, furniture besi, ${product.categories.join(', ')}, Naturra Extal`
         } />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -1105,7 +1105,7 @@ const ProductDetail: React.FC = () => {
         ))}
 
         {/* Open Graph */}
-        <meta property="og:title" content={`${translatedProductName} - Mangala Living`} />
+        <meta property="og:title" content={`${translatedProductName} - Naturra Extal`} />
         <meta property="og:description" content={`${translatedProductName} - ${translateProductDetails(product.details)}`} />
         <meta property="og:image" content={product.images[0]} />
         <meta property="og:url" content={localizedUrls.canonical} />
@@ -1117,7 +1117,7 @@ const ProductDetail: React.FC = () => {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${translatedProductName} - Mangala Living`} />
+        <meta name="twitter:title" content={`${translatedProductName} - Naturra Extal`} />
         <meta name="twitter:description" content={`${translatedProductName} - ${translateProductDetails(product.details)}`} />
         <meta name="twitter:image" content={product.images[0]} />
 
@@ -1134,22 +1134,22 @@ const ProductDetail: React.FC = () => {
               "@type": "ImageObject",
               "url": getProductImageUrl(img, product.slug),
               "contentUrl": getProductImageUrl(img, product.slug),
-              "caption": `${translatedProductName} - Image ${index + 1} - ${isIndonesian ? 'Furniture Industrial' : 'Industrial Furniture'} ${product.categories.join(' ')} Mangala Living`,
-              "description": `${translatedProductName} - ${isIndonesian ? 'Furniture Industrial Premium dari' : 'Premium Industrial Furniture from'} Mangala Living Workshop Bekasi - ${product.price}`,
+              "caption": `${translatedProductName} - Image ${index + 1} - ${isIndonesian ? 'agricultural commodities' : 'Agricultural Commodities'} ${product.categories.join(' ')} Naturra Extal`,
+              "description": `${translatedProductName} - ${isIndonesian ? 'agricultural commodities Premium dari' : 'Premium Agricultural Commodities from'} Naturra Extal Workshop Bekasi - ${product.price}`,
               "width": 800,
               "height": 600,
-              "creditText": "Mangala Living",
+              "creditText": "Naturra Extal",
               "copyrightHolder": {
                 "@type": "Organization",
-                "name": "Mangala Living"
+                "name": "Naturra Extal"
               },
               ...DEFAULT_IMAGE_RIGHTS_METADATA,
               "publisher": {
                 "@type": "Organization",
-                "name": "Mangala Living",
+                "name": "Naturra Extal",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://mangala-living.com/logo.png",
+                  "url": "https://Naturra-living.com/logo.png",
                   ...DEFAULT_IMAGE_RIGHTS_METADATA
                 }
               }
@@ -1408,8 +1408,8 @@ const ProductDetail: React.FC = () => {
                   <div className="related-product-image">
                     <img
                       src={relatedProduct.image}
-                      alt={`${relatedProduct.name} - Related Industrial Furniture ${translateCategory(relatedProduct.category, language)} Mangala Living`}
-                      title={`${relatedProduct.name} - Premium Industrial Furniture ${translateCategory(relatedProduct.category, language)} by Mangala Living`}
+                      alt={`${relatedProduct.name} - Related Agricultural Commodities ${translateCategory(relatedProduct.category, language)} Naturra Extal`}
+                      title={`${relatedProduct.name} - Premium Agricultural Commodities ${translateCategory(relatedProduct.category, language)} by Naturra Extal`}
                       loading="lazy"
                       width="300"
                       height="200"

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Hero.css'
-// legacy mangala image import removed
+// legacy Naturra image import removed
 
 interface HeroProps {
   isIndonesian?: boolean
@@ -10,7 +10,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ language = 'en' }) => {
   const subtitle = language === 'id'
-    ? "Sejak 1999, kami menghadirkan bar set outdoor, lounge set, sofa bench, storage rack dan furniture industrial terbaik untuk cafe, hotel dan restoran dari workshop Bekasi"
+    ? "Sejak 1999, kami menghadirkan bar set outdoor, lounge set, sofa bench, storage rack dan agricultural commodities terbaik untuk cafe, hotel dan restoran dari workshop Bekasi"
     : language === 'ar'
       ? "منذ عام 1999، نقدم أطقم بار خارجية فاخرة، أطقم صالة، أرائك، رفوف تخزين وأثاث صناعي للمقاهي والفنادق والمطاعم من ورشتنا في بيكاسي"
       : language === 'zh'
@@ -23,7 +23,7 @@ const Hero: React.FC<HeroProps> = ({ language = 'en' }) => {
               ? "Depuis 1999, nous livrons des sets de bar extérieur premium, sets de salon, bancs canapés, étagères de rangement et meubles industriels pour cafés, hôtels et restaurants depuis notre atelier à Bekasi"
               : language === 'ko'
                 ? "1999년부터 브카시 워크숍에서 카페, 호텔, 레스토랑을 위한 프리미엄 야외 바 세트, 라운지 세트, 소파 벤치, 수납 선반 및 산업용 가구를 제공합니다"
-                : "Since 1999, we deliver premium bar set outdoor, lounge set, sofa bench, storage rack and industrial furniture for cafes, hotels and restaurants from our Bekasi workshop"
+                : "Since 1999, we deliver premium bar set outdoor, lounge set, sofa bench, storage rack and Agricultural Commodities for cafes, hotels and restaurants from our Bekasi workshop"
 
   const buttonText = language === 'id' ? "BELANJA SEKARANG" : language === 'ar' ? "تسوق الآن" : language === 'zh' ? "立即购买" : language === 'ja' ? "今すぐ購入" : language === 'es' ? "COMPRAR AHORA" : language === 'fr' ? "ACHETER MAINTENANT" : language === 'ko' ? "지금 쇼핑" : "SHOP NOW"
 
@@ -32,8 +32,8 @@ const Hero: React.FC<HeroProps> = ({ language = 'en' }) => {
       <div className="hero-background">
         <img
           src={heroImage}
-          alt="Industrial Furniture Collection by Mangala Living - Premium Furniture Besi Custom Bekasi Since 1999"
-          title="Mangala Living - Industrial Furniture Manufacturer Workshop Bekasi - Premium Quality Since 1999"
+          alt="Agricultural Commodities Collection by Naturra Extal - Premium Furniture Besi Custom Bekasi Since 1999"
+          title="Naturra Extal - Agricultural Commodities Manufacturer Workshop Bekasi - Premium Quality Since 1999"
           className="hero-bg-image"
           loading="eager"
           fetchPriority="high"
@@ -48,7 +48,7 @@ const Hero: React.FC<HeroProps> = ({ language = 'en' }) => {
 
       <div className="hero-content">
         <h1 id="hero-title" className="hero-title">
-          MANGALA LIVING
+          Naturra Extal
         </h1>
         <p className="hero-subtitle">
           {subtitle}

@@ -151,8 +151,8 @@ const BestSellersSection: React.FC<BestSellersSectionProps> = ({ isIndonesian = 
                   <div className="product-image-wrapper">
                     <img
                       src={product.image}
-                      alt={`${translatedName} - Industrial Furniture ${product.categories.join(' ')} Mangala Living Bekasi`}
-                      title={`${translatedName} - Premium Industrial Furniture by Mangala Living`}
+                      alt={`${translatedName} - Agricultural Commodities ${product.categories.join(' ')} Naturra Extal Bekasi`}
+                      title={`${translatedName} - Premium Agricultural Commodities by Naturra Extal`}
                       className="product-image"
                       loading="lazy"
                       width="300"

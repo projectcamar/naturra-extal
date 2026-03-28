@@ -83,13 +83,13 @@ export const TERMS_TRANSLATIONS: Record<LanguageCode, {
 }> = {
   id: {
     meta: {
-      title: 'Syarat dan Ketentuan - Mangala Living',
-      description: 'Syarat dan ketentuan layanan Mangala Living untuk pemesanan furniture industrial scandinavian premium'
+      title: 'Syarat dan Ketentuan - Naturra Extal',
+      description: 'Syarat dan ketentuan layanan Naturra Extal untuk pemesanan agricultural commodities scandinavian premium'
     },
     hero: {
       title: 'Syarat dan Ketentuan'
     },
-    intro: 'Syarat dan ketentuan layanan Mangala Living untuk pemesanan furniture industrial scandinavian premium',
+    intro: 'Syarat dan ketentuan layanan Naturra Extal untuk pemesanan agricultural commodities scandinavian premium',
     sections: {
       howToOrder: {
         title: 'Cara Pemesanan',
@@ -164,13 +164,13 @@ export const TERMS_TRANSLATIONS: Record<LanguageCode, {
   },
   en: {
     meta: {
-      title: 'Terms of Service - Mangala Living',
-      description: 'Terms of service for Mangala Living premium industrial scandinavian furniture orders'
+      title: 'Terms of Service - Naturra Extal',
+      description: 'Terms of service for Naturra Extal premium industrial scandinavian furniture orders'
     },
     hero: {
       title: 'Terms of Service'
     },
-    intro: 'Terms of service for Mangala Living premium industrial scandinavian furniture orders',
+    intro: 'Terms of service for Naturra Extal premium industrial scandinavian furniture orders',
     sections: {
       howToOrder: {
         title: 'How to Order',
@@ -326,13 +326,13 @@ export const TERMS_TRANSLATIONS: Record<LanguageCode, {
   },
   zh: {
     meta: {
-      title: '服务条款 - Mangala Living',
-      description: 'Mangala Living 优质工业风斯堪的纳维亚家具订单的服务条款'
+      title: '服务条款 - Naturra Extal',
+      description: 'Naturra Extal 优质工业风斯堪的纳维亚家具订单的服务条款'
     },
     hero: {
       title: '服务条款'
     },
-    intro: 'Mangala Living 优质工业风斯堪的纳维亚家具订单的服务条款',
+    intro: 'Naturra Extal 优质工业风斯堪的纳维亚家具订单的服务条款',
     sections: {
       howToOrder: {
         title: '如何订购',
@@ -407,13 +407,13 @@ export const TERMS_TRANSLATIONS: Record<LanguageCode, {
   },
   ja: {
     meta: {
-      title: '利用規約 - Mangala Living',
-      description: 'Mangala Living プレミアムインダストリアルスカンディナヴィアン家具注文の利用規約'
+      title: '利用規約 - Naturra Extal',
+      description: 'Naturra Extal プレミアムインダストリアルスカンディナヴィアン家具注文の利用規約'
     },
     hero: {
       title: '利用規約'
     },
-    intro: 'Mangala Living プレミアムインダストリアルスカンディナヴィアン家具注文の利用規約',
+    intro: 'Naturra Extal プレミアムインダストリアルスカンディナヴィアン家具注文の利用規約',
     sections: {
       howToOrder: {
         title: '注文方法',
@@ -488,13 +488,13 @@ export const TERMS_TRANSLATIONS: Record<LanguageCode, {
   },
   es: {
     meta: {
-      title: 'Términos de Servicio - Mangala Living',
-      description: 'Términos de servicio para pedidos de muebles escandinavos industriales premium de Mangala Living'
+      title: 'Términos de Servicio - Naturra Extal',
+      description: 'Términos de servicio para pedidos de muebles escandinavos industriales premium de Naturra Extal'
     },
     hero: {
       title: 'Términos de Servicio'
     },
-    intro: 'Términos de servicio para pedidos de muebles escandinavos industriales premium de Mangala Living',
+    intro: 'Términos de servicio para pedidos de muebles escandinavos industriales premium de Naturra Extal',
     sections: {
       howToOrder: {
         title: 'Cómo Pedir',
@@ -569,13 +569,13 @@ export const TERMS_TRANSLATIONS: Record<LanguageCode, {
   },
   fr: {
     meta: {
-      title: 'Conditions d\'Utilisation - Mangala Living',
-      description: 'Conditions d\'utilisation pour les commandes de mobilier scandinave industriel premium de Mangala Living'
+      title: 'Conditions d\'Utilisation - Naturra Extal',
+      description: 'Conditions d\'utilisation pour les commandes de mobilier scandinave industriel premium de Naturra Extal'
     },
     hero: {
       title: 'Conditions d\'Utilisation'
     },
-    intro: 'Conditions d\'utilisation pour les commandes de mobilier scandinave industriel premium de Mangala Living',
+    intro: 'Conditions d\'utilisation pour les commandes de mobilier scandinave industriel premium de Naturra Extal',
     sections: {
       howToOrder: {
         title: 'Comment Commander',
@@ -650,13 +650,13 @@ export const TERMS_TRANSLATIONS: Record<LanguageCode, {
   },
   ko: {
     meta: {
-      title: '서비스 약관 - Mangala Living',
-      description: 'Mangala Living 프리미엄 산업용 스칸디나비아 가구 주문 서비스 약관'
+      title: '서비스 약관 - Naturra Extal',
+      description: 'Naturra Extal 프리미엄 산업용 스칸디나비아 가구 주문 서비스 약관'
     },
     hero: {
       title: '서비스 약관'
     },
-    intro: 'Mangala Living 프리미엄 산업용 스칸디나비아 가구 주문 서비스 약관',
+    intro: 'Naturra Extal 프리미엄 산업용 스칸디나비아 가구 주문 서비스 약관',
     sections: {
       howToOrder: {
         title: '주문 방법',

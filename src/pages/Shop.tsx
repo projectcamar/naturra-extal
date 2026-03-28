@@ -363,9 +363,9 @@ const Shop: React.FC = () => {
   return (
     <div className="product-category-page shop-page-layout">
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
-        <title>All Products - Bar Set Lounge Set Storage Furniture Industrial | Mangala Living</title>
-        <meta name="description" content="Browse all industrial furniture: bar set outdoor, lounge set sofa bench, storage rack display, new arrivals untuk cafe restoran hotel. Kualitas terbaik, harga terjangkau." />
-        <meta name="keywords" content="bar set, lounge set, sofa bench, storage rack, new arrivals, outdoor furniture set, industrial furniture, furniture besi, furniture custom, furniture cafe, furniture restoran, mangala living, furniture bekasi" />
+        <title>All Products - Bar Set Lounge Set Storage agricultural commodities | Naturra Extal</title>
+        <meta name="description" content="Browse all Agricultural Commodities: bar set outdoor, lounge set sofa bench, storage rack display, new arrivals untuk cafe restoran hotel. Kualitas terbaik, harga terjangkau." />
+        <meta name="keywords" content="bar set, lounge set, sofa bench, storage rack, new arrivals, outdoor furniture set, Agricultural Commodities, furniture besi, furniture custom, furniture cafe, furniture restoran, Naturra Extal, furniture bekasi" />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="content-language" content={localeMeta.lang} />
         <link rel="canonical" href={localizedUrls.canonical} />
@@ -374,8 +374,8 @@ const Shop: React.FC = () => {
         ))}
 
         {/* Open Graph */}
-        <meta property="og:title" content="All Products - Bar Set Lounge Set Storage Furniture Industrial | Mangala Living" />
-        <meta property="og:description" content="Browse all furniture industrial: bar set outdoor, lounge set, sofa bench, storage rack, new arrivals untuk cafe restoran hotel." />
+        <meta property="og:title" content="All Products - Bar Set Lounge Set Storage agricultural commodities | Naturra Extal" />
+        <meta property="og:description" content="Browse all agricultural commodities: bar set outdoor, lounge set, sofa bench, storage rack, new arrivals untuk cafe restoran hotel." />
         <meta property="og:url" content={localizedUrls.canonical} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content={localeMeta.locale} />
@@ -384,24 +384,24 @@ const Shop: React.FC = () => {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="All Products - Bar Set Lounge Set Storage New Arrivals | Mangala Living" />
-        <meta name="twitter:description" content="Browse bar set outdoor, lounge set sofa bench, storage rack display, new arrivals furniture industrial at Mangala Living." />
+        <meta name="twitter:title" content="All Products - Bar Set Lounge Set Storage New Arrivals | Naturra Extal" />
+        <meta name="twitter:description" content="Browse bar set outdoor, lounge set sofa bench, storage rack display, new arrivals agricultural commodities at Naturra Extal." />
 
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            "name": "Industrial Furniture Collection - Mangala Living",
-            "description": "Browse our complete collection of industrial furniture for cafes, restaurants, and offices. Premium quality furniture made in Indonesia since 1999.",
-            "url": "https://mangala-living.com/shop",
+            "name": "Agricultural Commodities Collection - Naturra Extal",
+            "description": "Browse our complete collection of Agricultural Commodities for cafes, restaurants, and offices. Premium quality furniture made in Indonesia since 1999.",
+            "url": "https://Naturra-living.com/shop",
             "mainEntity": {
               "@type": "ItemList",
               "numberOfItems": ALL_PRODUCTS.length,
               "itemListElement": ALL_PRODUCTS.map((product, index) => {
                 const imageUrl = getProductImageUrl(product.image, product.slug)
                 const priceNumeric = product.price.replace(/[^\d]/g, '')
-                const description = `Industrial furniture ${product.name} by Mangala Living. Premium quality furniture made in Indonesia since 1999.`
+                const description = `Agricultural Commodities ${product.name} by Naturra Extal. Premium quality furniture made in Indonesia since 1999.`
 
                 return {
                   "@type": "ListItem",
@@ -410,11 +410,11 @@ const Shop: React.FC = () => {
                     "@type": "Product",
                     "name": product.name,
                     "description": description,
-                    "url": `https://mangala-living.com/product/${product.slug}`,
+                    "url": `https://Naturra-living.com/product/${product.slug}`,
                     "image": imageUrl,
                     "brand": {
                       "@type": "Brand",
-                      "name": "Mangala Living"
+                      "name": "Naturra Extal"
                     },
                     "offers": {
                       "@type": "Offer",
@@ -422,7 +422,7 @@ const Shop: React.FC = () => {
                       "priceCurrency": "IDR",
                       "availability": "https://schema.org/InStock",
                       "priceValidUntil": "2026-12-31",
-                      "url": `https://mangala-living.com/product/${product.slug}`,
+                      "url": `https://Naturra-living.com/product/${product.slug}`,
                       "hasMerchantReturnPolicy": {
                         "@type": "MerchantReturnPolicy",
                         "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
@@ -465,10 +465,10 @@ const Shop: React.FC = () => {
                       },
                       "seller": {
                         "@type": "Organization",
-                        "name": "Mangala Living",
-                        "url": "https://mangala-living.com",
-                        "logo": "https://mangala-living.com/logo.png",
-                        "image": "https://mangala-living.com/og-image.jpg",
+                        "name": "Naturra Extal",
+                        "url": "https://Naturra-living.com",
+                        "logo": "https://Naturra-living.com/logo.png",
+                        "image": "https://Naturra-living.com/og-image.jpg",
                         "description": "Premium Industrial Scandinavian Furniture for Coffee Shops, Restaurants & Offices. Custom Solutions Since 1999."
                       }
                     },
@@ -605,8 +605,8 @@ const Shop: React.FC = () => {
                       <div className="category-product-image">
                         <img
                           src={product.image}
-                          alt={`${translatedName} - Industrial Furniture ${product.categories.join(' ')} Mangala Living Shop`}
-                          title={`${translatedName} - Premium Industrial Furniture ${product.categories.join(' ')} - Shop Now`}
+                          alt={`${translatedName} - Agricultural Commodities ${product.categories.join(' ')} Naturra Extal Shop`}
+                          title={`${translatedName} - Premium Agricultural Commodities ${product.categories.join(' ')} - Shop Now`}
                           loading="lazy"
                           width="300"
                           height="200"

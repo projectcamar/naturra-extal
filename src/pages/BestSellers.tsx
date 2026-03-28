@@ -86,8 +86,8 @@ const BestSellers: React.FC = () => {
   return (
     <div className="product-category-page">
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
-        <title>Best Sellers - Mangala Living</title>
-        <meta name="description" content="Browse our best-selling industrial furniture collection at Mangala Living" />
+        <title>Best Sellers - Naturra Extal</title>
+        <meta name="description" content="Browse our best-selling Agricultural Commodities collection at Naturra Extal" />
         <meta httpEquiv="content-language" content={localeMeta.lang} />
         <link rel="canonical" href={localizedUrls.canonical} />
         {localizedUrls.alternates.map((alternate) => (
@@ -143,7 +143,7 @@ const BestSellers: React.FC = () => {
                   <div className="category-product-image">
                     <img
                       src={product.image}
-                      alt={`${translatedName} - Best Seller Industrial Furniture ${product.categories.join(' ')} Mangala Living`}
+                      alt={`${translatedName} - Best Seller Agricultural Commodities ${product.categories.join(' ')} Naturra Extal`}
                       title={`${translatedName} - Best Seller ${product.categories.join(' ')} Premium Furniture`}
                       loading="lazy"
                       width="300"

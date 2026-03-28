@@ -94,7 +94,7 @@ const NaturraCustomOrder: React.FC = () => {
             <div className="custom-order-message-text">
               <h2 className="custom-order-message-title">{t.message.title}</h2>
               <div className="custom-order-message-body">
-                {t.message.paragraphs.map((paragraph, index) => (
+                {t.message.paragraphs.map((paragraph: string, index: number) => (
                   <p className="custom-order-message-paragraph" key={`message-paragraph-${index}`}>
                     {paragraph}
                   </p>
@@ -103,7 +103,7 @@ const NaturraCustomOrder: React.FC = () => {
             </div>
             <div className="custom-order-message-image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1596541223130-5d5644a5a6fc?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1495433331362-d44aa5a6fc?auto=format&fit=crop&q=80&w=800"
                 alt={t.message.imageAlt}
                 className="custom-order-message-image"
                 loading="lazy"
@@ -126,7 +126,7 @@ const NaturraCustomOrder: React.FC = () => {
           <h2 className="custom-order-process-main-title">{t.process.title}</h2>
 
           <div className="custom-order-process-grid">
-            {t.process.steps.map((step, index) => (
+            {t.process.steps.map((step: { title: string; description: string }, index: number) => (
               <div className="custom-order-process-item" key={step.title}>
                 <div className="custom-order-process-icon">
                   {index === 0 && <MessageCircle size={48} strokeWidth={1.5} />}

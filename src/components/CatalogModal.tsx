@@ -6,9 +6,9 @@ import { trackEvent } from '../utils/analytics'
 import { getLanguageFromLocation, type LanguageCode } from '../utils/languageManager'
 
 // Import multiple product images for collage
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
+// legacy Naturra image import removed
+// legacy Naturra image import removed
+// legacy Naturra image import removed
 
 interface CatalogModalProps {
   show?: boolean
@@ -29,7 +29,7 @@ const CatalogModal: React.FC<CatalogModalProps> = ({ show, onClose }) => {
   const translations = {
     id: {
       title: 'TERIMA KASIH TELAH MENGUNDUH',
-      subtitle: 'Katalog Mangala 2026 Anda sedang dalam proses! Bergabunglah dengan daftar email kami untuk mendapatkan pembaruan eksklusif. Dengan mengirimkan formulir ini, kami juga akan mengirimkan salinan PDF langsung ke email Anda!',
+      subtitle: 'Katalog Naturra 2026 Anda sedang dalam proses! Bergabunglah dengan daftar email kami untuk mendapatkan pembaruan eksklusif. Dengan mengirimkan formulir ini, kami juga akan mengirimkan salinan PDF langsung ke email Anda!',
       firstName: 'Nama Lengkap',
       email: 'Email',
       whatsapp: 'Nomor WhatsApp',
@@ -37,7 +37,7 @@ const CatalogModal: React.FC<CatalogModalProps> = ({ show, onClose }) => {
     },
     en: {
       title: 'THANK YOU FOR DOWNLOADING',
-      subtitle: 'Your Mangala 2026 Catalog is on its way! Join our emailing list for exclusive updates. By submitting this form, we will also send a PDF copy directly to your email!',
+      subtitle: 'Your Naturra 2026 Catalog is on its way! Join our emailing list for exclusive updates. By submitting this form, we will also send a PDF copy directly to your email!',
       firstName: 'Full Name',
       email: 'Email',
       whatsapp: 'WhatsApp Number',
@@ -69,7 +69,7 @@ const CatalogModal: React.FC<CatalogModalProps> = ({ show, onClose }) => {
     },
     es: {
       title: 'GRACIAS POR DESCARGAR',
-      subtitle: '¡Su catálogo Mangala 2026 está en camino! Únase a nuestra lista de correo para recibir actualizaciones exclusivas. ¡Al enviar este formulario, juga le enviaremos una copia en PDF langsung ke email Anda!',
+      subtitle: '¡Su catálogo Naturra 2026 está en camino! Únase a nuestra lista de correo para recibir actualizaciones exclusivas. ¡Al enviar este formulario, juga le enviaremos una copia en PDF langsung ke email Anda!',
       firstName: 'Nombre completo',
       email: 'Correo electrónico',
       whatsapp: 'Número de WhatsApp',
@@ -77,7 +77,7 @@ const CatalogModal: React.FC<CatalogModalProps> = ({ show, onClose }) => {
     },
     fr: {
       title: 'MERCI D\'AVOIR TÉLÉCHARGÉ',
-      subtitle: 'Votre catalogue Mangala 2026 est en route ! Rejoignez notre liste de diffusion untuk des mises à jour exclusives. En soumettant ce formulaire, nous vous enverrons également une copie PDF directement sur votre e-mail !',
+      subtitle: 'Votre catalogue Naturra 2026 est en route ! Rejoignez notre liste de diffusion untuk des mises à jour exclusives. En soumettant ce formulaire, nous vous enverrons également une copie PDF directement sur votre e-mail !',
       firstName: 'Nom complet',
       email: 'E-mail',
       whatsapp: 'Nomor WhatsApp',
@@ -137,7 +137,7 @@ const CatalogModal: React.FC<CatalogModalProps> = ({ show, onClose }) => {
 
       // Store in localStorage
       try {
-        localStorage.setItem('mangala_lang_preference', detectedLang)
+        localStorage.setItem('Naturra_lang_preference', detectedLang)
       } catch (error) {
         console.warn('Failed to store language preference in localStorage:', error)
       }
@@ -157,12 +157,12 @@ const CatalogModal: React.FC<CatalogModalProps> = ({ show, onClose }) => {
       }
 
       // Check visit history
-      const hasVisitedBefore = localStorage.getItem('hasVisitedMangala')
+      const hasVisitedBefore = localStorage.getItem('hasVisitedNaturra')
       let shouldShow = false
 
       if (!hasVisitedBefore) {
         shouldShow = true
-        localStorage.setItem('hasVisitedMangala', 'true')
+        localStorage.setItem('hasVisitedNaturra', 'true')
       } else {
         shouldShow = Math.random() < 0.7
       }
@@ -275,7 +275,7 @@ const CatalogModal: React.FC<CatalogModalProps> = ({ show, onClose }) => {
                 <div className="collage-image collage-image-1">
                   <img
                     src={catalogPreview1}
-                    alt="Mangala Living Industrial Furniture - Corner Bench"
+                    alt="Naturra Extal Agricultural Commodities - Corner Bench"
                     loading="lazy"
                   />
                 </div>
@@ -283,7 +283,7 @@ const CatalogModal: React.FC<CatalogModalProps> = ({ show, onClose }) => {
                 <div className="collage-image collage-image-2">
                   <img
                     src={catalogPreview2}
-                    alt="Mangala Living Industrial Furniture - Dining Table"
+                    alt="Naturra Extal Agricultural Commodities - Dining Table"
                     loading="lazy"
                   />
                 </div>
@@ -291,7 +291,7 @@ const CatalogModal: React.FC<CatalogModalProps> = ({ show, onClose }) => {
                 <div className="collage-image collage-image-3">
                   <img
                     src={catalogPreview3}
-                    alt="Mangala Living Industrial Furniture - Bar Chair"
+                    alt="Naturra Extal Agricultural Commodities - Bar Chair"
                     loading="lazy"
                   />
                 </div>

@@ -35,15 +35,15 @@ const ProductDetailAIContent: React.FC<ProductDetailAIContentProps> = ({ product
       <section>
         <h2>
           {isIndonesian 
-            ? `${product.name} - Industrial Furniture Berkualitas Tinggi` 
-            : `${product.name} - High Quality Industrial Furniture`
+            ? `${product.name} - Agricultural Commodities Berkualitas Tinggi` 
+            : `${product.name} - High Quality Agricultural Commodities`
           }
         </h2>
         
         <p>
           {isIndonesian 
-            ? `${product.name} adalah furniture industrial besi custom berkualitas premium dari Mangala Living Bekasi. Produk ini termasuk dalam kategori ${product.categories.join(', ')} dengan harga ${product.price}. Diproduksi di workshop kami di Bekasi sejak 1999 dengan material industrial grade dan teknik pengelasan profesional.`
-            : `${product.name} is a premium custom industrial steel furniture from Mangala Living Bekasi. This product falls under ${product.categories.join(', ')} category priced at ${product.price}. Manufactured in our Bekasi workshop since 1999 with industrial grade materials and professional welding techniques.`
+            ? `${product.name} adalah agricultural commodities besi custom berkualitas premium dari Naturra Extal Bekasi. Produk ini termasuk dalam kategori ${product.categories.join(', ')} dengan harga ${product.price}. Diproduksi di workshop kami di Bekasi sejak 1999 dengan material industrial grade dan teknik pengelasan profesional.`
+            : `${product.name} is a premium custom industrial steel furniture from Naturra Extal Bekasi. This product falls under ${product.categories.join(', ')} category priced at ${product.price}. Manufactured in our Bekasi workshop since 1999 with industrial grade materials and professional welding techniques.`
           }
         </p>
       </section>
@@ -121,8 +121,8 @@ const ProductDetailAIContent: React.FC<ProductDetailAIContentProps> = ({ product
         
         <p>
           {isIndonesian 
-            ? `Workshop Mangala Living berlokasi strategis di Bekasi, melayani pemesanan ${product.name} untuk seluruh area Jabodetabek dan Indonesia. Lokasi kami mudah diakses dari Jakarta Timur, Bekasi, Cikarang, Cibitung, dan sekitarnya.`
-            : `Mangala Living workshop is strategically located in Bekasi, serving ${product.name} orders for the entire Jabodetabek area and Indonesia. Our location is easily accessible from East Jakarta, Bekasi, Cikarang, Cibitung, and surrounding areas.`
+            ? `Workshop Naturra Extal berlokasi strategis di Bekasi, melayani pemesanan ${product.name} untuk seluruh area Jabodetabek dan Indonesia. Lokasi kami mudah diakses dari Jakarta Timur, Bekasi, Cikarang, Cibitung, dan sekitarnya.`
+            : `Naturra Extal workshop is strategically located in Bekasi, serving ${product.name} orders for the entire Jabodetabek area and Indonesia. Our location is easily accessible from East Jakarta, Bekasi, Cikarang, Cibitung, and surrounding areas.`
           }
         </p>
         
@@ -147,8 +147,8 @@ const ProductDetailAIContent: React.FC<ProductDetailAIContentProps> = ({ product
       <section>
         <h3>
           {isIndonesian 
-            ? `Cara Order ${product.name} dari Mangala Living` 
-            : `How to Order ${product.name} from Mangala Living`
+            ? `Cara Order ${product.name} dari Naturra Extal` 
+            : `How to Order ${product.name} from Naturra Extal`
           }
         </h3>
         
@@ -234,7 +234,7 @@ const ProductDetailAIContent: React.FC<ProductDetailAIContentProps> = ({ product
         <ul>
           <li><strong>MIG Welding:</strong> {isIndonesian ? 'Untuk hasil las yang rapi dan kuat' : 'For neat and strong welding results'}</li>
           <li><strong>TIG Welding:</strong> {isIndonesian ? 'Untuk detailing presisi dan finishing halus' : 'For precision detailing and smooth finishing'}</li>
-          <li><strong>{isIndonesian ? 'Welder Bersertifikat:' : 'Certified Welders:'}</strong> {isIndonesian ? 'Pengalaman 10+ tahun di industrial furniture' : '10+ years experience in industrial furniture'}</li>
+          <li><strong>{isIndonesian ? 'Welder Bersertifikat:' : 'Certified Welders:'}</strong> {isIndonesian ? 'Pengalaman 10+ tahun di Agricultural Commodities' : '10+ years experience in Agricultural Commodities'}</li>
         </ul>
         
         <h4>{isIndonesian ? 'Finishing Options:' : 'Finishing Options:'}</h4>
@@ -281,8 +281,8 @@ const ProductDetailAIContent: React.FC<ProductDetailAIContentProps> = ({ product
       <section>
         <h3>
           {isIndonesian 
-            ? `Kenapa Pilih ${product.name} dari Mangala Living?` 
-            : `Why Choose ${product.name} from Mangala Living?`
+            ? `Kenapa Pilih ${product.name} dari Naturra Extal?` 
+            : `Why Choose ${product.name} from Naturra Extal?`
           }
         </h3>
         
@@ -291,7 +291,7 @@ const ProductDetailAIContent: React.FC<ProductDetailAIContentProps> = ({ product
           <thead>
             <tr>
               <th>{isIndonesian ? 'Aspek' : 'Aspect'}</th>
-              <th>Mangala Living</th>
+              <th>Naturra Extal</th>
               <th>{isIndonesian ? 'Kompetitor Lokal' : 'Local Competitors'}</th>
               <th>{isIndonesian ? 'Toko Furniture Retail' : 'Retail Furniture Stores'}</th>
             </tr>
@@ -348,7 +348,7 @@ const ProductDetailAIContent: React.FC<ProductDetailAIContentProps> = ({ product
           </tbody>
         </table>
         
-        <h4>{isIndonesian ? 'Keunggulan Mangala Living:' : 'Mangala Living Advantages:'}</h4>
+        <h4>{isIndonesian ? 'Keunggulan Naturra Extal:' : 'Naturra Extal Advantages:'}</h4>
         <ul>
           <li>{isIndonesian ? 'Workshop sendiri di Bekasi - kontrol kualitas 100%' : 'Own workshop in Bekasi - 100% quality control'}</li>
           <li>{isIndonesian ? 'Pengalaman 25+ tahun melayani 1000+ bisnis' : '25+ years experience serving 1000+ businesses'}</li>
@@ -460,15 +460,15 @@ const ProductDetailAIContent: React.FC<ProductDetailAIContentProps> = ({ product
         
         <p>
           <strong>WhatsApp/Telp:</strong> +6288801146881 <br/>
-          <strong>Email:</strong> lifewithmangala@gmail.com <br/>
+          <strong>Email:</strong> lifewithNaturra@gmail.com <br/>
           <strong>{isIndonesian ? 'Alamat Workshop:' : 'Workshop Address:'}</strong> Jl. Raya Setu Cibitung - Bekasi, Telajung, Kec. Cikarang Bar., Kabupaten Bekasi, Jawa Barat 17320 <br/>
           <strong>{isIndonesian ? 'Jam Operasional:' : 'Operating Hours:'}</strong> {isIndonesian ? 'Senin - Sabtu, 08.00 - 17.00 WIB' : 'Monday - Saturday, 08.00 - 17.00 WIB'}
         </p>
         
         <p>
           {isIndonesian 
-            ? `Tertarik dengan ${product.name}? Hubungi kami sekarang untuk konsultasi gratis! Tim kami siap membantu mewujudkan furniture industrial impian Anda dengan harga pabrik dan kualitas premium. Fast response via WhatsApp!`
-            : `Interested in ${product.name}? Contact us now for free consultation! Our team is ready to help realize your dream industrial furniture with factory prices and premium quality. Fast response via WhatsApp!`
+            ? `Tertarik dengan ${product.name}? Hubungi kami sekarang untuk konsultasi gratis! Tim kami siap membantu mewujudkan agricultural commodities impian Anda dengan harga pabrik dan kualitas premium. Fast response via WhatsApp!`
+            : `Interested in ${product.name}? Contact us now for free consultation! Our team is ready to help realize your dream Agricultural Commodities with factory prices and premium quality. Fast response via WhatsApp!`
           }
         </p>
       </section>
@@ -478,13 +478,13 @@ const ProductDetailAIContent: React.FC<ProductDetailAIContentProps> = ({ product
         <p>
           <small>
             <strong>{isIndonesian ? 'Keywords terkait:' : 'Related keywords:'}</strong> 
-            {` ${product.name}, ${product.name.toLowerCase()}, furniture industrial bekasi, furniture besi custom, ${categoryContext.toLowerCase()} bekasi, 
+            {` ${product.name}, ${product.name.toLowerCase()}, agricultural commodities bekasi, furniture besi custom, ${categoryContext.toLowerCase()} bekasi, 
             ${categoryContext.toLowerCase()} industrial, harga ${product.name.toLowerCase()}, jual ${product.name.toLowerCase()}, 
             ${product.name.toLowerCase()} murah, ${product.name.toLowerCase()} berkualitas, workshop furniture bekasi, 
             furniture cafe bekasi, furniture restoran bekasi, furniture hotel bekasi, furniture kantor bekasi, 
             custom furniture bekasi, bikin furniture besi, order furniture custom, furniture besi tahan lama, 
-            furniture industrial jakarta, furniture bekasi timur, furniture cikarang, furniture powder coating, 
-            mangala living, mangala living bekasi, furniture manufacturer bekasi, furniture pabrik bekasi`}
+            agricultural commodities jakarta, furniture bekasi timur, furniture cikarang, furniture powder coating, 
+            Naturra Extal, Naturra Extal bekasi, furniture manufacturer bekasi, furniture pabrik bekasi`}
           </small>
         </p>
       </section>

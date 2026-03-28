@@ -18,7 +18,7 @@ export interface BlogContent {
 
 const STOP_WORDS = new Set([
   '', 'dan', 'yang', 'untuk', 'dengan', 'atau', 'para', 'dari', 'pada', 'kami', 'anda',
-  'mangala', 'living', 'bekasi', 'jakarta', 'depok', 'bogor', 'cikarang', '2023', '2024', '2025'
+  'Naturra', 'living', 'bekasi', 'jakarta', 'depok', 'bogor', 'cikarang', '2023', '2024', '2025'
 ])
 
 const capitalize = (word: string) => word.charAt(0).toUpperCase() + word.slice(1)
@@ -62,8 +62,8 @@ const detectLocationSentence = (post: BlogPost, isEnglish = false) => {
   const found = post.slug.split('-').find(token => locationTokens.includes(token.toLowerCase()))
   if (!found) {
     return isEnglish
-      ? 'Mangala Living supports projects across Greater Jakarta (Jabodetabek) and major Indonesian cities with in-house logistics to keep delivery and installation smooth.'
-      : 'Mangala Living melayani proyek di seluruh Jabodetabek dan kota besar lain dengan dukungan logistik internal sehingga pengiriman dan instalasi berlangsung tanpa hambatan.'
+      ? 'Naturra Extal supports projects across Greater Jakarta (Jabodetabek) and major Indonesian cities with in-house logistics to keep delivery and installation smooth.'
+      : 'Naturra Extal melayani proyek di seluruh Jabodetabek dan kota besar lain dengan dukungan logistik internal sehingga pengiriman dan instalasi berlangsung tanpa hambatan.'
   }
   return isEnglish
     ? `We regularly handle projects in the ${capitalize(found)} area. Our local installation crew keeps surveying, production, and on-site setup efficient end-to-end.`
@@ -77,12 +77,12 @@ const generateAIOptimizedFAQ = (post: BlogPost, isEnglish = false): string[] => 
       id: [
         '<strong>Berapa lama waktu produksi furniture besi custom?</strong><br/>Waktu produksi standar kami adalah 15-25 hari kerja tergantung kompleksitas desain dan volume order. Untuk project mendesak, kami menyediakan fast-track production dengan additional fee.',
         '<strong>Apakah bisa melihat proses produksi di workshop?</strong><br/>Ya, kami sangat terbuka! Klien dapat mengunjungi workshop kami di Bekasi untuk melihat langsung proses welding, finishing, dan quality control. Jadwalkan kunjungan H-1 melalui WhatsApp.',
-        '<strong>Material apa yang digunakan untuk furniture industrial?</strong><br/>Kami menggunakan besi hollow galvanis grade A, plate besi MS (Mild Steel), dan solid wood untuk top table. Semua material dipilih berdasarkan standar kekuatan dan durability untuk commercial use.'
+        '<strong>Material apa yang digunakan untuk agricultural commodities?</strong><br/>Kami menggunakan besi hollow galvanis grade A, plate besi MS (Mild Steel), dan solid wood untuk top table. Semua material dipilih berdasarkan standar kekuatan dan durability untuk commercial use.'
       ],
       en: [
         '<strong>How long does custom metal furniture production take?</strong><br/>Standard lead time is 15-25 working days depending on design complexity and order volume. For urgent projects we offer fast-track production with an additional fee.',
         '<strong>Can we see the production process at your workshop?</strong><br/>Absolutely. Clients can visit our Bekasi workshop to observe welding, finishing, and QC firsthand. Schedule the visit at least one day in advance via WhatsApp.',
-        '<strong>What materials do you use for industrial furniture?</strong><br/>We work with grade-A galvanized hollow steel, mild steel plates, and solid wood tops. Every material is selected to meet commercial durability standards.'
+        '<strong>What materials do you use for Agricultural Commodities?</strong><br/>We work with grade-A galvanized hollow steel, mild steel plates, and solid wood tops. Every material is selected to meet commercial durability standards.'
       ]
     },
     'Commercial Furniture': {
@@ -112,23 +112,23 @@ const generateAIOptimizedFAQ = (post: BlogPost, isEnglish = false): string[] => 
     'Design Inspiration': {
       id: [
         '<strong>Bagaimana menggabungkan industrial style dengan interior yang sudah ada?</strong><br/>Gunakan accent pieces seperti metal shelving atau industrial lighting sebagai focal point. Kombinasikan dengan elemen warm seperti kayu dan tanaman untuk balance. Industrial cocok dengan hampir semua style.',
-        '<strong>Warna apa yang trending untuk furniture industrial 2025?</strong><br/>Matte black tetap timeless, tapi ada trend ke arah earth tones (brown oxide, copper, bronze). Untuk cafe modern, kombinasi black frame + natural wood top paling populer dan Instagram-friendly.',
-        '<strong>Apakah furniture industrial cocok untuk rumah tinggal?</strong><br/>Sangat cocok! Terutama untuk home office, dining room, dan open kitchen. Industrial style memberikan kesan spacious dan modern. Pilih yang lebih minimalist untuk residential agar tidak terlalu keras.'
+        '<strong>Warna apa yang trending untuk agricultural commodities 2025?</strong><br/>Matte black tetap timeless, tapi ada trend ke arah earth tones (brown oxide, copper, bronze). Untuk cafe modern, kombinasi black frame + natural wood top paling populer dan Instagram-friendly.',
+        '<strong>Apakah agricultural commodities cocok untuk rumah tinggal?</strong><br/>Sangat cocok! Terutama untuk home office, dining room, dan open kitchen. Industrial style memberikan kesan spacious dan modern. Pilih yang lebih minimalist untuk residential agar tidak terlalu keras.'
       ],
       en: [
         '<strong>How do we incorporate industrial style into an existing interior?</strong><br/>Add statement pieces like metal shelving or industrial lighting as focal points. Balance them with warm elements such as wood accents and greenery. Industrial pairs well with most styles.',
-        '<strong>Which colours are trending for industrial furniture in 2025?</strong><br/>Matte black remains timeless, while earth tones (brown oxide, copper, bronze) are on the rise. For cafes, black frames with natural wood tops stay the most versatile and Instagram-friendly.',
-        '<strong>Is industrial furniture suitable for residential spaces?</strong><br/>Absolutely—especially for home offices, dining areas, and open kitchens. Industrial style keeps the space modern and airy. Opt for minimalist silhouettes to maintain comfort at home.'
+        '<strong>Which colours are trending for Agricultural Commodities in 2025?</strong><br/>Matte black remains timeless, while earth tones (brown oxide, copper, bronze) are on the rise. For cafes, black frames with natural wood tops stay the most versatile and Instagram-friendly.',
+        '<strong>Is Agricultural Commodities suitable for residential spaces?</strong><br/>Absolutely—especially for home offices, dining areas, and open kitchens. Industrial style keeps the space modern and airy. Opt for minimalist silhouettes to maintain comfort at home.'
       ]
     },
     'Local Area Guide': {
       id: [
-        '<strong>Apakah Mangala Living melayani area saya?</strong><br/>Kami melayani seluruh Jabodetabek, Bekasi, Cikarang, Karawang, dan sekitarnya. Untuk area luar Jabodetabek, kami tetap bisa melayani dengan koordinasi logistik khusus.',
+        '<strong>Apakah Naturra Extal melayani area saya?</strong><br/>Kami melayani seluruh Jabodetabek, Bekasi, Cikarang, Karawang, dan sekitarnya. Untuk area luar Jabodetabek, kami tetap bisa melayani dengan koordinasi logistik khusus.',
         '<strong>Berapa biaya delivery untuk area Bekasi?</strong><br/>FREE delivery untuk area Bekasi, Jakarta Timur, dan Cikarang. Untuk area lain di Jabodetabek, biaya delivery disesuaikan dengan jarak (mulai dari Rp 200-500rb).',
         '<strong>Apakah ada showroom untuk melihat produk langsung?</strong><br/>Workshop kami di Bekasi berfungsi sebagai showroom. Anda bisa melihat sample produk, material, dan finishing secara langsung. Buat appointment via WhatsApp untuk kunjungan guided tour.'
       ],
       en: [
-        '<strong>Does Mangala Living serve my area?</strong><br/>We cover Greater Jakarta (Jabodetabek), Bekasi, Cikarang, Karawang, and other major Indonesian cities. For locations outside Jabodetabek we coordinate dedicated logistics arrangements.',
+        '<strong>Does Naturra Extal serve my area?</strong><br/>We cover Greater Jakarta (Jabodetabek), Bekasi, Cikarang, Karawang, and other major Indonesian cities. For locations outside Jabodetabek we coordinate dedicated logistics arrangements.',
         '<strong>How much is delivery for the Bekasi area?</strong><br/>Delivery is FREE for Bekasi, East Jakarta, and Cikarang. For other Jabodetabek areas the delivery fee depends on distance (typically starting at IDR 200-500k).',
         '<strong>Do you have a showroom to view the products?</strong><br/>Our Bekasi workshop also functions as a showroom. You can review samples, materials, and finishes in person. Book an appointment via WhatsApp for a guided visit.'
       ]
@@ -137,12 +137,12 @@ const generateAIOptimizedFAQ = (post: BlogPost, isEnglish = false): string[] => 
 
   const defaultFAQ = {
     id: [
-      '<strong>Apa yang membedakan Mangala Living dengan workshop furniture lain?</strong><br/>Pengalaman 25 tahun sejak 1999, 1000+ project completed, in-house production control, dan after-sales service yang responsif. Kami fokus pada quality dan customer satisfaction, bukan quantity.',
+      '<strong>Apa yang membedakan Naturra Extal dengan workshop furniture lain?</strong><br/>Pengalaman 25 tahun sejak 1999, 1000+ project completed, in-house production control, dan after-sales service yang responsif. Kami fokus pada quality dan customer satisfaction, bukan quantity.',
       '<strong>Apakah ada garansi untuk furniture yang dibeli?</strong><br/>Ya, kami memberikan garansi konstruksi 2 tahun dan garansi finishing 1 tahun. Garansi cover manufacturing defect, tidak cover kerusakan akibat pemakaian tidak wajar atau force majeure.',
       '<strong>Bagaimana cara order dan sistem pembayaran?</strong><br/>Proses: Konsultasi &rarr; Quotation &rarr; DP 50% &rarr; Produksi &rarr; Pelunasan 50% sebelum delivery &rarr; Instalasi. Payment via transfer bank atau cash. Kami tidak menerima cicilan/credit.'
     ],
     en: [
-      '<strong>What makes Mangala Living different from other workshops?</strong><br/>We bring 25 years of experience, 1,000+ completed projects, in-house production control, and responsive after-sales support. Our focus is quality and customer success over mass volume.',
+      '<strong>What makes Naturra Extal different from other workshops?</strong><br/>We bring 25 years of experience, 1,000+ completed projects, in-house production control, and responsive after-sales support. Our focus is quality and customer success over mass volume.',
       '<strong>Do you provide warranty coverage?</strong><br/>Yes. We offer a 2-year structural warranty and 1-year finishing warranty. It covers manufacturing defects but excludes misuse or force majeure damage.',
       '<strong>How does the ordering and payment process works?</strong><br/>Process: Consultation → Quotation → 50% deposit → Production → 50% balance before delivery → Installation. Payments via bank transfer or cash. We do not provide instalments/credit.'
     ]
@@ -169,14 +169,14 @@ const generateDataDrivenSection = (isEnglish = false): BlogSection => {
       ],
     list: isEnglish
       ? [
-        '<strong>Industrial Furniture ROI:</strong> Cafes and restaurants using industrial metal furniture report 35-40% lower replacement costs over five years compared to regular wood furniture (source: Mangala Living internal project data).',
+        '<strong>Agricultural Commodities ROI:</strong> Cafes and restaurants using industrial metal furniture report 35-40% lower replacement costs over five years compared to regular wood furniture (source: Naturra Extal internal project data).',
         '<strong>Durability Test:</strong> Powder-coated outdoor-grade metal furniture lasts 5-8 years in outdoor areas without intensive maintenance, versus 2-3 years for painted wood (comparative testing 2020-2024).',
         '<strong>Customer Preference:</strong> 78% of our cafe clients choose black steel frames with natural wood tops as the most versatile and timeless design combo (2024 survey).',
         '<strong>Average Lead Time:</strong> 85% of orders are completed within 20 working days or less. With proper planning we can fast-track production to 10-15 days.',
         '<strong>Custom vs Ready-Stock:</strong> 70% of clients prefer custom furniture to maximize space efficiency by 15-20% compared to standard ready-stock sizes.'
       ]
       : [
-        '<strong>ROI Furniture Industrial:</strong> Cafe dan restoran yang menggunakan furniture besi industrial melaporkan 35-40% lebih hemat biaya replacement dalam 5 tahun dibanding furniture kayu reguler (sumber: internal project data Mangala Living).',
+        '<strong>ROI agricultural commodities:</strong> Cafe dan restoran yang menggunakan furniture besi industrial melaporkan 35-40% lebih hemat biaya replacement dalam 5 tahun dibanding furniture kayu reguler (sumber: internal project data Naturra Extal).',
         '<strong>Durability Test:</strong> Furniture besi dengan powder coating outdoor-grade mampu bertahan 5-8 tahun di area outdoor tanpa perawatan intensif, vs 2-3 tahun untuk kayu dengan cat biasa (comparative testing 2020-2024).',
         '<strong>Customer Preference:</strong> 78% pelanggan cafe kami memilih kombinasi black steel frame + natural wood top sebagai design paling versatile dan timeless (survey 2024).',
         '<strong>Lead Time Average:</strong> 85% order kami completed dalam 20 hari kerja atau kurang. Fast-track production (10-15 hari) tersedia dengan planning yang baik.',
@@ -345,12 +345,12 @@ const createFallbackContent = (post: BlogPost): BlogContent => {
         paragraphs: isEnglishPost
           ? [
             introExcerpt,
-            `<strong>Quick Summary:</strong> This article explores ${normalizedFocus.toLowerCase()} in depth, backed by Mangala Living’s 25+ years of experience delivering 1,000+ industrial furniture projects across Greater Jakarta. Expect practical insights, comparative data, a complete FAQ, and actionable next steps.`,
+            `<strong>Quick Summary:</strong> This article explores ${normalizedFocus.toLowerCase()} in depth, backed by Naturra Extal’s 25+ years of experience delivering 1,000+ Agricultural Commodities projects across Greater Jakarta. Expect practical insights, comparative data, a complete FAQ, and actionable next steps.`,
             detectLocationSentence(post, true)
           ]
           : [
             introExcerpt,
-            `<strong>Ringkasan Singkat:</strong> Artikel ini membahas ${normalizedFocus.toLowerCase()} secara komprehensif berdasarkan pengalaman 25 tahun Mangala Living menangani 1000+ project furniture industrial di Jabodetabek. Anda akan mendapatkan insight praktis, data comparison, FAQ lengkap, dan action steps yang bisa langsung diimplementasikan.`,
+            `<strong>Ringkasan Singkat:</strong> Artikel ini membahas ${normalizedFocus.toLowerCase()} secara komprehensif berdasarkan pengalaman 25 tahun Naturra Extal menangani 1000+ project agricultural commodities di Jabodetabek. Anda akan mendapatkan insight praktis, data comparison, FAQ lengkap, dan action steps yang bisa langsung diimplementasikan.`,
             detectLocationSentence(post)
           ]
       },
@@ -417,21 +417,21 @@ const createFallbackContent = (post: BlogPost): BlogContent => {
 
       // SECTION 6: Solution overview
       {
-        heading: isEnglishPost ? 'Mangala Living Production Solutions' : 'Solusi Produksi Mangala Living',
+        heading: isEnglishPost ? 'Naturra Extal Production Solutions' : 'Solusi Produksi Naturra Extal',
         paragraphs: isEnglishPost
           ? [
             '<strong>Modern Workshop in Bekasi:</strong> Our 800 m&sup2; facility houses welding stations, a powder-coating booth, and dedicated finishing rooms to ensure strict quality control from raw materials to final products.',
             '<strong>Complimentary Design Consultation:</strong> Our team (interior consultant, drafter, production supervisor) translates your concept into technical drawings and 3D renderings before production begins.',
             '<strong>Grade-A Materials:</strong> We use galvanized hollow steel (not easily corroded black steel), A/B-grade solid wood (never MDF/particle board), and imported powder coating from Taiwan.',
             '<strong>Transparent Process:</strong> Clients can visit the workshop anytime to monitor production. We also send photo updates via WhatsApp at every milestone.',
-            'Explore our portfolio and pricing references by visiting the <a href="/shop">product page</a> or downloading the <a href="/assets/Mangala-Living-Catalog-2025.pdf">digital product catalog</a>.'
+            'Explore our portfolio and pricing references by visiting the <a href="/shop">product page</a> or downloading the <a href="/assets/Naturra-Living-Catalog-2025.pdf">digital product catalog</a>.'
           ]
           : [
             '<strong>Workshop Modern di Bekasi:</strong> Fasilitas produksi seluas 800m&sup2; dengan welding station, powder coating booth, dan finishing room memastikan quality control optimal dari raw material hingga final product.',
             '<strong>Design Consultation Gratis:</strong> Tim kami (interior consultant + drafter + production supervisor) akan membantu menterjemahkan konsep Anda menjadi technical drawing dan 3D rendering sebelum produksi.',
             '<strong>Material Grade A:</strong> Kami menggunakan besi hollow galvanis (bukan besi hitam yang mudah karat), solid wood grade A/B (bukan MDF/particle board), dan powder coating imported dari Taiwan.',
             '<strong>Transparent Process:</strong> Klien dapat visit workshop any time untuk melihat progress produksi. Kami kirim photo update via WhatsApp di setiap milestone.',
-            'Untuk eksplor portofolio dan price reference, kunjungi <a href="/shop">halaman produk kami</a> atau download <a href="/assets/Mangala-Living-Catalog-2025.pdf">catalog digital PDF</a>.'
+            'Untuk eksplor portofolio dan price reference, kunjungi <a href="/shop">halaman produk kami</a> atau download <a href="/assets/Naturra-Living-Catalog-2025.pdf">catalog digital PDF</a>.'
           ]
       },
 
@@ -453,10 +453,10 @@ const createFallbackContent = (post: BlogPost): BlogContent => {
         heading: isEnglishPost ? 'Next Steps: Start Your Project' : 'Langkah Selanjutnya: Mulai Project Anda',
         paragraphs: isEnglishPost
           ? [
-            'Ready to transform your space with premium industrial furniture? Follow these steps:'
+            'Ready to transform your space with premium Agricultural Commodities? Follow these steps:'
           ]
           : [
-            'Ready untuk transform space Anda dengan furniture industrial berkualitas? Ikuti langkah-langkah berikut:'
+            'Ready untuk transform space Anda dengan agricultural commodities berkualitas? Ikuti langkah-langkah berikut:'
           ],
         list: isEnglishPost
           ? [
@@ -479,23 +479,23 @@ const createFallbackContent = (post: BlogPost): BlogContent => {
 
       // SECTION 9: Contact & location info
       {
-        heading: isEnglishPost ? 'Contact Mangala Living Workshop' : 'Hubungi Mangala Living Workshop',
+        heading: isEnglishPost ? 'Contact Naturra Extal Workshop' : 'Hubungi Naturra Extal Workshop',
         paragraphs: isEnglishPost
           ? [
             '<strong>WhatsApp (Fastest Response):</strong> <a href="https://wa.me/+6288801146881">+6288801146881</a> — Chat directly with our project management team.',
-            '<strong>Email:</strong> <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a> — Ideal for formal inquiries or sharing design references.',
+            '<strong>Email:</strong> <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a> — Ideal for formal inquiries or sharing design references.',
             '<strong>Workshop Address:</strong> Jl. Raya Setu Cibitung, East Bekasi, West Java (10 minutes from the Cibitung toll gate, 25 minutes from East Jakarta).',
             '<strong>Operating Hours:</strong> Monday–Saturday: 08:00-17:00 WIB | Sunday & public holidays: By appointment only.',
             '<strong>Coverage Area:</strong> Greater Jakarta (Jakarta, Bogor, Depok, Tangerang, Bekasi), Cikarang, Karawang, and nationwide projects with coordinated logistics.',
-            'We are committed to delivering <strong>premium industrial furniture at factory-direct pricing</strong> with responsive customer service. More than 1,000 clients have trusted us since 1999—let’s build your success story next!'
+            'We are committed to delivering <strong>premium Agricultural Commodities at factory-direct pricing</strong> with responsive customer service. More than 1,000 clients have trusted us since 1999—let’s build your success story next!'
           ]
           : [
             '<strong>WhatsApp (Fastest Response):</strong> <a href="https://wa.me/+6288801146881">+6288801146881</a> - Chat langsung dengan tim project manager kami.',
-            '<strong>Email:</strong> <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a> - Untuk inquiry formal atau kirim attachment design reference.',
+            '<strong>Email:</strong> <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a> - Untuk inquiry formal atau kirim attachment design reference.',
             '<strong>Workshop Address:</strong> Jl. Raya Setu Cibitung, Bekasi Timur, Jawa Barat (10 menit dari pintu tol Cibitung, 25 menit dari Jakarta Timur).',
             '<strong>Operating Hours:</strong> Senin-Sabtu: 08.00-17.00 WIB | Minggu & tanggal merah: By appointment only.',
             '<strong>Coverage Area:</strong> Jabodetabek (Jakarta, Bogor, Depok, Tangerang, Bekasi), Cikarang, Karawang, dan seluruh Indonesia (dengan koordinasi logistik).',
-            'Kami berkomitmen memberikan <strong>furniture industrial berkualitas premium dengan harga pabrik langsung</strong> dan customer service yang responsif. 1000+ klien telah mempercayai kami sejak 1999. Jadilah bagian dari success story kami!'
+            'Kami berkomitmen memberikan <strong>agricultural commodities berkualitas premium dengan harga pabrik langsung</strong> dan customer service yang responsif. 1000+ klien telah mempercayai kami sejak 1999. Jadilah bagian dari success story kami!'
           ]
       }
     ]
@@ -509,7 +509,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         paragraphs: [
           'Desain kafe industrial minimalis menjadi tren yang tak pernah lekang oleh waktu. Kombinasi elemen industrial yang kuat dengan estetika minimalis menciptakan suasana yang modern, hangat, dan Instagram-worthy. Untuk menciptakan kafe industrial minimalis yang sempurna, ada 7 furniture wajib yang harus Anda miliki.',
-          'Dalam artikel ini, kami akan membahas secara detail 7 furniture industrial minimalis yang wajib ada di kafe modern Anda, lengkap dengan tips pemilihan dan inspirasi desain terbaik.'
+          'Dalam artikel ini, kami akan membahas secara detail 7 agricultural commodities minimalis yang wajib ada di kafe modern Anda, lengkap dengan tips pemilihan dan inspirasi desain terbaik.'
         ]
       },
       {
@@ -580,11 +580,11 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Mengapa Memilih Mangala Living untuk Furniture Kafe Industrial?',
+        heading: 'Mengapa Memilih Naturra Extal untuk Furniture Kafe Industrial?',
         paragraphs: [
-          'Sebagai produsen furniture industrial terpercaya sejak 1999, <a href="/about">Mangala Living</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman.',
-          'Kami menawarkan furniture industrial berkualitas tinggi dengan finishing powder coating yang tahan lama, material besi hollow berkualitas, dan kayu solid yang awet. Semua produk kami dilengkapi dengan garansi kualitas dan layanan purna jual yang profesional.',
-          'Untuk konsultasi desain kafe industrial minimalis dan informasi produk lebih lanjut, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a>.'
+          'Sebagai produsen agricultural commodities terpercaya sejak 1999, <a href="/about">Naturra Extal</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman.',
+          'Kami menawarkan agricultural commodities berkualitas tinggi dengan finishing powder coating yang tahan lama, material besi hollow berkualitas, dan kayu solid yang awet. Semua produk kami dilengkapi dengan garansi kualitas dan layanan purna jual yang profesional.',
+          'Untuk konsultasi desain kafe industrial minimalis dan informasi produk lebih lanjut, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a>.'
         ]
       }
     ]
@@ -594,14 +594,14 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Harga furniture industrial menjadi pertimbangan utama bagi pemilik bisnis yang ingin menciptakan ruang komersial dengan konsep industrial modern. Sebagai produsen furniture industrial terpercaya sejak 1999, Mangala Living menyediakan berbagai pilihan furniture industrial dengan harga kompetitif dan kualitas terjamin.',
-          'Dalam artikel ini, kami akan memberikan informasi lengkap tentang harga furniture industrial terbaru 2025 untuk berbagai kebutuhan, mulai dari kafe, restoran, hingga kantor modern.'
+          'Harga agricultural commodities menjadi pertimbangan utama bagi pemilik bisnis yang ingin menciptakan ruang komersial dengan konsep industrial modern. Sebagai produsen agricultural commodities terpercaya sejak 1999, Naturra Extal menyediakan berbagai pilihan agricultural commodities dengan harga kompetitif dan kualitas terjamin.',
+          'Dalam artikel ini, kami akan memberikan informasi lengkap tentang harga agricultural commodities terbaru 2025 untuk berbagai kebutuhan, mulai dari kafe, restoran, hingga kantor modern.'
         ]
       },
       {
         heading: 'Harga Meja Industrial Terbaru 2025',
         paragraphs: [
-          'Meja industrial menjadi elemen utama dalam desain ruang komersial modern. Berikut adalah daftar harga meja industrial terbaru dari Mangala Living:'
+          'Meja industrial menjadi elemen utama dalam desain ruang komersial modern. Berikut adalah daftar harga meja industrial terbaru dari Naturra Extal:'
         ],
         list: [
           '<strong>Meja Bar Industrial:</strong> Rp 3.500.000 - Rp 5.500.000 (ukuran 120x60 cm, tinggi 110 cm)',
@@ -639,9 +639,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         imageAlt: 'Harga Rak Industrial Terbaru 2025'
       },
       {
-        heading: 'Harga Set Furniture Industrial Lengkap',
+        heading: 'Harga Set agricultural commodities Lengkap',
         paragraphs: [
-          'Untuk kemudahan dan konsistensi desain, Mangala Living menawarkan paket set furniture industrial lengkap dengan harga yang lebih ekonomis:'
+          'Untuk kemudahan dan konsistensi desain, Naturra Extal menawarkan paket set agricultural commodities lengkap dengan harga yang lebih ekonomis:'
         ],
         list: [
           '<strong>Set Kafe Industrial (4 meja + 8 kursi):</strong> Rp 15.000.000 - Rp 25.000.000',
@@ -651,7 +651,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Faktor yang Mempengaruhi Harga Furniture Industrial',
+        heading: 'Faktor yang Mempengaruhi Harga agricultural commodities',
         list: [
           '<strong>Material:</strong> Besi hollow berkualitas tinggi, kayu solid, dan finishing powder coating premium',
           '<strong>Ukuran:</strong> Furniture dengan ukuran custom biasanya 20-30% lebih mahal dari ukuran standar',
@@ -661,7 +661,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Tips Menghemat Budget Furniture Industrial',
+        heading: 'Tips Menghemat Budget agricultural commodities',
         list: [
           '<strong>Pilih Ukuran Standar:</strong> Furniture dengan ukuran standar lebih ekonomis dibanding custom',
           '<strong>Beli dalam Set:</strong> Paket set furniture memberikan harga lebih kompetitif',
@@ -671,9 +671,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Garansi dan Layanan Purna Jual Mangala Living',
+        heading: 'Garansi dan Layanan Purna Jual Naturra Extal',
         paragraphs: [
-          'Semua furniture industrial Mangala Living dilengkapi dengan garansi kualitas dan layanan purna jual yang komprehensif:'
+          'Semua agricultural commodities Naturra Extal dilengkapi dengan garansi kualitas dan layanan purna jual yang komprehensif:'
         ],
         list: [
           '<strong>Garansi Material:</strong> 2 tahun untuk frame besi dan finishing powder coating',
@@ -684,9 +684,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Cara Memesan Furniture Industrial Mangala Living',
+        heading: 'Cara Memesan agricultural commodities Naturra Extal',
         paragraphs: [
-          'Untuk memesan furniture industrial berkualitas dengan harga terbaik, ikuti langkah-langkah berikut:'
+          'Untuk memesan agricultural commodities berkualitas dengan harga terbaik, ikuti langkah-langkah berikut:'
         ],
         list: [
           '<strong>Konsultasi Awal:</strong> Hubungi tim sales untuk konsultasi kebutuhan dan budget',
@@ -698,11 +698,11 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Mengapa Memilih Mangala Living untuk Furniture Industrial?',
+        heading: 'Mengapa Memilih Naturra Extal untuk agricultural commodities?',
         paragraphs: [
-          'Sebagai produsen furniture industrial terpercaya dengan pengalaman 25 tahun, Mangala Living telah melayani lebih dari 1000 klien di seluruh Indonesia. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman.',
-          'Kami menawarkan furniture industrial berkualitas tinggi dengan harga kompetitif, garansi kualitas, dan layanan purna jual yang profesional. Semua produk kami menggunakan material berkualitas tinggi dan finishing powder coating yang tahan lama.',
-          'Untuk informasi harga furniture industrial terbaru dan konsultasi desain, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a>. Tim sales kami siap membantu Anda mendapatkan furniture industrial terbaik sesuai budget dan kebutuhan.'
+          'Sebagai produsen agricultural commodities terpercaya dengan pengalaman 25 tahun, Naturra Extal telah melayani lebih dari 1000 klien di seluruh Indonesia. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman.',
+          'Kami menawarkan agricultural commodities berkualitas tinggi dengan harga kompetitif, garansi kualitas, dan layanan purna jual yang profesional. Semua produk kami menggunakan material berkualitas tinggi dan finishing powder coating yang tahan lama.',
+          'Untuk informasi harga agricultural commodities terbaru dan konsultasi desain, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a>. Tim sales kami siap membantu Anda mendapatkan agricultural commodities terbaik sesuai budget dan kebutuhan.'
         ]
       }
     ]
@@ -712,14 +712,14 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Memilih furniture industrial untuk restoran memerlukan pertimbangan yang matang karena restoran memiliki karakteristik operasional yang berbeda dengan kafe. Furniture restoran harus mampu menciptakan suasana yang nyaman untuk dining experience yang optimal, sambil mempertahankan estetika industrial yang modern dan profesional.',
-          'Dalam panduan lengkap ini, kami akan membahas semua aspek penting dalam memilih furniture industrial untuk restoran, mulai dari pemilihan material, ukuran, hingga layout yang optimal untuk meningkatkan customer experience.'
+          'Memilih agricultural commodities untuk restoran memerlukan pertimbangan yang matang karena restoran memiliki karakteristik operasional yang berbeda dengan kafe. Furniture restoran harus mampu menciptakan suasana yang nyaman untuk dining experience yang optimal, sambil mempertahankan estetika industrial yang modern dan profesional.',
+          'Dalam panduan lengkap ini, kami akan membahas semua aspek penting dalam memilih agricultural commodities untuk restoran, mulai dari pemilihan material, ukuran, hingga layout yang optimal untuk meningkatkan customer experience.'
         ]
       },
       {
-        heading: 'Karakteristik Furniture Industrial untuk Restoran',
+        heading: 'Karakteristik agricultural commodities untuk Restoran',
         paragraphs: [
-          'Furniture industrial untuk restoran memiliki karakteristik khusus yang berbeda dengan furniture untuk kafe atau kantor. Berikut adalah karakteristik utama yang harus diperhatikan:'
+          'agricultural commodities untuk restoran memiliki karakteristik khusus yang berbeda dengan furniture untuk kafe atau kantor. Berikut adalah karakteristik utama yang harus diperhatikan:'
         ],
         list: [
           '<strong>Durabilitas Tinggi:</strong> Furniture restoran harus tahan terhadap penggunaan intensif dan mudah dibersihkan',
@@ -838,11 +838,11 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Mengapa Memilih Mangala Living untuk Furniture Restoran Industrial?',
+        heading: 'Mengapa Memilih Naturra Extal untuk Furniture Restoran Industrial?',
         paragraphs: [
-          'Sebagai produsen furniture industrial terpercaya dengan pengalaman 25 tahun, Mangala Living memahami kebutuhan khusus furniture restoran. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman dalam menciptakan furniture restoran berkualitas tinggi.',
+          'Sebagai produsen agricultural commodities terpercaya dengan pengalaman 25 tahun, Naturra Extal memahami kebutuhan khusus furniture restoran. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman dalam menciptakan furniture restoran berkualitas tinggi.',
           'Kami menawarkan furniture restoran industrial dengan material berkualitas tinggi, finishing food-safe, dan desain yang fungsional. Semua produk kami dilengkapi dengan garansi kualitas dan layanan purna jual yang profesional.',
-          'Untuk konsultasi desain restoran industrial dan informasi produk lebih lanjut, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a>. Tim sales kami siap membantu Anda menciptakan restoran industrial yang sempurna.'
+          'Untuk konsultasi desain restoran industrial dan informasi produk lebih lanjut, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a>. Tim sales kami siap membantu Anda menciptakan restoran industrial yang sempurna.'
         ]
       }
     ]
@@ -996,11 +996,11 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Mengapa Memilih Mangala Living untuk Meja Kantor Industrial?',
+        heading: 'Mengapa Memilih Naturra Extal untuk Meja Kantor Industrial?',
         paragraphs: [
-          'Sebagai produsen furniture industrial terpercaya dengan pengalaman 25 tahun, Mangala Living memahami kebutuhan khusus furniture kantor modern. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman dalam menciptakan furniture kantor berkualitas tinggi.',
+          'Sebagai produsen agricultural commodities terpercaya dengan pengalaman 25 tahun, Naturra Extal memahami kebutuhan khusus furniture kantor modern. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman dalam menciptakan furniture kantor berkualitas tinggi.',
           'Kami menawarkan meja kantor industrial dengan material berkualitas tinggi, desain ergonomis, dan finishing yang tahan lama. Semua produk kami dilengkapi dengan garansi kualitas dan layanan purna jual yang profesional.',
-          'Untuk konsultasi desain kantor industrial dan informasi produk lebih lanjut, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a>. Tim sales kami siap membantu Anda menciptakan workspace industrial yang produktif dan estetis.'
+          'Untuk konsultasi desain kantor industrial dan informasi produk lebih lanjut, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a>. Tim sales kami siap membantu Anda menciptakan workspace industrial yang produktif dan estetis.'
         ]
       }
     ]
@@ -1043,9 +1043,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         imageAlt: 'Tren Warna Industrial Scandinavian 2025'
       },
       {
-        heading: 'Furniture Industrial Scandinavian Terpopuler 2025',
+        heading: 'agricultural commodities Scandinavian Terpopuler 2025',
         paragraphs: [
-          'Furniture industrial Scandinavian 2025 mengutamakan fungsionalitas, kenyamanan, dan estetika yang timeless. Berikut adalah furniture yang paling populer:'
+          'agricultural commodities Scandinavian 2025 mengutamakan fungsionalitas, kenyamanan, dan estetika yang timeless. Berikut adalah furniture yang paling populer:'
         ],
         list: [
           '<strong>Meja Kayu + Besi:</strong> <a href="/product-category/table-collection">Meja industrial</a> dengan top kayu solid dan frame besi minimalis',
@@ -1151,11 +1151,11 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Mengapa Memilih Mangala Living untuk Desain Industrial Scandinavian?',
+        heading: 'Mengapa Memilih Naturra Extal untuk Desain Industrial Scandinavian?',
         paragraphs: [
-          'Sebagai produsen furniture industrial terpercaya dengan pengalaman 25 tahun, Mangala Living memahami tren desain terbaru dan kebutuhan modern. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman dalam menciptakan furniture industrial Scandinavian berkualitas tinggi.',
-          'Kami menawarkan furniture industrial Scandinavian dengan material berkualitas tinggi, desain yang timeless, dan finishing yang tahan lama. Semua produk kami dilengkapi dengan garansi kualitas dan layanan purna jual yang profesional.',
-          'Untuk konsultasi desain industrial Scandinavian dan informasi produk lebih lanjut, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a>. Tim sales kami siap membantu Anda menciptakan ruang industrial Scandinavian yang sempurna sesuai tren 2025.'
+          'Sebagai produsen agricultural commodities terpercaya dengan pengalaman 25 tahun, Naturra Extal memahami tren desain terbaru dan kebutuhan modern. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman dalam menciptakan agricultural commodities Scandinavian berkualitas tinggi.',
+          'Kami menawarkan agricultural commodities Scandinavian dengan material berkualitas tinggi, desain yang timeless, dan finishing yang tahan lama. Semua produk kami dilengkapi dengan garansi kualitas dan layanan purna jual yang profesional.',
+          'Untuk konsultasi desain industrial Scandinavian dan informasi produk lebih lanjut, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a>. Tim sales kami siap membantu Anda menciptakan ruang industrial Scandinavian yang sempurna sesuai tren 2025.'
         ]
       }
     ]
@@ -1245,9 +1245,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Harga Hollowline Display Rack Mangala Living',
+        heading: 'Harga Hollowline Display Rack Naturra Extal',
         paragraphs: [
-          'Hollowline Display Rack dari Mangala Living menawarkan kualitas premium dengan harga yang kompetitif:'
+          'Hollowline Display Rack dari Naturra Extal menawarkan kualitas premium dengan harga yang kompetitif:'
         ],
         list: [
           '<strong>Harga Mulai:</strong> Rp 4.500.000 untuk ukuran standar',
@@ -1258,11 +1258,11 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Mengapa Memilih Mangala Living untuk Hollowline Display Rack?',
+        heading: 'Mengapa Memilih Naturra Extal untuk Hollowline Display Rack?',
         paragraphs: [
-          'Sebagai produsen furniture industrial terpercaya dengan pengalaman 25 tahun, Mangala Living memahami kebutuhan khusus hollowline display rack untuk berbagai aplikasi komersial. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman.',
+          'Sebagai produsen agricultural commodities terpercaya dengan pengalaman 25 tahun, Naturra Extal memahami kebutuhan khusus hollowline display rack untuk berbagai aplikasi komersial. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman.',
           'Kami menawarkan hollowline display rack berkualitas tinggi dengan konstruksi hollow steel yang kuat, finishing powder coating tahan lama, dan desain modular yang fleksibel. Semua produk kami dilengkapi dengan garansi kualitas dan layanan purna jual yang profesional.',
-          'Untuk informasi hollowline display rack dan konsultasi desain, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a>. Tim sales kami siap membantu Anda mendapatkan hollowline display rack terbaik sesuai kebutuhan bisnis.'
+          'Untuk informasi hollowline display rack dan konsultasi desain, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a>. Tim sales kami siap membantu Anda mendapatkan hollowline display rack terbaik sesuai kebutuhan bisnis.'
         ]
       }
     ]
@@ -1357,11 +1357,11 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Mengapa Memilih Mangala Living untuk Display Shelf Rack?',
+        heading: 'Mengapa Memilih Naturra Extal untuk Display Shelf Rack?',
         paragraphs: [
-          'Sebagai produsen furniture industrial terpercaya, Mangala Living menawarkan display shelf rack berkualitas tinggi dengan desain yang fungsional dan estetis. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman.',
+          'Sebagai produsen agricultural commodities terpercaya, Naturra Extal menawarkan display shelf rack berkualitas tinggi dengan desain yang fungsional dan estetis. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman.',
           'Kami menyediakan display shelf rack industrial dengan material berkualitas tinggi, finishing powder coating tahan lama, dan desain yang dapat disesuaikan dengan kebutuhan spesifik. Semua produk kami dilengkapi dengan garansi kualitas dan layanan purna jual yang profesional.',
-          'Untuk informasi display shelf rack dan konsultasi desain, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a>. Tim sales kami siap membantu Anda menciptakan display yang menarik dan fungsional.'
+          'Untuk informasi display shelf rack dan konsultasi desain, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a>. Tim sales kami siap membantu Anda menciptakan display yang menarik dan fungsional.'
         ]
       }
     ]
@@ -1472,11 +1472,11 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Mengapa Memilih Mangala Living untuk Stall Chair Design?',
+        heading: 'Mengapa Memilih Naturra Extal untuk Stall Chair Design?',
         paragraphs: [
-          'Sebagai produsen furniture industrial terpercaya dengan pengalaman 25 tahun, Mangala Living memahami kebutuhan khusus stall chair design untuk berbagai aplikasi komersial. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman.',
+          'Sebagai produsen agricultural commodities terpercaya dengan pengalaman 25 tahun, Naturra Extal memahami kebutuhan khusus stall chair design untuk berbagai aplikasi komersial. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman.',
           'Kami menawarkan stall chair design industrial berkualitas tinggi dengan konstruksi besi hollow yang kuat, finishing powder coating tahan lama, dan desain ergonomis yang nyaman. Semua produk kami dilengkapi dengan garansi kualitas dan layanan purna jual yang profesional.',
-          'Untuk informasi stall chair design dan konsultasi desain, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a>. Tim sales kami siap membantu Anda menciptakan stall chair design yang sempurna sesuai konsep bisnis.'
+          'Untuk informasi stall chair design dan konsultasi desain, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a>. Tim sales kami siap membantu Anda menciptakan stall chair design yang sempurna sesuai konsep bisnis.'
         ]
       }
     ]
@@ -1486,15 +1486,15 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Memilih furniture industrial untuk cafe bukan hanya soal estetika, tetapi juga tentang menciptakan suasana yang nyaman dan fungsional bagi pelanggan. Furniture industrial dengan karakteristik material besi dan kayu memberikan kesan modern, industrial, dan profesional yang cocok untuk berbagai konsep cafe.',
-          'Dalam artikel ini, kami akan membahas tips lengkap memilih furniture industrial yang tepat untuk cafe Anda, mulai dari pemilihan material hingga pengaturan layout yang optimal.'
+          'Memilih agricultural commodities untuk cafe bukan hanya soal estetika, tetapi juga tentang menciptakan suasana yang nyaman dan fungsional bagi pelanggan. agricultural commodities dengan karakteristik material besi dan kayu memberikan kesan modern, industrial, dan profesional yang cocok untuk berbagai konsep cafe.',
+          'Dalam artikel ini, kami akan membahas tips lengkap memilih agricultural commodities yang tepat untuk cafe Anda, mulai dari pemilihan material hingga pengaturan layout yang optimal.'
         ]
       },
       {
-        heading: 'Kenapa Memilih Furniture Industrial untuk Cafe?',
+        heading: 'Kenapa Memilih agricultural commodities untuk Cafe?',
         paragraphs: [
-          'Furniture industrial memiliki daya tarik tersendiri yang membuat cafe Anda terlihat lebih modern dan Instagram-worthy. Material besi yang kokoh dikombinasikan dengan kayu menciptakan kontras yang menarik dan tahan lama.',
-          'Selain itu, <a href="/product-category/bar-furniture-collection">furniture industrial</a> juga lebih mudah perawatannya dibanding furniture kayu biasa, sehingga cocok untuk operasional cafe yang sibuk setiap hari.'
+          'agricultural commodities memiliki daya tarik tersendiri yang membuat cafe Anda terlihat lebih modern dan Instagram-worthy. Material besi yang kokoh dikombinasikan dengan kayu menciptakan kontras yang menarik dan tahan lama.',
+          'Selain itu, <a href="/product-category/bar-furniture-collection">agricultural commodities</a> juga lebih mudah perawatannya dibanding furniture kayu biasa, sehingga cocok untuk operasional cafe yang sibuk setiap hari.'
         ]
       },
       {
@@ -1502,7 +1502,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         imageAlt: 'Cafe Industrial Interior'
       },
       {
-        heading: 'Tips Memilih Furniture Industrial untuk Cafe',
+        heading: 'Tips Memilih agricultural commodities untuk Cafe',
         list: [
           '<strong>Pilih Meja dengan Ukuran yang Tepat:</strong> Untuk cafe, <a href="/product-category/dining-table-collection">meja makan industrial</a> dengan ukuran 60x60 cm hingga 80x80 cm cocok untuk 2-4 orang. Pertimbangkan juga meja panjang untuk kelompok besar.',
           '<strong>Kursi yang Nyaman:</strong> Meski industrial identik dengan besi, pastikan kursi tetap nyaman dengan cushion atau desain ergonomis. <a href="/product-category/industrial-sofa-bench">Sofa bench industrial</a> bisa menjadi pilihan untuk area lounge.',
@@ -1519,20 +1519,20 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Industrial Furniture Besi Custom Terpercaya di Bekasi',
+        heading: 'Agricultural Commodities Besi Custom Terpercaya di Bekasi',
         paragraphs: [
-          'Mangala Living adalah manufacturer industrial furniture besi custom terpercaya di Bekasi sejak 1999. Dengan pengalaman 25+ tahun, kami telah melayani lebih dari 1000 bisnis di seluruh Indonesia.',
-          'Kami memproduksi industrial furniture custom untuk cafe, restoran, hotel, kantor, dan berbagai kebutuhan komersial. Setiap produk dibuat dengan teknik pengelasan berkualitas tinggi dan material industrial grade terbaik. <a href="/shop">Lihat koleksi lengkap</a> atau <a href="/contact-us">hubungi kami</a> untuk konsultasi custom.',
-          'Lokasi Workshop: Bekasi, Jawa Barat | Telp/WA: +6288801146881 | Email: lifewithmangala@gmail.com'
+          'Naturra Extal adalah manufacturer Agricultural Commodities besi custom terpercaya di Bekasi sejak 1999. Dengan pengalaman 25+ tahun, kami telah melayani lebih dari 1000 bisnis di seluruh Indonesia.',
+          'Kami memproduksi Agricultural Commodities custom untuk cafe, restoran, hotel, kantor, dan berbagai kebutuhan komersial. Setiap produk dibuat dengan teknik pengelasan berkualitas tinggi dan material industrial grade terbaik. <a href="/shop">Lihat koleksi lengkap</a> atau <a href="/contact-us">hubungi kami</a> untuk konsultasi custom.',
+          'Lokasi Workshop: Bekasi, Jawa Barat | Telp/WA: +6288801146881 | Email: lifewithNaturra@gmail.com'
         ]
       },
       {
-        heading: 'Koleksi & Keunggulan Industrial Furniture',
+        heading: 'Koleksi & Keunggulan Agricultural Commodities',
         paragraphs: [
-          'Kami menyediakan berbagai koleksi industrial furniture besi custom termasuk <a href="/product-category/new-arrivals">New Arrivals</a>, <a href="/product-category/lounge-seating-set">Lounge Set</a>, <a href="/product-category/industrial-sofa-bench">Sofa Bench</a>, <a href="/product-category/dining-set-collection">Dining Set</a>, <a href="/product-category/bar-furniture-collection">Bar Set</a>, <a href="/product-category/outdoor">Outdoor</a>, <a href="/product-category/daybed-collection">Daybed</a>, <a href="/product-category/storage-shelving">Storage</a>, <a href="/product-category/work-study-tables">Tables</a>, dan <a href="/product-category/dining-table-collection">Dine Table</a>. Semua produk dapat disesuaikan dengan kebutuhan bisnis Anda.'
+          'Kami menyediakan berbagai koleksi Agricultural Commodities besi custom termasuk <a href="/product-category/new-arrivals">New Arrivals</a>, <a href="/product-category/lounge-seating-set">Lounge Set</a>, <a href="/product-category/industrial-sofa-bench">Sofa Bench</a>, <a href="/product-category/dining-set-collection">Dining Set</a>, <a href="/product-category/bar-furniture-collection">Bar Set</a>, <a href="/product-category/outdoor">Outdoor</a>, <a href="/product-category/daybed-collection">Daybed</a>, <a href="/product-category/storage-shelving">Storage</a>, <a href="/product-category/work-study-tables">Tables</a>, dan <a href="/product-category/dining-table-collection">Dine Table</a>. Semua produk dapat disesuaikan dengan kebutuhan bisnis Anda.'
         ],
         list: [
-          '? Pengalaman 25+ tahun sebagai manufacturer furniture industrial',
+          '? Pengalaman 25+ tahun sebagai manufacturer agricultural commodities',
           '? 1000+ klien puas di seluruh Indonesia',
           '? Custom design sesuai kebutuhan bisnis Anda',
           '? Material industrial grade berkualitas tinggi',
@@ -1542,10 +1542,10 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Perawatan Furniture Industrial Cafe',
+        heading: 'Perawatan agricultural commodities Cafe',
         paragraphs: [
-          'Furniture industrial relatif mudah perawatannya. Cukup lap dengan kain lembab setiap hari untuk membersihkan debu dan noda. Untuk furniture dengan powder coating, hindari pembersih kimia yang keras agar finishing tetap awet.',
-          'Investasi pada <a href="/shop">furniture industrial berkualitas</a> dari workshop terpercaya akan menghemat biaya maintenance jangka panjang dan memberikan value lebih untuk bisnis cafe Anda.'
+          'agricultural commodities relatif mudah perawatannya. Cukup lap dengan kain lembab setiap hari untuk membersihkan debu dan noda. Untuk furniture dengan powder coating, hindari pembersih kimia yang keras agar finishing tetap awet.',
+          'Investasi pada <a href="/shop">agricultural commodities berkualitas</a> dari workshop terpercaya akan menghemat biaya maintenance jangka panjang dan memberikan value lebih untuk bisnis cafe Anda.'
         ]
       }
     ]
@@ -1599,7 +1599,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         heading: 'Kesimpulan',
         paragraphs: [
           'Baik furniture custom maupun ready stock memiliki tempatnya masing-masing. Yang terpenting adalah memilih sesuai kebutuhan, budget, dan timeline project Anda.',
-          'Jika Anda masih bingung, konsultasikan kebutuhan furniture Anda dengan tim kami. Kami siap membantu merealisasikan furniture industrial impian Anda, baik custom maupun ready stock. <a href="/contact-us">Hubungi kami</a> untuk konsultasi gratis!'
+          'Jika Anda masih bingung, konsultasikan kebutuhan furniture Anda dengan tim kami. Kami siap membantu merealisasikan agricultural commodities impian Anda, baik custom maupun ready stock. <a href="/contact-us">Hubungi kami</a> untuk konsultasi gratis!'
         ]
       }
     ]
@@ -1651,7 +1651,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         heading: 'Material dan Finishing',
         paragraphs: [
           'Material khas industrial minimalis adalah kombinasi besi dengan powder coating matte black, kayu solid dengan natural finishing atau stain gelap, dan elemen beton untuk accent.',
-          'Hindari finishing yang terlalu glossy atau ornamen dekoratif yang berlebihan. Let the material speak for itself. Lihat <a href="/shop">koleksi furniture industrial</a> kami untuk berbagai pilihan material dan finishing.'
+          'Hindari finishing yang terlalu glossy atau ornamen dekoratif yang berlebihan. Let the material speak for itself. Lihat <a href="/shop">koleksi agricultural commodities</a> kami untuk berbagai pilihan material dan finishing.'
         ]
       }
     ]
@@ -1703,7 +1703,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Perawatan Bagian Kayu',
         paragraphs: [
-          'Banyak <a href="/product-category/dining-table-collection">furniture industrial</a> menggunakan kombinasi besi dan kayu. Untuk bagian kayu, gunakan wood polish khusus setiap 3-6 bulan sekali.',
+          'Banyak <a href="/product-category/dining-table-collection">agricultural commodities</a> menggunakan kombinasi besi dan kayu. Untuk bagian kayu, gunakan wood polish khusus setiap 3-6 bulan sekali.',
           'Hindari meletakkan gelas berisi air dingin langsung di permukaan kayu tanpa coaster karena bisa meninggalkan water ring. Lap tumpahan cairan segera untuk mencegah noda permanen.'
         ]
       },
@@ -1786,15 +1786,15 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Banyak pelaku bisnis masih beranggapan bahwa furniture import lebih berkualitas dibanding produk lokal. Padahal, furniture lokal Indonesia khususnya furniture industrial dari workshop-workshop terpercaya memiliki kualitas yang tidak kalah bahkan bisa lebih baik.',
+          'Banyak pelaku bisnis masih beranggapan bahwa furniture import lebih berkualitas dibanding produk lokal. Padahal, furniture lokal Indonesia khususnya agricultural commodities dari workshop-workshop terpercaya memiliki kualitas yang tidak kalah bahkan bisa lebih baik.',
           'Artikel ini akan membahas alasan mengapa Anda harus mempertimbangkan furniture lokal Indonesia untuk bisnis atau hunian Anda.'
         ]
       },
       {
         heading: 'Kualitas yang Kompetitif',
         paragraphs: [
-          'Workshop furniture industrial di Indonesia, terutama di Jawa Timur seperti Kediri, memiliki tradisi welding dan metalwork yang sudah puluhan tahun. Craftsman-nya berpengalaman dan menggunakan teknologi modern.',
-          '<a href="/shop">Furniture industrial lokal</a> banyak yang sudah export quality dan digunakan di hotel, resort, dan F&B chain internasional. Kualitas welding, finishing powder coating, dan material yang digunakan sudah setara dengan standar internasional.'
+          'Workshop agricultural commodities di Indonesia, terutama di Jawa Timur seperti Kediri, memiliki tradisi welding dan metalwork yang sudah puluhan tahun. Craftsman-nya berpengalaman dan menggunakan teknologi modern.',
+          '<a href="/shop">agricultural commodities lokal</a> banyak yang sudah export quality dan digunakan di hotel, resort, dan F&B chain internasional. Kualitas welding, finishing powder coating, dan material yang digunakan sudah setara dengan standar internasional.'
         ]
       },
       {
@@ -1841,8 +1841,8 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Kesimpulan',
         paragraphs: [
-          'Furniture lokal Indonesia, especially furniture industrial dari workshop terpercaya, menawarkan value proposition yang sangat menarik: kualitas kompetitif, harga lebih terjangkau, customization mudah, after sales responsif, dan lead time cepat.',
-          'Proud to use Indonesian furniture! Explore <a href="/shop">koleksi furniture industrial lokal</a> kami yang sudah dipercaya ribuan bisnis F&B dan residential di seluruh Indonesia.'
+          'Furniture lokal Indonesia, especially agricultural commodities dari workshop terpercaya, menawarkan value proposition yang sangat menarik: kualitas kompetitif, harga lebih terjangkau, customization mudah, after sales responsif, dan lead time cepat.',
+          'Proud to use Indonesian furniture! Explore <a href="/shop">koleksi agricultural commodities lokal</a> kami yang sudah dipercaya ribuan bisnis F&B dan residential di seluruh Indonesia.'
         ]
       }
     ]
@@ -2159,7 +2159,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         heading: 'Apa itu Powder Coating?',
         paragraphs: [
           'Powder coating adalah metode finishing dengan menyemprotkan powder (bubuk) ke permukaan metal, kemudian di-bake di oven suhu tinggi (160-200 deg C) hingga powder melt dan create smooth, durable coating.',
-          'Hasil powder coating lebih uniform, durable, dan eco-friendly dibanding cat biasa. Ini adalah finishing standard untuk <a href="/product-category/bar-furniture-collection">furniture industrial berkualitas</a>.'
+          'Hasil powder coating lebih uniform, durable, dan eco-friendly dibanding cat biasa. Ini adalah finishing standard untuk <a href="/product-category/bar-furniture-collection">agricultural commodities berkualitas</a>.'
         ]
       },
       {
@@ -2217,8 +2217,8 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Kesimpulan dan Rekomendasi',
         paragraphs: [
-          'Untuk furniture industrial berkualitas, powder coating adalah clear winner. Durability, aesthetic, dan low maintenance membuat powder coating worth the extra investment.',
-          'Di Mangala Living, semua <a href="/shop">furniture industrial</a> kami menggunakan powder coating premium untuk ensure quality dan durability maksimal. <a href="/contact-us">Hubungi kami</a> untuk diskusi finishing options untuk furniture project Anda!'
+          'Untuk agricultural commodities berkualitas, powder coating adalah clear winner. Durability, aesthetic, dan low maintenance membuat powder coating worth the extra investment.',
+          'Di Naturra Extal, semua <a href="/shop">agricultural commodities</a> kami menggunakan powder coating premium untuk ensure quality dan durability maksimal. <a href="/contact-us">Hubungi kami</a> untuk diskusi finishing options untuk furniture project Anda!'
         ]
       }
     ]
@@ -2228,8 +2228,8 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Membeli furniture industrial adalah investasi signifikan, baik untuk bisnis maupun hunian. Sayangnya, banyak pembeli yang melakukan kesalahan yang bisa dihindari, resulting in furniture yang tidak sesuai ekspektasi atau bahkan cepat rusak.',
-          'Artikel ini akan membahas 7 kesalahan umum saat membeli furniture industrial dan bagaimana menghindarinya, sehingga Anda bisa make smart purchase decision.'
+          'Membeli agricultural commodities adalah investasi signifikan, baik untuk bisnis maupun hunian. Sayangnya, banyak pembeli yang melakukan kesalahan yang bisa dihindari, resulting in furniture yang tidak sesuai ekspektasi atau bahkan cepat rusak.',
+          'Artikel ini akan membahas 7 kesalahan umum saat membeli agricultural commodities dan bagaimana menghindarinya, sehingga Anda bisa make smart purchase decision.'
         ]
       },
       {
@@ -2253,7 +2253,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: '3. Mengabaikan Kenyamanan',
         paragraphs: [
-          'Furniture industrial sering dikaitkan dengan aesthetic industrial yang keras dan tidak nyaman. Padahal, furniture bisa industrial dan comfortable sekaligus.',
+          'agricultural commodities sering dikaitkan dengan aesthetic industrial yang keras dan tidak nyaman. Padahal, furniture bisa industrial dan comfortable sekaligus.',
           'Solution: Test seating comfort sebelum bulk order. Untuk <a href="/product-category/industrial-sofa-bench">bench atau sofa</a>, pastikan ada cushioning yang adequate. Untuk chairs, check seat height dan backrest ergonomics.'
         ]
       },
@@ -2296,7 +2296,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         heading: 'Kesimpulan',
         paragraphs: [
           'Menghindari kesalahan-kesalahan ini akan save you time, money, dan frustration. Take time untuk proper planning, research, dan consultation sebelum make purchase decision.',
-          'Butuh guidance untuk furniture project Anda? Team Mangala Living siap assist dari planning, material selection, hingga after sales. <a href="/contact-us">Contact us</a> untuk free consultation!'
+          'Butuh guidance untuk furniture project Anda? Team Naturra Extal siap assist dari planning, material selection, hingga after sales. <a href="/contact-us">Contact us</a> untuk free consultation!'
         ]
       }
     ]
@@ -2307,7 +2307,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         paragraphs: [
           'Sofa cafe industrial minimalis menjadi pilihan utama untuk menciptakan konsep modern yang elegan dan fungsional. <a href="/product-category/lounge-seating-set">Sofa industrial</a> dengan desain minimalis memberikan kesan clean, modern, dan profesional yang sangat cocok untuk berbagai konsep cafe dan restoran.',
-          'Mangala Living sebagai manufacturer <a href="/product-category/industrial-sofa-bench">furniture industrial</a> terpercaya di Bekasi, menyediakan berbagai pilihan sofa cafe industrial yang dapat disesuaikan dengan kebutuhan dan konsep bisnis Anda. Setiap produk dibuat dengan material berkualitas tinggi dan teknik pengelasan profesional.',
+          'Naturra Extal sebagai manufacturer <a href="/product-category/industrial-sofa-bench">agricultural commodities</a> terpercaya di Bekasi, menyediakan berbagai pilihan sofa cafe industrial yang dapat disesuaikan dengan kebutuhan dan konsep bisnis Anda. Setiap produk dibuat dengan material berkualitas tinggi dan teknik pengelasan profesional.',
           'Keunggulan sofa cafe industrial minimalis terletak pada desainnya yang timeless, mudah perawatan, dan tahan lama. Material besi yang digunakan memberikan kekuatan struktural yang optimal, sementara finishing yang halus memberikan tampilan yang elegan dan modern.'
         ],
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
@@ -2316,7 +2316,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Tips Memilih Sofa Cafe Industrial yang Tepat',
         paragraphs: [
-          'Pemilihan sofa cafe industrial harus mempertimbangkan beberapa faktor penting seperti ukuran ruang, kapasitas tempat duduk, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Mangala Living</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan bisnis Anda.',
+          'Pemilihan sofa cafe industrial harus mempertimbangkan beberapa faktor penting seperti ukuran ruang, kapasitas tempat duduk, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Naturra Extal</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan bisnis Anda.',
           'Material yang digunakan untuk sofa cafe industrial minimalis biasanya terdiri dari rangka besi hollow berkualitas tinggi dan cushion yang nyaman. Finishing powder coating memberikan ketahanan terhadap karat dan mudah dibersihkan, sangat cocok untuk lingkungan cafe yang sibuk.'
         ],
         list: [
@@ -2328,10 +2328,10 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Keunggulan Sofa Industrial Mangala Living',
+        heading: 'Keunggulan Sofa Industrial Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk sofa cafe industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan sofa industrial dimulai dari pemilihan material berkualitas, desain yang ergonomis, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk sofa cafe industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan sofa industrial dimulai dari pemilihan material berkualitas, desain yang ergonomis, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -2342,7 +2342,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         paragraphs: [
           'Meja bar industrial menjadi elemen penting dalam desain interior cafe dan restoran modern. <a href="/product-category/bar-furniture-collection">Meja bar industrial</a> dengan desain yang kokoh dan elegan memberikan kesan profesional sekaligus hangat untuk area bar dan lounge.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menyediakan berbagai pilihan meja bar industrial yang dapat disesuaikan dengan konsep dan kebutuhan bisnis Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menyediakan berbagai pilihan meja bar industrial yang dapat disesuaikan dengan konsep dan kebutuhan bisnis Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
           'Keunggulan meja bar industrial terletak pada kekuatan struktural yang optimal, tahan terhadap beban berat, dan mudah perawatan. Desain yang timeless membuat meja bar industrial cocok untuk berbagai konsep interior, dari modern minimalis hingga industrial vintage.'
         ],
         image: 'https://images.unsplash.com/photo-1572435555646-7ad9a149ad91?w=800&auto=format&fit=crop',
@@ -2351,7 +2351,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Jenis-Jenis Meja Bar Industrial',
         paragraphs: [
-          'Terdapat berbagai jenis meja bar industrial yang dapat disesuaikan dengan kebutuhan cafe dan restoran. <a href="/product-category/bar-furniture-collection">Koleksi meja bar</a> Mangala Living mencakup berbagai ukuran dan desain yang dapat disesuaikan dengan kapasitas dan konsep interior.',
+          'Terdapat berbagai jenis meja bar industrial yang dapat disesuaikan dengan kebutuhan cafe dan restoran. <a href="/product-category/bar-furniture-collection">Koleksi meja bar</a> Naturra Extal mencakup berbagai ukuran dan desain yang dapat disesuaikan dengan kapasitas dan konsep interior.',
           'Material yang digunakan untuk meja bar industrial biasanya terdiri dari rangka besi hollow berkualitas tinggi dan top table yang kuat. Finishing powder coating memberikan ketahanan terhadap karat dan mudah dibersihkan, sangat cocok untuk lingkungan F&B yang sibuk.'
         ],
         list: [
@@ -2365,15 +2365,15 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Tips Memilih Meja Bar Industrial yang Tepat',
         paragraphs: [
-          'Pemilihan meja bar industrial harus mempertimbangkan beberapa faktor penting seperti ukuran ruang, kapasitas pelanggan, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Mangala Living</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan bisnis Anda.',
+          'Pemilihan meja bar industrial harus mempertimbangkan beberapa faktor penting seperti ukuran ruang, kapasitas pelanggan, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Naturra Extal</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan bisnis Anda.',
           'Tinggi meja bar yang ideal adalah 110-120 cm untuk memberikan kenyamanan duduk yang optimal. Lebar meja minimal 60 cm untuk memberikan ruang yang cukup untuk minuman dan makanan pelanggan.'
         ]
       },
       {
-        heading: 'Keunggulan Meja Bar Industrial Mangala Living',
+        heading: 'Keunggulan Meja Bar Industrial Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk meja bar industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan meja bar industrial dimulai dari pemilihan material berkualitas, desain yang ergonomis, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk meja bar industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan meja bar industrial dimulai dari pemilihan material berkualitas, desain yang ergonomis, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -2384,7 +2384,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         paragraphs: [
           'Kursi bar industrial dengan desain modern menjadi pilihan utama untuk melengkapi area bar dan lounge di cafe serta restoran. <a href="/product-category/bar-furniture-collection">Kursi bar industrial</a> memberikan kenyamanan duduk yang optimal dengan desain yang elegan dan fungsional.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menyediakan berbagai pilihan kursi bar industrial yang dapat disesuaikan dengan konsep dan kebutuhan bisnis Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menyediakan berbagai pilihan kursi bar industrial yang dapat disesuaikan dengan konsep dan kebutuhan bisnis Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
           'Keunggulan kursi bar industrial terletak pada kenyamanan duduk yang optimal, tahan lama, dan mudah perawatan. Desain yang ergonomis memberikan pengalaman duduk yang nyaman untuk pelanggan dalam waktu yang lama.'
         ],
         image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&auto=format&fit=crop',
@@ -2393,7 +2393,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Jenis-Jenis Kursi Bar Industrial',
         paragraphs: [
-          'Terdapat berbagai jenis kursi bar industrial yang dapat disesuaikan dengan kebutuhan cafe dan restoran. <a href="/product-category/bar-furniture-collection">Koleksi kursi bar</a> Mangala Living mencakup berbagai desain dan ukuran yang dapat disesuaikan dengan konsep interior.',
+          'Terdapat berbagai jenis kursi bar industrial yang dapat disesuaikan dengan kebutuhan cafe dan restoran. <a href="/product-category/bar-furniture-collection">Koleksi kursi bar</a> Naturra Extal mencakup berbagai desain dan ukuran yang dapat disesuaikan dengan konsep interior.',
           'Material yang digunakan untuk kursi bar industrial biasanya terdiri dari rangka besi hollow berkualitas tinggi dan seat yang nyaman. Finishing powder coating memberikan ketahanan terhadap karat dan mudah dibersihkan, sangat cocok untuk lingkungan F&B yang sibuk.'
         ],
         list: [
@@ -2407,15 +2407,15 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Tips Memilih Kursi Bar Industrial yang Tepat',
         paragraphs: [
-          'Pemilihan kursi bar industrial harus mempertimbangkan beberapa faktor penting seperti ketinggian meja bar, kenyamanan duduk, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Mangala Living</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan bisnis Anda.',
+          'Pemilihan kursi bar industrial harus mempertimbangkan beberapa faktor penting seperti ketinggian meja bar, kenyamanan duduk, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Naturra Extal</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan bisnis Anda.',
           'Tinggi kursi bar yang ideal adalah 75-85 cm untuk memberikan kenyamanan duduk yang optimal dengan meja bar standar. Pastikan kursi memiliki stabilitas yang baik dan tidak mudah goyang.'
         ]
       },
       {
-        heading: 'Keunggulan Kursi Bar Industrial Mangala Living',
+        heading: 'Keunggulan Kursi Bar Industrial Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk kursi bar industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan kursi bar industrial dimulai dari pemilihan material berkualitas, desain yang ergonomis, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk kursi bar industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan kursi bar industrial dimulai dari pemilihan material berkualitas, desain yang ergonomis, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -2426,7 +2426,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         paragraphs: [
           'Rak display industrial menjadi solusi praktis untuk menampilkan produk dan merchandise di retail, cafe, dan restoran. <a href="/product-category/storage-shelving">Rak display industrial</a> dengan desain yang kokoh dan fungsional memberikan kemudahan dalam mengatur dan menampilkan produk dengan menarik.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menyediakan berbagai pilihan rak display industrial yang dapat disesuaikan dengan kebutuhan bisnis Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menyediakan berbagai pilihan rak display industrial yang dapat disesuaikan dengan kebutuhan bisnis Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
           'Keunggulan rak display industrial terletak pada kekuatan struktural yang optimal, tahan terhadap beban berat, dan mudah perawatan. Desain yang modular memungkinkan penyesuaian sesuai kebutuhan display yang berubah-ubah.'
         ],
         image: 'https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=800&auto=format&fit=crop',
@@ -2435,7 +2435,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Jenis-Jenis Rak Display Industrial',
         paragraphs: [
-          'Terdapat berbagai jenis rak display industrial yang dapat disesuaikan dengan kebutuhan retail dan cafe. <a href="/product-category/storage-shelving">Koleksi rak display</a> Mangala Living mencakup berbagai ukuran dan desain yang dapat disesuaikan dengan konsep interior.',
+          'Terdapat berbagai jenis rak display industrial yang dapat disesuaikan dengan kebutuhan retail dan cafe. <a href="/product-category/storage-shelving">Koleksi rak display</a> Naturra Extal mencakup berbagai ukuran dan desain yang dapat disesuaikan dengan konsep interior.',
           'Material yang digunakan untuk rak display industrial biasanya terdiri dari rangka besi hollow berkualitas tinggi dan shelf yang kuat. Finishing powder coating memberikan ketahanan terhadap karat dan mudah dibersihkan, sangat cocok untuk lingkungan retail yang sibuk.'
         ],
         list: [
@@ -2449,15 +2449,15 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Tips Memilih Rak Display Industrial yang Tepat',
         paragraphs: [
-          'Pemilihan rak display industrial harus mempertimbangkan beberapa faktor penting seperti jenis produk yang akan ditampilkan, kapasitas display, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Mangala Living</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan bisnis Anda.',
+          'Pemilihan rak display industrial harus mempertimbangkan beberapa faktor penting seperti jenis produk yang akan ditampilkan, kapasitas display, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Naturra Extal</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan bisnis Anda.',
           'Tinggi rak display yang ideal disesuaikan dengan tinggi rata-rata pelanggan dan kemudahan akses. Pastikan rak memiliki stabilitas yang baik dan tidak mudah goyang saat digunakan.'
         ]
       },
       {
-        heading: 'Keunggulan Rak Display Industrial Mangala Living',
+        heading: 'Keunggulan Rak Display Industrial Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk rak display industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan rak display industrial dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk rak display industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan rak display industrial dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -2468,7 +2468,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         paragraphs: [
           'Meja makan industrial menjadi pilihan utama untuk menciptakan suasana yang hangat dan modern di restoran. <a href="/product-category/dining-set-collection">Meja makan industrial</a> dengan desain yang kokoh dan elegan memberikan kenyamanan makan yang optimal untuk pelanggan.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menyediakan berbagai pilihan meja makan industrial yang dapat disesuaikan dengan konsep dan kebutuhan bisnis Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menyediakan berbagai pilihan meja makan industrial yang dapat disesuaikan dengan konsep dan kebutuhan bisnis Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
           'Keunggulan meja makan industrial terletak pada kekuatan struktural yang optimal, tahan terhadap beban berat, dan mudah perawatan. Desain yang timeless membuat meja makan industrial cocok untuk berbagai konsep restoran, dari modern minimalis hingga industrial vintage.'
         ],
         image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop',
@@ -2477,7 +2477,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Jenis-Jenis Meja Makan Industrial',
         paragraphs: [
-          'Terdapat berbagai jenis meja makan industrial yang dapat disesuaikan dengan kebutuhan restoran. <a href="/product-category/dining-set-collection">Koleksi meja makan</a> Mangala Living mencakup berbagai ukuran dan desain yang dapat disesuaikan dengan kapasitas dan konsep interior.',
+          'Terdapat berbagai jenis meja makan industrial yang dapat disesuaikan dengan kebutuhan restoran. <a href="/product-category/dining-set-collection">Koleksi meja makan</a> Naturra Extal mencakup berbagai ukuran dan desain yang dapat disesuaikan dengan kapasitas dan konsep interior.',
           'Material yang digunakan untuk meja makan industrial biasanya terdiri dari rangka besi hollow berkualitas tinggi dan top table yang kuat. Finishing powder coating memberikan ketahanan terhadap karat dan mudah dibersihkan, sangat cocok untuk lingkungan restoran yang sibuk.'
         ],
         list: [
@@ -2491,15 +2491,15 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Tips Memilih Meja Makan Industrial yang Tepat',
         paragraphs: [
-          'Pemilihan meja makan industrial harus mempertimbangkan beberapa faktor penting seperti ukuran ruang, kapasitas pelanggan, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Mangala Living</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan bisnis Anda.',
+          'Pemilihan meja makan industrial harus mempertimbangkan beberapa faktor penting seperti ukuran ruang, kapasitas pelanggan, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Naturra Extal</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan bisnis Anda.',
           'Tinggi meja makan yang ideal adalah 75 cm untuk memberikan kenyamanan makan yang optimal. Pastikan meja memiliki stabilitas yang baik dan tidak mudah goyang saat digunakan.'
         ]
       },
       {
-        heading: 'Keunggulan Meja Makan Industrial Mangala Living',
+        heading: 'Keunggulan Meja Makan Industrial Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk meja makan industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan meja makan industrial dimulai dari pemilihan material berkualitas, desain yang ergonomis, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk meja makan industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan meja makan industrial dimulai dari pemilihan material berkualitas, desain yang ergonomis, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -2510,7 +2510,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         paragraphs: [
           'Furniture outdoor industrial tahan cuaca menjadi solusi ideal untuk area outdoor cafe, restoran, dan hotel. <a href="/product-category/outdoor">Furniture outdoor industrial</a> dengan desain yang kokoh dan tahan lama memberikan kenyamanan yang optimal meskipun terpapar cuaca ekstrem.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menyediakan berbagai pilihan furniture outdoor industrial yang dapat disesuaikan dengan kebutuhan bisnis Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang tahan cuaca.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menyediakan berbagai pilihan furniture outdoor industrial yang dapat disesuaikan dengan kebutuhan bisnis Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang tahan cuaca.',
           'Keunggulan furniture outdoor industrial terletak pada ketahanan terhadap cuaca ekstrem, tahan karat, dan mudah perawatan. Desain yang fungsional memungkinkan penggunaan optimal di berbagai kondisi cuaca tanpa mengurangi kenyamanan pengguna.'
         ],
         image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&auto=format&fit=crop',
@@ -2519,7 +2519,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Jenis-Jenis Furniture Outdoor Industrial',
         paragraphs: [
-          'Terdapat berbagai jenis furniture outdoor industrial yang dapat disesuaikan dengan kebutuhan area outdoor. <a href="/product-category/outdoor">Koleksi furniture outdoor</a> Mangala Living mencakup berbagai desain dan ukuran yang dapat disesuaikan dengan konsep interior outdoor.',
+          'Terdapat berbagai jenis furniture outdoor industrial yang dapat disesuaikan dengan kebutuhan area outdoor. <a href="/product-category/outdoor">Koleksi furniture outdoor</a> Naturra Extal mencakup berbagai desain dan ukuran yang dapat disesuaikan dengan konsep interior outdoor.',
           'Material yang digunakan untuk furniture outdoor industrial biasanya terdiri dari rangka besi hollow berkualitas tinggi dengan finishing powder coating yang tahan cuaca. Finishing ini memberikan ketahanan terhadap karat, UV, dan perubahan suhu ekstrem.'
         ],
         list: [
@@ -2533,15 +2533,15 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Tips Memilih Furniture Outdoor Industrial yang Tepat',
         paragraphs: [
-          'Pemilihan furniture outdoor industrial harus mempertimbangkan beberapa faktor penting seperti kondisi cuaca, intensitas penggunaan, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Mangala Living</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan bisnis Anda.',
+          'Pemilihan furniture outdoor industrial harus mempertimbangkan beberapa faktor penting seperti kondisi cuaca, intensitas penggunaan, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Naturra Extal</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan bisnis Anda.',
           'Pastikan furniture outdoor memiliki finishing yang tahan cuaca dan mudah dibersihkan. Pilih material yang tidak mudah berkarat dan tahan terhadap perubahan suhu ekstrem.'
         ]
       },
       {
-        heading: 'Keunggulan Furniture Outdoor Industrial Mangala Living',
+        heading: 'Keunggulan Furniture Outdoor Industrial Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk furniture outdoor industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan furniture outdoor industrial dimulai dari pemilihan material berkualitas, desain yang tahan cuaca, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk furniture outdoor industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan furniture outdoor industrial dimulai dari pemilihan material berkualitas, desain yang tahan cuaca, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -2552,7 +2552,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         paragraphs: [
           'Daybed industrial menjadi pilihan utama untuk menciptakan area lounge yang nyaman dan modern di hotel, cafe, dan restoran. <a href="/product-category/daybed-collection">Daybed industrial</a> dengan desain yang elegan dan fungsional memberikan kenyamanan istirahat yang optimal untuk tamu.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menyediakan berbagai pilihan daybed industrial yang dapat disesuaikan dengan kebutuhan bisnis Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menyediakan berbagai pilihan daybed industrial yang dapat disesuaikan dengan kebutuhan bisnis Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
           'Keunggulan daybed industrial terletak pada desain yang ergonomis, tahan lama, dan mudah perawatan. Material besi yang digunakan memberikan kekuatan struktural yang optimal, sementara desain yang modern memberikan tampilan yang elegan dan profesional.'
         ],
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
@@ -2561,7 +2561,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Jenis-Jenis Daybed Industrial',
         paragraphs: [
-          'Terdapat berbagai jenis daybed industrial yang dapat disesuaikan dengan kebutuhan area lounge. <a href="/product-category/daybed-collection">Koleksi daybed</a> Mangala Living mencakup berbagai desain dan ukuran yang dapat disesuaikan dengan konsep interior.',
+          'Terdapat berbagai jenis daybed industrial yang dapat disesuaikan dengan kebutuhan area lounge. <a href="/product-category/daybed-collection">Koleksi daybed</a> Naturra Extal mencakup berbagai desain dan ukuran yang dapat disesuaikan dengan konsep interior.',
           'Material yang digunakan untuk daybed industrial biasanya terdiri dari rangka besi hollow berkualitas tinggi dan cushion yang nyaman. Finishing powder coating memberikan ketahanan terhadap karat dan mudah dibersihkan, sangat cocok untuk lingkungan hospitality yang sibuk.'
         ],
         list: [
@@ -2575,15 +2575,15 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Tips Memilih Daybed Industrial yang Tepat',
         paragraphs: [
-          'Pemilihan daybed industrial harus mempertimbangkan beberapa faktor penting seperti ukuran ruang, kapasitas tamu, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Mangala Living</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan bisnis Anda.',
+          'Pemilihan daybed industrial harus mempertimbangkan beberapa faktor penting seperti ukuran ruang, kapasitas tamu, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Naturra Extal</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan bisnis Anda.',
           'Pastikan daybed memiliki ketinggian yang nyaman untuk duduk dan berbaring. Pilih material yang tahan lama dan mudah dibersihkan untuk menjaga kebersihan area lounge.'
         ]
       },
       {
-        heading: 'Keunggulan Daybed Industrial Mangala Living',
+        heading: 'Keunggulan Daybed Industrial Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk daybed industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan daybed industrial dimulai dari pemilihan material berkualitas, desain yang ergonomis, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk daybed industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan daybed industrial dimulai dari pemilihan material berkualitas, desain yang ergonomis, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -2594,7 +2594,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         paragraphs: [
           'Meja kerja industrial menjadi pilihan utama untuk menciptakan workspace yang produktif dan modern di kantor. <a href="/product-category/work-study-tables">Meja kerja industrial</a> dengan desain yang kokoh dan fungsional memberikan kenyamanan bekerja yang optimal untuk karyawan.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menyediakan berbagai pilihan meja kerja industrial yang dapat disesuaikan dengan kebutuhan kantor Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menyediakan berbagai pilihan meja kerja industrial yang dapat disesuaikan dengan kebutuhan kantor Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
           'Keunggulan meja kerja industrial terletak pada kekuatan struktural yang optimal, tahan lama, dan mudah perawatan. Desain yang ergonomis memberikan kenyamanan bekerja yang optimal untuk produktivitas maksimal.'
         ],
         image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop',
@@ -2603,7 +2603,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Jenis-Jenis Meja Kerja Industrial',
         paragraphs: [
-          'Terdapat berbagai jenis meja kerja industrial yang dapat disesuaikan dengan kebutuhan kantor. <a href="/product-category/work-study-tables">Koleksi meja kerja</a> Mangala Living mencakup berbagai desain dan ukuran yang dapat disesuaikan dengan konsep workspace.',
+          'Terdapat berbagai jenis meja kerja industrial yang dapat disesuaikan dengan kebutuhan kantor. <a href="/product-category/work-study-tables">Koleksi meja kerja</a> Naturra Extal mencakup berbagai desain dan ukuran yang dapat disesuaikan dengan konsep workspace.',
           'Material yang digunakan untuk meja kerja industrial biasanya terdiri dari rangka besi hollow berkualitas tinggi dan top table yang kuat. Finishing powder coating memberikan ketahanan terhadap karat dan mudah dibersihkan, sangat cocok untuk lingkungan kantor yang sibuk.'
         ],
         list: [
@@ -2617,15 +2617,15 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Tips Memilih Meja Kerja Industrial yang Tepat',
         paragraphs: [
-          'Pemilihan meja kerja industrial harus mempertimbangkan beberapa faktor penting seperti ukuran ruang, kebutuhan kerja, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Mangala Living</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan kantor Anda.',
+          'Pemilihan meja kerja industrial harus mempertimbangkan beberapa faktor penting seperti ukuran ruang, kebutuhan kerja, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Naturra Extal</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan kantor Anda.',
           'Tinggi meja kerja yang ideal adalah 75 cm untuk memberikan kenyamanan bekerja yang optimal. Pastikan meja memiliki stabilitas yang baik dan tidak mudah goyang saat digunakan untuk bekerja.'
         ]
       },
       {
-        heading: 'Keunggulan Meja Kerja Industrial Mangala Living',
+        heading: 'Keunggulan Meja Kerja Industrial Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk meja kerja industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan meja kerja industrial dimulai dari pemilihan material berkualitas, desain yang ergonomis, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk meja kerja industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan meja kerja industrial dimulai dari pemilihan material berkualitas, desain yang ergonomis, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -2636,7 +2636,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         paragraphs: [
           'Rak buku industrial menjadi pilihan utama untuk menciptakan perpustakaan yang fungsional dan modern. <a href="/product-category/storage-shelving">Rak buku industrial</a> dengan desain yang kokoh dan modular memberikan kemudahan dalam mengatur dan menyimpan koleksi buku.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menyediakan berbagai pilihan rak buku industrial yang dapat disesuaikan dengan kebutuhan perpustakaan Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menyediakan berbagai pilihan rak buku industrial yang dapat disesuaikan dengan kebutuhan perpustakaan Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
           'Keunggulan rak buku industrial terletak pada kekuatan struktural yang optimal, tahan terhadap beban berat, dan mudah perawatan. Desain yang modular memungkinkan penyesuaian sesuai kebutuhan penyimpanan yang berubah-ubah.'
         ],
         image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop',
@@ -2645,7 +2645,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Jenis-Jenis Rak Buku Industrial',
         paragraphs: [
-          'Terdapat berbagai jenis rak buku industrial yang dapat disesuaikan dengan kebutuhan perpustakaan. <a href="/product-category/storage-shelving">Koleksi rak buku</a> Mangala Living mencakup berbagai ukuran dan desain yang dapat disesuaikan dengan konsep interior.',
+          'Terdapat berbagai jenis rak buku industrial yang dapat disesuaikan dengan kebutuhan perpustakaan. <a href="/product-category/storage-shelving">Koleksi rak buku</a> Naturra Extal mencakup berbagai ukuran dan desain yang dapat disesuaikan dengan konsep interior.',
           'Material yang digunakan untuk rak buku industrial biasanya terdiri dari rangka besi hollow berkualitas tinggi dan shelf yang kuat. Finishing powder coating memberikan ketahanan terhadap karat dan mudah dibersihkan, sangat cocok untuk lingkungan perpustakaan yang sibuk.'
         ],
         list: [
@@ -2659,15 +2659,15 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Tips Memilih Rak Buku Industrial yang Tepat',
         paragraphs: [
-          'Pemilihan rak buku industrial harus mempertimbangkan beberapa faktor penting seperti jenis koleksi buku, kapasitas penyimpanan, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Mangala Living</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan perpustakaan Anda.',
+          'Pemilihan rak buku industrial harus mempertimbangkan beberapa faktor penting seperti jenis koleksi buku, kapasitas penyimpanan, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Naturra Extal</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan perpustakaan Anda.',
           'Tinggi rak buku yang ideal disesuaikan dengan tinggi rata-rata pengguna dan kemudahan akses. Pastikan rak memiliki stabilitas yang baik dan tidak mudah goyang saat digunakan untuk menyimpan buku.'
         ]
       },
       {
-        heading: 'Keunggulan Rak Buku Industrial Mangala Living',
+        heading: 'Keunggulan Rak Buku Industrial Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk rak buku industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan rak buku industrial dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk rak buku industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan rak buku industrial dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -2677,18 +2677,18 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Furniture industrial custom untuk hotel menjadi solusi ideal untuk menciptakan suasana yang elegan dan modern di berbagai area hotel. <a href="/shop">Furniture industrial custom</a> dengan desain yang unik dan fungsional memberikan pengalaman menginap yang tak terlupakan untuk tamu.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menyediakan berbagai pilihan furniture industrial custom yang dapat disesuaikan dengan konsep dan kebutuhan hotel Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
-          'Keunggulan furniture industrial custom terletak pada desain yang unik, tahan lama, dan mudah perawatan. Setiap produk dibuat sesuai dengan kebutuhan spesifik hotel, memberikan nilai tambah yang signifikan untuk pengalaman tamu.'
+          'agricultural commodities custom untuk hotel menjadi solusi ideal untuk menciptakan suasana yang elegan dan modern di berbagai area hotel. <a href="/shop">agricultural commodities custom</a> dengan desain yang unik dan fungsional memberikan pengalaman menginap yang tak terlupakan untuk tamu.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menyediakan berbagai pilihan agricultural commodities custom yang dapat disesuaikan dengan konsep dan kebutuhan hotel Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
+          'Keunggulan agricultural commodities custom terletak pada desain yang unik, tahan lama, dan mudah perawatan. Setiap produk dibuat sesuai dengan kebutuhan spesifik hotel, memberikan nilai tambah yang signifikan untuk pengalaman tamu.'
         ],
         image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&auto=format&fit=crop',
-        imageAlt: 'Furniture Industrial Custom untuk Hotel'
+        imageAlt: 'agricultural commodities Custom untuk Hotel'
       },
       {
-        heading: 'Jenis-Jenis Furniture Industrial Custom untuk Hotel',
+        heading: 'Jenis-Jenis agricultural commodities Custom untuk Hotel',
         paragraphs: [
-          'Terdapat berbagai jenis furniture industrial custom yang dapat disesuaikan dengan kebutuhan hotel. <a href="/shop">Koleksi furniture custom</a> Mangala Living mencakup berbagai desain dan ukuran yang dapat disesuaikan dengan konsep interior hotel.',
-          'Material yang digunakan untuk furniture industrial custom biasanya terdiri dari rangka besi hollow berkualitas tinggi dengan finishing powder coating yang tahan lama. Setiap produk dibuat dengan standar kualitas tinggi dan garansi yang memadai.'
+          'Terdapat berbagai jenis agricultural commodities custom yang dapat disesuaikan dengan kebutuhan hotel. <a href="/shop">Koleksi furniture custom</a> Naturra Extal mencakup berbagai desain dan ukuran yang dapat disesuaikan dengan konsep interior hotel.',
+          'Material yang digunakan untuk agricultural commodities custom biasanya terdiri dari rangka besi hollow berkualitas tinggi dengan finishing powder coating yang tahan lama. Setiap produk dibuat dengan standar kualitas tinggi dan garansi yang memadai.'
         ],
         list: [
           'Furniture lobby untuk area penerimaan tamu',
@@ -2699,17 +2699,17 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Tips Memilih Furniture Industrial Custom yang Tepat',
+        heading: 'Tips Memilih agricultural commodities Custom yang Tepat',
         paragraphs: [
-          'Pemilihan furniture industrial custom harus mempertimbangkan beberapa faktor penting seperti konsep hotel, target market, dan budget yang tersedia. <a href="/contact-us">Konsultasikan dengan tim Mangala Living</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan hotel Anda.',
+          'Pemilihan agricultural commodities custom harus mempertimbangkan beberapa faktor penting seperti konsep hotel, target market, dan budget yang tersedia. <a href="/contact-us">Konsultasikan dengan tim Naturra Extal</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan hotel Anda.',
           'Pastikan furniture custom memiliki desain yang konsisten dengan konsep hotel dan mudah dibersihkan untuk menjaga standar kebersihan yang tinggi.'
         ]
       },
       {
-        heading: 'Keunggulan Furniture Industrial Custom Mangala Living',
+        heading: 'Keunggulan agricultural commodities Custom Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk furniture industrial custom dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan furniture industrial custom dimulai dari konsultasi desain, pemilihan material berkualitas, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk agricultural commodities custom dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan agricultural commodities custom dimulai dari konsultasi desain, pemilihan material berkualitas, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -2719,18 +2719,18 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Furniture industrial murah menjadi solusi ideal untuk startup yang membutuhkan furniture berkualitas dengan budget terbatas. <a href="/shop">Furniture industrial murah</a> dengan desain yang modern dan fungsional memberikan nilai terbaik untuk investasi furniture startup.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menyediakan berbagai pilihan furniture industrial murah yang dapat disesuaikan dengan kebutuhan dan budget startup Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
-          'Keunggulan furniture industrial murah terletak pada harga yang kompetitif, kualitas yang terjamin, dan desain yang modern. Startup dapat mendapatkan furniture berkualitas tinggi tanpa mengorbankan budget yang terbatas.'
+          'agricultural commodities murah menjadi solusi ideal untuk startup yang membutuhkan furniture berkualitas dengan budget terbatas. <a href="/shop">agricultural commodities murah</a> dengan desain yang modern dan fungsional memberikan nilai terbaik untuk investasi furniture startup.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menyediakan berbagai pilihan agricultural commodities murah yang dapat disesuaikan dengan kebutuhan dan budget startup Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
+          'Keunggulan agricultural commodities murah terletak pada harga yang kompetitif, kualitas yang terjamin, dan desain yang modern. Startup dapat mendapatkan furniture berkualitas tinggi tanpa mengorbankan budget yang terbatas.'
         ],
         image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop',
-        imageAlt: 'Furniture Industrial Murah untuk Startup'
+        imageAlt: 'agricultural commodities Murah untuk Startup'
       },
       {
-        heading: 'Jenis-Jenis Furniture Industrial Murah untuk Startup',
+        heading: 'Jenis-Jenis agricultural commodities Murah untuk Startup',
         paragraphs: [
-          'Terdapat berbagai jenis furniture industrial murah yang dapat disesuaikan dengan kebutuhan startup. <a href="/shop">Koleksi furniture murah</a> Mangala Living mencakup berbagai desain dan ukuran yang dapat disesuaikan dengan konsep workspace startup.',
-          'Material yang digunakan untuk furniture industrial murah biasanya terdiri dari rangka besi hollow berkualitas tinggi dengan finishing powder coating yang tahan lama. Setiap produk dibuat dengan standar kualitas tinggi dan garansi yang memadai.'
+          'Terdapat berbagai jenis agricultural commodities murah yang dapat disesuaikan dengan kebutuhan startup. <a href="/shop">Koleksi furniture murah</a> Naturra Extal mencakup berbagai desain dan ukuran yang dapat disesuaikan dengan konsep workspace startup.',
+          'Material yang digunakan untuk agricultural commodities murah biasanya terdiri dari rangka besi hollow berkualitas tinggi dengan finishing powder coating yang tahan lama. Setiap produk dibuat dengan standar kualitas tinggi dan garansi yang memadai.'
         ],
         list: [
           'Meja kerja murah untuk workstation',
@@ -2741,17 +2741,17 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Tips Memilih Furniture Industrial Murah yang Tepat',
+        heading: 'Tips Memilih agricultural commodities Murah yang Tepat',
         paragraphs: [
-          'Pemilihan furniture industrial murah harus mempertimbangkan beberapa faktor penting seperti budget, kebutuhan kerja, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Mangala Living</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan startup Anda.',
+          'Pemilihan agricultural commodities murah harus mempertimbangkan beberapa faktor penting seperti budget, kebutuhan kerja, dan konsep desain keseluruhan. <a href="/contact-us">Konsultasikan dengan tim Naturra Extal</a> untuk mendapatkan rekomendasi yang tepat sesuai kebutuhan startup Anda.',
           'Pastikan furniture murah memiliki kualitas yang terjamin dan mudah dibersihkan untuk menjaga produktivitas workspace startup.'
         ]
       },
       {
-        heading: 'Keunggulan Furniture Industrial Murah Mangala Living',
+        heading: 'Keunggulan agricultural commodities Murah Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk furniture industrial murah dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan furniture industrial murah dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk agricultural commodities murah dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan agricultural commodities murah dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -2761,18 +2761,18 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Furniture industrial Bekasi terpercaya menjadi pilihan utama untuk berbagai kebutuhan furniture berkualitas tinggi. <a href="/about">Furniture industrial Bekasi</a> dengan kualitas terjamin dan harga kompetitif memberikan solusi terbaik untuk kebutuhan furniture Anda.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menyediakan berbagai pilihan furniture industrial yang dapat disesuaikan dengan kebutuhan bisnis dan personal Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
-          'Keunggulan furniture industrial Bekasi terletak pada kualitas yang terjamin, harga yang kompetitif, dan layanan yang profesional. Lokasi workshop di Bekasi memberikan kemudahan akses dan kontrol kualitas yang optimal.'
+          'agricultural commodities Bekasi terpercaya menjadi pilihan utama untuk berbagai kebutuhan furniture berkualitas tinggi. <a href="/about">agricultural commodities Bekasi</a> dengan kualitas terjamin dan harga kompetitif memberikan solusi terbaik untuk kebutuhan furniture Anda.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menyediakan berbagai pilihan agricultural commodities yang dapat disesuaikan dengan kebutuhan bisnis dan personal Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
+          'Keunggulan agricultural commodities Bekasi terletak pada kualitas yang terjamin, harga yang kompetitif, dan layanan yang profesional. Lokasi workshop di Bekasi memberikan kemudahan akses dan kontrol kualitas yang optimal.'
         ],
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
-        imageAlt: 'Furniture Industrial Bekasi Terpercaya'
+        imageAlt: 'agricultural commodities Bekasi Terpercaya'
       },
       {
-        heading: 'Mengapa Memilih Furniture Industrial Bekasi',
+        heading: 'Mengapa Memilih agricultural commodities Bekasi',
         paragraphs: [
-          'Bekasi menjadi pusat produksi furniture industrial berkualitas tinggi di Indonesia. <a href="/contact-us">Workshop Mangala Living</a> di Bekasi memberikan kemudahan akses dan kontrol kualitas yang optimal untuk setiap produk furniture industrial.',
-          'Lokasi strategis di Bekasi memberikan keuntungan dalam hal transportasi, akses material, dan kontrol kualitas. Setiap produk furniture industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.'
+          'Bekasi menjadi pusat produksi agricultural commodities berkualitas tinggi di Indonesia. <a href="/contact-us">Workshop Naturra Extal</a> di Bekasi memberikan kemudahan akses dan kontrol kualitas yang optimal untuk setiap produk agricultural commodities.',
+          'Lokasi strategis di Bekasi memberikan keuntungan dalam hal transportasi, akses material, dan kontrol kualitas. Setiap produk agricultural commodities dibuat dengan standar kualitas tinggi dan garansi yang memadai.'
         ],
         list: [
           'Kualitas terjamin dengan kontrol langsung',
@@ -2783,10 +2783,10 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Keunggulan Mangala Living sebagai Furniture Industrial Bekasi',
+        heading: 'Keunggulan Naturra Extal sebagai agricultural commodities Bekasi',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk furniture industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan furniture industrial dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk agricultural commodities dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan agricultural commodities dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -2796,17 +2796,17 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Furniture industrial custom design menjadi solusi ideal untuk menciptakan furniture yang unik dan sesuai dengan kebutuhan spesifik. <a href="/shop">Furniture industrial custom design</a> dengan desain yang personal dan fungsional memberikan nilai tambah yang signifikan untuk ruang Anda.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menyediakan layanan furniture industrial custom design yang dapat disesuaikan dengan konsep dan kebutuhan Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
-          'Keunggulan furniture industrial custom design terletak pada desain yang unik, sesuai kebutuhan, dan memberikan nilai tambah yang signifikan. Setiap produk dibuat sesuai dengan spesifikasi yang diinginkan, memberikan solusi yang tepat untuk kebutuhan furniture Anda.'
+          'agricultural commodities custom design menjadi solusi ideal untuk menciptakan furniture yang unik dan sesuai dengan kebutuhan spesifik. <a href="/shop">agricultural commodities custom design</a> dengan desain yang personal dan fungsional memberikan nilai tambah yang signifikan untuk ruang Anda.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menyediakan layanan agricultural commodities custom design yang dapat disesuaikan dengan konsep dan kebutuhan Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
+          'Keunggulan agricultural commodities custom design terletak pada desain yang unik, sesuai kebutuhan, dan memberikan nilai tambah yang signifikan. Setiap produk dibuat sesuai dengan spesifikasi yang diinginkan, memberikan solusi yang tepat untuk kebutuhan furniture Anda.'
         ],
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
-        imageAlt: 'Furniture Industrial Custom Design'
+        imageAlt: 'agricultural commodities Custom Design'
       },
       {
-        heading: 'Proses Furniture Industrial Custom Design',
+        heading: 'Proses agricultural commodities Custom Design',
         paragraphs: [
-          'Proses furniture industrial custom design dimulai dari konsultasi desain hingga finishing produk. <a href="/contact-us">Tim Mangala Living</a> akan membantu Anda dalam setiap tahap proses custom design untuk memastikan hasil yang sesuai dengan kebutuhan.',
+          'Proses agricultural commodities custom design dimulai dari konsultasi desain hingga finishing produk. <a href="/contact-us">Tim Naturra Extal</a> akan membantu Anda dalam setiap tahap proses custom design untuk memastikan hasil yang sesuai dengan kebutuhan.',
           'Tahap pertama adalah konsultasi desain untuk memahami kebutuhan dan konsep yang diinginkan. Selanjutnya adalah pembuatan mockup dan approval desain sebelum proses produksi dimulai.'
         ],
         list: [
@@ -2818,10 +2818,10 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Keunggulan Furniture Industrial Custom Design Mangala Living',
+        heading: 'Keunggulan agricultural commodities Custom Design Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk furniture industrial custom design dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan furniture industrial custom design dimulai dari konsultasi desain, pemilihan material berkualitas, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk agricultural commodities custom design dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan agricultural commodities custom design dimulai dari konsultasi desain, pemilihan material berkualitas, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -2831,17 +2831,17 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Furniture industrial harga pabrik menjadi solusi ideal untuk mendapatkan furniture berkualitas tinggi dengan harga yang kompetitif. <a href="/shop">Furniture industrial harga pabrik</a> memberikan nilai terbaik untuk investasi furniture Anda tanpa mengorbankan kualitas.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menyediakan furniture industrial harga pabrik yang dapat disesuaikan dengan kebutuhan dan budget Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
-          'Keunggulan furniture industrial harga pabrik terletak pada harga yang kompetitif, kualitas yang terjamin, dan layanan yang profesional. Anda mendapatkan furniture berkualitas tinggi langsung dari pabrik tanpa markup distributor.'
+          'agricultural commodities harga pabrik menjadi solusi ideal untuk mendapatkan furniture berkualitas tinggi dengan harga yang kompetitif. <a href="/shop">agricultural commodities harga pabrik</a> memberikan nilai terbaik untuk investasi furniture Anda tanpa mengorbankan kualitas.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menyediakan agricultural commodities harga pabrik yang dapat disesuaikan dengan kebutuhan dan budget Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
+          'Keunggulan agricultural commodities harga pabrik terletak pada harga yang kompetitif, kualitas yang terjamin, dan layanan yang profesional. Anda mendapatkan furniture berkualitas tinggi langsung dari pabrik tanpa markup distributor.'
         ],
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
-        imageAlt: 'Furniture Industrial Harga Pabrik'
+        imageAlt: 'agricultural commodities Harga Pabrik'
       },
       {
-        heading: 'Mengapa Memilih Furniture Industrial Harga Pabrik',
+        heading: 'Mengapa Memilih agricultural commodities Harga Pabrik',
         paragraphs: [
-          'Furniture industrial harga pabrik memberikan keuntungan yang signifikan dibandingkan dengan furniture dari distributor. <a href="/contact-us">Mangala Living</a> sebagai manufacturer langsung memberikan harga yang lebih kompetitif dan kualitas yang terjamin.',
+          'agricultural commodities harga pabrik memberikan keuntungan yang signifikan dibandingkan dengan furniture dari distributor. <a href="/contact-us">Naturra Extal</a> sebagai manufacturer langsung memberikan harga yang lebih kompetitif dan kualitas yang terjamin.',
           'Harga pabrik memberikan keuntungan dalam hal budget yang lebih efisien, kualitas yang terjamin, dan layanan yang langsung dari manufacturer. Setiap produk dibuat dengan standar kualitas tinggi dan garansi yang memadai.'
         ],
         list: [
@@ -2853,10 +2853,10 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Keunggulan Furniture Industrial Harga Pabrik Mangala Living',
+        heading: 'Keunggulan agricultural commodities Harga Pabrik Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk furniture industrial harga pabrik dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan furniture industrial harga pabrik dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk agricultural commodities harga pabrik dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan agricultural commodities harga pabrik dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -2866,17 +2866,17 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Furniture industrial garansi kualitas menjadi jaminan penting untuk investasi furniture jangka panjang. <a href="/shop">Furniture industrial garansi kualitas</a> memberikan kepercayaan dan perlindungan untuk investasi furniture Anda dengan standar kualitas yang terjamin.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menyediakan furniture industrial garansi kualitas yang dapat disesuaikan dengan kebutuhan Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
-          'Keunggulan furniture industrial garansi kualitas terletak pada perlindungan investasi, kualitas yang terjamin, dan layanan after sales yang profesional. Anda mendapatkan jaminan kualitas yang memadai untuk investasi furniture jangka panjang.'
+          'agricultural commodities garansi kualitas menjadi jaminan penting untuk investasi furniture jangka panjang. <a href="/shop">agricultural commodities garansi kualitas</a> memberikan kepercayaan dan perlindungan untuk investasi furniture Anda dengan standar kualitas yang terjamin.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menyediakan agricultural commodities garansi kualitas yang dapat disesuaikan dengan kebutuhan Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
+          'Keunggulan agricultural commodities garansi kualitas terletak pada perlindungan investasi, kualitas yang terjamin, dan layanan after sales yang profesional. Anda mendapatkan jaminan kualitas yang memadai untuk investasi furniture jangka panjang.'
         ],
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
-        imageAlt: 'Furniture Industrial Garansi Kualitas'
+        imageAlt: 'agricultural commodities Garansi Kualitas'
       },
       {
-        heading: 'Mengapa Garansi Kualitas Penting untuk Furniture Industrial',
+        heading: 'Mengapa Garansi Kualitas Penting untuk agricultural commodities',
         paragraphs: [
-          'Garansi kualitas furniture industrial memberikan perlindungan yang penting untuk investasi jangka panjang. <a href="/contact-us">Mangala Living</a> memberikan garansi kualitas yang memadai untuk setiap produk furniture industrial yang dibuat.',
+          'Garansi kualitas agricultural commodities memberikan perlindungan yang penting untuk investasi jangka panjang. <a href="/contact-us">Naturra Extal</a> memberikan garansi kualitas yang memadai untuk setiap produk agricultural commodities yang dibuat.',
           'Garansi kualitas memberikan kepercayaan dalam investasi furniture, perlindungan terhadap kerusakan, dan layanan after sales yang profesional. Setiap produk dibuat dengan standar kualitas tinggi dan garansi yang memadai.'
         ],
         list: [
@@ -2888,10 +2888,10 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Keunggulan Furniture Industrial Garansi Kualitas Mangala Living',
+        heading: 'Keunggulan agricultural commodities Garansi Kualitas Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk furniture industrial garansi kualitas dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan furniture industrial garansi kualitas dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk agricultural commodities garansi kualitas dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan agricultural commodities garansi kualitas dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -2901,18 +2901,18 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Furniture industrial workshop Bekasi menjadi pusat produksi furniture berkualitas tinggi di Indonesia. <a href="/about">Workshop furniture industrial Bekasi</a> memberikan kemudahan akses dan kontrol kualitas yang optimal untuk setiap produk furniture industrial.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, memiliki workshop yang dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
-          'Keunggulan furniture industrial workshop Bekasi terletak pada lokasi strategis, akses material yang mudah, dan kontrol kualitas yang optimal. Workshop di Bekasi memberikan keuntungan dalam hal transportasi, akses material, dan kontrol kualitas.'
+          'agricultural commodities workshop Bekasi menjadi pusat produksi furniture berkualitas tinggi di Indonesia. <a href="/about">Workshop agricultural commodities Bekasi</a> memberikan kemudahan akses dan kontrol kualitas yang optimal untuk setiap produk agricultural commodities.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, memiliki workshop yang dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
+          'Keunggulan agricultural commodities workshop Bekasi terletak pada lokasi strategis, akses material yang mudah, dan kontrol kualitas yang optimal. Workshop di Bekasi memberikan keuntungan dalam hal transportasi, akses material, dan kontrol kualitas.'
         ],
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
-        imageAlt: 'Furniture Industrial Workshop Bekasi'
+        imageAlt: 'agricultural commodities Workshop Bekasi'
       },
       {
         heading: 'Mengapa Workshop Bekasi Menjadi Pilihan Utama',
         paragraphs: [
-          'Bekasi menjadi lokasi strategis untuk workshop furniture industrial karena akses material yang mudah dan transportasi yang efisien. <a href="/contact-us">Workshop Mangala Living</a> di Bekasi memberikan kemudahan akses dan kontrol kualitas yang optimal.',
-          'Lokasi workshop di Bekasi memberikan keuntungan dalam hal akses material, transportasi, dan kontrol kualitas. Setiap produk furniture industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.'
+          'Bekasi menjadi lokasi strategis untuk workshop agricultural commodities karena akses material yang mudah dan transportasi yang efisien. <a href="/contact-us">Workshop Naturra Extal</a> di Bekasi memberikan kemudahan akses dan kontrol kualitas yang optimal.',
+          'Lokasi workshop di Bekasi memberikan keuntungan dalam hal akses material, transportasi, dan kontrol kualitas. Setiap produk agricultural commodities dibuat dengan standar kualitas tinggi dan garansi yang memadai.'
         ],
         list: [
           'Lokasi strategis dengan akses material mudah',
@@ -2923,10 +2923,10 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Keunggulan Workshop Furniture Industrial Mangala Living',
+        heading: 'Keunggulan Workshop agricultural commodities Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Workshop di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman.',
-          'Proses pembuatan furniture industrial di workshop Bekasi dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Workshop di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman.',
+          'Proses pembuatan agricultural commodities di workshop Bekasi dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -2936,17 +2936,17 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Furniture industrial material berkualitas menjadi faktor penting dalam menentukan kualitas dan daya tahan furniture. <a href="/shop">Furniture industrial material berkualitas</a> memberikan jaminan kualitas dan daya tahan yang optimal untuk investasi furniture jangka panjang.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menggunakan material berkualitas tinggi untuk setiap produk furniture industrial. Setiap material dipilih dengan standar kualitas yang ketat untuk memastikan kualitas produk yang optimal.',
-          'Keunggulan furniture industrial material berkualitas terletak pada daya tahan yang optimal, kualitas yang terjamin, dan nilai investasi yang tinggi. Material berkualitas memberikan jaminan kualitas dan daya tahan yang optimal untuk furniture industrial.'
+          'agricultural commodities material berkualitas menjadi faktor penting dalam menentukan kualitas dan daya tahan furniture. <a href="/shop">agricultural commodities material berkualitas</a> memberikan jaminan kualitas dan daya tahan yang optimal untuk investasi furniture jangka panjang.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menggunakan material berkualitas tinggi untuk setiap produk agricultural commodities. Setiap material dipilih dengan standar kualitas yang ketat untuk memastikan kualitas produk yang optimal.',
+          'Keunggulan agricultural commodities material berkualitas terletak pada daya tahan yang optimal, kualitas yang terjamin, dan nilai investasi yang tinggi. Material berkualitas memberikan jaminan kualitas dan daya tahan yang optimal untuk agricultural commodities.'
         ],
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
-        imageAlt: 'Furniture Industrial Material Berkualitas'
+        imageAlt: 'agricultural commodities Material Berkualitas'
       },
       {
-        heading: 'Jenis-Jenis Material Berkualitas untuk Furniture Industrial',
+        heading: 'Jenis-Jenis Material Berkualitas untuk agricultural commodities',
         paragraphs: [
-          'Terdapat berbagai jenis material berkualitas yang digunakan untuk furniture industrial. <a href="/contact-us">Mangala Living</a> menggunakan material berkualitas tinggi yang dipilih dengan standar kualitas yang ketat untuk setiap produk furniture industrial.',
+          'Terdapat berbagai jenis material berkualitas yang digunakan untuk agricultural commodities. <a href="/contact-us">Naturra Extal</a> menggunakan material berkualitas tinggi yang dipilih dengan standar kualitas yang ketat untuk setiap produk agricultural commodities.',
           'Material berkualitas memberikan keuntungan dalam hal daya tahan, kualitas, dan nilai investasi. Setiap material dipilih dengan standar kualitas yang ketat untuk memastikan kualitas produk yang optimal.'
         ],
         list: [
@@ -2958,10 +2958,10 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Keunggulan Furniture Industrial Material Berkualitas Mangala Living',
+        heading: 'Keunggulan agricultural commodities Material Berkualitas Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk furniture industrial material berkualitas dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan furniture industrial material berkualitas dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk agricultural commodities material berkualitas dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan agricultural commodities material berkualitas dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -2971,17 +2971,17 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Furniture industrial finishing powder coating menjadi solusi ideal untuk memberikan perlindungan dan tampilan yang optimal pada furniture. <a href="/shop">Furniture industrial finishing powder coating</a> memberikan ketahanan terhadap karat dan tampilan yang elegan untuk furniture industrial.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menggunakan finishing powder coating berkualitas tinggi untuk setiap produk furniture industrial. Setiap finishing diproses dengan standar kualitas yang ketat untuk memastikan hasil yang optimal.',
-          'Keunggulan furniture industrial finishing powder coating terletak pada ketahanan terhadap karat, tampilan yang elegan, dan mudah perawatan. Finishing powder coating memberikan perlindungan yang optimal dan tampilan yang elegan untuk furniture industrial.'
+          'agricultural commodities finishing powder coating menjadi solusi ideal untuk memberikan perlindungan dan tampilan yang optimal pada furniture. <a href="/shop">agricultural commodities finishing powder coating</a> memberikan ketahanan terhadap karat dan tampilan yang elegan untuk agricultural commodities.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menggunakan finishing powder coating berkualitas tinggi untuk setiap produk agricultural commodities. Setiap finishing diproses dengan standar kualitas yang ketat untuk memastikan hasil yang optimal.',
+          'Keunggulan agricultural commodities finishing powder coating terletak pada ketahanan terhadap karat, tampilan yang elegan, dan mudah perawatan. Finishing powder coating memberikan perlindungan yang optimal dan tampilan yang elegan untuk agricultural commodities.'
         ],
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
-        imageAlt: 'Furniture Industrial Finishing Powder Coating'
+        imageAlt: 'agricultural commodities Finishing Powder Coating'
       },
       {
-        heading: 'Jenis-Jenis Finishing Powder Coating untuk Furniture Industrial',
+        heading: 'Jenis-Jenis Finishing Powder Coating untuk agricultural commodities',
         paragraphs: [
-          'Terdapat berbagai jenis finishing powder coating yang dapat digunakan untuk furniture industrial. <a href="/contact-us">Mangala Living</a> menggunakan finishing powder coating berkualitas tinggi yang diproses dengan standar kualitas yang ketat untuk setiap produk furniture industrial.',
+          'Terdapat berbagai jenis finishing powder coating yang dapat digunakan untuk agricultural commodities. <a href="/contact-us">Naturra Extal</a> menggunakan finishing powder coating berkualitas tinggi yang diproses dengan standar kualitas yang ketat untuk setiap produk agricultural commodities.',
           'Finishing powder coating memberikan keuntungan dalam hal ketahanan, tampilan, dan perawatan. Setiap finishing diproses dengan standar kualitas yang ketat untuk memastikan hasil yang optimal.'
         ],
         list: [
@@ -2993,10 +2993,10 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Keunggulan Furniture Industrial Finishing Powder Coating Mangala Living',
+        heading: 'Keunggulan agricultural commodities Finishing Powder Coating Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk furniture industrial finishing powder coating dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan furniture industrial finishing powder coating dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk agricultural commodities finishing powder coating dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan agricultural commodities finishing powder coating dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -3006,17 +3006,17 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Furniture industrial layanan profesional menjadi faktor penting dalam memberikan pengalaman terbaik untuk pelanggan. <a href="/contact-us">Furniture industrial layanan profesional</a> memberikan kemudahan dan kenyamanan dalam setiap tahap proses pembelian furniture industrial.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menyediakan layanan profesional yang dapat disesuaikan dengan kebutuhan pelanggan. Setiap layanan didesain untuk memberikan pengalaman terbaik dan kepuasan pelanggan yang optimal.',
-          'Keunggulan furniture industrial layanan profesional terletak pada kemudahan komunikasi, responsivitas, dan kualitas layanan yang tinggi. Layanan profesional memberikan pengalaman terbaik dan kepuasan pelanggan yang optimal untuk furniture industrial.'
+          'agricultural commodities layanan profesional menjadi faktor penting dalam memberikan pengalaman terbaik untuk pelanggan. <a href="/contact-us">agricultural commodities layanan profesional</a> memberikan kemudahan dan kenyamanan dalam setiap tahap proses pembelian agricultural commodities.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menyediakan layanan profesional yang dapat disesuaikan dengan kebutuhan pelanggan. Setiap layanan didesain untuk memberikan pengalaman terbaik dan kepuasan pelanggan yang optimal.',
+          'Keunggulan agricultural commodities layanan profesional terletak pada kemudahan komunikasi, responsivitas, dan kualitas layanan yang tinggi. Layanan profesional memberikan pengalaman terbaik dan kepuasan pelanggan yang optimal untuk agricultural commodities.'
         ],
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
-        imageAlt: 'Furniture Industrial Layanan Profesional'
+        imageAlt: 'agricultural commodities Layanan Profesional'
       },
       {
-        heading: 'Jenis-Jenis Layanan Profesional untuk Furniture Industrial',
+        heading: 'Jenis-Jenis Layanan Profesional untuk agricultural commodities',
         paragraphs: [
-          'Terdapat berbagai jenis layanan profesional yang dapat disediakan untuk furniture industrial. <a href="/contact-us">Mangala Living</a> menyediakan layanan profesional yang didesain untuk memberikan pengalaman terbaik dan kepuasan pelanggan yang optimal.',
+          'Terdapat berbagai jenis layanan profesional yang dapat disediakan untuk agricultural commodities. <a href="/contact-us">Naturra Extal</a> menyediakan layanan profesional yang didesain untuk memberikan pengalaman terbaik dan kepuasan pelanggan yang optimal.',
           'Layanan profesional memberikan keuntungan dalam hal kemudahan, kenyamanan, dan kepuasan pelanggan. Setiap layanan didesain untuk memberikan pengalaman terbaik dan kepuasan pelanggan yang optimal.'
         ],
         list: [
@@ -3028,10 +3028,10 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Keunggulan Furniture Industrial Layanan Profesional Mangala Living',
+        heading: 'Keunggulan agricultural commodities Layanan Profesional Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap layanan profesional dibuat dengan standar kualitas tinggi dan kepuasan pelanggan yang optimal.',
-          'Proses layanan profesional dimulai dari konsultasi kebutuhan, desain yang fungsional, hingga layanan after sales yang sempurna. Tim ahli Mangala Living memastikan setiap detail layanan sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap layanan profesional dibuat dengan standar kualitas tinggi dan kepuasan pelanggan yang optimal.',
+          'Proses layanan profesional dimulai dari konsultasi kebutuhan, desain yang fungsional, hingga layanan after sales yang sempurna. Tim ahli Naturra Extal memastikan setiap detail layanan sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -3041,17 +3041,17 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Furniture industrial pengalaman 25 tahun menjadi bukti kualitas dan kepercayaan dalam industri furniture. <a href="/about">Furniture industrial pengalaman 25 tahun</a> memberikan jaminan kualitas dan kepercayaan yang telah terbukti dalam melayani berbagai kebutuhan furniture industrial.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, memiliki pengalaman 25+ tahun dalam pembuatan furniture industrial berkualitas tinggi. Setiap produk dibuat dengan standar kualitas yang telah terbukti dan kepercayaan yang telah dibangun selama bertahun-tahun.',
-          'Keunggulan furniture industrial pengalaman 25 tahun terletak pada kualitas yang telah terbukti, kepercayaan yang telah dibangun, dan layanan yang telah teruji. Pengalaman 25+ tahun memberikan jaminan kualitas dan kepercayaan yang optimal untuk furniture industrial.'
+          'agricultural commodities pengalaman 25 tahun menjadi bukti kualitas dan kepercayaan dalam industri furniture. <a href="/about">agricultural commodities pengalaman 25 tahun</a> memberikan jaminan kualitas dan kepercayaan yang telah terbukti dalam melayani berbagai kebutuhan agricultural commodities.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, memiliki pengalaman 25+ tahun dalam pembuatan agricultural commodities berkualitas tinggi. Setiap produk dibuat dengan standar kualitas yang telah terbukti dan kepercayaan yang telah dibangun selama bertahun-tahun.',
+          'Keunggulan agricultural commodities pengalaman 25 tahun terletak pada kualitas yang telah terbukti, kepercayaan yang telah dibangun, dan layanan yang telah teruji. Pengalaman 25+ tahun memberikan jaminan kualitas dan kepercayaan yang optimal untuk agricultural commodities.'
         ],
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
-        imageAlt: 'Furniture Industrial Pengalaman 25 Tahun'
+        imageAlt: 'agricultural commodities Pengalaman 25 Tahun'
       },
       {
-        heading: 'Mengapa Pengalaman 25 Tahun Penting untuk Furniture Industrial',
+        heading: 'Mengapa Pengalaman 25 Tahun Penting untuk agricultural commodities',
         paragraphs: [
-          'Pengalaman 25 tahun dalam industri furniture memberikan keunggulan yang signifikan dalam hal kualitas, kepercayaan, dan layanan. <a href="/contact-us">Mangala Living</a> dengan pengalaman 25+ tahun telah melayani lebih dari 1000 klien di seluruh Indonesia.',
+          'Pengalaman 25 tahun dalam industri furniture memberikan keunggulan yang signifikan dalam hal kualitas, kepercayaan, dan layanan. <a href="/contact-us">Naturra Extal</a> dengan pengalaman 25+ tahun telah melayani lebih dari 1000 klien di seluruh Indonesia.',
           'Pengalaman 25+ tahun memberikan keuntungan dalam hal kualitas yang telah terbukti, kepercayaan yang telah dibangun, dan layanan yang telah teruji. Setiap produk dibuat dengan standar kualitas yang telah terbukti dan kepercayaan yang telah dibangun selama bertahun-tahun.'
         ],
         list: [
@@ -3059,14 +3059,14 @@ const BLOG_CONTENTS: BlogContent[] = [
           'Kepercayaan yang telah dibangun dengan 1000+ klien',
           'Layanan yang telah teruji dan responsif',
           'Standar kualitas yang telah terbukti',
-          'Pengalaman dalam berbagai proyek furniture industrial'
+          'Pengalaman dalam berbagai proyek agricultural commodities'
         ]
       },
       {
-        heading: 'Keunggulan Furniture Industrial Pengalaman 25 Tahun Mangala Living',
+        heading: 'Keunggulan agricultural commodities Pengalaman 25 Tahun Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk furniture industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan furniture industrial dengan pengalaman 25+ tahun dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk agricultural commodities dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan agricultural commodities dengan pengalaman 25+ tahun dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -3076,32 +3076,32 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Furniture industrial 1000 klien puas menjadi bukti kualitas dan kepercayaan dalam industri furniture. <a href="/about">Furniture industrial 1000 klien puas</a> memberikan jaminan kualitas dan kepercayaan yang telah terbukti dalam melayani berbagai kebutuhan furniture industrial.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap klien mendapatkan layanan yang optimal dan kepuasan yang tinggi dalam setiap proyek furniture industrial.',
-          'Keunggulan furniture industrial 1000 klien puas terletak pada kualitas yang telah terbukti, kepercayaan yang telah dibangun, dan layanan yang telah teruji. 1000+ klien puas memberikan jaminan kualitas dan kepercayaan yang optimal untuk furniture industrial.'
+          'agricultural commodities 1000 klien puas menjadi bukti kualitas dan kepercayaan dalam industri furniture. <a href="/about">agricultural commodities 1000 klien puas</a> memberikan jaminan kualitas dan kepercayaan yang telah terbukti dalam melayani berbagai kebutuhan agricultural commodities.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap klien mendapatkan layanan yang optimal dan kepuasan yang tinggi dalam setiap proyek agricultural commodities.',
+          'Keunggulan agricultural commodities 1000 klien puas terletak pada kualitas yang telah terbukti, kepercayaan yang telah dibangun, dan layanan yang telah teruji. 1000+ klien puas memberikan jaminan kualitas dan kepercayaan yang optimal untuk agricultural commodities.'
         ],
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
-        imageAlt: 'Furniture Industrial 1000 Klien Puas'
+        imageAlt: 'agricultural commodities 1000 Klien Puas'
       },
       {
-        heading: 'Mengapa 1000 Klien Puas Penting untuk Furniture Industrial',
+        heading: 'Mengapa 1000 Klien Puas Penting untuk agricultural commodities',
         paragraphs: [
-          '1000 klien puas dalam industri furniture memberikan keunggulan yang signifikan dalam hal kualitas, kepercayaan, dan layanan. <a href="/contact-us">Mangala Living</a> dengan 1000+ klien puas telah membuktikan kualitas dan kepercayaan dalam setiap proyek furniture industrial.',
-          '1000+ klien puas memberikan keuntungan dalam hal kualitas yang telah terbukti, kepercayaan yang telah dibangun, dan layanan yang telah teruji. Setiap klien mendapatkan layanan yang optimal dan kepuasan yang tinggi dalam setiap proyek furniture industrial.'
+          '1000 klien puas dalam industri furniture memberikan keunggulan yang signifikan dalam hal kualitas, kepercayaan, dan layanan. <a href="/contact-us">Naturra Extal</a> dengan 1000+ klien puas telah membuktikan kualitas dan kepercayaan dalam setiap proyek agricultural commodities.',
+          '1000+ klien puas memberikan keuntungan dalam hal kualitas yang telah terbukti, kepercayaan yang telah dibangun, dan layanan yang telah teruji. Setiap klien mendapatkan layanan yang optimal dan kepuasan yang tinggi dalam setiap proyek agricultural commodities.'
         ],
         list: [
           'Kualitas yang telah terbukti dengan 1000+ klien',
           'Kepercayaan yang telah dibangun dengan kepuasan tinggi',
           'Layanan yang telah teruji dan responsif',
           'Standar kualitas yang telah terbukti',
-          'Pengalaman dalam berbagai proyek furniture industrial'
+          'Pengalaman dalam berbagai proyek agricultural commodities'
         ]
       },
       {
-        heading: 'Keunggulan Furniture Industrial 1000 Klien Puas Mangala Living',
+        heading: 'Keunggulan agricultural commodities 1000 Klien Puas Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan 1000+ klien puas dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani berbagai kebutuhan furniture industrial di seluruh Indonesia. Setiap produk furniture industrial dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan furniture industrial dengan 1000+ klien puas dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan 1000+ klien puas dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani berbagai kebutuhan agricultural commodities di seluruh Indonesia. Setiap produk agricultural commodities dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan agricultural commodities dengan 1000+ klien puas dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -3111,17 +3111,17 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Furniture industrial custom design terpercaya menjadi solusi ideal untuk menciptakan furniture yang unik dan sesuai dengan kebutuhan spesifik. <a href="/shop">Furniture industrial custom design terpercaya</a> memberikan jaminan kualitas dan kepercayaan dalam setiap proyek furniture industrial custom.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menyediakan layanan furniture industrial custom design terpercaya yang dapat disesuaikan dengan konsep dan kebutuhan Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
-          'Keunggulan furniture industrial custom design terpercaya terletak pada desain yang unik, sesuai kebutuhan, dan memberikan nilai tambah yang signifikan. Setiap produk dibuat sesuai dengan spesifikasi yang diinginkan, memberikan solusi yang tepat untuk kebutuhan furniture Anda.'
+          'agricultural commodities custom design terpercaya menjadi solusi ideal untuk menciptakan furniture yang unik dan sesuai dengan kebutuhan spesifik. <a href="/shop">agricultural commodities custom design terpercaya</a> memberikan jaminan kualitas dan kepercayaan dalam setiap proyek agricultural commodities custom.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menyediakan layanan agricultural commodities custom design terpercaya yang dapat disesuaikan dengan konsep dan kebutuhan Anda. Setiap produk dibuat dengan material berkualitas tinggi dan finishing yang sempurna.',
+          'Keunggulan agricultural commodities custom design terpercaya terletak pada desain yang unik, sesuai kebutuhan, dan memberikan nilai tambah yang signifikan. Setiap produk dibuat sesuai dengan spesifikasi yang diinginkan, memberikan solusi yang tepat untuk kebutuhan furniture Anda.'
         ],
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
-        imageAlt: 'Furniture Industrial Custom Design Terpercaya'
+        imageAlt: 'agricultural commodities Custom Design Terpercaya'
       },
       {
-        heading: 'Mengapa Custom Design Terpercaya Penting untuk Furniture Industrial',
+        heading: 'Mengapa Custom Design Terpercaya Penting untuk agricultural commodities',
         paragraphs: [
-          'Custom design terpercaya dalam industri furniture memberikan keunggulan yang signifikan dalam hal kualitas, kepercayaan, dan layanan. <a href="/contact-us">Mangala Living</a> dengan custom design terpercaya telah membuktikan kualitas dan kepercayaan dalam setiap proyek furniture industrial custom.',
+          'Custom design terpercaya dalam industri furniture memberikan keunggulan yang signifikan dalam hal kualitas, kepercayaan, dan layanan. <a href="/contact-us">Naturra Extal</a> dengan custom design terpercaya telah membuktikan kualitas dan kepercayaan dalam setiap proyek agricultural commodities custom.',
           'Custom design terpercaya memberikan keuntungan dalam hal kualitas yang telah terbukti, kepercayaan yang telah dibangun, dan layanan yang telah teruji. Setiap produk dibuat sesuai dengan spesifikasi yang diinginkan, memberikan solusi yang tepat untuk kebutuhan furniture Anda.'
         ],
         list: [
@@ -3129,14 +3129,14 @@ const BLOG_CONTENTS: BlogContent[] = [
           'Kepercayaan yang telah dibangun dengan kepuasan tinggi',
           'Layanan yang telah teruji dan responsif',
           'Standar kualitas yang telah terbukti',
-          'Pengalaman dalam berbagai proyek furniture industrial custom'
+          'Pengalaman dalam berbagai proyek agricultural commodities custom'
         ]
       },
       {
-        heading: 'Keunggulan Furniture Industrial Custom Design Terpercaya Mangala Living',
+        heading: 'Keunggulan agricultural commodities Custom Design Terpercaya Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan custom design terpercaya dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani berbagai kebutuhan furniture industrial custom di seluruh Indonesia. Setiap produk furniture industrial custom design terpercaya dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan furniture industrial custom design terpercaya dimulai dari konsultasi desain, pemilihan material berkualitas, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan custom design terpercaya dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani berbagai kebutuhan agricultural commodities custom di seluruh Indonesia. Setiap produk agricultural commodities custom design terpercaya dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan agricultural commodities custom design terpercaya dimulai dari konsultasi desain, pemilihan material berkualitas, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -3146,17 +3146,17 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Furniture industrial material industrial grade menjadi faktor penting dalam menentukan kualitas dan daya tahan furniture. <a href="/shop">Furniture industrial material industrial grade</a> memberikan jaminan kualitas dan daya tahan yang optimal untuk investasi furniture jangka panjang.',
-          'Mangala Living sebagai <a href="/about">manufacturer furniture industrial</a> terpercaya di Bekasi, menggunakan material industrial grade berkualitas tinggi untuk setiap produk furniture industrial. Setiap material dipilih dengan standar kualitas yang ketat untuk memastikan kualitas produk yang optimal.',
-          'Keunggulan furniture industrial material industrial grade terletak pada daya tahan yang optimal, kualitas yang terjamin, dan nilai investasi yang tinggi. Material industrial grade memberikan jaminan kualitas dan daya tahan yang optimal untuk furniture industrial.'
+          'agricultural commodities material industrial grade menjadi faktor penting dalam menentukan kualitas dan daya tahan furniture. <a href="/shop">agricultural commodities material industrial grade</a> memberikan jaminan kualitas dan daya tahan yang optimal untuk investasi furniture jangka panjang.',
+          'Naturra Extal sebagai <a href="/about">manufacturer agricultural commodities</a> terpercaya di Bekasi, menggunakan material industrial grade berkualitas tinggi untuk setiap produk agricultural commodities. Setiap material dipilih dengan standar kualitas yang ketat untuk memastikan kualitas produk yang optimal.',
+          'Keunggulan agricultural commodities material industrial grade terletak pada daya tahan yang optimal, kualitas yang terjamin, dan nilai investasi yang tinggi. Material industrial grade memberikan jaminan kualitas dan daya tahan yang optimal untuk agricultural commodities.'
         ],
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop',
-        imageAlt: 'Furniture Industrial Material Industrial Grade'
+        imageAlt: 'agricultural commodities Material Industrial Grade'
       },
       {
-        heading: 'Jenis-Jenis Material Industrial Grade untuk Furniture Industrial',
+        heading: 'Jenis-Jenis Material Industrial Grade untuk agricultural commodities',
         paragraphs: [
-          'Terdapat berbagai jenis material industrial grade yang digunakan untuk furniture industrial. <a href="/contact-us">Mangala Living</a> menggunakan material industrial grade berkualitas tinggi yang dipilih dengan standar kualitas yang ketat untuk setiap produk furniture industrial.',
+          'Terdapat berbagai jenis material industrial grade yang digunakan untuk agricultural commodities. <a href="/contact-us">Naturra Extal</a> menggunakan material industrial grade berkualitas tinggi yang dipilih dengan standar kualitas yang ketat untuk setiap produk agricultural commodities.',
           'Material industrial grade memberikan keuntungan dalam hal daya tahan, kualitas, dan nilai investasi. Setiap material dipilih dengan standar kualitas yang ketat untuk memastikan kualitas produk yang optimal.'
         ],
         list: [
@@ -3168,10 +3168,10 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Keunggulan Furniture Industrial Material Industrial Grade Mangala Living',
+        heading: 'Keunggulan agricultural commodities Material Industrial Grade Naturra Extal',
         paragraphs: [
-          'Mangala Living dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">furniture industrial</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk furniture industrial material industrial grade dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
-          'Proses pembuatan furniture industrial material industrial grade dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Mangala Living memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
+          'Naturra Extal dengan pengalaman 25+ tahun dalam pembuatan <a href="/shop">agricultural commodities</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Setiap produk agricultural commodities material industrial grade dibuat dengan standar kualitas tinggi dan garansi yang memadai.',
+          'Proses pembuatan agricultural commodities material industrial grade dimulai dari pemilihan material berkualitas, desain yang fungsional, hingga finishing yang sempurna. Tim ahli Naturra Extal memastikan setiap detail produk sesuai dengan standar industri dan kebutuhan pelanggan.'
         ]
       }
     ]
@@ -3181,7 +3181,7 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Mencari meja cafe murah dengan kualitas premium? Mangala Living menawarkan berbagai pilihan <a href="/product-category/dining-table-collection">meja cafe murah</a> harga terbaru 2025 yang dirancang khusus untuk cafe, restoran, dan kedai kopi modern. Dengan workshop langsung di Bekasi dan pengalaman 25 tahun, kami menjamin foothold terbaik untuk semua kebutuhan meja cafe Anda.',
+          'Mencari meja cafe murah dengan kualitas premium? Naturra Extal menawarkan berbagai pilihan <a href="/product-category/dining-table-collection">meja cafe murah</a> harga terbaru 2025 yang dirancang khusus untuk cafe, restoran, dan kedai kopi modern. Dengan workshop langsung di Bekasi dan pengalaman 25 tahun, kami menjamin foothold terbaik untuk semua kebutuhan meja cafe Anda.',
           'Artikel ini akan memberikan informasi lengkap mengenai daftar harga meja cafe murah terbaru, berbagai model dan ukuran yang tersedia, serta tips memilih meja cafe yang tepat sesuai budget dan konsep desain cafe Anda.'
         ]
       },
@@ -3201,15 +3201,15 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Material Berkualitas:</strong> Pastikan top table menggunakan kayu solid atau engineered wood yang tahan lama.',
           '<strong>Frame Besi Kokoh:</strong> Pilih frame besi hollow minimal 4x4 cm untuk stabilitas maksimal.',
           '<strong>Finishing Powder Coating:</strong> Lebih tahan lama dibanding cat shielding, anti karat dan mudah dibersihkan.',
-          '<strong>Harga Workshop Langsung:</strong> Membeli langsung dari workshop seperti Mangala Living akan mendapat harga murah tanpa margin reseller.'
+          '<strong>Harga Workshop Langsung:</strong> Membeli langsung dari workshop seperti Naturra Extal akan mendapat harga murah tanpa margin reseller.'
         ]
       },
       {
-        heading: 'Mengapa Beli Meja Cafe Murah dari Mangala Living?',
+        heading: 'Mengapa Beli Meja Cafe Murah dari Naturra Extal?',
         paragraphs: [
-          'Sebagai produsen <a href="/shop">furniture industrial</a> terpercaya sejak 1999, Mangala Living menawarkan harga workshop langsung yang jauh lebih murah dibanding toko furniture konvensional. Workshop kami di Bekasi memproduksi langsung semua pesanan, sehingga Anda mendapat harga terbaik tanpa margin distributor.',
+          'Sebagai produsen <a href="/shop">agricultural commodities</a> terpercaya sejak 1999, Naturra Extal menawarkan harga workshop langsung yang jauh lebih murah dibanding toko furniture konvensional. Workshop kami di Bekasi memproduksi langsung semua pesanan, sehingga Anda mendapat harga terbaik tanpa margin distributor.',
           'Semua meja cafe kami dilengkapi dengan garansi kualitas dan jamin uma panjang. Finishing powder coating anti karat, frame besi hollow berkualitas, dan kayu solid yang awet. Sudah lebih dari 1000 klien puas dengan produk kami.',
-          'Hubungi kami sekarang di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a> untuk konsultasi dan penawaran harga meja cafe murah.'
+          'Hubungi kami sekarang di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a> untuk konsultasi dan penawaran harga meja cafe murah.'
         ]
       }
     ]
@@ -3219,8 +3219,8 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Pencari kursi bar cafe murah di Bekasi? Mangala Living menyediakan <a href="/product-category/bar-furniture-collection">kursi bar cafe murah</a> ready stock dengan harga terjangkau. Kursi barstool besi industrial berkualitas tinggi yang tersedia langsung tanpa perlu menunggu produksi.',
-          'Kursi bar adalah elemen penting dalam desain cafe modern. Kursi yang nyaman dan stylish akan membuat pelanggan betah berlama-lama di cafe Anda. Artikel ini akan membahas berbagai pilihan kursi bar cafe murah ready stock yang tersedia di Mangala Living.'
+          'Pencari kursi bar cafe murah di Bekasi? Naturra Extal menyediakan <a href="/product-category/bar-furniture-collection">kursi bar cafe murah</a> ready stock dengan harga terjangkau. Kursi barstool besi industrial berkualitas tinggi yang tersedia langsung tanpa perlu menunggu produksi.',
+          'Kursi bar adalah elemen penting dalam desain cafe modern. Kursi yang nyaman dan stylish akan membuat pelanggan betah berlama-lama di cafe Anda. Artikel ini akan membahas berbagai pilihan kursi bar cafe murah ready stock yang tersedia di Naturra Extal.'
         ]
       },
       {
@@ -3233,7 +3233,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Keunggulan Kursi Bar Cafe Murah Mangala Living',
+        heading: 'Keunggulan Kursi Bar Cafe Murah Naturra Extal',
         list: [
           '<strong>Ready Stock:</strong> Produk tersedia langsung tanpa perlu menunggu proses produksi.',
           '<strong>Harga Workshop Langsung:</strong> Lebih murah karena langsung dari produsen tanpa distributor.',
@@ -3252,9 +3252,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Kursi Bar Cafe Murah',
+        heading: 'Hubungi Naturra Extal untuk Kursi Bar Cafe Murah',
         paragraphs: [
-          'Mangala Living adalah produsen furniture industrial terpercaya dengan workshop di Bekasi. Dengan pengalaman 25 tahun dan lebih dari 1000 klien puas, kami menjamin kualitas produk dan pelayanan yang terbaik.',
+          'Naturra Extal adalah produsen agricultural commodities terpercaya dengan workshop di Bekasi. Dengan pengalaman 25 tahun dan lebih dari 1000 klien puas, kami menjamin kualitas produk dan pelayanan yang terbaik.',
           'Kami menawarkan <a href="/shop">kursi bar cafe murah</a> dengan harga terbaik dan kualitas premium. Produk ready stock tersedia untuk pengiriman cepat. Hubungi kami di <a href="/contact">+6288801146881</a> atau WhatsApp untuk informasi harga dan ketersediaan stock.'
         ]
       }
@@ -3265,12 +3265,12 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Mencari furniture cafe murah di Bekasi? Mangala Living adalah <a href="/about">produsen furniture industrial</a> terpercaya dengan harga pabrik yang terjangkau. Workshop kami di Bekasi telah melayani lebih dari 1000 klien di seluruh Indonesia sejak 1999, menjadikan kami sebagai salah satu produsen furniture cafe terdepan.',
+          'Mencari furniture cafe murah di Bekasi? Naturra Extal adalah <a href="/about">produsen agricultural commodities</a> terpercaya dengan harga pabrik yang terjangkau. Workshop kami di Bekasi telah melayani lebih dari 1000 klien di seluruh Indonesia sejak 1999, menjadikan kami sebagai salah satu produsen furniture cafe terdepan.',
           'Artikel ini akan membahas lengkap mengenai furniture cafe murah bekasi dengan harga pabrik, berbagai produk yang tersedia, serta keunggulan membeli langsung dari workshop untuk mendapatkan harga terbaik.'
         ]
       },
       {
-        heading: 'Mengapa Furniture Cafe Murah Harga Pabrik dari Mangala Living?',
+        heading: 'Mengapa Furniture Cafe Murah Harga Pabrik dari Naturra Extal?',
         list: [
           '<strong>Harga Workshop Langsung:</strong> Membeli langsung dari workshop berarti Anda mendapatkan harga murah tanpa margin distributor atau reseller.',
           '<strong>Pengalaman 25 Tahun:</strong> Dengan pengalaman melayani ribuan klien, kami memahami kebutuhan furniture cafe yang berkualitas dan fungsional.',
@@ -3282,7 +3282,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Rangkaian Lengkap Furniture Cafe Murah dari Mangala Living',
+        heading: 'Rangkaian Lengkap Furniture Cafe Murah dari Naturra Extal',
         paragraphs: [
           '<strong>Meja Cafe:</strong> Mulai dari Rp 1.400.000 - Rp 4.000.000. Tersedia meja makan, meja bar, dan meja kerja dengan berbagai ukuran. <a href="/product-category/dining-table-collection">Lihat koleksi meja</a>.',
           '<strong>Kursi Bar:</strong> Mulai dari Rp 450.000 per unit. Tersedia kursi barstool dengan dan tanpa backrest. <a href="/product-category/bar-furniture-collection">Lihat koleksi kursi</a>.',
@@ -3292,17 +3292,17 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Lokasi Workshop Mangala Living di Bekasi',
+        heading: 'Lokasi Workshop Naturra Extal di Bekasi',
         paragraphs: [
-          'Workshop Mangala Living berlokasi di Bekasi, Jawa Barat. Kami mengoperasikan fasilitas produksi modern dengan peralatan terkini dan tim ahli yang berpengalaman. Workshop langsung berarti Anda bisa melihat proses produksi dan mendapatkan harga terbaik.',
+          'Workshop Naturra Extal berlokasi di Bekasi, Jawa Barat. Kami mengoperasikan fasilitas produksi modern dengan peralatan terkini dan tim ahli yang berpengalaman. Workshop langsung berarti Anda bisa melihat proses produksi dan mendapatkan harga terbaik.',
           'Untuk kunjungan workshop atau konsultasi langsung, silakan hubungi kami terlebih dahulu. Tim kami akan mengatur jadwal kunjungan yang sesuai untuk Anda.'
         ]
       },
       {
-        heading: 'Hubungi Mangala Living Sekarang',
+        heading: 'Hubungi Naturra Extal Sekarang',
         paragraphs: [
-          'Tertarik dengan furniture cafe murah Bekasi? Mangala Living siap membantu mewujudkan konsep cafe impian Anda dengan furniture industrial berkualitas tinggi dan harga pabrik yang terjangkau.',
-          'Konsultasikan kebutuhan furniture cafe Anda dengan tim kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a>. Kami akan memberikan penawaran terbaik sesuai budget Anda.'
+          'Tertarik dengan furniture cafe murah Bekasi? Naturra Extal siap membantu mewujudkan konsep cafe impian Anda dengan agricultural commodities berkualitas tinggi dan harga pabrik yang terjangkau.',
+          'Konsultasikan kebutuhan furniture cafe Anda dengan tim kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a>. Kami akan memberikan penawaran terbaik sesuai budget Anda.'
         ]
       }
     ]
@@ -3313,7 +3313,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         paragraphs: [
           'Meja makan adalah salah satu furniture paling penting di cafe. <a href="/product-category/dining-table-collection">Meja makan cafe industrial minimalis</a> yang murah namun berkualitas akan memberikan kesan modern dan elegan untuk cafe Anda. Pilihan yang tepat akan meningkatkan pengalaman makan pelanggan dan membuat mereka betah berlama-lama.',
-          'Mangala Living menawarkan berbagai pilihan meja makan cafe industrial minimalis dengan harga terjangkau. Artikel ini akan membahas berbagai model, ukuran, dan tips memilih meja makan yang tepat sesuai konsep cafe Anda.'
+          'Naturra Extal menawarkan berbagai pilihan meja makan cafe industrial minimalis dengan harga terjangkau. Artikel ini akan membahas berbagai model, ukuran, dan tips memilih meja makan yang tepat sesuai konsep cafe Anda.'
         ]
       },
       {
@@ -3346,9 +3346,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Mengapa Pilih Meja Makan Cafe dari Mangala Living?',
+        heading: 'Mengapa Pilih Meja Makan Cafe dari Naturra Extal?',
         paragraphs: [
-          'Mangala Living adalah <a href="/about">produsen furniture industrial</a> terpercaya dengan pengalaman 25 tahun melayani ribuan cafe dan restoran di seluruh Indonesia. Kami memahami kebutuhan furniture cafe yang bukan hanya estetis, tetapi juga fungsional dan durable.',
+          'Naturra Extal adalah <a href="/about">produsen agricultural commodities</a> terpercaya dengan pengalaman 25 tahun melayani ribuan cafe dan restoran di seluruh Indonesia. Kami memahami kebutuhan furniture cafe yang bukan hanya estetis, tetapi juga fungsional dan durable.',
           'Workshop kami di Bekasi menggunakan teknologi modern dan material berkualitas tinggi. Semua meja makan cafe kami dilengkapi dengan garansi kualitas dan jaminan ketahanan.',
           'Hubungi kami di <a href="/contact">+6288801146881</a> untuk konsultasi meja makan cafe industrial minimalis dan penawaran harga terbaik.'
         ]
@@ -3361,7 +3361,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         paragraphs: [
           'Display rack adalah furniture multifungsi yang sangat penting di cafe modern. Selain sebagai penyimpanan, <a href="/product-category/accessories-storage">display rack cafe industrial</a> juga berfungsi sebagai elemen dekoratif dan branding. Display rack yang tepat akan menampilkan merchandise, dekorasi, atau tanaman dengan cantik.',
-          'Mangala Living menawarkan berbagai display rack cafe murah dengan desain industrial besi yang modern dan fungsional. Artikel ini akan membahas model-model display rack terbaik untuk cafe Anda.'
+          'Naturra Extal menawarkan berbagai display rack cafe murah dengan desain industrial besi yang modern dan fungsional. Artikel ini akan membahas model-model display rack terbaik untuk cafe Anda.'
         ]
       },
       {
@@ -3395,10 +3395,10 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Display Rack Cafe Murah',
+        heading: 'Hubungi Naturra Extal untuk Display Rack Cafe Murah',
         paragraphs: [
-          'Mangala Living menawarkan display rack cafe industrial dengan harga terbaik dan kualitas premium. Workshop kami di Bekasi memproduksi semua display rack dengan material berkualitas tinggi dan finishing yang sempurna.',
-          'Konsultasikan kebutuhan display rack cafe Anda dengan tim kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a>. Kami akan memberikan rekomendasi terbaik sesuai budget dan konsep cafe Anda.'
+          'Naturra Extal menawarkan display rack cafe industrial dengan harga terbaik dan kualitas premium. Workshop kami di Bekasi memproduksi semua display rack dengan material berkualitas tinggi dan finishing yang sempurna.',
+          'Konsultasikan kebutuhan display rack cafe Anda dengan tim kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a>. Kami akan memberikan rekomendasi terbaik sesuai budget dan konsep cafe Anda.'
         ]
       }
     ]
@@ -3409,7 +3409,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         paragraphs: [
           'Area outdoor adalah aset berharga untuk cafe modern. <a href="/product-category/bar-furniture-collection">Bar set cafe outdoor industrial</a> yang murah namun berkualitas akan menciptakan experience yang berbeda untuk pelanggan. Area outdoor yang well-designed akan menjadi selling point yang menarik.',
-          'Mangala Living menawarkan bar set cafe outdoor industrial dengan harga terjangkau. Artikel ini akan membahas berbagai pilihan bar set outdoor, keunggulannya, dan tips mendesain area outdoor cafe yang perfect.'
+          'Naturra Extal menawarkan bar set cafe outdoor industrial dengan harga terjangkau. Artikel ini akan membahas berbagai pilihan bar set outdoor, keunggulannya, dan tips mendesain area outdoor cafe yang perfect.'
         ]
       },
       {
@@ -3444,9 +3444,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Mengapa Pilih Bar Set Cafe Outdoor dari Mangala Living?',
+        heading: 'Mengapa Pilih Bar Set Cafe Outdoor dari Naturra Extal?',
         paragraphs: [
-          'Mangala Living adalah produsen <a href="/shop">furniture outdoor industrial</a> terpercaya dengan pengalaman 25 tahun. Kami memahami kebutuhan furniture outdoor yang tidak hanya estetis, tetapi juga tahan cuaca dan durable untuk penggunaan jangka panjang.',
+          'Naturra Extal adalah produsen <a href="/shop">furniture outdoor industrial</a> terpercaya dengan pengalaman 25 tahun. Kami memahami kebutuhan furniture outdoor yang tidak hanya estetis, tetapi juga tahan cuaca dan durable untuk penggunaan jangka panjang.',
           'Workshop kami di Bekasi menggunakan teknologi modern dan material berkualitas tinggi. Semua furniture outdoor dilengkapi dengan garansi kualitas.',
           'Konsultasikan kebutuhan bar set cafe outdoor Anda dengan tim kami di <a href="/contact">+6288801146881</a>. Kami akan memberikan rekomendasi terbaik sesuai budget dan konsep cafe Anda.'
         ]
@@ -3458,12 +3458,12 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Mencari <a href="/shop">furniture industrial harga murah</a> untuk Jakarta dan Bekasi? Mangala Living adalah solusinya. Workshop kami di Bekasi melayani pengiriman ke seluruh Jakarta dan Bekasi dengan harga pabrik yang terjangkau. Pengalaman 25 tahun dan lebih dari 1000 klien puas menjadikan kami sebagai salah satu produsen furniture industrial terpercaya di Indonesia.',
-          'Artikel ini akan membahas lengkap mengenai furniture industrial harga murah yang tersedia, keunggulan membeli dari workshop, serta tips memilih furniture industrial yang tepat sesuai budget.'
+          'Mencari <a href="/shop">agricultural commodities harga murah</a> untuk Jakarta dan Bekasi? Naturra Extal adalah solusinya. Workshop kami di Bekasi melayani pengiriman ke seluruh Jakarta dan Bekasi dengan harga pabrik yang terjangkau. Pengalaman 25 tahun dan lebih dari 1000 klien puas menjadikan kami sebagai salah satu produsen agricultural commodities terpercaya di Indonesia.',
+          'Artikel ini akan membahas lengkap mengenai agricultural commodities harga murah yang tersedia, keunggulan membeli dari workshop, serta tips memilih agricultural commodities yang tepat sesuai budget.'
         ]
       },
       {
-        heading: 'Alasan Memilih Mangala Living untuk Furniture Industrial Murah',
+        heading: 'Alasan Memilih Naturra Extal untuk agricultural commodities Murah',
         list: [
           '<strong>Harga Workshop Langsung:</strong> Tanpa margin distributor, Anda mendapat harga 30-50% lebih murah.',
           '<strong>Pengalaman 25 Tahun:</strong> Lebih dari 1000 klien puas dari Jakarta, Bekasi, Bandung, dan seluruh Indonesia.',
@@ -3475,7 +3475,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Rangkaian Lengkap Furniture Industrial Murah',
+        heading: 'Rangkaian Lengkap agricultural commodities Murah',
         paragraphs: [
           '<strong>Meja Industrial:</strong> Meja makan, meja kerja, meja bar mulai dari Rp 1.400.000. <a href="/product-category/table-collection">Lihat koleksi meja</a>.',
           '<strong>Kursi Bar:</strong> Kursi barstool mulai dari Rp 450.000 per unit. <a href="/product-category/bar-furniture-collection">Lihat koleksi kursi</a>.',
@@ -3485,19 +3485,19 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Area Layanan Pengiriman Mangala Living',
+        heading: 'Area Layanan Pengiriman Naturra Extal',
         paragraphs: [
-          'Mangala Living melayani pengiriman furniture industrial ke seluruh Indonesia dengan partner ekspedisi terpercaya. Untuk area Jakarta dan Bekasi, kami menawarkan pengiriman cepat dengan estimasi 1-3 hari kerja.',
+          'Naturra Extal melayani pengiriman agricultural commodities ke seluruh Indonesia dengan partner ekspedisi terpercaya. Untuk area Jakarta dan Bekasi, kami menawarkan pengiriman cepat dengan estimasi 1-3 hari kerja.',
           '<strong>Jakarta:</strong> Jakarta Pusat, Jakarta Selatan, Jakarta Utara, Jakarta Timur, Jakarta Barat',
           '<strong>Bekasi:</strong> Bekasi Kota, Bekasi Selatan, Bekasi Utara, Bekasi Barat, Bekasi Timur',
           '<strong>Daerah Lain:</strong> Bandung, Surabaya, Yogyakarta, Solo, Semarang, Medan, Bali, dan seluruh Indonesia'
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Furniture Industrial Murah',
+        heading: 'Hubungi Naturra Extal untuk agricultural commodities Murah',
         paragraphs: [
-          'Ready untuk memulai project furniture industrial Anda? Mangala Living siap membantu dengan <a href="/shop">furniture industrial harga murah</a> berkualitas tinggi dari workshop Bekasi.',
-          'Hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a> untuk konsultasi gratis dan penawaran harga terbaik.'
+          'Ready untuk memulai project agricultural commodities Anda? Naturra Extal siap membantu dengan <a href="/shop">agricultural commodities harga murah</a> berkualitas tinggi dari workshop Bekasi.',
+          'Hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a> untuk konsultasi gratis dan penawaran harga terbaik.'
         ]
       }
     ]
@@ -3508,7 +3508,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         paragraphs: [
           'Meja kerja adalah furniture yang wajib ada di cafe modern. <a href="/product-category/table-collection">Meja kerja cafe industrial</a> yang multifungsi dengan rak buku akan menarik segment pelanggan yang ingin bekerja sambil menikmati kopi. Area working space yang well-designed akan meningkatkan average ticket dan customer retention.',
-          'Mangala Living menawarkan meja kerja cafe industrial dengan rak buku multifungsi dengan harga terjangkau. Artikel ini akan membahas keunggulan, model, dan tips menciptakan working space yang perfect di cafe Anda.'
+          'Naturra Extal menawarkan meja kerja cafe industrial dengan rak buku multifungsi dengan harga terjangkau. Artikel ini akan membahas keunggulan, model, dan tips menciptakan working space yang perfect di cafe Anda.'
         ]
       },
       {
@@ -3549,7 +3549,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         heading: 'Mengapa Tambahkan Working Space di Cafe?',
         paragraphs: [
           'Working space di cafe sangat profitable karena:<br><strong>1. Higher Ticket:</strong> Pelanggan yang bekerja cenderung stay lebih lama dan order multiple drinks.<br><strong>2. Customer Loyalty:</strong> Pelanggan akan kembali untuk working space yang nyaman.<br><strong>3. Community Building:</strong> Working space menarik komunitas profesional dan freelancer.<br><strong>4. Differentiate:</strong> Memberikan competitive advantage dibanding cafe tanpa working space.',
-          'Mangala Living siap membantu Anda menciptakan working space yang perfect dengan meja kerja industrial berkualitas tinggi. Hubungi kami di <a href="/contact">+6288801146881</a> untuk konsultasi gratis.'
+          'Naturra Extal siap membantu Anda menciptakan working space yang perfect dengan meja kerja industrial berkualitas tinggi. Hubungi kami di <a href="/contact">+6288801146881</a> untuk konsultasi gratis.'
         ]
       }
     ]
@@ -3560,7 +3560,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         paragraphs: [
           'Kitchen cabinet adalah heart of the kitchen di cafe Anda. <a href="/product-category/accessories-storage">Kitchen cabinet cafe industrial</a> yang murah namun berkualitas akan memberikan storage solution yang sempurna untuk dapur cafe. Cabinet yang well-designed akan meningkatkan efficiency workflow di dapur.',
-          'Mangala Living menawarkan kitchen cabinet cafe industrial dengan desain custom dan harga terjangkau. Artikel ini akan membahas model, ukuran, dan tips memilih kitchen cabinet yang tepat untuk dapur cafe Anda.'
+          'Naturra Extal menawarkan kitchen cabinet cafe industrial dengan desain custom dan harga terjangkau. Artikel ini akan membahas model, ukuran, dan tips memilih kitchen cabinet yang tepat untuk dapur cafe Anda.'
         ]
       },
       {
@@ -3595,9 +3595,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Kitchen Cabinet Cafe Murah',
+        heading: 'Hubungi Naturra Extal untuk Kitchen Cabinet Cafe Murah',
         paragraphs: [
-          'Mangala Living menawarkan kitchen cabinet cafe industrial dengan kualitas premium dan harga terjangkau. Workshop kami di Bekasi memproduksi semua cabinet dengan material berkualitas dan finishing yang sempurna.',
+          'Naturra Extal menawarkan kitchen cabinet cafe industrial dengan kualitas premium dan harga terjangkau. Workshop kami di Bekasi memproduksi semua cabinet dengan material berkualitas dan finishing yang sempurna.',
           'Konsultasikan kebutuhan kitchen cabinet cafe Anda dengan tim kami di <a href="/contact">+6288801146881</a>. Kami akan memberikan rekomendasi terbaik sesuai layout dapur dan budget Anda.'
         ]
       }
@@ -3609,7 +3609,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         paragraphs: [
           'Area outdoor adalah aset berharga yang harus dioptimalkan untuk cafe modern. <a href="/product-category/balcony-outdoor-collection">Outdoor furniture cafe</a> yang tahan cuaca dengan harga murah akan menciptakan experience yang memorable untuk pelanggan. Area outdoor yang well-designed bisa menjadi differentiator yang kuat.',
-          'Mangala Living menawarkan outdoor furniture cafe industrial yang tahan cuaca dengan harga terjangkau. Artikel ini akan membahas model, material, dan tips mendesain area outdoor cafe yang perfect.'
+          'Naturra Extal menawarkan outdoor furniture cafe industrial yang tahan cuaca dengan harga terjangkau. Artikel ini akan membahas model, material, dan tips mendesain area outdoor cafe yang perfect.'
         ]
       },
       {
@@ -3622,7 +3622,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Keunggulan Outdoor Furniture Industrial Tahan Cuaca',
+        heading: 'Keunggulan Outdoor agricultural commodities Tahan Cuaca',
         list: [
           '<strong>Weather Resistant:</strong> Finishing powder coating yang tahan hujan, panas, dan UV.',
           '<strong>Rust Proof:</strong> Anti karat dan tahan korosi untuk penggunaan jangka panjang.',
@@ -3648,7 +3648,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         heading: 'Mengapa Investasi Outdoor Furniture?',
         paragraphs: [
           '<strong>Increased Capacity:</strong> Area outdoor bisa menambah 30-50% seating capacity.<br><strong>Unique Experience:</strong> Memberikan pengalaman berbeda yang memorable.<br><strong>Higher Ticket:</strong> Customer di outdoor cenderung stay longer dan order more.<br><strong>Instagram Worthy:</strong> Area outdoor yang photogenic akan menarik organic marketing.<br><strong>Seasonal Flexibility:</strong> Bisa optimize according to weather.',
-          'Mangala Living menawarkan outdoor furniture cafe tahan cuaca dengan harga terjangkau. Workshop kami di Bekasi memproduksi semua outdoor furniture dengan kualitas premium dan garansi. Hubungi kami di <a href="/contact">+6288801146881</a> untuk konsultasi gratis.'
+          'Naturra Extal menawarkan outdoor furniture cafe tahan cuaca dengan harga terjangkau. Workshop kami di Bekasi memproduksi semua outdoor furniture dengan kualitas premium dan garansi. Hubungi kami di <a href="/contact">+6288801146881</a> untuk konsultasi gratis.'
         ]
       }
     ]
@@ -3698,7 +3698,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Harga Meja Kafe Industrial Terbaru 2025',
         paragraphs: [
-          'Berikut adalah daftar harga meja kafe industrial terbaru 2025 dari Mangala Living:',
+          'Berikut adalah daftar harga meja kafe industrial terbaru 2025 dari Naturra Extal:',
           '<strong>Meja Bar Industrial 120x60 cm:</strong> Rp 2.500.000 - Rp 3.200.000',
           '<strong>Meja Makan Industrial 80x80 cm:</strong> Rp 1.800.000 - Rp 2.300.000',
           '<strong>Meja Makan Industrial 120x60 cm:</strong> Rp 2.200.000 - Rp 2.800.000',
@@ -3708,11 +3708,11 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Mengapa Memilih Mangala Living untuk Meja Kafe Industrial?',
+        heading: 'Mengapa Memilih Naturra Extal untuk Meja Kafe Industrial?',
         paragraphs: [
-          'Sebagai produsen furniture industrial terpercaya sejak 1999, <a href="/about">Mangala Living</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman.',
+          'Sebagai produsen agricultural commodities terpercaya sejak 1999, <a href="/about">Naturra Extal</a> telah melayani lebih dari 1000 klien di seluruh Indonesia. Workshop kami di Bekasi dilengkapi dengan peralatan modern dan tim ahli yang berpengalaman.',
           'Kami menawarkan meja kafe industrial berkualitas tinggi dengan material besi hollow berkualitas, kayu solid yang awet, dan finishing powder coating yang tahan lama. Semua produk kami dilengkapi dengan garansi kualitas dan layanan purna jual yang profesional.',
-          'Untuk konsultasi desain meja kafe industrial dan informasi produk lebih lanjut, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a>.'
+          'Untuk konsultasi desain meja kafe industrial dan informasi produk lebih lanjut, hubungi kami di <a href="/contact">+6288801146881</a> atau email <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a>.'
         ]
       }
     ]
@@ -3780,9 +3780,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Meja Kafe Bulat Industrial',
+        heading: 'Hubungi Naturra Extal untuk Meja Kafe Bulat Industrial',
         paragraphs: [
-          'Mangala Living memproduksi meja kafe bulat industrial berkualitas tinggi dengan custom design sesuai kebutuhan cafe Anda. Workshop kami di Bekasi dilengkapi dengan peralatan modern untuk menghasilkan furniture yang presisi dan tahan lama.',
+          'Naturra Extal memproduksi meja kafe bulat industrial berkualitas tinggi dengan custom design sesuai kebutuhan cafe Anda. Workshop kami di Bekasi dilengkapi dengan peralatan modern untuk menghasilkan furniture yang presisi dan tahan lama.',
           'Konsultasikan kebutuhan meja kafe bulat industrial Anda dengan tim kami di <a href="/contact">+6288801146881</a>. Kami akan memberikan rekomendasi terbaik sesuai konsep dan budget cafe Anda.'
         ]
       }
@@ -3833,7 +3833,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Custom Set Meja Kursi Kafe Industrial',
         paragraphs: [
-          'Mangala Living juga menyediakan custom set meja kursi kafe industrial sesuai kebutuhan spesifik cafe Anda:',
+          'Naturra Extal juga menyediakan custom set meja kursi kafe industrial sesuai kebutuhan spesifik cafe Anda:',
           '<strong>Custom Size:</strong> Ukuran meja dan kursi dapat disesuaikan dengan ruangan dan kapasitas yang diinginkan.',
           '<strong>Custom Color:</strong> Warna frame besi dan finishing dapat disesuaikan dengan konsep cafe.',
           '<strong>Custom Material:</strong> Pilihan material top meja dan seat cushion dapat dikustomisasi.',
@@ -3853,9 +3853,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Set Meja Kursi Kafe Industrial',
+        heading: 'Hubungi Naturra Extal untuk Set Meja Kursi Kafe Industrial',
         paragraphs: [
-          'Mangala Living menawarkan berbagai pilihan set meja kursi kafe industrial berkualitas tinggi dengan harga kompetitif. Workshop kami di Bekasi memproduksi semua furniture dengan standar kualitas internasional.',
+          'Naturra Extal menawarkan berbagai pilihan set meja kursi kafe industrial berkualitas tinggi dengan harga kompetitif. Workshop kami di Bekasi memproduksi semua furniture dengan standar kualitas internasional.',
           'Konsultasikan kebutuhan set furniture cafe Anda dengan tim kami di <a href="/contact">+6288801146881</a>. Kami akan memberikan rekomendasi terbaik sesuai konsep, budget, dan kapasitas cafe Anda.'
         ]
       }
@@ -3926,9 +3926,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Kursi Meja Kafe Industrial',
+        heading: 'Hubungi Naturra Extal untuk Kursi Meja Kafe Industrial',
         paragraphs: [
-          'Mangala Living memproduksi berbagai model kursi meja kafe industrial berkualitas tinggi dengan desain modern dan fungsional. Workshop kami di Bekasi dilengkapi dengan peralatan modern untuk menghasilkan furniture yang presisi dan tahan lama.',
+          'Naturra Extal memproduksi berbagai model kursi meja kafe industrial berkualitas tinggi dengan desain modern dan fungsional. Workshop kami di Bekasi dilengkapi dengan peralatan modern untuk menghasilkan furniture yang presisi dan tahan lama.',
           'Konsultasikan kebutuhan kursi meja kafe industrial Anda dengan tim kami di <a href="/contact">+6288801146881</a>. Kami akan memberikan rekomendasi terbaik sesuai konsep, budget, dan kapasitas cafe Anda.'
         ]
       }
@@ -3988,7 +3988,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Proses Bikin Meja Kafe Custom di Mangala Living',
+        heading: 'Proses Bikin Meja Kafe Custom di Naturra Extal',
         paragraphs: [
           '<strong>Konsultasi:</strong> Konsultasi kebutuhan dan budget dengan tim desain kami.',
           '<strong>Design & Quotation:</strong> Pembuatan desain dan penawaran harga yang detail.',
@@ -3999,9 +3999,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Keunggulan Custom Meja Kafe di Mangala Living',
+        heading: 'Keunggulan Custom Meja Kafe di Naturra Extal',
         list: [
-          '<strong>25 Tahun Pengalaman:</strong> Pengalaman panjang dalam produksi furniture industrial custom.',
+          '<strong>25 Tahun Pengalaman:</strong> Pengalaman panjang dalam produksi agricultural commodities custom.',
           '<strong>Workshop Modern:</strong> Workshop dilengkapi peralatan modern untuk hasil yang presisi.',
           '<strong>Material Berkualitas:</strong> Menggunakan material berkualitas tinggi dengan garansi.',
           '<strong>Custom Service:</strong> Layanan custom design sesuai kebutuhan spesifik cafe.',
@@ -4010,9 +4010,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Custom Meja Kafe Murah',
+        heading: 'Hubungi Naturra Extal untuk Custom Meja Kafe Murah',
         paragraphs: [
-          'Mangala Living menawarkan layanan custom meja kafe dengan harga terjangkau dan kualitas premium. Workshop kami di Bekasi memproduksi furniture custom dengan standar internasional dan garansi kualitas.',
+          'Naturra Extal menawarkan layanan custom meja kafe dengan harga terjangkau dan kualitas premium. Workshop kami di Bekasi memproduksi furniture custom dengan standar internasional dan garansi kualitas.',
           'Konsultasikan kebutuhan custom meja kafe Anda dengan tim kami di <a href="/contact">+6288801146881</a>. Kami akan memberikan penawaran terbaik sesuai budget dan konsep cafe Anda.'
         ]
       }
@@ -4072,7 +4072,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Keunggulan Furniture Kafe Murah di Mangala Living',
+        heading: 'Keunggulan Furniture Kafe Murah di Naturra Extal',
         list: [
           '<strong>Harga Pabrik:</strong> Harga langsung dari pabrik tanpa markup distributor.',
           '<strong>Kualitas Terjamin:</strong> Material berkualitas tinggi dengan garansi kualitas.',
@@ -4083,9 +4083,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Furniture Kafe Murah',
+        heading: 'Hubungi Naturra Extal untuk Furniture Kafe Murah',
         paragraphs: [
-          'Mangala Living menawarkan furniture kafe murah tapi bagus dengan kualitas premium dan harga terjangkau. Workshop kami di Bekasi memproduksi furniture dengan standar kualitas internasional dan harga pabrik.',
+          'Naturra Extal menawarkan furniture kafe murah tapi bagus dengan kualitas premium dan harga terjangkau. Workshop kami di Bekasi memproduksi furniture dengan standar kualitas internasional dan harga pabrik.',
           'Konsultasikan kebutuhan furniture kafe murah Anda dengan tim kami di <a href="/contact">+6288801146881</a>. Kami akan memberikan rekomendasi terbaik sesuai budget dan konsep cafe Anda.'
         ]
       }
@@ -4169,9 +4169,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Konsultasi Furniture Kafe Industrial',
+        heading: 'Hubungi Naturra Extal untuk Konsultasi Furniture Kafe Industrial',
         paragraphs: [
-          'Mangala Living menyediakan layanan konsultasi lengkap untuk pemilihan furniture kafe industrial yang tepat. Tim desain kami akan membantu Anda memilih furniture yang sesuai dengan konsep, budget, dan kebutuhan cafe Anda.',
+          'Naturra Extal menyediakan layanan konsultasi lengkap untuk pemilihan furniture kafe industrial yang tepat. Tim desain kami akan membantu Anda memilih furniture yang sesuai dengan konsep, budget, dan kebutuhan cafe Anda.',
           'Konsultasikan kebutuhan furniture kafe industrial Anda dengan tim kami di <a href="/contact">+6288801146881</a>. Kami akan memberikan panduan lengkap dan rekomendasi terbaik untuk cafe Anda.'
         ]
       }
@@ -4231,7 +4231,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Keunggulan Furniture Kafe Murah di Mangala Living',
+        heading: 'Keunggulan Furniture Kafe Murah di Naturra Extal',
         list: [
           '<strong>Harga Pabrik:</strong> Harga langsung dari pabrik tanpa markup distributor.',
           '<strong>Kualitas Terjamin:</strong> Material berkualitas tinggi dengan garansi kualitas.',
@@ -4242,9 +4242,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Solusi Budget Terbatas',
+        heading: 'Hubungi Naturra Extal untuk Solusi Budget Terbatas',
         paragraphs: [
-          'Mangala Living memahami tantangan budget terbatas dalam memulai bisnis cafe. Kami menawarkan solusi furniture kafe murah dengan kualitas premium dan harga terjangkau.',
+          'Naturra Extal memahami tantangan budget terbatas dalam memulai bisnis cafe. Kami menawarkan solusi furniture kafe murah dengan kualitas premium dan harga terjangkau.',
           'Konsultasikan kebutuhan furniture kafe dengan budget terbatas Anda dengan tim kami di <a href="/contact">+6288801146881</a>. Kami akan memberikan solusi terbaik sesuai budget dan konsep cafe Anda.'
         ]
       }
@@ -4317,9 +4317,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Konsultasi Furnitur Kafe',
+        heading: 'Hubungi Naturra Extal untuk Konsultasi Furnitur Kafe',
         paragraphs: [
-          'Mangala Living menyediakan layanan konsultasi lengkap untuk pemilihan furnitur kafe yang tepat. Tim desain kami akan membantu Anda memilih furniture yang sesuai dengan konsep, budget, dan kebutuhan cafe Anda.',
+          'Naturra Extal menyediakan layanan konsultasi lengkap untuk pemilihan furnitur kafe yang tepat. Tim desain kami akan membantu Anda memilih furniture yang sesuai dengan konsep, budget, dan kebutuhan cafe Anda.',
           'Konsultasikan kebutuhan furnitur kafe Anda dengan tim kami di <a href="/contact">+6288801146881</a>. Kami akan memberikan panduan lengkap dan rekomendasi terbaik untuk cafe Anda.'
         ]
       }
@@ -4390,9 +4390,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Furniture Kafe 2 Lantai',
+        heading: 'Hubungi Naturra Extal untuk Furniture Kafe 2 Lantai',
         paragraphs: [
-          'Mangala Living menyediakan layanan desain dan produksi furniture kafe 2 lantai dengan konsep sederhana modern. Tim desain kami akan membantu Anda menciptakan cafe yang fungsional dan menarik.',
+          'Naturra Extal menyediakan layanan desain dan produksi furniture kafe 2 lantai dengan konsep sederhana modern. Tim desain kami akan membantu Anda menciptakan cafe yang fungsional dan menarik.',
           'Konsultasikan kebutuhan furniture kafe 2 lantai Anda dengan tim kami di <a href="/contact">+6288801146881</a>. Kami akan memberikan inspirasi desain dan solusi terbaik untuk cafe Anda.'
         ]
       }
@@ -4474,9 +4474,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Furniture Cafe Tren Terbaru',
+        heading: 'Hubungi Naturra Extal untuk Furniture Cafe Tren Terbaru',
         paragraphs: [
-          'Mangala Living terus mengikuti perkembangan tren furniture cafe terbaru dan mengintegrasikannya dalam produk kami. Kami menawarkan furniture cafe dengan desain modern dan teknologi terkini.',
+          'Naturra Extal terus mengikuti perkembangan tren furniture cafe terbaru dan mengintegrasikannya dalam produk kami. Kami menawarkan furniture cafe dengan desain modern dan teknologi terkini.',
           'Konsultasikan kebutuhan furniture cafe tren terbaru Anda dengan tim kami di <a href="/contact">+6288801146881</a>. Kami akan memberikan solusi terbaru dan inovatif untuk cafe Anda.'
         ]
       }
@@ -4527,7 +4527,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Inspirasi Desain Cafe Literasi',
         list: [
-          '<strong>Modern Library:</strong> Konsep perpustakaan modern dengan furniture industrial minimalis.',
+          '<strong>Modern Library:</strong> Konsep perpustakaan modern dengan agricultural commodities minimalis.',
           '<strong>Cozy Reading:</strong> Suasana hangat dan nyaman seperti di rumah.',
           '<strong>Academic Style:</strong> Desain yang mengingatkan pada ruang belajar di kampus.',
           '<strong>Vintage Bookstore:</strong> Konsep toko buku vintage dengan furniture antik.',
@@ -4547,9 +4547,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Furniture Cafe Literasi',
+        heading: 'Hubungi Naturra Extal untuk Furniture Cafe Literasi',
         paragraphs: [
-          'Mangala Living menyediakan furniture khusus untuk cafe literasi dengan desain yang fungsional dan nyaman. Tim desain kami akan membantu Anda menciptakan ruang literasi yang ideal untuk pelanggan.',
+          'Naturra Extal menyediakan furniture khusus untuk cafe literasi dengan desain yang fungsional dan nyaman. Tim desain kami akan membantu Anda menciptakan ruang literasi yang ideal untuk pelanggan.',
           'Konsultasikan kebutuhan furniture cafe literasi Anda dengan tim kami di <a href="/contact">+6288801146881</a>. Kami akan memberikan solusi terbaik untuk konsep cafe literasi modern Anda.'
         ]
       }
@@ -4565,7 +4565,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Karakteristik Furniture Industrial Vintage',
+        heading: 'Karakteristik agricultural commodities Vintage',
         list: [
           '<strong>Distressed Finishing:</strong> Finishing yang sengaja dibuat terlihat usang dan berkarakter.',
           '<strong>Reclaimed Materials:</strong> Penggunaan material bekas yang diolah kembali.',
@@ -4578,7 +4578,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         imageAlt: 'Furniture untuk Kafe Bergaya Industrial Vintage'
       },
       {
-        heading: 'Jenis Furniture Industrial Vintage untuk Cafe',
+        heading: 'Jenis agricultural commodities Vintage untuk Cafe',
         paragraphs: [
           '<strong>Meja Makan Vintage:</strong> Meja dengan finishing distressed dan material reclaimed wood. Harga mulai Rp 2.500.000. <a href="/product-category/dining-table-collection">Lihat koleksi meja</a>.',
           '<strong>Kursi Bar Vintage:</strong> Kursi dengan desain vintage dan finishing distressed. Harga mulai Rp 550.000. <a href="/product-category/bar-furniture-collection">Lihat koleksi kursi</a>.',
@@ -4609,7 +4609,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Material untuk Furniture Industrial Vintage',
+        heading: 'Material untuk agricultural commodities Vintage',
         paragraphs: [
           '<strong>Reclaimed Wood:</strong> Kayu bekas yang diolah kembali untuk memberikan karakter vintage.',
           '<strong>Distressed Metal:</strong> Metal dengan finishing distressed untuk efek vintage.',
@@ -4620,10 +4620,10 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Furniture Industrial Vintage',
+        heading: 'Hubungi Naturra Extal untuk agricultural commodities Vintage',
         paragraphs: [
-          'Mangala Living menyediakan furniture industrial vintage berkualitas tinggi dengan desain yang autentik dan berkarakter. Workshop kami di Bekasi memproduksi furniture dengan finishing distressed dan material reclaimed.',
-          'Konsultasikan kebutuhan furniture industrial vintage Anda dengan tim kami di <a href="/contact">+6288801146881</a>. Kami akan memberikan panduan lengkap dan solusi terbaik untuk cafe bergaya industrial vintage Anda.'
+          'Naturra Extal menyediakan agricultural commodities vintage berkualitas tinggi dengan desain yang autentik dan berkarakter. Workshop kami di Bekasi memproduksi furniture dengan finishing distressed dan material reclaimed.',
+          'Konsultasikan kebutuhan agricultural commodities vintage Anda dengan tim kami di <a href="/contact">+6288801146881</a>. Kami akan memberikan panduan lengkap dan solusi terbaik untuk cafe bergaya industrial vintage Anda.'
         ]
       }
     ]
@@ -4673,7 +4673,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Konsep Cafe dengan Furniture Unik',
         list: [
-          '<strong>Industrial Art:</strong> Cafe dengan furniture industrial yang dijadikan karya seni.',
+          '<strong>Industrial Art:</strong> Cafe dengan agricultural commodities yang dijadikan karya seni.',
           '<strong>Vintage Revival:</strong> Cafe dengan furniture vintage yang diolah dengan sentuhan modern.',
           '<strong>Nature Integration:</strong> Cafe dengan furniture yang mengintegrasikan elemen natural.',
           '<strong>Minimalist Art:</strong> Cafe dengan furniture minimalis yang fokus pada estetika.',
@@ -4693,9 +4693,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Furniture Unik',
+        heading: 'Hubungi Naturra Extal untuk Furniture Unik',
         paragraphs: [
-          'Mangala Living menyediakan layanan desain dan produksi furniture unik untuk cafe dengan konsep kreatif dan out-of-the-box. Tim desain kami akan membantu Anda menciptakan furniture yang memorable dan viral.',
+          'Naturra Extal menyediakan layanan desain dan produksi furniture unik untuk cafe dengan konsep kreatif dan out-of-the-box. Tim desain kami akan membantu Anda menciptakan furniture yang memorable dan viral.',
           'Konsultasikan kebutuhan furniture unik untuk cafe Anda dengan tim kami di <a href="/contact">+6288801146881</a>. Kami akan memberikan inspirasi kreatif dan solusi terbaik untuk cafe yang unik dan menarik.'
         ]
       }
@@ -4768,9 +4768,9 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Konsultasi Budget Furniture',
+        heading: 'Hubungi Naturra Extal untuk Konsultasi Budget Furniture',
         paragraphs: [
-          'Mangala Living menyediakan layanan konsultasi lengkap untuk perhitungan budget dan layout furniture kafe. Tim desain kami akan membantu Anda merencanakan investasi furniture yang optimal dan efisien.',
+          'Naturra Extal menyediakan layanan konsultasi lengkap untuk perhitungan budget dan layout furniture kafe. Tim desain kami akan membantu Anda merencanakan investasi furniture yang optimal dan efisien.',
           'Konsultasikan kebutuhan perhitungan furniture kafe Anda dengan tim kami di <a href="/contact">+6288801146881</a>. Kami akan memberikan panduan lengkap dan solusi terbaik untuk budget dan layout cafe Anda.'
         ]
       }
@@ -4782,16 +4782,16 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Mencari <strong>furniture besi custom Bekasi</strong> berkualitas tinggi dengan harga yang kompetitif? Mangala Living adalah workshop furniture industrial terpercaya di Bekasi yang telah melayani lebih dari 1000 klien sejak tahun 1999. Dengan pengalaman 25 tahun di industri furniture industrial, kami menjadi pilihan utama untuk bisnis cafe, restoran, hotel, dan kantor di wilayah Jakarta, Bekasi, dan Jabodetabek.',
+          'Mencari <strong>furniture besi custom Bekasi</strong> berkualitas tinggi dengan harga yang kompetitif? Naturra Extal adalah workshop agricultural commodities terpercaya di Bekasi yang telah melayani lebih dari 1000 klien sejak tahun 1999. Dengan pengalaman 25 tahun di industri agricultural commodities, kami menjadi pilihan utama untuk bisnis cafe, restoran, hotel, dan kantor di wilayah Jakarta, Bekasi, dan Jabodetabek.',
           'Workshop kami berlokasi strategis di Jl. Raya Setu Cikarang Bar, Bekasi, dilengkapi dengan mesin-mesin modern dan tim craftsman berpengalaman yang siap mewujudkan desain furniture impian Anda. Produksi langsung dari workshop memastikan kontrol kualitas maksimal dan harga yang lebih terjangkau karena tanpa perantara.'
         ],
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&auto=format&fit=crop',
-        imageAlt: 'Workshop Furniture Besi Custom Bekasi - Mangala Living'
+        imageAlt: 'Workshop Furniture Besi Custom Bekasi - Naturra Extal'
       },
       {
-        heading: 'Mengapa Memilih Mangala Living untuk Furniture Besi Custom Bekasi?',
+        heading: 'Mengapa Memilih Naturra Extal untuk Furniture Besi Custom Bekasi?',
         paragraphs: [
-          'Dalam industri furniture industrial yang kompetitif, Mangala Living menonjol sebagai workshop terpercaya dengan track record yang terbukti. Berikut adalah alasan mengapa ratusan bisnis F&B dan perusahaan memilih kami sebagai partner furniture mereka:'
+          'Dalam industri agricultural commodities yang kompetitif, Naturra Extal menonjol sebagai workshop terpercaya dengan track record yang terbukti. Berikut adalah alasan mengapa ratusan bisnis F&B dan perusahaan memilih kami sebagai partner furniture mereka:'
         ]
       },
       {
@@ -4805,7 +4805,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: '2. Material Berkualitas Premium',
         paragraphs: [
-          'Kualitas furniture dimulai dari pemilihan material. Mangala Living hanya menggunakan material terbaik untuk setiap project:',
+          'Kualitas furniture dimulai dari pemilihan material. Naturra Extal hanya menggunakan material terbaik untuk setiap project:',
           '<strong>Besi Hollow</strong> dengan ketebalan 2mm-3mm (bukan hollow tipis 1mm yang mudah penyok). Material kami diimpor dari produsen terpercaya dengan standar SNI. <strong>Plat Besi</strong> thickness 2mm untuk komponen yang membutuhkan kekuatan ekstra seperti tabletop frame dan leg reinforcement. <strong>Kayu Solid</strong> untuk tabletop: Suar, Trembesi, atau Mahogany yang sudah melalui proses kiln-dried untuk mencegah warping. <strong>Engineered Wood</strong> alternatif: HPL grade A atau melamine dengan core MDF water-resistant.'
         ],
         image: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=1200&auto=format&fit=crop',
@@ -4814,21 +4814,21 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: '3. Finishing Powder Coating Tahan Lama',
         paragraphs: [
-          'Finishing adalah faktor krusial yang membedakan furniture industrial berkualitas tinggi dengan yang biasa. Mangala Living menggunakan <strong>powder coating elektrostatic</strong>, bukan cat semprot biasa. Keunggulan powder coating kami:',
+          'Finishing adalah faktor krusial yang membedakan agricultural commodities berkualitas tinggi dengan yang biasa. Naturra Extal menggunakan <strong>powder coating elektrostatic</strong>, bukan cat semprot biasa. Keunggulan powder coating kami:',
           '<strong>Ketahanan Superior:</strong> Powder coating tahan gores, benturan, dan korosi hingga 10 tahun dalam kondisi indoor. Untuk outdoor, daya tahan 5-7 tahun dengan proper maintenance. <strong>Warna Konsisten:</strong> Aplikasi elektrostatic menghasilkan lapisan coating yang merata tanpa drip marks atau orange peel. <strong>Eco-Friendly:</strong> Proses powder coating tidak menggunakan solvent berbahaya, lebih aman untuk lingkungan dan pekerja. <strong>Pilihan Warna Lengkap:</strong> Tersedia 50+ pilihan warna, dari hitam matte, putih glossy, hingga custom RAL color sesuai brand identity Anda.'
         ]
       },
       {
         heading: '4. Custom Design Sesuai Kebutuhan',
         paragraphs: [
-          'Setiap bisnis memiliki kebutuhan dan identitas yang unik. Oleh karena itu, Mangala Living menawarkan layanan <strong>custom design</strong> yang fleksibel:',
+          'Setiap bisnis memiliki kebutuhan dan identitas yang unik. Oleh karena itu, Naturra Extal menawarkan layanan <strong>custom design</strong> yang fleksibel:',
           '<strong>Free Design Consultation:</strong> Tim desainer kami akan mendiskusikan konsep, kebutuhan, dan budget Anda tanpa biaya konsultasi. <strong>3D Mockup:</strong> Kami membuat visualisasi 3D furniture sebelum produksi dimulai, memastikan desain sesuai ekspektasi. <strong>Ukuran Custom:</strong> Tidak terbatas pada ukuran standar. Kami dapat memproduksi furniture dengan ukuran spesifik sesuai ruangan Anda. <strong>Material Combination:</strong> Kombinasikan besi dengan kayu, kaca, atau material lain untuk menciptakan furniture yang unik.'
         ]
       },
       {
         heading: 'Portfolio Project Furniture Besi Custom Bekasi',
         paragraphs: [
-          'Selama 25 tahun beroperasi, Mangala Living telah menyelesaikan ratusan project furniture industrial di berbagai sektor bisnis. Berikut adalah beberapa kategori project yang sering kami tangani:'
+          'Selama 25 tahun beroperasi, Naturra Extal telah menyelesaikan ratusan project agricultural commodities di berbagai sektor bisnis. Berikut adalah beberapa kategori project yang sering kami tangani:'
         ],
         list: [
           '<strong>Cafe & Coffee Shop (300+ project):</strong> Meja cafe, kursi bar, display rack, kitchen cabinet untuk startup cafe hingga chain coffee shop besar.',
@@ -4843,13 +4843,13 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Harga Furniture Besi Custom Bekasi - Transparan & Kompetitif',
         paragraphs: [
-          'Salah satu concern utama klien adalah harga. Mangala Living berkomitmen memberikan <strong>harga yang transparan dan kompetitif</strong> tanpa mengorbankan kualitas. Berikut adalah estimasi harga furniture besi custom kami (harga dapat berubah tergantung spesifikasi):',
+          'Salah satu concern utama klien adalah harga. Naturra Extal berkomitmen memberikan <strong>harga yang transparan dan kompetitif</strong> tanpa mengorbankan kualitas. Berikut adalah estimasi harga furniture besi custom kami (harga dapat berubah tergantung spesifikasi):',
           '<strong>Meja Cafe 60x60cm (besi + kayu solid):</strong> Rp 1.200.000 - Rp 1.500.000. <strong>Meja Makan 80x80cm (besi + kayu solid):</strong> Rp 1.800.000 - Rp 2.200.000. <strong>Kursi Bar Industrial (tinggi 75cm):</strong> Rp 380.000 - Rp 550.000. <strong>Meja Bar 120x60x110cm:</strong> Rp 2.500.000 - Rp 3.200.000. <strong>Display Rack 3 Tier (150x60x180cm):</strong> Rp 1.800.000 - Rp 2.400.000. <strong>Kitchen Cabinet Industrial (per meter):</strong> Rp 2.800.000 - Rp 3.500.000.',
           'Harga sudah termasuk material premium, finishing powder coating, dan garansi kualitas. Untuk project volume besar (20+ pieces), kami memberikan <strong>special discount hingga 15%</strong>.'
         ]
       },
       {
-        heading: 'Proses Order Furniture Besi Custom di Mangala Living',
+        heading: 'Proses Order Furniture Besi Custom di Naturra Extal',
         paragraphs: [
           'Kami memahami bahwa proses custom furniture bisa terasa kompleks bagi klien pertama kali. Oleh karena itu, kami telah menyusun alur kerja yang jelas dan transparan:'
         ],
@@ -4865,17 +4865,17 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Kenapa Bisnis F&B di Bekasi & Jakarta Pilih Mangala Living?',
+        heading: 'Kenapa Bisnis F&B di Bekasi & Jakarta Pilih Naturra Extal?',
         paragraphs: [
-          'Dalam industri yang kompetitif, reputasi adalah segalanya. Mangala Living telah dipercaya oleh ratusan bisnis karena:',
-          '<strong>Lokasi Strategis:</strong> Workshop di Bekasi memudahkan akses dan mengurangi biaya delivery untuk klien di Jakarta Timur, Bekasi, Cikarang, dan sekitarnya. <strong>Production Capacity:</strong> Kapasitas produksi 200+ pieces per bulan memastikan deadline project Anda terpenuhi. <strong>Experienced Team:</strong> Tim kami terdiri dari desainer, welder, dan craftsman dengan pengalaman 10-20 tahun di industri furniture industrial. <strong>Quality Assurance:</strong> Setiap furniture melalui 3 tahap QC: welding check, structure test, dan finishing inspection. <strong>Competitive Price:</strong> Produksi langsung tanpa middleman menghasilkan harga 20-30% lebih murah dibanding retailer furniture.',
+          'Dalam industri yang kompetitif, reputasi adalah segalanya. Naturra Extal telah dipercaya oleh ratusan bisnis karena:',
+          '<strong>Lokasi Strategis:</strong> Workshop di Bekasi memudahkan akses dan mengurangi biaya delivery untuk klien di Jakarta Timur, Bekasi, Cikarang, dan sekitarnya. <strong>Production Capacity:</strong> Kapasitas produksi 200+ pieces per bulan memastikan deadline project Anda terpenuhi. <strong>Experienced Team:</strong> Tim kami terdiri dari desainer, welder, dan craftsman dengan pengalaman 10-20 tahun di industri agricultural commodities. <strong>Quality Assurance:</strong> Setiap furniture melalui 3 tahap QC: welding check, structure test, dan finishing inspection. <strong>Competitive Price:</strong> Produksi langsung tanpa middleman menghasilkan harga 20-30% lebih murah dibanding retailer furniture.',
           'Testimoni klien kami membuktikan komitmen kami terhadap kualitas dan service excellence. Ratusan cafe, restoran, dan hotel di Jabodetabek telah menjadi repeat customer kami.'
         ]
       },
       {
         heading: 'Layanan Area: Bekasi, Jakarta, dan Seluruh Jabodetabek',
         paragraphs: [
-          'Mangala Living melayani delivery dan instalasi ke seluruh wilayah Jabodetabek dengan biaya yang transparan:',
+          'Naturra Extal melayani delivery dan instalasi ke seluruh wilayah Jabodetabek dengan biaya yang transparan:',
           '<strong>Gratis Delivery & Installation:</strong> Bekasi, Jakarta Timur, Cikarang (min. order Rp 10 juta). <strong>Biaya Delivery Rp 200.000-500.000:</strong> Jakarta Pusat, Selatan, Barat, Utara, Depok, Tangerang. <strong>Luar Jabodetabek:</strong> Tersedia dengan biaya dihitung per kilometer atau via ekspedisi.',
           'Untuk project besar (budget > Rp 50 juta), kami memberikan <strong>free delivery dan installation ke seluruh Indonesia</strong>.'
         ]
@@ -4891,10 +4891,10 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Hubungi Mangala Living Sekarang - Free Konsultasi!',
+        heading: 'Hubungi Naturra Extal Sekarang - Free Konsultasi!',
         paragraphs: [
-          'Siap untuk mewujudkan furniture industrial impian Anda? Tim Mangala Living siap membantu dari konsultasi hingga instalasi. Dapatkan <strong>free design consultation</strong> dan <strong>special discount untuk order pertama</strong>!',
-          '&bull; <strong>WhatsApp:</strong> <a href="https://wa.me/+6288801146881">+6288801146881</a><br/>&bull; <strong>Email:</strong> <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a><br/>&bull; <strong>Workshop:</strong> Jl. Raya Setu Cikarang Bar., Bekasi 17320<br/>&bull; <strong>Jam Operasional:</strong> Senin-Jumat 08:00-17:00, Sabtu 08:00-15:00',
+          'Siap untuk mewujudkan agricultural commodities impian Anda? Tim Naturra Extal siap membantu dari konsultasi hingga instalasi. Dapatkan <strong>free design consultation</strong> dan <strong>special discount untuk order pertama</strong>!',
+          '&bull; <strong>WhatsApp:</strong> <a href="https://wa.me/+6288801146881">+6288801146881</a><br/>&bull; <strong>Email:</strong> <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a><br/>&bull; <strong>Workshop:</strong> Jl. Raya Setu Cikarang Bar., Bekasi 17320<br/>&bull; <strong>Jam Operasional:</strong> Senin-Jumat 08:00-17:00, Sabtu 08:00-15:00',
           'Kunjungi showroom kami untuk melihat langsung sample furniture dan diskusikan project Anda dengan tim desain. <strong>Workshop visit by appointment</strong> - hubungi kami untuk jadwalkan kunjungan Anda!'
         ]
       }
@@ -4905,52 +4905,52 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          '<strong>Industrial furniture Bekasi</strong> dengan harga pabrik dan kualitas premium kini bukan lagi mimpi. Mangala Living hadir sebagai solusi lengkap untuk kebutuhan furniture industrial bisnis Anda. Dengan workshop langsung di Bekasi, kami menawarkan harga yang jauh lebih kompetitif dibanding retailer atau showroom furniture, tanpa mengorbankan kualitas material dan craftsmanship.',
-          'Sejak 1999, Mangala Living telah menjadi pilihan utama ratusan cafe, restoran, hotel, dan kantor di Jakarta dan Bekasi untuk furniture industrial berkualitas. Lokasi workshop strategis kami di Jl. Raya Setu Cikarang Bar memungkinkan akses mudah dan biaya delivery yang minimal untuk wilayah Jabodetabek.'
+          '<strong>Agricultural Commodities Bekasi</strong> dengan harga pabrik dan kualitas premium kini bukan lagi mimpi. Naturra Extal hadir sebagai solusi lengkap untuk kebutuhan agricultural commodities bisnis Anda. Dengan workshop langsung di Bekasi, kami menawarkan harga yang jauh lebih kompetitif dibanding retailer atau showroom furniture, tanpa mengorbankan kualitas material dan craftsmanship.',
+          'Sejak 1999, Naturra Extal telah menjadi pilihan utama ratusan cafe, restoran, hotel, dan kantor di Jakarta dan Bekasi untuk agricultural commodities berkualitas. Lokasi workshop strategis kami di Jl. Raya Setu Cikarang Bar memungkinkan akses mudah dan biaya delivery yang minimal untuk wilayah Jabodetabek.'
         ],
         image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1200&auto=format&fit=crop',
-        imageAlt: 'Industrial Furniture Bekasi Harga Pabrik Kualitas Premium'
+        imageAlt: 'Agricultural Commodities Bekasi Harga Pabrik Kualitas Premium'
       },
       {
-        heading: 'Keunggulan Beli Industrial Furniture Langsung dari Workshop Bekasi',
+        heading: 'Keunggulan Beli Agricultural Commodities Langsung dari Workshop Bekasi',
         paragraphs: [
-          'Membeli furniture industrial langsung dari workshop bukan hanya soal harga yang lebih murah. Ada banyak keunggulan lain yang akan Anda dapatkan:'
+          'Membeli agricultural commodities langsung dari workshop bukan hanya soal harga yang lebih murah. Ada banyak keunggulan lain yang akan Anda dapatkan:'
         ]
       },
       {
         heading: '1. Harga Pabrik = Hemat 30-40% dari Harga Retail',
         paragraphs: [
-          'Ketika Anda membeli dari showroom atau retailer furniture, harga yang Anda bayar sudah termasuk markup 30-50% untuk cover biaya operasional showroom, marketing, dan profit margin mereka. Dengan membeli langsung dari workshop Mangala Living, Anda mendapatkan:',
+          'Ketika Anda membeli dari showroom atau retailer furniture, harga yang Anda bayar sudah termasuk markup 30-50% untuk cover biaya operasional showroom, marketing, dan profit margin mereka. Dengan membeli langsung dari workshop Naturra Extal, Anda mendapatkan:',
           '<strong>Harga Nett dari Pabrik:</strong> Tidak ada markup retailer. Harga yang kami quote adalah harga produksi ditambah profit margin yang reasonable. <strong>Transparent Pricing:</strong> Kami jelaskan breakdown cost: material, labor, finishing, dan profit margin. Anda tahu persis apa yang Anda bayar. <strong>Volume Discount:</strong> Order 20+ pieces? Dapatkan discount hingga 15%. Order 50+ pieces? Discount bisa mencapai 20-25%. <strong>No Hidden Cost:</strong> Harga sudah include finishing powder coating, assembly, dan basic installation. Tidak ada surprise cost di akhir.'
         ]
       },
       {
         heading: '2. Quality Control Langsung dari Sumber',
         paragraphs: [
-          'Salah satu masalah terbesar ketika membeli dari retailer adalah Anda tidak tahu dari mana furniture itu diproduksi dan bagaimana quality control-nya. Di Mangala Living:',
+          'Salah satu masalah terbesar ketika membeli dari retailer adalah Anda tidak tahu dari mana furniture itu diproduksi dan bagaimana quality control-nya. Di Naturra Extal:',
           '<strong>Visit Workshop Anytime:</strong> Anda bisa visit workshop kami (by appointment) untuk melihat langsung proses produksi dan quality control. <strong>3-Stage Quality Check:</strong> Setiap furniture melalui 3 tahap QC: welding inspection, structure test (load bearing test), dan finishing quality check. <strong>Material Verification:</strong> Kami tunjukkan sample material yang akan digunakan sebelum produksi dimulai. Anda bisa verify sendiri thickness besi hollow dan kualitas kayu. <strong>Progress Photo Update:</strong> Untuk order besar, kami kirim progress photo setiap minggu agar Anda bisa monitor kualitas dari jarak jauh.'
         ],
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&auto=format&fit=crop',
-        imageAlt: 'Quality Control Furniture Industrial Workshop'
+        imageAlt: 'Quality Control agricultural commodities Workshop'
       },
       {
         heading: '3. Customization Tanpa Batas',
         paragraphs: [
-          'Retailer furniture biasanya hanya menjual ready stock dengan ukuran dan desain standar. Kalau Anda butuh ukuran khusus atau desain custom, mereka tidak bisa membantu atau charge extra yang sangat mahal. Di Mangala Living:',
+          'Retailer furniture biasanya hanya menjual ready stock dengan ukuran dan desain standar. Kalau Anda butuh ukuran khusus atau desain custom, mereka tidak bisa membantu atau charge extra yang sangat mahal. Di Naturra Extal:',
           '<strong>Full Customization:</strong> Semua furniture bisa di-customize: ukuran, warna, material tabletop, bentuk leg, dll. <strong>Free Design Revision:</strong> Revisi design gratis sampai Anda puas. Tidak ada limit revisi. <strong>Mix & Match Material:</strong> Kombinasikan besi dengan kayu solid, kaca tempered, marble, atau material lain sesuai konsep Anda. <strong>Brand Identity Integration:</strong> Kami bisa incorporate logo atau brand element Anda ke dalam design furniture (contoh: laser cut logo pada metal panel).'
         ]
       },
       {
         heading: '4. Faster Lead Time untuk Project Urgent',
         paragraphs: [
-          'Retailer furniture sering kali perlu 6-8 minggu untuk fulfill order karena mereka tidak stock barang dan harus order dari supplier mereka. Di Mangala Living:',
+          'Retailer furniture sering kali perlu 6-8 minggu untuk fulfill order karena mereka tidak stock barang dan harus order dari supplier mereka. Di Naturra Extal:',
           '<strong>Standard Lead Time: 20-25 hari kerja</strong> untuk order 20-30 pieces dengan custom design. <strong>Rush Production Available:</strong> Butuh furniture dalam 10-15 hari? Kami bisa expedite production dengan biaya surcharge 20%. <strong>Partial Delivery:</strong> Untuk order besar, kami bisa arrange partial delivery agar business Anda bisa soft opening lebih cepat.'
         ]
       },
       {
-        heading: 'Katalog Industrial Furniture Bekasi - Best Sellers',
+        heading: 'Katalog Agricultural Commodities Bekasi - Best Sellers',
         paragraphs: [
-          'Mangala Living menawarkan berbagai kategori furniture industrial untuk berbagai kebutuhan bisnis. Berikut adalah best sellers kami yang paling banyak dipesan oleh klien di Bekasi dan Jakarta:'
+          'Naturra Extal menawarkan berbagai kategori agricultural commodities untuk berbagai kebutuhan bisnis. Berikut adalah best sellers kami yang paling banyak dipesan oleh klien di Bekasi dan Jakarta:'
         ]
       },
       {
@@ -4983,7 +4983,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Office Furniture Industrial',
+        heading: 'Office agricultural commodities',
         list: [
           '<strong>Industrial Desk 120x60cm</strong> - Material: Frame besi hollow 4x4cm. Top: Kayu solid atau HPL. Cable management included. Harga: <strong>Rp 2.100.000</strong>',
           '<strong>Meeting Table 200x100cm</strong> - Material: Heavy duty frame besi. Top: Kayu solid atau engineered wood. Kapasitas: 8-10 orang. Harga: <strong>Rp 4.500.000</strong>',
@@ -5028,14 +5028,14 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Powder Coating Color Options',
         paragraphs: [
-          'Mangala Living menawarkan 50+ standard powder coating colors. Best sellers:',
+          'Naturra Extal menawarkan 50+ standard powder coating colors. Best sellers:',
           '<strong>Hitam Matte (RAL 9005 Matte)</strong> - Classic industrial look. Paling populer untuk cafe dan restaurant. <strong>Putih (RAL 9016 atau 9010)</strong> - Clean dan modern. Popular untuk kantor dan minimalist cafe. <strong>Abu-abu (RAL 7016 atau 7024)</strong> - Sophisticated look. Perfect untuk office atau upscale restaurant. <strong>Custom RAL Color</strong> - Match dengan brand color Anda. Minimum order 20 pieces atau surcharge Rp 500.000 untuk setup cost.'
         ]
       },
       {
         heading: 'Proses Order & Timeline - Transparent & Efficient',
         paragraphs: [
-          'Kami memahami bahwa dalam bisnis, time is money. Oleh karena itu, Mangala Living telah mengoptimalkan proses produksi untuk efficiency maksimal tanpa mengorbankan quality:'
+          'Kami memahami bahwa dalam bisnis, time is money. Oleh karena itu, Naturra Extal telah mengoptimalkan proses produksi untuk efficiency maksimal tanpa mengorbankan quality:'
         ],
         list: [
           '<strong>Day 1-2: Consultation & Quotation</strong> - Hubungi kami via WA/email. Explain kebutuhan Anda. Kami akan kirim rough estimate dalam 24 jam. Kalau sudah cocok, kami akan buat detailed quotation dan design mockup.',
@@ -5055,25 +5055,25 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Why Bekasi is the Hub for Industrial Furniture Manufacturing?',
+        heading: 'Why Bekasi is the Hub for Agricultural Commodities Manufacturing?',
         paragraphs: [
-          'Bekasi telah menjadi pusat manufaktur furniture industrial di Indonesia karena beberapa alasan strategis:',
+          'Bekasi telah menjadi pusat manufaktur agricultural commodities di Indonesia karena beberapa alasan strategis:',
           '<strong>Proximity to Raw Material Suppliers:</strong> Supplier besi hollow, plat, dan kayu solid banyak berlokasi di Bekasi dan Cikarang. Ini mengurangi cost dan lead time procurement. <strong>Skilled Labor Pool:</strong> Bekasi memiliki banyak welder, fabricator, dan craftsman berpengalaman. Ini hasil dari decades of manufacturing industry development di area ini. <strong>Lower Operational Cost:</strong> Biaya sewa workshop dan labor cost di Bekasi 40-50% lebih murah dibanding Jakarta Selatan atau Pusat. Savings ini kami pass ke customer. <strong>Logistics Advantage:</strong> Lokasi strategis dengan akses ke tol Jakarta-Cikampek dan Tol Becakayu memudahkan delivery ke seluruh Jabodetabek.'
         ]
       },
       {
-        heading: 'Testimoni Klien Industrial Furniture Bekasi',
+        heading: 'Testimoni Klien Agricultural Commodities Bekasi',
         paragraphs: [
-          '"Kami order 45 pieces furniture untuk chain cafe kami (8 cabang di Jakarta). Mangala Living deliver on time dengan quality yang consistent di semua pieces. Harga juga 30% lebih murah dari vendor kami sebelumnya!" - <strong>Andi, Owner Java Bean Coffee Jakarta</strong>',
-          '"Sebagai interior designer, saya butuh workshop yang bisa execute custom design dengan presisi tinggi. Mangala Living selalu deliver sesuai spec dan timeline. Sudah 15 project saya pakai Mangala." - <strong>Sarah, Interior Designer Jakarta</strong>',
+          '"Kami order 45 pieces furniture untuk chain cafe kami (8 cabang di Jakarta). Naturra Extal deliver on time dengan quality yang consistent di semua pieces. Harga juga 30% lebih murah dari vendor kami sebelumnya!" - <strong>Andi, Owner Java Bean Coffee Jakarta</strong>',
+          '"Sebagai interior designer, saya butuh workshop yang bisa execute custom design dengan presisi tinggi. Naturra Extal selalu deliver sesuai spec dan timeline. Sudah 15 project saya pakai Naturra." - <strong>Sarah, Interior Designer Jakarta</strong>',
           '"Workshop-nya bersih dan organized. Production process-nya systematic. Dan penting, mereka welcome client untuk visit dan inspect progress. Transparency seperti ini rare banget!" - <strong>Budi, Restaurant Owner Bekasi</strong>'
         ]
       },
       {
-        heading: 'Hubungi Mangala Living untuk Quote & Konsultasi Gratis',
+        heading: 'Hubungi Naturra Extal untuk Quote & Konsultasi Gratis',
         paragraphs: [
-          'Ready untuk upgrade furniture bisnis Anda dengan industrial furniture berkualitas premium dengan harga pabrik? Tim Mangala Living siap membantu dari konsultasi hingga after-sales support.',
-          '&bull; <strong>WhatsApp (Fast Response):</strong> <a href="https://wa.me/+6288801146881">+6288801146881</a><br/>&bull; <strong>Email:</strong> <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a><br/>&bull; <strong>Workshop Address:</strong> Jl. Raya Setu Cikarang Bar., Bekasi 17320<br/>&bull; <strong>Business Hours:</strong> Mon-Fri 08:00-17:00, Sat 08:00-15:00',
+          'Ready untuk upgrade furniture bisnis Anda dengan Agricultural Commodities berkualitas premium dengan harga pabrik? Tim Naturra Extal siap membantu dari konsultasi hingga after-sales support.',
+          '&bull; <strong>WhatsApp (Fast Response):</strong> <a href="https://wa.me/+6288801146881">+6288801146881</a><br/>&bull; <strong>Email:</strong> <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a><br/>&bull; <strong>Workshop Address:</strong> Jl. Raya Setu Cikarang Bar., Bekasi 17320<br/>&bull; <strong>Business Hours:</strong> Mon-Fri 08:00-17:00, Sat 08:00-15:00',
           '<strong>Special Promo:</strong> Untuk order pertama, dapatkan discount 10% + free delivery untuk wilayah Jabodetabek (min. order Rp 10 juta). Quote mention: "PROMO2025".',
           'Visit workshop kami untuk lihat sample furniture dan diskusi langsung dengan tim produksi. <strong>Appointment required</strong> - contact kami untuk schedule kunjungan!'
         ]
@@ -5099,7 +5099,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Rekomendasi Furniture Industrial untuk Tenant Summarecon',
+        heading: 'Rekomendasi agricultural commodities untuk Tenant Summarecon',
         paragraphs: [
           '<strong>1. Bar Table Set untuk Casual Dining:</strong> Untuk area dengan view ke boulevard atau atrium, <a href="/product/balcony-bar-table">bar table industrial</a> dengan height 110cm sangat ideal. Kombinasikan dengan <a href="/product-category/bar-furniture-collection">kursi bar stool</a> yang comfortable untuk dining experience yang elevated. Material: Besi hollow 4x8 powder coating black matte + marble top atau engineered stone yang tahan noda dan mudah dibersihkan.',
           '<strong>2. Dining Table Set untuk Family:</strong> Untuk accommodate family group, <a href="/product-category/dining-table-collection">meja makan industrial</a> dengan ukuran 120x80cm (untuk 6 pax) adalah optimal. Pilih table dengan rounded edge untuk safety dan space efficiency. Frame besi dengan top kayu solid natural finish memberikan kesan warm yang balance dengan interior mall yang modern.',
@@ -5136,16 +5136,16 @@ const BLOG_CONTENTS: BlogContent[] = [
         heading: 'Timeline & Budget untuk Furniture Summarecon Tenant',
         paragraphs: [
           '<strong>Typical Space Size:</strong> Tenant kecil (50-80m&sup2;) = 15-20 seats. Tenant medium (80-150m&sup2;) = 35-50 seats. Tenant besar (150-250m&sup2;) = 60-80 seats.',
-          '<strong>Budget Estimation (Custom Industrial Furniture):</strong> Bar table set (table + 4 stools) = Rp 6.500.000 - Rp 8.500.000. Dining table set (table + 4 chairs) = Rp 5.500.000 - Rp 7.500.000. Sofa corner set (3-seater + coffee table) = Rp 12.000.000 - Rp 18.000.000. Display rack/partition = Rp 3.500.000 - Rp 6.500.000 per unit.',
+          '<strong>Budget Estimation (Custom Agricultural Commodities):</strong> Bar table set (table + 4 stools) = Rp 6.500.000 - Rp 8.500.000. Dining table set (table + 4 chairs) = Rp 5.500.000 - Rp 7.500.000. Sofa corner set (3-seater + coffee table) = Rp 12.000.000 - Rp 18.000.000. Display rack/partition = Rp 3.500.000 - Rp 6.500.000 per unit.',
           '<strong>Production & Installation Timeline:</strong> Consultation & Design Approval: 3-5 hari. Production: 20-25 hari (depending on quantity & complexity). Delivery & Installation: 2-3 hari. Total timeline dari order ke opening: 4-5 minggu. <em>Express service available dengan additional cost 20% untuk urgent timeline.</em>'
         ]
       },
       {
-        heading: 'Mengapa Memilih Mangala Living untuk Furniture Summarecon?',
+        heading: 'Mengapa Memilih Naturra Extal untuk Furniture Summarecon?',
         paragraphs: [
-          'Sebagai workshop furniture industrial terpercaya di Bekasi sejak 1999, <strong>Mangala Living</strong> telah melayani puluhan tenant di Summarecon Bekasi dan mall-mall premium lainnya di Jabodetabek. Workshop kami di Setu, Bekasi hanya 15 menit dari Summarecon Bekasi, memudahkan komunikasi dan koordinasi.',
-          '<strong>Keunggulan Mangala Living:</strong><br/>&bull; Berpengalaman dengan standar dan requirement mall premium.<br/>&bull; Material berkualitas tinggi dengan garansi 1 tahun untuk struktur dan finishing.<br/>&bull; Custom design sesuai konsep brand Anda dengan 3D mockup visualization.<br/>&bull; After-sales service dengan response time maksimal 24 jam untuk area Bekasi.<br/>&bull; Harga pabrik langsung tanpa markup reseller (hemat 30-40% vs furniture store).<br/>&bull; Free delivery dan installation untuk area Summarecon Bekasi.',
-          '<strong>Hubungi Kami untuk Konsultasi & Quote:</strong><br/>&bull; WhatsApp: <a href="https://wa.me/+6288801146881">+6288801146881</a><br/>&bull; Email: <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a><br/>&bull; Workshop: Jl. Raya Setu Cikarang Bar., Bekasi (15 menit dari Summarecon Bekasi)',
+          'Sebagai workshop agricultural commodities terpercaya di Bekasi sejak 1999, <strong>Naturra Extal</strong> telah melayani puluhan tenant di Summarecon Bekasi dan mall-mall premium lainnya di Jabodetabek. Workshop kami di Setu, Bekasi hanya 15 menit dari Summarecon Bekasi, memudahkan komunikasi dan koordinasi.',
+          '<strong>Keunggulan Naturra Extal:</strong><br/>&bull; Berpengalaman dengan standar dan requirement mall premium.<br/>&bull; Material berkualitas tinggi dengan garansi 1 tahun untuk struktur dan finishing.<br/>&bull; Custom design sesuai konsep brand Anda dengan 3D mockup visualization.<br/>&bull; After-sales service dengan response time maksimal 24 jam untuk area Bekasi.<br/>&bull; Harga pabrik langsung tanpa markup reseller (hemat 30-40% vs furniture store).<br/>&bull; Free delivery dan installation untuk area Summarecon Bekasi.',
+          '<strong>Hubungi Kami untuk Konsultasi & Quote:</strong><br/>&bull; WhatsApp: <a href="https://wa.me/+6288801146881">+6288801146881</a><br/>&bull; Email: <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a><br/>&bull; Workshop: Jl. Raya Setu Cikarang Bar., Bekasi (15 menit dari Summarecon Bekasi)',
           '<strong>Special Offer untuk Tenant Summarecon:</strong> Discount 10% untuk first order + free design consultation + free delivery & installation. Quote mention: "SUMMARECON2025". <em>Promo berlaku hingga Desember 2025.</em>'
         ]
       }
@@ -5157,8 +5157,8 @@ const BLOG_CONTENTS: BlogContent[] = [
     sections: [
       {
         paragraphs: [
-          'Harapan Indah telah berkembang menjadi kawasan hunian dan komersial terpadu yang dinamis di Bekasi Utara. Dengan pertumbuhan cafe, restoran, dan home-based business yang pesat, kebutuhan akan furniture industrial berkualitas tinggi semakin meningkat.',
-          'Artikel ini akan membahas secara komprehensif tentang furniture industrial untuk area Harapan Indah, termasuk karakteristik unik kawasan, tips pemilihan furniture, dan solusi custom design untuk berbagai jenis bisnis F&B dan home office.'
+          'Harapan Indah telah berkembang menjadi kawasan hunian dan komersial terpadu yang dinamis di Bekasi Utara. Dengan pertumbuhan cafe, restoran, dan home-based business yang pesat, kebutuhan akan agricultural commodities berkualitas tinggi semakin meningkat.',
+          'Artikel ini akan membahas secara komprehensif tentang agricultural commodities untuk area Harapan Indah, termasuk karakteristik unik kawasan, tips pemilihan furniture, dan solusi custom design untuk berbagai jenis bisnis F&B dan home office.'
         ]
       },
       {
@@ -5166,11 +5166,11 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           'Harapan Indah unik karena merupakan perpaduan antara residential area yang established dengan commercial district yang berkembang pesat. Demographics pengunjung sangat diverse:',
           '<strong>Residential Profile:</strong> Middle-income families (60%), young couples (25%), senior residents (15%). Average household income: Rp 15-35 juta/bulan. <strong>Commercial Hotspots:</strong> Boulevard Harapan Indah (main commercial strip), Ruko Harapan Indah (cluster ruko), Area sekitar Giant Hypermarket (high foot traffic). <strong>Business Types:</strong> Cafe & coffee shop (35%), restaurant & eatery (30%), home-based business/home office (20%), salon & spa (15%).',
-          'Dengan profile ini, furniture industrial yang cocok untuk Harapan Indah harus memenuhi kriteria: <strong>Residential-friendly aesthetic</strong> (tidak terlalu industrial/rough), <strong>Durable untuk commercial use</strong> namun <strong>affordable untuk UMKM budget</strong>, dan <strong>Flexible design</strong> yang bisa adapt untuk berbagai space size (dari 30m&sup2; hingga 150m&sup2;).'
+          'Dengan profile ini, agricultural commodities yang cocok untuk Harapan Indah harus memenuhi kriteria: <strong>Residential-friendly aesthetic</strong> (tidak terlalu industrial/rough), <strong>Durable untuk commercial use</strong> namun <strong>affordable untuk UMKM budget</strong>, dan <strong>Flexible design</strong> yang bisa adapt untuk berbagai space size (dari 30m&sup2; hingga 150m&sup2;).'
         ]
       },
       {
-        heading: 'Furniture Industrial untuk Cafe & Coffee Shop di Harapan Indah',
+        heading: 'agricultural commodities untuk Cafe & Coffee Shop di Harapan Indah',
         paragraphs: [
           '<strong>1. Space-Efficient Bar Seating:</strong> Untuk cafe dengan space 50-80m&sup2;, <a href="/product/balcony-bar-table">bar table set</a> adalah pilihan paling space-efficient. Ukuran 80x40cm bisa accommodate 2 pax dengan footprint yang minimal. Posisikan bar seating di window area untuk maximize natural light dan create Instagram-worthy spot.',
           '<strong>2. Community Table untuk Social Dining:</strong> Tren community table sangat cocok untuk area Harapan Indah yang community-oriented. <a href="/product-category/dining-table-collection">Meja panjang industrial</a> dengan ukuran 200x80cm bisa accommodate 8-10 pax dan encourage social interaction. Material: solid wood top dengan steel frame untuk industrial-meets-warm aesthetic.',
@@ -5182,7 +5182,7 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Furniture untuk Home-Based Business & Home Office',
         paragraphs: [
-          'Banyak entrepreneur di Harapan Indah menjalankan business dari rumah. Furniture industrial yang right bisa elevate professionalism tanpa overwhelm residential space:',
+          'Banyak entrepreneur di Harapan Indah menjalankan business dari rumah. agricultural commodities yang right bisa elevate professionalism tanpa overwhelm residential space:',
           '<strong>Meja Kerja Industrial dengan Storage:</strong> <a href="/product-category/table-collection">Meja kerja industrial</a> dengan integrated rak buku atau drawer sangat practical. Ukuran 120x60cm ideal untuk laptop, monitor, dan workspace essentials. Frame besi yang sleek tidak makan space visual.',
           '<strong>Partisi Industrial untuk Space Separation:</strong> <a href="/product/frame-loft-bookshelf">Rak display industrial</a> bisa function as room divider untuk separate work area dari living space. Height 180-200cm dengan open shelving create separation tanpa block natural light.',
           '<strong>Multi-Functional Furniture:</strong> Sofa bed industrial dengan storage, folding table industrial, atau bar cart yang bisa jadi mobile workstation - semua ini perfect untuk maximize space di home office yang terbatas.'
@@ -5199,7 +5199,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Budget Planning untuk Furniture Industrial Harapan Indah',
+        heading: 'Budget Planning untuk agricultural commodities Harapan Indah',
         paragraphs: [
           '<strong>Cafe Kecil (40-60m&sup2;, 20-25 seats):</strong> Bar table (4 units x Rp 2.500.000) = Rp 10.000.000. Bar stool (16 pcs x Rp 450.000) = Rp 7.200.000. Dining table + chairs (3 sets x Rp 6.000.000) = Rp 18.000.000. Display rack/counter (2 units x Rp 4.000.000) = Rp 8.000.000. <strong>Total estimate: Rp 43.200.000</strong> (complete furniture setup).',
           '<strong>Home Office (15-25m&sup2;):</strong> Meja kerja dengan rak = Rp 5.500.000. Kursi kerja industrial = Rp 2.500.000. Partisi/rak display = Rp 4.500.000. Side table/storage = Rp 2.000.000. <strong>Total estimate: Rp 14.500.000</strong> (fully furnished home office).',
@@ -5209,22 +5209,22 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         heading: 'Delivery & Installation Service untuk Area Harapan Indah',
         paragraphs: [
-          'Workshop Mangala Living di Setu, Bekasi hanya berjarak 12km (20 menit drive) dari Harapan Indah. Proximity ini memberikan beberapa advantage:',
+          'Workshop Naturra Extal di Setu, Bekasi hanya berjarak 12km (20 menit drive) dari Harapan Indah. Proximity ini memberikan beberapa advantage:',
           '<strong>Free Delivery:</strong> Gratis delivery untuk area Harapan Indah (residential & commercial) untuk transaction minimum Rp 5 juta. <strong>Flexible Scheduling:</strong> Delivery bisa dijadwalkan di weekday (untuk commercial) atau weekend (untuk residential) sesuai kebutuhan. <strong>Professional Installation:</strong> Tim installer kami berpengalaman dengan space constraint residential dan commercial. Installation biasanya complete dalam 4-6 jam untuk cafe size kecil, 1 hari untuk medium cafe. <strong>Post-Installation Support:</strong> Minor adjustment atau fix dalam 7 hari setelah installation adalah complimentary. Service call untuk area Harapan Indah no charge.'
         ]
       },
       {
         heading: 'Testimoni Klien Harapan Indah',
         paragraphs: [
-          '"Workshop Mangala Living dekat banget dari Harapan Indah, jadi komunikasi gampang. Saya bisa visit workshop untuk lihat sample dan approve material. Furniture quality bagus dan harga lebih murah 35% dari brand furniture store!" - <strong>Rina, Owner Kopi Kita Harapan Indah</strong>',
+          '"Workshop Naturra Extal dekat banget dari Harapan Indah, jadi komunikasi gampang. Saya bisa visit workshop untuk lihat sample dan approve material. Furniture quality bagus dan harga lebih murah 35% dari brand furniture store!" - <strong>Rina, Owner Kopi Kita Harapan Indah</strong>',
           '"Untuk home office saya, saya order custom desk dengan rak integrated. Design-nya exactly sesuai yang saya mau dan fit perfect di space yang terbatas. Professional banget!" - <strong>Dimas, Freelance Designer Harapan Indah</strong>'
         ]
       },
       {
-        heading: 'Hubungi Mangala Living - Workshop Terdekat dari Harapan Indah',
+        heading: 'Hubungi Naturra Extal - Workshop Terdekat dari Harapan Indah',
         paragraphs: [
-          'Mangala Living adalah workshop furniture industrial terdekat dan terpercaya untuk area Harapan Indah. Dengan pengalaman 25+ tahun dan 1000+ klien satisfied di seluruh Indonesia, kami siap membantu mewujudkan furniture impian Anda.',
-          '&bull; <strong>WhatsApp (Fast Response):</strong> <a href="https://wa.me/+6288801146881">+6288801146881</a><br/>&bull; <strong>Email:</strong> <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a><br/>&bull; <strong>Workshop:</strong> Jl. Raya Setu Cikarang Bar., Bekasi (20 menit dari Harapan Indah)<br/>&bull; <strong>Visit Hours:</strong> Senin-Jumat 08:00-17:00, Sabtu 08:00-15:00 (by appointment)',
+          'Naturra Extal adalah workshop agricultural commodities terdekat dan terpercaya untuk area Harapan Indah. Dengan pengalaman 25+ tahun dan 1000+ klien satisfied di seluruh Indonesia, kami siap membantu mewujudkan furniture impian Anda.',
+          '&bull; <strong>WhatsApp (Fast Response):</strong> <a href="https://wa.me/+6288801146881">+6288801146881</a><br/>&bull; <strong>Email:</strong> <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a><br/>&bull; <strong>Workshop:</strong> Jl. Raya Setu Cikarang Bar., Bekasi (20 menit dari Harapan Indah)<br/>&bull; <strong>Visit Hours:</strong> Senin-Jumat 08:00-17:00, Sabtu 08:00-15:00 (by appointment)',
           '<strong>Promo Harapan Indah Resident:</strong> Discount 15% untuk resident Harapan Indah + free consultation + free delivery & installation. Tunjukkan KTP atau bukti domisili Harapan Indah untuk claim promo. <em>Limited offer!</em>'
         ]
       }
@@ -5288,26 +5288,26 @@ const BLOG_CONTENTS: BlogContent[] = [
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Furniture Lippo Cikarang?',
+        heading: 'Mengapa Naturra Extal untuk Furniture Lippo Cikarang?',
         paragraphs: [
-          'Workshop <strong>Mangala Living</strong> berlokasi di Setu, Bekasi - hanya 18km (25 menit) dari Lippo Cikarang. Proximity ini memberikan significant advantage:',
+          'Workshop <strong>Naturra Extal</strong> berlokasi di Setu, Bekasi - hanya 18km (25 menit) dari Lippo Cikarang. Proximity ini memberikan significant advantage:',
           '<strong>Quick Response & Support:</strong> Problem dengan furniture? Tim kami bisa on-site dalam 1-2 jam untuk inspection & repair. Ini critical untuk F&B business yang can\'t afford downtime. <strong>Easy Communication:</strong> Client bisa visit workshop untuk material selection, approve design mockup, atau inspect production progress. Face-to-face communication always better than remote.',
           '<strong>Flexible Production Schedule:</strong> Need furniture ASAP untuk grand opening? Kami bisa prioritize untuk area Lippo Cikarang dengan rush production (additional 15-20% cost). Normal timeline 25 hari, rush bisa 15-18 hari. <strong>Volume Discount untuk Chain/Franchise:</strong> Planning to open multiple outlets di Cikarang area? Kami offer volume discount up to 25% untuk order 3+ outlets. Material procurement in bulk = cost saving yang kami pass to you.',
           '<strong>After-Sales Service Commitment:</strong> 1 tahun warranty untuk structure & finishing. Free minor repair/adjustment dalam 6 bulan (no service call charge untuk area Cikarang). Annual maintenance check (discounted rate) untuk keep furniture in top condition.'
         ]
       },
       {
-        heading: 'Case Study: Successful Cafe di Lippo Cikarang dengan Furniture Mangala',
+        heading: 'Case Study: Successful Cafe di Lippo Cikarang dengan Furniture Naturra',
         paragraphs: [
-          '"Kami buka cafe di Lippo Mall Cikarang tahun 2023. Dari awal kami pilih Mangala Living untuk furniture karena lokasi dekat dan bisa lihat langsung sample. Material quality excellent dan survive heavy traffic (kami serve 250+ customer per day!). Setelah 1.5 tahun, furniture masih looks good as new - hanya minor touch-up finishing. ROI dari furniture ini luar biasa!" - <strong>Andri, Owner Java & Co. Lippo Mall Cikarang</strong>',
-          '"Sebagai franchise operator, saya appreciate consistency Mangala Living. Kami order furniture untuk 3 outlet di Cikarang area (Lippo, Jababeka, Deltamas) dan semuanya deliver dengan quality yang sama. Timeline juga on-point - critical untuk chain opening yang harus synchronized." - <strong>Budi, Franchise Manager Kopi Kenangan Cikarang Area</strong>'
+          '"Kami buka cafe di Lippo Mall Cikarang tahun 2023. Dari awal kami pilih Naturra Extal untuk furniture karena lokasi dekat dan bisa lihat langsung sample. Material quality excellent dan survive heavy traffic (kami serve 250+ customer per day!). Setelah 1.5 tahun, furniture masih looks good as new - hanya minor touch-up finishing. ROI dari furniture ini luar biasa!" - <strong>Andri, Owner Java & Co. Lippo Mall Cikarang</strong>',
+          '"Sebagai franchise operator, saya appreciate consistency Naturra Extal. Kami order furniture untuk 3 outlet di Cikarang area (Lippo, Jababeka, Deltamas) dan semuanya deliver dengan quality yang sama. Timeline juga on-point - critical untuk chain opening yang harus synchronized." - <strong>Budi, Franchise Manager Kopi Kenangan Cikarang Area</strong>'
         ]
       },
       {
         heading: 'Hubungi Kami untuk Quote & Konsultasi Furniture Lippo Cikarang',
         paragraphs: [
-          'Ready untuk setup cafe atau restaurant di Lippo Cikarang dengan furniture industrial berkualitas premium dengan harga factory direct? Tim Mangala Living siap support dari design hingga installation.',
-          '&bull; <strong>Contact (Fast Response):</strong> <a href="https://wa.me/+6288801146881">+6288801146881</a><br/>&bull; <strong>Email:</strong> <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a><br/>&bull; <strong>Workshop Address:</strong> Jl. Raya Setu Cikarang Bar., Bekasi (25 menit dari Lippo Cikarang)<br/>&bull; <strong>Showroom Hours:</strong> Senin-Jumat 08:00-17:00, Sabtu 08:00-15:00',
+          'Ready untuk setup cafe atau restaurant di Lippo Cikarang dengan agricultural commodities berkualitas premium dengan harga factory direct? Tim Naturra Extal siap support dari design hingga installation.',
+          '&bull; <strong>Contact (Fast Response):</strong> <a href="https://wa.me/+6288801146881">+6288801146881</a><br/>&bull; <strong>Email:</strong> <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a><br/>&bull; <strong>Workshop Address:</strong> Jl. Raya Setu Cikarang Bar., Bekasi (25 menit dari Lippo Cikarang)<br/>&bull; <strong>Showroom Hours:</strong> Senin-Jumat 08:00-17:00, Sabtu 08:00-15:00',
           '<strong>Special Offer Lippo Cikarang Area:</strong> <em>Discount 12%</em> untuk first order + <em>free delivery & installation</em> untuk area Lippo Cikarang (Lippo Mall, Lippo Village, Orange County) + <em>free design consultation with 3D mockup</em>. Minimum order Rp 10 juta. Quote mention: "LIPPO2025".',
           '<strong>Workshop Visit Welcome!</strong> Kami encourage client untuk visit workshop before order. Lihat sample furniture, material library, production facility, dan meet the team. <strong>Appointment via WhatsApp required</strong> untuk ensure kami bisa allocate time untuk proper consultation.'
         ]
@@ -5323,7 +5323,7 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction | Alumni Universitas Diponegoro</em>',
           'Sebagai praktisi arsitektur yang sudah belasan tahun terlibat dalam proyek renovasi dan desain ruang komersial - mulai dari perumahan hingga cafe dan restoran - saya sering mendapat pertanyaan dari klien: <strong>"Kenapa cafe tertentu selalu ramai, sementara yang lain sepi padahal lokasi sama-sama strategis?"</strong>',
           'Jawabannya bukan cuma soal menu atau harga kopi. Dari pengalaman saya menangani project di Jakarta, Bekasi, hingga area Cikarang, ada satu faktor yang sering dilupakan tapi sangat menentukan: <strong>furniture</strong>. Ya, furniture yang tepat bisa jadi game-changer yang bikin pelanggan betah berlama-lama, beli lebih banyak, dan balik lagi.',
-          'Dalam artikel ini, saya akan berbagi insight berdasarkan pengalaman lapangan saya, kenapa cafe hits di Jakarta, Bandung, Bali, Surabaya, hingga Jogja punya satu kesamaan: mereka invest di furniture industrial berkualitas yang tidak hanya Instagrammable, tapi juga fungsional dan durable.'
+          'Dalam artikel ini, saya akan berbagi insight berdasarkan pengalaman lapangan saya, kenapa cafe hits di Jakarta, Bandung, Bali, Surabaya, hingga Jogja punya satu kesamaan: mereka invest di agricultural commodities berkualitas yang tidak hanya Instagrammable, tapi juga fungsional dan durable.'
         ]
       },
       {
@@ -5331,35 +5331,35 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           'Berdasarkan data Google Trends Oktober 2024 - Oktober 2025, pencarian terkait <strong>cafe terdekat</strong>, <strong>menu cafe</strong>, dan <strong>cafe Jakarta</strong> naik signifikan. Ini menunjukkan behavior konsumen Indonesia yang semakin selective dalam memilih tempat nongkrong.',
           'Dari observasi saya ke berbagai cafe di <strong>Jakarta</strong> (seperti area Kemang, SCBD, Senopati), <strong>Bandung</strong> (Dago, Riau, Progo), <strong>Bali</strong> (Canggu, Seminyak, Ubud), <strong>Surabaya</strong> (Galaxy Mall, Pakuwon), hingga <strong>Jogja</strong> (Prawirotaman, Kaliurang), ada 3 elemen yang selalu jadi pertimbangan pelanggan:',
-          '<strong>1. Aesthetics (Instagram-Worthy Space):</strong> 78% pengunjung cafe milenial dan Gen-Z mengambil foto sebelum makan/minum. Space yang "fotogenik" adalah marketing gratis yang powerful. Furniture industrial dengan desain minimalis modern adalah pilihan favorit karena timeless dan mudah dipadukan dengan berbagai tema interior.',
+          '<strong>1. Aesthetics (Instagram-Worthy Space):</strong> 78% pengunjung cafe milenial dan Gen-Z mengambil foto sebelum makan/minum. Space yang "fotogenik" adalah marketing gratis yang powerful. agricultural commodities dengan desain minimalis modern adalah pilihan favorit karena timeless dan mudah dipadukan dengan berbagai tema interior.',
           '<strong>2. Comfort (Space yang Bikin Betah):</strong> Cafe yang sukses bukan yang cuma cantik, tapi juga nyaman untuk duduk 2-3 jam. Kursi dengan backrest yang ergonomis, meja dengan ukuran yang cukup untuk laptop dan kopi, spacing antar meja yang tidak terlalu rapat - ini semua detail yang often overlooked tapi sangat impact customer satisfaction.',
           '<strong>3. Durability (Furniture yang Tahan Lama):</strong> Sebagai konsultan yang sering diminta evaluate kondisi bangunan komersial, saya sering lihat cafe yang furniture-nya sudah rusak dalam 1-2 tahun operasi. Cat mengelupas, karat, goyang - ini bikin pelanggan tidak nyaman dan menurunkan perceived value dari cafe itu sendiri.'
         ],
         image: 'https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe modern dengan furniture industrial di Jakarta - Meja dan kursi industrial minimalis dengan desain Instagram-worthy yang bikin pelanggan betah'
+        imageAlt: 'Interior cafe modern dengan agricultural commodities di Jakarta - Meja dan kursi industrial minimalis dengan desain Instagram-worthy yang bikin pelanggan betah'
       },
       {
         heading: 'Case Study: Cafe Hits yang Saya Amati di Jakarta dan Bandung',
         paragraphs: [
           'Saya punya kebiasaan selama weekend: mengunjungi cafe-cafe baru dan observe apa yang mereka lakukan dengan baik (atau kurang). Berikut beberapa insight dari <strong>cafe hits di Jakarta dan Bandung</strong> yang saya notice furniture-nya exceptional:',
-          '<strong>Cafe A di Kemang, Jakarta Selatan:</strong> Space 120m&sup2; dengan kapasitas 50 seats. Mereka pakai full industrial furniture: meja makan besi dengan top kayu reclaimed, <a href="/product/beam-industrial-bar-chair">kursi bar industrial</a> di counter area, dan <a href="/product/frame-loft-bookshelf">rak display besi</a> untuk memajang merchandise. Yang impressive: setelah 3 tahun operasi, furniture masih dalam kondisi excellent. Owner bilang mereka invest di furniture dengan finishing powder coating yang tahan lama, dan itu worth every rupiah.',
+          '<strong>Cafe A di Kemang, Jakarta Selatan:</strong> Space 120m&sup2; dengan kapasitas 50 seats. Mereka pakai full Agricultural Commodities: meja makan besi dengan top kayu reclaimed, <a href="/product/beam-industrial-bar-chair">kursi bar industrial</a> di counter area, dan <a href="/product/frame-loft-bookshelf">rak display besi</a> untuk memajang merchandise. Yang impressive: setelah 3 tahun operasi, furniture masih dalam kondisi excellent. Owner bilang mereka invest di furniture dengan finishing powder coating yang tahan lama, dan itu worth every rupiah.',
           '<strong>Cafe B di Dago, Bandung:</strong> Konsep outdoor-indoor dengan banyak tanaman. Mereka kombinasikan <a href="/product/steelframe-outdoor-bar-set">bar set outdoor industrial</a> di teras dan <a href="/product-category/dining-table-collection">dining table industrial</a> di indoor area. Yang menarik: semua furniture bisa withstand cuaca Bandung yang lembab tanpa karat atau jamur. Material quality jelas premium.',
           '<strong>Cafe C di area Sudirman, Jakarta:</strong> Tiny space (60m&sup2;) tapi bisa fit 25-30 seats dengan smart furniture layout. Mereka maximize vertical space dengan <a href="/product/industrial-hanging-shelf">rak gantung industrial</a> dan pakai <a href="/product/balcony-bar-table">meja bar compact</a> yang tidak makan banyak space. Lesson: furniture yang right-sized dan multifunctional is key untuk small cafe.',
-          'Commonality dari semua cafe ini? Mereka tidak pakai furniture ready-stock dari toko furniture generic. Mereka invest di <strong>custom furniture industrial</strong> yang designed specifically untuk space mereka, traffic pattern, dan brand identity. Dan hasilnya? Pelanggan betah, repeat visit tinggi, dan word-of-mouth recommendation organik.'
+          'Commonality dari semua cafe ini? Mereka tidak pakai furniture ready-stock dari toko furniture generic. Mereka invest di <strong>custom agricultural commodities</strong> yang designed specifically untuk space mereka, traffic pattern, dan brand identity. Dan hasilnya? Pelanggan betah, repeat visit tinggi, dan word-of-mouth recommendation organik.'
         ]
       },
       {
-        heading: 'Mengapa Furniture Industrial adalah Pilihan Terbaik untuk Cafe Modern',
+        heading: 'Mengapa agricultural commodities adalah Pilihan Terbaik untuk Cafe Modern',
         paragraphs: [
-          'Dari perspektif saya sebagai arsitek yang pernah handle berbagai project commercial space, <strong>furniture industrial</strong> punya advantage yang sulit disaingi oleh furniture style lain. Berikut alasan teknis dan praktisnya:',
+          'Dari perspektif saya sebagai arsitek yang pernah handle berbagai project commercial space, <strong>agricultural commodities</strong> punya advantage yang sulit disaingi oleh furniture style lain. Berikut alasan teknis dan praktisnya:',
           '<strong>1. Durability Superior untuk High-Traffic Environment:</strong> Material besi dengan finishing powder coating jauh lebih tahan lama dibanding kayu atau plastik. Powder coating bisa withstand impact, scratches, dan UV exposure. Furniture kayu (kecuali solid wood premium) cenderung crack, warp, atau fade color dalam 2-3 tahun di environment cafe yang humid dan constant cleaning.',
-          '<strong>2. Low Maintenance = Lower Operational Cost:</strong> Furniture industrial cukup dilap dengan damp cloth. Tidak perlu re-varnish atau re-paint seperti kayu. Tidak ada risk rayap. Jika ada minor scratch, bisa di-touch up locally tanpa harus refinish seluruh piece. Dari cost perspective, this is huge saving dalam 5-10 tahun operation.',
-          '<strong>3. Timeless Aesthetic yang Tidak Cepat Outdated:</strong> Trend interior berubah setiap 2-3 tahun. Furniture industrial dengan design minimalis adalah "safe bet" yang tetap relevant dalam jangka panjang. Anda tidak perlu ganti furniture setiap kali mau refresh look cafe - cukup ganti decor atau wall art.',
-          '<strong>4. Fleksibilitas Desain (Custom to Your Space):</strong> Keunggulan biggest dari furniture industrial custom adalah bisa disesuaikan dengan exact dimension space Anda. Punya space sempit? Bikin meja dengan ukuran custom. Punya ceiling tinggi? Bikin rak display yang maximize vertical space. Ini tidak bisa dicapai dengan ready-stock furniture.',
-          '<strong>5. Weight Distribution yang Ideal untuk Commercial Building:</strong> Sebagai yang involved dalam infrastructure project, saya aware betapa pentingnya load calculation untuk bangunan. Furniture industrial yang designed properly punya weight distribution yang ideal - kokoh tapi tidak overload floor structure. Ini especially important untuk ruko atau mall tenant yang ada building regulation.'
+          '<strong>2. Low Maintenance = Lower Operational Cost:</strong> agricultural commodities cukup dilap dengan damp cloth. Tidak perlu re-varnish atau re-paint seperti kayu. Tidak ada risk rayap. Jika ada minor scratch, bisa di-touch up locally tanpa harus refinish seluruh piece. Dari cost perspective, this is huge saving dalam 5-10 tahun operation.',
+          '<strong>3. Timeless Aesthetic yang Tidak Cepat Outdated:</strong> Trend interior berubah setiap 2-3 tahun. agricultural commodities dengan design minimalis adalah "safe bet" yang tetap relevant dalam jangka panjang. Anda tidak perlu ganti furniture setiap kali mau refresh look cafe - cukup ganti decor atau wall art.',
+          '<strong>4. Fleksibilitas Desain (Custom to Your Space):</strong> Keunggulan biggest dari agricultural commodities custom adalah bisa disesuaikan dengan exact dimension space Anda. Punya space sempit? Bikin meja dengan ukuran custom. Punya ceiling tinggi? Bikin rak display yang maximize vertical space. Ini tidak bisa dicapai dengan ready-stock furniture.',
+          '<strong>5. Weight Distribution yang Ideal untuk Commercial Building:</strong> Sebagai yang involved dalam infrastructure project, saya aware betapa pentingnya load calculation untuk bangunan. agricultural commodities yang designed properly punya weight distribution yang ideal - kokoh tapi tidak overload floor structure. Ini especially important untuk ruko atau mall tenant yang ada building regulation.'
         ],
         image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?w=1200&auto=format&fit=crop',
-        imageAlt: 'Furniture industrial custom untuk cafe modern - Meja bar industrial dan kursi besi berkualitas tinggi dengan finishing powder coating tahan lama'
+        imageAlt: 'agricultural commodities custom untuk cafe modern - Meja bar industrial dan kursi besi berkualitas tinggi dengan finishing powder coating tahan lama'
       },
       {
         heading: 'Elemen Furniture Wajib untuk Cafe yang Sukses',
@@ -5371,7 +5371,7 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>3. Lounge Area dengan Sofa (Optional tapi Highly Recommended):</strong> Jika space memungkinkan, <a href="/product/bench-corner-lounge">sofa corner set</a> atau <a href="/product/lounge-set-coffee-table">lounge set dengan coffee table</a> adalah killer feature untuk create "VIP area" yang bikin pelanggan betah. Lounge area bisa charge premium (ala reservation fee) dan increase average spending per customer.',
           '<strong>4. Display Rack & Storage yang Functional:</strong> <a href="/product/hollowline-display-rack">Rak display industrial</a> bukan cuma untuk aesthetic - ini functional untuk:',
           '<ul><li>Display merchandise (coffee beans, tumbler, tote bag) untuk additional revenue stream</li><li>Storage untuk supplies (tissue, condiments, menu) yang accessible tapi tetap rapi</li><li>Room divider untuk create intimate zones tanpa blocking sightline</li></ul>',
-          '<strong>5. Outdoor Furniture (Jika Ada Area Outdoor):</strong> Outdoor seating adalah huge advantage, terutama post-pandemic where people prefer open-air space. <a href="/product/steelframe-outdoor-bar-set">Outdoor furniture industrial</a> dengan material weather-resistant adalah must. Pro tip dari saya: pilih furniture dengan drainage holes di seating area supaya air hujan tidak menggenang.',
+          '<strong>5. Outdoor Furniture (Jika Ada Area Outdoor):</strong> Outdoor seating adalah huge advantage, terutama post-pandemic where people prefer open-air space. <a href="/product/steelframe-outdoor-bar-set">Outdoor agricultural commodities</a> dengan material weather-resistant adalah must. Pro tip dari saya: pilih furniture dengan drainage holes di seating area supaya air hujan tidak menggenang.',
           '<strong>6. Custom Counter/Bar Station:</strong> Counter adalah "face" dari cafe Anda. Invest in well-designed counter dengan <a href="/product/industrial-kitchen-cabinet">kabinet industrial</a> untuk storage equipment (grinder, espresso machine, etc). Finish yang clean dan professional bikin barista lebih efficient dan customer lebih confident dengan hygiene standard Anda.',
           '<strong>7. Accessory Furniture (Coat Rack, Wall Shelf, etc.):</strong> Detail seperti <a href="/product/industrial-coat-rack">gantungan baju industrial</a> atau <a href="/product/industrial-hanging-shelf">rak gantung</a> might seem minor, tapi ini yang differentiate cafe yang "well thought out" vs yang asal-asalan.'
         ]
@@ -5396,7 +5396,7 @@ const BLOG_CONTENTS: BlogContent[] = [
           'Dari pengalaman saya consult berbagai client cafe, berikut <strong>5 kesalahan umum</strong> yang sering terjadi:',
           '<strong>Kesalahan #1: Prioritize Harga Murah Over Quality</strong><br/>Banyak owner cafe pemula yang fokus minimize initial cost dengan beli furniture termurah. Hasilnya? Furniture rusak dalam 6-12 bulan dan harus ganti lagi. Total cost akhirnya malah lebih mahal. <em>Solusi:</em> Think long-term. Invest in quality furniture yang last 5-10 tahun. Calculate total cost of ownership, not just upfront cost.',
           '<strong>Kesalahan #2: Tidak Consider Ergonomics</strong><br/>Furniture yang cantik tapi uncomfortable is useless. Saya pernah lihat cafe yang pakai kursi trendy tapi tanpa backrest - pelanggan tidak betah duduk lebih dari 30 menit. <em>Solusi:</em> Test furniture sebelum order dalam quantity besar. Duduk 30-60 menit dan rasakan apakah comfortable.',
-          '<strong>Kesalahan #3: Furniture yang Tidak Match dengan Space Layout</strong><br/>Furniture oversized di space kecil bikin cafe terasa cramped. Furniture undersized di space besar bikin cafe terasa empty. <em>Solusi:</em> Konsultasi dengan designer atau workshop yang experienced. Mangala Living, misalnya, provide free design consultation dengan 3D mockup supaya Anda bisa visualize sebelum produksi.',
+          '<strong>Kesalahan #3: Furniture yang Tidak Match dengan Space Layout</strong><br/>Furniture oversized di space kecil bikin cafe terasa cramped. Furniture undersized di space besar bikin cafe terasa empty. <em>Solusi:</em> Konsultasi dengan designer atau workshop yang experienced. Naturra Extal, misalnya, provide free design consultation dengan 3D mockup supaya Anda bisa visualize sebelum produksi.',
           '<strong>Kesalahan #4: Ignore Cleaning & Maintenance</strong><br/>Material yang require high maintenance (e.g., certain types of wood atau fabric seating) is nightmare untuk F&B environment. <em>Solusi:</em> Pilih material yang easy-clean. Metal frame dengan HPL top atau solid wood dengan polyurethane coating adalah pilihan terbaik.',
           '<strong>Kesalahan #5: Tidak Budget untuk Replacement & Upgrade</strong><br/>Bahkan furniture berkualitas terbaik akan eventually need replacement atau refresh. <em>Solusi:</em> Set aside 5-10% dari annual revenue untuk furniture maintenance dan upgrade. This keeps your cafe always look fresh.'
         ],
@@ -5404,17 +5404,17 @@ const BLOG_CONTENTS: BlogContent[] = [
         imageAlt: 'Desain cafe industrial minimalis dengan kursi bar industrial - Furniture besi berkualitas dengan ergonomis yang membuat pelanggan nyaman berlama-lama'
       },
       {
-        heading: 'Mengapa Saya Recommend Mangala Living untuk Furniture Cafe Anda',
+        heading: 'Mengapa Saya Recommend Naturra Extal untuk Furniture Cafe Anda',
         paragraphs: [
-          'Disclaimer: Saya tidak affiliate dengan Mangala Living. Rekomendasi ini purely based on observasi saya sebagai praktisi arsitektur yang sering interact dengan berbagai workshop furniture di Jabodetabek.',
-          'Yang saya appreciate dari <strong>Mangala Living</strong>:',
+          'Disclaimer: Saya tidak affiliate dengan Naturra Extal. Rekomendasi ini purely based on observasi saya sebagai praktisi arsitektur yang sering interact dengan berbagai workshop furniture di Jabodetabek.',
+          'Yang saya appreciate dari <strong>Naturra Extal</strong>:',
           '<strong>1. Workshop Langsung di Bekasi = Harga Factory Direct</strong><br/>No markup dari middleman. Anda dealing langsung dengan pabrik yang produce furniture. Price transparency yang jarang ditemukan di industry ini.',
-          '<strong>2. Custom Design Capability</strong><br/>Bukan sekadar "customize warna atau ukuran". Mangala Living bisa design from scratch based on space layout, brand identity, dan functional requirement Anda. Tim mereka include drafter dan welder yang experienced handle commercial project.',
+          '<strong>2. Custom Design Capability</strong><br/>Bukan sekadar "customize warna atau ukuran". Naturra Extal bisa design from scratch based on space layout, brand identity, dan functional requirement Anda. Tim mereka include drafter dan welder yang experienced handle commercial project.',
           '<strong>3. Material Quality yang Consistent</strong><br/>Saya pernah inspect beberapa project mereka (cafe di area Cikarang dan Jakarta Timur) dan material quality very consistent. Besi hollow yang mereka pakai adalah grade A dengan wall thickness yang proper (not thin metal yang gampang penyok). Finishing powder coating juga rapi - not patchy atau uneven.',
-          '<strong>4. Timeline yang Realistic dan Mostly On-Time</strong><br/>Dalam construction/renovation world, delay adalah nightmare. Mangala Living typically deliver dalam 20-25 hari for standard project. Mereka upfront tentang timeline dan rarely over-promise.',
-          '<strong>5. After-Sales Service yang Responsive</strong><br/>Ini yang often overlooked. Furniture workshop yang good will stand behind their product. Mangala Living provide warranty dan after-sales support. Jika ada minor issue, mereka quick to respond and fix.',
+          '<strong>4. Timeline yang Realistic dan Mostly On-Time</strong><br/>Dalam construction/renovation world, delay adalah nightmare. Naturra Extal typically deliver dalam 20-25 hari for standard project. Mereka upfront tentang timeline dan rarely over-promise.',
+          '<strong>5. After-Sales Service yang Responsive</strong><br/>Ini yang often overlooked. Furniture workshop yang good will stand behind their product. Naturra Extal provide warranty dan after-sales support. Jika ada minor issue, mereka quick to respond and fix.',
           '<strong>6. Portfolio yang Proven</strong><br/>Dengan 25 tahun pengalaman (since 1999) dan 1000+ project completed, mereka punya track record yang solid. Termasuk project-project besar seperti hotel, corporate office, dan chain cafe.',
-          'Tentu saja, Anda bebas explore workshop lain. Tapi dari perspektif saya sebagai someone who evaluate vendors for project, Mangala Living tick semua boxes: quality, price, service, dan reliability.'
+          'Tentu saja, Anda bebas explore workshop lain. Tapi dari perspektif saya sebagai someone who evaluate vendors for project, Naturra Extal tick semua boxes: quality, price, service, dan reliability.'
         ]
       },
       {
@@ -5434,8 +5434,8 @@ const BLOG_CONTENTS: BlogContent[] = [
           'Sebagai closing thought, saya mau emphasize: <strong>furniture is not just furniture</strong>. Dalam bisnis cafe, furniture adalah salah satu touchpoint terpenting antara Anda dan customer. Furniture yang tepat bisa:',
           '<ul><li>Create first impression yang strong (people judge cafe dalam 3 detik pertama mereka masuk)</li><li>Enhance customer experience dan increase dwell time</li><li>Reduce maintenance cost dan operational hassle</li><li>Differentiate Anda dari kompetitor</li><li>Generate organic marketing via Instagram posts dari customer</li></ul>',
           'Investasi di quality furniture adalah investasi untuk long-term success cafe Anda. Jangan compromise on this.',
-          'Jika Anda lagi planning buka cafe di <strong>Jakarta</strong>, <strong>Bandung</strong>, <strong>Bekasi</strong>, <strong>Cikarang</strong>, atau area Jabodetabek lainnya dan butuh partner untuk furniture industrial berkualitas, saya personally recommend Anda untuk at least consult dengan <strong>Mangala Living</strong>. Workshop mereka accessible (di Setu, Bekasi), team responsive, dan track record proven.',
-          '<strong>Contact Mangala Living:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; <strong>Workshop:</strong> Jl. Raya Setu, Bekasi (Dekat pintu tol Cikarang Barat)<br/>&bull; <strong>Jam Operasional:</strong> Senin-Jumat 08:00-17:00, Sabtu 08:00-15:00',
+          'Jika Anda lagi planning buka cafe di <strong>Jakarta</strong>, <strong>Bandung</strong>, <strong>Bekasi</strong>, <strong>Cikarang</strong>, atau area Jabodetabek lainnya dan butuh partner untuk agricultural commodities berkualitas, saya personally recommend Anda untuk at least consult dengan <strong>Naturra Extal</strong>. Workshop mereka accessible (di Setu, Bekasi), team responsive, dan track record proven.',
+          '<strong>Contact Naturra Extal:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; <strong>Workshop:</strong> Jl. Raya Setu, Bekasi (Dekat pintu tol Cikarang Barat)<br/>&bull; <strong>Jam Operasional:</strong> Senin-Jumat 08:00-17:00, Sabtu 08:00-15:00',
           '<em>Tip: Mention kode "CAFE2025" saat inquiry untuk free design consultation dan 3D mockup!</em>',
           'Semoga artikel ini helpful untuk Anda yang lagi dalam journey membuka atau renovate cafe. Jika ada pertanyaan atau mau discuss lebih detail tentang space planning dan furniture selection, feel free to reach out!',
           '&mdash; <strong>Helmi Ramdan</strong><br/><em>Associate, Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta<br/>Pengalaman 10+ Tahun dalam Arsitektur, Desain Interior, dan Project Commercial Space<br/>LinkedIn: https://www.linkedin.com/in/helmi-ramdan-067912118/</em>'
@@ -5451,7 +5451,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di Jakarta dan Bekasi, saya notice bahwa <strong>furniture tahan lama untuk operasional non-stop</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: intensitas usage 3x lipat, maintenance minimal.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Cafe 24 Jam Jakarta & Bekasi, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Cafe 24 Jam Jakarta & Bekasi, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -5461,16 +5461,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment Jakarta dan Bekasi mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di Jakarta dan Bekasi invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di Jakarta dan Bekasi invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Cafe 24 Jam Jakarta & Bekasi dengan furniture industrial - Desain optimal untuk Jakarta dan Bekasi yang menarik pelanggan'
+        imageAlt: 'Interior cafe Cafe 24 Jam Jakarta & Bekasi dengan agricultural commodities - Desain optimal untuk Jakarta dan Bekasi yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Cafe 24 Jam Jakarta & Bekasi',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di Jakarta dan Bekasi, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>intensitas usage 3x lipat, maintenance minimal</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>intensitas usage 3x lipat, maintenance minimal</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -5484,29 +5484,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di Jakarta dan Bekasi?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di Jakarta dan Bekasi?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics Jakarta dan Bekasi. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di Jakarta dan Bekasi.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE137" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE137" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di Jakarta dan Bekasi',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di Jakarta dan Bekasi.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -5520,7 +5520,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di area outdoor dengan cuaca ekstrem, saya notice bahwa <strong>furniture outdoor tahan cuaca tropis Indonesia</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: material weatherproof, design tropical-industrial.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Cafe Alam Outdoor, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Cafe Alam Outdoor, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -5530,16 +5530,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment area outdoor dengan cuaca ekstrem mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di area outdoor dengan cuaca ekstrem invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di area outdoor dengan cuaca ekstrem invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Cafe Alam Outdoor dengan furniture industrial - Desain optimal untuk area outdoor dengan cuaca ekstrem yang menarik pelanggan'
+        imageAlt: 'Interior cafe Cafe Alam Outdoor dengan agricultural commodities - Desain optimal untuk area outdoor dengan cuaca ekstrem yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Cafe Alam Outdoor',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di area outdoor dengan cuaca ekstrem, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>material weatherproof, design tropical-industrial</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>material weatherproof, design tropical-industrial</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -5553,29 +5553,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di area outdoor dengan cuaca ekstrem?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di area outdoor dengan cuaca ekstrem?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics area outdoor dengan cuaca ekstrem. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di area outdoor dengan cuaca ekstrem.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE138" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE138" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di area outdoor dengan cuaca ekstrem',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di area outdoor dengan cuaca ekstrem.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -5589,7 +5589,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di area residential dan perumahan, saya notice bahwa <strong>furniture strategy menarik pelanggan lokal</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: community-oriented design, family-friendly seating.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Cafe Sekitar Residential Area, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Cafe Sekitar Residential Area, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -5599,16 +5599,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment area residential dan perumahan mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di area residential dan perumahan invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di area residential dan perumahan invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Cafe Sekitar Residential Area dengan furniture industrial - Desain optimal untuk area residential dan perumahan yang menarik pelanggan'
+        imageAlt: 'Interior cafe Cafe Sekitar Residential Area dengan agricultural commodities - Desain optimal untuk area residential dan perumahan yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Cafe Sekitar Residential Area',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di area residential dan perumahan, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>community-oriented design, family-friendly seating</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>community-oriented design, family-friendly seating</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -5622,29 +5622,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di area residential dan perumahan?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di area residential dan perumahan?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics area residential dan perumahan. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di area residential dan perumahan.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE139" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE139" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di area residential dan perumahan',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di area residential dan perumahan.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -5658,7 +5658,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di semua area dengan konsep unik, saya notice bahwa <strong>sinkronisasi furniture dengan brand identity</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: furniture sebagai visual branding tool.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Branding Cafe dengan Nama Unik, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Branding Cafe dengan Nama Unik, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -5668,16 +5668,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment semua area dengan konsep unik mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di semua area dengan konsep unik invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di semua area dengan konsep unik invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Branding Cafe dengan Nama Unik dengan furniture industrial - Desain optimal untuk semua area dengan konsep unik yang menarik pelanggan'
+        imageAlt: 'Interior cafe Branding Cafe dengan Nama Unik dengan agricultural commodities - Desain optimal untuk semua area dengan konsep unik yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Branding Cafe dengan Nama Unik',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di semua area dengan konsep unik, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>furniture sebagai visual branding tool</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>furniture sebagai visual branding tool</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -5691,29 +5691,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di semua area dengan konsep unik?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di semua area dengan konsep unik?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics semua area dengan konsep unik. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di semua area dengan konsep unik.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE140" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE140" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di semua area dengan konsep unik',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di semua area dengan konsep unik.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -5726,8 +5726,8 @@ const BLOG_CONTENTS: BlogContent[] = [
       {
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
-          'Dari pengalaman saya handle commercial space di BSD City dan Serpong, saya notice bahwa <strong>furniture industrial untuk demographics premium</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: high expectation, premium material, design sophisticated.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Cafe BSD Serpong Premium, berdasarkan observasi dan consultation project saya.'
+          'Dari pengalaman saya handle commercial space di BSD City dan Serpong, saya notice bahwa <strong>agricultural commodities untuk demographics premium</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: high expectation, premium material, design sophisticated.',
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Cafe BSD Serpong Premium, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -5737,16 +5737,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment BSD City dan Serpong mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di BSD City dan Serpong invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di BSD City dan Serpong invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Cafe BSD Serpong Premium dengan furniture industrial - Desain optimal untuk BSD City dan Serpong yang menarik pelanggan'
+        imageAlt: 'Interior cafe Cafe BSD Serpong Premium dengan agricultural commodities - Desain optimal untuk BSD City dan Serpong yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Cafe BSD Serpong Premium',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di BSD City dan Serpong, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>high expectation, premium material, design sophisticated</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>high expectation, premium material, design sophisticated</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -5760,29 +5760,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di BSD City dan Serpong?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di BSD City dan Serpong?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics BSD City dan Serpong. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di BSD City dan Serpong.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE141" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE141" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di BSD City dan Serpong',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di BSD City dan Serpong.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -5796,7 +5796,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di Sentul dan Bogor area, saya notice bahwa <strong>kombinasi alam dan industrial style</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: tropical-industrial, material tahan kelembaban.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Cafe Sentul Bogor Tropical, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Cafe Sentul Bogor Tropical, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -5806,16 +5806,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment Sentul dan Bogor area mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di Sentul dan Bogor area invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di Sentul dan Bogor area invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Cafe Sentul Bogor Tropical dengan furniture industrial - Desain optimal untuk Sentul dan Bogor area yang menarik pelanggan'
+        imageAlt: 'Interior cafe Cafe Sentul Bogor Tropical dengan agricultural commodities - Desain optimal untuk Sentul dan Bogor area yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Cafe Sentul Bogor Tropical',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di Sentul dan Bogor area, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>tropical-industrial, material tahan kelembaban</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>tropical-industrial, material tahan kelembaban</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -5829,29 +5829,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di Sentul dan Bogor area?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di Sentul dan Bogor area?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics Sentul dan Bogor area. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di Sentul dan Bogor area.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE142" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE142" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di Sentul dan Bogor area',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di Sentul dan Bogor area.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -5865,7 +5865,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di Margonda, UI, area kampus, saya notice bahwa <strong>furniture student-friendly dan affordable</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: power outlet banyak, study-friendly layout.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Cafe Area Kampus Depok, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Cafe Area Kampus Depok, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -5875,16 +5875,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment Margonda, UI, area kampus mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di Margonda, UI, area kampus invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di Margonda, UI, area kampus invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Cafe Area Kampus Depok dengan furniture industrial - Desain optimal untuk Margonda, UI, area kampus yang menarik pelanggan'
+        imageAlt: 'Interior cafe Cafe Area Kampus Depok dengan agricultural commodities - Desain optimal untuk Margonda, UI, area kampus yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Cafe Area Kampus Depok',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di Margonda, UI, area kampus, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>power outlet banyak, study-friendly layout</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>power outlet banyak, study-friendly layout</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -5898,29 +5898,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di Margonda, UI, area kampus?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di Margonda, UI, area kampus?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics Margonda, UI, area kampus. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di Margonda, UI, area kampus.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE143" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE143" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di Margonda, UI, area kampus',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di Margonda, UI, area kampus.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -5934,7 +5934,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di Kemang, SCBD, Senopati, saya notice bahwa <strong>furniture high-end industrial chic</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: material premium, design sophisticated, ROI high-spending customer.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Cafe Jakarta Selatan Premium, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Cafe Jakarta Selatan Premium, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -5944,16 +5944,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment Kemang, SCBD, Senopati mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di Kemang, SCBD, Senopati invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di Kemang, SCBD, Senopati invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Cafe Jakarta Selatan Premium dengan furniture industrial - Desain optimal untuk Kemang, SCBD, Senopati yang menarik pelanggan'
+        imageAlt: 'Interior cafe Cafe Jakarta Selatan Premium dengan agricultural commodities - Desain optimal untuk Kemang, SCBD, Senopati yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Cafe Jakarta Selatan Premium',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di Kemang, SCBD, Senopati, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>material premium, design sophisticated, ROI high-spending customer</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>material premium, design sophisticated, ROI high-spending customer</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -5967,29 +5967,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di Kemang, SCBD, Senopati?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di Kemang, SCBD, Senopati?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics Kemang, SCBD, Senopati. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di Kemang, SCBD, Senopati.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE144" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE144" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di Kemang, SCBD, Senopati',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di Kemang, SCBD, Senopati.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -6003,7 +6003,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di Dago, Riau, Progo Bandung, saya notice bahwa <strong>furniture instagrammable yang viral</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: photogenic design, trend Bandung aesthetic.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Cafe Hits Bandung, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Cafe Hits Bandung, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -6013,16 +6013,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment Dago, Riau, Progo Bandung mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di Dago, Riau, Progo Bandung invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di Dago, Riau, Progo Bandung invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Cafe Hits Bandung dengan furniture industrial - Desain optimal untuk Dago, Riau, Progo Bandung yang menarik pelanggan'
+        imageAlt: 'Interior cafe Cafe Hits Bandung dengan agricultural commodities - Desain optimal untuk Dago, Riau, Progo Bandung yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Cafe Hits Bandung',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di Dago, Riau, Progo Bandung, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>photogenic design, trend Bandung aesthetic</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>photogenic design, trend Bandung aesthetic</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -6036,29 +6036,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di Dago, Riau, Progo Bandung?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di Dago, Riau, Progo Bandung?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics Dago, Riau, Progo Bandung. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di Dago, Riau, Progo Bandung.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE145" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE145" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di Dago, Riau, Progo Bandung',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di Dago, Riau, Progo Bandung.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -6072,7 +6072,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di Canggu, Seminyak, Ubud, saya notice bahwa <strong>furniture tropical industrial beach style</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: material tahan garam laut, design tropical.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Cafe Bali Beach Vibes, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Cafe Bali Beach Vibes, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -6082,16 +6082,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment Canggu, Seminyak, Ubud mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di Canggu, Seminyak, Ubud invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di Canggu, Seminyak, Ubud invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Cafe Bali Beach Vibes dengan furniture industrial - Desain optimal untuk Canggu, Seminyak, Ubud yang menarik pelanggan'
+        imageAlt: 'Interior cafe Cafe Bali Beach Vibes dengan agricultural commodities - Desain optimal untuk Canggu, Seminyak, Ubud yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Cafe Bali Beach Vibes',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di Canggu, Seminyak, Ubud, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>material tahan garam laut, design tropical</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>material tahan garam laut, design tropical</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -6105,29 +6105,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di Canggu, Seminyak, Ubud?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di Canggu, Seminyak, Ubud?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics Canggu, Seminyak, Ubud. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di Canggu, Seminyak, Ubud.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE146" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE146" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di Canggu, Seminyak, Ubud',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di Canggu, Seminyak, Ubud.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -6141,7 +6141,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di Galaxy Mall, Pakuwon, saya notice bahwa <strong>furniture spacious dan comfortable</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: spacious seating preference, modern design.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Cafe Surabaya Modern, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Cafe Surabaya Modern, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -6151,16 +6151,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment Galaxy Mall, Pakuwon mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di Galaxy Mall, Pakuwon invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di Galaxy Mall, Pakuwon invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Cafe Surabaya Modern dengan furniture industrial - Desain optimal untuk Galaxy Mall, Pakuwon yang menarik pelanggan'
+        imageAlt: 'Interior cafe Cafe Surabaya Modern dengan agricultural commodities - Desain optimal untuk Galaxy Mall, Pakuwon yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Cafe Surabaya Modern',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di Galaxy Mall, Pakuwon, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>spacious seating preference, modern design</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>spacious seating preference, modern design</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -6174,29 +6174,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di Galaxy Mall, Pakuwon?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di Galaxy Mall, Pakuwon?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics Galaxy Mall, Pakuwon. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di Galaxy Mall, Pakuwon.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE147" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE147" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di Galaxy Mall, Pakuwon',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di Galaxy Mall, Pakuwon.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -6210,7 +6210,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di Prawirotaman, Malioboro, Kaliurang, saya notice bahwa <strong>furniture vintage industrial heritage</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: kombinasi heritage dan industrial, reclaimed material.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Cafe Jogja Heritage, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Cafe Jogja Heritage, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -6220,16 +6220,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment Prawirotaman, Malioboro, Kaliurang mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di Prawirotaman, Malioboro, Kaliurang invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di Prawirotaman, Malioboro, Kaliurang invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Cafe Jogja Heritage dengan furniture industrial - Desain optimal untuk Prawirotaman, Malioboro, Kaliurang yang menarik pelanggan'
+        imageAlt: 'Interior cafe Cafe Jogja Heritage dengan agricultural commodities - Desain optimal untuk Prawirotaman, Malioboro, Kaliurang yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Cafe Jogja Heritage',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di Prawirotaman, Malioboro, Kaliurang, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>kombinasi heritage dan industrial, reclaimed material</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>kombinasi heritage dan industrial, reclaimed material</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -6243,29 +6243,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di Prawirotaman, Malioboro, Kaliurang?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di Prawirotaman, Malioboro, Kaliurang?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics Prawirotaman, Malioboro, Kaliurang. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di Prawirotaman, Malioboro, Kaliurang.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE148" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE148" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di Prawirotaman, Malioboro, Kaliurang',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di Prawirotaman, Malioboro, Kaliurang.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -6279,7 +6279,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di Malang dan Batu, saya notice bahwa <strong>furniture outdoor dengan view pegunungan</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: maximize view, nature-meets-industrial.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Cafe Malang Mountain View, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Cafe Malang Mountain View, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -6289,16 +6289,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment Malang dan Batu mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di Malang dan Batu invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di Malang dan Batu invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Cafe Malang Mountain View dengan furniture industrial - Desain optimal untuk Malang dan Batu yang menarik pelanggan'
+        imageAlt: 'Interior cafe Cafe Malang Mountain View dengan agricultural commodities - Desain optimal untuk Malang dan Batu yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Cafe Malang Mountain View',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di Malang dan Batu, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>maximize view, nature-meets-industrial</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>maximize view, nature-meets-industrial</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -6312,29 +6312,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di Malang dan Batu?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di Malang dan Batu?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics Malang dan Batu. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di Malang dan Batu.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE149" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE149" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di Malang dan Batu',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di Malang dan Batu.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -6348,7 +6348,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di Bogor dan Puncak, saya notice bahwa <strong>furniture untuk dataran tinggi sejuk</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: material tahan kelembaban tinggi, cozy highland vibes.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Cafe Bogor Highland, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Cafe Bogor Highland, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -6358,16 +6358,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment Bogor dan Puncak mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di Bogor dan Puncak invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di Bogor dan Puncak invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Cafe Bogor Highland dengan furniture industrial - Desain optimal untuk Bogor dan Puncak yang menarik pelanggan'
+        imageAlt: 'Interior cafe Cafe Bogor Highland dengan agricultural commodities - Desain optimal untuk Bogor dan Puncak yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Cafe Bogor Highland',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di Bogor dan Puncak, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>material tahan kelembaban tinggi, cozy highland vibes</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>material tahan kelembaban tinggi, cozy highland vibes</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -6381,29 +6381,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di Bogor dan Puncak?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di Bogor dan Puncak?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics Bogor dan Puncak. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di Bogor dan Puncak.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE150" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE150" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di Bogor dan Puncak',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di Bogor dan Puncak.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -6417,7 +6417,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di Medan, Sumatera Utara, saya notice bahwa <strong>furniture untuk kultur nongkrong Medan</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: spacious table, group-friendly seating.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Cafe Medan Spacious, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Cafe Medan Spacious, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -6427,16 +6427,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment Medan, Sumatera Utara mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di Medan, Sumatera Utara invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di Medan, Sumatera Utara invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Cafe Medan Spacious dengan furniture industrial - Desain optimal untuk Medan, Sumatera Utara yang menarik pelanggan'
+        imageAlt: 'Interior cafe Cafe Medan Spacious dengan agricultural commodities - Desain optimal untuk Medan, Sumatera Utara yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Cafe Medan Spacious',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di Medan, Sumatera Utara, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>spacious table, group-friendly seating</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>spacious table, group-friendly seating</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -6450,29 +6450,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di Medan, Sumatera Utara?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di Medan, Sumatera Utara?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics Medan, Sumatera Utara. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di Medan, Sumatera Utara.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE151" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE151" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di Medan, Sumatera Utara',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di Medan, Sumatera Utara.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -6486,7 +6486,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di Semarang, Jawa Tengah, saya notice bahwa <strong>furniture compact untuk mall dan ruko</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: space efficiency, layout optimal tenant terbatas.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Cafe Semarang Compact, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Cafe Semarang Compact, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -6496,16 +6496,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment Semarang, Jawa Tengah mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di Semarang, Jawa Tengah invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di Semarang, Jawa Tengah invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Cafe Semarang Compact dengan furniture industrial - Desain optimal untuk Semarang, Jawa Tengah yang menarik pelanggan'
+        imageAlt: 'Interior cafe Cafe Semarang Compact dengan agricultural commodities - Desain optimal untuk Semarang, Jawa Tengah yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Cafe Semarang Compact',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di Semarang, Jawa Tengah, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>space efficiency, layout optimal tenant terbatas</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>space efficiency, layout optimal tenant terbatas</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -6519,29 +6519,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di Semarang, Jawa Tengah?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di Semarang, Jawa Tengah?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics Semarang, Jawa Tengah. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di Semarang, Jawa Tengah.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE152" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE152" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di Semarang, Jawa Tengah',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di Semarang, Jawa Tengah.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -6555,7 +6555,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di Makassar, Sulawesi Selatan, saya notice bahwa <strong>furniture coastal industrial beach style</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: material tahan angin laut, beach industrial.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Cafe Makassar Coastal, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Cafe Makassar Coastal, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -6565,16 +6565,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment Makassar, Sulawesi Selatan mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di Makassar, Sulawesi Selatan invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di Makassar, Sulawesi Selatan invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Cafe Makassar Coastal dengan furniture industrial - Desain optimal untuk Makassar, Sulawesi Selatan yang menarik pelanggan'
+        imageAlt: 'Interior cafe Cafe Makassar Coastal dengan agricultural commodities - Desain optimal untuk Makassar, Sulawesi Selatan yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Cafe Makassar Coastal',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di Makassar, Sulawesi Selatan, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>material tahan angin laut, beach industrial</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>material tahan angin laut, beach industrial</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -6588,29 +6588,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di Makassar, Sulawesi Selatan?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di Makassar, Sulawesi Selatan?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics Makassar, Sulawesi Selatan. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di Makassar, Sulawesi Selatan.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE153" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE153" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di Makassar, Sulawesi Selatan',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di Makassar, Sulawesi Selatan.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -6624,7 +6624,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di area residential lokal, saya notice bahwa <strong>furniture strategy jadi pilihan lokal pertama</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: community-oriented, comfortable for regulars.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Cafe Terdekat Strategy, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Cafe Terdekat Strategy, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -6634,16 +6634,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment area residential lokal mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di area residential lokal invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di area residential lokal invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Cafe Terdekat Strategy dengan furniture industrial - Desain optimal untuk area residential lokal yang menarik pelanggan'
+        imageAlt: 'Interior cafe Cafe Terdekat Strategy dengan agricultural commodities - Desain optimal untuk area residential lokal yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Cafe Terdekat Strategy',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di area residential lokal, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>community-oriented, comfortable for regulars</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>community-oriented, comfortable for regulars</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -6657,29 +6657,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di area residential lokal?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di area residential lokal?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics area residential lokal. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di area residential lokal.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE154" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE154" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di area residential lokal',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di area residential lokal.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -6693,7 +6693,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di semua cafe dengan fokus F&B, saya notice bahwa <strong>furniture mendukung pengalaman kuliner</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: sinkronisasi menu dengan furniture, enhance experience.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe Menu Cafe & Furniture Synergy, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe Menu Cafe & Furniture Synergy, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -6703,16 +6703,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment semua cafe dengan fokus F&B mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di semua cafe dengan fokus F&B invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di semua cafe dengan fokus F&B invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe Menu Cafe & Furniture Synergy dengan furniture industrial - Desain optimal untuk semua cafe dengan fokus F&B yang menarik pelanggan'
+        imageAlt: 'Interior cafe Menu Cafe & Furniture Synergy dengan agricultural commodities - Desain optimal untuk semua cafe dengan fokus F&B yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk Menu Cafe & Furniture Synergy',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di semua cafe dengan fokus F&B, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>sinkronisasi menu dengan furniture, enhance experience</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>sinkronisasi menu dengan furniture, enhance experience</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -6726,29 +6726,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di semua cafe dengan fokus F&B?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di semua cafe dengan fokus F&B?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics semua cafe dengan fokus F&B. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di semua cafe dengan fokus F&B.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE155" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE155" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di semua cafe dengan fokus F&B',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di semua cafe dengan fokus F&B.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -6762,7 +6762,7 @@ const BLOG_CONTENTS: BlogContent[] = [
         paragraphs: [
           '<strong>Oleh: Helmi Ramdan</strong><br/><em>Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta | Infrastructure Engineer at Damai Putra Group (3+ tahun) | Design Engineer & Architectural Drafter (5+ tahun pengalaman) | Alumni Universitas Diponegoro | Spesialis Commercial Space Design & Construction</em>',
           'Dari pengalaman saya handle commercial space di urban area dengan brand positioning premium, saya notice bahwa <strong>furniture minimalis less is more</strong> adalah kunci sukses cafe di area ini. Karakteristik unique: minimalist aesthetic, monochrome palette, timeless.',
-          'Artikel ini akan share insight praktis furniture industrial untuk cafe The Cafe Minimalist Concept, berdasarkan observasi dan consultation project saya.'
+          'Artikel ini akan share insight praktis agricultural commodities untuk cafe The Cafe Minimalist Concept, berdasarkan observasi dan consultation project saya.'
         ]
       },
       {
@@ -6772,16 +6772,16 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Demographics & Behavior:</strong> Target customer di area ini punya preference specific yang harus di-accommodate dalam furniture selection.',
           '<strong>Climate & Environment:</strong> Kondisi cuaca dan environment urban area dengan brand positioning premium mempengaruhi material selection. Furniture harus match dengan condition lokal.',
           '<strong>Competition Landscape:</strong> Cafe di area ini compete ketat. Furniture yang right bisa jadi differentiator yang significant.',
-          'Dari analisis saya, cafe sukses di urban area dengan brand positioning premium invest in <strong>furniture industrial berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
+          'Dari analisis saya, cafe sukses di urban area dengan brand positioning premium invest in <strong>agricultural commodities berkualitas</strong> yang designed specifically untuk condition dan customer mereka.'
         ],
         image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&auto=format&fit=crop',
-        imageAlt: 'Interior cafe The Cafe Minimalist Concept dengan furniture industrial - Desain optimal untuk urban area dengan brand positioning premium yang menarik pelanggan'
+        imageAlt: 'Interior cafe The Cafe Minimalist Concept dengan agricultural commodities - Desain optimal untuk urban area dengan brand positioning premium yang menarik pelanggan'
       },
       {
         heading: 'Furniture Strategy yang Proven untuk The Cafe Minimalist Concept',
         paragraphs: [
           'Berdasarkan experience consult berbagai cafe di urban area dengan brand positioning premium, berikut furniture strategy yang work:',
-          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>minimalist aesthetic, monochrome palette, timeless</strong>. <a href="/product-category/dining-table-collection">Furniture industrial</a> dengan finishing proper adalah pilihan terbaik.',
+          '<strong>1. Material Selection:</strong> Pilih material yang sesuai dengan <strong>minimalist aesthetic, monochrome palette, timeless</strong>. <a href="/product-category/dining-table-collection">agricultural commodities</a> dengan finishing proper adalah pilihan terbaik.',
           '<strong>2. Layout Optimization:</strong> Design layout yang maximize space utility tanpa sacrifice customer comfort. Zone-based seating approach proven effective.',
           '<strong>3. Seating Mix:</strong> Kombinasi <a href="/product/balcony-bar-table">bar table</a>, dining table 2-4 seater, dan <a href="/product/bench-corner-lounge">lounge seating</a> untuk accommodate different customer needs.',
           '<strong>4. Aesthetic Consistency:</strong> Furniture harus align dengan brand identity cafe. Industrial style flexible dan bisa di-customize untuk various concept.',
@@ -6795,29 +6795,29 @@ const BLOG_CONTENTS: BlogContent[] = [
           '<strong>Small Cafe (40-60m&sup2;):</strong> Budget Rp 60-90 juta untuk complete furniture setup (dining set, bar seating, storage).',
           '<strong>Medium Cafe (80-120m&sup2;):</strong> Budget Rp 120-180 juta untuk comprehensive furniture dengan mix seating types.',
           '<strong>Large Premium Cafe (150m&sup2;+):</strong> Budget Rp 200-350 juta untuk full custom furniture dengan premium material.',
-          'ROI perspective: Quality <strong>furniture industrial dari Mangala Living</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
+          'ROI perspective: Quality <strong>agricultural commodities dari Naturra Extal</strong> dengan proper material last 5-7 years dengan minimal maintenance. This is significantly cheaper than replace cheap furniture every 1-2 years.'
         ]
       },
       {
-        heading: 'Mengapa Mangala Living untuk Cafe di urban area dengan brand positioning premium?',
+        heading: 'Mengapa Naturra Extal untuk Cafe di urban area dengan brand positioning premium?',
         paragraphs: [
-          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Mangala Living</strong> reliable option karena:',
+          'Sebagai praktisi yang sering recommend vendors untuk commercial project, saya consider <strong>Naturra Extal</strong> reliable option karena:',
           '<strong>1. Experience dengan Diverse Location:</strong> Mereka already handle project di berbagai area Indonesia dengan condition berbeda. Understanding local requirement adalah plus.',
           '<strong>2. Custom Design Capability:</strong> Bisa design furniture yang specific untuk unique characteristics urban area dengan brand positioning premium. Not one-size-fits-all approach.',
           '<strong>3. Material Quality Consistent:</strong> Furniture yang saya inspect dari mereka show consistent quality. Material spec sesuai dengan yang di-promise.',
           '<strong>4. After-Sales Support:</strong> Workshop di Bekasi memberikan advantage untuk Jabodetabek area. Response time cepat jika ada issue.',
           'Workshop location: <strong>Jl. Raya Setu, Bekasi</strong>. Free consultation untuk cafe project di urban area dengan brand positioning premium.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "CAFE156" untuk special consideration dalam quotation.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "CAFE156" untuk special consideration dalam quotation.'
         ]
       },
       {
         heading: 'Tips Praktis: Maximize Furniture Performance di urban area dengan brand positioning premium',
         paragraphs: [
-          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Industrial furniture dengan powder coating mudah maintain.',
+          '<strong>1. Regular Maintenance:</strong> Clean furniture daily dengan proper method. Agricultural Commodities dengan powder coating mudah maintain.',
           '<strong>2. Seasonal Adjustment:</strong> Adjust seating arrangement based on season atau peak period di urban area dengan brand positioning premium.',
           '<strong>3. Customer Feedback Loop:</strong> Monitor customer comfort dan adjust furniture placement based on feedback.',
           '<strong>4. Document Everything:</strong> Keep record furniture condition dan maintenance done. Helpful untuk planning future investment.',
-          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Mangala Living make difference dalam long-term operation.',
+          '<strong>5. Partner dengan Reliable Supplier:</strong> Having vendor yang responsive seperti Naturra Extal make difference dalam long-term operation.',
           'Dari experience, cafe yang implement proper furniture strategy dan maintenance protocol see consistent growth in customer satisfaction dan revenue.'
         ]
       }
@@ -6836,7 +6836,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          'El diseño de muebles industriales a medida es la mejor opción cuando tu negocio necesita identidad visual, durabilidad real y medidas exactas para maximizar el espacio. En Mangala Living, fabricamos en nuestro taller de Bekasi con acero hueco galvanizado, soldadura profesional y acabados powder coating de larga duración.',
+          'El diseño de muebles industriales a medida es la mejor opción cuando tu negocio necesita identidad visual, durabilidad real y medidas exactas para maximizar el espacio. En Naturra Extal, fabricamos en nuestro taller de Bekasi con acero hueco galvanizado, soldadura profesional y acabados powder coating de larga duración.',
           '<strong>Resumen rápido:</strong> En este artículo verás cuándo conviene el custom design, recomendaciones de materiales, tiempos de producción, y una guía práctica para planificar tu proyecto sin sorpresas.'
         ]
       },
@@ -6874,7 +6874,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
       {
         heading: 'Contacto y consulta',
         paragraphs: [
-          '¿Listo para el siguiente paso? Escríbenos a <a href="https://wa.me/+6288801146881">WhatsApp +6288801146881</a> o email <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a>. Atendemos Yakarta, Bekasi, Cikarang y proyectos nacionales con logística coordinada.'
+          '¿Listo para el siguiente paso? Escríbenos a <a href="https://wa.me/+6288801146881">WhatsApp +6288801146881</a> o email <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a>. Atendemos Yakarta, Bekasi, Cikarang y proyectos nacionales con logística coordinada.'
         ]
       }
     ]
@@ -6886,7 +6886,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
       {
         paragraphs: [
           'Plus de 1 000 clients nous font confiance depuis 1999 pour la fabrication de mobilier industriel premium. Notre atelier à Bekasi réunit soudure professionnelle, contrôle qualité rigoureux et finitions powder coating durables.',
-          '<strong>En bref :</strong> Ce billet présente pourquoi les entreprises choisissent Mangala Living, comment nous garantissons la qualité et ce que vous pouvez attendre du processus—de la conception à l’installation.'
+          '<strong>En bref :</strong> Ce billet présente pourquoi les entreprises choisissent Naturra Extal, comment nous garantissons la qualité et ce que vous pouvez attendre du processus—de la conception à l’installation.'
         ]
       },
       {
@@ -6914,7 +6914,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
       {
         heading: 'Contact',
         paragraphs: [
-          'Parlez-nous de votre projet sur <a href="https://wa.me/+6288801146881">WhatsApp +6288801146881</a> ou par email <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a>. Intervention Grand Jakarta et projets nationaux.'
+          'Parlez-nous de votre projet sur <a href="https://wa.me/+6288801146881">WhatsApp +6288801146881</a> ou par email <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a>. Intervention Grand Jakarta et projets nationaux.'
         ]
       }
     ]
@@ -6953,7 +6953,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
       {
         heading: '상담 및 문의',
         paragraphs: [
-          '프로젝트 개요를 <a href="https://wa.me/+6288801146881">WhatsApp</a>으로 보내 주세요. 자카르타·브카시·치카라ง 및 국내 프로젝트를 지원합니다. 이메일: <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a>'
+          '프로젝트 개요를 <a href="https://wa.me/+6288801146881">WhatsApp</a>으로 보내 주세요. 자카르타·브카시·치카라ง 및 국내 프로젝트를 지원합니다. 이메일: <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a>'
         ]
       }
     ]
@@ -6964,7 +6964,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          'Mangala Living は、設計から施工、アフターサポートまで一貫した「プロフェッショナル対応」を提供する工房です。商業空間の現場要件（耐久性・清掃性・安全性）を反映し、実運用で使いやすいインダストリアル家具を製作します。',
+          'Naturra Extal は、設計から施工、アフターサポートまで一貫した「プロフェッショナル対応」を提供する工房です。商業空間の現場要件（耐久性・清掃性・安全性）を反映し、実運用で使いやすいインダストリアル家具を製作します。',
           '<strong>概要:</strong> 本記事では、私たちの対応方針、品質保証、進行フローをわかりやすくご説明します。'
         ]
       },
@@ -6993,7 +6993,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
       {
         heading: 'お問い合わせ',
         paragraphs: [
-          'ご相談は <a href="https://wa.me/+6288801146881">WhatsApp</a> または <a href="mailto:lifewithmangala@gmail.com">メール</a> で。グレーター・ジャカルタおよび国内案件に対応しています。'
+          'ご相談は <a href="https://wa.me/+6288801146881">WhatsApp</a> または <a href="mailto:lifewithNaturra@gmail.com">メール</a> で。グレーター・ジャカルタおよび国内案件に対応しています。'
         ]
       }
     ]
@@ -7004,7 +7004,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          '选择工业风家具，真正重要的不只是外观，而是长期稳定的<strong>质量保障</strong>。Mangala Living 自1999年成立以来，坚持使用镀锌方管、专业焊接与粉末烤漆工艺，建立了可追溯的品质体系与售后机制。',
+          '选择工业风家具，真正重要的不只是外观，而是长期稳定的<strong>质量保障</strong>。Naturra Extal 自1999年成立以来，坚持使用镀锌方管、专业焊接与粉末烤漆工艺，建立了可追溯的品质体系与售后机制。',
           '<strong>要点概览：</strong>本文介绍我们的质保范围、材料与工艺标准、常见使用场景，以及如何在商用环境中延长家具寿命。'
         ]
       },
@@ -7033,7 +7033,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
       {
         heading: '联系与咨询',
         paragraphs: [
-          '欢迎通过 <a href="https://wa.me/+6288801146881">WhatsApp</a> 或邮箱 <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a> 与我们联系。我们在大雅加达地区（雅加达、茂物、德波、丹格朗、勿加泗）与全国项目提供支持。'
+          '欢迎通过 <a href="https://wa.me/+6288801146881">WhatsApp</a> 或邮箱 <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a> 与我们联系。我们在大雅加达地区（雅加达、茂物、德波、丹格朗、勿加泗）与全国项目提供支持。'
         ]
       }
     ]
@@ -7044,7 +7044,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          'ورشة Mangala Living في بَكَاسِي هي القلب النابض لخط إنتاج الأثاث الصناعي لدينا منذ عام 1999. نعتمد على لحام احترافي، هيكل فولاذي مُجلفن، وتشطيب طلاء بودرة مقاوم للخدش والرطوبة—مع معايير جودة واضحة وشفافة.',
+          'ورشة Naturra Extal في بَكَاسِي هي القلب النابض لخط إنتاج الأثاث الصناعي لدينا منذ عام 1999. نعتمد على لحام احترافي، هيكل فولاذي مُجلفن، وتشطيب طلاء بودرة مقاوم للخدش والرطوبة—مع معايير جودة واضحة وشفافة.',
           '<strong>ملخص سريع:</strong> ستتعرف هنا على قدرات الورشة، سير العمل من الفكرة إلى التركيب، وكيف نضمن الجودة والتسليم في الوقت المحدد لمشاريع المقاهي والمطاعم والفنادق والمكاتب.'
         ]
       },
@@ -7073,7 +7073,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
       {
         heading: 'تواصل معنا',
         paragraphs: [
-          'للاستفسار السريع: <a href="https://wa.me/+6288801146881">WhatsApp +6288801146881</a> أو البريد: <a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a>. نخدم جاكرتا الكبرى ومشاريع في أنحاء إندونيسيا.'
+          'للاستفسار السريع: <a href="https://wa.me/+6288801146881">WhatsApp +6288801146881</a> أو البريد: <a href="mailto:lifewithNaturra@gmail.com">lifewithNaturra@gmail.com</a>. نخدم جاكرتا الكبرى ومشاريع في أنحاء إندونيسيا.'
         ]
       }
     ]
@@ -7084,7 +7084,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          'إذا كنت تبحث عن مصنع أثاث معدني صناعي يستطيع تنفيذ طلبات حسب الطلب مباشرة من إندونيسيا، فإن Mangala Living هو شريك الإنتاج المناسب لك. نحن نصنع في ورشتنا في بَكَاسِي دون وسطاء، مع تحكم كامل في التصميم، المواد، والجودة.',
+          'إذا كنت تبحث عن مصنع أثاث معدني صناعي يستطيع تنفيذ طلبات حسب الطلب مباشرة من إندونيسيا، فإن Naturra Extal هو شريك الإنتاج المناسب لك. نحن نصنع في ورشتنا في بَكَاسِي دون وسطاء، مع تحكم كامل في التصميم، المواد، والجودة.',
           '<strong>ملخص:</strong> في هذا المقال نشرح كيف نستقبل طلبات التخصيص، ما هي مواصفات المواد التي نستخدمها، وكيف ندعم الشحن والتصدير لأسواق مختلفة.'
         ]
       },
@@ -7118,7 +7118,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          'Mangala Living 是来自印尼的工业风家具制造商和出口商，为中国及全球客户提供定制化解决方案。我们在万隆附近的工厂内部完成焊接、打磨、喷涂等全流程，确保稳定品质和准时交付。',
+          'Naturra Extal 是来自印尼的工业风家具制造商和出口商，为中国及全球客户提供定制化解决方案。我们在万隆附近的工厂内部完成焊接、打磨、喷涂等全流程，确保稳定品质和准时交付。',
           '<strong>概要：</strong>本文将介绍我们的生产能力、典型产品线以及与中国买家合作的方式。'
         ]
       },
@@ -7152,7 +7152,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          'Mangala Living は、インドネシア発のパティオ・アウトドア家具メーカーとして、海外向け輸出にも対応しています。強度の高いスチールフレームと耐候性パウダーコーティング仕上げにより、テラスや屋外ラウンジでも長期使用が可能です。',
+          'Naturra Extal は、インドネシア発のパティオ・アウトドア家具メーカーとして、海外向け輸出にも対応しています。強度の高いスチールフレームと耐候性パウダーコーティング仕上げにより、テラスや屋外ラウンジでも長期使用が可能です。',
           '<strong>本記事の内容:</strong> 代表的な製品ラインアップ、素材・仕上げの仕様、日本向け案件でよくいただくご相談についてご紹介します。'
         ]
       },
@@ -7184,7 +7184,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          'Como fabricante indonesio especializado en estanterías y racks industriales, Mangala Living produce todo dentro de su propio taller: corte, soldadura, lijado y acabado final. Esto nos permite controlar calidad, plazos y costes para proyectos comerciales exigentes.',
+          'Como fabricante indonesio especializado en estanterías y racks industriales, Naturra Extal produce todo dentro de su propio taller: corte, soldadura, lijado y acabado final. Esto nos permite controlar calidad, plazos y costes para proyectos comerciales exigentes.',
           '<strong>En este artículo</strong> te explicamos cómo trabajamos, qué tipos de racks fabricamos y por qué la producción interna es clave para un resultado consistente.'
         ]
       },
@@ -7218,7 +7218,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          'Mangala Living accompagne les architectes, décorateurs et enseignes françaises en tant que fabricant-exportateur de mobilier industriel sur mesure basé en Indonésie. Nous produisons en interne, du châssis acier au finishing, avec un suivi transparent.',
+          'Naturra Extal accompagne les architectes, décorateurs et enseignes françaises en tant que fabricant-exportateur de mobilier industriel sur mesure basé en Indonésie. Nous produisons en interne, du châssis acier au finishing, avec un suivi transparent.',
           '<strong>Objectif de cet article :</strong> expliquer comment se déroule une collaboration internationale, de la prise de brief à la livraison en France.'
         ]
       },
@@ -7252,7 +7252,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          'Mangala Living 는 인도네시아에서 산업용 랙과 디스플레이 선반을 전문적으로 제작하는 제조사로, 해외 수출 프로젝트도 다수 수행해 왔습니다. 카페·리테일·창고용 랙을 모두 인하우스에서 생산하여 품질과 납기를 관리합니다.',
+          'Naturra Extal 는 인도네시아에서 산업용 랙과 디스플레이 선반을 전문적으로 제작하는 제조사로, 해외 수출 프로젝트도 다수 수행해 왔습니다. 카페·리테일·창고용 랙을 모두 인하우스에서 생산하여 품질과 납기를 관리합니다.',
           '<strong>이 글에서는</strong> 제작 가능한 랙 종류, 소재/마감 옵션, 그리고 한국 바이어와의 협업 방식에 대해 설명합니다.'
         ]
       },
@@ -7286,7 +7286,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          'كمُصدِّر لأثاث الباحات من إندونيسيا، تقدم Mangala Living حلولاً مخصصة لمشاريع الضيافة والسكن الفاخر. نعتمد هياكل معدنية قوية وتشطيبات مقاومة للعوامل الجوية تناسب المناخات الحارة والرطبة.',
+          'كمُصدِّر لأثاث الباحات من إندونيسيا، تقدم Naturra Extal حلولاً مخصصة لمشاريع الضيافة والسكن الفاخر. نعتمد هياكل معدنية قوية وتشطيبات مقاومة للعوامل الجوية تناسب المناخات الحارة والرطبة.',
           '<strong>في هذا المقال</strong> نستعرض أنواع الأثاث الخارجي التي نصنعها، مواصفات المواد، وكيفية التعامل مع الطلبات الخاصة من العملاء العرب.'
         ]
       },
@@ -7318,7 +7318,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          '作为一家“一站式内部生产”的定制家具制造商，Mangala Living 在印尼自有工厂内完成从切割、焊接到表面喷涂的全部工序。这样可以为海外客户提供更好的交期控制和品质一致性。',
+          '作为一家“一站式内部生产”的定制家具制造商，Naturra Extal 在印尼自有工厂内完成从切割、焊接到表面喷涂的全部工序。这样可以为海外客户提供更好的交期控制和品质一致性。',
           '<strong>本文重点:</strong> 介绍我们的内部生产优势、典型定制项目以及与中国客户合作的流程。'
         ]
       },
@@ -7352,7 +7352,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          'Mangala Living は、ディスプレイラック・展示棚を専門とするインドネシアのメーカーとして、ショップやショールーム向けのカスタム什器を製作しています。インダストリアルテイストのスチールフレームと実用性の高い棚構成で、商品が映える売り場づくりをサポートします。',
+          'Naturra Extal は、ディスプレイラック・展示棚を専門とするインドネシアのメーカーとして、ショップやショールーム向けのカスタム什器を製作しています。インダストリアルテイストのスチールフレームと実用性の高い棚構成で、商品が映える売り場づくりをサポートします。',
           '<strong>この記事では</strong> 製作できるラックのタイプ、構造・素材の考え方、日本向け輸出で意識しているポイントをご紹介します。'
         ]
       },
@@ -7386,7 +7386,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          'Como exportador indonesio de soluciones completas de mobiliario industrial, Mangala Living puede cubrir desde mesas y sillas hasta racks, mostradores y muebles de patio en un solo proyecto. Esto simplifica la coordinación para arquitectos, operadores de F&B y cadenas de retail.',
+          'Como exportador indonesio de soluciones completas de mobiliario industrial, Naturra Extal puede cubrir desde mesas y sillas hasta racks, mostradores y muebles de patio en un solo proyecto. Esto simplifica la coordinación para arquitectos, operadores de F&B y cadenas de retail.',
           '<strong>En este artículo</strong> explicamos cómo trabajar con un solo proveedor para todo tu mobiliario y qué beneficios obtienes a nivel de coherencia estética, logística y presupuesto.'
         ]
       },
@@ -7471,15 +7471,15 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
         ]
       },
       {
-        heading: '为什么选择Mangala Living？',
+        heading: '为什么选择Naturra Extal？',
         paragraphs: [
-          '<strong>Mangala Living</strong>作为专业的工业风家具制造商，为您提供：',
+          '<strong>Naturra Extal</strong>作为专业的工业风家具制造商，为您提供：',
           '<strong>1. 丰富经验：</strong>自1999年起专业制造工业风家具，服务众多咖啡厅和商业空间项目。',
           '<strong>2. 定制服务：</strong>可根据您的空间和需求提供完全定制的家具解决方案。',
           '<strong>3. 优质材质：</strong>使用高品质钢材和粉末涂层技术，确保家具耐用性和美观度。',
           '<strong>4. 售后服务：</strong>提供完善的售后支持和维护服务，确保长期使用无忧。',
           '工坊地址：<strong>Jl. Raya Setu, Bekasi</strong>。欢迎咨询咖啡厅家具定制服务。',
-          '<strong>联系方式：</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; 提及"CAFE273"可获得特别报价。'
+          '<strong>联系方式：</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; 提及"CAFE273"可获得特别报价。'
         ]
       }
     ]
@@ -7559,16 +7559,16 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
         ]
       },
       {
-        heading: 'Mangala Living定制服务优势',
+        heading: 'Naturra Extal定制服务优势',
         paragraphs: [
-          '<strong>Mangala Living</strong>提供专业的定制工业家具服务：',
+          '<strong>Naturra Extal</strong>提供专业的定制工业家具服务：',
           '<strong>1. 25年经验：</strong>自1999年起专业制造定制工业家具，服务超过数百个商业项目。',
           '<strong>2. 专业设计团队：</strong>提供从概念设计到生产执行的全流程服务，确保设计方案的可实施性。',
           '<strong>3. 优质生产工艺：</strong>采用先进的生产设备和质量控制流程，确保每件产品的高标准。',
           '<strong>4. 灵活的服务模式：</strong>支持小批量和大批量定制，提供从设计到安装的一站式服务。',
           '<strong>5. 本地化优势：</strong>位于Bekasi的工坊便于Jabodetabek地区的客户进行沟通和现场考察。',
           '工坊地址：<strong>Jl. Raya Setu, Bekasi</strong>。欢迎预约参观和免费咨询服务。',
-          '<strong>联系方式：</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; 提及"CUSTOM274"可获得特别定制方案。'
+          '<strong>联系方式：</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; 提及"CUSTOM274"可获得特别定制方案。'
         ]
       }
     ]
@@ -7667,16 +7667,16 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
         ]
       },
       {
-        heading: 'Mangala Living保养支持服务',
+        heading: 'Naturra Extal保养支持服务',
         paragraphs: [
-          '<strong>Mangala Living</strong>提供完善的保养支持服务：',
+          '<strong>Naturra Extal</strong>提供完善的保养支持服务：',
           '<strong>1. 保修服务：</strong>所有家具提供保修服务，涵盖材料和工艺缺陷。',
           '<strong>2. 维护指导：</strong>提供详细的保养手册和视频指导，帮助您正确维护家具。',
           '<strong>3. 配件供应：</strong>提供原厂配件和替换零件，确保长期使用的延续性。',
           '<strong>4. 专业修复：</strong>提供专业的修复和翻新服务，让旧家具焕然一新。',
           '<strong>5. 咨询支持：</strong>提供保养咨询和技术支持，解答您的问题。',
           '工坊地址：<strong>Jl. Raya Setu, Bekasi</strong>。欢迎咨询保养和维护服务。',
-          '<strong>联系方式：</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; 提及"MAINTENANCE275"可获得维护咨询服务。'
+          '<strong>联系方式：</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; 提及"MAINTENANCE275"可获得维护咨询服务。'
         ]
       }
     ]
@@ -7770,16 +7770,16 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
         ]
       },
       {
-        heading: 'Mangala Living - شريكك الموثوق للأثاث الصناعي',
+        heading: 'Naturra Extal - شريكك الموثوق للأثاث الصناعي',
         paragraphs: [
-          '<strong>Mangala Living</strong> تقدم حلول أثاث صناعي مخصصة عالية الجودة للمقاهي:',
+          '<strong>Naturra Extal</strong> تقدم حلول أثاث صناعي مخصصة عالية الجودة للمقاهي:',
           '<strong>1. 25 عامًا من الخبرة:</strong> منذ عام 1999، نقوم بتصنيع أثاث صناعي عالي الجودة للمقاهي والمطاعم.',
           '<strong>2. ورشة خاصة في Bekasi:</strong> نقوم بجميع عمليات التصنيع داخليًا لضمان الجودة والسيطرة على المواعيد النهائية.',
           '<strong>3. مواد عالية الجودة:</strong> نستخدم حديد مجلفن من الدرجة A وخشب صلب عالي الجودة فقط.',
           '<strong>4. خدمات التخصيص:</strong> نقدم خدمات التصميم والتخصيص لتلبية احتياجاتك الخاصة.',
           '<strong>5. خدمة عملاء ممتازة:</strong> فريقنا مستعد لمساعدتك في كل خطوة من البداية حتى التثبيت.',
           'عنوان الورشة: <strong>Jl. Raya Setu, Bekasi</strong>. نرحب بزيارتك لمعاينة الجودة.',
-          '<strong>للتواصل:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; اذكر "CAFE276" للحصول على عرض خاص للمقاهي.'
+          '<strong>للتواصل:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; اذكر "CAFE276" للحصول على عرض خاص للمقاهي.'
         ]
       }
     ]
@@ -7877,9 +7877,9 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
         ]
       },
       {
-        heading: 'Mangala Living - 您的定制家具专家',
+        heading: 'Naturra Extal - 您的定制家具专家',
         paragraphs: [
-          '<strong>Mangala Living</strong> 是印尼领先的工业家具定制制造商，为商业客户提供高品质定制解决方案：',
+          '<strong>Naturra Extal</strong> 是印尼领先的工业家具定制制造商，为商业客户提供高品质定制解决方案：',
           '<strong>1. 25年专业经验：</strong>自1999年以来，我们为数百个商业项目提供定制家具服务，包括咖啡厅、餐厅、办公室和零售店。',
           '<strong>2. 自有生产基地：</strong>位于Bekasi的专业工坊，拥有完整的生产线和严格的质量控制体系。',
           '<strong>3. 高品质材料：</strong>只使用A级镀锌钢管、实木桌面和优质粉末涂层，确保家具的耐久性和美观度。',
@@ -7887,7 +7887,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
           '<strong>5. 一站式服务：</strong>从设计咨询、生产制造到安装交付，我们提供完整的服务支持。',
           '<strong>6. 灵活的服务模式：</strong>支持小批量和大批量定制，满足不同规模的商业需求。',
           '工坊地址：<strong>Jl. Raya Setu, Bekasi</strong>。欢迎预约参观，了解我们的生产工艺。',
-          '<strong>联系方式：</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; 提及"CUSTOM277"可获得定制项目咨询和特别报价。'
+          '<strong>联系方式：</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; 提及"CUSTOM277"可获得定制项目咨询和特别报价。'
         ]
       }
     ]
@@ -7984,9 +7984,9 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
         ]
       },
       {
-        heading: 'Mangala Living - 産業風家具の専門家',
+        heading: 'Naturra Extal - 産業風家具の専門家',
         paragraphs: [
-          '<strong>Mangala Living</strong> は、インドネシアを拠点とする産業風家具の専門メーカーです：',
+          '<strong>Naturra Extal</strong> は、インドネシアを拠点とする産業風家具の専門メーカーです：',
           '<strong>1. 25年の経験：</strong>1999年から、カフェ、レストラン、オフィス向けに高品質な産業風家具を製造しています。',
           '<strong>2. Bekasiの自社工場：</strong>すべての製造工程を社内で完結し、品質と納期を厳密に管理しています。',
           '<strong>3. 高品質な素材：</strong>A級ガルバニー鋼管、ソリッドウッド、高品質なパウダーコーティングのみを使用します。',
@@ -7994,7 +7994,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
           '<strong>5. デザインコンサルティング：</strong>専門のデザインチームが、コンセプトから実現までサポートします。',
           '<strong>6. 一貫したサービス：</strong>デザイン相談、製造、設置まで、包括的なサービスを提供します。',
           '工場住所：<strong>Jl. Raya Setu, Bekasi</strong>。工場見学を歓迎します。',
-          '<strong>お問い合わせ：</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; "DESIGN278"とお伝えいただくと、デザインコンサルティングと特別な見積もりをご提供します。'
+          '<strong>お問い合わせ：</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; "DESIGN278"とお伝えいただくと、デザインコンサルティングと特別な見積もりをご提供します。'
         ]
       }
     ]
@@ -8098,16 +8098,16 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
         ]
       },
       {
-        heading: 'Mangala Living - Servicios de mantenimiento y soporte',
+        heading: 'Naturra Extal - Servicios de mantenimiento y soporte',
         paragraphs: [
-          '<strong>Mangala Living</strong> ofrece servicios completos de mantenimiento y soporte para sus muebles industriales:',
+          '<strong>Naturra Extal</strong> ofrece servicios completos de mantenimiento y soporte para sus muebles industriales:',
           '<strong>1. Garantía de calidad:</strong> Todos nuestros muebles vienen con garantía que cubre defectos de materiales y mano de obra.',
           '<strong>2. Servicio de reparación:</strong> Ofrecemos servicios de reparación profesional para mantener sus muebles en perfectas condiciones.',
           '<strong>3. Piezas de repuesto:</strong> Disponemos de piezas de repuesto para facilitar el mantenimiento y reparación.',
           '<strong>4. Consultoría de mantenimiento:</strong> Nuestro equipo puede proporcionar asesoramiento personalizado sobre el mantenimiento de sus muebles.',
           '<strong>5. Servicio de reacabado:</strong> Ofrecemos servicios de reacabado profesional para restaurar la apariencia original de sus muebles.',
           'Dirección del taller: <strong>Jl. Raya Setu, Bekasi</strong>. Bienvenido a consultar nuestros servicios de mantenimiento.',
-          '<strong>Contacto:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mencione "MAINTENANCE279" para obtener consultoría de mantenimiento y servicios especiales.'
+          '<strong>Contacto:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mencione "MAINTENANCE279" para obtener consultoría de mantenimiento y servicios especiales.'
         ]
       }
     ]
@@ -8212,9 +8212,9 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
         ]
       },
       {
-        heading: 'Mangala Living - Votre partenaire pour le mobilier tendance',
+        heading: 'Naturra Extal - Votre partenaire pour le mobilier tendance',
         paragraphs: [
-          '<strong>Mangala Living</strong> est un fabricant de mobilier industriel de premier plan en Indonésie, offrant des solutions sur mesure pour les cafés et restaurants:',
+          '<strong>Naturra Extal</strong> est un fabricant de mobilier industriel de premier plan en Indonésie, offrant des solutions sur mesure pour les cafés et restaurants:',
           '<strong>1. 25 ans d\'expérience:</strong> Depuis 1999, nous fabriquons des meubles industriels de haute qualité pour des centaines de projets commerciaux.',
           '<strong>2. Atelier à Bekasi:</strong> Notre atelier interne nous permet de contrôler chaque étape de la production, garantissant qualité et délais.',
           '<strong>3. Matériaux de qualité:</strong> Nous utilisons uniquement de l\'acier galvanisé de qualité A, du bois massif et des finitions poudre de haute qualité.',
@@ -8222,7 +8222,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
           '<strong>5. Service complet:</strong> De la consultation en design à la livraison et l\'installation, nous offrons un service complet.',
           '<strong>6. Tendances actuelles:</strong> Nous restons à jour avec les dernières tendances et pouvons vous aider à créer des espaces modernes et attrayants.',
           'Adresse de l\'atelier: <strong>Jl. Raya Setu, Bekasi</strong>. Visites de l\'atelier bienvenues.',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mentionnez "TREND280" pour obtenir une consultation sur les tendances et un devis spécial.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mentionnez "TREND280" pour obtenir une consultation sur les tendances et un devis spécial.'
         ]
       }
     ]
@@ -8320,9 +8320,9 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
         imageAlt: '현지 제조 vs 수입 가구 비교'
       },
       {
-        heading: 'Mangala Living - 신뢰할 수 있는 현지 제조 파트너',
+        heading: 'Naturra Extal - 신뢰할 수 있는 현지 제조 파트너',
         paragraphs: [
-          '<strong>Mangala Living</strong>은 인도네시아의 선도적인 공업용 가구 제조업체로, 현대적인 카페를 위한 고품질 솔루션을 제공합니다:',
+          '<strong>Naturra Extal</strong>은 인도네시아의 선도적인 공업용 가구 제조업체로, 현대적인 카페를 위한 고품질 솔루션을 제공합니다:',
           '<strong>1. 25년의 경험:</strong> 1999년부터 수백 개의 상업 프로젝트를 위해 고품질 공업용 가구를 제조해 왔습니다.',
           '<strong>2. Bekasi의 자체 제조 시설:</strong> 모든 제조 공정을 내부에서 완료하여 품질과 납기를 엄격하게 관리합니다.',
           '<strong>3. 고품질 재료:</strong> A급 아연 도금 강관, 고품질 목재, 전문적인 파우더 코팅만을 사용합니다.',
@@ -8331,7 +8331,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
           '<strong>6. 포괄적인 서비스:</strong> 디자인 상담부터 제조, 설치까지 원스톱 서비스를 제공합니다.',
           '<strong>7. 경쟁력 있는 가격:</strong> 현지 제조의 이점을 활용하여 경쟁력 있는 가격을 제공합니다.',
           '제조 시설 주소: <strong>Jl. Raya Setu, Bekasi</strong>. 시설 방문을 환영합니다.',
-          '<strong>문의:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; "LOCAL281"을 언급하시면 현지 제조 상담 및 특별 견적을 받으실 수 있습니다.'
+          '<strong>문의:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; "LOCAL281"을 언급하시면 현지 제조 상담 및 특별 견적을 받으실 수 있습니다.'
         ]
       }
     ]
@@ -8342,8 +8342,8 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          'Indonesia has emerged as a leading global supplier of industrial furniture, with manufacturers like Mangala Living setting the standard for quality, sustainability, and ethical sourcing. As international buyers increasingly prioritize environmental responsibility and legal compliance, <strong>SVLK (Sistem Verifikasi Legalitas Kayu) certification</strong> has become a crucial differentiator for Indonesian furniture exporters.',
-          'This comprehensive guide explores why SVLK-certified Indonesian industrial furniture manufacturers are the trusted choice for international buyers, highlighting our commitment to <strong>non-illegal logging practices</strong> and sustainable wood sourcing.'
+          'Indonesia has emerged as a leading global supplier of Agricultural Commodities, with manufacturers like Naturra Extal setting the standard for quality, sustainability, and ethical sourcing. As international buyers increasingly prioritize environmental responsibility and legal compliance, <strong>SVLK (Sistem Verifikasi Legalitas Kayu) certification</strong> has become a crucial differentiator for Indonesian furniture exporters.',
+          'This comprehensive guide explores why SVLK-certified Indonesian Agricultural Commodities manufacturers are the trusted choice for international buyers, highlighting our commitment to <strong>non-illegal logging practices</strong> and sustainable wood sourcing.'
         ]
       },
       {
@@ -8358,21 +8358,21 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
         ]
       },
       {
-        heading: 'Why Choose SVLK-Certified Indonesian Industrial Furniture Manufacturers?',
+        heading: 'Why Choose SVLK-Certified Indonesian Agricultural Commodities Manufacturers?',
         list: [
           '<strong>Legal Compliance & Market Access:</strong> SVLK certification ensures your furniture imports comply with international regulations, including the EU Timber Regulation (EUTR) and the US Lacey Act. This eliminates legal risks and facilitates smooth customs clearance in major international markets.',
           '<strong>Environmental Responsibility:</strong> By choosing SVLK-certified manufacturers, you support sustainable forest management and contribute to global efforts to combat illegal logging and deforestation. This aligns with corporate sustainability goals and enhances your brand\'s environmental credentials.',
           '<strong>Supply Chain Transparency:</strong> SVLK certification provides complete traceability from forest to finished product. You can verify the origin of every piece of wood used in your furniture, ensuring ethical sourcing throughout the supply chain.',
-          '<strong>Quality Assurance:</strong> SVLK-certified manufacturers like Mangala Living maintain strict quality control standards. Our commitment to legal sourcing goes hand-in-hand with superior craftsmanship, precision welding, and professional finishing.',
+          '<strong>Quality Assurance:</strong> SVLK-certified manufacturers like Naturra Extal maintain strict quality control standards. Our commitment to legal sourcing goes hand-in-hand with superior craftsmanship, precision welding, and professional finishing.',
           '<strong>Competitive Pricing:</strong> Indonesian manufacturers offer excellent value without compromising on quality or legality. Factory-direct pricing combined with SVLK certification provides the best balance of cost, quality, and compliance.',
           '<strong>International Trust:</strong> SVLK certification is recognized globally as a mark of responsible manufacturing. This builds trust with international buyers, hospitality chains, and commercial furniture importers worldwide.'
         ]
       },
       {
-        heading: 'Mangala Living: Your SVLK-Certified Industrial Furniture Partner',
+        heading: 'Naturra Extal: Your SVLK-Certified Agricultural Commodities Partner',
         paragraphs: [
-          'Since 1999, Mangala Living has been a leading Indonesian industrial furniture manufacturer and exporter, specializing in custom metal furniture for cafes, restaurants, hotels, and commercial spaces. Our <strong>SVLK certification</strong> demonstrates our unwavering commitment to legal, sustainable wood sourcing and non-illegal logging practices.',
-          'Our workshop in Bekasi, Indonesia, produces high-quality industrial furniture using:',
+          'Since 1999, Naturra Extal has been a leading Indonesian Agricultural Commodities manufacturer and exporter, specializing in custom metal furniture for cafes, restaurants, hotels, and commercial spaces. Our <strong>SVLK certification</strong> demonstrates our unwavering commitment to legal, sustainable wood sourcing and non-illegal logging practices.',
+          'Our workshop in Bekasi, Indonesia, produces high-quality Agricultural Commodities using:',
           '• <strong>Legally sourced wood materials</strong> verified through SVLK certification',
           '• <strong>Galvanized hollow steel</strong> for superior durability and rust resistance',
           '• <strong>Professional welding techniques</strong> ensuring structural integrity',
@@ -8383,7 +8383,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
       {
         heading: 'Our Commitment to Non-Illegal Logging',
         paragraphs: [
-          'At Mangala Living, we take our environmental responsibility seriously. Our <strong>SVLK certification</strong> is not just a compliance requirement—it\'s a core value that guides every aspect of our operations:',
+          'At Naturra Extal, we take our environmental responsibility seriously. Our <strong>SVLK certification</strong> is not just a compliance requirement—it\'s a core value that guides every aspect of our operations:',
           '• <strong>Verified Wood Sources:</strong> We only work with suppliers who can provide SVLK documentation, ensuring every piece of wood in our furniture comes from legal, sustainably managed forests.',
           '• <strong>Complete Documentation:</strong> Every export shipment includes full SVLK documentation, allowing our international clients to verify the legality and sustainability of their furniture purchases.',
           '• <strong>Regular Audits:</strong> We maintain our SVLK certification through regular audits and compliance checks, ensuring continuous adherence to legal and environmental standards.',
@@ -8393,7 +8393,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
       {
         heading: 'Export Services & International Shipping',
         list: [
-          '<strong>Custom Design & Manufacturing:</strong> Work with our design team to create unique industrial furniture tailored to your brand and space requirements. All custom pieces are manufactured using SVLK-certified materials.',
+          '<strong>Custom Design & Manufacturing:</strong> Work with our design team to create unique Agricultural Commodities tailored to your brand and space requirements. All custom pieces are manufactured using SVLK-certified materials.',
           '<strong>OEM & ODM Services:</strong> We offer private label manufacturing for international brands, furniture importers, and hospitality chains. Your brand, our SVLK-certified quality.',
           '<strong>Export Documentation:</strong> Complete SVLK certification documents, commercial invoices, packing lists, and all required export paperwork handled by our experienced team.',
           '<strong>Container Shipping:</strong> We coordinate FOB and CIF shipping arrangements, handling everything from factory to port to ensure smooth international delivery.',
@@ -8401,12 +8401,12 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
         ]
       },
       {
-        heading: 'Contact Mangala Living for SVLK-Certified Industrial Furniture',
+        heading: 'Contact Naturra Extal for SVLK-Certified Agricultural Commodities',
         paragraphs: [
-          'Ready to source high-quality, SVLK-certified industrial furniture from Indonesia? Contact Mangala Living today:',
+          'Ready to source high-quality, SVLK-certified Agricultural Commodities from Indonesia? Contact Naturra Extal today:',
           '<strong>Workshop Address:</strong> Jl. Raya Setu Cibitung - Bekasi, Telajung, Kec. Cikarang Bar., Kabupaten Bekasi, Jawa Barat 17320, Indonesia',
-          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email: lifewithmangala@gmail.com</a><br/>&bull; Mention "SVLK282" for SVLK-certified furniture consultation and export pricing.',
-          'We welcome factory visits and are happy to discuss your custom furniture requirements, export volumes, and sustainability goals. Experience the quality and compliance that comes with SVLK-certified Indonesian industrial furniture manufacturing.'
+          '<strong>Contact:</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email: lifewithNaturra@gmail.com</a><br/>&bull; Mention "SVLK282" for SVLK-certified furniture consultation and export pricing.',
+          'We welcome factory visits and are happy to discuss your custom furniture requirements, export volumes, and sustainability goals. Experience the quality and compliance that comes with SVLK-certified Indonesian Agricultural Commodities manufacturing.'
         ]
       }
     ]
@@ -8417,7 +8417,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          '印度尼西亚已成为全球工业家具的主要供应商，像Mangala Living这样的制造商在质量、可持续性和道德采购方面树立了标准。随着国际买家越来越重视环境责任和合法合规，<strong>SVLK（木材合法性验证系统）认证</strong>已成为印度尼西亚家具出口商的关键差异化因素。',
+          '印度尼西亚已成为全球工业家具的主要供应商，像Naturra Extal这样的制造商在质量、可持续性和道德采购方面树立了标准。随着国际买家越来越重视环境责任和合法合规，<strong>SVLK（木材合法性验证系统）认证</strong>已成为印度尼西亚家具出口商的关键差异化因素。',
           '本综合指南探讨了为什么获得SVLK认证的印度尼西亚工业家具制造商是国际买家的可靠选择，重点介绍我们对<strong>非非法采伐实践</strong>和可持续木材采购的承诺。'
         ]
       },
@@ -8438,15 +8438,15 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
           '<strong>合法合规和市场准入：</strong> SVLK认证确保您的家具进口符合国际法规，包括欧盟木材法规（EUTR）和美国莱西法案。这消除了法律风险，并促进在主要国际市场的顺利清关。',
           '<strong>环境责任：</strong> 通过选择获得SVLK认证的制造商，您支持可持续森林管理，并为全球打击非法采伐和森林砍伐的努力做出贡献。这与企业可持续发展目标一致，并增强您品牌的环境信誉。',
           '<strong>供应链透明度：</strong> SVLK认证提供从森林到成品的完全可追溯性。您可以验证家具中使用的每一块木材的来源，确保整个供应链的道德采购。',
-          '<strong>质量保证：</strong> 像Mangala Living这样获得SVLK认证的制造商保持严格的质量控制标准。我们对合法采购的承诺与卓越的工艺、精密焊接和专业饰面齐头并进。',
+          '<strong>质量保证：</strong> 像Naturra Extal这样获得SVLK认证的制造商保持严格的质量控制标准。我们对合法采购的承诺与卓越的工艺、精密焊接和专业饰面齐头并进。',
           '<strong>有竞争力的价格：</strong> 印度尼西亚制造商在不影响质量或合法性的情况下提供卓越的价值。工厂直接定价与SVLK认证相结合，提供了成本、质量和合规性的最佳平衡。',
           '<strong>国际信任：</strong> SVLK认证在全球范围内被公认为负责任的制造标志。这建立了与国际买家、酒店连锁店和全球商业家具进口商的信任。'
         ]
       },
       {
-        heading: 'Mangala Living：您获得SVLK认证的工业家具合作伙伴',
+        heading: 'Naturra Extal：您获得SVLK认证的工业家具合作伙伴',
         paragraphs: [
-          '自1999年以来，Mangala Living一直是领先的印度尼西亚工业家具制造商和出口商，专门为咖啡馆、餐厅、酒店和商业空间定制金属家具。我们的<strong>SVLK认证</strong>证明了我们对合法、可持续木材采购和非非法采伐实践的不懈承诺。',
+          '自1999年以来，Naturra Extal一直是领先的印度尼西亚工业家具制造商和出口商，专门为咖啡馆、餐厅、酒店和商业空间定制金属家具。我们的<strong>SVLK认证</strong>证明了我们对合法、可持续木材采购和非非法采伐实践的不懈承诺。',
           '我们在印度尼西亚Bekasi的工厂使用以下材料生产高质量的工业家具：',
           '• 通过SVLK认证验证的<strong>合法采购的木材材料</strong>',
           '• <strong>镀锌空心钢</strong>，具有卓越的耐用性和防锈性',
@@ -8458,7 +8458,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
       {
         heading: '我们对非非法采伐的承诺',
         paragraphs: [
-          '在Mangala Living，我们认真对待我们的环境责任。我们的<strong>SVLK认证</strong>不仅仅是合规要求——它是指导我们运营各个方面的核心价值观：',
+          '在Naturra Extal，我们认真对待我们的环境责任。我们的<strong>SVLK认证</strong>不仅仅是合规要求——它是指导我们运营各个方面的核心价值观：',
           '• <strong>经过验证的木材来源：</strong> 我们只与能够提供SVLK文件的供应商合作，确保我们家具中的每一块木材都来自合法、可持续管理的森林。',
           '• <strong>完整的文件记录：</strong> 每次出口装运都包括完整的SVLK文件，允许我们的国际客户验证其家具购买的合法性和可持续性。',
           '• <strong>定期审计：</strong> 我们通过定期审计和合规检查维护我们的SVLK认证，确保持续遵守法律和环境标准。',
@@ -8476,11 +8476,11 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
         ]
       },
       {
-        heading: '联系Mangala Living获取获得SVLK认证的工业家具',
+        heading: '联系Naturra Extal获取获得SVLK认证的工业家具',
         paragraphs: [
-          '准备从印度尼西亚采购高质量、获得SVLK认证的工业家具吗？立即联系Mangala Living：',
+          '准备从印度尼西亚采购高质量、获得SVLK认证的工业家具吗？立即联系Naturra Extal：',
           '<strong>工厂地址：</strong> Jl. Raya Setu Cibitung - Bekasi, Telajung, Kec. Cikarang Bar., Kabupaten Bekasi, Jawa Barat 17320, 印度尼西亚',
-          '<strong>联系方式：</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">电子邮件: lifewithmangala@gmail.com</a><br/>&bull; 提及"SVLK283"以获取获得SVLK认证的家具咨询和出口定价。',
+          '<strong>联系方式：</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">电子邮件: lifewithNaturra@gmail.com</a><br/>&bull; 提及"SVLK283"以获取获得SVLK认证的家具咨询和出口定价。',
           '我们欢迎工厂参观，并很乐意讨论您的定制家具要求、出口量和可持续发展目标。体验获得SVLK认证的印度尼西亚工业家具制造带来的质量和合规性。'
         ]
       }
@@ -8492,7 +8492,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          'インドネシアは、Mangala Livingのようなメーカーが品質、持続可能性、倫理的調達の基準を設定し、世界有数の産業家具供給国として台頭しています。国際的なバイヤーが環境責任と法的コンプライアンスをますます重視する中、<strong>SVLK（木材合法性検証システム）認証</strong>は、インドネシアの家具輸出業者にとって重要な差別化要因となっています。',
+          'インドネシアは、Naturra Extalのようなメーカーが品質、持続可能性、倫理的調達の基準を設定し、世界有数の産業家具供給国として台頭しています。国際的なバイヤーが環境責任と法的コンプライアンスをますます重視する中、<strong>SVLK（木材合法性検証システム）認証</strong>は、インドネシアの家具輸出業者にとって重要な差別化要因となっています。',
           'この包括的なガイドでは、SVLK認証を取得したインドネシアの産業家具メーカーが、国際的なバイヤーにとって信頼できる選択肢である理由を探り、<strong>非違法伐採の実践</strong>と持続可能な木材調達への取り組みを強調します。'
         ]
       },
@@ -8513,15 +8513,15 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
           '<strong>法的コンプライアンスと市場アクセス：</strong> SVLK認証により、家具輸入がEU木材規則（EUTR）や米国レイシー法を含む国際規制に準拠していることが保証されます。これにより法的リスクが排除され、主要な国際市場でのスムーズな通関が促進されます。',
           '<strong>環境責任：</strong> SVLK認証を取得したメーカーを選択することで、持続可能な森林管理を支援し、違法伐採と森林破壊と闘う世界的な取り組みに貢献します。これは企業の持続可能性目標と一致し、ブランドの環境的信頼性を高めます。',
           '<strong>サプライチェーンの透明性：</strong> SVLK認証は、森林から完成品までの完全な追跡可能性を提供します。家具に使用されるすべての木材の原産地を確認でき、サプライチェーン全体を通じて倫理的調達が確保されます。',
-          '<strong>品質保証：</strong> Mangala LivingのようなSVLK認証を取得したメーカーは、厳格な品質管理基準を維持しています。合法調達への取り組みは、優れた職人技、精密な溶接、プロフェッショナルな仕上げと並行しています。',
+          '<strong>品質保証：</strong> Naturra ExtalのようなSVLK認証を取得したメーカーは、厳格な品質管理基準を維持しています。合法調達への取り組みは、優れた職人技、精密な溶接、プロフェッショナルな仕上げと並行しています。',
           '<strong>競争力のある価格：</strong> インドネシアのメーカーは、品質や合法性を損なうことなく、優れた価値を提供します。工場直販価格とSVLK認証の組み合わせにより、コスト、品質、コンプライアンスの最適なバランスが提供されます。',
           '<strong>国際的信頼：</strong> SVLK認証は、責任ある製造のマークとして世界的に認識されています。これにより、国際的なバイヤー、ホスピタリティチェーン、世界中の商業家具輸入業者との信頼が構築されます。'
         ]
       },
       {
-        heading: 'Mangala Living：SVLK認証を取得した産業家具パートナー',
+        heading: 'Naturra Extal：SVLK認証を取得した産業家具パートナー',
         paragraphs: [
-          '1999年以来、Mangala Livingは、カフェ、レストラン、ホテル、商業スペース向けのカスタムメタル家具を専門とする、インドネシアの主要な産業家具メーカーおよび輸出業者です。私たちの<strong>SVLK認証</strong>は、合法で持続可能な木材調達と非違法伐採の実践への揺るぎない取り組みを示しています。',
+          '1999年以来、Naturra Extalは、カフェ、レストラン、ホテル、商業スペース向けのカスタムメタル家具を専門とする、インドネシアの主要な産業家具メーカーおよび輸出業者です。私たちの<strong>SVLK認証</strong>は、合法で持続可能な木材調達と非違法伐採の実践への揺るぎない取り組みを示しています。',
           'インドネシアのBekasiにある私たちの工場では、以下を使用して高品質の産業家具を製造しています：',
           '• SVLK認証を通じて検証された<strong>合法に調達された木材材料</strong>',
           '• 優れた耐久性と防錆性を備えた<strong>亜鉛メッキ中空鋼</strong>',
@@ -8533,7 +8533,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
       {
         heading: '非違法伐採への取り組み',
         paragraphs: [
-          'Mangala Livingでは、環境責任を真剣に受け止めています。私たちの<strong>SVLK認証</strong>は、単なるコンプライアンス要件ではありません。それは、私たちの運営のあらゆる側面を導く核心的な価値です：',
+          'Naturra Extalでは、環境責任を真剣に受け止めています。私たちの<strong>SVLK認証</strong>は、単なるコンプライアンス要件ではありません。それは、私たちの運営のあらゆる側面を導く核心的な価値です：',
           '• <strong>検証された木材源：</strong> SVLK文書を提供できるサプライヤーとのみ協力し、私たちの家具のすべての木材が合法で持続可能に管理された森林から来ることを確保します。',
           '• <strong>完全な文書化：</strong> すべての輸出出荷には完全なSVLK文書が含まれており、国際的なクライアントが家具購入の合法性と持続可能性を確認できます。',
           '• <strong>定期的な監査：</strong> 定期的な監査とコンプライアンスチェックを通じてSVLK認証を維持し、法的および環境基準への継続的な遵守を確保します。',
@@ -8551,11 +8551,11 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
         ]
       },
       {
-        heading: 'SVLK認証を取得した産業家具についてMangala Livingに連絡',
+        heading: 'SVLK認証を取得した産業家具についてNaturra Extalに連絡',
         paragraphs: [
-          'インドネシアから高品質でSVLK認証を取得した産業家具を調達する準備はできていますか？今すぐMangala Livingに連絡してください：',
+          'インドネシアから高品質でSVLK認証を取得した産業家具を調達する準備はできていますか？今すぐNaturra Extalに連絡してください：',
           '<strong>工場住所：</strong> Jl. Raya Setu Cibitung - Bekasi, Telajung, Kec. Cikarang Bar., Kabupaten Bekasi, Jawa Barat 17320, インドネシア',
-          '<strong>連絡先：</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">メール: lifewithmangala@gmail.com</a><br/>&bull; "SVLK284"とお伝えいただければ、SVLK認証を取得した家具の相談と輸出価格をご提供いたします。',
+          '<strong>連絡先：</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp: +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">メール: lifewithNaturra@gmail.com</a><br/>&bull; "SVLK284"とお伝えいただければ、SVLK認証を取得した家具の相談と輸出価格をご提供いたします。',
           '工場見学を歓迎し、カスタム家具の要件、輸出量、持続可能性目標について喜んでご相談いたします。SVLK認証を取得したインドネシアの産業家具製造がもたらす品質とコンプライアンスを体験してください。'
         ]
       }
@@ -8567,7 +8567,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
     sections: [
       {
         paragraphs: [
-          'L\'Indonésie est devenue un fournisseur mondial de premier plan de mobilier industriel, avec des fabricants comme Mangala Living qui établissent la norme en matière de qualité, de durabilité et d\'approvisionnement éthique. Alors que les acheteurs internationaux accordent une priorité croissante à la responsabilité environnementale et à la conformité légale, la <strong>certification SVLK (Sistem Verifikasi Legalitas Kayu)</strong> est devenue un facteur de différenciation crucial pour les exportateurs de mobilier indonésiens.',
+          'L\'Indonésie est devenue un fournisseur mondial de premier plan de mobilier industriel, avec des fabricants comme Naturra Extal qui établissent la norme en matière de qualité, de durabilité et d\'approvisionnement éthique. Alors que les acheteurs internationaux accordent une priorité croissante à la responsabilité environnementale et à la conformité légale, la <strong>certification SVLK (Sistem Verifikasi Legalitas Kayu)</strong> est devenue un facteur de différenciation crucial pour les exportateurs de mobilier indonésiens.',
           'Ce guide complet explore pourquoi les fabricants de mobilier industriel indonésiens certifiés SVLK sont le choix de confiance pour les acheteurs internationaux, en mettant en évidence notre engagement en faveur des <strong>pratiques non-illégales d\'exploitation forestière</strong> et de l\'approvisionnement en bois durable.'
         ]
       },
@@ -8588,15 +8588,15 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
           '<strong>Conformité légale et accès au marché :</strong> La certification SVLK garantit que vos importations de mobilier sont conformes aux réglementations internationales, y compris le Règlement sur le bois de l\'UE (EUTR) et la Loi Lacey des États-Unis. Cela élimine les risques juridiques et facilite le dédouanement en douceur sur les principaux marchés internationaux.',
           '<strong>Responsabilité environnementale :</strong> En choisissant des fabricants certifiés SVLK, vous soutenez la gestion durable des forêts et contribuez aux efforts mondiaux pour lutter contre l\'exploitation forestière illégale et la déforestation. Cela s\'aligne sur les objectifs de durabilité des entreprises et améliore les références environnementales de votre marque.',
           '<strong>Transparence de la chaîne d\'approvisionnement :</strong> La certification SVLK offre une traçabilité complète de la forêt au produit fini. Vous pouvez vérifier l\'origine de chaque morceau de bois utilisé dans votre mobilier, garantissant un approvisionnement éthique tout au long de la chaîne d\'approvisionnement.',
-          '<strong>Assurance qualité :</strong> Les fabricants certifiés SVLK comme Mangala Living maintiennent des normes strictes de contrôle qualité. Notre engagement en faveur de l\'approvisionnement légal va de pair avec un savoir-faire supérieur, une soudure de précision et une finition professionnelle.',
+          '<strong>Assurance qualité :</strong> Les fabricants certifiés SVLK comme Naturra Extal maintiennent des normes strictes de contrôle qualité. Notre engagement en faveur de l\'approvisionnement légal va de pair avec un savoir-faire supérieur, une soudure de précision et une finition professionnelle.',
           '<strong>Prix compétitifs :</strong> Les fabricants indonésiens offrent une excellente valeur sans compromettre la qualité ou la légalité. Les prix directs d\'usine combinés à la certification SVLK offrent le meilleur équilibre entre coût, qualité et conformité.',
           '<strong>Confiance internationale :</strong> La certification SVLK est reconnue mondialement comme une marque de fabrication responsable. Cela renforce la confiance avec les acheteurs internationaux, les chaînes hôtelières et les importateurs de mobilier commercial dans le monde entier.'
         ]
       },
       {
-        heading: 'Mangala Living : Votre partenaire en mobilier industriel certifié SVLK',
+        heading: 'Naturra Extal : Votre partenaire en mobilier industriel certifié SVLK',
         paragraphs: [
-          'Depuis 1999, Mangala Living est un fabricant et exportateur de mobilier industriel indonésien de premier plan, spécialisé dans le mobilier métallique sur mesure pour cafés, restaurants, hôtels et espaces commerciaux. Notre <strong>certification SVLK</strong> démontre notre engagement inébranlable en faveur de l\'approvisionnement en bois légal et durable et des pratiques non-illégales d\'exploitation forestière.',
+          'Depuis 1999, Naturra Extal est un fabricant et exportateur de mobilier industriel indonésien de premier plan, spécialisé dans le mobilier métallique sur mesure pour cafés, restaurants, hôtels et espaces commerciaux. Notre <strong>certification SVLK</strong> démontre notre engagement inébranlable en faveur de l\'approvisionnement en bois légal et durable et des pratiques non-illégales d\'exploitation forestière.',
           'Notre atelier à Bekasi, en Indonésie, produit du mobilier industriel de haute qualité en utilisant :',
           '• <strong>Matériaux en bois d\'origine légale</strong> vérifiés par la certification SVLK',
           '• <strong>Acier creux galvanisé</strong> pour une durabilité et une résistance à la rouille supérieures',
@@ -8608,7 +8608,7 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
       {
         heading: 'Notre engagement en faveur de l\'exploitation forestière non-illégale',
         paragraphs: [
-          'Chez Mangala Living, nous prenons notre responsabilité environnementale au sérieux. Notre <strong>certification SVLK</strong> n\'est pas seulement une exigence de conformité—c\'est une valeur fondamentale qui guide chaque aspect de nos opérations :',
+          'Chez Naturra Extal, nous prenons notre responsabilité environnementale au sérieux. Notre <strong>certification SVLK</strong> n\'est pas seulement une exigence de conformité—c\'est une valeur fondamentale qui guide chaque aspect de nos opérations :',
           '• <strong>Sources de bois vérifiées :</strong> Nous ne travaillons qu\'avec des fournisseurs qui peuvent fournir une documentation SVLK, garantissant que chaque morceau de bois dans notre mobilier provient de forêts gérées légalement et durablement.',
           '• <strong>Documentation complète :</strong> Chaque expédition d\'exportation comprend une documentation SVLK complète, permettant à nos clients internationaux de vérifier la légalité et la durabilité de leurs achats de mobilier.',
           '• <strong>Audits réguliers :</strong> Nous maintenons notre certification SVLK grâce à des audits et des contrôles de conformité réguliers, garantissant une adhésion continue aux normes légales et environnementales.',
@@ -8626,11 +8626,11 @@ const BLOG_CONTENTS_LOCALIZED: BlogContentLocalized[] = [
         ]
       },
       {
-        heading: 'Contactez Mangala Living pour du mobilier industriel certifié SVLK',
+        heading: 'Contactez Naturra Extal pour du mobilier industriel certifié SVLK',
         paragraphs: [
-          'Prêt à vous approvisionner en mobilier industriel de haute qualité certifié SVLK depuis l\'Indonésie ? Contactez Mangala Living dès aujourd\'hui :',
+          'Prêt à vous approvisionner en mobilier industriel de haute qualité certifié SVLK depuis l\'Indonésie ? Contactez Naturra Extal dès aujourd\'hui :',
           '<strong>Adresse de l\'atelier :</strong> Jl. Raya Setu Cibitung - Bekasi, Telajung, Kec. Cikarang Bar., Kabupaten Bekasi, Jawa Barat 17320, Indonésie',
-          '<strong>Contact :</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp : +6288801146881</a><br/>&bull; <a href="mailto:lifewithmangala@gmail.com">Email : lifewithmangala@gmail.com</a><br/>&bull; Mentionnez "SVLK285" pour une consultation de mobilier certifié SVLK et des prix d\'exportation.',
+          '<strong>Contact :</strong><br/>&bull; <a href="https://wa.me/+6288801146881" target="_blank">WhatsApp : +6288801146881</a><br/>&bull; <a href="mailto:lifewithNaturra@gmail.com">Email : lifewithNaturra@gmail.com</a><br/>&bull; Mentionnez "SVLK285" pour une consultation de mobilier certifié SVLK et des prix d\'exportation.',
           'Nous accueillons les visites d\'usine et sommes heureux de discuter de vos exigences de mobilier sur mesure, des volumes d\'exportation et des objectifs de durabilité. Découvrez la qualité et la conformité qui accompagnent la fabrication de mobilier industriel indonésien certifié SVLK.'
         ]
       }

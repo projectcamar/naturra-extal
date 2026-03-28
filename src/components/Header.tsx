@@ -410,7 +410,7 @@ const Header: React.FC<HeaderProps> = ({ isIndonesian = false, language = 'en' }
             </nav>
 
             <Link to="/" className="logo">
-              <span className="logo-text">MANGALA</span>
+              <span className="logo-text">Naturra</span>
             </Link>
 
             <div className="header-top-actions">
@@ -764,7 +764,7 @@ const Header: React.FC<HeaderProps> = ({ isIndonesian = false, language = 'en' }
                         <div className="search-result-image">
                           <img
                             src={product.image}
-                            alt={`${product.name} - ${product.category} Industrial Furniture Mangala Living`}
+                            alt={`${product.name} - ${product.category} Agricultural Commodities Naturra Extal`}
                             title={`${product.name} - Quick Search Result`}
                             loading="lazy"
                             width="60"

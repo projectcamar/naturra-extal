@@ -38,7 +38,7 @@ const SEARCH_TRANSLATIONS: Record<
     loading: 'Memuat...',
     headingWithQuery: (query) => `Hasil Pencarian untuk "${query}"`,
     headingWithoutQuery: 'Hasil Pencarian',
-    subtitle: 'Telusuri furniture industrial custom Mangala Living dengan kata kunci favorit Anda.',
+    subtitle: 'Telusuri agricultural commodities custom Naturra Extal dengan kata kunci favorit Anda.',
     languageAdjusting: 'Menyesuaikan preferensi bahasa…',
     resultsCount: (count) => `${count} produk ditemukan`,
     noResultsWithQuery: (query) => `Tidak ada produk ditemukan untuk "${query}". Coba kata kunci lain.`,
@@ -47,15 +47,15 @@ const SEARCH_TRANSLATIONS: Record<
     sortPriceLow: 'Harga: Rendah ke Tinggi',
     sortPriceHigh: 'Harga: Tinggi ke Rendah',
     home: 'Beranda',
-    pageTitle: (query) => (query ? `Pencarian: ${query} - Mangala Living` : 'Pencarian - Mangala Living'),
+    pageTitle: (query) => (query ? `Pencarian: ${query} - Naturra Extal` : 'Pencarian - Naturra Extal'),
     metaDescription: (query, hasQuery) =>
-      hasQuery ? `Hasil pencarian untuk ${query}` : 'Hasil pencarian produk Mangala Living.'
+      hasQuery ? `Hasil pencarian untuk ${query}` : 'Hasil pencarian produk Naturra Extal.'
   },
   en: {
     loading: 'Loading...',
     headingWithQuery: (query) => `Search Results for "${query}"`,
     headingWithoutQuery: 'Search Results',
-    subtitle: 'Discover Mangala Living industrial custom furniture based on your preferred keywords.',
+    subtitle: 'Discover Naturra Extal industrial custom furniture based on your preferred keywords.',
     languageAdjusting: 'Adjusting language preference…',
     resultsCount: (count) => `${count} results found`,
     noResultsWithQuery: (query) => `No products found for "${query}". Try a different search term.`,
@@ -64,15 +64,15 @@ const SEARCH_TRANSLATIONS: Record<
     sortPriceLow: 'Price: Low to High',
     sortPriceHigh: 'Price: High to Low',
     home: 'Home',
-    pageTitle: (query) => (query ? `Search: ${query} - Mangala Living` : 'Search - Mangala Living'),
+    pageTitle: (query) => (query ? `Search: ${query} - Naturra Extal` : 'Search - Naturra Extal'),
     metaDescription: (query, hasQuery) =>
-      hasQuery ? `Search results for ${query}` : 'Search results for Mangala Living products.'
+      hasQuery ? `Search results for ${query}` : 'Search results for Naturra Extal products.'
   },
   ar: {
     loading: 'جارٍ التحميل...',
     headingWithQuery: (query) => `نتائج البحث عن "${query}"`,
     headingWithoutQuery: 'نتائج البحث',
-    subtitle: 'اكتشف أثاث Mangala Living الصناعي المخصص حسب كلماتك المفتاحية المفضلة.',
+    subtitle: 'اكتشف أثاث Naturra Extal الصناعي المخصص حسب كلماتك المفتاحية المفضلة.',
     languageAdjusting: 'جارٍ ضبط تفضيل اللغة…',
     resultsCount: (count) => `${count} نتيجة`,
     noResultsWithQuery: (query) => `لم يتم العثور على منتجات لـ "${query}". جرّب مصطلحاً آخر.`,
@@ -81,15 +81,15 @@ const SEARCH_TRANSLATIONS: Record<
     sortPriceLow: 'السعر: من الأقل إلى الأعلى',
     sortPriceHigh: 'السعر: من الأعلى إلى الأقل',
     home: 'الصفحة الرئيسية',
-    pageTitle: (query) => (query ? `بحث: ${query} - Mangala Living` : 'بحث - Mangala Living'),
+    pageTitle: (query) => (query ? `بحث: ${query} - Naturra Extal` : 'بحث - Naturra Extal'),
     metaDescription: (query, hasQuery) =>
-      hasQuery ? `نتائج البحث عن ${query}` : 'نتائج البحث عن منتجات Mangala Living.'
+      hasQuery ? `نتائج البحث عن ${query}` : 'نتائج البحث عن منتجات Naturra Extal.'
   },
   zh: {
     loading: '加载中...',
     headingWithQuery: (query) => `搜索 “${query}” 的结果`,
     headingWithoutQuery: '搜索结果',
-    subtitle: '根据关键词探索 Mangala Living 的工业风定制家具。',
+    subtitle: '根据关键词探索 Naturra Extal 的工业风定制家具。',
     languageAdjusting: '正在调整语言偏好…',
     resultsCount: (count) => `共找到 ${count} 个结果`,
     noResultsWithQuery: (query) => `未找到与 “${query}” 匹配的产品。请尝试其他关键词。`,
@@ -98,15 +98,15 @@ const SEARCH_TRANSLATIONS: Record<
     sortPriceLow: '价格：从低到高',
     sortPriceHigh: '价格：从高到低',
     home: '首页',
-    pageTitle: (query) => (query ? `搜索: ${query} - Mangala Living` : '搜索 - Mangala Living'),
+    pageTitle: (query) => (query ? `搜索: ${query} - Naturra Extal` : '搜索 - Naturra Extal'),
     metaDescription: (query, hasQuery) =>
-      hasQuery ? `关于 ${query} 的搜索结果` : 'Mangala Living 产品的搜索结果。'
+      hasQuery ? `关于 ${query} 的搜索结果` : 'Naturra Extal 产品的搜索结果。'
   },
   ja: {
     loading: '読み込み中...',
     headingWithQuery: (query) => `「${query}」の検索結果`,
     headingWithoutQuery: '検索結果',
-    subtitle: 'お好みのキーワードで Mangala Living の工業系カスタム家具を見つけましょう。',
+    subtitle: 'お好みのキーワードで Naturra Extal の工業系カスタム家具を見つけましょう。',
     languageAdjusting: '言語設定を調整しています…',
     resultsCount: (count) => `${count} 件が見つかりました`,
     noResultsWithQuery: (query) => `「${query}」に一致する商品は見つかりませんでした。別のキーワードでお試しください。`,
@@ -115,15 +115,15 @@ const SEARCH_TRANSLATIONS: Record<
     sortPriceLow: '価格: 低い順',
     sortPriceHigh: '価格: 高い順',
     home: 'ホーム',
-    pageTitle: (query) => (query ? `検索: ${query} - Mangala Living` : '検索 - Mangala Living'),
+    pageTitle: (query) => (query ? `検索: ${query} - Naturra Extal` : '検索 - Naturra Extal'),
     metaDescription: (query, hasQuery) =>
-      hasQuery ? `${query} の検索結果` : 'Mangala Living の商品の検索結果。'
+      hasQuery ? `${query} の検索結果` : 'Naturra Extal の商品の検索結果。'
   },
   es: {
     loading: 'Cargando...',
     headingWithQuery: (query) => `Resultados de búsqueda para "${query}"`,
     headingWithoutQuery: 'Resultados de búsqueda',
-    subtitle: 'Descubre los muebles industriales personalizados de Mangala Living según tus palabras clave.',
+    subtitle: 'Descubre los muebles industriales personalizados de Naturra Extal según tus palabras clave.',
     languageAdjusting: 'Ajustando la preferencia de idioma…',
     resultsCount: (count) => `${count} resultados encontrados`,
     noResultsWithQuery: (query) => `No se encontraron productos para "${query}". Intenta con otro término.`,
@@ -132,15 +132,15 @@ const SEARCH_TRANSLATIONS: Record<
     sortPriceLow: 'Precio: de menor a mayor',
     sortPriceHigh: 'Precio: de mayor a menor',
     home: 'Inicio',
-    pageTitle: (query) => (query ? `Búsqueda: ${query} - Mangala Living` : 'Búsqueda - Mangala Living'),
+    pageTitle: (query) => (query ? `Búsqueda: ${query} - Naturra Extal` : 'Búsqueda - Naturra Extal'),
     metaDescription: (query, hasQuery) =>
-      hasQuery ? `Resultados de búsqueda para ${query}` : 'Resultados de búsqueda de productos Mangala Living.'
+      hasQuery ? `Resultados de búsqueda para ${query}` : 'Resultados de búsqueda de productos Naturra Extal.'
   },
   fr: {
     loading: 'Chargement...',
     headingWithQuery: (query) => `Résultats de recherche pour « ${query} »`,
     headingWithoutQuery: 'Résultats de recherche',
-    subtitle: 'Découvrez le mobilier industriel sur mesure Mangala Living selon vos mots-clés préférés.',
+    subtitle: 'Découvrez le mobilier industriel sur mesure Naturra Extal selon vos mots-clés préférés.',
     languageAdjusting: 'Ajustement de la langue…',
     resultsCount: (count) => `${count} résultats trouvés`,
     noResultsWithQuery: (query) => `Aucun produit trouvé pour « ${query} ». Essayez un autre terme de recherche.`,
@@ -149,15 +149,15 @@ const SEARCH_TRANSLATIONS: Record<
     sortPriceLow: 'Prix : du plus bas au plus élevé',
     sortPriceHigh: 'Prix : du plus élevé au plus bas',
     home: 'Accueil',
-    pageTitle: (query) => (query ? `Recherche : ${query} - Mangala Living` : 'Recherche - Mangala Living'),
+    pageTitle: (query) => (query ? `Recherche : ${query} - Naturra Extal` : 'Recherche - Naturra Extal'),
     metaDescription: (query, hasQuery) =>
-      hasQuery ? `Résultats de recherche pour ${query}` : 'Résultats de recherche des produits Mangala Living.'
+      hasQuery ? `Résultats de recherche pour ${query}` : 'Résultats de recherche des produits Naturra Extal.'
   },
   ko: {
     loading: '로딩 중...',
     headingWithQuery: (query) => `"${query}" 검색 결과`,
     headingWithoutQuery: '검색 결과',
-    subtitle: '원하는 키워드로 Mangala Living 산업용 맞춤 가구를 찾아보세요.',
+    subtitle: '원하는 키워드로 Naturra Extal 산업용 맞춤 가구를 찾아보세요.',
     languageAdjusting: '언어 환경을 조정하는 중…',
     resultsCount: (count) => `${count}개의 결과`,
     noResultsWithQuery: (query) => `"${query}"에 대한 상품이 없습니다. 다른 검색어를 시도해 주세요.`,
@@ -166,9 +166,9 @@ const SEARCH_TRANSLATIONS: Record<
     sortPriceLow: '가격: 낮은 순',
     sortPriceHigh: '가격: 높은 순',
     home: '홈',
-    pageTitle: (query) => (query ? `검색: ${query} - Mangala Living` : '검색 - Mangala Living'),
+    pageTitle: (query) => (query ? `검색: ${query} - Naturra Extal` : '검색 - Naturra Extal'),
     metaDescription: (query, hasQuery) =>
-      hasQuery ? `${query} 검색 결과` : 'Mangala Living 상품 검색 결과.'
+      hasQuery ? `${query} 검색 결과` : 'Naturra Extal 상품 검색 결과.'
   }
 }
 
@@ -477,8 +477,8 @@ function SearchResults() {
                   <div className="product-image">
                     <img
                       src={product.image}
-                      alt={`${translatedName} - Industrial Furniture ${product.category} Search Results Mangala Living`}
-                      title={`${translatedName} - ${product.category} Industrial Furniture - Mangala Living`}
+                      alt={`${translatedName} - Agricultural Commodities ${product.category} Search Results Naturra Extal`}
+                      title={`${translatedName} - ${product.category} Agricultural Commodities - Naturra Extal`}
                       loading="lazy"
                       width="300"
                       height="200"

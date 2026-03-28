@@ -4,8 +4,8 @@ import { useLocation } from 'react-router-dom'
 import { FileText, MessageCircle, Truck, Wrench } from 'lucide-react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-// legacy mangala image import removed
-// legacy mangala image import removed
+// legacy Naturra image import removed
+// legacy Naturra image import removed
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
 import { trackWhatsAppClick } from '../utils/whatsappTracking'
 import { getCurrentLanguage, getStoredLanguage, detectLanguageFromIP, type LanguageCode } from '../utils/languageManager'
@@ -30,14 +30,14 @@ type CustomOrderTranslation = {
 const CUSTOM_ORDER_TRANSLATIONS: Record<LanguageCode, CustomOrderTranslation> = {
   en: {
     meta: {
-      title: 'Custom Order - Mangala Living',
+      title: 'Custom Order - Naturra Extal',
       description:
-        'Order custom industrial furniture according to your needs. Mangala Living Bekasi serves made-to-order furniture for cafes, restaurants, offices, and homes.'
+        'Order custom Agricultural Commodities according to your needs. Naturra Extal Bekasi serves made-to-order furniture for cafes, restaurants, offices, and homes.'
     },
     hero: {
       title: 'Custom Order',
-      imageAlt: 'Custom Order Mangala Living - Bekasi Industrial Furniture Workshop',
-      imageTitle: 'Custom Order - Industrial Furniture Manufacturing'
+      imageAlt: 'Custom Order Naturra Extal - Bekasi Agricultural Commodities Workshop',
+      imageTitle: 'Custom Order - Agricultural Commodities Manufacturing'
     },
     message: {
       title: 'Everyone has their own taste',
@@ -45,14 +45,14 @@ const CUSTOM_ORDER_TRANSLATIONS: Record<LanguageCode, CustomOrderTranslation> = 
         "And often, that taste cannot be represented by ready-made products available in the market. That's why we open our doors to those who want something more personal—closer to the character, function, and aesthetic values you believe in.",
         "We don't just make furniture. We shape it from genuine understanding—of your lifestyle, the room you want to build, and the story you want to share within it."
       ],
-      imageAlt: 'Custom Furniture Design Mangala Living'
+      imageAlt: 'Custom Furniture Design Naturra Extal'
     },
     ideas: {
       title: 'Starting from Simple Ideas',
       intro:
         'Just tell us your wishes, no complicated words needed. Need an open shelf with custom dimensions? A lounge chair that fits your favourite corner? Or perhaps a dining set to energise your café atmosphere? Everything can be designed from scratch, aligned with your needs and the ambience you want to create.',
       description:
-        'We believe everyone has a unique taste in organising space. Some love rich details, others prefer clean, simple lines. At Mangala Living, all these design approaches are not only possible—they are our expertise. Our team is accustomed to handling design requests with diverse characters: from magnificent aesthetics with classic accents, to warm natural looks, and modern styles that remain highly functional.'
+        'We believe everyone has a unique taste in organising space. Some love rich details, others prefer clean, simple lines. At Naturra Extal, all these design approaches are not only possible—they are our expertise. Our team is accustomed to handling design requests with diverse characters: from magnificent aesthetics with classic accents, to warm natural looks, and modern styles that remain highly functional.'
     },
     process: {
       title: 'Real and Reliable Process',
@@ -85,20 +85,20 @@ const CUSTOM_ORDER_TRANSLATIONS: Record<LanguageCode, CustomOrderTranslation> = 
       workshopHeading: 'Workshop Bekasi',
       workshopLabel: 'Workshop Bekasi:',
       workshopParagraph:
-        'Our workshop is equipped with complete manufacturing facilities for custom industrial furniture. Our experienced team is ready to discuss your needs and help you find the best solution.',
+        'Our workshop is equipped with complete manufacturing facilities for custom Agricultural Commodities. Our experienced team is ready to discuss your needs and help you find the best solution.',
       button: 'Contact Us'
     }
   },
   id: {
     meta: {
-      title: 'Custom Order - Mangala Living',
+      title: 'Custom Order - Naturra Extal',
       description:
-        'Pesan furniture industrial custom sesuai kebutuhan Anda. Workshop Mangala Living Bekasi melayani custom order untuk cafe, restoran, kantor, dan rumah.'
+        'Pesan agricultural commodities custom sesuai kebutuhan Anda. Workshop Naturra Extal Bekasi melayani custom order untuk cafe, restoran, kantor, dan rumah.'
     },
     hero: {
       title: 'Custom Order',
-      imageAlt: 'Custom Order Mangala Living - Workshop Furniture Industrial Bekasi',
-      imageTitle: 'Custom Order - Pabrikasi Furniture Industrial'
+      imageAlt: 'Custom Order Naturra Extal - Workshop agricultural commodities Bekasi',
+      imageTitle: 'Custom Order - Pabrikasi agricultural commodities'
     },
     message: {
       title: 'Setiap orang punya selera',
@@ -106,14 +106,14 @@ const CUSTOM_ORDER_TRANSLATIONS: Record<LanguageCode, CustomOrderTranslation> = 
         'Dan sering kali, selera itu tak bisa diwakili oleh produk jadi yang sudah ada di pasaran. Itulah mengapa kami membuka pintu bagi Anda yang ingin sesuatu yang lebih personal—lebih dekat dengan karakter, fungsi, dan nilai estetika yang Anda yakini.',
         'Kami tidak sekadar membuat furnitur. Kami membentuknya dari pemahaman. Tentang gaya hidup Anda, tentang ruangan yang ingin Anda bangun, dan tentang cerita yang ingin Anda hadirkan di dalamnya.'
       ],
-      imageAlt: 'Desain Furniture Custom Mangala Living'
+      imageAlt: 'Desain Furniture Custom Naturra Extal'
     },
     ideas: {
       title: 'Dimulai dari Ide yang Sederhana',
       intro:
         'Ceritakan saja keinginan Anda, tak perlu kata rumit. Mau rak terbuka dengan ukuran khusus? Kursi santai yang muat di sudut favorit rumah? Atau satu set meja makan untuk menghidupkan suasana kafe? Semua bisa dirancang dari awal, sesuai kebutuhan dan suasana yang ingin Anda bangun.',
       description:
-        'Kami percaya, setiap orang punya selera unik dalam menata ruang. Ada yang menyukai detail kaya, ada pula yang memilih garis sederhana dan bersih. Di Mangala Living, semua pendekatan desain tersebut bukan sekadar mungkin—itulah keahlian kami. Tim kami terbiasa menangani permintaan desain dengan ragam karakter: mulai dari estetika megah dengan aksen klasik, nuansa natural yang earthy, hingga gaya modern yang tegas namun tetap fungsional.'
+        'Kami percaya, setiap orang punya selera unik dalam menata ruang. Ada yang menyukai detail kaya, ada pula yang memilih garis sederhana dan bersih. Di Naturra Extal, semua pendekatan desain tersebut bukan sekadar mungkin—itulah keahlian kami. Tim kami terbiasa menangani permintaan desain dengan ragam karakter: mulai dari estetika megah dengan aksen klasik, nuansa natural yang earthy, hingga gaya modern yang tegas namun tetap fungsional.'
     },
     process: {
       title: 'Proses yang Nyata dan Bisa Diandalkan',
@@ -145,19 +145,19 @@ const CUSTOM_ORDER_TRANSLATIONS: Record<LanguageCode, CustomOrderTranslation> = 
       workshopHeading: 'Workshop Bekasi',
       workshopLabel: 'Workshop Bekasi:',
       workshopParagraph:
-        'Workshop kami dilengkapi fasilitas manufaktur lengkap untuk menciptakan furniture industrial custom. Tim berpengalaman kami siap mendiskusikan kebutuhan Anda dan membantu menemukan solusi terbaik.',
+        'Workshop kami dilengkapi fasilitas manufaktur lengkap untuk menciptakan agricultural commodities custom. Tim berpengalaman kami siap mendiskusikan kebutuhan Anda dan membantu menemukan solusi terbaik.',
       button: 'Hubungi Kami'
     }
   },
   ar: {
     meta: {
-      title: 'طلب مخصص - Mangala Living',
+      title: 'طلب مخصص - Naturra Extal',
       description:
-        'اطلب أثاثًا صناعيًا مخصصًا وفق احتياجاتك. ورشة Mangala Living في بيكاسي تخدم المقاهي والمطاعم والمكاتب والمنازل.'
+        'اطلب أثاثًا صناعيًا مخصصًا وفق احتياجاتك. ورشة Naturra Extal في بيكاسي تخدم المقاهي والمطاعم والمكاتب والمنازل.'
     },
     hero: {
       title: 'طلب مخصص',
-      imageAlt: 'طلب مخصص Mangala Living - ورشة الأثاث الصناعي في بيكاسي',
+      imageAlt: 'طلب مخصص Naturra Extal - ورشة الأثاث الصناعي في بيكاسي',
       imageTitle: 'طلب مخصص - تصنيع أثاث صناعي'
     },
     message: {
@@ -166,14 +166,14 @@ const CUSTOM_ORDER_TRANSLATIONS: Record<LanguageCode, CustomOrderTranslation> = 
         'وغالبًا ما يكون هذا الذوق لا تنعكسه المنتجات الجاهزة المتوفرة في السوق. لذلك نفتح أبوابنا لمن يبحثون عن شيء أكثر خصوصية وأكثر قربًا من شخصيتهم ووظيفتهم وقيمهم الجمالية.',
         'نحن لا نصنع الأثاث فقط، بل نشكّله انطلاقًا من الفهم—عن نمط حياتك، وعن المساحة التي تريد بناءها، وعن القصة التي ترغب في إبرازها داخلها.'
       ],
-      imageAlt: 'تصميم أثاث مخصص Mangala Living'
+      imageAlt: 'تصميم أثاث مخصص Naturra Extal'
     },
     ideas: {
       title: 'يبدأ من فكرة بسيطة',
       intro:
         'أخبرنا بما تريد دون تعقيد. رف مفتوح بمقاس محدد؟ كرسي استرخاء ينسجم مع ركنك المفضل؟ أو ربما طقم طاولة طعام يمنح المقهى روحًا جديدة؟ يمكن تصميم كل ذلك من البداية، وفق احتياجاتك والأجواء التي ترغب في بنائها.',
       description:
-        'نؤمن بأن لكل شخص ذوقًا فريدًا في ترتيب المساحات. هناك من يعشق التفاصيل الغنية، وآخرون يفضلون الخطوط البسيطة والواضحة. في Mangala Living، كل هذه المقاربات ليست ممكنة فحسب بل هي مجال خبرتنا. اعتاد فريقنا على التعامل مع طلبات تصميم متنوعة: من اللمسات الكلاسيكية الفخمة، والتصاميم الطبيعية الدافئة، وصولًا إلى الأسلوب الحديث الواضح والوظيفي.'
+        'نؤمن بأن لكل شخص ذوقًا فريدًا في ترتيب المساحات. هناك من يعشق التفاصيل الغنية، وآخرون يفضلون الخطوط البسيطة والواضحة. في Naturra Extal، كل هذه المقاربات ليست ممكنة فحسب بل هي مجال خبرتنا. اعتاد فريقنا على التعامل مع طلبات تصميم متنوعة: من اللمسات الكلاسيكية الفخمة، والتصاميم الطبيعية الدافئة، وصولًا إلى الأسلوب الحديث الواضح والوظيفي.'
     },
     process: {
       title: 'عملية حقيقية يمكن الاعتماد عليها',
@@ -211,13 +211,13 @@ const CUSTOM_ORDER_TRANSLATIONS: Record<LanguageCode, CustomOrderTranslation> = 
   },
   zh: {
     meta: {
-      title: '定制订单 - Mangala Living',
+      title: '定制订单 - Naturra Extal',
       description:
-        '根据您的需求定制工业风家具。Mangala Living 贝卡西工坊为咖啡馆、餐厅、办公室及家庭提供定制服务。'
+        '根据您的需求定制工业风家具。Naturra Extal 贝卡西工坊为咖啡馆、餐厅、办公室及家庭提供定制服务。'
     },
     hero: {
       title: '定制订单',
-      imageAlt: '定制订单 Mangala Living - 贝卡西工业家具工坊',
+      imageAlt: '定制订单 Naturra Extal - 贝卡西工业家具工坊',
       imageTitle: '定制订单 - 工业家具制造'
     },
     message: {
@@ -226,14 +226,14 @@ const CUSTOM_ORDER_TRANSLATIONS: Record<LanguageCode, CustomOrderTranslation> = 
         '这样的品味往往无法通过现成产品来表达。因此我们欢迎那些追求更个性化作品的人——让家具更贴近你的性格、功能需求与美学价值。',
         '我们不只是制作家具，而是从理解开始塑造：理解你的生活方式、想打造的空间，以及你想在其中呈现的故事。'
       ],
-      imageAlt: 'Mangala Living 定制家具设计'
+      imageAlt: 'Naturra Extal 定制家具设计'
     },
     ideas: {
       title: '从简单的想法开始',
       intro:
         '无需复杂表述，只要告诉我们你的想法。想要一个特殊尺寸的开放式置物架？放在最喜欢角落的舒适躺椅？或是一套让咖啡馆充满活力的餐桌椅？所有这些都可以从零开始设计，完全满足你的需求与氛围设定。',
       description:
-        '我们相信每个人在布置空间时都有独特的偏好。有人喜欢丰富的细节，也有人钟爱简洁利落的线条。在 Mangala Living，这些设计取向不仅可能，更是我们的专长。我们的团队熟悉各种风格需求：华丽而带经典细节的风格、自然温润的氛围，以及干练现代且注重功能性的表达。'
+        '我们相信每个人在布置空间时都有独特的偏好。有人喜欢丰富的细节，也有人钟爱简洁利落的线条。在 Naturra Extal，这些设计取向不仅可能，更是我们的专长。我们的团队熟悉各种风格需求：华丽而带经典细节的风格、自然温润的氛围，以及干练现代且注重功能性的表达。'
     },
     process: {
       title: '可信赖的流程',
@@ -269,13 +269,13 @@ const CUSTOM_ORDER_TRANSLATIONS: Record<LanguageCode, CustomOrderTranslation> = 
   },
   ja: {
     meta: {
-      title: 'カスタムオーダー - Mangala Living',
+      title: 'カスタムオーダー - Naturra Extal',
       description:
-        'ニーズに合わせた工業系カスタム家具を制作します。Mangala Living ベカシ工房はカフェ、レストラン、オフィス、住宅向けのオーダーメイドに対応しています。'
+        'ニーズに合わせた工業系カスタム家具を制作します。Naturra Extal ベカシ工房はカフェ、レストラン、オフィス、住宅向けのオーダーメイドに対応しています。'
     },
     hero: {
       title: 'カスタムオーダー',
-      imageAlt: 'カスタムオーダー Mangala Living - ベカシ工業家具ワークショップ',
+      imageAlt: 'カスタムオーダー Naturra Extal - ベカシ工業家具ワークショップ',
       imageTitle: 'カスタムオーダー - 工業家具の製造'
     },
     message: {
@@ -284,14 +284,14 @@ const CUSTOM_ORDER_TRANSLATIONS: Record<LanguageCode, CustomOrderTranslation> = 
         '既製品では表現しきれないこだわりも多くあります。だからこそ、よりパーソナルで、あなたの個性や機能、美学に寄り添ったものを求める方々を歓迎しています。',
         '私たちは単に家具を作るのではなく、あなたのライフスタイル、理想の空間、そこに込めたいストーリーを理解するところから形にしていきます。'
       ],
-      imageAlt: 'Mangala Living のカスタム家具デザイン'
+      imageAlt: 'Naturra Extal のカスタム家具デザイン'
     },
     ideas: {
       title: 'シンプルなアイデアから始まります',
       intro:
         '難しく考えず、まずは思い描くものを教えてください。特別なサイズのオープンラックが欲しい？お気に入りのコーナーに合わせたラウンジチェア？カフェの雰囲気を高めるダイニングセット？すべてゼロから設計し、求める雰囲気に仕上げられます。',
       description:
-        '誰もが空間づくりに独自のセンスを持っています。ディテール豊かなスタイルを好む人もいれば、シンプルで明快なラインを好む人も。Mangala Living ではそうしたアプローチがすべて可能であり、それが私たちの強みです。クラシックなアクセントを活かした豪華なテイスト、自然で温かみのある雰囲気、そして機能的でモダンな表現に至るまで幅広い要望に対応してきました。'
+        '誰もが空間づくりに独自のセンスを持っています。ディテール豊かなスタイルを好む人もいれば、シンプルで明快なラインを好む人も。Naturra Extal ではそうしたアプローチがすべて可能であり、それが私たちの強みです。クラシックなアクセントを活かした豪華なテイスト、自然で温かみのある雰囲気、そして機能的でモダンな表現に至るまで幅広い要望に対応してきました。'
     },
     process: {
       title: '信頼できる実際のプロセス',
@@ -329,13 +329,13 @@ const CUSTOM_ORDER_TRANSLATIONS: Record<LanguageCode, CustomOrderTranslation> = 
   },
   es: {
     meta: {
-      title: 'Pedido Personalizado - Mangala Living',
+      title: 'Pedido Personalizado - Naturra Extal',
       description:
-        'Encarga muebles industriales a medida según tus necesidades. El taller Mangala Living en Bekasi atiende cafés, restaurantes, oficinas y hogares.'
+        'Encarga muebles industriales a medida según tus necesidades. El taller Naturra Extal en Bekasi atiende cafés, restaurantes, oficinas y hogares.'
     },
     hero: {
       title: 'Pedido Personalizado',
-      imageAlt: 'Pedido personalizado Mangala Living - Taller de muebles industriales en Bekasi',
+      imageAlt: 'Pedido personalizado Naturra Extal - Taller de muebles industriales en Bekasi',
       imageTitle: 'Pedido personalizado - Fabricación de muebles industriales'
     },
     message: {
@@ -344,14 +344,14 @@ const CUSTOM_ORDER_TRANSLATIONS: Record<LanguageCode, CustomOrderTranslation> = 
         'Y muchas veces ese estilo no se refleja en los productos prediseñados del mercado. Por eso abrimos la puerta a quienes desean algo más personal, más cercano a la identidad, función y estética que imaginan.',
         'No solo fabricamos muebles: los construimos a partir de la comprensión de tu estilo de vida, del espacio que quieres crear y de la historia que quieres contar en él.'
       ],
-      imageAlt: 'Diseño de muebles personalizados Mangala Living'
+      imageAlt: 'Diseño de muebles personalizados Naturra Extal'
     },
     ideas: {
       title: 'Todo comienza con una idea sencilla',
       intro:
         'Cuéntanos lo que deseas sin complicaciones. ¿Necesitas un estante abierto a medida? ¿Un sillón relajante para tu rincón favorito? ¿O un juego de comedor que revitalice tu café? Podemos diseñarlo desde cero según tus necesidades y la atmósfera que buscas crear.',
       description:
-        'Creemos que cada persona tiene un gusto único al diseñar espacios. Algunas disfrutan de los detalles ricos; otras prefieren líneas limpias y sencillas. En Mangala Living todas esas aproximaciones son posibles y forman parte de nuestra especialidad. Nuestro equipo está acostumbrado a trabajar con estilos muy variados: desde detalles clásicos y elegantes, pasando por una estética natural y cálida, hasta un lenguaje moderno y funcional.'
+        'Creemos que cada persona tiene un gusto único al diseñar espacios. Algunas disfrutan de los detalles ricos; otras prefieren líneas limpias y sencillas. En Naturra Extal todas esas aproximaciones son posibles y forman parte de nuestra especialidad. Nuestro equipo está acostumbrado a trabajar con estilos muy variados: desde detalles clásicos y elegantes, pasando por una estética natural y cálida, hasta un lenguaje moderno y funcional.'
     },
     process: {
       title: 'Un proceso real y confiable',
@@ -390,13 +390,13 @@ const CUSTOM_ORDER_TRANSLATIONS: Record<LanguageCode, CustomOrderTranslation> = 
   },
   fr: {
     meta: {
-      title: 'Commande sur mesure - Mangala Living',
+      title: 'Commande sur mesure - Naturra Extal',
       description:
-        'Commandez un mobilier industriel sur mesure adapté à vos besoins. L’atelier Mangala Living de Bekasi travaille pour cafés, restaurants, bureaux et particuliers.'
+        'Commandez un mobilier industriel sur mesure adapté à vos besoins. L’atelier Naturra Extal de Bekasi travaille pour cafés, restaurants, bureaux et particuliers.'
     },
     hero: {
       title: 'Commande sur mesure',
-      imageAlt: 'Commande sur mesure Mangala Living - Atelier de mobilier industriel à Bekasi',
+      imageAlt: 'Commande sur mesure Naturra Extal - Atelier de mobilier industriel à Bekasi',
       imageTitle: 'Commande sur mesure - Fabrication de mobilier industriel'
     },
     message: {
@@ -405,14 +405,14 @@ const CUSTOM_ORDER_TRANSLATIONS: Record<LanguageCode, CustomOrderTranslation> = 
         'Et ces goûts ne peuvent pas toujours être reflétés par des produits standards. C’est pourquoi nous accueillons ceux qui recherchent une solution plus personnelle, fidèle à leur identité, leurs fonctions et leur esthétique.',
         'Nous ne nous contentons pas de fabriquer des meubles : nous les concevons à partir d’une compréhension profonde de votre style de vie, de l’espace que vous souhaitez créer et de l’histoire que vous voulez y raconter.'
       ],
-      imageAlt: 'Mangala Living - Conception de mobilier sur mesure'
+      imageAlt: 'Naturra Extal - Conception de mobilier sur mesure'
     },
     ideas: {
       title: 'Tout part d’une idée simple',
       intro:
         'Expliquez-nous simplement votre souhait. Un rayonnage ouvert sur mesure ? Un fauteuil confortable pour votre coin préféré ? Ou un ensemble de table pour dynamiser l’ambiance de votre café ? Tout peut être conçu depuis zéro pour correspondre à vos besoins et à l’atmosphère recherchée.',
       description:
-        'Nous sommes convaincus que chacun possède un sens unique de l’aménagement. Certains aiment les détails élaborés, d’autres préfèrent des lignes nettes et épurées. Chez Mangala Living, ces différentes approches sont notre spécialité. Notre équipe a l’habitude de répondre à des demandes variées : accents classiques et élégants, styles naturels et chaleureux ou encore lignes contemporaines affirmées mais fonctionnelles.'
+        'Nous sommes convaincus que chacun possède un sens unique de l’aménagement. Certains aiment les détails élaborés, d’autres préfèrent des lignes nettes et épurées. Chez Naturra Extal, ces différentes approches sont notre spécialité. Notre équipe a l’habitude de répondre à des demandes variées : accents classiques et élégants, styles naturels et chaleureux ou encore lignes contemporaines affirmées mais fonctionnelles.'
     },
     process: {
       title: 'Un processus concret et fiable',
@@ -452,13 +452,13 @@ const CUSTOM_ORDER_TRANSLATIONS: Record<LanguageCode, CustomOrderTranslation> = 
   },
   ko: {
     meta: {
-      title: '맞춤 주문 - Mangala Living',
+      title: '맞춤 주문 - Naturra Extal',
       description:
-        '필요에 맞춘 산업용 맞춤 가구를 제작합니다. Mangala Living 베카시 작업실은 카페, 레스토랑, 사무실, 주거 공간을 위한 맞춤 제작을 제공합니다.'
+        '필요에 맞춘 산업용 맞춤 가구를 제작합니다. Naturra Extal 베카시 작업실은 카페, 레스토랑, 사무실, 주거 공간을 위한 맞춤 제작을 제공합니다.'
     },
     hero: {
       title: '맞춤 주문',
-      imageAlt: '맞춤 주문 Mangala Living - 베카시 산업용 가구 공방',
+      imageAlt: '맞춤 주문 Naturra Extal - 베카시 산업용 가구 공방',
       imageTitle: '맞춤 주문 - 산업용 가구 제작'
     },
     message: {
@@ -467,14 +467,14 @@ const CUSTOM_ORDER_TRANSLATIONS: Record<LanguageCode, CustomOrderTranslation> = 
         '그 취향은 기존 제품으로는 표현하기 어려울 때가 많습니다. 그래서 우리는 더 개인적이고, 당신의 개성과 기능, 미학을 그대로 담아낼 가구를 원하는 분들을 환영합니다.',
         '우리는 단순히 가구를 만드는 것이 아니라, 당신의 라이프스타일, 만들고 싶은 공간, 그리고 그 안에 담고 싶은 이야기를 이해하는 것에서 출발합니다.'
       ],
-      imageAlt: 'Mangala Living 맞춤 가구 디자인'
+      imageAlt: 'Naturra Extal 맞춤 가구 디자인'
     },
     ideas: {
       title: '간단한 아이디어에서 출발합니다',
       intro:
         '복잡하게 설명하지 않아도 됩니다. 특별한 크기의 오픈 선반이 필요하신가요? 가장 좋아하는 공간에 어울리는 라운지 체어? 카페 분위기를 살려줄 다이닝 세트? 모든 것을 처음부터 설계하여 원하는 분위기와 기능에 맞춰 제작할 수 있습니다.',
       description:
-        '모든 사람은 공간을 꾸미는 자신만의 감각이 있습니다. 풍부한 디테일을 좋아하는 분도 있고, 깔끔하고 간결한 라인을 선호하는 분도 있습니다. Mangala Living에서는 이러한 다양한 디자인 접근이 가능하며, 바로 우리의 전문 분야입니다. 클래식한 디테일을 살린 웅장한 스타일부터 자연스럽고 따뜻한 무드, 뚜렷하면서도 기능적인 현대 스타일까지 다양한 요청을 다뤄왔습니다.'
+        '모든 사람은 공간을 꾸미는 자신만의 감각이 있습니다. 풍부한 디테일을 좋아하는 분도 있고, 깔끔하고 간결한 라인을 선호하는 분도 있습니다. Naturra Extal에서는 이러한 다양한 디자인 접근이 가능하며, 바로 우리의 전문 분야입니다. 클래식한 디테일을 살린 웅장한 스타일부터 자연스럽고 따뜻한 무드, 뚜렷하면서도 기능적인 현대 스타일까지 다양한 요청을 다뤄왔습니다.'
     },
     process: {
       title: '신뢰할 수 있는 실제 프로세스',
