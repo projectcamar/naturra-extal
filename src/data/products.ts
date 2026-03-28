@@ -1,23 +1,4 @@
-// Import images
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-
-// Import videos
+// Video imports
 import kabinetDapurVideo from '../assets/Kabinet-Industrial-Dapur.mp4'
 import kabinetLemariVideo from '../assets/kabinet-lemari-industrial.mp4'
 import kursiBarStallVideo from '../assets/kursi-bar-stall-chair.mp4'
@@ -29,6 +10,25 @@ import industrialDaybedVideo from '../assets/industrial-daybed.mp4'
 import loungeSetCoffeeTableVideo from '../assets/longue-set-coffee-table.mp4'
 import industrialHangingShelfVideo from '../assets/rak-gantung-industrial.mp4'
 import rakDisplayPartisiVideo from '../assets/rak-display-partisi-industrial-besi.mp4'
+
+// Product image URLs (Unsplash – commodity/agricultural placeholders)
+const frameLoftBookshelfImage = 'https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=600&q=80'
+const balconyBarTableImage = 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80'
+const loungeSetCoffeeTableImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80'
+const benchCornerImage = 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=600&q=80'
+const daybedBoneOnlyImage = 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80'
+const mejaMakanImage = 'https://images.unsplash.com/photo-1582218155981-0675ea108dca?w=600&q=80'
+const mejaMakanSetImage = 'https://images.unsplash.com/photo-1621217646581-bcbe05ff19ee?w=600&q=80'
+const barChairImage = 'https://images.unsplash.com/photo-1548848222-777651a084eb?w=600&q=80'
+const kursiBarStallImage = 'https://images.unsplash.com/photo-1499558913904-206263eb210b?w=600&q=80'
+const steelframeOutdoorBarSetImage = 'https://images.unsplash.com/photo-1596541223130-5d5644a5a6fc?w=600&q=80'
+const kabinetDapurImage = 'https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=600&q=80'
+const kabinetLemariImage = 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80'
+const hollowlineDisplayRackImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80'
+const rakDisplayPartisiImage = 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=600&q=80'
+const rakGantungIndustrialImage = 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80'
+const gantunganBajuImage = 'https://images.unsplash.com/photo-1582218155981-0675ea108dca?w=600&q=80'
+const mejaKerjaImage = 'https://images.unsplash.com/photo-1621217646581-bcbe05ff19ee?w=600&q=80'
 
 export interface ProductVariant {
   name: string
@@ -239,4 +239,3 @@ export const ALL_PRODUCTS: Product[] = [
     ]
   },
 ]
-

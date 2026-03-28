@@ -8,17 +8,17 @@ interface CategoriesSectionProps {
   language?: 'en' | 'id' | 'ar' | 'zh' | 'ja' | 'es' | 'fr' | 'ko'
 }
 
-// Import images
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
-// legacy mangala image import removed
+// Category images (Unsplash)
+const frameLoftBookshelfImage = 'https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=600&q=80'
+const loungeSetCoffeeTableImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80'
+const benchImage = 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=600&q=80'
+const mejaMakanImage = 'https://images.unsplash.com/photo-1582218155981-0675ea108dca?w=600&q=80'
+const barChairImage = 'https://images.unsplash.com/photo-1548848222-777651a084eb?w=600&q=80'
+const balconyBarImage = 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80'
+const daybedImage = 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80'
+const hollowlineDisplayRackImage = 'https://images.unsplash.com/photo-1596541223130-5d5644a5a6fc?w=600&q=80'
+const mejaKerjaImage = 'https://images.unsplash.com/photo-1621217646581-bcbe05ff19ee?w=600&q=80'
+const mejaImage = 'https://images.unsplash.com/photo-1499558913904-206263eb210b?w=600&q=80'
 
 interface Category {
   id: number
@@ -205,20 +205,20 @@ const CategoriesSection: React.FC<CategoriesSectionProps> = ({ isIndonesian = fa
         <h2 className="categories-title">
           {t.title}
         </h2>
-        
+
         <div className="categories-grid">
           {categories.map((category) => (
-            <Link 
-              key={category.id} 
-              to={category.link} 
+            <Link
+              key={category.id}
+              to={category.link}
               className="category-card"
               onClick={() => trackEvent.categoryClick(t[category.nameKey as keyof typeof t] as string)}
             >
               <div className="category-image-wrapper">
-                <img 
-                  src={category.image} 
-                  alt={`${t[category.nameKey as keyof typeof t]} Industrial Furniture Collection - Mangala Living Bekasi`}
-                  title={`${t[category.nameKey as keyof typeof t]} Industrial Furniture - Premium Quality from Mangala Living`}
+                <img
+                  src={category.image}
+                  alt={`${t[category.nameKey as keyof typeof t]} Collection - Naturra Extal`}
+                  title={`${t[category.nameKey as keyof typeof t]} - Naturra Extal`}
                   className="category-image"
                   loading="lazy"
                   width="300"
