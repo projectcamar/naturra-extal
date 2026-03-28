@@ -45,7 +45,7 @@ const SIDEBAR_FEATURES_TRANSLATIONS: Record<LanguageCode, {
   id: {
     newsletter: {
       title: 'Dapatkan Update Artikel',
-      description: 'Subscribe untuk menerima artikel terbaru tentang furniture industrial langsung ke email Anda.',
+      description: 'Subscribe untuk menerima artikel terbaru tentang komoditas pertanian langsung ke email Anda.',
       placeholder: 'Masukkan email Anda',
       button: 'Subscribe',
       success: 'Terima kasih! Silakan cek email Anda untuk konfirmasi.'
@@ -58,14 +58,14 @@ const SIDEBAR_FEATURES_TRANSLATIONS: Record<LanguageCode, {
     },
     consultation: {
       title: 'Konsultasi Gratis',
-      description: 'Butuh saran untuk project furniture Anda? Chat langsung dengan tim kami.',
+      description: 'Butuh bantuan untuk kebutuhan komoditas Anda? Chat langsung dengan tim kami.',
       button: 'Chat via WhatsApp'
     }
   },
   en: {
     newsletter: {
       title: 'Get Article Updates',
-      description: 'Subscribe to receive the latest industrial furniture articles directly to your email.',
+      description: 'Subscribe to receive the latest agricultural commodity articles directly to your email.',
       placeholder: 'Enter your email',
       button: 'Subscribe',
       success: 'Thank you! Please check your email for confirmation.'
@@ -78,14 +78,14 @@ const SIDEBAR_FEATURES_TRANSLATIONS: Record<LanguageCode, {
     },
     consultation: {
       title: 'Free Consultation',
-      description: 'Need advice for your furniture project? Chat directly with our team.',
+      description: 'Need assistance with your commodity requirements? Chat directly with our team.',
       button: 'Chat via WhatsApp'
     }
   },
   ar: {
     newsletter: {
       title: 'احصل على تحديثات المقالات',
-      description: 'اشترك لتلقي أحدث مقالات الأثاث الصناعي مباشرة إلى بريدك الإلكتروني.',
+      description: 'اشترك لتلقي أحدث مقالات السلع الزراعية مباشرة إلى بريدك الإلكتروني.',
       placeholder: 'أدخل بريدك الإلكتروني',
       button: 'اشترك',
       success: 'شكراً لك! يرجى التحقق من بريدك الإلكتروني للتأكيد.'
@@ -98,14 +98,14 @@ const SIDEBAR_FEATURES_TRANSLATIONS: Record<LanguageCode, {
     },
     consultation: {
       title: 'استشارة مجانية',
-      description: 'تحتاج إلى نصيحة لمشروع الأثاث الخاص بك؟ تواصل مباشرة مع فريقنا.',
+      description: 'تحتاج إلى مساعدة في متطلبات السلع الخاصة بك؟ تواصل مباشرة مع فريقنا.',
       button: 'الدردشة عبر واتساب'
     }
   },
   zh: {
     newsletter: {
       title: '获取文章更新',
-      description: '订阅以直接通过电子邮件接收最新的工业风家具文章。',
+      description: '订阅以直接通过电子邮件接收最新的农产品文章。',
       placeholder: '输入您的邮箱',
       button: '订阅',
       success: '谢谢！请查看您的邮箱进行确认。'
@@ -118,14 +118,14 @@ const SIDEBAR_FEATURES_TRANSLATIONS: Record<LanguageCode, {
     },
     consultation: {
       title: '免费咨询',
-      description: '需要家具项目建议？直接与我们团队聊天。',
+      description: '需要农产品需求方面的帮助？直接与我们团队聊天。',
       button: '通过 WhatsApp 聊天'
     }
   },
   ja: {
     newsletter: {
       title: '記事の更新を受け取る',
-      description: '最新のインダストリアル家具記事をメールで直接受け取るために購読してください。',
+      description: '最新の農産物記事をメールで直接受け取るために購読してください。',
       placeholder: 'メールアドレスを入力',
       button: '購読',
       success: 'ありがとうございます！メールで確認してください。'
@@ -138,7 +138,7 @@ const SIDEBAR_FEATURES_TRANSLATIONS: Record<LanguageCode, {
     },
     consultation: {
       title: '無料相談',
-      description: '家具プロジェクトのアドバイスが必要ですか？チームに直接チャットできます。',
+      description: '農産物の要件についてサポートが必要ですか？チームに直接チャットできます。',
       button: 'WhatsApp でチャット'
     }
   },
@@ -216,25 +216,25 @@ const BLOG_PRODUCT_SHOWCASE_DESCRIPTION: Record<LanguageCode, string> = {
 }
 
 const MENTIONED_PRODUCT_LABEL: Record<LanguageCode, string> = {
-  id: "Produk Industrial Pilihan",
-  en: "Featured Industrial Product",
-  ar: "منتج صناعي مميز",
-  zh: "精选工业产品",
-  ja: "注目の工業製品",
-  es: "Producto Industrial Destacado",
-  fr: "Produit Industriel Vedette",
-  ko: "주요 산업용 제품"
+  id: "Komoditas Pilihan",
+  en: "Featured Commodity",
+  ar: "سلعة مميزة",
+  zh: "精选商品",
+  ja: "注目の商品",
+  es: "Producto Destacado",
+  fr: "Produit Vedette",
+  ko: "주요 상품"
 }
 
 const VIEW_PRODUCT_LABEL: Record<LanguageCode, string> = {
-  id: "Lihat Produk",
-  en: "View Product",
-  ar: "عرض المنتج",
-  zh: "查看产品",
-  ja: "製品を見る",
-  es: "Ver Producto",
-  fr: "Voir le Produit",
-  ko: "제품 보기"
+  id: "Lihat Detail",
+  en: "View Details",
+  ar: "عرض التفاصيل",
+  zh: "查看详情",
+  ja: "詳細を見る",
+  es: "Ver Detalles",
+  fr: "Voir les Détails",
+  ko: "자세히 보기"
 }
 
 /**
@@ -299,50 +299,50 @@ const CTA_TRANSLATIONS: Record<LanguageCode, {
   contactUs: string
 }> = {
   id: {
-    title: 'Tertarik dengan Furniture Industrial Kami?',
-    subtitle: 'Kunjungi koleksi lengkap furniture industrial custom berkualitas tinggi dari Naturra Extal.',
+    title: 'Tertarik dengan Komoditas Premium Kami?',
+    subtitle: 'Kunjungi koleksi lengkap komoditas pertanian berkualitas ekspor dari Naturra Extal.',
     viewAllProducts: 'Lihat Semua Produk',
     contactUs: 'Hubungi Kami'
   },
   en: {
-    title: 'Interested in Our Industrial Furniture?',
-    subtitle: 'Visit our complete collection of high-quality custom industrial furniture from Naturra Extal.',
+    title: 'Interested in Our Premium Commodities?',
+    subtitle: 'Visit our complete collection of high-quality export agricultural commodities from Naturra Extal.',
     viewAllProducts: 'View All Products',
     contactUs: 'Contact Us'
   },
   ar: {
-    title: 'هل أنت مهتم بأثاثنا الصناعي؟',
-    subtitle: 'زر مجموعتنا الكاملة من الأثاث الصناعي المخصص عالي الجودة من Naturra Extal.',
+    title: 'هل أنت مهتم بسلعنا الفاخرة؟',
+    subtitle: 'زر مجموعتنا الكاملة من السلع الزراعية عالية الجودة للتصدير من Naturra Extal.',
     viewAllProducts: 'عرض جميع المنتجات',
     contactUs: 'اتصل بنا'
   },
   zh: {
-    title: '对我们的工业风家具感兴趣吗？',
-    subtitle: '访问我们完整的Naturra Extal高品质定制工业风家具系列。',
+    title: '对我们的优质农产品感兴趣吗？',
+    subtitle: '访问我们完整的 Naturra Extal 高品质出口农产品系列。',
     viewAllProducts: '查看所有产品',
     contactUs: '联系我们'
   },
   ja: {
-    title: '当社の工業風家具にご興味はありますか？',
-    subtitle: 'Naturra Extalの高品質なカスタム工業風家具の完全なコレクションをご覧ください。',
+    title: '当社のプレミアム農産物にご興味はおありですか？',
+    subtitle: 'Naturra Extalの高品質な輸出用農産物の完全なコレクションをご覧ください。',
     viewAllProducts: 'すべての製品を見る',
     contactUs: 'お問い合わせ'
   },
   es: {
-    title: '¿Interesado en Nuestro Mobiliario Industrial?',
-    subtitle: 'Visite nuestra colección completa de muebles industriales personalizados de alta calidad de Naturra Extal.',
+    title: '¿Interesado en Nuestros Productos Premium?',
+    subtitle: 'Visite nuestra colección completa de productos agrícolas de exportación de alta calidad de Naturra Extal.',
     viewAllProducts: 'Ver Todos los Productos',
     contactUs: 'Contáctenos'
   },
   fr: {
-    title: 'Intéressé par Notre Mobilier Industriel ?',
-    subtitle: 'Visitez notre collection complète de mobilier industriel sur mesure de haute qualité de Naturra Extal.',
+    title: 'Intéressé par Nos Produits Premium ?',
+    subtitle: 'Visitez notre collection complète de produits agricoles d\'exportation de haute qualité de Naturra Extal.',
     viewAllProducts: 'Voir Tous les Produits',
     contactUs: 'Nous Contacter'
   },
   ko: {
-    title: '저희 산업용 가구에 관심이 있으신가요?',
-    subtitle: 'Naturra Extal의 고품질 맞춤형 산업용 가구 컬렉션 전체를 둘러보세요.',
+    title: '저희 프리미엄 농산물에 관심이 있으신가요?',
+    subtitle: 'Naturra Extal의 고품질 수출용 농산물 컬렉션 전체를 둘러보세요.',
     viewAllProducts: '모든 제품 보기',
     contactUs: '문의하기'
   }
@@ -515,22 +515,12 @@ const NaturraBlogPost: React.FC = () => {
   const generateKeywords = (slug: string, title: string) => {
     const keywordMap: { [key: string]: string } = {
       // HIGH-INTENT KEYWORDS
-      'furniture-besi-custom-bekasi-workshop-terpercaya': 'furniture besi custom bekasi, workshop furniture bekasi, jasa furniture besi bekasi, custom furniture bekasi, furniture besi bekasi terpercaya',
-      'industrial-furniture-bekasi-harga-pabrik-kualitas-premium': 'industrial furniture bekasi, furniture industrial bekasi harga pabrik, workshop furniture industrial bekasi, furniture cafe bekasi',
-      'furniture-cafe-industrial-bekasi-desain-custom-modern': 'furniture cafe industrial bekasi, furniture cafe bekasi, meja kursi cafe bekasi, desain cafe industrial bekasi',
-      'workshop-furniture-besi-bekasi-produksi-langsung': 'workshop furniture besi bekasi, produksi furniture besi bekasi, pabrik furniture bekasi, workshop furniture industrial',
-      'jual-furniture-industrial-jakarta-bekasi-terlengkap': 'jual furniture industrial jakarta, jual furniture industrial bekasi, furniture industrial jakarta, toko furniture industrial',
-      'meja-makan-besi-custom-bekasi-industrial-minimalis': 'meja makan besi custom bekasi, meja makan industrial bekasi, custom dining table bekasi, meja cafe bekasi',
-      'meja-cafe-industrial-besi-custom-bekasi-jabodetabek': 'meja cafe industrial besi custom, meja cafe custom bekasi, meja bar industrial bekasi, furniture cafe jabodetabek',
-      'furniture-besi-hotel-custom-desain-eksklusif': 'furniture besi hotel custom, custom furniture hotel, furniture hotel industrial, desain furniture hotel',
-      'bikin-furniture-besi-custom-jabodetabek-berkualitas': 'bikin furniture besi custom, custom furniture jabodetabek, jasa bikin furniture besi, workshop furniture jabodetabek',
-      'furniture-besi-untuk-restoran-industrial-modern': 'furniture besi untuk restoran, furniture restoran industrial, meja kursi restoran besi, furniture commercial',
-      // FINISHING & TECHNIQUE
-      'finishing-furniture-besi-powder-coating-vs-cat': 'cat powder coating, finishing furniture besi, powder coating vs cat biasa, furniture coating bekasi',
-      'kombinasi-kayu-dan-besi-untuk-furniture-modern': 'kombinasi kayu dan besi, furniture modern, material industrial, meja kursi kayu besi',
-      'desain-meja-bar-industrial-untuk-ruang-terbatas': 'desain meja bar, meja bar ruang terbatas, meja cafe compact, furniture space efficient'
+      'indonesian-cocoa-export-requirements': 'indonesian cocoa export, cocoa export requirements, export cocoa beans indonesia, premium cocoa powder supplier',
+      'sourcing-premium-cloves-indonesia': 'sourcing premium cloves, indonesian cloves supplier, cengkeh export indonesia, buy cloves bulk',
+      'cocopeat-supplier-guide-agriculture': 'cocopeat supplier indonesia, cocopeat bulk export, sustainable agriculture cocopeat, indonesian cocopeat manufacturer',
+      'global-commodity-trading-logistics': 'global commodity trading, agricultural logistics export, shipping soft commodities, indonesian export logistics'
     }
-    return keywordMap[slug] || `${title}, furniture industrial, furniture besi custom, furniture bekasi, Naturra Extal`
+    return keywordMap[slug] || `${title}, agricultural commodities, cocoa export, indonesian cloves, cocopeat, Naturra Extal`
   }
 
   // Generate BlogPosting Schema
@@ -571,11 +561,8 @@ const NaturraBlogPost: React.FC = () => {
   const faqSchema = faqData.length > 0 ? generateFAQSchema(faqData) : null
 
   // Check if this blog post should show Service Areas Section
-  // Show for "Local Area Guide" category (geo-targeted posts) or specific workshop-related posts
-  const shouldShowServiceAreas =
-    post.category === 'Local Area Guide' ||
-    post.slug === 'furniture-besi-custom-bekasi-workshop-terpercaya' ||
-    post.slug === 'bikin-furniture-besi-custom-jabodetabek-berkualitas'
+  // Currently disabled for Naturra Extal as it's a global trading company
+  const shouldShowServiceAreas = false
 
   const localeMeta = generateLanguageSpecificMeta(isIndonesian)
   const localizedUrls = generateLocalizedUrls(location.pathname, location.search)

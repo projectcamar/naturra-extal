@@ -45,12 +45,12 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
     nameLabel: "Nama",
     namePlaceholder: "Pastikan untuk menambahkan nama Anda",
     submit: "Kirim",
-    thankYouMessage: (name: string) => `Terima kasih, ${name}! Saya di sini untuk membantu Anda dengan informasi terkait furniture Naturra Extal. Bagaimana saya bisa membantu Anda hari ini?`,
-    whatsappRedirectMessage: "Halo, saya tertarik dengan furniture Naturra Extal. Bisakah saya mendapatkan informasi lebih lanjut?",
+    thankYouMessage: (name: string) => `Terima kasih, ${name}! Saya di sini untuk membantu Anda dengan informasi terkait produk Naturra Extal. Bagaimana saya bisa membantu Anda hari ini?`,
+    whatsappRedirectMessage: "Halo, saya tertarik dengan produk komoditas pertanian Naturra Extal. Bisakah saya mendapatkan informasi lebih lanjut?",
     simpleResponses: [
-      "Terima kasih atas pertanyaan Anda! Untuk informasi lebih lanjut tentang produk furniture industrial kami, silakan hubungi kami langsung di WhatsApp.",
-      "Saya senang membantu Anda! Untuk konsultasi produk dan harga, silakan hubungi tim kami di WhatsApp.",
-      "Pertanyaan yang bagus! Tim kami akan dengan senang hati membantu Anda. Silakan hubungi kami di WhatsApp untuk informasi lengkap."
+      "Terima kasih atas pertanyaan Anda! Untuk informasi lebih lanjut tentang komoditas pertanian kami (Cocoa, Cengkeh, Cocopeat), silakan hubungi kami langsung di WhatsApp.",
+      "Saya senang membantu Anda! Untuk konsultasi produk ekspor dan spesifikasi, silakan hubungi tim kami di WhatsApp.",
+      "Pertanyaan yang bagus! Tim kami akan dengan senang hati membantu Anda. Silakan hubungi kami di WhatsApp untuk informasi lengkap mengenai suplai komoditas kami."
     ]
   },
   en: {
@@ -63,12 +63,12 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
     nameLabel: "Name",
     namePlaceholder: "Make sure to add your name",
     submit: "Submit",
-    thankYouMessage: (name: string) => `Thank you, ${name}! I am here to assist you with information related to Naturra Extal furniture. How may I help you today?`,
-    whatsappRedirectMessage: "Hello, I'm interested in Naturra Extal furniture. Can I get more information?",
+    thankYouMessage: (name: string) => `Thank you, ${name}! I am here to assist you with information related to Naturra Extal commodities. How may I help you today?`,
+    whatsappRedirectMessage: "Hello, I'm interested in Naturra Extal agricultural commodities. Can I get more information?",
     simpleResponses: [
-      "Thank you for your question! For more information about our industrial furniture products, please contact us directly on WhatsApp.",
-      "I'm happy to help! For product consultation and pricing, please contact our team on WhatsApp.",
-      "Great question! Our team will be happy to assist you. Please contact us on WhatsApp for complete information."
+      "Thank you for your question! For more information about our agricultural commodities (Cocoa, Cloves, Cocopeat), please contact us directly on WhatsApp.",
+      "I'm happy to help! For export product consultation and specifications, please contact our team on WhatsApp.",
+      "Great question! Our team will be happy to assist you. Please contact us on WhatsApp for complete information about our commodity supply."
     ]
   },
   ar: {
@@ -81,12 +81,12 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
     nameLabel: "الاسم",
     namePlaceholder: "تأكد من إضافة اسمك",
     submit: "إرسال",
-    thankYouMessage: (name: string) => `شكراً لك، ${name}! أنا هنا لمساعدتك بمعلومات حول أثاث Naturra Extal. كيف يمكنني مساعدتك اليوم؟`,
-    whatsappRedirectMessage: "مرحباً، أنا مهتم بأثاث Naturra Extal. هل يمكنني الحصول على مزيد من المعلومات؟",
+    thankYouMessage: (name: string) => `شكراً لك، ${name}! أنا هنا لمساعدتك بمعلومات حول سلع Naturra Extal. كيف يمكنني مساعدتك اليوم؟`,
+    whatsappRedirectMessage: "مرحباً، أنا مهتم بالسلع الزراعية من Naturra Extal. هل يمكنني الحصول على مزيد من المعلومات؟",
     simpleResponses: [
-      "شكراً لسؤالك! للحصول على مزيد من المعلومات حول منتجات الأثاث الصناعي لدينا، يرجى الاتصال بنا مباشرة على الواتساب.",
-      "أنا سعيد لمساعدتك! للاستشارة حول المنتج والأسعار، يرجى الاتصال بفريقنا على الواتساب.",
-      "سؤال رائع! فريقنا سيكون سعيداً لمساعدتك. يرجى الاتصال بنا على الواتساب للحصول على معلومات كاملة."
+      "شكراً لسؤالك! للحصول على مزيد من المعلومات حول سلعنا الزراعية (الكاكاو، القرنفل، جوز الهند)، يرجى الاتصال بنا مباشرة على الواتساب.",
+      "أنا سعيد لمساعدتك! للاستشارة حول منتجات التصدير والمواصفات، يرجى الاتصال بفريقنا على الواتساب.",
+      "سؤال رائع! فريقنا سيكون سعيداً لمساعدتك. يرجى الاتصال بنا على الواتساب للحصول على معلومات كاملة حول توريدنا للسلع."
     ]
   },
   zh: {
@@ -99,12 +99,12 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
     nameLabel: "姓名",
     namePlaceholder: "请确保添加您的姓名",
     submit: "提交",
-    thankYouMessage: (name: string) => `谢谢，${name}！我在这里协助您了解 Naturra Extal 家具的相关信息。我今天能如何帮助您？`,
-    whatsappRedirectMessage: "您好，我对 Naturra Extal 家具感兴趣。能否获得更多信息？",
+    thankYouMessage: (name: string) => `谢谢，${name}！我在这里协助您了解 Naturra Extal 农产品的相关信息。我今天能如何帮助您？`,
+    whatsappRedirectMessage: "您好，我对 Naturra Extal 农产品感兴趣。能否获得更多信息？",
     simpleResponses: [
-      "感谢您的提问！有关我们工业家具产品的更多信息，请直接在 WhatsApp 上联系我们。",
-      "我很乐意帮助您！如需产品咨询和价格，请联系我们的 WhatsApp 团队。",
-      "很好的问题！我们的团队会很乐意帮助您。请通过 WhatsApp 联系我们以获取完整信息。"
+      "感谢您的提问！有关我们农产品（可可、丁香、椰糠）的更多信息，请直接在 WhatsApp 上联系我们。",
+      "我很乐意帮助您！如需出口产品咨询和规格，请联系我们的 WhatsApp 团队。",
+      "很好的问题！我们的团队会很乐意帮助您。请通过 WhatsApp 联系我们以获取有关我们产品供应的完整信息。"
     ]
   },
   ja: {
@@ -117,12 +117,12 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
     nameLabel: "お名前",
     namePlaceholder: "お名前を必ず追加してください",
     submit: "送信",
-    thankYouMessage: (name: string) => `${name} さん、ありがとうございます！Naturra Extal の家具に関する情報をお手伝いするためにここにいます。今日はどのようにお手伝いできますか？`,
-    whatsappRedirectMessage: "こんにちは、Naturra Extal の家具に興味があります。詳しい情報をいただけますか？",
+    thankYouMessage: (name: string) => `${name} さん、ありがとうございます！Naturra Extal の農産物に関する情報をお手伝いするためにここにいます。今日はどのようにお手伝いできますか？`,
+    whatsappRedirectMessage: "こんにちは、Naturra Extal の農産物に興味があります。詳しい情報をいただけますか？",
     simpleResponses: [
-      "ご質問ありがとうございます！当社のインダストリアル家具製品の詳細については、WhatsApp で直接お問い合わせください。",
-      "お手伝いできて光栄です！製品の相談や価格については、WhatsApp でチームにご連絡ください。",
-      "素晴らしい質問です！チームが喜んでサポートいたします。詳細情報については、WhatsApp でお問い合わせください。"
+      "ご質問ありがとうございます！当社の農産物（ココア、クローブ、ココピート）の詳細については、WhatsApp で直接お問い合わせください。",
+      "お手伝いできて光栄です！輸出製品の相談や仕様については、WhatsApp でチームにご連絡ください。",
+      "素晴らしい質問です！チームが喜んでサポートいたします。当社の製品供給に関する詳細情報については、WhatsApp でお問い合わせください。"
     ]
   },
   es: {
@@ -135,12 +135,12 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
     nameLabel: "Nombre",
     namePlaceholder: "Asegúrate de agregar tu nombre",
     submit: "Enviar",
-    thankYouMessage: (name: string) => `¡Gracias, ${name}! Estoy aquí para ayudarte con información sobre muebles Naturra Extal. ¿Cómo puedo ayudarte hoy?`,
-    whatsappRedirectMessage: "Hola, estoy interesado en los muebles de Naturra Extal. ¿Puedo obtener más información?",
+    thankYouMessage: (name: string) => `¡Gracias, ${name}! Estoy aquí para ayudarte con información sobre los productos agrícolas de Naturra Extal. ¿Cómo puedo ayudarte hoy?`,
+    whatsappRedirectMessage: "Hola, estoy interesado en los productos agrícolas de Naturra Extal. ¿Puedo obtener más información?",
     simpleResponses: [
-      "¡Gracias por tu pregunta! Para más información sobre nuestros productos de muebles industriales, contáctanos directamente por WhatsApp.",
-      "¡Estoy feliz de ayudar! Para consultas de productos y precios, contacta a nuestro equipo por WhatsApp.",
-      "¡Excelente pregunta! Nuestro equipo estará encantado de ayudarte. Por favor contáctanos por WhatsApp para información completa."
+      "¡Gracias por tu pregunta! Para más información sobre nuestros productos agrícolas (Cacao, Clavo, Cocopeat), contáctanos directamente por WhatsApp.",
+      "¡Estoy feliz de ayudar! Para consultas y especificaciones de productos de exportación, contacta a nuestro equipo por WhatsApp.",
+      "¡Excelente pregunta! Nuestro equipo estará encantado de ayudarte. Por favor contáctanos por WhatsApp para obtener información completa sobre nuestro suministro de productos."
     ]
   },
   fr: {
@@ -153,12 +153,12 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
     nameLabel: "Nom",
     namePlaceholder: "Assurez-vous d'ajouter votre nom",
     submit: "Envoyer",
-    thankYouMessage: (name: string) => `Merci, ${name} ! Je suis là pour vous aider avec des informations sur les meubles Naturra Extal. Comment puis-je vous aider aujourd'hui ?`,
-    whatsappRedirectMessage: "Bonjour, je suis intéressé par les meubles Naturra Extal. Puis-je obtenir plus d'informations ?",
+    thankYouMessage: (name: string) => `Merci, ${name} ! Je suis là pour vous aider avec des informations sur les produits agricoles Naturra Extal. Comment puis-je vous aider aujourd'hui ?`,
+    whatsappRedirectMessage: "Bonjour, je suis intéressé par les produits agricoles Naturra Extal. Puis-je obtenir plus d'informations ?",
     simpleResponses: [
-      "Merci pour votre question ! Pour plus d'informations sur nos produits de mobilier industriel, contactez-nous directement sur WhatsApp.",
-      "Je suis ravi de vous aider ! Pour les consultations de produits et les prix, contactez notre équipe sur WhatsApp.",
-      "Excellente question ! Notre équipe sera ravie de vous aider. Veuillez nous contacter sur WhatsApp pour des informations complètes."
+      "Merci pour votre question ! Pour plus d'informations sur nos produits agricoles (Cacao, Clous de girofle, Cocopeat), contactez-nous directement sur WhatsApp.",
+      "Je suis ravi de vous aider ! Pour les consultations et spécifications de produits d'exportation, contactez notre équipe sur WhatsApp.",
+      "Excellente question ! Notre équipe sera ravie de vous aider. Veuillez nous contacter sur WhatsApp pour obtenir des informations complètes sur notre approvisionnement en produits."
     ]
   },
   ko: {
@@ -171,12 +171,12 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
     nameLabel: "이름",
     namePlaceholder: "이름을 반드시 추가하세요",
     submit: "제출",
-    thankYouMessage: (name: string) => `${name}님, 감사합니다! Naturra Extal 가구에 대한 정보를 도와드리기 위해 여기 있습니다. 오늘 어떻게 도와드릴까요?`,
-    whatsappRedirectMessage: "안녕하세요, Naturra Extal 가구에 관심이 있습니다. 더 많은 정보를 받을 수 있을까요?",
+    thankYouMessage: (name: string) => `${name}님, 감사합니다! Naturra Extal 농산물에 대한 정보를 도와드리기 위해 여기 있습니다. 오늘 어떻게 도와드릴까요?`,
+    whatsappRedirectMessage: "안녕하세요, Naturra Extal 농산물에 관심이 있습니다. 더 많은 정보를 받을 수 있을까요?",
     simpleResponses: [
-      "질문해 주셔서 감사합니다! 산업용 가구 제품에 대한 자세한 내용은 WhatsApp으로 직접 문의해 주세요.",
-      "도와드릴 수 있어 기쁩니다! 제품 상담 및 가격은 WhatsApp으로 팀에 연락해 주세요.",
-      "좋은 질문입니다! 저희 팀이 기꺼이 도와드리겠습니다. 자세한 정보는 WhatsApp으로 문의해 주세요."
+      "질문해 주셔서 감사합니다! 저희 농산물(코코아, 정향, 코코피트)에 대한 자세한 내용은 WhatsApp으로 직접 문의해 주세요.",
+      "도와드릴 수 있어 기쁩니다! 수출 제품 상담 및 사양은 WhatsApp으로 팀에 연락해 주세요.",
+      "좋은 질문입니다! 저희 팀이 기꺼이 도와드리겠습니다. 제품 공급에 대한 완전한 정보는 WhatsApp으로 문의해 주세요."
     ]
   }
 }
@@ -189,7 +189,7 @@ const WhatsAppButton: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: 'Hello! How may I help you with your furniture needs at Naturra Extal?',
+      text: 'Hello! How may I help you with your agricultural commodity needs at Naturra Extal?',
       isUser: false,
       timestamp: new Date()
     }
@@ -222,7 +222,7 @@ const WhatsAppButton: React.FC = () => {
       try {
         const lang = await detectLanguage(location.pathname, location.search)
         setLanguage(lang)
-        
+
         // Update initial message based on detected language
         const translations = CHAT_TRANSLATIONS[lang] ?? CHAT_TRANSLATIONS.en
         setMessages([{
@@ -272,7 +272,7 @@ const WhatsAppButton: React.FC = () => {
     if (userInfo.name && userInfo.email) {
       setUserInfo(prev => ({ ...prev, isCompleted: true }))
       setConversationStage('assisting')
-      
+
       // Send lead data to API
       try {
         await fetch('/api/subscribe', {
@@ -291,14 +291,14 @@ const WhatsAppButton: React.FC = () => {
       } catch (error) {
         console.error('Failed to send lead data:', error)
       }
-      
+
       const formMessage: Message = {
         id: Date.now().toString(),
         text: t.thankYouMessage(userInfo.name),
         isUser: false,
         timestamp: new Date()
       }
-      
+
       setMessages(prev => [...prev, formMessage])
     }
   }
@@ -344,7 +344,7 @@ const WhatsAppButton: React.FC = () => {
 
     try {
       const aiResponse = await generateSmartResponse()
-      
+
       const aiMessage: Message = {
         id: (Date.now() + 1).toString(),
         text: aiResponse,
@@ -375,13 +375,13 @@ const WhatsAppButton: React.FC = () => {
     } catch (error) {
       console.error('Error generating response:', error)
       // Use simple response for error
-        const errorResponse: Message = {
-          id: (Date.now() + 1).toString(),
+      const errorResponse: Message = {
+        id: (Date.now() + 1).toString(),
         text: getSimpleResponse(),
-          isUser: false,
-          timestamp: new Date()
-        }
-        setMessages(prev => [...prev, errorResponse])
+        isUser: false,
+        timestamp: new Date()
+      }
+      setMessages(prev => [...prev, errorResponse])
     } finally {
       setIsLoading(false)
     }
@@ -413,7 +413,7 @@ const WhatsAppButton: React.FC = () => {
               <X size={14} />
             </button>
           </div>
-          
+
           <div className="chat-messages">
             {messages.map((message) => (
               <div key={message.id} className={`message ${message.isUser ? 'user-message' : 'ai-message'}`}>
@@ -428,7 +428,7 @@ const WhatsAppButton: React.FC = () => {
                 </div>
               </div>
             ))}
-            
+
             {/* Form UI for collecting info */}
             {conversationStage === 'collecting_info' && !userInfo.isCompleted && firstMessage && (
               <div className="message ai-message">
@@ -467,7 +467,7 @@ const WhatsAppButton: React.FC = () => {
                 </div>
               </div>
             )}
-            
+
             {isLoading && (
               <div className="message ai-message">
                 <div className="message-avatar">
@@ -484,7 +484,7 @@ const WhatsAppButton: React.FC = () => {
             )}
             <div ref={messagesEndRef} />
           </div>
-          
+
           <div className="chat-input">
             <input
               type="text"
@@ -494,16 +494,16 @@ const WhatsAppButton: React.FC = () => {
               placeholder={t.typeMessage}
               disabled={isLoading || Boolean(conversationStage === 'collecting_info' && firstMessage && !userInfo.isCompleted)}
             />
-            <button 
-              className="send-button" 
+            <button
+              className="send-button"
               onClick={sendMessage}
               disabled={!inputText.trim() || isLoading || Boolean(conversationStage === 'collecting_info' && firstMessage && !userInfo.isCompleted)}
               aria-label="Send message"
             >
               <Send size={14} />
             </button>
-            </div>
-          
+          </div>
+
           <div className="chat-footer">
             <button className="whatsapp-redirect" onClick={handleWhatsAppRedirect} aria-label={t.continueWhatsApp}>
               <MessageCircle size={14} />

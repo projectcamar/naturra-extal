@@ -22,137 +22,137 @@ const BLOG_INTRO_TRANSLATIONS: Record<
   }
 > = {
   id: {
-    mainTitle: '135+ Artikel Furniture Industrial: Panduan Lengkap dari Workshop Bekasi',
+    mainTitle: '100+ Artikel Komoditas Global: Panduan Ekspor dari Naturra Extal',
     introParagraph:
-      'Temukan jawaban lengkap untuk pertanyaan Anda tentang furniture industrial. Artikel kami ditulis berdasarkan pengalaman nyata menangani 1000+ project sejak 1999 di Jabodetabek.',
+      'Temukan wawasan mendalam tentang perdagangan komoditas pertanian Indonesia. Artikel kami disusun berdasarkan pengalaman dalam mengekspor cocoa, cengkeh, dan cocopeat berkualitas premium ke pasar global.',
     bullets: [
       {
-        title: 'Tips & Panduan Praktis',
+        title: 'Tips & Panduan Sourcing',
         description:
-          'Cara memilih, merawat, dan mengoptimalkan furniture industrial untuk bisnis Anda'
+          'Cara memilih, memverifikasi, dan memastikan kualitas komoditas pertanian premium dari Indonesia'
       },
       {
-        title: 'Perbandingan Material & Harga',
+        title: 'Wawasan Pasar & Kualitas',
         description:
-          'Data objektif furniture besi vs kayu, custom vs ready, powder coating vs cat'
+          'Informasi objektif tentang spesifikasi cocoa (HS 1805/1806), standar cengkeh, dan aplikasi cocopeat'
       },
       {
-        title: 'Local Area Guide',
+        title: 'Panduan Ekspor & Logistik',
         description:
-          'Coverage area lengkap Bekasi, Cikarang, Jakarta dengan workshop terdekat'
+          'Pemahaman regulasi ekspor, pengiriman global, dan kemitraan dengan petani lokal'
       },
       {
-        title: 'Design Inspiration',
+        title: 'Pembaruan Industri Tren',
         description:
-          'Tren 2025, kombinasi material, layout optimization untuk cafe dan restoran'
+          'Tren komoditas 2025, praktik keberlanjutan, dan dinamika rantai pasokan global'
       }
     ]
   },
   en: {
-    mainTitle: '135+ Industrial Furniture Articles: Complete Guide from Our Bekasi Workshop',
+    mainTitle: '100+ Global Commodity Articles: Export Guide from Naturra Extal',
     introParagraph:
-      'Find clear, practical answers to all your questions about industrial furniture. Every article is written based on real projects – 1,000+ jobs handled since 1999 across Greater Jakarta (Jabodetabek).',
+      'Discover in-depth insights into Indonesian agricultural commodity trading. Our articles are based on experience exporting premium cocoa, cloves, and cocopeat to global markets.',
     bullets: [
       {
-        title: 'Practical Tips & Guides',
+        title: 'Sourcing Tips & Guides',
         description:
-          'How to choose, maintain, and optimize industrial furniture for your café, restaurant, office, or hotel'
+          'How to select, verify, and ensure the quality of premium agricultural commodities from Indonesia'
       },
       {
-        title: 'Material & Price Comparisons',
+        title: 'Market & Quality Insights',
         description:
-          'Objective data on steel vs wood, custom vs ready-made, powder coating vs standard paint'
+          'Objective information on cocoa specifications (HS 1805/1806), clove standards, and cocopeat applications'
       },
       {
-        title: 'Local Area Guides',
+        title: 'Export & Logistics Guides',
         description:
-          'Coverage for Bekasi, Cikarang, Jakarta and nearby areas with the nearest workshop support'
+          'Understanding export regulations, global shipping, and partnerships with local farmers'
       },
       {
-        title: 'Design Inspiration',
+        title: 'Industry & Trend Updates',
         description:
-          '2025 trends, material combinations, and layout optimization ideas for hospitality and commercial spaces'
+          '2025 commodity trends, sustainability practices, and global supply chain dynamics'
       }
     ]
   },
   ar: {
-    mainTitle: 'أكثر من 135 مقالاً عن الأثاث الصناعي: دليل متكامل من ورشة بيكاسي',
+    mainTitle: 'أكثر من 100 مقال عن السلع العالمية: دليل التصدير من Naturra Extal',
     introParagraph:
-      'اكتشف إجابات عملية وواضحة عن جميع أسئلتك حول الأثاث الصناعي. كل مقال مبني على خبرة حقيقية من أكثر من 1000 مشروع منذ عام 1999 في منطقة جاكرتا الكبرى.',
+      'اكتشف رؤى متعمقة حول تجارة السلع الزراعية الإندونيسية. مقالاتنا مبنية على خبرتنا في تصدير الكاكاو والقرنفل وجوز الهند (cocopeat) الفاخر إلى الأسواق العالمية.',
     bullets: [
       {
-        title: 'نصائح وإرشادات عملية',
+        title: 'نصائح وأدلة التوريد',
         description:
-          'كيفية اختيار الأثاث الصناعي المناسب، المحافظة عليه، والاستفادة القصوى منه في مشروعك التجاري'
+          'كيفية اختيار والتحقق وضمان جودة السلع الزراعية الفاخرة من إندونيسيا'
       },
       {
-        title: 'مقارنات المواد والأسعار',
+        title: 'رؤى السوق والجودة',
         description:
-          'بيانات موضوعية حول الأثاث المعدني مقابل الخشبي، المخصص مقابل الجاهز، بودرة كوتينغ مقابل الدهان العادي'
+          'معلومات موضوعية حول مواصفات الكاكاو، ومعايير القرنفل، وتطبيقات جوز الهند (cocopeat)'
       },
       {
-        title: 'دليل المناطق المحلية',
+        title: 'أدلة التصدير والخدمات اللوجستية',
         description:
-          'تغطية كاملة لمناطق بيكاسي، تشيكارانغ، جاكرتا مع أقرب ورشة دعم'
+          'فهم لوائح التصدير، الشحن العالمي، والشراكات مع المزارعين المحليين'
       },
       {
-        title: 'إلهام للتصميم',
+        title: 'تحديثات الصناعة والاتجاهات',
         description:
-          'اتجاهات 2025، دمج المواد، وأفكار لتخطيط المساحات للمقاهي والمطاعم'
+          'اتجاهات السلع لعام 2025، ممارسات الاستدامة، وديناميكيات سلسلة التوريد العالمية'
       }
     ]
   },
   zh: {
-    mainTitle: '135+ 篇工业风家具文章：来自勿加泗工坊的完整指南',
+    mainTitle: '100+ 全球商品文章：Naturra Extal 出口指南',
     introParagraph:
-      '在这里，你可以找到关于工业风家具的大部分问题的系统答案。所有文章都基于真实项目经验——自 1999 年以来完成 1000+ 个雅加达都会区项目。',
+      '深入了解印尼农产品贸易。我们的文章基于向全球市场出口优质可可、丁香和椰糠的丰富经验。',
     bullets: [
       {
-        title: '实用技巧与操作指南',
+        title: '采购提示与指南',
         description:
-          '如何为咖啡馆、餐厅、办公室、酒店选择、保养并高效利用工业风家具'
+          '如何选择、验证并确保印尼优质农产品的质量'
       },
       {
-        title: '材质与价格对比',
+        title: '市场与质量洞察',
         description:
-          '客观对比钢材 vs 木材、定制 vs 成品、粉末喷涂 vs 普通油漆'
+          '关于可可规格（HS 1805/1806）、丁香标准和椰糠应用的客观信息'
       },
       {
-        title: '本地区域指南',
+        title: '出口与物流指南',
         description:
-          '覆盖勿加泗、芝卡朗、雅加达等区域，并说明就近工坊支持情况'
+          '了解出口法规、全球货运以及与当地农民的合作关系'
       },
       {
-        title: '设计灵感',
+        title: '行业与趋势更新',
         description:
-          '2025 年趋势、材质搭配，以及适用于咖啡馆和餐厅的平面布局优化'
+          '2025年商品趋势、可持续发展实践以及全球供应链动态'
       }
     ]
   },
   ja: {
-    mainTitle: '135本以上の工業系家具記事：ベカシ工房からの完全ガイド',
+    mainTitle: '100以上のグローバル商品記事：Naturra Extalからの輸出ガイド',
     introParagraph:
-      '工業系家具についての疑問に、実務に基づいた答えをご用意しました。1999年以降、ジャボデタベックで1,000件以上のプロジェクトを手掛けてきた経験を記事化しています。',
+      'インドネシアの農産物取引についての深い考察を発見してください。私たちの記事は、高品質なココア、クローブ、ココピートを世界市場へ輸出してきた経験に基づいています。',
     bullets: [
       {
-        title: '実践的なヒントとガイド',
+        title: '調達のヒントとガイド',
         description:
-          'カフェ・レストラン・オフィス・ホテル向けの工業系家具の選び方、メンテナンス方法、活用ノウハウ'
+          'インドネシア産の高品質な農産物を選び、検証し、品質を確保する方法'
       },
       {
-        title: '素材・価格比較',
+        title: '市場と品質の洞察',
         description:
-          'スチール vs 木材、オーダーメイド vs 既製品、パウダーコーティング vs 通常塗装の客観的な比較'
+          'ココアの仕様（HS 1805/1806）、クローブの基準、ココピートの用途に関する客観的な情報'
       },
       {
-        title: 'ローカルエリアガイド',
+        title: '輸出と物流のガイド',
         description:
-          'ベカシ・チカラン・ジャカルタ周辺エリアの対応範囲と最寄り工房のご案内'
+          '輸出規制、グローバルシッピング、地元農家とのパートナーシップの理解'
       },
       {
-        title: 'デザインインスピレーション',
+        title: '業界とトレンドの最新情報',
         description:
-          '2025年トレンド、素材ミックス、カフェ／レストランのレイアウト最適化アイデア'
+          '2025年の商品トレンド、持続可能性の取り組み、グローバルサプライチェーンの動向'
       }
     ]
   },
@@ -300,9 +300,9 @@ const NaturraBlog: React.FC = () => {
   return (
     <div className="blog-page">
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
-        <title>{truncateTitle('Blog Furniture Industrial & Tips Desain - Naturra Extal')}</title>
-        <meta name="description" content={truncateMetaDescription('Panduan lengkap furniture industrial untuk cafe, restoran, hotel. Tips memilih furniture besi custom, cara merawat, tren desain 2025, perbandingan material, harga, dan area workshop Bekasi Jakarta. 135+ artikel berbasis pengalaman 25 tahun Naturra Extal.')} />
-        <meta name="keywords" content="blog furniture industrial, tips furniture cafe, cara memilih furniture restoran, furniture besi custom panduan, workshop furniture bekasi, harga furniture industrial 2025, tips desain interior industrial, furniture cafe murah, perbandingan furniture besi vs kayu, cara merawat furniture industrial, tren furniture 2025, furniture bekasi guide, furniture jakarta tips, inspirasi desain cafe industrial" />
+        <title>{truncateTitle('Global Commodity Export Blog & Market Insights - Naturra Extal')}</title>
+        <meta name="description" content={truncateMetaDescription('Comprehensive guide to Indonesian agricultural commodities for global buyers. Insights on sourcing premium cocoa, cloves, and cocopeat, market trends, quality standards, and export logistics from Naturra Extal.')} />
+        <meta name="keywords" content="blog commodity trading, indonesian cocoa export, sourcing premium cloves, cocopeat supplier guide, naturra extal blog, cocoa powder hs 1805 1806, agricultural commodity market trends 2025, global spice trade, sustainable farming indonesia, commodity sourcing tips" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta httpEquiv="content-language" content={localeMeta.lang} />
@@ -310,12 +310,12 @@ const NaturraBlog: React.FC = () => {
         {localizedUrls.alternates.map((alternate) => (
           <link key={`blog-hreflang-${alternate.hrefLang}`} rel="alternate" hrefLang={alternate.hrefLang} href={alternate.href} />
         ))}
-        {prevUrl && <link rel="prev" href={`https://Naturra Extal-living.com${prevUrl}`} />}
-        {nextUrl && <link rel="next" href={`https://Naturra Extal-living.com${nextUrl}`} />}
+        {prevUrl && <link rel="prev" href={`https://naturraextal.com${prevUrl}`} />}
+        {nextUrl && <link rel="next" href={`https://naturraextal.com${nextUrl}`} />}
 
         {/* AI Search Optimization: Clear article purpose */}
-        <meta property="og:title" content="Blog Furniture Industrial - 135+ Artikel Tips & Panduan Lengkap" />
-        <meta property="og:description" content="Artikel komprehensif tentang furniture industrial: tips pemilihan, perbandingan material, panduan harga, area coverage Jabodetabek, dan best practices dari 1000+ project sejak 1999." />
+        <meta property="og:title" content="Global Commodity Blog - 100+ Articles on Export & Sourcing" />
+        <meta property="og:description" content="Comprehensive articles on agricultural commodities: sourcing tips, quality specifications (cocoa, cloves, cocopeat), export logistics, and best practices from Naturra Extal's global market experience." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={localizedUrls.canonical} />
         <meta property="og:locale" content={localeMeta.locale} />
@@ -330,8 +330,8 @@ const NaturraBlog: React.FC = () => {
         <div className="blog-hero-image">
           <img
             src={heroImage}
-            alt="Blog Furniture Industrial & Tips Desain Cafe Restoran - 135+ Artikel Panduan Lengkap Naturra Extal"
-            title="Blog Furniture Industrial - Tips & Panduan Lengkap dari Workshop Bekasi Naturra Extal"
+            alt="Global Commodity Export Blog & Market Insights - Naturra Extal"
+            title="Global Commodity Blog - Complete Guides from Naturra Extal"
             loading="eager"
             fetchPriority="high"
             width="1920"
@@ -380,8 +380,8 @@ const NaturraBlog: React.FC = () => {
                   <div className="blog-card-image">
                     <img
                       src={post.image}
-                      alt={`${post.title} - ${post.category} Blog Furniture Industrial Naturra Extal`}
-                      title={`${post.title} - ${post.category} Artikel Furniture Industrial`}
+                      alt={`${post.title} - ${post.category} Commodity Blog Naturra Extal`}
+                      title={`${post.title} - ${post.category} Commodity Article`}
                       loading="lazy"
                       width="400"
                       height="250"
