@@ -2,7 +2,6 @@ import React, { useState, useEffect, useMemo } from 'react'
 import { useParams, Link, useLocation, Navigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { X, Play } from 'lucide-react'
-import AnnouncementBar from '../components/AnnouncementBar'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Breadcrumb from '../components/Breadcrumb'
@@ -871,7 +870,6 @@ const ProductDetail: React.FC = () => {
   if (isLoading) {
     return (
       <div className="product-detail-page">
-        <AnnouncementBar language={language} isIndonesian={isIndonesian} />
         <Header isIndonesian={isIndonesian} language={language} />
         <div style={{
           display: 'flex',
@@ -1077,7 +1075,6 @@ const ProductDetail: React.FC = () => {
 
   return (
     <div className="product-detail-page">
-      <AnnouncementBar language={language} isIndonesian={isIndonesian} />
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
         <title>{truncateTitle(product.slug === 'hollowline-display-rack'
           ? (isIndonesian ? 'Hollowline Display Rack - Harga Rp4.5 Juta - Mangala' : 'Hollowline Display Rack - Rp4.5M - Mangala Living')

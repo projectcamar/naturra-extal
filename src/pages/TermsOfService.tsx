@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router-dom'
-import AnnouncementBar from '../components/AnnouncementBar'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import heroImage from '../assets/main-hero-image.webp'
@@ -51,7 +50,6 @@ const TermsOfService: React.FC = () => {
 
   return (
     <div className="terms-page">
-      <AnnouncementBar language={language} isIndonesian={isIndonesian} />
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
         <title>{t.meta.title}</title>
         <meta name="description" content={t.meta.description} />

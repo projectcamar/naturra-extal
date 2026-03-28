@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useParams, Link, useLocation, Navigate } from 'react-router-dom'
 import { Mail, MessageCircle, Share2, Facebook, Twitter, Linkedin, Copy, Check } from 'lucide-react'
-import AnnouncementBar from '../components/AnnouncementBar'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Breadcrumb from '../components/Breadcrumb'
@@ -414,7 +413,6 @@ const BlogPost: React.FC = () => {
   if (isLanguageLoading) {
     return (
       <div className="blog-page blog-post-page">
-        <AnnouncementBar language={language} isIndonesian={isIndonesian} />
         <Header isIndonesian={isIndonesian} language={language} />
         <main className="blog-post-main" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60vh' }}>
           <div style={{ textAlign: 'center' }}>
@@ -586,7 +584,6 @@ const BlogPost: React.FC = () => {
 
   return (
     <div className="blog-page blog-post-page">
-      <AnnouncementBar language={language} isIndonesian={isIndonesian} />
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
         <title>{truncateTitle(`${post.title} - Mangala Living`)}</title>
         <meta name="description" content={truncateMetaDescription(metaDescription)} />

@@ -1,4 +1,4 @@
-import { LanguageCode } from './languageManager';
+import type { LanguageCode } from './languageManager';
 
 type HomeTranslations = Record<string, string>;
 type PartnershipTranslations = Record<string, string | string[]>;

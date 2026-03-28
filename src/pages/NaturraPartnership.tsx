@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import AnnouncementBar from '../components/AnnouncementBar'
 import NaturraHeader from '../components/NaturraHeader'
 import NaturraFooter from '../components/NaturraFooter'
 import heroImage from '../assets/main-hero-image.webp'
@@ -57,7 +56,6 @@ const NaturraPartnership: React.FC = () => {
 
   return (
     <div className="partnership-page">
-      <AnnouncementBar language={language} isIndonesian={isIndonesian} />
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
         <title>{translations.pageTitle}</title>
         <meta name="description" content={translations.metaDescription} />

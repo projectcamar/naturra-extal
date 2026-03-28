@@ -2,7 +2,6 @@ import React, { useState, useMemo, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { ChevronDown } from 'lucide-react'
-import AnnouncementBar from '../components/AnnouncementBar'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Breadcrumb from '../components/Breadcrumb'
@@ -21,7 +20,7 @@ const BestSellers: React.FC = () => {
   const [language, setLanguage] = useState<LanguageCode>(() => {
     return getCurrentLanguage(location.pathname, location.search)
   })
-  
+
   useEffect(() => {
     const currentLang = getCurrentLanguage(location.pathname, location.search)
     if (currentLang !== language) {
@@ -33,7 +32,7 @@ const BestSellers: React.FC = () => {
   useEffect(() => {
     const stored = getStoredLanguage()
     const urlLang = getCurrentLanguage(location.pathname, location.search)
-    
+
     if (stored || urlLang !== 'en') {
       return
     }
@@ -86,7 +85,6 @@ const BestSellers: React.FC = () => {
 
   return (
     <div className="product-category-page">
-      <AnnouncementBar language={language} isIndonesian={isIndonesian} />
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
         <title>Best Sellers - Mangala Living</title>
         <meta name="description" content="Browse our best-selling industrial furniture collection at Mangala Living" />
@@ -100,29 +98,29 @@ const BestSellers: React.FC = () => {
         <meta property="og:locale:alternate" content="id_ID" />
         <meta property="og:locale:alternate" content="en_US" />
       </Helmet>
-      
+
       <Header isIndonesian={isIndonesian} language={language} />
-      
+
       <main className="category-main">
         <div className="container">
           <Breadcrumb items={breadcrumbItems} />
-          
+
           <h1 className="category-page-title">Best Sellers</h1>
-          
+
           <div className="category-controls">
             <p className="showing-results">
               Showing 1-{sortedProducts.length} of {sortedProducts.length} results
             </p>
-            
+
             <div className="sort-dropdown">
-              <button 
+              <button
                 className="sort-button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
                 Sort by: {sortBy === 'default' ? 'Default' : sortBy === 'price-low' ? 'Price: Low to High' : 'Price: High to Low'}
                 <ChevronDown size={16} />
               </button>
-              
+
               {isDropdownOpen && (
                 <div className="sort-options">
                   <button onClick={() => { setSortBy('default'); setIsDropdownOpen(false); }}>Default</button>
@@ -132,19 +130,19 @@ const BestSellers: React.FC = () => {
               )}
             </div>
           </div>
-          
+
           <div className="category-products-grid">
             {sortedProducts.map((product) => {
               const translatedName = getProductName(product.slug, isIndonesian, language) || product.name
               return (
-                <Link 
+                <Link
                   key={product.id}
                   to={`/product/${product.slug}`}
                   className="category-product-card"
                 >
                   <div className="category-product-image">
-                    <img 
-                      src={product.image} 
+                    <img
+                      src={product.image}
                       alt={`${translatedName} - Best Seller Industrial Furniture ${product.categories.join(' ')} Mangala Living`}
                       title={`${translatedName} - Best Seller ${product.categories.join(' ')} Premium Furniture`}
                       loading="lazy"
@@ -158,16 +156,16 @@ const BestSellers: React.FC = () => {
                   </div>
                   <div className="category-product-info">
                     <h3 className="category-product-name">{translatedName}</h3>
-                  <p className="category-product-cats">{translateCategories(product.categories, language)}</p>
+                    <p className="category-product-cats">{translateCategories(product.categories, language)}</p>
                     <p className="category-product-price">{product.price}</p>
                   </div>
                 </Link>
-                )
-              })}
-            </div>
+              )
+            })}
+          </div>
         </div>
       </main>
-      
+
       <Footer isIndonesian={isIndonesian} language={language} />
     </div>
   )

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link, useLocation } from 'react-router-dom'
 import { CheckCircle, Phone, Mail, MapPin, Clock, Award, Shield, Zap } from 'lucide-react'
-import AnnouncementBar from '../components/AnnouncementBar'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { generateLocalBusinessStructuredData, generateFAQSchema } from '../utils/structuredData'
@@ -18,9 +17,9 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
   const location = useLocation()
   const searchParams = new URLSearchParams(location.search)
   const langParam = searchParams.get('lang')
-    const isIndonesian = langParam !== 'en'
-    const language = isIndonesian ? 'id' : 'en'
-    const localeMeta = generateLanguageSpecificMeta(isIndonesian)
+  const isIndonesian = langParam !== 'en'
+  const language = isIndonesian ? 'id' : 'en'
+  const localeMeta = generateLanguageSpecificMeta(isIndonesian)
   const localizedUrls = generateLocalizedUrls(location.pathname, location.search)
 
   useEffect(() => {
@@ -42,7 +41,7 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
         {localizedUrls.alternates.map((alternate) => (
           <link key={`furniture-besi-hreflang-${alternate.hrefLang}`} rel="alternate" hrefLang={alternate.hrefLang} href={alternate.href} />
         ))}
-        
+
         {/* Open Graph */}
         <meta property="og:title" content="Furniture Besi Custom Bekasi - Workshop Harga Pabrik" />
         <meta property="og:description" content="Workshop furniture besi custom di Bekasi. Produksi langsung, harga pabrik, material premium, finishing powder coating. Free konsultasi & garansi 1 tahun." />
@@ -51,7 +50,7 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
         <meta property="og:locale" content={localeMeta.locale} />
         <meta property="og:locale:alternate" content="id_ID" />
         <meta property="og:locale:alternate" content="en_US" />
-        
+
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(localBusinessSchema)}
@@ -63,8 +62,7 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
         )}
       </Helmet>
 
-        <AnnouncementBar language={language} isIndonesian={isIndonesian} />
-        <Header isIndonesian={isIndonesian} language={language} />
+      <Header isIndonesian={isIndonesian} language={language} />
 
       {/* Hero Section - Above the Fold Optimization */}
       <section className="landing-hero">
@@ -73,12 +71,12 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
             <Award size={20} />
             <span>Terpercaya Sejak 1999 | 1000+ Klien Puas</span>
           </div>
-          
+
           <h1 className="landing-hero-title">
-            Furniture Besi Custom Bekasi<br/>
+            Furniture Besi Custom Bekasi<br />
             <span className="highlight">Workshop Langsung - Harga Pabrik</span>
           </h1>
-          
+
           <p className="landing-hero-subtitle">
             Produksi furniture besi custom berkualitas premium untuk cafe, restoran, hotel, dan kantor di Bekasi & Jabodetabek. Material terbaik, finishing powder coating tahan 10 tahun, garansi kualitas.
           </p>
@@ -99,11 +97,11 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
           </div>
 
           <div className="landing-hero-cta">
-            <a href="https://wa.me/+6288801146881?text=Halo%20Mangala%20Living%2C%20saya%20mau%20konsultasi%20furniture%20besi%20custom%20Bekasi" 
-               className="cta-button primary" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               onClick={() => trackWhatsAppClick('furniture_besi_custom_hero_cta')}>
+            <a href="https://wa.me/+6288801146881?text=Halo%20Mangala%20Living%2C%20saya%20mau%20konsultasi%20furniture%20besi%20custom%20Bekasi"
+              className="cta-button primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('furniture_besi_custom_hero_cta')}>
               <Phone size={20} />
               Konsultasi Gratis via WhatsApp
             </a>
@@ -133,8 +131,8 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
         </div>
 
         <div className="landing-hero-image">
-          <img 
-            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&auto=format&fit=crop" 
+          <img
+            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&auto=format&fit=crop"
             alt="Furniture Besi Custom Bekasi - Workshop Industrial Furniture Mangala Living Since 1999"
             title="Furniture Besi Custom Bekasi - Premium Industrial Furniture Workshop with 25+ Years Experience"
             loading="eager"
@@ -163,7 +161,7 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
               </div>
               <h3>Workshop Strategis di Bekasi</h3>
               <p>
-                Lokasi di Jl. Raya Setu Cikarang Bar, Bekasi memudahkan akses untuk klien di Jakarta Timur, Bekasi, Cikarang. 
+                Lokasi di Jl. Raya Setu Cikarang Bar, Bekasi memudahkan akses untuk klien di Jakarta Timur, Bekasi, Cikarang.
                 <strong> Gratis delivery untuk Bekasi & Jakarta Timur!</strong>
               </p>
               <ul>
@@ -342,11 +340,11 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
           <div className="catalog-cta">
             <p><strong>Catatan: Semua harga sudah termasuk finishing powder coating & garansi kualitas</strong></p>
             <p>Volume discount hingga 15% untuk order 20+ pieces | 25% untuk 50+ pieces</p>
-            <a href="https://wa.me/+6288801146881?text=Halo%2C%20saya%20mau%20tanya%20harga%20detail%20furniture%20besi%20custom%20Bekasi" 
-               className="cta-button primary" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               onClick={() => trackWhatsAppClick('furniture_besi_custom_quotation')}>
+            <a href="https://wa.me/+6288801146881?text=Halo%2C%20saya%20mau%20tanya%20harga%20detail%20furniture%20besi%20custom%20Bekasi"
+              className="cta-button primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('furniture_besi_custom_quotation')}>
               <Phone size={20} />
               Minta Quotation Lengkap
             </a>
@@ -358,7 +356,7 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
       <section className="landing-process">
         <div className="container">
           <h2 className="section-title">Proses Order Furniture Besi Custom - Mudah & Transparan</h2>
-          
+
           <div className="process-steps">
             <div className="process-step">
               <div className="step-number">1</div>
@@ -408,7 +406,7 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
         <section className="landing-faq">
           <div className="container">
             <h2 className="section-title">FAQ - Furniture Besi Custom Bekasi</h2>
-            
+
             <div className="faq-grid">
               {faqData.faqs.map((faq, index) => (
                 <details key={index} className="faq-item">
@@ -426,13 +424,13 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
         <div className="container">
           <h2>Siap Order Furniture Besi Custom Bekasi?</h2>
           <p>Dapatkan <strong>FREE konsultasi design</strong> + <strong>discount 10% untuk order pertama</strong></p>
-          
+
           <div className="contact-methods">
-            <a href="https://wa.me/+6288801146881?text=Halo%20Mangala%20Living%2C%20saya%20dari%20website%20mau%20konsultasi%20furniture%20besi%20custom" 
-               className="contact-card whatsapp"
-               target="_blank"
-               rel="noopener noreferrer"
-               onClick={() => trackWhatsAppClick('furniture_besi_custom_contact_card')}>
+            <a href="https://wa.me/+6288801146881?text=Halo%20Mangala%20Living%2C%20saya%20dari%20website%20mau%20konsultasi%20furniture%20besi%20custom"
+              className="contact-card whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('furniture_besi_custom_contact_card')}>
               <Phone size={32} />
               <strong>WhatsApp (Fast Response)</strong>
               <span>+6288801146881</span>
@@ -453,16 +451,16 @@ const FurnitureBesiCustomBekasi: React.FC = () => {
             <div className="contact-card hours">
               <Clock size={32} />
               <strong>Jam Operasional</strong>
-              <span>Senin-Jumat: 08:00-17:00<br/>Sabtu: 08:00-15:00</span>
+              <span>Senin-Jumat: 08:00-17:00<br />Sabtu: 08:00-15:00</span>
             </div>
           </div>
 
           <div className="final-cta-button">
-            <a href="https://wa.me/+6288801146881?text=PROMO2025%20-%20Saya%20mau%20konsultasi%20furniture%20besi%20custom%20Bekasi" 
-               className="cta-button primary large"
-               target="_blank"
-               rel="noopener noreferrer"
-               onClick={() => trackWhatsAppClick('furniture_besi_custom_promo_cta')}>
+            <a href="https://wa.me/+6288801146881?text=PROMO2025%20-%20Saya%20mau%20konsultasi%20furniture%20besi%20custom%20Bekasi"
+              className="cta-button primary large"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('furniture_besi_custom_promo_cta')}>
               <Phone size={24} />
               Konsultasi Gratis Sekarang - Dapatkan Promo!
             </a>

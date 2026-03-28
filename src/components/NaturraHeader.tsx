@@ -194,46 +194,6 @@ const NaturraHeader: React.FC<NaturraHeaderProps> = ({ isIndonesian = false, lan
                 +62 895-1395-7752
               </a>
             </div>
-            <div className="naturra-header__topbar-right">
-
-              <div className="naturra-header__language-switcher">
-                <button
-                  className="naturra-language-btn"
-                  onClick={toggleLanguage}
-                  aria-expanded={isLanguageOpen}
-                >
-                  <span className={`flag ${getCurrentFlag()}`}></span>
-                  <span className="language-text">{getCurrentLanguageDisplay()}</span>
-                  <ChevronDown size={14} />
-                </button>
-                {isLanguageOpen && (
-                  <div className="naturra-language-dropdown">
-                    {[
-                      { code: 'en', flag: 'flag-us', label: 'English' },
-                      { code: 'id', flag: 'flag-id', label: 'Indonesia' },
-                      { code: 'ar', flag: 'flag-ar', label: 'العربية' },
-                      { code: 'zh', flag: 'flag-zh', label: '中文' },
-                      { code: 'ja', flag: 'flag-ja', label: '日本語' },
-                      { code: 'es', flag: 'flag-es', label: 'Español' },
-                      { code: 'fr', flag: 'flag-fr', label: 'Français' },
-                      { code: 'ko', flag: 'flag-ko', label: '한국어' }
-                    ].map(l => (
-                      <button
-                        key={l.code}
-                        className="naturra-language-option"
-                        onClick={() => handleLanguageChange(l.code as any)}
-                      >
-                        <span className={`flag ${l.flag}`}></span>
-                        <span>{l.label}</span>
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              <span className="naturra-header__company-name">CV Naturra Extal International</span>
-
-            </div>
           </div>
         </div>
 
@@ -267,6 +227,40 @@ const NaturraHeader: React.FC<NaturraHeaderProps> = ({ isIndonesian = false, lan
           </nav>
 
           <div className="naturra-header__actions">
+            <div className="naturra-header__language-switcher">
+              <button
+                className="naturra-language-btn"
+                onClick={toggleLanguage}
+                aria-expanded={isLanguageOpen}
+              >
+                <span className={`flag ${getCurrentFlag()}`}></span>
+                <span className="language-text">{getCurrentLanguageDisplay()}</span>
+                <ChevronDown size={14} />
+              </button>
+              {isLanguageOpen && (
+                <div className="naturra-language-dropdown">
+                  {[
+                    { code: 'en', flag: 'flag-us', label: 'EN' },
+                    { code: 'id', flag: 'flag-id', label: 'ID' },
+                    { code: 'ar', flag: 'flag-ar', label: 'AR' },
+                    { code: 'zh', flag: 'flag-zh', label: 'ZH' },
+                    { code: 'ja', flag: 'flag-ja', label: 'JA' },
+                    { code: 'es', flag: 'flag-es', label: 'ES' },
+                    { code: 'fr', flag: 'flag-fr', label: 'FR' },
+                    { code: 'ko', flag: 'flag-ko', label: 'KO' }
+                  ].map(l => (
+                    <button
+                      key={l.code}
+                      className="naturra-language-option"
+                      onClick={() => handleLanguageChange(l.code as any)}
+                    >
+                      <span className={`flag ${l.flag}`}></span>
+                      <span>{l.label}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
             <button className="naturra-search-btn" onClick={toggleSearch} aria-label={t.search}>
               <Search size={20} />
             </button>

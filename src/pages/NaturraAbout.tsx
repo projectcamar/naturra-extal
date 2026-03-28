@@ -137,8 +137,8 @@ const NaturraAbout: React.FC = () => {
             <section className="naturra-about__journey">
                 <div className="naturra-about__journey-bg">
                     <img
-                        src="https://images.unsplash.com/photo-1501004318855-e73c3a879c5f?w=1400&q=80"
-                        alt="Agricultural supply chain"
+                        src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200"
+                        alt="Sustainable Indonesian agriculture"
                         loading="lazy"
                     />
                 </div>

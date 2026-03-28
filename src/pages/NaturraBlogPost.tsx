@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useParams, Link, useLocation, Navigate } from 'react-router-dom'
 import { Mail, MessageCircle, Share2, Facebook, Twitter, Linkedin, Copy, Check } from 'lucide-react'
-import AnnouncementBar from '../components/AnnouncementBar'
 import NaturraHeader from '../components/NaturraHeader'
 import NaturraFooter from '../components/NaturraFooter'
 import Breadcrumb from '../components/Breadcrumb'
@@ -414,7 +413,6 @@ const NaturraBlogPost: React.FC = () => {
   if (isLanguageLoading) {
     return (
       <div className="blog-page blog-post-page">
-        <AnnouncementBar language={language} isIndonesian={isIndonesian} />
         <NaturraHeader />
         <main className="blog-post-main" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60vh' }}>
           <div style={{ textAlign: 'center' }}>
@@ -586,7 +584,6 @@ const NaturraBlogPost: React.FC = () => {
 
   return (
     <div className="blog-page blog-post-page">
-      <AnnouncementBar language={language} isIndonesian={isIndonesian} />
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
         <title>{truncateTitle(`${post.title} - Naturra Extal`)}</title>
         <meta name="description" content={truncateMetaDescription(metaDescription)} />

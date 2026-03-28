@@ -2,7 +2,6 @@ import React, { useState, useMemo, useEffect } from 'react'
 import { useParams, Link, useLocation, Navigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { ChevronDown } from 'lucide-react'
-import AnnouncementBar from '../components/AnnouncementBar'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Breadcrumb from '../components/Breadcrumb'
@@ -351,7 +350,7 @@ const ProductCategory: React.FC = () => {
   const location = useLocation()
   const [sortBy, setSortBy] = useState('default')
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-  
+
   const [language, setLanguage] = useState<LanguageCode>(() => {
     return getCurrentLanguage(location.pathname, location.search)
   })
@@ -384,7 +383,7 @@ const ProductCategory: React.FC = () => {
       setLanguage(currentLang)
     }
   }, [location.pathname, location.search, language])
-  
+
   const isIndonesian = language === 'id'
   const isLoading = false
   const uiTranslations = CATEGORY_UI_TRANSLATIONS[language] ?? CATEGORY_UI_TRANSLATIONS.en
@@ -399,9 +398,9 @@ const ProductCategory: React.FC = () => {
     const convertPrices = async () => {
       const usdPriceMap: { [key: number]: string } = {}
       const highlightedPriceMap: { [key: number]: string } = {}
-      
+
       const targetCurrency = LANGUAGE_CURRENCY_MAP[language]
-      
+
       for (const product of ALL_PRODUCTS) {
         // Always convert to USD
         const usdPrice = await convertIDRToUSD(product.price)
@@ -427,7 +426,7 @@ const ProductCategory: React.FC = () => {
         usdPriceMap[product.id] = secondaryUsdLabel
         highlightedPriceMap[product.id] = primaryPrice
       }
-      
+
       setUsdPrices(usdPriceMap)
       setHighlightedPrices(highlightedPriceMap)
     }
@@ -435,7 +434,7 @@ const ProductCategory: React.FC = () => {
   }, [language])
 
   const filteredProducts = useMemo(() => {
-    let products = ALL_PRODUCTS.filter(product => 
+    let products = ALL_PRODUCTS.filter(product =>
       product.categories.some(cat => cat.toLowerCase() === categoryName.toLowerCase())
     )
 
@@ -468,12 +467,11 @@ const ProductCategory: React.FC = () => {
   if (isLoading) {
     return (
       <div className="product-category-page">
-        <AnnouncementBar language={language} isIndonesian={isIndonesian} />
         <Header isIndonesian={isIndonesian} language={language} />
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          alignItems: 'center', 
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
           height: '50vh',
           background: '#f8f9fa'
         }}>
@@ -499,7 +497,6 @@ const ProductCategory: React.FC = () => {
 
   return (
     <div className="product-category-page">
-      <AnnouncementBar language={language} isIndonesian={isIndonesian} />
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
         <title>{uiTranslations.pageTitle(localizedCategoryName)}</title>
         <meta name="description" content={uiTranslations.metaDescription(localizedCategoryName, filteredProducts.length)} />
@@ -511,7 +508,7 @@ const ProductCategory: React.FC = () => {
         {localizedUrls.alternates.map((alternate) => (
           <link key={`product-category-hreflang-${alternate.hrefLang}`} rel="alternate" hrefLang={alternate.hrefLang} href={alternate.href} />
         ))}
-        
+
         {/* Open Graph */}
         <meta property="og:title" content={uiTranslations.ogTitle(localizedCategoryName)} />
         <meta property="og:description" content={uiTranslations.ogDescription(localizedCategoryName)} />
@@ -521,12 +518,12 @@ const ProductCategory: React.FC = () => {
         {OG_LOCALES.filter(altLocale => altLocale !== localeMeta.locale).map((altLocale) => (
           <meta key={`product-category-og-${altLocale}`} property="og:locale:alternate" content={altLocale} />
         ))}
-        
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={uiTranslations.twitterTitle(localizedCategoryName)} />
         <meta name="twitter:description" content={uiTranslations.twitterDescription(localizedCategoryName, filteredProducts.length)} />
-        
+
         {/* Breadcrumb Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -548,14 +545,14 @@ const ProductCategory: React.FC = () => {
             ]
           })}
         </script>
-        
+
         {/* CollectionPage Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-              "name": uiTranslations.collectionName(localizedCategoryName),
-              "description": uiTranslations.collectionDescription(localizedCategoryName, filteredProducts.length),
+            "name": uiTranslations.collectionName(localizedCategoryName),
+            "description": uiTranslations.collectionDescription(localizedCategoryName, filteredProducts.length),
             "url": `https://mangala-living.com/product-category/${category}`,
             "mainEntity": {
               "@type": "ItemList",
@@ -580,15 +577,15 @@ const ProductCategory: React.FC = () => {
           })}
         </script>
       </Helmet>
-      
+
       <Header isIndonesian={isIndonesian} language={language} />
-      
+
       <main className="category-main">
         <div className="container">
           <Breadcrumb items={breadcrumbItems} />
-          
+
           <h1 className="category-page-title">{localizedCategoryName}</h1>
-          
+
           <div className="category-controls">
             {filteredProducts.length > 0 ? (
               <p className="showing-results">
@@ -597,17 +594,17 @@ const ProductCategory: React.FC = () => {
             ) : (
               <p className="showing-results">{uiTranslations.noResults}</p>
             )}
-            
+
             {filteredProducts.length > 0 && (
               <div className="sort-dropdown">
-                <button 
-                  className="sort-button" 
+                <button
+                  className="sort-button"
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 >
                   {uiTranslations.sortByLabel} {sortBy === 'default' ? uiTranslations.defaultSort : sortBy === 'price-low' ? uiTranslations.priceLow : uiTranslations.priceHigh}
                   <ChevronDown size={16} />
                 </button>
-                
+
                 {isDropdownOpen && (
                   <div className="sort-options">
                     <button onClick={() => { setSortBy('default'); setIsDropdownOpen(false); }}>{uiTranslations.defaultSort}</button>
@@ -618,21 +615,21 @@ const ProductCategory: React.FC = () => {
               </div>
             )}
           </div>
-          
+
           <div className="category-products-grid">
             {filteredProducts.map((product) => {
               const translatedName = getProductName(product.slug, isIndonesian) || product.name
               return (
-                <Link 
+                <Link
                   key={product.id}
                   to={`/product/${product.slug}`}
                   className="category-product-card"
                 >
                   <div className="category-product-image">
-                    <img 
-                      src={product.image} 
-                        alt={`${translatedName} - ${localizedCategoryName} Industrial Furniture Collection Mangala Living`}
-                        title={`${translatedName} - ${localizedCategoryName} Premium Furniture from Mangala Living Workshop Bekasi`}
+                    <img
+                      src={product.image}
+                      alt={`${translatedName} - ${localizedCategoryName} Industrial Furniture Collection Mangala Living`}
+                      title={`${translatedName} - ${localizedCategoryName} Premium Furniture from Mangala Living Workshop Bekasi`}
                       loading="lazy"
                       width="300"
                       height="200"
@@ -645,51 +642,51 @@ const ProductCategory: React.FC = () => {
                   </div>
                   <div className="category-product-info">
                     <h3 className="category-product-name">{translatedName}</h3>
-                  <p className="category-product-cats">{translateCategories(product.categories, language)}</p>
-                  {usdPrices[product.id] && highlightedPrices[product.id] ? (
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                      {/* Highlighted currency based on language */}
-                      <p
-                        className="category-product-price"
-                        style={{
-                          margin: 0,
-                          fontSize: '0.875rem',
-                          fontWeight: 600,
-                          color: '#333'
-                        }}
-                      >
-                        {highlightedPrices[product.id]}
-                      </p>
-                      {/* USD always non-highlighted */}
-                      <p
-                        style={{
-                          margin: 0,
-                          fontSize: '0.75rem',
-                          fontWeight: 400,
-                          color: '#999'
-                        }}
-                      >
-                        {usdPrices[product.id]}
-                      </p>
-                    </div>
-                  ) : (
-                    <p className="category-product-price">{product.price}</p>
-                  )}
-                </div>
-              </Link>
+                    <p className="category-product-cats">{translateCategories(product.categories, language)}</p>
+                    {usdPrices[product.id] && highlightedPrices[product.id] ? (
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                        {/* Highlighted currency based on language */}
+                        <p
+                          className="category-product-price"
+                          style={{
+                            margin: 0,
+                            fontSize: '0.875rem',
+                            fontWeight: 600,
+                            color: '#333'
+                          }}
+                        >
+                          {highlightedPrices[product.id]}
+                        </p>
+                        {/* USD always non-highlighted */}
+                        <p
+                          style={{
+                            margin: 0,
+                            fontSize: '0.75rem',
+                            fontWeight: 400,
+                            color: '#999'
+                          }}
+                        >
+                          {usdPrices[product.id]}
+                        </p>
+                      </div>
+                    ) : (
+                      <p className="category-product-price">{product.price}</p>
+                    )}
+                  </div>
+                </Link>
               )
             })}
           </div>
-          
+
           {/* AI-Optimized Category Content */}
-          <CategoryAIContent 
+          <CategoryAIContent
             category={categoryName}
             productCount={filteredProducts.length}
             isIndonesian={isIndonesian}
           />
         </div>
       </main>
-      
+
       <Footer isIndonesian={isIndonesian} language={language} />
     </div>
   )

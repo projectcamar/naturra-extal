@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router-dom'
 import { FileText, MessageCircle, Truck, Wrench } from 'lucide-react'
-import AnnouncementBar from '../components/AnnouncementBar'
 import NaturraFooter from '../components/NaturraFooter'
 import NaturraHeader from '../components/NaturraHeader'
 import heroImage from '../assets/main-hero-image.webp'
@@ -45,7 +44,6 @@ const NaturraCustomOrder: React.FC = () => {
 
     detectIP()
   }, [])
-  const isIndonesian = language === 'id'
   const t = CUSTOM_ORDER_TRANSLATIONS[language] ?? CUSTOM_ORDER_TRANSLATIONS.en
 
   const localeMeta = generateLanguageSpecificMeta(language)
@@ -53,7 +51,6 @@ const NaturraCustomOrder: React.FC = () => {
 
   return (
     <div className="custom-order-page">
-      <AnnouncementBar language={language} isIndonesian={isIndonesian} />
       <Helmet
         htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': language }}
       >

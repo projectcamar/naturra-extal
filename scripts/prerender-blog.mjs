@@ -26,7 +26,6 @@ const CSS_FILES = [
   path.join(ROOT_DIR, 'src', 'components', 'Header.css'),
   path.join(ROOT_DIR, 'src', 'components', 'Footer.css'),
   path.join(ROOT_DIR, 'src', 'components', 'DualLanguage.css'),
-  path.join(ROOT_DIR, 'src', 'components', 'AnnouncementBar.css')
 ]
 
 const escapeHtml = (str) => {
@@ -488,15 +487,15 @@ const makeAbsoluteAssetUrl = (baseUrl, relativePath) => {
 const generateAnnouncementBarHTML = (isIndonesian) => {
   const content = isIndonesian
     ? {
-        text: 'Wujudkan Furniture Impian Anda!',
-        highlight: 'Gratis Konsultasi Desain',
-        cta: 'Pesan Custom Order Sekarang'
-      }
+      text: 'Wujudkan Furniture Impian Anda!',
+      highlight: 'Gratis Konsultasi Desain',
+      cta: 'Pesan Custom Order Sekarang'
+    }
     : {
-        text: 'Bring Your Dream Furniture to Life!',
-        highlight: 'Free Design Consultation',
-        cta: 'Order Custom Furniture Now'
-      }
+      text: 'Bring Your Dream Furniture to Life!',
+      highlight: 'Free Design Consultation',
+      cta: 'Order Custom Furniture Now'
+    }
 
   return `
     <div class="announcement-bar" role="banner" aria-label="${isIndonesian ? 'Pengumuman' : 'Announcement'}">
@@ -576,8 +575,8 @@ const generateBreadcrumbHTML = (post) => {
     return `
       <li class="breadcrumb-item" itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
         ${isLast
-          ? `<span itemProp="name" aria-current="page">${escapeHtml(item.label)}</span>`
-          : `<a href="${item.url}" itemProp="item"><span itemProp="name">${escapeHtml(item.label)}</span></a>`}
+        ? `<span itemProp="name" aria-current="page">${escapeHtml(item.label)}</span>`
+        : `<a href="${item.url}" itemProp="item"><span itemProp="name">${escapeHtml(item.label)}</span></a>`}
         <meta itemProp="position" content="${position}">
         ${separator}
       </li>
@@ -743,17 +742,17 @@ const generateAuthorCardHTML = (post, isIndonesian) => {
     : 'Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta'
   const experiences = isExport
     ? [
-        'Infrastructure Engineer at Damai Putra Group (3+ years)',
-        'Design Engineer & Architectural Drafter (5+ years)',
-        'Alumni of Diponegoro University',
-        'Commercial Space Design & Construction Specialist'
-      ]
+      'Infrastructure Engineer at Damai Putra Group (3+ years)',
+      'Design Engineer & Architectural Drafter (5+ years)',
+      'Alumni of Diponegoro University',
+      'Commercial Space Design & Construction Specialist'
+    ]
     : [
-        'Infrastructure Engineer at Damai Putra Group (3+ tahun)',
-        'Design Engineer & Architectural Drafter (5+ tahun)',
-        'Alumni Universitas Diponegoro',
-        'Spesialis Commercial Space Design & Construction'
-      ]
+      'Infrastructure Engineer at Damai Putra Group (3+ tahun)',
+      'Design Engineer & Architectural Drafter (5+ tahun)',
+      'Alumni Universitas Diponegoro',
+      'Spesialis Commercial Space Design & Construction'
+    ]
 
   return `
     <div class="blog-post-author-card">
@@ -789,8 +788,8 @@ const generateCTAHTML = (post, isIndonesian) => {
         <h2>${isExport ? 'Interested in Our Industrial Furniture?' : 'Tertarik dengan Furniture Industrial Kami?'}</h2>
         <p class="section-subtitle">
           ${isExport
-        ? 'Visit our complete collection of high-quality custom industrial furniture from Mangala Living.'
-            : 'Kunjungi koleksi lengkap furniture industrial custom berkualitas tinggi dari Mangala Living.'}
+      ? 'Visit our complete collection of high-quality custom industrial furniture from Mangala Living.'
+      : 'Kunjungi koleksi lengkap furniture industrial custom berkualitas tinggi dari Mangala Living.'}
         </p>
       </div>
       <div class="blog-post-cta-actions">
@@ -838,18 +837,18 @@ const generateServiceAreasHTML = (isIndonesian) => `
         <h3 class="area-group-title"><span class="area-icon">*</span>KAWASAN KOMERSIAL & INDUSTRIAL</h3>
         <div class="commercial-grid">
           ${[
-            { icon: 'MB', name: 'Summarecon Bekasi', desc: 'Mall & Boulevard Area' },
-            { icon: 'RC', name: 'Harapan Indah', desc: 'Residential & Commercial' },
-            { icon: 'GG', name: 'Grand Galaxy City', desc: 'Superblock F&B District' },
-            { icon: 'ME', name: 'Galaxy Bekasi', desc: 'Mall & Entertainment' },
-            { icon: 'PR', name: 'Kemang Pratama', desc: 'Premium Residential' },
-            { icon: 'LC', name: 'Lippo Cikarang', desc: 'Mall & Commercial Hub' },
-            { icon: 'IN', name: 'Jababeka', desc: 'Industrial Estate' },
-            { icon: 'MU', name: 'Deltamas', desc: 'Mixed-Use Development' },
-            { icon: 'EI', name: 'EJIP Cikarang', desc: 'East Jakarta Industrial Park' },
-            { icon: 'CR', name: 'Greenland International', desc: 'Commercial & Residential' },
-            { icon: 'IT', name: 'MM2100', desc: 'Industrial Town' }
-          ].map(area => `
+    { icon: 'MB', name: 'Summarecon Bekasi', desc: 'Mall & Boulevard Area' },
+    { icon: 'RC', name: 'Harapan Indah', desc: 'Residential & Commercial' },
+    { icon: 'GG', name: 'Grand Galaxy City', desc: 'Superblock F&B District' },
+    { icon: 'ME', name: 'Galaxy Bekasi', desc: 'Mall & Entertainment' },
+    { icon: 'PR', name: 'Kemang Pratama', desc: 'Premium Residential' },
+    { icon: 'LC', name: 'Lippo Cikarang', desc: 'Mall & Commercial Hub' },
+    { icon: 'IN', name: 'Jababeka', desc: 'Industrial Estate' },
+    { icon: 'MU', name: 'Deltamas', desc: 'Mixed-Use Development' },
+    { icon: 'EI', name: 'EJIP Cikarang', desc: 'East Jakarta Industrial Park' },
+    { icon: 'CR', name: 'Greenland International', desc: 'Commercial & Residential' },
+    { icon: 'IT', name: 'MM2100', desc: 'Industrial Town' }
+  ].map(area => `
             <div class="commercial-card">
               <span class="commercial-icon">${area.icon}</span>
               <h4 class="commercial-name">${area.name}</h4>
@@ -1088,7 +1087,6 @@ const generateBlogPostHTML = (post, content, {
   }
 
   const articleBodyHTML = sectionParts.join('\n')
-  const announcementBarHTML = generateAnnouncementBarHTML(isIndonesian)
   const headerHTML = generateHeaderHTML(isIndonesian)
   const breadcrumbHTML = generateBreadcrumbHTML(post)
 
@@ -1183,7 +1181,6 @@ const generateBlogPostHTML = (post, content, {
 </head>
   <body>
   <div id="prerender-fallback" class="blog-page blog-post-page">
-    ${announcementBarHTML}
     ${headerHTML}
     <section class="blog-post-hero" aria-labelledby="blog-post-title">
       <div class="blog-post-hero-image">
@@ -1269,14 +1266,14 @@ const generateBlogPostHTML = (post, content, {
 
 const main = async () => {
   console.log('[prerender] Starting blog pre-rendering...')
-  
+
   // Read source files
   const [blogSource, blogContentSource, productSource] = await Promise.all([
     readFileSafe(BLOG_FILE),
     readFileSafe(BLOG_CONTENT_FILE),
     readFileSafe(PRODUCT_FILE)
   ])
-  
+
   // Parse blog posts
   const blogPosts = parseBlogPosts(blogSource)
   console.log(`[prerender] Found ${blogPosts.length} blog posts`)
@@ -1292,7 +1289,7 @@ const main = async () => {
     loadCombinedCss(),
     loadAppAssets()
   ])
-  
+
   // Create output directory
   try {
     await fs.mkdir(OUTPUT_DIR, { recursive: true })
@@ -1301,13 +1298,13 @@ const main = async () => {
     console.error('[prerender] Failed to create output directory:', error)
     return
   }
-  
+
   // Generate HTML for each blog post
   let successCount = 0
   let failCount = 0
   let fallbackCount = 0
   const copiedAssets = new Set()
-  
+
   for (const post of blogPosts) {
     try {
       const manualContent = blogContentMap.get(post.slug)
@@ -1315,7 +1312,7 @@ const main = async () => {
       if (!manualContent) {
         fallbackCount++
       }
-      
+
       const otherArticles = blogPosts.filter(p => p.slug !== post.slug).slice(0, 3)
       const relevantProducts = getRelevantProductsForBlogPost(post, allProducts)
       const showcaseHeading = getProductShowcaseHeadingStatic(post.slug, post.title)
@@ -1338,17 +1335,17 @@ const main = async () => {
         inlineStyles,
         assetTags
       })
-      
+
       // Create directory for this post
       const postDir = path.join(OUTPUT_DIR, post.slug)
       await fs.mkdir(postDir, { recursive: true })
-      
+
       // Write HTML file
       const htmlPath = path.join(postDir, 'index.html')
       await fs.writeFile(htmlPath, html, 'utf8')
-      
+
       successCount++
-      
+
       if (successCount % 50 === 0) {
         console.log(`[prerender] Progress: ${successCount}/${blogPosts.length}`)
       }
@@ -1357,7 +1354,7 @@ const main = async () => {
       failCount++
     }
   }
-  
+
   console.log(`[prerender] ✅ Successfully generated ${successCount} blog post HTML files`)
   if (failCount > 0) {
     console.log(`[prerender] ❌ Failed to generate ${failCount} files`)

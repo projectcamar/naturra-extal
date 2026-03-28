@@ -16,7 +16,7 @@ export const NATURRA_PRODUCTS: NaturraProduct[] = [
         name: 'Cocoa Powder Pure',
         category: 'cocoa',
         badge: 'HS 1805.00.0',
-        image: 'https://images.unsplash.com/photo-1610611424854-5e07f4b2c5b6?w=600&q=80',
+        image: 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&q=80&w=800',
         description: 'Premium Indonesian pure cocoa powder with rich chocolate flavor and deep color. Ideal for confectionery, bakery, and beverage applications.',
         specs: ['Pure Cocoa', 'Natural Color', 'Premium Grade'],
         hsCode: '1805.00.0',

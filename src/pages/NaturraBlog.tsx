@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link, useLocation, useSearchParams } from 'react-router-dom'
 import { ChevronDown, ChevronUp } from 'lucide-react'
-import AnnouncementBar from '../components/AnnouncementBar'
 import NaturraHeader from '../components/NaturraHeader'
 import NaturraFooter from '../components/NaturraFooter'
 import heroImage from '../assets/main-hero-image.webp'
@@ -300,7 +299,6 @@ const NaturraBlog: React.FC = () => {
 
   return (
     <div className="blog-page">
-      <AnnouncementBar language={language} isIndonesian={isIndonesian} />
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
         <title>{truncateTitle('Blog Furniture Industrial & Tips Desain - Naturra Extal')}</title>
         <meta name="description" content={truncateMetaDescription('Panduan lengkap furniture industrial untuk cafe, restoran, hotel. Tips memilih furniture besi custom, cara merawat, tren desain 2025, perbandingan material, harga, dan area workshop Bekasi Jakarta. 135+ artikel berbasis pengalaman 25 tahun Naturra Extal.')} />

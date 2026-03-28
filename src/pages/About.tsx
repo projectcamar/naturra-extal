@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router-dom'
 import { Diamond, DollarSign, Globe, Wrench } from 'lucide-react'
-import AnnouncementBar from '../components/AnnouncementBar'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { generateFAQSchema, generateLocalBusinessStructuredData } from '../utils/structuredData'
@@ -684,7 +683,6 @@ const About: React.FC = () => {
 
   return (
     <div className="about-page">
-      <AnnouncementBar language={language} isIndonesian={isIndonesian} />
       <Helmet
         htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': language }}
       >

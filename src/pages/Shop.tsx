@@ -2,7 +2,6 @@ import React, { useState, useMemo, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { ChevronDown } from 'lucide-react'
-import AnnouncementBar from '../components/AnnouncementBar'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Breadcrumb from '../components/Breadcrumb'
@@ -61,9 +60,9 @@ const Shop: React.FC = () => {
     const convertPrices = async () => {
       const usdPriceMap: { [key: number]: string } = {}
       const highlightedPriceMap: { [key: number]: string } = {}
-      
+
       const targetCurrency = LANGUAGE_CURRENCY_MAP[language]
-      
+
       for (const product of ALL_PRODUCTS) {
         // Always convert to USD
         const usdPrice = await convertIDRToUSD(product.price)
@@ -89,7 +88,7 @@ const Shop: React.FC = () => {
         usdPriceMap[product.id] = secondaryUsdLabel
         highlightedPriceMap[product.id] = primaryPrice
       }
-      
+
       setUsdPrices(usdPriceMap)
       setHighlightedPrices(highlightedPriceMap)
     }
@@ -108,7 +107,7 @@ const Shop: React.FC = () => {
   const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>, index: number) => {
     const newRange = [...priceRange]
     const newValue = parseInt(e.target.value)
-    
+
     if (index === 0) {
       // Min slider - ensure it doesn't exceed max
       newRange[0] = Math.min(newValue, priceRange[1])
@@ -116,7 +115,7 @@ const Shop: React.FC = () => {
       // Max slider - ensure it doesn't go below min
       newRange[1] = Math.max(newValue, priceRange[0])
     }
-    
+
     setPriceRange(newRange as [number, number])
     setCurrentPage(1)
   }
@@ -363,7 +362,6 @@ const Shop: React.FC = () => {
 
   return (
     <div className="product-category-page shop-page-layout">
-      <AnnouncementBar language={language} isIndonesian={isIndonesian} />
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
         <title>All Products - Bar Set Lounge Set Storage Furniture Industrial | Mangala Living</title>
         <meta name="description" content="Browse all industrial furniture: bar set outdoor, lounge set sofa bench, storage rack display, new arrivals untuk cafe restoran hotel. Kualitas terbaik, harga terjangkau." />
@@ -374,7 +372,7 @@ const Shop: React.FC = () => {
         {localizedUrls.alternates.map((alternate) => (
           <link key={`shop-hreflang-${alternate.hrefLang}`} rel="alternate" hrefLang={alternate.hrefLang} href={alternate.href} />
         ))}
-        
+
         {/* Open Graph */}
         <meta property="og:title" content="All Products - Bar Set Lounge Set Storage Furniture Industrial | Mangala Living" />
         <meta property="og:description" content="Browse all furniture industrial: bar set outdoor, lounge set, sofa bench, storage rack, new arrivals untuk cafe restoran hotel." />
@@ -383,12 +381,12 @@ const Shop: React.FC = () => {
         <meta property="og:locale" content={localeMeta.locale} />
         <meta property="og:locale:alternate" content="id_ID" />
         <meta property="og:locale:alternate" content="en_US" />
-        
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="All Products - Bar Set Lounge Set Storage New Arrivals | Mangala Living" />
         <meta name="twitter:description" content="Browse bar set outdoor, lounge set sofa bench, storage rack display, new arrivals furniture industrial at Mangala Living." />
-        
+
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -404,7 +402,7 @@ const Shop: React.FC = () => {
                 const imageUrl = getProductImageUrl(product.image, product.slug)
                 const priceNumeric = product.price.replace(/[^\d]/g, '')
                 const description = `Industrial furniture ${product.name} by Mangala Living. Premium quality furniture made in Indonesia since 1999.`
-                
+
                 return {
                   "@type": "ListItem",
                   "position": index + 1,
@@ -474,39 +472,39 @@ const Shop: React.FC = () => {
                         "description": "Premium Industrial Scandinavian Furniture for Coffee Shops, Restaurants & Offices. Custom Solutions Since 1999."
                       }
                     },
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.8",
-                  "ratingCount": "127",
-                  "reviewCount": "127",
-                  "bestRating": "5",
-                  "worstRating": "1"
-                }
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "ratingCount": "127",
+                      "reviewCount": "127",
+                      "bestRating": "5",
+                      "worstRating": "1"
+                    }
                   }
                 }
               })
             }
           })}
         </script>
-        
+
         {/* Merchant Schema */}
         <script type="application/ld+json">
           {JSON.stringify(generateMerchantStructuredData())}
         </script>
       </Helmet>
-      
+
       <Header isIndonesian={isIndonesian} language={language} />
       <CurrencyHighlight isIndonesian={isIndonesian} language={language} />
-      
+
       <main className="category-main">
         <div className="container">
           <Breadcrumb items={breadcrumbItems} />
-          
+
           <h1 className="category-page-title">{t.allProduct}</h1>
-          
+
           {/* Mobile Filter Toggle */}
           <div className="mobile-filter-toggle">
-            <button 
+            <button
               className="filter-toggle-btn"
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
             >
@@ -514,7 +512,7 @@ const Shop: React.FC = () => {
               <ChevronDown size={16} />
             </button>
           </div>
-          
+
           <div className="shop-layout">
             {/* Sidebar */}
             <aside className={`shop-sidebar ${isSidebarOpen ? 'sidebar-open' : ''}`}>
@@ -575,16 +573,16 @@ const Shop: React.FC = () => {
                 <p className="showing-results">
                   {t.showing} {startIndex + 1}-{Math.min(endIndex, filteredAndSortedProducts.length)} {t.of} {filteredAndSortedProducts.length} {t.results}
                 </p>
-                
+
                 <div className="sort-dropdown">
-                  <button 
+                  <button
                     className="sort-button"
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   >
                     {t.sortBy}: {sortBy === 'default' ? t.default : sortBy === 'price-low' ? t.priceLow : t.priceHigh}
                     <ChevronDown size={16} />
                   </button>
-                  
+
                   {isDropdownOpen && (
                     <div className="sort-options">
                       <button onClick={() => { setSortBy('default'); setIsDropdownOpen(false); }}>{t.default}</button>
@@ -594,19 +592,19 @@ const Shop: React.FC = () => {
                   )}
                 </div>
               </div>
-              
+
               <div className="category-products-grid">
                 {currentProducts.map((product) => {
                   const translatedName = getProductName(product.slug, isIndonesian, language) || product.name
                   return (
-                    <Link 
+                    <Link
                       key={product.id}
                       to={`/product/${product.slug}`}
                       className="category-product-card"
                     >
                       <div className="category-product-image">
-                        <img 
-                          src={product.image} 
+                        <img
+                          src={product.image}
                           alt={`${translatedName} - Industrial Furniture ${product.categories.join(' ')} Mangala Living Shop`}
                           title={`${translatedName} - Premium Industrial Furniture ${product.categories.join(' ')} - Shop Now`}
                           loading="lazy"
@@ -621,38 +619,38 @@ const Shop: React.FC = () => {
                       </div>
                       <div className="category-product-info">
                         <h3 className="category-product-name">{translatedName}</h3>
-                      <p className="category-product-cats">{translateCategories(product.categories, language)}</p>
-                      {usdPrices[product.id] && highlightedPrices[product.id] ? (
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                          {/* Highlighted currency based on language */}
-                          <p
-                            className="category-product-price"
-                            style={{
-                              margin: 0,
-                              fontSize: '0.875rem',
-                              fontWeight: 600,
-                              color: '#333'
-                            }}
-                          >
-                            {highlightedPrices[product.id]}
-                          </p>
-                          {/* USD always non-highlighted */}
-                          <p
-                            style={{
-                              margin: 0,
-                              fontSize: '0.75rem',
-                              fontWeight: 400,
-                              color: '#999'
-                            }}
-                          >
-                            {usdPrices[product.id]}
-                          </p>
-                        </div>
-                      ) : (
-                        <p className="category-product-price">{product.price}</p>
-                      )}
-                    </div>
-                  </Link>
+                        <p className="category-product-cats">{translateCategories(product.categories, language)}</p>
+                        {usdPrices[product.id] && highlightedPrices[product.id] ? (
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                            {/* Highlighted currency based on language */}
+                            <p
+                              className="category-product-price"
+                              style={{
+                                margin: 0,
+                                fontSize: '0.875rem',
+                                fontWeight: 600,
+                                color: '#333'
+                              }}
+                            >
+                              {highlightedPrices[product.id]}
+                            </p>
+                            {/* USD always non-highlighted */}
+                            <p
+                              style={{
+                                margin: 0,
+                                fontSize: '0.75rem',
+                                fontWeight: 400,
+                                color: '#999'
+                              }}
+                            >
+                              {usdPrices[product.id]}
+                            </p>
+                          </div>
+                        ) : (
+                          <p className="category-product-price">{product.price}</p>
+                        )}
+                      </div>
+                    </Link>
                   )
                 })}
               </div>
@@ -660,7 +658,7 @@ const Shop: React.FC = () => {
               {/* Pagination */}
               {totalPages > 1 && (
                 <div className="pagination">
-                  <button 
+                  <button
                     className="pagination-btn pagination-prev"
                     onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
                     disabled={currentPage === 1}
@@ -682,7 +680,7 @@ const Shop: React.FC = () => {
                     )
                   ))}
 
-                  <button 
+                  <button
                     className="pagination-btn pagination-next"
                     onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
                     disabled={currentPage === totalPages}
@@ -691,9 +689,9 @@ const Shop: React.FC = () => {
                   </button>
                 </div>
               )}
-              
+
               {/* AI-Optimized Content for Shop Page */}
-              <CategoryAIContent 
+              <CategoryAIContent
                 category="All Products"
                 productCount={ALL_PRODUCTS.length}
                 isIndonesian={isIndonesian}
@@ -702,7 +700,7 @@ const Shop: React.FC = () => {
           </div>
         </div>
       </main>
-      
+
       <Footer isIndonesian={isIndonesian} language={language} />
     </div>
   )

@@ -149,8 +149,8 @@ const NaturraProducts: React.FC = () => {
                 <div className="naturra-products__detail-inner">
                     <div className="naturra-products__detail-image">
                         <img
-                            src="https://images.unsplash.com/photo-1610611424854-5e07f4b2c5b6?w=800&q=80"
-                            alt="Premium Indonesian Cocoa"
+                            src="https://images.unsplash.com/photo-1610611424854-5e07f4b2c5b6?auto=format&fit=crop&q=80&w=800"
+                            alt="Premium Indonesian Cocoa Beans"
                             loading="lazy"
                         />
                     </div>

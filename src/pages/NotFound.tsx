@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import AnnouncementBar from '../components/AnnouncementBar'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { ALL_PRODUCTS } from '../data/products'
@@ -150,7 +149,6 @@ const NotFound: React.FC = () => {
 
   return (
     <div className="not-found-page">
-      <AnnouncementBar language={isIndonesian ? 'id' : 'en'} isIndonesian={isIndonesian} />
       <Helmet>
         <title>{translations.title}</title>
         <meta name="description" content={translations.description} />

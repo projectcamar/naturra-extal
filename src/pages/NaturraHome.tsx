@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link, useLocation } from 'react-router-dom'
-import AnnouncementBar from '../components/AnnouncementBar'
+import { Mail, MessageCircle, Globe, Building2 } from 'lucide-react'
 import NaturraHeader from '../components/NaturraHeader'
 import NaturraFooter from '../components/NaturraFooter'
 import { NATURRA_HOME_TRANSLATIONS } from '../utils/NaturraTranslations'
@@ -50,7 +50,6 @@ const NaturraHome: React.FC = () => {
 
     return (
         <div className="naturra-home">
-            <AnnouncementBar language={language} isIndonesian={isIndonesian} />
 
             <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
                 <title>Naturra Extal International | Premium Indonesian Commodity Trading</title>
@@ -76,8 +75,8 @@ const NaturraHome: React.FC = () => {
             <section className="naturra-home__hero">
                 <div className="naturra-home__hero-bg">
                     <img
-                        src="https://images.unsplash.com/photo-1611070857145-5ae045e3dab5?w=1920&q=80"
-                        alt="Indonesian cocoa plantation"
+                        src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1920"
+                        alt="Indonesian sustainable agriculture"
                         loading="eager"
                     />
                 </div>
@@ -129,8 +128,8 @@ const NaturraHome: React.FC = () => {
                 <div className="naturra-home__heritage-inner">
                     <div className="naturra-home__heritage-image">
                         <img
-                            src="https://images.unsplash.com/photo-1606913852359-e8bac53acb3a?w=800&q=80"
-                            alt="Indonesian commodity sourcing heritage"
+                            src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=800"
+                            alt="Indonesian cloves and spices"
                             loading="lazy"
                         />
                         <div className="naturra-home__heritage-image-accent" />
@@ -318,22 +317,30 @@ const NaturraHome: React.FC = () => {
 
                     <div className="naturra-home__cta-cards">
                         <div className="naturra-home__cta-card">
-                            <div className="naturra-home__cta-card-icon">📧</div>
+                            <div className="naturra-home__cta-card-icon">
+                                <Mail size={24} />
+                            </div>
                             <h4 className="naturra-home__cta-card-title">{t.emailTitle}</h4>
                             <p className="naturra-home__cta-card-desc">hello@naturraextal.com</p>
                         </div>
                         <div className="naturra-home__cta-card">
-                            <div className="naturra-home__cta-card-icon">📱</div>
+                            <div className="naturra-home__cta-card-icon">
+                                <MessageCircle size={24} />
+                            </div>
                             <h4 className="naturra-home__cta-card-title">{t.waTitle}</h4>
                             <p className="naturra-home__cta-card-desc">+62 895-1395-7752</p>
                         </div>
                         <div className="naturra-home__cta-card">
-                            <div className="naturra-home__cta-card-icon">🌍</div>
+                            <div className="naturra-home__cta-card-icon">
+                                <Globe size={24} />
+                            </div>
                             <h4 className="naturra-home__cta-card-title">{t.globalTitle}</h4>
                             <p className="naturra-home__cta-card-desc">{t.globalDesc}</p>
                         </div>
                         <div className="naturra-home__cta-card">
-                            <div className="naturra-home__cta-card-icon">🏢</div>
+                            <div className="naturra-home__cta-card-icon">
+                                <Building2 size={24} />
+                            </div>
                             <h4 className="naturra-home__cta-card-title">{t.corpTitle}</h4>
                             <p className="naturra-home__cta-card-desc">CV Naturra Extal International</p>
                         </div>
