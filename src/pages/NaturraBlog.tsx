@@ -356,17 +356,17 @@ const NaturraBlog: React.FC = () => {
             maxWidth: '900px',
             margin: '0 auto 3rem',
             padding: '1.5rem',
-            background: '#f8f9fa',
+            background: '#e8f0e8',
             borderRadius: '8px',
-            borderLeft: '4px solid #2C3E50'
+            borderLeft: '4px solid #004D2C'
           }}>
-            <p style={{ margin: '0 0 1rem', fontSize: '1rem', lineHeight: '1.6', color: '#2C3E50' }}>
+            <p style={{ margin: '0 0 1rem', fontSize: '1rem', lineHeight: '1.6', color: '#004D2C' }}>
               {intro.introParagraph}
             </p>
             <ul style={{ margin: 0, paddingLeft: '1.5rem', fontSize: '0.95rem', lineHeight: '1.7', color: '#555' }}>
               {intro.bullets.map((item, index) => (
                 <li key={index}>
-                  <strong>{item.title}:</strong> {item.description}
+                  <strong style={{ color: '#004D2C' }}>{item.title}:</strong> {item.description}
                 </li>
               ))}
             </ul>

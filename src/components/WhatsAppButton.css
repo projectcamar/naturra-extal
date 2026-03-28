@@ -12,7 +12,7 @@
 /* Chat Interface */
 .whatsapp-chat {
   background: white;
-  
+
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   width: 320px;
   height: 460px;
@@ -61,7 +61,7 @@
   color: white;
   width: 24px;
   height: 24px;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,7 +95,7 @@
 .message-avatar {
   width: 26px;
   height: 26px;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,7 +126,7 @@
 .message-text {
   background: #f0f0f0;
   padding: 6px 9px;
-  
+
   font-size: 11px;
   line-height: 1.4;
   word-wrap: break-word;
@@ -186,7 +186,7 @@
   width: 5px;
   height: 5px;
   background: #999;
-  
+
   animation: typing 1.4s infinite ease-in-out;
 }
 
@@ -199,10 +199,14 @@
 }
 
 @keyframes typing {
-  0%, 60%, 100% {
+
+  0%,
+  60%,
+  100% {
     transform: translateY(0);
     opacity: 0.4;
   }
+
   30% {
     transform: translateY(-10px);
     opacity: 1;
@@ -220,7 +224,7 @@
 .chat-input input {
   flex: 1;
   border: 1px solid #ddd;
-  
+
   padding: 6px 11px;
   font-size: 11px;
   outline: none;
@@ -237,7 +241,7 @@
   color: white;
   width: 32px;
   height: 32px;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,7 +270,7 @@
   color: white;
   border: none;
   padding: 6px 10px;
-  
+
   font-size: 10px;
   font-weight: 600;
   cursor: pointer;
@@ -285,7 +289,7 @@
 /* Form UI Styles */
 .info-form {
   background: #f8f9fa;
-  
+
   padding: 10px;
   margin-top: 6px;
   border: 1px solid #e9ecef;
@@ -307,7 +311,7 @@
   width: 100%;
   padding: 5px 9px;
   border: 1px solid #ced4da;
-  
+
   font-size: 10px;
   outline: none;
   transition: border-color 0.2s ease;
@@ -325,7 +329,7 @@
   color: white;
   border: none;
   padding: 6px 10px;
-  
+
   font-size: 10px;
   font-weight: 600;
   cursor: pointer;
@@ -346,7 +350,7 @@
 
 .whatsapp-popup {
   background: white;
-  
+
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   max-width: 320px;
   width: 100%;
@@ -373,7 +377,7 @@
   color: white;
   width: 24px;
   height: 24px;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -401,7 +405,7 @@
   color: white;
   width: 40px;
   height: 40px;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -431,7 +435,7 @@
   color: white;
   border: none;
   padding: 10px 16px;
-  
+
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
@@ -440,7 +444,7 @@
   gap: 6px;
   box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
   transition: all 0.3s ease;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   min-width: 150px;
   justify-content: center;
 }
@@ -460,6 +464,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -635,7 +640,7 @@
   color: white;
   border: none;
   padding: 6px 12px;
-  
+
   font-weight: 600;
   font-size: 11px;
   cursor: pointer;
@@ -657,7 +662,7 @@
   text-decoration: none;
   font-weight: 600;
   padding: 3px 6px;
-  
+
   background: rgba(0, 77, 44, 0.1);
   transition: all 0.3s ease;
   display: inline-block;
@@ -699,4 +704,3 @@
   font-size: 11px;
   padding: 4px 8px;
 }
-
