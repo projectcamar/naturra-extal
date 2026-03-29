@@ -52,6 +52,7 @@ const AdminBlogManager: React.FC = () => {
     const [iframeKey, setIframeKey] = useState(0)
     const [showLogs, setShowLogs] = useState(false)
     const [deploymentTargetSlug, setDeploymentTargetSlug] = useState<string | null>(null)
+    const [deploymentSlugs, setDeploymentSlugs] = useState<string[]>([])
 
     // Pagination state
     const [itemsPerPage, setItemsPerPage] = useState<number | 'all'>(10)
@@ -149,16 +150,21 @@ const AdminBlogManager: React.FC = () => {
                     const latestLocalPost = posts[posts.length - 1];
                     const countMatches = data.postCount === posts.length;
                     const latestPostMatches = !latestLocalPost || (data.latestPost && data.latestPost.id === latestLocalPost.id);
-                    const slugMatches = deploymentTargetSlug && data.latestPost && data.latestPost.slug === deploymentTargetSlug;
 
-                    if (data.success && (countMatches && latestPostMatches || slugMatches)) {
+                    const remoteSlug = data.latestPost?.slug;
+                    const isTargetLive = deploymentSlugs.includes(remoteSlug) || (deploymentTargetSlug === remoteSlug);
+
+                    if (data.success && (countMatches && latestPostMatches || isTargetLive)) {
                         setDeploymentStatus('ready');
-                        addLog('LIVE VERIFICATION SUCCESS: Your target content is now live!', 'success');
+                        addLog(`SUCCESS: Detected "${remoteSlug}" is live! Sync complete.`, 'success');
                         if (statusIntervalId) clearInterval(statusIntervalId);
                         if (liveIntervalId) clearInterval(liveIntervalId);
                         if (iframeIntervalId) clearInterval(iframeIntervalId);
                     } else {
-                        // Only force iframe refresh, no log spam
+                        // Regular detection log (less frequent)
+                        if (Math.random() > 0.7) {
+                            addLog(`Monitoring: live site at ${remoteSlug || 'home'}... waiting for ${deploymentSlugs.join(', ') || 'updates'}`, 'info');
+                        }
                         setIframeKey(k => k + 1);
                     }
                 } catch (error) {
@@ -286,15 +292,17 @@ const AdminBlogManager: React.FC = () => {
 
                 if (deployResult.commitSha) {
                     setActiveDeploymentSha(deployResult.commitSha)
-                    setDeploymentStatus('idle') // Will trigger polling
+                    setDeploymentStatus('idle')
 
-                    // Identify the target slug for the preview
-                    const draftPost = posts.find(p => p.status === 'draft');
-                    const targetSlug = draftPost?.slug || posts[posts.length - 1]?.slug;
+                    const draftPosts = posts.filter(p => p.status === 'draft');
+                    const draftSlugs = draftPosts.map(p => p.slug);
+                    const targetSlug = draftSlugs[0] || posts[posts.length - 1]?.slug;
+
+                    setDeploymentSlugs(draftSlugs);
                     setDeploymentTargetSlug(targetSlug || null);
 
                     setDeploymentLogs([{
-                        msg: `🚀 Changes pushed! Targeting: ${targetSlug ? `/blog/${targetSlug}` : 'live site'}`,
+                        msg: `🚀 Changes pushed! Monitoring ${draftSlugs.length} new/updated pages: ${draftSlugs.join(', ')}`,
                         time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }),
                         type: 'success'
                     }])
