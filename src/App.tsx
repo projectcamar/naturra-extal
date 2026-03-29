@@ -85,7 +85,6 @@ function App() {
           <TutorialProvider>
             <ScrollToTop />
             <SingaporeLanguageModal />
-            <AdminTutorial />
             <Routes>
               {/* Primary Routes */}
               <Route path="/" element={<NaturraHome />} />
@@ -194,6 +193,7 @@ function App() {
               <Route path="/404-not-found" element={<NotFound />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
+            <AdminTutorial />
             <WhatsAppButton />
             <Analytics />
             <SpeedInsights />

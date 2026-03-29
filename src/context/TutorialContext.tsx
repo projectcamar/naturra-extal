@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import React, { createContext, useContext, useState, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 export interface TutorialStep {
@@ -123,25 +123,22 @@ export const TutorialProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         setCurrentStep(currentStep + 1);
     }, [currentStep, location.pathname, navigate]);
 
-    const getStepData = () => TUTORIAL_STEPS[currentStep - 1];
-
-    // Auto-save progress or handle initial state if needed
-    useEffect(() => {
-        if (currentStep > 0) {
-            // Ensure if we navigate away manually, we might want to kill or pause tutorial
-            // For now, we keep it active.
-        }
+    const getStepData = useCallback(() => {
+        if (currentStep < 1 || currentStep > TUTORIAL_STEPS.length) return undefined;
+        return TUTORIAL_STEPS[currentStep - 1];
     }, [currentStep]);
 
+    const contextValue = React.useMemo(() => ({
+        currentStep,
+        isActive: currentStep > 0,
+        startTutorial,
+        nextStep,
+        closeTutorial,
+        getStepData
+    }), [currentStep, nextStep, getStepData]);
+
     return (
-        <TutorialContext.Provider value={{
-            currentStep,
-            isActive: currentStep > 0,
-            startTutorial,
-            nextStep,
-            closeTutorial,
-            getStepData
-        }}>
+        <TutorialContext.Provider value={contextValue}>
             {children}
         </TutorialContext.Provider>
     );

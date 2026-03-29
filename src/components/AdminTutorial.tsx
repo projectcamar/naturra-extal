@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useEffect, useMemo, useCallback } from 'react'
 import { ArrowRight, Sparkles, BookOpen, Layout, FileText, MousePointer2 } from 'lucide-react'
 import { useTutorial } from '../context/TutorialContext'
 
@@ -8,66 +8,56 @@ const AdminTutorial: React.FC = () => {
 
     const stepData = getStepData();
 
+    const updateRect = useCallback(() => {
+        if (!stepData?.targetId) return;
+        const el = document.getElementById(stepData.targetId);
+        if (el) {
+            const rect = el.getBoundingClientRect();
+            // Basic value comparison to avoid unnecessary updates
+            setTargetRect(prev => {
+                if (!prev) return rect;
+                if (prev.top === rect.top && prev.left === rect.left && prev.width === rect.width) return prev;
+                return rect;
+            });
+        } else {
+            setTargetRect(null);
+        }
+    }, [stepData?.targetId]);
+
     useEffect(() => {
         if (!isActive || !stepData?.targetId) {
             setTargetRect(null);
             return;
         }
 
-        const updateRect = () => {
-            const el = document.getElementById(stepData.targetId);
-            if (el) {
-                setTargetRect(el.getBoundingClientRect());
-            } else {
-                setTargetRect(null);
-            }
-        };
-
-        // Initial update
         updateRect();
-
-        // Update on scroll/resize or when page content might have changed
         window.addEventListener('scroll', updateRect, true);
         window.addEventListener('resize', updateRect);
 
-        // Polling as a fallback for dynamic content loading
-        const interval = setInterval(updateRect, 500);
+        const interval = setInterval(updateRect, 1000);
 
         return () => {
             window.removeEventListener('scroll', updateRect, true);
             window.removeEventListener('resize', updateRect);
             clearInterval(interval);
         };
-    }, [isActive, stepData?.targetId, currentStep]);
-
-    if (!isActive || !stepData) return null;
+    }, [isActive, stepData?.targetId, updateRect, currentStep]);
 
     const spotlightStyle = useMemo(() => {
         if (!targetRect) return {};
 
-        const L = targetRect.left || 0;
-        const T = targetRect.top || 0;
-        const R = targetRect.right || 0;
-        const B = targetRect.bottom || 0;
+        const L = Math.round(targetRect.left || 0);
+        const T = Math.round(targetRect.top || 0);
+        const R = Math.round(targetRect.right || 0);
+        const B = Math.round(targetRect.bottom || 0);
 
         return {
-            clipPath: `polygon(
-                0% 0%, 
-                0% 100%, 
-                ${L}px 100%, 
-                ${L}px ${T}px, 
-                ${R}px ${T}px, 
-                ${R}px ${B}px, 
-                ${L}px ${B}px, 
-                ${L}px 100%, 
-                100% 100%, 
-                100% 0%
-            )`
+            clipPath: `polygon(0% 0%, 0% 100%, ${L}px 100%, ${L}px ${T}px, ${R}px ${T}px, ${R}px ${B}px, ${L}px ${B}px, ${L}px 100%, 100% 100%, 100% 0%)`
         };
     }, [targetRect]);
 
     const cardPosition = useMemo(() => {
-        if (!targetRect) return { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' };
+        if (!targetRect || !stepData) return { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' };
 
         const padding = 24;
         const cardWidth = 400;
@@ -82,30 +72,40 @@ const AdminTutorial: React.FC = () => {
             height: targetRect.height || 0
         };
 
+        let pos = { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' };
+
         switch (stepData.position) {
             case 'bottom':
-                return {
+                pos = {
                     top: `${rect.bottom + padding}px`,
-                    left: `${rect.left + rect.width / 2 - cardWidth / 2}px`
+                    left: `${rect.left + rect.width / 2 - cardWidth / 2}px`,
+                    transform: 'none'
                 };
+                break;
             case 'top':
-                return {
+                pos = {
                     top: `${rect.top - cardHeight - padding}px`,
-                    left: `${rect.left + rect.width / 2 - cardWidth / 2}px`
+                    left: `${rect.left + rect.width / 2 - cardWidth / 2}px`,
+                    transform: 'none'
                 };
+                break;
             case 'left':
-                return {
+                pos = {
                     top: `${rect.top + rect.height / 2 - cardHeight / 2}px`,
-                    left: `${rect.left - cardWidth - padding}px`
+                    left: `${rect.left - cardWidth - padding}px`,
+                    transform: 'none'
                 };
+                break;
             case 'right':
-                return {
+                pos = {
                     top: `${rect.top + rect.height / 2 - cardHeight / 2}px`,
-                    left: `${rect.right + padding}px`
+                    left: `${rect.right + padding}px`,
+                    transform: 'none'
                 };
-            default:
-                return { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' };
+                break;
         }
+
+        return pos;
     }, [targetRect, stepData]);
 
     const getIcon = (title: string) => {
@@ -116,6 +116,8 @@ const AdminTutorial: React.FC = () => {
         if (t.includes('AI')) return <Sparkles className="text-amber-500" size={32} />;
         return <MousePointer2 className="text-indigo-500" size={32} />;
     };
+
+    if (!isActive || !stepData) return null;
 
     return (
         <div className="tutorial-root">
@@ -137,7 +139,7 @@ const AdminTutorial: React.FC = () => {
                 <div className={`tutorial-card step-${currentStep}`}>
                     <div className="tutorial-header">
                         <div className="tutorial-icon">
-                            {getIcon(stepData.title)}
+                            {getIcon(stepData.title || '')}
                         </div>
                         <div className="tutorial-badge">TUTORIAL STEP {currentStep}/8</div>
                     </div>
@@ -173,7 +175,8 @@ const AdminTutorial: React.FC = () => {
           inset: 0;
           background: rgba(0, 0, 0, 0.75);
           pointer-events: auto;
-          transition: clip-path 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          /* Removed backdrop-filter to prevent browser crashes */
+          /* Removed clip-path transition to ensure stability */
         }
 
         .tutorial-highlight-box {
@@ -183,14 +186,14 @@ const AdminTutorial: React.FC = () => {
           box-shadow: 0 0 0 4px rgba(0, 77, 44, 0.2), 0 0 20px rgba(0, 77, 44, 0.4);
           z-index: 10001;
           pointer-events: none;
-          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          /* Removed transition here too */
         }
 
         .tutorial-card-container {
           position: absolute;
           z-index: 10002;
           pointer-events: auto;
-          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          /* Removed transition here too */
         }
 
         .tutorial-card {
@@ -236,7 +239,6 @@ const AdminTutorial: React.FC = () => {
           color: #0f172a;
           margin-bottom: 12px;
           text-align: center;
-          font-family: 'Inter', sans-serif;
         }
 
         .tutorial-text {
@@ -266,7 +268,6 @@ const AdminTutorial: React.FC = () => {
           transition: all 0.3s;
           width: 100%;
           justify-content: center;
-          font-family: 'Inter', sans-serif;
         }
 
         .tutorial-btn:hover {

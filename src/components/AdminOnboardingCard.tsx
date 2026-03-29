@@ -61,7 +61,9 @@ export const AdminOnboardingCard: React.FC<OnboardingCardProps> = ({ username, o
                 <div className="onboarding-footer">
                     <button className="onboarding-btn" onClick={() => {
                         onClose();
-                        startTutorial();
+                        setTimeout(() => {
+                            startTutorial();
+                        }, 100);
                     }}>
                         <span>Get Started</span>
                         <ArrowRight size={18} />
