@@ -699,7 +699,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1759689975472-c302b63b3b71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGZvb2QlMjBpbmdyZWRpZW50cyUyMG9uJTIwd29vZGVuJTIwdGFibGV8ZW58MHwwfHx8MTc3NDc5NDQxOHww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 23:22",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Dalam industri makanan dan minuman, kualitas bahan baku sangat penting untuk menentukan hasil akhir produk. Namun, banyak dari kita yang masih bingung bagaimana memilih bahan baku yang tepat. Pada artikel ini, kita akan membahas beberapa tips memilih bahan baku yang berkualitas.",
       "keyPoints": [
@@ -743,7 +743,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1490106087286-bd050867d86e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGRhcmslMjBjaG9jb2xhdGUlMjBwaWVjZXMlMjBvbiUyMHdvb2RlbiUyMHRhYmxlfGVufDB8MHx8fDE3NzQ4MDE2MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 23:26",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Cokelat adalah salah satu bahan paling populer dalam industri makanan dan minuman. Namun, mengolah cokelat tidaklah mudah. Dalam artikel ini, kita akan membahas beberapa tips mengolah cokelat untuk hasil terbaik.",
       "keyPoints": [
@@ -774,6 +774,49 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dalam mengolah cokelat, penting untuk memilih cokelat berkualitas tinggi, memperhatikan suhu dan kelembaban, dan menggunakan teknik pengolahan yang tepat. Dengan menggunakan tips dan solusi dari Naturra Extal, Anda dapat memastikan bahwa produk cokelat Anda memiliki kualitas terbaik dan dapat bersaing di pasar internasional."
+    }
+  },
+  {
+    "id": 25,
+    "slug": "tips-mengolah-komoditas",
+    "title": "Tips Mengolah Komoditas",
+    "category": "Tips and Trick",
+    "excerpt": "Tips dan trik mengolah komoditas untuk meningkatkan kualitas",
+    "image": "https://images.unsplash.com/photo-1727079582189-c5819c5e4b5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwZmFybWVyJTIwaGFydmVzdGluZyUyMGNyb3BzJTIwaW4lMjBmaWVsZHxlbnwwfDB8fHwxNzc0ODAyMTUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-29 23:35",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Dalam dunia perdagangan komoditas, kualitas produk sangat berpengaruh pada harga jual. Oleh karena itu, penting untuk mengetahui tips dan trik mengolah komoditas dengan baik. <br> Naturra Extal, sebagai perusahaan komoditas terkemuka di Indonesia, berbagi tips dan trik mengolah komoditas untuk meningkatkan kualitas produk.",
+      "keyPoints": [
+        "Pemilihan bahan baku yang berkualitas",
+        "Pengolahan yang tepat dan efektif",
+        "Penggunaan teknologi yang mutakhir"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Pemilihan Bahan Baku",
+          "content": "Pemilihan bahan baku yang berkualitas sangat penting dalam menghasilkan produk yang baik. <strong>Pastikan Anda memilih bahan baku dari sumber yang terpercaya dan memiliki kualitas yang baik</strong>. Naturra Extal bekerja sama dengan petani dan supplier terkemuka di Indonesia untuk memastikan kualitas bahan baku.",
+          "imageSearchQuery": "petani memilih bahan baku",
+          "image": "https://images.unsplash.com/photo-1649426710526-861371557a47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxwZXRhbmklMjBtZW1pbGloJTIwYmFoYW4lMjBiYWt1fGVufDB8MHx8fDE3NzQ4MDIxNTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "petani memilih bahan baku"
+        },
+        {
+          "heading": "Pengolahan yang Tepat",
+          "content": "Pengolahan yang tepat dan efektif juga sangat penting dalam menghasilkan produk yang berkualitas. <em>Pastikan Anda mengikuti prosedur pengolahan yang benar dan menggunakan peralatan yang memadai</em>. Naturra Extal memiliki fasilitas pengolahan yang canggih dan modern untuk memastikan kualitas produk."
+        },
+        {
+          "heading": "Penggunaan Teknologi",
+          "content": "Penggunaan teknologi yang mutakhir juga sangat penting dalam menghasilkan produk yang berkualitas. <strong>Naturra Extal menggunakan teknologi terbaru untuk memastikan kualitas produk dan meningkatkan efisiensi produksi</strong>. Dengan demikian, produk yang dihasilkan memiliki kualitas yang tinggi dan dapat memenuhi kebutuhan pelanggan.",
+          "productId": 1
+        },
+        {
+          "heading": "Kesimpulan",
+          "content": "Dalam mengolah komoditas, penting untuk memperhatikan kualitas bahan baku, pengolahan yang tepat, dan penggunaan teknologi yang mutakhir. <em>Naturra Extal berkomitmen untuk menyediakan produk yang berkualitas dan memenuhi kebutuhan pelanggan</em>. Dengan demikian, Anda dapat mempercayakan Naturra Extal sebagai mitra Anda dalam dunia perdagangan komoditas."
+        }
+      ],
+      "conclusion": "Dengan mengikuti tips dan trik di atas, Anda dapat meningkatkan kualitas produk komoditas Anda dan memenuhi kebutuhan pelanggan. Naturra Extal siap membantu Anda dalam mengolah komoditas dengan baik dan meningkatkan kualitas produk."
     }
   }
 ];
