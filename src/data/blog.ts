@@ -699,7 +699,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1759689975472-c302b63b3b71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGZvb2QlMjBpbmdyZWRpZW50cyUyMG9uJTIwd29vZGVuJTIwdGFibGV8ZW58MHwwfHx8MTc3NDc5NDQxOHww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 23:22",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Dalam industri makanan dan minuman, kualitas bahan baku sangat penting untuk menentukan hasil akhir produk. Namun, banyak dari kita yang masih bingung bagaimana memilih bahan baku yang tepat. Pada artikel ini, kita akan membahas beberapa tips memilih bahan baku yang berkualitas.",
       "keyPoints": [
@@ -743,7 +743,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1490106087286-bd050867d86e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGRhcmslMjBjaG9jb2xhdGUlMjBwaWVjZXMlMjBvbiUyMHdvb2RlbiUyMHRhYmxlfGVufDB8MHx8fDE3NzQ4MDE2MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 23:26",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Cokelat adalah salah satu bahan paling populer dalam industri makanan dan minuman. Namun, mengolah cokelat tidaklah mudah. Dalam artikel ini, kita akan membahas beberapa tips mengolah cokelat untuk hasil terbaik.",
       "keyPoints": [
@@ -785,7 +785,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1659421000380-7bc91a709356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGRhcmslMjBjaG9jb2xhdGUlMjBiYXJzJTIwb24lMjB3b29kZW4lMjB0YWJsZXxlbnwwfDB8fHwxNzc0ODAyNTIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 23:35",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Cokelat merupakan salah satu komoditas yang paling populer di dunia. Namun, untuk mengolah cokelat dengan baik diperlukan beberapa tips dan trik. Dalam artikel ini, kami akan membagikan beberapa tips dan trik untuk mengolah cokelat dengan baik.",
       "keyPoints": [
@@ -818,6 +818,225 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dengan mengikuti tips dan trik di atas, Anda dapat mengolah cokelat dengan baik dan mendapatkan rasa yang lebih kaya dan aroma yang lebih kuat. Jangan lupa untuk memilih cokelat yang berkualitas dan menggunakan suhu yang tepat. Naturra Extal siap membantu Anda dalam mengolah cokelat dengan baik."
+    }
+  },
+  {
+    "id": 26,
+    "slug": "ero-teknik-konservasi-tanah",
+    "title": "Ero: Mengenal Teknik Konservasi",
+    "category": "Tips and Trick",
+    "excerpt": "Ero: Mengenal teknik konservasi tanah untuk mengurangi kerusakan lingkungan",
+    "image": "https://images.unsplash.com/photo-1594793762278-fcfdcf5dbed8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxzb2lsJTIwZXJvc2lvbiUyMGNvbnRyb2wlMjBtZWFzdXJlc3xlbnwwfDB8fHwxNzc0ODAzMDI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-29 23:50",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Ero atau erosi tanah merupakan salah satu masalah lingkungan yang paling serius di Indonesia. Dalam beberapa tahun terakhir, banyak daerah yang mengalami kerusakan lingkungan akibat erosi tanah. Oleh karena itu, penting untuk mengenal teknik konservasi tanah yang efektif untuk mengurangi kerusakan lingkungan. Dalam artikel ini, kita akan membahas tentang ero dan teknik konservasi tanah yang dapat dilakukan.",
+      "keyPoints": [
+        "Ero dapat menyebabkan kerusakan lingkungan yang parah",
+        "Teknik konservasi tanah dapat mengurangi erosi tanah",
+        "Penggunaan Cocopeat dapat membantu mengurangi erosi tanah"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Apa itu Ero?",
+          "content": "Ero atau erosi tanah merupakan proses pengikisan tanah oleh air atau angin. Ero dapat menyebabkan kerusakan lingkungan yang parah, seperti longsor, banjir, dan kerusakan infrastruktur. Oleh karena itu, penting untuk mengenal teknik konservasi tanah yang efektif untuk mengurangi kerusakan lingkungan.",
+          "imageSearchQuery": "erosi tanah",
+          "image": "https://images.unsplash.com/photo-1750077261334-015e3cfbc4e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxlcm9zaSUyMHRhbmFofGVufDB8MHx8fDE3NzQ4MDMwMjh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "erosi tanah"
+        },
+        {
+          "heading": "Teknik Konservasi Tanah",
+          "content": "Teknik konservasi tanah dapat dilakukan dengan beberapa cara, seperti <strong>penggunaan mulsa</strong>, <em>penanaman vegetasi</em>, dan <strong>penggunaan Cocopeat</strong>. Cocopeat merupakan bahan yang terbuat dari sabut kelapa yang dapat membantu mengurangi erosi tanah. Selain itu, Cocopeat juga dapat membantu meningkatkan kesuburan tanah dan mengurangi kebutuhan akan pupuk kimia."
+        },
+        {
+          "heading": "Solusi Naturra Extal",
+          "content": "Naturra Extal menawarkan solusi untuk mengurangi erosi tanah dengan <strong>penggunaan Cocopeat</strong>. Cocopeat yang diproduksi oleh Naturra Extal memiliki kualitas yang tinggi dan dapat membantu mengurangi erosi tanah. Selain itu, Naturra Extal juga menawarkan <strong>penggunaan produk lainnya</strong>, seperti <em>Cocopeat Block 5kg Low EC (produk id: 4)</em> yang dapat membantu meningkatkan kesuburan tanah.",
+          "productId": 4
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda ingin mengurangi erosi tanah dan meningkatkan kesuburan tanah, maka Anda dapat menghubungi Naturra Extal untuk mendapatkan informasi lebih lanjut tentang <strong>penggunaan Cocopeat</strong> dan <em>produk lainnya</em>. Dengan demikian, Anda dapat membantu mengurangi kerusakan lingkungan dan meningkatkan kesuburan tanah.",
+          "productId": 5
+        }
+      ],
+      "conclusion": "Dalam kesimpulan, ero atau erosi tanah merupakan salah satu masalah lingkungan yang paling serius di Indonesia. Namun, dengan <strong>penggunaan teknik konservasi tanah</strong> yang efektif, seperti <em>penggunaan Cocopeat</em>, kita dapat mengurangi kerusakan lingkungan dan meningkatkan kesuburan tanah. Oleh karena itu, penting untuk mengenal teknik konservasi tanah yang efektif dan menghubungi Naturra Extal untuk mendapatkan informasi lebih lanjut tentang <strong>penggunaan Cocopeat</strong> dan <em>produk lainnya</em>."
+    }
+  },
+  {
+    "id": 27,
+    "slug": "tips-memilih-kokoa-berkualitas",
+    "title": "Kokoa Berkualitas",
+    "category": "Tips and Trick",
+    "excerpt": "Tips memilih kokoa berkualitas untuk bisnis Anda",
+    "image": "https://images.unsplash.com/photo-1585428522589-592f41523318?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGNvY29hJTIwYmVhbnMlMjBvbiUyMHdvb2RlbiUyMHRhYmxlfGVufDB8MHx8fDE3NzQ3OTg3ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-29 23:50",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Kokoa merupakan salah satu komoditas yang paling penting dalam industri makanan dan minuman. Untuk mendapatkan kokoa berkualitas, Anda perlu memperhatikan beberapa hal. Dalam artikel ini, kita akan membahas beberapa tips dan trik untuk memilih kokoa berkualitas.",
+      "keyPoints": [
+        "Memahami jenis-jenis kokoa",
+        "Mengenal sumber kokoa",
+        "Memeriksa kualitas kokoa"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengapa Kokoa Berkualitas Penting?",
+          "content": "Kokoa berkualitas sangat penting untuk bisnis Anda karena dapat mempengaruhi rasa dan aroma produk akhir. Selain itu, kokoa berkualitas juga dapat meningkatkan kepercayaan konsumen terhadap produk Anda. <br> Naturra Extal, sebagai salah satu penyedia kokoa terkemuka, menawarkan kokoa berkualitas yang dipilih dengan hati-hati dari sumber terbaik.",
+          "imageSearchQuery": "cocoa farmer harvesting",
+          "image": "https://images.unsplash.com/photo-1714102367897-4a19259feb75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxjb2NvYSUyMGZhcm1lciUyMGhhcnZlc3Rpbmd8ZW58MHwwfHx8MTc3NDgwMzA0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "cocoa farmer harvesting"
+        },
+        {
+          "heading": "Tips Memilih Kokoa Berkualitas",
+          "content": "Untuk memilih kokoa berkualitas, Anda perlu memperhatikan beberapa hal, seperti <strong>jenis kokoa</strong>, <em>sumber kokoa</em>, dan <strong>kualitas kokoa</strong>. Pastikan Anda memilih kokoa yang sesuai dengan kebutuhan bisnis Anda."
+        },
+        {
+          "heading": "Solusi Naturra Extal",
+          "content": "Naturra Extal menawarkan berbagai jenis kokoa berkualitas, termasuk <strong>Natural Cocoa Powder V10</strong> (produk ID: 1) dan <strong>Alkalized Cocoa Powder Dark</strong> (produk ID: 2). Kami juga menawarkan layanan konsultasi untuk membantu Anda memilih kokoa yang tepat untuk bisnis Anda.",
+          "productId": 1
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda ingin mempelajari lebih lanjut tentang kokoa berkualitas dan bagaimana Naturra Extal dapat membantu bisnis Anda, silakan hubungi kami. Kami akan dengan senang hati membantu Anda memilih kokoa yang tepat untuk kebutuhan Anda.",
+          "productId": 2
+        }
+      ],
+      "conclusion": "Dengan memilih kokoa berkualitas, Anda dapat meningkatkan kualitas produk akhir dan kepercayaan konsumen. Naturra Extal siap membantu Anda memilih kokoa yang tepat untuk bisnis Anda. Hubungi kami sekarang juga!"
+    }
+  },
+  {
+    "id": 28,
+    "slug": "tips-jasa-ekspor-komoditas",
+    "title": "Tips Jasa Ekspor Komoditas",
+    "category": "Tips and Trick",
+    "excerpt": "Tips dan trik untuk meningkatkan kualitas jasa ekspor komoditas",
+    "image": "https://images.unsplash.com/photo-1513985131190-16a51faf53a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwZXhwb3J0JTIwY29tbW9kaXRpZXMlMjB3YXJlaG91c2V8ZW58MHwwfHx8MTc3NDgwMzA2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-29 23:50",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Dalam dunia ekspor komoditas, kualitas jasa menjadi faktor penting untuk meningkatkan kepuasan pelanggan. Naturra Extal, sebagai perusahaan trading komoditas terkemuka di Indonesia, memahami betapa pentingnya menyediakan jasa ekspor yang berkualitas. Dalam artikel ini, kita akan membahas beberapa tips dan trik untuk meningkatkan kualitas jasa ekspor komoditas.",
+      "keyPoints": [
+        "Memahami kebutuhan pelanggan",
+        "Menggunakan teknologi terbaru",
+        "Meningkatkan efisiensi logistik"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengapa Kualitas Jasa Ekspor Penting?",
+          "content": "Kualitas jasa ekspor komoditas sangat penting karena dapat mempengaruhi kepuasan pelanggan dan meningkatkan reputasi perusahaan. Dengan menyediakan jasa ekspor yang berkualitas, perusahaan dapat meningkatkan kepercayaan pelanggan dan meningkatkan kesempatan untuk mendapatkan kontrak ekspor yang lebih besar.",
+          "imageSearchQuery": "indonesian export commodities shipping",
+          "image": "https://images.unsplash.com/photo-1635301213490-1b819c7bb668?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwZXhwb3J0JTIwY29tbW9kaXRpZXMlMjBzaGlwcGluZ3xlbnwwfDB8fHwxNzc0ODAzMDYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "indonesian export commodities shipping"
+        },
+        {
+          "heading": "Tips Meningkatkan Kualitas Jasa Ekspor",
+          "content": "Berikut beberapa tips untuk meningkatkan kualitas jasa ekspor komoditas: <br> 1. Memahami kebutuhan pelanggan <br> 2. Menggunakan teknologi terbaru <br> 3. Meningkatkan efisiensi logistik <br> Dengan menerapkan tips tersebut, perusahaan dapat meningkatkan kualitas jasa ekspor dan meningkatkan kepuasan pelanggan."
+        },
+        {
+          "heading": "Solusi Naturra Extal",
+          "content": "Naturra Extal menawarkan solusi jasa ekspor komoditas yang berkualitas dan efisien. Dengan menggunakan teknologi terbaru dan meningkatkan efisiensi logistik, kami dapat membantu perusahaan meningkatkan kualitas jasa ekspor dan meningkatkan kepuasan pelanggan. <strong>Produk yang kami tawarkan</strong> termasuk <strong>Cocopeat Block 5kg Low EC (produk id: 4)</strong> dan <strong>Cocopeat Briquettes 650g (produk id: 5)</strong>.",
+          "productId": 4
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda ingin meningkatkan kualitas jasa ekspor komoditas, silakan hubungi kami untuk mendapatkan informasi lebih lanjut tentang solusi yang kami tawarkan. Kami siap membantu Anda meningkatkan kualitas jasa ekspor dan meningkatkan kepuasan pelanggan.",
+          "productId": 5
+        }
+      ],
+      "conclusion": "Dalam kesimpulan, kualitas jasa ekspor komoditas sangat penting untuk meningkatkan kepuasan pelanggan dan meningkatkan reputasi perusahaan. Dengan menerapkan tips dan trik yang telah dibahas, perusahaan dapat meningkatkan kualitas jasa ekspor dan meningkatkan kepuasan pelanggan. Naturra Extal siap membantu Anda meningkatkan kualitas jasa ekspor komoditas dengan solusi yang berkualitas dan efisien."
+    }
+  },
+  {
+    "id": 29,
+    "slug": "pentingnya-sertifikasi-produk",
+    "title": "Sertifikasi Produk",
+    "category": "Tips and Trick",
+    "excerpt": "Sertifikasi produk sangat penting untuk meningkatkan kepercayaan konsumen",
+    "image": "https://images.unsplash.com/photo-1616996691356-4659297f4baf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxxdWFsaXR5JTIwY29udHJvbCUyMGNlcnRpZmljYXRpb24lMjBsYWJvcmF0b3J5JTIwdGVzdGluZyUyMGVxdWlwbWVudHxlbnwwfDB8fHwxNzc0ODAzMDc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-29 23:51",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Dalam dunia bisnis, kepercayaan konsumen sangatlah penting. Salah satu cara untuk meningkatkan kepercayaan konsumen adalah dengan memiliki sertifikasi produk. Sertifikasi produk adalah proses verifikasi bahwa produk Anda memenuhi standar tertentu yang ditetapkan oleh lembaga sertifikasi. Dalam artikel ini, kita akan membahas tentang pentingnya sertifikasi produk dan bagaimana Naturra Extal dapat membantu Anda dalam proses sertifikasi.",
+      "keyPoints": [
+        "Sertifikasi produk meningkatkan kepercayaan konsumen",
+        "Sertifikasi produk memenuhi standar kualitas",
+        "Naturra Extal membantu proses sertifikasi"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengapa Sertifikasi Produk Penting?",
+          "content": "Sertifikasi produk sangat penting karena dapat meningkatkan kepercayaan konsumen terhadap produk Anda. Dengan memiliki sertifikasi, Anda dapat menunjukkan bahwa produk Anda memenuhi standar kualitas yang tinggi dan aman untuk digunakan. Selain itu, sertifikasi produk juga dapat membantu Anda dalam memasuki pasar internasional, karena banyak negara memiliki standar kualitas yang harus dipenuhi oleh produk yang diimpor.",
+          "imageSearchQuery": "kepercayaan konsumen",
+          "image": "https://images.unsplash.com/photo-1628423546225-6b149b67e11e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxrZXBlcmNheWFhbiUyMGtvbnN1bWVufGVufDB8MHx8fDE3NzQ4MDMwNzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "kepercayaan konsumen"
+        },
+        {
+          "heading": "Bagaimana Proses Sertifikasi Produk?",
+          "content": "Proses sertifikasi produk melibatkan beberapa tahap, termasuk pengujian produk, inspeksi pabrik, dan verifikasi dokumen. Naturra Extal dapat membantu Anda dalam proses sertifikasi dengan menyediakan jasa konsultasi dan bantuan dalam mempersiapkan dokumen yang diperlukan. Kami juga memiliki pengalaman dalam bekerja dengan lembaga sertifikasi internasional, sehingga Anda dapat yakin bahwa produk Anda akan memenuhi standar kualitas yang tinggi."
+        },
+        {
+          "heading": "Solusi Naturra Extal",
+          "content": "Naturra Extal menyediakan solusi sertifikasi produk yang komprehensif, termasuk <strong>konsultasi</strong>, <em>pengujian</em>, dan <em>verifikasi</em> dokumen. Kami juga memiliki <strong>pengalaman</strong> dalam bekerja dengan lembaga sertifikasi internasional, sehingga Anda dapat yakin bahwa produk Anda akan memenuhi standar kualitas yang tinggi. Dengan menggunakan jasa Naturra Extal, Anda dapat <br> meningkatkan kepercayaan konsumen dan memasuki pasar internasional dengan lebih mudah.",
+          "productId": 1
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda ingin meningkatkan kepercayaan konsumen dan memasuki pasar internasional, maka sertifikasi produk adalah langkah yang tepat. Naturra Extal siap membantu Anda dalam proses sertifikasi dengan menyediakan jasa konsultasi dan bantuan dalam mempersiapkan dokumen yang diperlukan. Hubungi kami sekarang juga untuk memulai proses sertifikasi produk Anda.",
+          "productId": 3
+        }
+      ],
+      "conclusion": "Dalam kesimpulan, sertifikasi produk sangat penting untuk meningkatkan kepercayaan konsumen dan memasuki pasar internasional. Naturra Extal dapat membantu Anda dalam proses sertifikasi dengan menyediakan jasa konsultasi dan bantuan dalam mempersiapkan dokumen yang diperlukan. Dengan menggunakan jasa Naturra Extal, Anda dapat yakin bahwa produk Anda akan memenuhi standar kualitas yang tinggi dan aman untuk digunakan."
+    }
+  },
+  {
+    "id": 30,
+    "slug": "gao-ping-zhi-nong-chan-pin-de-mi-ji",
+    "title": "高品质农产品的秘诀",
+    "category": "Tips and Trick",
+    "excerpt": "了解高品质农产品的秘诀，提升您的采购水平",
+    "image": "https://images.unsplash.com/photo-1657288649124-b80bdee3c17e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMG9yZ2FuaWMlMjBwcm9kdWNlJTIwb24lMjBmYXJtfGVufDB8MHx8fDE3NzQ4MDMwOTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-29 23:51",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "随着全球农产品贸易的发展，高品质农产品已成为众多采购商的首选。那么，如何才能保证农产品的质量呢？本文将为您揭晓高品质农产品的秘诀，帮助您提升采购水平。",
+      "keyPoints": [
+        "了解农产品的来源",
+        "检查农产品的外观",
+        "选择信誉好的供应商"
+      ],
+      "language": "zh",
+      "sections": [
+        {
+          "heading": "为什么高品质农产品那么重要？",
+          "content": "高品质农产品不仅能够保证食品的安全性，还能够提供更好的口感和营养价值。因此，采购商必须对农产品的质量进行严格的把关。<br> Naturra Extal作为一家专业的农产品供应商，我们始终致力于提供高品质的农产品，包括可可粉、香料和椰壳培养基等。我们的产品均来自于可靠的来源，经过严格的质量控制，确保每一批产品都达到国际标准。",
+          "imageSearchQuery": "cocoa beans on a farm",
+          "image": "https://images.unsplash.com/photo-1649372639648-cf9efb47c184?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxjb2NvYSUyMGJlYW5zJTIwb24lMjBhJTIwZmFybXxlbnwwfDB8fHwxNzc0ODAzMDg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "cocoa beans on a farm"
+        },
+        {
+          "heading": "如何选择高品质农产品",
+          "content": "选择高品质农产品需要注意以下几点：<br> 1. 了解农产品的来源：了解农产品的生产过程和来源，可以帮助您评估产品的质量。<br> 2. 检查农产品的外观：外观良好的农产品通常具有更好的品质。<br> 3. 选择信誉好的供应商：选择有信誉的供应商，可以确保产品的质量和安全性。"
+        },
+        {
+          "heading": "Naturra Extal的解决方案",
+          "content": "Naturra Extal提供一系列高品质农产品，包括产品编号为12的有机椰糖颗粒。我们的产品均经过严格的质量控制，确保每一批产品都达到国际标准。我们还提供定制化的解决方案，帮助您找到最适合您的产品。",
+          "productId": 12
+        },
+        {
+          "heading": "结论",
+          "content": "高品质农产品是保证食品安全和质量的关键。通过了解农产品的来源、检查外观和选择信誉好的供应商，您可以提升您的采购水平。Naturra Extal作为一家专业的农产品供应商，我们始终致力于提供高品质的农产品，帮助您找到最适合您的产品。"
+        }
+      ],
+      "conclusion": "总之，高品质农产品是保证食品安全和质量的关键。通过选择信誉好的供应商和了解农产品的来源，您可以提升您的采购水平。Naturra Extal作为一家专业的农产品供应商，我们始终致力于提供高品质的农产品，帮助您找到最适合您的产品。"
     }
   }
 ];
