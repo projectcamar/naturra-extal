@@ -16,7 +16,6 @@ import { useTutorial } from '../context/TutorialContext'
 import { getAdminUser } from '../utils/adminAuth'
 
 const AdminBlogManager: React.FC = () => {
-    const username = getAdminUser()
     const [view, setView] = useState<'list' | 'editor'>('list')
     const { currentStep, nextStep } = useTutorial()
 
@@ -83,6 +82,13 @@ const AdminBlogManager: React.FC = () => {
         } else {
             setPosts(basePosts)
         }
+
+        // 3. Force normalize authors to "Angga" for UI consistency
+        setPosts(prev => prev.map(p => ({
+            ...p,
+            author: (p.author === 'rioanggara' || !p.author || p.author === 'Rio' || p.author === 'Moh Rifki') ? 'Angga' : p.author
+        })))
+
         setIsLoading(false)
     }, [])
 
@@ -190,7 +196,7 @@ const AdminBlogManager: React.FC = () => {
             excerpt: '',
             image: '',
             date: localISOTime,
-            author: username === 'brifki' || username === 'rifki' ? 'Moh Rifki' : username === 'rio' ? 'Rio' : username,
+            author: 'Angga',
             status: 'draft',
             customContent: {
                 introduction: '',
@@ -589,23 +595,13 @@ const AdminBlogManager: React.FC = () => {
                     <div className="admin-blog-list-view">
                         <div className="admin-stats-bar">
                             <div className="stat-item">
-                                <span className="stat-label">Total Articles</span>
-                                <span className="stat-count">{posts.length}</span>
-                            </div>
-                            <div className="stat-divider"></div>
-                            <div className="stat-item">
-                                <span className="stat-label">Rifki</span>
-                                <span className="stat-count">{posts.filter(p => p.author?.toLowerCase().includes('rifki') || p.author?.toLowerCase() === 'brifki').length}</span>
-                            </div>
-                            <div className="stat-divider"></div>
-                            <div className="stat-item">
-                                <span className="stat-label">Rio</span>
-                                <span className="stat-count">{posts.filter(p => p.author?.toLowerCase().includes('rio')).length}</span>
+                                <span className="stat-label">Published by Angga</span>
+                                <span className="stat-count">{posts.filter(p => p.author === 'Angga').length}</span>
                             </div>
                             <div className="stat-divider"></div>
                             <div className="stat-item">
                                 <span className="stat-label">Others</span>
-                                <span className="stat-count">{posts.length - posts.filter(p => p.author?.toLowerCase().includes('rifki') || p.author?.toLowerCase() === 'brifki' || p.author?.toLowerCase().includes('rio')).length}</span>
+                                <span className="stat-count">{posts.length - posts.filter(p => p.author === 'Angga').length}</span>
                             </div>
                         </div>
 

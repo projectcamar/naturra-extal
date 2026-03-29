@@ -59,7 +59,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         // Robust regex: matches from "export const BLOG_POSTS" until the last ]; before the next export
         // or the end of the file. This ensures any trailing corruption from previous failed syncs is purged.
         const newContent = currentContent.replace(
-            /(export const BLOG_POSTS: BlogPost\[\] = )\[[\s\S]*\](?=;?\s*\n\s*export const|\s*$)/,
+            /(export const BLOG_POSTS: BlogPost\[\] = )\[[\s\S]*\];?(?=\s*\n\s*export const|\s*$)/,
             `$1${newPostsJson};`
         );
 
