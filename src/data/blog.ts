@@ -487,7 +487,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1759689975472-c302b63b3b71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGZvb2QlMjBpbmdyZWRpZW50cyUyMG9uJTIwd29vZGVuJTIwdGFibGV8ZW58MHwwfHx8MTc3NDc5NDQxOHww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 21:26",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Kualitas komoditas sangat penting dalam industri makanan dan minuman. Dalam artikel ini, kita akan membahas beberapa tips untuk meningkatkan kualitas komoditas Anda. <strong>Naturra Extal</strong> sebagai perusahaan komoditas terkemuka di Indonesia, berkomitmen untuk menyediakan komoditas berkualitas tinggi untuk pelanggan kami.",
       "keyPoints": [
@@ -519,6 +519,45 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dalam meningkatkan kualitas komoditas, penting untuk memilih bahan baku yang tepat, melakukan proses pengolahan yang baik, dan melakukan pengawasan kualitas yang ketat. Dengan demikian, Anda dapat meningkatkan kualitas produk Anda dan memenuhi kebutuhan pelanggan Anda."
+    }
+  },
+  {
+    "id": 19,
+    "slug": "tips-memilih-biji-kakao-berkualitas",
+    "title": "Biji Kakao Berkualitas",
+    "category": "Tips and Trick",
+    "excerpt": "Tips memilih biji kakao berkualitas untuk hasil olahan terbaik",
+    "image": "https://images.unsplash.com/photo-1585428522589-592f41523318?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGNvY29hJTIwYmVhbnMlMjBvbiUyMHdvb2RlbiUyMHRhYmxlfGVufDB8MHx8fDE3NzQ3OTg3ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-29 22:39",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Biji kakao merupakan bahan baku utama dalam produksi cokelat. Oleh karena itu, penting untuk memilih biji kakao yang berkualitas tinggi. Dalam artikel ini, kita akan membahas beberapa tips untuk memilih biji kakao yang tepat untuk kebutuhan Anda.",
+      "keyPoints": [
+        "Pilih biji kakao yang segar dan bersih",
+        "Perhatikan warna dan ukuran biji kakao",
+        "Cek kelembaban biji kakao"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengapa Kualitas Biji Kakao Penting?",
+          "content": "Kualitas biji kakao sangat berpengaruh pada hasil olahan cokelat. Biji kakao yang berkualitas tinggi akan menghasilkan cokelat dengan rasa yang kaya dan aroma yang kuat. Oleh karena itu, penting untuk memilih biji kakao yang tepat untuk kebutuhan Anda. <br> Naturra Extal, sebagai penyedia biji kakao berkualitas, menawarkan biji kakao yang dipilih dengan teliti dan diproses dengan baik untuk menghasilkan kualitas terbaik.",
+          "imageSearchQuery": "proses pengolahan biji kakao",
+          "image": "https://images.unsplash.com/photo-1619615174792-a5edcfeafdfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxwcm9zZXMlMjBwZW5nb2xhaGFuJTIwYmlqaSUyMGtha2FvfGVufDB8MHx8fDE3NzQ3OTg3ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "proses pengolahan biji kakao"
+        },
+        {
+          "heading": "Tips Memilih Biji Kakao Berkualitas",
+          "content": "Berikut beberapa tips untuk memilih biji kakao yang berkualitas: <br> - Pilih biji kakao yang segar dan bersih <br> - Perhatikan warna dan ukuran biji kakao <br> - Cek kelembaban biji kakao <br> Dengan memperhatikan beberapa tips di atas, Anda dapat memilih biji kakao yang tepat untuk kebutuhan Anda."
+        },
+        {
+          "heading": "Naturra Extal Solusi Biji Kakao Berkualitas",
+          "content": "Naturra Extal menawarkan biji kakao berkualitas yang dipilih dengan teliti dan diproses dengan baik. Kami memiliki pengalaman yang luas dalam menyediakan biji kakao untuk berbagai kebutuhan, dari industri makanan hingga pengguna rumahan. <br> Dengan memilih Naturra Extal, Anda dapat yakin bahwa Anda mendapatkan biji kakao yang berkualitas tinggi dan sesuai dengan kebutuhan Anda. Silakan hubungi kami untuk informasi lebih lanjut tentang produk kami, seperti <strong>Organic Coconut Sugar Granule</strong> (produk id: 12).",
+          "productId": 12
+        }
+      ],
+      "conclusion": "Dengan memilih biji kakao yang berkualitas tinggi, Anda dapat menghasilkan cokelat dengan rasa yang kaya dan aroma yang kuat. Naturra Extal menawarkan biji kakao berkualitas yang dipilih dengan teliti dan diproses dengan baik untuk menghasilkan kualitas terbaik. Silakan hubungi kami untuk informasi lebih lanjut tentang produk kami."
     }
   }
 ];
