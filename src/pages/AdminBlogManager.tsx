@@ -154,17 +154,16 @@ const AdminBlogManager: React.FC = () => {
                     const remoteSlug = data.latestPost?.slug;
                     const isTargetLive = deploymentSlugs.includes(remoteSlug) || (deploymentTargetSlug === remoteSlug);
 
+                    // Explicit detection log
+                    addLog(`[System] Live Check: Current=${remoteSlug || 'home'} | Target=${deploymentTargetSlug || 'none'}`, 'info');
+
                     if (data.success && (countMatches && latestPostMatches || isTargetLive)) {
                         setDeploymentStatus('ready');
-                        addLog(`SUCCESS: Detected "${remoteSlug}" is live! Sync complete.`, 'success');
+                        addLog(`🎉 LIVE DETECTION SUCCESS: Found "${remoteSlug}" on live site! Sync complete.`, 'success');
                         if (statusIntervalId) clearInterval(statusIntervalId);
                         if (liveIntervalId) clearInterval(liveIntervalId);
                         if (iframeIntervalId) clearInterval(iframeIntervalId);
                     } else {
-                        // Regular detection log (less frequent)
-                        if (Math.random() > 0.7) {
-                            addLog(`Monitoring: live site at ${remoteSlug || 'home'}... waiting for ${deploymentSlugs.join(', ') || 'updates'}`, 'info');
-                        }
                         setIframeKey(k => k + 1);
                     }
                 } catch (error) {

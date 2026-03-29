@@ -11,7 +11,7 @@ import './App.css'
 
 // ===== NATURRA EXTAL - Primary Landing Pages =====
 import NaturraHome from './pages/NaturraHome'
-import NotFound from './pages/NotFound'
+const NotFound = lazy(() => import('./pages/NotFound'))
 import WhatsAppButton from './components/WhatsAppButton'
 import SingaporeLanguageModal from './components/SingaporeLanguageModal'
 import ScrollToTop from './components/ScrollToTop'
@@ -190,8 +190,16 @@ function App() {
               <Route path="/ko" element={<NaturraHome />} />
 
               {/* 404 Pages */}
-              <Route path="/404-not-found" element={<NotFound />} />
-              <Route path="*" element={<NotFound />} />
+              <Route path="/404-not-found" element={
+                <Suspense fallback={<Loading />}>
+                  <NotFound />
+                </Suspense>
+              } />
+              <Route path="*" element={
+                <Suspense fallback={<Loading />}>
+                  <NotFound />
+                </Suspense>
+              } />
             </Routes>
             <AdminTutorial />
             <WhatsAppButton />
