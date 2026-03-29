@@ -92,7 +92,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             success: true,
             message: 'Changes committed and pushed successfully. Vercel will auto-deploy.',
             deployed: true,
-            commitUrl: updateResult.commit?.html_url
+            commitUrl: updateResult.commit?.html_url,
+            commitSha: updateResult.commit?.sha
         });
     } catch (error: any) {
         console.error('[AUTO_DEPLOY_ERROR]', error);

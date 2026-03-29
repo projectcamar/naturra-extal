@@ -30,6 +30,11 @@ const AdminBlogManager: React.FC = () => {
 
     const [selectedLanguage, setSelectedLanguage] = useState('id')
 
+    // Deployment Status state
+    const [activeDeploymentSha, setActiveDeploymentSha] = useState<string | null>(null)
+    const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'queued' | 'building' | 'ready' | 'failed'>('idle')
+    const [deploymentDetails, setDeploymentDetails] = useState<any>(null)
+
     // Pagination state
     const [itemsPerPage, setItemsPerPage] = useState<number | 'all'>(10)
     const [currentPage, setCurrentPage] = useState(1)
@@ -73,6 +78,41 @@ const AdminBlogManager: React.FC = () => {
             localStorage.setItem('NATURRA_blog_drafts', JSON.stringify(drafts))
         }
     }, [posts, isLoading])
+
+    // Poll for deployment status
+    useEffect(() => {
+        let intervalId: any;
+
+        if (activeDeploymentSha && (deploymentStatus === 'queued' || deploymentStatus === 'building' || deploymentStatus === 'idle')) {
+            const checkStatus = async () => {
+                try {
+                    const response = await fetch(`/api/admin/deployment-status?sha=${activeDeploymentSha}`);
+                    if (!response.ok) return;
+
+                    const data = await response.json();
+                    setDeploymentStatus(data.status);
+                    setDeploymentDetails(data);
+
+                    if (data.status === 'ready' || data.status === 'failed') {
+                        // Stop polling if finished
+                        if (intervalId) clearInterval(intervalId);
+                    }
+                } catch (error) {
+                    console.error('Status check error:', error);
+                }
+            };
+
+            // Initial check
+            checkStatus();
+
+            // Set up polling
+            intervalId = setInterval(checkStatus, 5000); // Check every 5 seconds
+        }
+
+        return () => {
+            if (intervalId) clearInterval(intervalId);
+        };
+    }, [activeDeploymentSha, deploymentStatus])
 
     const handleEdit = (post: BlogPost) => {
         setEditingPost({
@@ -162,9 +202,14 @@ const AdminBlogManager: React.FC = () => {
                 setPosts(syncedPosts)
                 localStorage.removeItem('NATURRA_blog_drafts')
 
+                if (deployResult.commitSha) {
+                    setActiveDeploymentSha(deployResult.commitSha)
+                    setDeploymentStatus('idle') // Will trigger polling
+                }
+
                 setMessage({
                     type: 'success',
-                    text: '✅ Changes deployed! Vercel is rebuilding your site (1-2 minutes). Refresh to see updates.'
+                    text: '✅ Changes pushed to GitHub! Vercel build started. Tracking status below...'
                 })
             } else if (deployResponse.ok && !deployResult.deployed) {
                 setMessage({
@@ -428,6 +473,46 @@ const AdminBlogManager: React.FC = () => {
                         {message.type === 'success' ? <Check size={18} /> : <AlertCircle size={18} />}
                         <span>{message.text}</span>
                         <X size={14} className="close-msg" onClick={() => setMessage(null)} />
+                    </div>
+                )}
+
+                {activeDeploymentSha && (
+                    <div className={`deployment-status-card ${deploymentStatus}`}>
+                        <div className="status-header">
+                            <div className="status-indicator">
+                                {deploymentStatus === 'ready' ? <Check size={20} /> :
+                                    deploymentStatus === 'failed' ? <X size={20} /> :
+                                        <Loader2 size={20} className="animate-spin" />}
+                                <h3>Vercel Deployment: {deploymentStatus.toUpperCase()}</h3>
+                            </div>
+                            <button className="close-status" onClick={() => setActiveDeploymentSha(null)}>
+                                <X size={16} />
+                            </button>
+                        </div>
+
+                        <div className="status-body">
+                            <p>
+                                {deploymentStatus === 'idle' && 'Initializing deployment tracking...'}
+                                {deploymentStatus === 'queued' && 'Deployment is queued. Waiting for Vercel builders...'}
+                                {deploymentStatus === 'building' && 'Vercel is currently building your site with the latest changes.'}
+                                {deploymentStatus === 'ready' && '✅ Site is LIVE and updated!'}
+                                {deploymentStatus === 'failed' && '❌ Deployment failed. Please check Vercel dashboard.'}
+                            </p>
+
+                            {deploymentDetails?.checkRunUrl && (
+                                <a href={deploymentDetails.checkRunUrl} target="_blank" rel="noopener noreferrer" className="view-link">
+                                    View on GitHub Checks
+                                </a>
+                            )}
+                        </div>
+
+                        {deploymentStatus === 'ready' && (
+                            <div className="status-footer">
+                                <button className="refresh-btn" onClick={() => window.location.reload()}>
+                                    Refresh Page to See Updates
+                                </button>
+                            </div>
+                        )}
                     </div>
                 )}
 
