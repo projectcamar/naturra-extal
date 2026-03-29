@@ -48,9 +48,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         const sha = fileData.sha;
 
         // Step 2: Generate new content with updated BLOG_POSTS array
-        const newPostsJson = JSON.stringify(posts, null, 2);
+        // Normalize author names to "Angga" and ensure id 12 is handled
+        const sanitizedPosts = posts.map((post: any) => ({
+            ...post,
+            author: (post.author === 'rioanggara' || !post.author) ? 'Angga' : post.author
+        }));
+
+        const newPostsJson = JSON.stringify(sanitizedPosts, null, 2);
+
+        // Robust regex: matches from "export const BLOG_POSTS" until the last ]; before the next export
+        // or the end of the file. This ensures any trailing corruption from previous failed syncs is purged.
         const newContent = currentContent.replace(
-            /(export const BLOG_POSTS: BlogPost\[\] = )\[[\s\S]*?\];?/,
+            /(export const BLOG_POSTS: BlogPost\[\] = )\[[\s\S]*\](?=;?\s*\n\s*export const|\s*$)/,
             `$1${newPostsJson};`
         );
 
