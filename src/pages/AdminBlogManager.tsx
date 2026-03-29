@@ -4,7 +4,8 @@ import { useNavigate, Link } from 'react-router-dom'
 import {
     Plus, Edit, Trash2, Search, ArrowLeft, Save,
     FileText, AlertCircle, Loader2, Check, X,
-    Sparkles, Eye, Settings, Globe, Image
+    Sparkles, Eye, Settings, Globe, Image,
+    Terminal, ExternalLink, RefreshCw
 } from 'lucide-react'
 import { BLOG_POSTS, type BlogPost } from '../data/blog'
 import type { LanguageCode } from '../utils/languageManager'
@@ -47,6 +48,9 @@ const AdminBlogManager: React.FC = () => {
     const [activeDeploymentSha, setActiveDeploymentSha] = useState<string | null>(null)
     const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'queued' | 'building' | 'verifying' | 'ready' | 'failed'>('idle')
     const [deploymentDetails, setDeploymentDetails] = useState<any>(null)
+    const [deploymentLogs, setDeploymentLogs] = useState<{ msg: string, time: string, type: 'info' | 'success' | 'error' | 'warning' }[]>([])
+    const [iframeKey, setIframeKey] = useState(0)
+    const [showLogs, setShowLogs] = useState(false)
 
     // Pagination state
     const [itemsPerPage, setItemsPerPage] = useState<number | 'all'>(10)
@@ -96,6 +100,16 @@ const AdminBlogManager: React.FC = () => {
     useEffect(() => {
         let statusIntervalId: any;
         let liveIntervalId: any;
+        let iframeIntervalId: any;
+
+        const addLog = (msg: string, type: 'info' | 'success' | 'error' | 'warning' = 'info') => {
+            const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            setDeploymentLogs(prev => {
+                // Prevent duplicate consecutive logs
+                if (prev.length > 0 && prev[prev.length - 1].msg === msg) return prev;
+                return [...prev, { msg, time, type }];
+            });
+        };
 
         if (activeDeploymentSha && deploymentStatus !== 'ready' && deploymentStatus !== 'failed') {
             const checkStatus = async () => {
@@ -106,9 +120,11 @@ const AdminBlogManager: React.FC = () => {
 
                     if (data.status === 'ready' && deploymentStatus !== 'verifying') {
                         setDeploymentStatus('verifying');
-                        console.log('Vercel Ready, switching to live verification...');
-                    } else if (data.status !== 'ready' && deploymentStatus !== 'verifying') {
+                        addLog('Vercel Build Ready! Now verifying content on live site...', 'success');
+                    } else if (data.status !== deploymentStatus && data.status !== 'verifying') {
                         setDeploymentStatus(data.status);
+                        addLog(`Status: ${data.status.toUpperCase()} - ${data.message || 'Waiting for build...'}`,
+                            data.status === 'failed' ? 'error' : 'info');
                     }
                     setDeploymentDetails(data);
 
@@ -123,8 +139,12 @@ const AdminBlogManager: React.FC = () => {
 
             const verifyLive = async () => {
                 try {
+                    addLog('Scanning live site for updates...', 'info');
                     const response = await fetch(`/api/admin/health?t=${Date.now()}`);
-                    if (!response.ok) return;
+                    if (!response.ok) {
+                        addLog('Health check failed. Retrying...', 'warning');
+                        return;
+                    }
                     const data = await response.json();
 
                     const latestLocalPost = posts[posts.length - 1];
@@ -133,24 +153,41 @@ const AdminBlogManager: React.FC = () => {
 
                     if (data.success && countMatches && latestPostMatches) {
                         setDeploymentStatus('ready');
-                        console.log('Live Verification SUCCESS: Content is live.');
+                        addLog('LIVE VERIFICATION SUCCESS: All changes are officially live!', 'success');
                         if (statusIntervalId) clearInterval(statusIntervalId);
                         if (liveIntervalId) clearInterval(liveIntervalId);
+                        if (iframeIntervalId) clearInterval(iframeIntervalId);
+                    } else {
+                        addLog(`Content check: Remote=${data.postCount} posts, Local=${posts.length} posts. Waiting for propagation...`, 'warning');
+                        // Also force iframe refresh
+                        setIframeKey(k => k + 1);
                     }
                 } catch (error) {
                     console.error('Live verification error:', error);
+                    addLog('Connection lost. Retrying health check...', 'error');
                 }
             };
 
             checkStatus();
             verifyLive();
-            statusIntervalId = setInterval(checkStatus, 3000);
-            liveIntervalId = setInterval(verifyLive, 3000);
+            statusIntervalId = setInterval(checkStatus, 4000);
+            liveIntervalId = setInterval(verifyLive, 6000);
+
+            // Auto-refresh iframe every 10 seconds to detect visual updates
+            iframeIntervalId = setInterval(() => {
+                setIframeKey(k => k + 1);
+                addLog('Refreshing live preview iframe...', 'info');
+            }, 10000);
+
+            if (deploymentLogs.length === 0) {
+                addLog('Deployment initiated. Tracking GitHub commit...', 'info');
+            }
         }
 
         return () => {
             if (statusIntervalId) clearInterval(statusIntervalId);
             if (liveIntervalId) clearInterval(liveIntervalId);
+            if (iframeIntervalId) clearInterval(iframeIntervalId);
         };
     }, [activeDeploymentSha, deploymentStatus, posts])
 
@@ -252,6 +289,11 @@ const AdminBlogManager: React.FC = () => {
                 if (deployResult.commitSha) {
                     setActiveDeploymentSha(deployResult.commitSha)
                     setDeploymentStatus('idle') // Will trigger polling
+                    setDeploymentLogs([{
+                        msg: '✅ Changes pushed to GitHub! Vercel build started.',
+                        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }),
+                        type: 'success'
+                    }])
                 }
 
                 setMessage({
@@ -581,48 +623,117 @@ const AdminBlogManager: React.FC = () => {
                                         <Loader2 size={20} className="animate-spin" />}
                                 <h3>NATURRA LIVE SYNC: {deploymentStatus === 'verifying' ? 'CHECKING WEBSITE' : deploymentStatus.toUpperCase()}</h3>
                             </div>
-                            <button className="close-status" onClick={() => setActiveDeploymentSha(null)}>
-                                <X size={16} />
-                            </button>
+                            <div className="deployment-header-actions">
+                                <button className="toggle-logs-btn" onClick={() => setShowLogs(!showLogs)} title="Toggle Activity Logs">
+                                    <Terminal size={16} />
+                                    <span>{showLogs ? 'Hide Logs' : 'Show Logs'}</span>
+                                </button>
+                                <button className="close-status" onClick={() => setActiveDeploymentSha(null)}>
+                                    <X size={16} />
+                                </button>
+                            </div>
                         </div>
 
                         <div className="status-body">
-                            <p>
-                                {deploymentStatus === 'ready' && '✨ EXCELLENT! Your changes are now LIVE.'}
-                                {deploymentStatus === 'failed' && '❌ Sync failed. Please contact support.'}
-                                {(deploymentStatus === 'queued' || deploymentStatus === 'building' || deploymentStatus === 'verifying') && (
-                                    <button
-                                        className="inline-recheck-btn"
-                                        onClick={() => {
-                                            fetch(`/api/admin/health?t=${Date.now()}`)
-                                                .then(r => r.json())
-                                                .then(data => {
-                                                    const latestLocalPost = posts[posts.length - 1];
-                                                    if (data.postCount === posts.length && (!latestLocalPost || data.latestPost?.id === latestLocalPost.id)) {
-                                                        setDeploymentStatus('ready');
-                                                    } else {
-                                                        setMessage({ type: 'error', text: 'Health Check: Remote content still pending...' });
-                                                    }
-                                                });
-                                        }}
-                                    >
-                                        Force Re-check Live Site
-                                    </button>
+                            <div className="status-message-main">
+                                <p>
+                                    {deploymentStatus === 'ready' && '✨ EXCELLENT! Your changes are now LIVE.'}
+                                    {deploymentStatus === 'failed' && '❌ Sync failed. Please contact support.'}
+                                    {(deploymentStatus === 'queued' || deploymentStatus === 'building' || deploymentStatus === 'verifying') && (
+                                        <>
+                                            <span className="pulsing-text">The site is currently being updated. You can track progress below.</span>
+                                            <div className="status-button-group">
+                                                <button
+                                                    className="inline-recheck-btn highlight"
+                                                    onClick={() => {
+                                                        const addLog = (msg: string, type: 'info' | 'success' | 'error' | 'warning' = 'info') => {
+                                                            const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                                                            setDeploymentLogs(prev => [...prev, { msg, time, type }]);
+                                                        };
+                                                        addLog('Force Re-check triggered by user...', 'warning');
+                                                        setIframeKey(k => k + 1);
+                                                        fetch(`/api/admin/health?t=${Date.now()}`)
+                                                            .then(r => r.json())
+                                                            .then(data => {
+                                                                const latestLocalPost = posts[posts.length - 1];
+                                                                if (data.postCount === posts.length && (!latestLocalPost || data.latestPost?.id === latestLocalPost.id)) {
+                                                                    setDeploymentStatus('ready');
+                                                                    addLog('Force Check SUCCESS: Content is live!', 'success');
+                                                                } else {
+                                                                    addLog('Force Check: Remote content still pending...', 'error');
+                                                                    setMessage({ type: 'error', text: 'Health Check: Remote content still pending...' });
+                                                                }
+                                                            });
+                                                    }}
+                                                >
+                                                    <RefreshCw size={14} className={deploymentStatus === 'verifying' ? 'animate-spin' : ''} />
+                                                    Force Re-check Live Site
+                                                </button>
+                                                <button className="inline-recheck-btn" onClick={() => setIframeKey(k => k + 1)}>
+                                                    <RefreshCw size={14} />
+                                                    Refresh Preview
+                                                </button>
+                                            </div>
+                                        </>
+                                    )}
+                                </p>
+                            </div>
+
+                            <div className="deployment-visual-check">
+                                <div className="iframe-wrapper">
+                                    <div className="iframe-header">
+                                        <Globe size={12} />
+                                        <span>LIVE PREVIEW (AUTO-REFRESH)</span>
+                                        <div className="iframe-dot green"></div>
+                                    </div>
+                                    <iframe
+                                        key={iframeKey}
+                                        src={`/?t=${iframeKey}`}
+                                        className="deployment-preview-iframe"
+                                        title="Live Preview"
+                                    />
+                                </div>
+
+                                {showLogs && (
+                                    <div className="deployment-logs-terminal">
+                                        <div className="terminal-header">
+                                            <Terminal size={12} />
+                                            <span>ACTIVITY LOG</span>
+                                        </div>
+                                        <div className="logs-content">
+                                            {deploymentLogs.length === 0 ? (
+                                                <div className="log-entry info">Starting deployment tracker...</div>
+                                            ) : (
+                                                deploymentLogs.slice().reverse().map((log, i) => (
+                                                    <div key={i} className={`log-entry ${log.type}`}>
+                                                        <span className="log-time">[{log.time}]</span>
+                                                        <span className="log-msg">{log.msg}</span>
+                                                    </div>
+                                                ))
+                                            )}
+                                        </div>
+                                    </div>
                                 )}
-                            </p>
+                            </div>
 
                             {deploymentDetails?.checkRunUrl && (
-                                <a href={deploymentDetails.checkRunUrl} target="_blank" rel="noopener noreferrer" className="view-link">
-                                    View on GitHub Checks
-                                </a>
+                                <div className="status-external-links">
+                                    <a href={deploymentDetails.checkRunUrl} target="_blank" rel="noopener noreferrer" className="view-link">
+                                        <ExternalLink size={14} />
+                                        <span>View GitHub Build Process</span>
+                                    </a>
+                                </div>
                             )}
                         </div>
 
                         {deploymentStatus === 'ready' && (
                             <div className="status-footer">
                                 <button className="refresh-btn" onClick={() => window.location.reload()}>
-                                    Refresh Page to See Updates
+                                    Refresh Admin Page to Sync Everything
                                 </button>
+                                <a href="/" target="_blank" className="visit-site-btn">
+                                    Visit Live Site <ExternalLink size={14} />
+                                </a>
                             </div>
                         )}
                     </div>
