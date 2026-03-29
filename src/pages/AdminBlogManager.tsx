@@ -97,7 +97,7 @@ const AdminBlogManager: React.FC = () => {
         let statusIntervalId: any;
         let liveIntervalId: any;
 
-        if (activeDeploymentSha && (deploymentStatus === 'queued' || deploymentStatus === 'building' || deploymentStatus === 'idle' || deploymentStatus === 'verifying')) {
+        if (activeDeploymentSha && deploymentStatus !== 'ready' && deploymentStatus !== 'failed') {
             const checkStatus = async () => {
                 try {
                     const response = await fetch(`/api/admin/deployment-status?sha=${activeDeploymentSha}`);
@@ -120,9 +120,8 @@ const AdminBlogManager: React.FC = () => {
                 }
             };
 
-            const verifyLive = async () => {
-                if (deploymentStatus === 'ready') return; // Stop if already ready
 
+            const verifyLive = async () => {
                 try {
                     const response = await fetch(`/api/admin/health?t=${Date.now()}`);
                     if (!response.ok) return;
