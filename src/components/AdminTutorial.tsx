@@ -1,107 +1,189 @@
-import React from 'react'
-import { X, ArrowRight, Sparkles, BookOpen, Layout } from 'lucide-react'
+import React, { useState, useEffect, useMemo } from 'react'
+import { ArrowRight, Sparkles, BookOpen, Layout, FileText, MousePointer2 } from 'lucide-react'
+import { useTutorial } from '../context/TutorialContext'
 
-interface AdminTutorialProps {
-    step: number
-    onNext: () => void
-    onClose: () => void
-}
+const AdminTutorial: React.FC = () => {
+    const { currentStep, nextStep, getStepData, isActive } = useTutorial();
+    const [targetRect, setTargetRect] = useState<DOMRect | null>(null);
 
-const AdminTutorial: React.FC<AdminTutorialProps> = ({ step, onNext, onClose }) => {
-    if (step === 0) return null
+    const stepData = getStepData();
 
-    const steps = [
-        {
-            title: "Welcome to your Hub",
-            text: "This dashboard gives you a bird's eye view of Naturra Extal's activity. From here, you can track leads and manage content.",
-            icon: <Layout className="text-blue-500" size={32} />,
-            btnText: "Next: Content Power",
-            position: "center"
-        },
-        {
-            title: "Blog & AI Generation",
-            text: "Our most powerful tool. Head over to the Blog Manager to generate high-quality, SEO-optimized articles using AI.",
-            icon: <BookOpen className="text-green-500" size={32} />,
-            btnText: "Go to Blog Manager",
-            position: "center"
+    useEffect(() => {
+        if (!isActive || !stepData?.targetId) {
+            setTargetRect(null);
+            return;
         }
-    ]
 
-    const currentStep = steps[step - 1]
-    if (!currentStep) return null
+        const updateRect = () => {
+            const el = document.getElementById(stepData.targetId);
+            if (el) {
+                setTargetRect(el.getBoundingClientRect());
+            } else {
+                setTargetRect(null);
+            }
+        };
+
+        // Initial update
+        updateRect();
+
+        // Update on scroll/resize or when page content might have changed
+        window.addEventListener('scroll', updateRect, true);
+        window.addEventListener('resize', updateRect);
+
+        // Polling as a fallback for dynamic content loading
+        const interval = setInterval(updateRect, 500);
+
+        return () => {
+            window.removeEventListener('scroll', updateRect, true);
+            window.removeEventListener('resize', updateRect);
+            clearInterval(interval);
+        };
+    }, [isActive, stepData?.targetId, currentStep]);
+
+    if (!isActive || !stepData) return null;
+
+    const spotlightStyle = targetRect ? {
+        clipPath: `polygon(
+      0% 0%, 
+      0% 100%, 
+      ${targetRect.left}px 100%, 
+      ${targetRect.left}px ${targetRect.top}px, 
+      ${targetRect.right}px ${targetRect.top}px, 
+      ${targetRect.right}px ${targetRect.bottom}px, 
+      ${targetRect.left}px ${targetRect.bottom}px, 
+      ${targetRect.left}px 100%, 
+      100% 100%, 
+      100% 0%
+    )`
+    } : {};
+
+    const cardPosition = useMemo(() => {
+        if (!targetRect) return { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' };
+
+        const padding = 24;
+        const cardWidth = 400;
+        const cardHeight = 280;
+
+        switch (stepData.position) {
+            case 'bottom':
+                return {
+                    top: `${targetRect.bottom + padding}px`,
+                    left: `${targetRect.left + targetRect.width / 2 - cardWidth / 2}px`
+                };
+            case 'top':
+                return {
+                    top: `${targetRect.top - cardHeight - padding}px`,
+                    left: `${targetRect.left + targetRect.width / 2 - cardWidth / 2}px`
+                };
+            case 'left':
+                return {
+                    top: `${targetRect.top + targetRect.height / 2 - cardHeight / 2}px`,
+                    left: `${targetRect.left - cardWidth - padding}px`
+                };
+            case 'right':
+                return {
+                    top: `${targetRect.top + targetRect.height / 2 - cardHeight / 2}px`,
+                    left: `${targetRect.right + padding}px`
+                };
+            default:
+                return { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' };
+        }
+    }, [targetRect, stepData]);
+
+    const getIcon = (title: string) => {
+        if (title.includes('Welcome')) return <Layout className="text-blue-500" size={32} />;
+        if (title.includes('Blog')) return <BookOpen className="text-green-500" size={32} />;
+        if (title.includes('Article')) return <FileText className="text-purple-500" size={32} />;
+        if (title.includes('AI')) return <Sparkles className="text-amber-500" size={32} />;
+        return <MousePointer2 className="text-indigo-500" size={32} />;
+    };
 
     return (
-        <div className="tutorial-overlay">
-            <div className={`tutorial-card step-${step}`}>
-                <button className="tutorial-close" onClick={onClose} aria-label="Close tutorial">
-                    <X size={18} />
-                </button>
+        <div className="tutorial-root">
+            {/* Dark Overlay with Hole */}
+            <div className="tutorial-overlay" style={spotlightStyle} />
 
-                <div className="tutorial-header">
-                    <div className="tutorial-icon">
-                        {currentStep.icon}
+            {/* Clear Box for Highlight Border */}
+            {targetRect && (
+                <div
+                    className="tutorial-highlight-box"
+                    style={{
+                        top: targetRect.top - 4,
+                        left: targetRect.left - 4,
+                        width: targetRect.width + 8,
+                        height: targetRect.height + 8
+                    }}
+                />
+            )}
+
+            <div className="tutorial-card-container" style={cardPosition}>
+                <div className={`tutorial-card step-${currentStep}`}>
+                    <div className="tutorial-header">
+                        <div className="tutorial-icon">
+                            {getIcon(stepData.title)}
+                        </div>
+                        <div className="tutorial-badge">TUTORIAL STEP {currentStep}/8</div>
                     </div>
-                    <div className="tutorial-badge">TUTORIAL STEP {step}/2</div>
-                </div>
 
-                <h3 className="tutorial-title">{currentStep.title}</h3>
-                <p className="tutorial-text">{currentStep.text}</p>
+                    <h3 className="tutorial-title">{stepData.title}</h3>
+                    <p className="tutorial-text">{stepData.text}</p>
 
-                <div className="tutorial-footer">
-                    <button className="tutorial-btn" onClick={onNext}>
-                        {currentStep.btnText}
-                        {step === 2 ? <Sparkles size={16} /> : <ArrowRight size={16} />}
-                    </button>
-                </div>
+                    <div className="tutorial-footer">
+                        <button className="tutorial-btn" onClick={nextStep}>
+                            {stepData.btnText}
+                            {currentStep === 8 ? <Sparkles size={16} /> : <ArrowRight size={16} />}
+                        </button>
+                    </div>
 
-                <div className="tutorial-progress">
-                    <div className={`progress-dot ${step >= 1 ? 'active' : ''}`} />
-                    <div className={`progress-dot ${step >= 2 ? 'active' : ''}`} />
+                    <div className="tutorial-progress">
+                        {[...Array(8)].map((_, i) => (
+                            <div key={i} className={`progress-dot ${currentStep > i ? 'active' : ''}`} />
+                        ))}
+                    </div>
                 </div>
             </div>
 
             <style>{`
-        .tutorial-overlay {
+        .tutorial-root {
           position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: rgba(0, 0, 0, 0.4);
-          backdrop-filter: blur(4px);
+          inset: 0;
           z-index: 10000;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 20px;
-          animation: fadeIn 0.3s ease;
+          pointer-events: none;
+        }
+
+        .tutorial-overlay {
+          position: absolute;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.75);
+          backdrop-filter: blur(4px);
+          pointer-events: auto;
+          transition: clip-path 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .tutorial-highlight-box {
+          position: absolute;
+          border: 3px solid #004D2C;
+          border-radius: 12px;
+          box-shadow: 0 0 0 4px rgba(0, 77, 44, 0.2), 0 0 20px rgba(0, 77, 44, 0.4);
+          z-index: 10001;
+          pointer-events: none;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .tutorial-card-container {
+          position: absolute;
+          z-index: 10002;
+          pointer-events: auto;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .tutorial-card {
           background: #fff;
-          width: 100%;
-          max-width: 400px;
+          width: 400px;
           border-radius: 24px;
           padding: 32px;
-          position: relative;
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-          transform: translateY(0);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
           animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .tutorial-close {
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          background: none;
-          border: none;
-          color: #ccc;
-          cursor: pointer;
-          transition: color 0.3s;
-        }
-
-        .tutorial-close:hover {
-          color: #666;
         }
 
         .tutorial-header {
@@ -138,7 +220,7 @@ const AdminTutorial: React.FC<AdminTutorialProps> = ({ step, onNext, onClose }) 
           color: #0f172a;
           margin-bottom: 12px;
           text-align: center;
-          font-family: 'Plus Jakarta Sans', sans-serif;
+          font-family: 'Inter', sans-serif;
         }
 
         .tutorial-text {
@@ -146,7 +228,7 @@ const AdminTutorial: React.FC<AdminTutorialProps> = ({ step, onNext, onClose }) 
           line-height: 1.6;
           color: #475569;
           text-align: center;
-          margin-bottom: 28px;
+          margin-bottom: 24px;
         }
 
         .tutorial-footer {
@@ -158,7 +240,7 @@ const AdminTutorial: React.FC<AdminTutorialProps> = ({ step, onNext, onClose }) 
           background: #004D2C;
           color: #fff;
           border: none;
-          padding: 12px 24px;
+          padding: 14px 24px;
           border-radius: 12px;
           font-weight: 600;
           display: flex;
@@ -168,6 +250,7 @@ const AdminTutorial: React.FC<AdminTutorialProps> = ({ step, onNext, onClose }) 
           transition: all 0.3s;
           width: 100%;
           justify-content: center;
+          font-family: 'Inter', sans-serif;
         }
 
         .tutorial-btn:hover {
@@ -179,13 +262,13 @@ const AdminTutorial: React.FC<AdminTutorialProps> = ({ step, onNext, onClose }) 
         .tutorial-progress {
           display: flex;
           justify-content: center;
-          gap: 8px;
+          gap: 6px;
           margin-top: 24px;
         }
 
         .progress-dot {
-          width: 8px;
-          height: 8px;
+          width: 6px;
+          height: 6px;
           border-radius: 50%;
           background: #e2e8f0;
           transition: all 0.3s;
@@ -193,18 +276,25 @@ const AdminTutorial: React.FC<AdminTutorialProps> = ({ step, onNext, onClose }) 
 
         .progress-dot.active {
           background: #004D2C;
-          width: 20px;
-          border-radius: 4px;
-        }
-
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
+          width: 16px;
+          border-radius: 3px;
         }
 
         @keyframes slideUp {
           from { opacity: 0; transform: translateY(20px); }
           to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+          .tutorial-card-container {
+             top: 50% !important;
+             left: 50% !important;
+             transform: translate(-50%, -50%) !important;
+          }
+          .tutorial-card {
+            width: 90vw;
+            padding: 24px;
+          }
         }
       `}</style>
         </div>

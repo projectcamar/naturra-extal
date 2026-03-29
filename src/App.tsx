@@ -62,6 +62,9 @@ const Loading = () => (
   </div>
 )
 
+import { TutorialProvider } from './context/TutorialContext.tsx'
+import AdminTutorial from './components/AdminTutorial'
+
 function App() {
   // Enable image protection globally
   useEffect(() => {
@@ -79,119 +82,122 @@ function App() {
     <HelmetProvider>
       <Router>
         <LanguageProvider>
-          <ScrollToTop />
-          <SingaporeLanguageModal />
-          <Routes>
-            {/* Primary Routes */}
-            <Route path="/" element={<NaturraHome />} />
-            {/* ... other routes ... */}
-            <Route path="/about" element={
-              <Suspense fallback={<Loading />}>
-                <NaturraAbout />
-              </Suspense>
-            } />
-            <Route path="/products" element={
-              <Suspense fallback={<Loading />}>
-                <NaturraProducts />
-              </Suspense>
-            } />
-            <Route path="/blog" element={
-              <Suspense fallback={<Loading />}>
-                <NaturraBlog />
-              </Suspense>
-            } />
-            <Route path="/blog/:slug" element={
-              <Suspense fallback={<Loading />}>
-                <NaturraBlogPost />
-              </Suspense>
-            } />
-            <Route path="/custom-order" element={
-              <Suspense fallback={<Loading />}>
-                <NaturraCustomOrder />
-              </Suspense>
-            } />
-            <Route path="/partnership" element={
-              <Suspense fallback={<Loading />}>
-                <NaturraPartnership />
-              </Suspense>
-            } />
-
-            {/* Search */}
-            <Route path="/search" element={
-              <Suspense fallback={<Loading />}>
-                <SearchResults />
-              </Suspense>
-            } />
-
-            {/* Legal Pages */}
-            <Route path="/terms-of-service" element={
-              <Suspense fallback={<Loading />}>
-                <TermsOfService />
-              </Suspense>
-            } />
-            <Route path="/shipping-information" element={
-              <Suspense fallback={<Loading />}>
-                <ShippingInformation />
-              </Suspense>
-            } />
-            <Route path="/image-license" element={
-              <Suspense fallback={<Loading />}>
-                <ImageLicense />
-              </Suspense>
-            } />
-
-            {/* Admin Routes */}
-            <Route path="/admin/login" element={
-              <Suspense fallback={<Loading />}>
-                <AdminLogin />
-              </Suspense>
-            } />
-            <Route path="/admin" element={
-              <ProtectedRoute>
+          <TutorialProvider>
+            <ScrollToTop />
+            <SingaporeLanguageModal />
+            <AdminTutorial />
+            <Routes>
+              {/* Primary Routes */}
+              <Route path="/" element={<NaturraHome />} />
+              {/* ... same routes ... */}
+              <Route path="/about" element={
                 <Suspense fallback={<Loading />}>
-                  <AdminDashboard />
+                  <NaturraAbout />
                 </Suspense>
-              </ProtectedRoute>
-            } />
-            <Route path="/admin/dashboard" element={
-              <ProtectedRoute>
+              } />
+              <Route path="/products" element={
                 <Suspense fallback={<Loading />}>
-                  <AdminDashboard />
+                  <NaturraProducts />
                 </Suspense>
-              </ProtectedRoute>
-            } />
-            <Route path="/admin/blog" element={
-              <ProtectedRoute>
+              } />
+              <Route path="/blog" element={
                 <Suspense fallback={<Loading />}>
-                  <AdminBlogManager />
+                  <NaturraBlog />
                 </Suspense>
-              </ProtectedRoute>
-            } />
+              } />
+              <Route path="/blog/:slug" element={
+                <Suspense fallback={<Loading />}>
+                  <NaturraBlogPost />
+                </Suspense>
+              } />
+              <Route path="/custom-order" element={
+                <Suspense fallback={<Loading />}>
+                  <NaturraCustomOrder />
+                </Suspense>
+              } />
+              <Route path="/partnership" element={
+                <Suspense fallback={<Loading />}>
+                  <NaturraPartnership />
+                </Suspense>
+              } />
 
-            {/* SEO Landing Pages */}
-            <Route path="/commodity-export-bekasi" element={
-              <Suspense fallback={<Loading />}>
-                <CommodityExportBekasi />
-              </Suspense>
-            } />
+              {/* Search */}
+              <Route path="/search" element={
+                <Suspense fallback={<Loading />}>
+                  <SearchResults />
+                </Suspense>
+              } />
 
-            {/* Language path redirects to home */}
-            <Route path="/id" element={<NaturraHome />} />
-            <Route path="/eng" element={<NaturraHome />} />
-            <Route path="/ar" element={<NaturraHome />} />
-            <Route path="/zh" element={<NaturraHome />} />
-            <Route path="/ja" element={<NaturraHome />} />
-            <Route path="/es" element={<NaturraHome />} />
-            <Route path="/fr" element={<NaturraHome />} />
-            <Route path="/ko" element={<NaturraHome />} />
+              {/* Legal Pages */}
+              <Route path="/terms-of-service" element={
+                <Suspense fallback={<Loading />}>
+                  <TermsOfService />
+                </Suspense>
+              } />
+              <Route path="/shipping-information" element={
+                <Suspense fallback={<Loading />}>
+                  <ShippingInformation />
+                </Suspense>
+              } />
+              <Route path="/image-license" element={
+                <Suspense fallback={<Loading />}>
+                  <ImageLicense />
+                </Suspense>
+              } />
 
-            {/* 404 Pages */}
-            <Route path="/404-not-found" element={<NotFound />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <WhatsAppButton />
-          <Analytics />
-          <SpeedInsights />
+              {/* Admin Routes */}
+              <Route path="/admin/login" element={
+                <Suspense fallback={<Loading />}>
+                  <AdminLogin />
+                </Suspense>
+              } />
+              <Route path="/admin" element={
+                <ProtectedRoute>
+                  <Suspense fallback={<Loading />}>
+                    <AdminDashboard />
+                  </Suspense>
+                </ProtectedRoute>
+              } />
+              <Route path="/admin/dashboard" element={
+                <ProtectedRoute>
+                  <Suspense fallback={<Loading />}>
+                    <AdminDashboard />
+                  </Suspense>
+                </ProtectedRoute>
+              } />
+              <Route path="/admin/blog" element={
+                <ProtectedRoute>
+                  <Suspense fallback={<Loading />}>
+                    <AdminBlogManager />
+                  </Suspense>
+                </ProtectedRoute>
+              } />
+
+              {/* SEO Landing Pages */}
+              <Route path="/commodity-export-bekasi" element={
+                <Suspense fallback={<Loading />}>
+                  <CommodityExportBekasi />
+                </Suspense>
+              } />
+
+              {/* Language path redirects to home */}
+              <Route path="/id" element={<NaturraHome />} />
+              <Route path="/eng" element={<NaturraHome />} />
+              <Route path="/ar" element={<NaturraHome />} />
+              <Route path="/zh" element={<NaturraHome />} />
+              <Route path="/ja" element={<NaturraHome />} />
+              <Route path="/es" element={<NaturraHome />} />
+              <Route path="/fr" element={<NaturraHome />} />
+              <Route path="/ko" element={<NaturraHome />} />
+
+              {/* 404 Pages */}
+              <Route path="/404-not-found" element={<NotFound />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+            <WhatsAppButton />
+            <Analytics />
+            <SpeedInsights />
+          </TutorialProvider>
         </LanguageProvider>
       </Router>
     </HelmetProvider>

@@ -5,7 +5,6 @@ import { logoutAdmin, getAdminUser } from '../utils/adminAuth'
 import { useNavigate } from 'react-router-dom'
 import { BLOG_POSTS } from '../data/blog'
 import { AdminOnboardingCard } from '../components/AdminOnboardingCard'
-import AdminTutorial from '../components/AdminTutorial'
 import './Admin.css'
 
 const AdminDashboard: React.FC = () => {
@@ -13,7 +12,6 @@ const AdminDashboard: React.FC = () => {
     const articleCount = BLOG_POSTS.length
     const username = getAdminUser()
     const [showOnboarding, setShowOnboarding] = React.useState(false)
-    const [tutorialStep, setTutorialStep] = React.useState(0)
 
     React.useEffect(() => {
         // Check if onboarding was already seen
@@ -29,7 +27,6 @@ const AdminDashboard: React.FC = () => {
             if (e.ctrlKey && e.key === 'g') {
                 e.preventDefault();
                 setShowOnboarding(true);
-                setTutorialStep(0); // Reset tutorial
             }
         };
 
@@ -43,32 +40,15 @@ const AdminDashboard: React.FC = () => {
         setShowOnboarding(false);
     };
 
-    const handleNextStep = () => {
-        if (tutorialStep === 2) {
-            setTutorialStep(0);
-            navigate('/admin/blog', { state: { fromTutorial: true } });
-        } else {
-            setTutorialStep(tutorialStep + 1);
-        }
-    };
-
     return (
         <div className="admin-dashboard">
             {showOnboarding && (
                 <AdminOnboardingCard
                     username={username}
                     onClose={closeOnboarding}
-                    onStartTutorial={() => setTutorialStep(1)}
                 />
             )}
 
-            {tutorialStep > 0 && (
-                <AdminTutorial
-                    step={tutorialStep}
-                    onNext={handleNextStep}
-                    onClose={() => setTutorialStep(0)}
-                />
-            )}
             <Helmet>
                 <title>Admin Dashboard | Naturra Extal</title>
                 <meta name="robots" content="noindex, nofollow" />
@@ -92,13 +72,13 @@ const AdminDashboard: React.FC = () => {
             </header>
 
             <main className="admin-main">
-                <div className="welcome-banner">
+                <div id="admin-welcome-banner" className="welcome-banner">
                     <h2>Welcome to your Dashboard</h2>
                     <p>This is the beginning of the Naturra Extal administration portal. From here, you will soon be able to manage products, content, and track site activity.</p>
                 </div>
 
                 <div className="dashboard-stats">
-                    <div className="stat-card clickable" onClick={() => navigate('/admin/blog')}>
+                    <div id="admin-blog-card" className="stat-card clickable" onClick={() => navigate('/admin/blog')}>
                         <div className="stat-icon">
                             <FileText size={28} />
                         </div>

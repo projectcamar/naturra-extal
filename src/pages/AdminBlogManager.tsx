@@ -11,17 +11,15 @@ import type { LanguageCode } from '../utils/languageManager'
 import { BlogContentEditor } from '../components/BlogContentEditor'
 import './Admin.css'
 
+import { useTutorial } from '../context/TutorialContext'
+
 const AdminBlogManager: React.FC = () => {
     const location = useLocation()
     const [view, setView] = useState<'list' | 'editor'>('list')
-    const [showTutorialTip, setShowTutorialTip] = useState(false)
+    const { currentStep, nextStep } = useTutorial()
 
-    useEffect(() => {
-        if (location.state?.fromTutorial) {
-            setShowTutorialTip(true)
-        }
-    }, [location.state])
     const [posts, setPosts] = useState<BlogPost[]>([])
+    // ... same states ...
     const [searchTerm, setSearchTerm] = useState('')
     const [isSaving, setIsSaving] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
@@ -137,6 +135,7 @@ const AdminBlogManager: React.FC = () => {
     }
 
     const handleNew = () => {
+        if (currentStep === 4) nextStep();
         const newId = posts.length > 0 ? Math.max(...posts.map(p => p.id)) + 1 : 1
         // Include full date and time
         const now = new Date()
@@ -467,7 +466,7 @@ const AdminBlogManager: React.FC = () => {
                             <span>{isSaving ? 'Deploying...' : 'Deploy Changes'}</span>
                         </button>
                     ) : (
-                        <button onClick={handleSavePost} className="save-btn">
+                        <button id="admin-save-btn" onClick={handleSavePost} className="save-btn">
                             <Check size={16} />
                             <span>Done Editing</span>
                         </button>
@@ -476,51 +475,6 @@ const AdminBlogManager: React.FC = () => {
             </header>
 
             <main className="admin-main">
-                {showTutorialTip && (
-                    <div className="tutorial-tip-overlay">
-                        <div className="tutorial-tip-card">
-                            <Sparkles className="tip-icon" size={24} />
-                            <div className="tip-content">
-                                <h4>Ready to Generate?</h4>
-                                <p>Click <strong>"New Article"</strong> or edit an existing one to use our <strong>AI Content Generator</strong>. You can generate titles, images, and full SEO-optimized sections in seconds!</p>
-                            </div>
-                            <button className="tip-close" onClick={() => setShowTutorialTip(false)}>Got it!</button>
-                        </div>
-                        <style>{`
-                            .tutorial-tip-overlay {
-                                margin-bottom: 24px;
-                                animation: fadeIn 0.5s ease;
-                            }
-                            .tutorial-tip-card {
-                                background: linear-gradient(135deg, #004D2C, #006D3F);
-                                color: white;
-                                padding: 20px 24px;
-                                border-radius: 16px;
-                                display: flex;
-                                align-items: center;
-                                gap: 20px;
-                                box-shadow: 0 10px 25px rgba(0, 77, 44, 0.2);
-                                border: 1px solid rgba(255, 255, 255, 0.1);
-                            }
-                            .tip-icon { color: #4ade80; flex-shrink: 0; }
-                            .tip-content h4 { margin: 0 0 4px 0; font-size: 1.1rem; font-weight: 700; }
-                            .tip-content p { margin: 0; font-size: 0.9rem; opacity: 0.9; line-height: 1.5; }
-                            .tip-close {
-                                background: white;
-                                color: #004D2C;
-                                border: none;
-                                padding: 8px 16px;
-                                border-radius: 8px;
-                                font-weight: 700;
-                                font-size: 0.85rem;
-                                cursor: pointer;
-                                white-space: nowrap;
-                                transition: all 0.3s;
-                            }
-                            .tip-close:hover { transform: scale(1.05); background: #f0fdf4; }
-                        `}</style>
-                    </div>
-                )}
 
                 {message && (
                     <div className={`admin-msg ${message.type}`}>
@@ -584,13 +538,13 @@ const AdminBlogManager: React.FC = () => {
                                     onChange={(e) => setSearchTerm(e.target.value)}
                                 />
                             </div>
-                            <button className="create-post-btn" onClick={handleNew}>
+                            <button id="admin-create-post-btn" className="create-post-btn" onClick={handleNew}>
                                 <Plus size={18} />
                                 <span style={{ marginLeft: '5px' }}>New Article</span>
                             </button>
                         </div>
 
-                        <div className="posts-table-card card">
+                        <div id="admin-blog-list-card" className="posts-table-card card">
                             <table className="posts-table">
                                 <thead>
                                     <tr>
@@ -703,6 +657,7 @@ const AdminBlogManager: React.FC = () => {
                     <div className="post-editor-container">
                         <div className="editor-header-actions">
                             <button
+                                id="admin-ai-generate-btn"
                                 className="ai-generate-btn"
                                 onClick={() => setShowAIModal(true)}
                                 disabled={isGenerating}
@@ -712,7 +667,7 @@ const AdminBlogManager: React.FC = () => {
                             </button>
                         </div>
 
-                        <section className="editor-section card compact">
+                        <section id="admin-metadata-editor" className="editor-section card compact">
                             <h2 className="editor-h2"><Type size={16} /> Metadata Editor</h2>
                             <div className="editor-grid-compact">
                                 <div className="input-group-compact span-2">

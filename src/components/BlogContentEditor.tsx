@@ -62,7 +62,7 @@ export const BlogContentEditor: React.FC<BlogContentEditorProps> = ({
     };
 
     return (
-        <div className="content-editor">
+        <div id="admin-content-editor" className="content-editor">
             <div className="editor-section-block">
                 <div className="editor-section">
                     <label>📝 Introduction</label>
