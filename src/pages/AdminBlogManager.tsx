@@ -281,6 +281,8 @@ const AdminBlogManager: React.FC = () => {
             return
         }
 
+        if (currentStep === 9) nextStep();
+
         // New or edited posts get 'draft' status
         const postToSave = { ...editingPost, status: 'draft' as const }
 
@@ -299,6 +301,7 @@ const AdminBlogManager: React.FC = () => {
     }
 
     const handleSyncToFiles = async () => {
+        if (currentStep === 10) nextStep();
         setIsSaving(true)
         setMessage(null)
 
@@ -370,7 +373,6 @@ const AdminBlogManager: React.FC = () => {
             return
         }
 
-        if (currentStep === 7) nextStep();
         setIsGenerating(true)
         setMessage(null)
 
@@ -632,7 +634,7 @@ const AdminBlogManager: React.FC = () => {
 
                 <div className="admin-user-nav">
                     {view === 'list' ? (
-                        <button onClick={handleSyncToFiles} className="save-btn" disabled={isSaving}>
+                        <button id="admin-deploy-btn" onClick={handleSyncToFiles} className="save-btn" disabled={isSaving}>
                             {isSaving ? <Loader2 className="animate-spin" size={16} /> : <Save size={16} />}
                             <span>{isSaving ? 'Deploying...' : 'Deploy Changes'}</span>
                         </button>
@@ -778,7 +780,7 @@ const AdminBlogManager: React.FC = () => {
                                 </div>
 
                                 {showLogs && (
-                                    <div className="deployment-logs-terminal">
+                                    <div id="admin-activity-log" className="deployment-logs-terminal">
                                         <div className="terminal-header">
                                             <Terminal size={12} />
                                             <span>ACTIVITY LOG</span>
@@ -810,6 +812,7 @@ const AdminBlogManager: React.FC = () => {
                                     {deploymentSlugs.length > 0 ? (
                                         deploymentSlugs.map((slug, idx) => (
                                             <a
+                                                id="admin-live-link"
                                                 key={idx}
                                                 href={`/blog/${slug}`}
                                                 target="_blank"

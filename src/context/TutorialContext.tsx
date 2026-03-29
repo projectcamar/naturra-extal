@@ -81,38 +81,49 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
     {
         id: 8,
         title: "Review Your Masterpiece",
-        text: "Review here! Take a look at the generated content. You can always tweak the introduction or key takeaways if needed.",
+        text: "Generate complete! Take a moment to review the generated content in the editor. You can refine any section manually.",
         targetId: "admin-content-editor",
         targetPage: "/admin/blog",
-        btnText: "Looks Good!",
+        btnText: "Perfect, what's next?",
         position: "top"
     },
     {
         id: 9,
-        title: "Metadata & SEO",
-        text: "Fine-tune your URL slugs, categories, and languages to rank higher on Google.",
-        targetId: "admin-metadata-editor",
+        title: "Finalizing & Saving",
+        text: "Once you are happy with the content, click 'Done Editing' to save your progress locally.",
+        targetId: "admin-save-btn",
         targetPage: "/admin/blog",
-        btnText: "Next: Details",
-        position: "top"
+        btnText: "Save Draft",
+        position: "bottom",
+        hideNext: true
     },
     {
         id: 10,
-        title: "Interactive Editor",
-        text: "The main content area is now filled. Feel free to add more sections or refine the existing ones.",
-        targetId: "admin-content-editor",
+        title: "Deploying Changes",
+        text: "Ready to go live? Click 'Deploy Changes' to push all your drafts to the live website.",
+        targetId: "admin-deploy-btn",
         targetPage: "/admin/blog",
-        btnText: "Almost Done",
-        position: "top"
+        btnText: "Push to Live",
+        position: "bottom",
+        hideNext: true
     },
     {
         id: 11,
-        title: "Deploy with Confidence",
-        text: "Once you're satisfied, click here to save your work. Then deploy it live to the global market!",
-        targetId: "admin-save-btn",
+        title: "Real-time Monitoring",
+        text: "The Activity Log shows the step-by-step sync process. Our system will automatically verify when pages are live.",
+        targetId: "admin-activity-log",
         targetPage: "/admin/blog",
-        btnText: "Finish Tutorial 🚀",
-        position: "bottom"
+        btnText: "Monitoring...",
+        position: "top"
+    },
+    {
+        id: 12,
+        title: "You are Live!",
+        text: "Success! Once verified, you'll see live links here. Click one to see your new article on the actual website!",
+        targetId: "admin-live-link",
+        targetPage: "/admin/blog",
+        btnText: "Everything is Done! 🚀",
+        position: "top"
     }
 ];
 
