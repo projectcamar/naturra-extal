@@ -1181,7 +1181,6 @@ const AdminBlogManager: React.FC = () => {
                 .action-input-btn:hover:not(:disabled) { background: #6F5C44; transform: translateY(-1px); }
                 .action-input-btn:disabled { opacity: 0.6; cursor: not-allowed; }
                 
-                .editor-h2 { font-size: 1rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; color: #2C3E50; border-bottom: 1px solid #eee; padding-bottom: 10px; }
             `}</style>
         </div>
     )
