@@ -804,9 +804,26 @@ const AdminBlogManager: React.FC = () => {
                                 <button className="refresh-btn" onClick={() => window.location.reload()}>
                                     Refresh Admin Page to Sync Everything
                                 </button>
-                                <a href="/" target="_blank" className="visit-site-btn">
-                                    Visit Live Site <ExternalLink size={14} />
-                                </a>
+                                <div className="visit-links-grid">
+                                    {deploymentSlugs.length > 0 ? (
+                                        deploymentSlugs.map((slug, idx) => (
+                                            <a
+                                                key={idx}
+                                                href={`/blog/${slug}`}
+                                                target="_blank"
+                                                className="visit-site-btn"
+                                                title={`Visit /blog/${slug}`}
+                                            >
+                                                <span>Visit: {slug.length > 15 ? slug.substring(0, 12) + '...' : slug}</span>
+                                                <ExternalLink size={12} />
+                                            </a>
+                                        ))
+                                    ) : (
+                                        <a href="/" target="_blank" className="visit-site-btn">
+                                            Visit Live Site <ExternalLink size={14} />
+                                        </a>
+                                    )}
+                                </div>
                             </div>
                         )}
                     </div>
