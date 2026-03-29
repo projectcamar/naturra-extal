@@ -32,7 +32,7 @@ const AdminBlogManager: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState('')
     const [isSaving, setIsSaving] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
-    const [message, setMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null)
+    const [message, setMessage] = useState<{ type: 'success' | 'error', text: string, imageUrl?: string } | null>(null)
 
     // Editor state
     const [editingPost, setEditingPost] = useState<BlogPost | null>(null)
@@ -328,8 +328,12 @@ const AdminBlogManager: React.FC = () => {
             }
 
             if (result.image) {
-                setEditingPost(p => p ? { ...p, image: result.image } : null)
-                setMessage({ type: 'success', text: `✨ Found a perfect image for: "${result.searchQuery}"` })
+                setEditingPost(p => p ? { ...p, image: result.url } : null)
+                setMessage({
+                    type: 'success',
+                    text: `✨ Found a perfect image for: "${result.searchQuery}"`,
+                    imageUrl: result.url
+                })
             } else {
                 setMessage({ type: 'error', text: 'No matching image found on Unsplash' })
             }
@@ -387,7 +391,11 @@ const AdminBlogManager: React.FC = () => {
                     }
                 } : null)
 
-                setMessage({ type: 'success', text: `✨ Found section image for: "${result.searchQuery}"` })
+                setMessage({
+                    type: 'success',
+                    text: `✨ Found section image for: "${result.searchQuery}"`,
+                    imageUrl: result.url
+                })
             } else {
                 setMessage({ type: 'error', text: 'No matching image found on Unsplash' })
             }
@@ -486,10 +494,19 @@ const AdminBlogManager: React.FC = () => {
             <main className="admin-main">
 
                 {message && (
-                    <div className={`admin-msg ${message.type}`}>
-                        {message.type === 'success' ? <Check size={18} /> : <AlertCircle size={18} />}
-                        <span>{message.text}</span>
-                        <X size={14} className="close-msg" onClick={() => setMessage(null)} />
+                    <div className={`admin-message ${message.type}`}>
+                        <div className="message-content">
+                            {message.type === 'success' ? <Check size={18} /> : <AlertCircle size={18} />}
+                            <span>{message.text}</span>
+                        </div>
+                        {message.imageUrl && (
+                            <div className="message-image-preview">
+                                <img src={message.imageUrl} alt="Preview" />
+                            </div>
+                        )}
+                        <button onClick={() => setMessage(null)} className="message-close">
+                            <X size={14} />
+                        </button>
                     </div>
                 )}
 
@@ -1604,6 +1621,58 @@ const AdminBlogManager: React.FC = () => {
                 .ai-modal-body { padding: 20px 30px; }
                 .ai-modal-header { padding: 20px 30px; border-bottom: 1px solid #f1f5f9; }
                 .ai-modal-footer { padding: 15px 30px; background: #f8fafc; }
+
+                /* Admin Message / Toast */
+                .admin-message {
+                    position: fixed;
+                    top: 25px;
+                    right: 25px;
+                    z-index: 2500;
+                    width: 300px;
+                    background: #fff;
+                    border-radius: 16px;
+                    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+                    border: 1px solid #f1f5f9;
+                    padding: 18px;
+                    animation: toastSlideIn 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+                }
+                @keyframes toastSlideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+                
+                .message-content {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 12px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    color: #1e293b;
+                    padding-right: 20px;
+                }
+                .admin-message.success .message-content { color: #059669; }
+                .admin-message.error .message-content { color: #dc2626; }
+
+                .message-image-preview {
+                    width: 100%;
+                    height: 140px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    background: #f1f5f9;
+                    margin-bottom: 5px;
+                    border: 1px solid #f1f5f9;
+                }
+                .message-image-preview img { width: 100%; height: 100%; object-fit: cover; }
+                
+                .message-close {
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    background: none;
+                    border: none;
+                    color: #94a3b8;
+                    cursor: pointer;
+                    transition: color 0.2s;
+                }
+                .message-close:hover { color: #1e293b; }
             `}</style>
         </div>
     )
