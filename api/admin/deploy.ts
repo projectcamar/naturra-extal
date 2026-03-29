@@ -8,7 +8,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const { posts, commitMessage = 'Update blog posts via admin' } = req.body;
 
     const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-    const GITHUB_REPO = process.env.GITHUB_REPO || 'projectcamar/mangala-living';
+    const GITHUB_REPO = process.env.GITHUB_REPO || 'projectcamar/naturra-extal';
     const GITHUB_BRANCH = process.env.GITHUB_BRANCH || 'main';
 
     if (!GITHUB_TOKEN) {
@@ -35,7 +35,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             headers: {
                 'Authorization': `Bearer ${GITHUB_TOKEN}`,
                 'Accept': 'application/vnd.github.v3+json',
-                'User-Agent': 'Mangala-Admin-Bot'
+                'User-Agent': 'Naturra-Admin-Bot'
             }
         });
 
@@ -50,8 +50,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         // Step 2: Generate new content with updated BLOG_POSTS array
         const newPostsJson = JSON.stringify(posts, null, 2);
         const newContent = currentContent.replace(
-            /(export const BLOG_POSTS: BlogPost\[\] = )\[[\s\S]*?\](\n\s*\/\/|\n\s*export|\s*$)/,
-            `$1${newPostsJson}$2`
+            /(export const BLOG_POSTS: BlogPost\[\] = )\[[\s\S]*?\];?/,
+            `$1${newPostsJson};`
         );
 
         // Check if there are actual changes
