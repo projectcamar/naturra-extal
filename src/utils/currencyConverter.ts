@@ -102,7 +102,7 @@ export const convertIDRToCurrency = async (idrPrice: string, targetCurrency: 'US
   )
 
   if (isNaN(numericValue) || numericValue === 0) {
-    return 'N/A'
+    return idrPrice
   }
 
   const rates = await getAllExchangeRates()
@@ -148,7 +148,7 @@ export const convertIDRToUSD = async (idrPrice: string): Promise<string> => {
   )
 
   if (isNaN(numericValue) || numericValue === 0) {
-    return 'N/A'
+    return idrPrice
   }
 
   const exchangeRate = await getExchangeRate()

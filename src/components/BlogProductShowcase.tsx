@@ -308,7 +308,7 @@ const BlogProductShowcase: React.FC<BlogProductShowcaseProps> = ({
                   data-item-position={index + 1}
                 >
                   <Link
-                    to={`/product/${product.slug}`}
+                    to="/products"
                     className="blog-product-showcase-card"
                     title={fullTitle}
                     itemProp="url"
