@@ -160,12 +160,26 @@ const AdminBlogManager: React.FC = () => {
                     // Check each pending slug individually
                     for (const slug of pendingSlugs) {
                         try {
+                            const post = posts.find(p => p.slug === slug);
                             const targetUrl = `/blog/${slug}`;
-                            const pageCheck = await fetch(targetUrl, { method: 'GET', cache: 'no-store' });
+                            const response = await fetch(targetUrl, { method: 'GET', cache: 'no-store' });
 
-                            if (pageCheck.status === 200) {
-                                newlyVerified.push(slug);
-                                addLog(`✨ DETECTED: "${slug}" is now live!`, 'success');
+                            if (response.status === 200) {
+                                const html = await response.text();
+
+                                // Markers for a REAL live blog post (not the SPA 404 shell)
+                                // We check if the title exists in the body OR if the blog content ID exists
+                                const hasTitle = post?.title && html.toLowerCase().includes(post.title.toLowerCase());
+                                const hasBlogId = html.includes('id="blog-post-title"');
+                                const isNotFound = html.includes('Page Not Found') || html.includes('Halaman Tidak Ditemukan');
+
+                                if ((hasTitle || hasBlogId) && !isNotFound) {
+                                    newlyVerified.push(slug);
+                                    addLog(`✨ CONTENT DETECTED: "${post?.title || slug}" is CONTENT-LIVE!`, 'success');
+                                } else {
+                                    // Log for debugging (admin console)
+                                    console.log(`Live Check [${slug}]: Status 200 but content check failed. Title: ${hasTitle}, ID: ${hasBlogId}, NotFound: ${isNotFound}`);
+                                }
                             }
                         } catch (e) {
                             console.warn(`Check for ${slug} failed:`, e);
