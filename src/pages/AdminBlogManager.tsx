@@ -304,8 +304,8 @@ const AdminBlogManager: React.FC = () => {
 
             const article = result.article
 
-            // Auto-fill form with AI-generated content
-            setEditingPost(p => p ? {
+            // 1. Prepare updated post object
+            const updatedPost: BlogPost = p ? {
                 ...p,
                 title: article.title || p.title,
                 slug: article.slug || p.slug,
@@ -319,11 +319,41 @@ const AdminBlogManager: React.FC = () => {
                     sections: article.sections || [],
                     conclusion: article.conclusion || ''
                 }
-            } : null)
+            } : p;
 
-            setShowAIModal(false)
-            setAiPrompt('')
-            setMessage({ type: 'success', text: '✨ Article generated successfully! Review and edit as needed.' })
+            // 2. Set the post state
+            setEditingPost(updatedPost);
+            setShowAIModal(false);
+            setAiPrompt('');
+            setMessage({ type: 'success', text: '✨ Article generated! Now searching for a matching cover image...' });
+
+            // 3. Automatically trigger Suggest Cover using the NEW article data
+            try {
+                const imgResponse = await fetch('/api/admin/suggest-image', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        title: updatedPost.title,
+                        excerpt: updatedPost.excerpt,
+                        model: selectedModel
+                    })
+                });
+
+                const imgResult = await imgResponse.json();
+                if (imgResponse.ok && imgResult.success && imgResult.image) {
+                    setEditingPost(current => current ? { ...current, image: imgResult.image } : null);
+                    setMessage({
+                        type: 'success',
+                        text: `✨ Article generated & Found a perfect cover: "${imgResult.searchQuery}"`,
+                        imageUrl: imgResult.image
+                    });
+                } else {
+                    setMessage({ type: 'success', text: '✨ Article generated successfully! (No matching cover found, you can add one manually)' });
+                }
+            } catch (err) {
+                console.error('Auto-suggest image error:', err);
+                // Don't fail the whole process if only the image fails
+            }
 
         } catch (error) {
             console.error('AI generation error:', error)
