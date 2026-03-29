@@ -5,7 +5,8 @@ import {
     Plus, Edit, Trash2, Search, ArrowLeft, Save,
     FileText, AlertCircle, Loader2, Check, X,
     Sparkles, Eye, Settings, Globe, Image,
-    Terminal, ExternalLink, RefreshCw
+    Terminal, ExternalLink, RefreshCw,
+    ChevronLeft, ChevronRight
 } from 'lucide-react'
 import { BLOG_POSTS, type BlogPost } from '../data/blog'
 import type { LanguageCode } from '../utils/languageManager'
@@ -53,11 +54,14 @@ const AdminBlogManager: React.FC = () => {
     const [deploymentTargetSlug, setDeploymentTargetSlug] = useState<string | null>(null)
     const [deploymentSlugs, setDeploymentSlugs] = useState<string[]>([])
     const [verifyAttempts, setVerifyAttempts] = useState(0)
+    const [verifiedSlugs, setVerifiedSlugs] = useState<string[]>([])
+    const [previewIndex, setPreviewIndex] = useState(0)
 
     // Refs for interval closures to prevent stale state bugs
     const verifyAttemptsRef = useRef(0)
     const deploymentTargetSlugRef = useRef<string | null>(null)
     const deploymentSlugsRef = useRef<string[]>([])
+    const verifiedSlugsRef = useRef<string[]>([])
 
     const addLog = React.useCallback((msg: string, type: 'info' | 'success' | 'error' | 'warning' = 'info') => {
         const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
@@ -77,6 +81,10 @@ const AdminBlogManager: React.FC = () => {
     useEffect(() => {
         verifyAttemptsRef.current = verifyAttempts
     }, [verifyAttempts])
+
+    useEffect(() => {
+        verifiedSlugsRef.current = verifiedSlugs
+    }, [verifiedSlugs])
 
     // Pagination state
     const [itemsPerPage, setItemsPerPage] = useState<number | 'all'>(10)
@@ -132,52 +140,53 @@ const AdminBlogManager: React.FC = () => {
         if (activeDeploymentSha && deploymentStatus !== 'ready' && deploymentStatus !== 'failed') {
             const verifyLive = async () => {
                 try {
-                    const targetSlug = deploymentTargetSlugRef.current;
+                    const allSlugs = deploymentSlugsRef.current;
+                    const alreadyVerified = verifiedSlugsRef.current;
+                    const pendingSlugs = allSlugs.filter(s => !alreadyVerified.includes(s));
+
+                    if (pendingSlugs.length === 0 && allSlugs.length > 0) {
+                        setDeploymentStatus('ready');
+                        addLog(`✅ All ${allSlugs.length} pages are now verified live!`, 'success');
+                        if (liveIntervalId) clearInterval(liveIntervalId);
+                        if (iframeIntervalId) clearInterval(iframeIntervalId);
+                        return;
+                    }
+
                     const nextAttempt = verifyAttemptsRef.current + 1;
                     setVerifyAttempts(nextAttempt);
 
-                    const targetLabel = targetSlug ? `/blog/${targetSlug}` : 'multiple pages';
+                    const newlyVerified: string[] = [];
 
-                    // Direct page status check (The new Source of Truth)
-                    let directLive = false;
-                    if (targetSlug) {
+                    // Check each pending slug individually
+                    for (const slug of pendingSlugs) {
                         try {
-                            const targetUrl = `/blog/${targetSlug}`;
+                            const targetUrl = `/blog/${slug}`;
                             const pageCheck = await fetch(targetUrl, { method: 'GET', cache: 'no-store' });
+
                             if (pageCheck.status === 200) {
-                                directLive = true;
-                                addLog(`[Attempt #${nextAttempt}] Direct detection: ${targetUrl} is LIVE!`, 'success');
+                                newlyVerified.push(slug);
+                                addLog(`✨ DETECTED: "${slug}" is now live!`, 'success');
                             }
                         } catch (e) {
-                            console.warn("Direct check failed:", e);
+                            console.warn(`Check for ${slug} failed:`, e);
                         }
                     }
 
-                    // Fallback to API health check
-                    let apiLive = false;
-                    let apiData: any = null;
-                    try {
-                        const response = await fetch(`/api/admin/health?t=${Date.now()}`);
-                        if (response.ok) {
-                            apiData = await response.json();
-                            const remoteSlug = apiData.latestPost?.slug;
-                            const targetSlugs = deploymentSlugsRef.current;
-                            apiLive = apiData.success && (targetSlugs.includes(remoteSlug) || (targetSlug === remoteSlug));
-                        }
-                    } catch (e) {
-                        console.warn("API check failed:", e);
+                    if (newlyVerified.length > 0) {
+                        setVerifiedSlugs(prev => [...prev, ...newlyVerified]);
                     }
 
-                    if (directLive || apiLive) {
+                    // Log heartbeat showing progress
+                    const remainingCount = pendingSlugs.length - newlyVerified.length;
+                    if (remainingCount > 0) {
+                        addLog(`[Attempt #${nextAttempt}] Scanning... ${remainingCount}/${allSlugs.length} pages still pending.`, 'warning');
+                        setIframeKey(k => k + 1);
+                    } else if (allSlugs.length > 0) {
+                        // All done in this pass
                         setDeploymentStatus('ready');
-                        const finalSlug = targetSlug || apiData?.latestPost?.slug || 'content';
-                        addLog(`✨ EH, INI DAH GA 404 LAGI LOH! Detected "${finalSlug}" is officially live!`, 'success');
-                        addLog(`✅ Verification complete after ${nextAttempt} attempts.`, 'success');
+                        addLog(`✅ SUCCESS: All pages are officially live!`, 'success');
                         if (liveIntervalId) clearInterval(liveIntervalId);
                         if (iframeIntervalId) clearInterval(iframeIntervalId);
-                    } else {
-                        addLog(`[Attempt #${nextAttempt}] Site scanning... ${targetLabel} is still 404.`, 'warning');
-                        setIframeKey(k => k + 1);
                     }
                 } catch (error) {
                     console.error('Live verification error:', error);
@@ -294,6 +303,9 @@ const AdminBlogManager: React.FC = () => {
             const deployResult = await deployResponse.json()
 
             if (deployResponse.ok && deployResult.deployed) {
+                const draftPosts = posts.filter(p => p.status === 'draft');
+                const draftSlugs = draftPosts.map(p => p.slug);
+
                 // Mark all as synced and clear local drafts
                 const syncedPosts = posts.map(p => ({ ...p, status: 'synced' as const }))
                 setPosts(syncedPosts)
@@ -302,16 +314,17 @@ const AdminBlogManager: React.FC = () => {
                 if (deployResult.commitSha) {
                     setActiveDeploymentSha(deployResult.commitSha)
                     setDeploymentStatus('idle')
+                    setVerifiedSlugs([])
+                    setPreviewIndex(0)
+                    setVerifyAttempts(0)
 
-                    const draftPosts = posts.filter(p => p.status === 'draft');
-                    const draftSlugs = draftPosts.map(p => p.slug);
                     const targetSlug = draftSlugs[0] || posts[posts.length - 1]?.slug;
 
-                    setDeploymentSlugs(draftSlugs);
+                    setDeploymentSlugs(draftSlugs.length > 0 ? draftSlugs : [targetSlug].filter(Boolean) as string[]);
                     setDeploymentTargetSlug(targetSlug || null);
 
                     setDeploymentLogs([{
-                        msg: `🚀 Changes pushed! Monitoring ${draftSlugs.length} new/updated pages: ${draftSlugs.join(', ')}`,
+                        msg: `🚀 Changes pushed! Monitoring ${draftSlugs.length || 1} pages: ${draftSlugs.length > 0 ? draftSlugs.join(', ') : targetSlug}`,
                         time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }),
                         type: 'success'
                     }])
@@ -705,8 +718,39 @@ const AdminBlogManager: React.FC = () => {
                             <div className="deployment-visual-check">
                                 <div className="iframe-wrapper">
                                     <div className="iframe-header">
-                                        <Globe size={12} />
-                                        <span>PREVIEW: {deploymentTargetSlug ? `/blog/${deploymentTargetSlug}` : '/'}</span>
+                                        <div className="iframe-header-left">
+                                            <Globe size={12} />
+                                            <span className="iframe-url">PREVIEW: {deploymentTargetSlug ? `/blog/${deploymentTargetSlug}` : '/'}</span>
+                                        </div>
+
+                                        {deploymentSlugs.length > 1 && (
+                                            <div className="iframe-nav-controls">
+                                                <button
+                                                    className="iframe-nav-btn"
+                                                    onClick={() => {
+                                                        const newIndex = (previewIndex - 1 + deploymentSlugs.length) % deploymentSlugs.length;
+                                                        setPreviewIndex(newIndex);
+                                                        setDeploymentTargetSlug(deploymentSlugs[newIndex]);
+                                                    }}
+                                                    title="Previous Post"
+                                                >
+                                                    <ChevronLeft size={14} />
+                                                </button>
+                                                <span className="iframe-nav-count">{previewIndex + 1} / {deploymentSlugs.length}</span>
+                                                <button
+                                                    className="iframe-nav-btn"
+                                                    onClick={() => {
+                                                        const newIndex = (previewIndex + 1) % deploymentSlugs.length;
+                                                        setPreviewIndex(newIndex);
+                                                        setDeploymentTargetSlug(deploymentSlugs[newIndex]);
+                                                    }}
+                                                    title="Next Post"
+                                                >
+                                                    <ChevronRight size={14} />
+                                                </button>
+                                            </div>
+                                        )}
+
                                         <div className="iframe-dot green"></div>
                                     </div>
                                     <iframe
@@ -1487,6 +1531,73 @@ const AdminBlogManager: React.FC = () => {
                     align-items: center;
                     gap: 10px;
                     transition: border-color 0.3s;
+                }
+
+                .iframe-header {
+                    background: #f8f9fa;
+                    padding: 8px 15px;
+                    border-bottom: 1px solid #eee;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 10px;
+                }
+
+                .iframe-header-left {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    flex: 1;
+                    min-width: 0;
+                }
+
+                .iframe-url {
+                    font-size: 0.7rem;
+                    font-weight: 700;
+                    color: #64748b;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .iframe-nav-controls {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    background: #fff;
+                    padding: 2px 8px;
+                    border-radius: 20px;
+                    border: 1px solid #e2e8f0;
+                }
+
+                .iframe-nav-btn {
+                    background: transparent;
+                    border: none;
+                    color: #64748b;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 2px;
+                    border-radius: 50%;
+                    transition: all 0.2s;
+                }
+
+                .iframe-nav-btn:hover {
+                    background: #f1f5f9;
+                    color: #004D2C;
+                }
+
+                .iframe-nav-count {
+                    font-size: 0.7rem;
+                    font-weight: 800;
+                    color: #1e293b;
+                    min-width: 30px;
+                    text-align: center;
+                }
+    transition: border-color 0.3s;
                 }
 
                 .search-box:focus-within {
