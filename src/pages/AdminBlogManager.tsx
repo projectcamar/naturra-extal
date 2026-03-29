@@ -121,7 +121,7 @@ const AdminBlogManager: React.FC = () => {
             checkStatus();
 
             // Set up polling
-            intervalId = setInterval(checkStatus, 5000); // Check every 5 seconds
+            intervalId = setInterval(checkStatus, 3000); // Check every 3 seconds (real-time feel)
         }
 
         return () => {
@@ -642,7 +642,7 @@ const AdminBlogManager: React.FC = () => {
                                                 </span>
                                             </td>
                                             <td className="actions-cell">
-                                                <Link to={`/blog/${post.slug}`} className="action-btn view" title="Preview Live">
+                                                <Link to={`/blog/${post.slug}`} className="action-btn view" title="Preview Live" target="_blank" rel="noopener noreferrer">
                                                     <Eye size={16} />
                                                 </Link>
                                                 <button className="action-btn edit" onClick={() => handleEdit(post)} title="Edit Article">
