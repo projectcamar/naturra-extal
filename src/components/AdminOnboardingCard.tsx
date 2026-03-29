@@ -4,9 +4,10 @@ import { Sparkles, Trophy, Globe, ArrowRight, X } from 'lucide-react';
 interface OnboardingCardProps {
     username: string;
     onClose: () => void;
+    onStartTutorial?: () => void;
 }
 
-export const AdminOnboardingCard: React.FC<OnboardingCardProps> = ({ username, onClose }) => {
+export const AdminOnboardingCard: React.FC<OnboardingCardProps> = ({ username, onClose, onStartTutorial }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -66,7 +67,10 @@ export const AdminOnboardingCard: React.FC<OnboardingCardProps> = ({ username, o
                 </div>
 
                 <div className="onboarding-footer">
-                    <button className="onboarding-btn" onClick={onClose}>
+                    <button className="onboarding-btn" onClick={() => {
+                        onClose();
+                        if (onStartTutorial) onStartTutorial();
+                    }}>
                         <span>Get Started</span>
                         <ArrowRight size={18} />
                     </button>

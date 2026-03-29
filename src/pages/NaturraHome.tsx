@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link, useLocation } from 'react-router-dom'
 import { Mail, MessageCircle, Globe, Building2 } from 'lucide-react'
 import NaturraHeader from '../components/NaturraHeader'
 import NaturraFooter from '../components/NaturraFooter'
+import { useLanguage } from '../utils/languageContext'
 import { NATURRA_HOME_TRANSLATIONS } from '../utils/homeTranslations'
-import { getCurrentLanguage, getStoredLanguage, detectLanguageFromIP, type LanguageCode } from '../utils/languageManager'
+import { detectLanguageFromIP, getStoredLanguage, getCurrentLanguage } from '../utils/languageManager'
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
 import './NaturraHome.css'
 
@@ -13,16 +14,7 @@ const OG_LOCALES = ['id_ID', 'en_US', 'ar_SA', 'zh_CN', 'ja_JP', 'es_ES', 'fr_FR
 
 const NaturraHome: React.FC = () => {
     const location = useLocation()
-    const [language, setLanguage] = useState<LanguageCode>(() => {
-        return getCurrentLanguage(location.pathname, location.search)
-    })
-
-    useEffect(() => {
-        const currentLang = getCurrentLanguage(location.pathname, location.search)
-        if (currentLang !== language) {
-            setLanguage(currentLang)
-        }
-    }, [location.pathname, location.search, language])
+    const { language, setLanguage } = useLanguage()
 
     // IP detection for first visit
     useEffect(() => {

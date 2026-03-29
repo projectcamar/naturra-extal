@@ -77,13 +77,14 @@ function App() {
 
   return (
     <HelmetProvider>
-      <LanguageProvider>
-        <Router>
+      <Router>
+        <LanguageProvider>
           <ScrollToTop />
           <SingaporeLanguageModal />
           <Routes>
             {/* Primary Routes */}
             <Route path="/" element={<NaturraHome />} />
+            {/* ... other routes ... */}
             <Route path="/about" element={
               <Suspense fallback={<Loading />}>
                 <NaturraAbout />
@@ -191,8 +192,8 @@ function App() {
           <WhatsAppButton />
           <Analytics />
           <SpeedInsights />
-        </Router>
-      </LanguageProvider>
+        </LanguageProvider>
+      </Router>
     </HelmetProvider>
   )
 }

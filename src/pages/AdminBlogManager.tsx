@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import {
     Plus, Edit, Trash2, Search, ArrowLeft, Save,
     FileText, AlertCircle, Loader2, Check, X,
@@ -12,7 +12,15 @@ import { BlogContentEditor } from '../components/BlogContentEditor'
 import './Admin.css'
 
 const AdminBlogManager: React.FC = () => {
+    const location = useLocation()
     const [view, setView] = useState<'list' | 'editor'>('list')
+    const [showTutorialTip, setShowTutorialTip] = useState(false)
+
+    useEffect(() => {
+        if (location.state?.fromTutorial) {
+            setShowTutorialTip(true)
+        }
+    }, [location.state])
     const [posts, setPosts] = useState<BlogPost[]>([])
     const [searchTerm, setSearchTerm] = useState('')
     const [isSaving, setIsSaving] = useState(false)
@@ -468,6 +476,52 @@ const AdminBlogManager: React.FC = () => {
             </header>
 
             <main className="admin-main">
+                {showTutorialTip && (
+                    <div className="tutorial-tip-overlay">
+                        <div className="tutorial-tip-card">
+                            <Sparkles className="tip-icon" size={24} />
+                            <div className="tip-content">
+                                <h4>Ready to Generate?</h4>
+                                <p>Click <strong>"New Article"</strong> or edit an existing one to use our <strong>AI Content Generator</strong>. You can generate titles, images, and full SEO-optimized sections in seconds!</p>
+                            </div>
+                            <button className="tip-close" onClick={() => setShowTutorialTip(false)}>Got it!</button>
+                        </div>
+                        <style>{`
+                            .tutorial-tip-overlay {
+                                margin-bottom: 24px;
+                                animation: fadeIn 0.5s ease;
+                            }
+                            .tutorial-tip-card {
+                                background: linear-gradient(135deg, #004D2C, #006D3F);
+                                color: white;
+                                padding: 20px 24px;
+                                border-radius: 16px;
+                                display: flex;
+                                align-items: center;
+                                gap: 20px;
+                                box-shadow: 0 10px 25px rgba(0, 77, 44, 0.2);
+                                border: 1px solid rgba(255, 255, 255, 0.1);
+                            }
+                            .tip-icon { color: #4ade80; flex-shrink: 0; }
+                            .tip-content h4 { margin: 0 0 4px 0; font-size: 1.1rem; font-weight: 700; }
+                            .tip-content p { margin: 0; font-size: 0.9rem; opacity: 0.9; line-height: 1.5; }
+                            .tip-close {
+                                background: white;
+                                color: #004D2C;
+                                border: none;
+                                padding: 8px 16px;
+                                border-radius: 8px;
+                                font-weight: 700;
+                                font-size: 0.85rem;
+                                cursor: pointer;
+                                white-space: nowrap;
+                                transition: all 0.3s;
+                            }
+                            .tip-close:hover { transform: scale(1.05); background: #f0fdf4; }
+                        `}</style>
+                    </div>
+                )}
+
                 {message && (
                     <div className={`admin-msg ${message.type}`}>
                         {message.type === 'success' ? <Check size={18} /> : <AlertCircle size={18} />}

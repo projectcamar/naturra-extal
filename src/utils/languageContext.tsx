@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import type { LanguageCode } from './languageManager'
 import { getCurrentLanguage, storeLanguage } from './languageManager'
 
@@ -10,13 +11,18 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [language, setLanguageState] = useState<LanguageCode>('en')
+    const location = useLocation()
+    const [language, setLanguageState] = useState<LanguageCode>(() =>
+        getCurrentLanguage(window.location.pathname, window.location.search)
+    )
 
+    // Sync state with URL/Location changes
     useEffect(() => {
-        // Initial detection
-        const initialLang = getCurrentLanguage(window.location.pathname, window.location.search)
-        setLanguageState(initialLang)
-    }, [])
+        const currentLang = getCurrentLanguage(location.pathname, location.search)
+        if (currentLang !== language) {
+            setLanguageState(currentLang)
+        }
+    }, [location.pathname, location.search])
 
     const setLanguage = (lang: LanguageCode) => {
         setLanguageState(lang)

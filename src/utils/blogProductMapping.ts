@@ -99,93 +99,93 @@ export const getProductShowcaseHeading = (
   const lang = (language || 'id').toLowerCase()
 
   const translations: Record<string, {
-    tables: string
-    chairs: string
-    storage: string
-    bar: string
-    dining: string
-    kitchen: string
-    lounge: string
+    cocoa: string
+    cloves: string
+    cocopeat: string
+    general: string
+    mix: string
+    food: string
+    agri: string
     default: string
   }> = {
     id: {
-      tables: 'Produk Kakao Unggulan Kami',
-      chairs: 'Cengkeh Indonesia Kualitas Ekspor',
-      storage: 'Media Tanam Cocopeat Premium',
-      bar: 'Komoditas Pertanian Pilihan',
-      dining: 'Produk Kakao & Cengkeh',
-      kitchen: 'Bahan Baku Industri Makanan',
-      lounge: 'Produk Hortikultura Berkelanjutan',
+      cocoa: 'Produk Kakao Unggulan Kami',
+      cloves: 'Cengkeh Indonesia Kualitas Ekspor',
+      cocopeat: 'Media Tanam Cocopeat Premium',
+      general: 'Komoditas Pertanian Pilihan',
+      mix: 'Produk Kakao & Cengkeh',
+      food: 'Bahan Baku Industri Makanan',
+      agri: 'Produk Hortikultura Berkelanjutan',
       default: 'Komoditas Terkait yang Mungkin Anda Butuhkan'
     },
     en: {
-      tables: 'Our Featured Cocoa Products',
-      chairs: 'Export Quality Indonesian Cloves',
-      storage: 'Premium Cocopeat Growing Medium',
-      bar: 'Selected Agricultural Commodities',
-      dining: 'Cocoa & Clove Products',
-      kitchen: 'Food Industry Raw Materials',
-      lounge: 'Sustainable Horticulture Products',
+      cocoa: 'Our Featured Cocoa Products',
+      cloves: 'Export Quality Indonesian Cloves',
+      cocopeat: 'Premium Cocopeat Growing Medium',
+      general: 'Selected Agricultural Commodities',
+      mix: 'Cocoa & Clove Products',
+      food: 'Food Industry Raw Materials',
+      agri: 'Sustainable Horticulture Products',
       default: 'Related Commodities You May Need'
     },
     ar: {
-      tables: 'منتجات الكاكاو المميزة لدينا',
-      chairs: 'القرنفل الإندونيسي عالي الجودة للتصدير',
-      storage: 'وسط نمو كوكوبيت متميز',
-      bar: 'سلع زراعية مختارة',
-      dining: 'منتجات الكاكاو والقرنفل',
-      kitchen: 'المواد الخام للصناعات الغذائية',
-      lounge: 'منتجات البستنة المستدامة',
+      cocoa: 'منتجات الكاكاو المميزة لدينا',
+      cloves: 'القرنفل الإندونيسي عالي الجودة للتصدير',
+      cocopeat: 'وسط نمو كوكوبيت متميز',
+      general: 'سلع زراعية مختارة',
+      mix: 'منتجات الكاكاو والقرنفل',
+      food: 'المواد الخام للصناعات الغذائية',
+      agri: 'منتجات البستنة المستدامة',
       default: 'السلع ذات الصلة التي قد تحتاجها'
     },
     zh: {
-      tables: '我们的精选可可产品',
-      chairs: '优质印尼外销丁香',
-      storage: '优质椰糠生长介质',
-      bar: '精选农产品',
-      dining: '可可和丁香产品',
-      kitchen: '食品工业原料',
-      lounge: '可持续园艺产品',
+      cocoa: '我们的精选可可产品',
+      cloves: '优质印尼外销丁香',
+      cocopeat: '优质椰糠生长介质',
+      general: '精选农产品',
+      mix: '可可和丁香产品',
+      food: '食品工业原料',
+      agri: '可持续园艺产品',
       default: '您可能需要的相关商品'
     },
     ja: {
-      tables: '厳選されたココア製品',
-      chairs: '高品質なインドネシア産輸出用クローブ',
-      storage: 'プレミアムココピート栽培媒体',
-      bar: '厳選された農産物',
-      dining: 'ココアとクローブの製品',
-      kitchen: '食品業界向け原材料',
-      lounge: '持続可能な園芸製品',
+      cocoa: '厳選されたココア製品',
+      cloves: '高品質なインドネシア産輸出用クローブ',
+      cocopeat: 'プレミアムココピート栽培媒体',
+      general: '厳選された農産物',
+      mix: 'ココアとクローブの製品',
+      food: '食品業界向け原材料',
+      agri: '持続可能な園芸製品',
       default: '関連する農産物'
     },
     es: {
-      tables: 'Nuestros Productos de Cacao Destacados',
-      chairs: 'Clavo de Olor Indonesio de Calidad de Exportación',
-      storage: 'Medio de Cultivo de Cocopeat Premium',
-      bar: 'Materias Primas Agrícolas Seleccionadas',
-      dining: 'Productos de Cacao y Clavo',
-      kitchen: 'Materias Primas para la Industria Alimentaria',
-      lounge: 'Productos de Horticultura Sostenibles',
+      cocoa: 'Nuestros Productos de Cacao Destacados',
+      cloves: 'Clavo de Olor Indonesio de Calidad de Exportación',
+      cocopeat: 'Medio de Cultivo de Cocopeat Premium',
+      general: 'Materias Primas Agrícolas Seleccionadas',
+      mix: 'Productos de Cacao y Clavo',
+      food: 'Materias Primas para la Industria Alimentaria',
+      agri: 'Productos de Horticultura Sostenibles',
       default: 'Materias Primas Relacionadas que Puede Necesitar'
     },
     fr: {
-      tables: 'Nos Produits Cacaotés Vedettes',
-      chairs: 'Clous de Girofle Indonésiens de Qualité Export',
-      storage: 'Support de Culture Cocopeat Premium',
-      bar: 'Matières Premières Agricoles Sélectionnées',
-      dining: 'Produits Cacaotés et Girofle',
-      kitchen: 'Matières Premières pour l\'Industrie Alimentaire',
-      lounge: 'Produits d\'Horticulture Durables',
+      cocoa: 'Nos Produits Cacaotés Vedettes',
+      cloves: 'Clous de Girofle Indonésiens de Qualité Export',
+      cocopeat: 'Support de Culture Cocopeat Premium',
+      general: 'Matières Premières Agricoles Sélectionnées',
+      mix: 'Produits Cacaotés et Girofle',
+      food: 'Matières Premières pour l\'Industrie Alimentaire',
+      agri: 'Produits d\'Horticulture Durables',
       default: 'Produits Similaires Successibles de Vous Intéresser'
     },
     ko: {
-      tables: '당사의 주요 코코아 제품',
-      chairs: '수출 품질의 인도네시아산 정향',
-      storage: '프리미엄 코코피트 재배 매체',
-      bar: '엄선된 농산물',
-      dining: '코코아 및 정향 제품',
-      kitchen: '식품 산업 원료',
-      lounge: '지속 가능한 원예 제품',
+      cocoa: '당사의 주요 코코아 제품',
+      cloves: '수출 품질의 인도네시아산 정향',
+      cocopeat: '프리미엄 코코피트 재배 매체',
+      general: '엄선된 농산물',
+      mix: '코코아 및 정향 제품',
+      food: '식품 산업 원료',
+      agri: '지속 가능한 원예 제품',
       default: '관련 농산물'
     }
   }
@@ -193,22 +193,22 @@ export const getProductShowcaseHeading = (
   const t = translations[lang] || translations.en
 
   if (searchText.includes('cocoa') || searchText.includes('kakao') || searchText.includes('coklat') || searchText.includes('chocolate') || searchText.includes('可可')) {
-    return t.tables
+    return t.cocoa
   }
   if (searchText.includes('clove') || searchText.includes('cengkeh') || searchText.includes('girofle') || searchText.includes('丁香')) {
-    return t.chairs
+    return t.cloves
   }
   if (searchText.includes('cocopeat') || searchText.includes('sabut') || searchText.includes('椰糠') || searchText.includes('husk')) {
-    return t.storage
+    return t.cocopeat
   }
   if (searchText.includes('commodity') || searchText.includes('komoditas') || searchText.includes('ekspor') || searchText.includes('export')) {
-    return t.bar
+    return t.general
   }
   if (searchText.includes('food') || searchText.includes('makanan') || searchText.includes('industry')) {
-    return t.kitchen
+    return t.food
   }
   if (searchText.includes('sustainable') || searchText.includes('berkelanjutan') || searchText.includes('horticulture')) {
-    return t.lounge
+    return t.agri
   }
 
   return t.default

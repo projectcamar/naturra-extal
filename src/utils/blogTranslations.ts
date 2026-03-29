@@ -281,63 +281,63 @@ export const SIDEBAR_FEATURES_TRANSLATIONS: Record<LanguageCode, any> = {
 export const CTA_TRANSLATIONS: Record<LanguageCode, any> = {
     id: {
         title: 'Mulai Pengadaan Komoditas Anda Hari Ini',
-        subtitle: 'Butuh bantuan dengan spesifikasi khusus? Tim spesialis ekspor kami siap membantu Anda menemukan solusi terbaik.',
-        buttonText: 'Minta Penawaran Sekarang',
-        badge: 'Hubungi Kami'
+        subtitle: 'Butuh bantuan dengan spesifikasi khusus atau volume besar? Tim spesialis ekspor kami siap membantu Anda menemukan solusi terbaik untuk rantai pasok Anda.',
+        viewAllProducts: 'Lihat Semua Produk',
+        contactUs: 'Hubungi Kami'
     },
     en: {
         title: 'Start Your Commodity Sourcing Today',
-        subtitle: 'Need help with specific requirements? Our export specialists are ready to help you find the best solution.',
-        buttonText: 'Request a Quote Now',
-        badge: 'Contact Us'
+        subtitle: 'Need help with specific requirements or bulk volumes? Our export specialists are ready to help you find the best solution for your supply chain.',
+        viewAllProducts: 'View All Products',
+        contactUs: 'Contact Us'
     },
     ar: {
         title: 'ابدأ توريد سلعك اليوم',
         subtitle: 'هل تحتاج إلى مساعدة في متطلبات محددة؟ أخصائيو التصدير لدينا مستعدون لمساعدتك في إيجاد أفضل الحلول.',
-        buttonText: 'اطلب عرض سعر الآن',
-        badge: 'اتصل بنا'
+        viewAllProducts: 'عرض جميع المنتجات',
+        contactUs: 'اتصل بنا'
     },
     zh: {
         title: '今天就开始您的大宗商品采购',
         subtitle: '需要特殊要求的帮助吗？我们的出口专家随时准备帮助您找到最佳解决方案。',
-        buttonText: '立即申请报价',
-        badge: '联系我们'
+        viewAllProducts: '查看所有产品',
+        contactUs: '联系我们'
     },
     ja: {
         title: '今日からコモディティ調達を始めましょう',
         subtitle: '特定の要件についてサポートが必要ですか？当社の輸出スペシャリストが最適なソリューションを見つけるお手伝いをします。',
-        buttonText: '今すぐ見積もりを依頼する',
-        badge: 'お問い合わせ'
+        viewAllProducts: 'すべての製品を表示',
+        contactUs: 'お問い合わせ'
     },
     es: {
         title: 'Comience su Suministro de Mercancías Hoy',
         subtitle: '¿Necesita ayuda con requisitos específicos? Nuestros especialistas en exportación están listos para ayudarle a encontrar la mejor solución.',
-        buttonText: 'Solicite una Cotización Ahora',
-        badge: 'Contáctenos'
+        viewAllProducts: 'Ver Todos los Productos',
+        contactUs: 'Contáctenos'
     },
     fr: {
         title: 'Commencez l\'Approvisionnement en Marchandises Aujourd\'hui',
         subtitle: 'Besoin d\'aide pour des exigences spécifiques ? Nos spécialistes de l\'exportation sont prêts à vous aider à trouver la meilleure solution.',
-        buttonText: 'Demander un Devis Maintenant',
-        badge: 'Contactez-nous'
+        viewAllProducts: 'Voir Tous les Produits',
+        contactUs: 'Contactez-nous'
     },
     ko: {
         title: '오늘 바로 농산물 소싱을 시작하세요',
         subtitle: '특정 요구 사항에 도움이 필요하신가요? 수출 전문가들이 최상의 솔루션을 찾도록 도와드리겠습니다.',
-        buttonText: '지금 견적 요청하기',
-        badge: '문의하기'
+        viewAllProducts: '모든 제품 보기',
+        contactUs: '문의하기'
     }
 }
 
 export const BLOG_PRODUCT_SHOWCASE_DESCRIPTION: Record<LanguageCode, string> = {
-    id: "Jelajahi koleksi agricultural commodities premium kami yang dirancang khusus untuk mempercantik dan memperkuat karakter bisnis Anda.",
-    en: "Explore our premium Agricultural Commodities collection designed to enhance and strengthen your business character.",
-    ar: "استكشف مجموعتنا المتميزة من السلع الزراعية المصممة لتعزيز وتقوية هوية عملك.",
-    zh: "探索我们的优质农产品系列，旨在增强和加强您的业务特色。",
-    ja: "あなたのビジネスを強化するために設計された、プレミアムな農産物コレクションをご覧ください。",
-    es: "Explore nuestra colección de materias primas agrícolas premium diseñada para mejorar y fortalecer el carácter de su negocio.",
-    fr: "Explorez notre collection de produits agricoles haut de gamme conçue pour améliorer et renforcer le caractère de votre entreprise.",
-    ko: "비즈니스 특성을 향상시키고 강화하도록 설계된 프리미엄 농산물 컬렉션을 살펴보세요."
+    id: "Jelajahi koleksi komoditas pertanian premium kami yang bersumber langsung dari petani terbaik Indonesia untuk memenuhi standar industri global Anda.",
+    en: "Explore our collection of premium agricultural commodities, sourced directly from Indonesia's finest farmers to meet your global industrial standards.",
+    ar: "استكشف مجموعتنا من السلع الزراعية المتميزة، والتي يتم الحصول عليها مباشرة من أفضل المزارعين في إندونيسيا لتلبية معاييركم الصناعية العالمية.",
+    zh: "探索我们的优质农产品系列，直接采购自印尼最好的农民，以满足您的全球工业标准。",
+    ja: "インドネシアの最高の農家から直接調達された、世界の産業基準を満たすプレミアム農産物のコレクションをご覧ください。",
+    es: "Explore nuestra colección de productos agrícolas de primera calidad, obtenidos directamente de los mejores agricultores de Indonesia para cumplir con sus estándares industriales globales.",
+    fr: "Explorez notre collection de produits agricoles de qualité supérieure, provenant directement des meilleurs agriculteurs d'Indonésie pour répondre à vos normes industrielles mondiales.",
+    ko: "글로벌 산업 표준을 충족하기 위해 인도네시아 최고의 농가에서 직접 소싱한 프리미엄 농산물 컬렉션을 살펴보세요."
 }
 
 export const MENTIONED_PRODUCT_LABEL: Record<LanguageCode, string> = {

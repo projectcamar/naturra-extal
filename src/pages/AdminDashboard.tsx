@@ -5,6 +5,7 @@ import { logoutAdmin, getAdminUser } from '../utils/adminAuth'
 import { useNavigate } from 'react-router-dom'
 import { BLOG_POSTS } from '../data/blog'
 import { AdminOnboardingCard } from '../components/AdminOnboardingCard'
+import AdminTutorial from '../components/AdminTutorial'
 import './Admin.css'
 
 const AdminDashboard: React.FC = () => {
@@ -12,6 +13,7 @@ const AdminDashboard: React.FC = () => {
     const articleCount = BLOG_POSTS.length
     const username = getAdminUser()
     const [showOnboarding, setShowOnboarding] = React.useState(false)
+    const [tutorialStep, setTutorialStep] = React.useState(0)
 
     React.useEffect(() => {
         // Check if onboarding was already seen
@@ -29,12 +31,30 @@ const AdminDashboard: React.FC = () => {
         setShowOnboarding(false);
     };
 
+    const handleNextStep = () => {
+        if (tutorialStep === 2) {
+            setTutorialStep(0);
+            navigate('/admin/blog', { state: { fromTutorial: true } });
+        } else {
+            setTutorialStep(tutorialStep + 1);
+        }
+    };
+
     return (
         <div className="admin-dashboard">
             {showOnboarding && (
                 <AdminOnboardingCard
                     username={username}
                     onClose={closeOnboarding}
+                    onStartTutorial={() => setTutorialStep(1)}
+                />
+            )}
+
+            {tutorialStep > 0 && (
+                <AdminTutorial
+                    step={tutorialStep}
+                    onNext={handleNextStep}
+                    onClose={() => setTutorialStep(0)}
                 />
             )}
             <Helmet>

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Search, ChevronDown } from 'lucide-react'
-import { storeLanguage, getCurrentLanguage, type LanguageCode } from '../utils/languageManager'
+import { useLanguage } from '../utils/languageContext'
+import { type LanguageCode } from '../utils/languageManager'
 import { trackEvent } from '../utils/analytics'
 import { NATURRA_PRODUCTS } from '../data/naturraProducts'
 import './NaturraHeader.css'
@@ -33,7 +34,7 @@ const NaturraHeader: React.FC<NaturraHeaderProps> = ({ isIndonesian = false, lan
   const location = useLocation()
   const navigate = useNavigate()
 
-  const currentLangCode = getCurrentLanguage(location.pathname, location.search) || language
+  const { language: currentLangCode, setLanguage } = useLanguage()
   const t = translations[currentLangCode] || translations.en
 
   const getCurrentLanguageFromUrl = () => {
@@ -72,9 +73,9 @@ const NaturraHeader: React.FC<NaturraHeaderProps> = ({ isIndonesian = false, lan
 
   const toggleLanguage = () => setIsLanguageOpen(!isLanguageOpen)
 
-  const handleLanguageChange = (lang: 'id' | 'en' | 'ar' | 'zh' | 'ja' | 'es' | 'fr' | 'ko') => {
+  const handleLanguageChange = (lang: LanguageCode) => {
     setIsLanguageOpen(false)
-    storeLanguage(lang)
+    setLanguage(lang)
     const currentLangCode = getCurrentLanguageFromUrl() || (isIndonesian ? 'id' : 'en')
     trackEvent.languageSwitch(currentLangCode, lang)
 
