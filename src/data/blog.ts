@@ -1092,7 +1092,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "",
     "date": "2026-03-30 00:02",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Cengkeh merupakan salah satu rempah-rempah yang sangat populer di Indonesia. Dengan aroma yang khas dan rasa yang hangat, cengkeh sering digunakan dalam berbagai masakan, mulai dari masakan tradisional hingga modern. Namun, agar cengkeh dapat digunakan dengan efektif, ada beberapa tips yang perlu Anda ketahui.",
       "keyPoints": [
@@ -1134,7 +1134,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1710996655126-965234821bc9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxjZW5na2VoJTIwaW5kb25lc2lhfGVufDB8MHx8fDE3NzQ4MDM3NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-30 00:02",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Cengkeh asli adalah salah satu komoditas yang sangat penting dalam industri makanan dan minuman. Namun, bagaimana cara memilih cengkeh asli yang berkualitas? Berikut beberapa tips dan trik dari Naturra Extal.",
       "keyPoints": [
@@ -1178,7 +1178,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1616389594080-93df311a46b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGNsb3ZlcyUyMHBsYW50YXRpb24lMjBpbiUyMEluZG9uZXNpYXxlbnwwfDB8fHwxNzc0ODAzNzgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-30 00:02",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "L'Indonésie est l'un des plus grands producteurs de cengkeh au monde. Avec une demande croissante pour ces épices de haute qualité, il est essentiel de sélectionner un fournisseur de confiance. Dans cet article, nous allons vous présenter les meilleures pratiques pour choisir un fournisseur de cengkeh indonésien fiable.",
       "keyPoints": [
@@ -1210,6 +1210,136 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "En résumé, la sélection d'un fournisseur de cengkeh indonésien de confiance est essentielle pour votre entreprise. Avec Naturra Extal, vous pouvez bénéficier de la haute qualité des cengkeh indonésiens et d'un service personnalisé. N'hésitez pas à nous contacter pour en savoir plus sur nos produits et services."
+    }
+  },
+  {
+    "id": 35,
+    "slug": "strategi-ekspor-vanila-premium",
+    "title": "Vanila Premium Ekspor",
+    "category": "Tips and Trick",
+    "excerpt": "Meningkatkan ekspor vanila premium dengan strategi yang tepat",
+    "image": "https://images.unsplash.com/photo-1679942345838-91212aedb6e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMHZhbmlsbGElMjBiZWFucyUyMG9uJTIwd29vZGVuJTIwdGFibGV8ZW58MHwwfHx8MTc3NDgwOTI4NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-30 01:34",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Vanila premium merupakan salah satu komoditas ekspor unggulan Indonesia. Namun, untuk meningkatkan ekspor vanila premium, diperlukan strategi yang tepat. Dalam artikel ini, kita akan membahas beberapa strategi ekspor vanila premium yang efektif.",
+      "keyPoints": [
+        "Meningkatkan kualitas vanila",
+        "Membangun jaringan distribusi yang luas",
+        "Mengembangkan merek yang kuat"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengapa Ekspor Vanila Premium Penting?",
+          "content": "Ekspor vanila premium sangat penting bagi Indonesia karena dapat meningkatkan pendapatan negara dan membantu meningkatkan kesejahteraan petani vanila. <strong>Vanila premium</strong> juga merupakan salah satu komoditas yang paling dicari di pasar internasional.",
+          "imageSearchQuery": "indonesian vanilla farmer",
+          "image": "https://images.unsplash.com/photo-1509100226070-1744f3cd5642?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwdmFuaWxsYSUyMGZhcm1lcnxlbnwwfDB8fHwxNzc0ODA5MjgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "indonesian vanilla farmer"
+        },
+        {
+          "heading": "Strategi Ekspor Vanila Premium",
+          "content": "Untuk meningkatkan ekspor vanila premium, perlu dilakukan beberapa strategi seperti <em>meningkatkan kualitas vanila</em>, <em>membangun jaringan distribusi yang luas</em>, dan <em>mengembangkan merek yang kuat</em>. Dengan demikian, vanila premium Indonesia dapat bersaing di pasar internasional."
+        },
+        {
+          "heading": "Naturra Extal Solusi Ekspor Vanila Premium",
+          "content": "Naturra Extal merupakan perusahaan yang bergerak di bidang ekspor komoditas, termasuk vanila premium. Kami memiliki <strong>jaringan distribusi yang luas</strong> dan <strong>merek yang kuat</strong> untuk membantu meningkatkan ekspor vanila premium Indonesia. Kami juga bekerja sama dengan <strong>petani vanila</strong> untuk meningkatkan kualitas vanila.",
+          "productId": 6
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda ingin meningkatkan ekspor vanila premium, segera hubungi Naturra Extal untuk mendapatkan informasi lebih lanjut tentang strategi ekspor vanila premium yang efektif. Kami siap membantu Anda meningkatkan pendapatan dan kesejahteraan petani vanila.",
+          "productId": 6
+        }
+      ],
+      "conclusion": "Dengan strategi yang tepat dan kerja sama dengan perusahaan yang berpengalaman, ekspor vanila premium Indonesia dapat meningkat dan membantu meningkatkan kesejahteraan petani vanila. Naturra Extal siap membantu Anda mencapai tujuan tersebut."
+    }
+  },
+  {
+    "id": 36,
+    "slug": "tips-mengolah-cokelat",
+    "title": "Tips Mengolah Cokelat",
+    "category": "Tips and Trick",
+    "excerpt": "Tips dan trik mengolah cokelat dengan baik untuk mendapatkan hasil yang maksimal",
+    "image": "https://images.unsplash.com/photo-1659421000380-7bc91a709356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGRhcmslMjBjaG9jb2xhdGUlMjBpbmdyZWRpZW50cyUyMG9uJTIwd29vZGVuJTIwdGFibGV8ZW58MHwwfHx8MTc3NDc5MDU0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-30 01:39",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Cokelat merupakan salah satu komoditas yang paling digemari di dunia. Namun, untuk mendapatkan hasil yang maksimal, diperlukan tips dan trik yang tepat dalam mengolahnya. Berikut beberapa tips yang dapat membantu Anda mengolah cokelat dengan baik.",
+      "keyPoints": [
+        "Pilih bahan baku yang berkualitas",
+        "Lakukan proses fermentasi dengan benar",
+        "Gunakan teknik pengolahan yang tepat"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengenal Proses Pengolahan Cokelat",
+          "content": "Proses pengolahan cokelat melibatkan beberapa tahap, mulai dari pemetikan buah cokelat hingga pengolahan biji cokelat menjadi cokelat yang siap dikonsumsi. <br> Pada umumnya, proses pengolahan cokelat meliputi: <strong>fermentasi</strong>, <strong>pengeringan</strong>, <strong>penyangraian</strong>, dan <strong>penggilingan</strong>.",
+          "imageSearchQuery": "cocoa processing factory",
+          "image": "https://images.unsplash.com/photo-1562664514-7b70de45a61b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxjb2NvYSUyMHByb2Nlc3NpbmclMjBmYWN0b3J5fGVufDB8MHx8fDE3NzQ4MDk1OTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "cocoa processing factory"
+        },
+        {
+          "heading": "Tips Mengolah Cokelat dengan Benar",
+          "content": "Berikut beberapa tips yang dapat membantu Anda mengolah cokelat dengan benar: <em>pilih bahan baku yang berkualitas</em>, <em>lakukan proses fermentasi dengan benar</em>, dan <em>gunakan teknik pengolahan yang tepat</em>. Dengan mengikuti tips ini, Anda dapat mendapatkan hasil yang maksimal dan cokelat yang berkualitas tinggi."
+        },
+        {
+          "heading": "Solusi Naturra Extal untuk Pengolahan Cokelat",
+          "content": "Naturra Extal menyediakan solusi untuk pengolahan cokelat yang berkualitas tinggi. Dengan menggunakan produk <strong>Natural Cocoa Powder V10</strong> (productId: 1), Anda dapat mendapatkan hasil yang maksimal dan cokelat yang berkualitas tinggi.",
+          "productId": 1
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda ingin mendapatkan hasil yang maksimal dalam mengolah cokelat, maka Anda perlu mengikuti tips dan trik yang telah disebutkan di atas. <br> Selain itu, Anda juga perlu memilih produk yang berkualitas tinggi dan menggunakan teknik pengolahan yang tepat. Dengan demikian, Anda dapat mendapatkan cokelat yang berkualitas tinggi dan siap dikonsumsi.",
+          "productId": 2
+        }
+      ],
+      "conclusion": "Dengan mengikuti tips dan trik yang telah disebutkan di atas, Anda dapat mendapatkan hasil yang maksimal dalam mengolah cokelat. Jangan lupa untuk memilih produk yang berkualitas tinggi dan menggunakan teknik pengolahan yang tepat. Dengan demikian, Anda dapat mendapatkan cokelat yang berkualitas tinggi dan siap dikonsumsi."
+    }
+  },
+  {
+    "id": 37,
+    "slug": "tips-memilih-kopi-berkualitas",
+    "title": "Tips Memilih Kopi Berkualitas",
+    "category": "Tips and Trick",
+    "excerpt": "Temukan kopi terbaik dengan tips memilih kopi berkualitas dari Naturra Extal",
+    "image": "https://images.unsplash.com/photo-1585428522589-592f41523318?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxzcGVjaWFsdHklMjBjb2ZmZWUlMjBiZWFucyUyMG9uJTIwd29vZGVuJTIwdGFibGV8ZW58MHwwfHx8MTc3NDgxMDI3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-30 01:50",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Kopi adalah salah satu komoditas yang paling banyak dikonsumsi di dunia. Namun, memilih kopi yang berkualitas tidaklah mudah. Dalam artikel ini, kami akan memberikan tips memilih kopi berkualitas dari Naturra Extal.",
+      "keyPoints": [
+        "Pilih kopi yang segar",
+        "Perhatikan asal kopi",
+        "Cek kualitas biji kopi"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengapa Kopi Berkualitas Penting?",
+          "content": "Kopi yang berkualitas tidak hanya memiliki rasa yang enak, tetapi juga memberikan manfaat bagi kesehatan. <strong>Kopi yang berkualitas</strong> dapat membantu meningkatkan energi dan konsentrasi, serta memiliki antioksidan yang tinggi. Oleh karena itu, memilih kopi yang berkualitas sangat penting.",
+          "imageSearchQuery": "kopi arabica di kedai kopi"
+        },
+        {
+          "heading": "Tips Memilih Kopi Berkualitas",
+          "content": "Berikut beberapa tips memilih kopi berkualitas dari Naturra Extal: <br> - Pilih kopi yang segar <br> - Perhatikan asal kopi <br> - Cek kualitas biji kopi <br> Dengan mengikuti tips di atas, Anda dapat menemukan kopi yang berkualitas dan sesuai dengan selera Anda."
+        },
+        {
+          "heading": "Naturra Extal: Solusi Kopi Berkualitas",
+          "content": "Naturra Extal adalah perusahaan yang menyediakan kopi berkualitas dari petani lokal. Kami memiliki <em>direct farmer partnerships</em> yang memastikan kopi yang kami sediakan adalah yang terbaik. Dengan memilih Naturra Extal, Anda dapat menikmati kopi yang berkualitas dan mendukung petani lokal.",
+          "productId": 1
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda ingin menemukan kopi yang berkualitas, kunjungi website Naturra Extal sekarang juga. Kami memiliki berbagai jenis kopi yang berkualitas dan sesuai dengan selera Anda. <strong>Hubungi kami</strong> untuk informasi lebih lanjut tentang kopi berkualitas dari Naturra Extal.",
+          "productId": 2
+        }
+      ],
+      "conclusion": "Dengan memilih kopi yang berkualitas, Anda dapat menikmati rasa yang enak dan mendapatkan manfaat bagi kesehatan. Naturra Extal adalah solusi terbaik untuk menemukan kopi yang berkualitas. Kunjungi website kami sekarang juga dan temukan kopi yang sesuai dengan selera Anda."
     }
   }
 ];
