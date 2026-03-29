@@ -10,11 +10,13 @@
 
 /* Adjust margin when currency highlight is visible */
 body:has(.currency-highlight) .hero {
-  margin-top: 148px; /* 100px (header) + 48px (currency highlight) */
+  margin-top: 148px;
+  /* 100px (header) + 48px (currency highlight) */
 }
 
 body:has(.announcement-bar):has(.currency-highlight) .hero {
-  margin-top: 184px; /* 36px (announcement) + 100px (header) + 48px (currency highlight) */
+  margin-top: 184px;
+  /* 36px (announcement) + 100px (header) + 48px (currency highlight) */
 }
 
 .hero-background {
@@ -26,7 +28,8 @@ body:has(.announcement-bar):has(.currency-highlight) .hero {
   z-index: 0;
 }
 
-.hero-bg-image {
+.hero-bg-image,
+.hero-bg-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -99,11 +102,13 @@ body:has(.announcement-bar):has(.currency-highlight) .hero {
   }
 
   body:has(.currency-highlight) .hero {
-    margin-top: 138px; /* 90px + 48px */
+    margin-top: 138px;
+    /* 90px + 48px */
   }
 
   body:has(.announcement-bar):has(.currency-highlight) .hero {
-    margin-top: 174px; /* 36px + 90px + 48px */
+    margin-top: 174px;
+    /* 36px + 90px + 48px */
   }
 
   .hero-title {
@@ -131,11 +136,13 @@ body:has(.announcement-bar):has(.currency-highlight) .hero {
   }
 
   body:has(.currency-highlight) .hero {
-    margin-top: 128px; /* 80px + 48px */
+    margin-top: 128px;
+    /* 80px + 48px */
   }
 
   body:has(.announcement-bar):has(.currency-highlight) .hero {
-    margin-top: 164px; /* 36px + 80px + 48px */
+    margin-top: 164px;
+    /* 36px + 80px + 48px */
   }
 
   .hero-title {

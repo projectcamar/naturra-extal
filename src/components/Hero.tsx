@@ -59,19 +59,23 @@ const Hero: React.FC<HeroProps> = ({ language = 'en' }) => {
   return (
     <section className="hero" role="banner" aria-labelledby="hero-title">
       <div className="hero-background">
-        <img
-          src={heroImage}
-          alt="Premium Agricultural Commodities by Naturra Extal - Cocoa, Cloves, Cocopeat Export Since 1999"
-          title="Naturra Extal - Agricultural Commodities Exporter Bekasi - Premium Quality Since 1999"
-          className="hero-bg-image"
-          loading="eager"
-          fetchPriority="high"
-          width="1920"
-          height="1080"
-          itemProp="image"
-          data-image-type="hero"
-          data-category="hero-banner"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster={heroImage}
+          className="hero-bg-video"
+          aria-hidden="true"
+        >
+          <source src="/video-hero-mainlandingpage.mp4" type="video/mp4" />
+          {/* Fallback image if video fails to load */}
+          <img
+            src={heroImage}
+            alt="Premium Agricultural Commodities by Naturra Extal"
+            className="hero-bg-image"
+          />
+        </video>
         <div className="hero-overlay"></div>
       </div>
 
