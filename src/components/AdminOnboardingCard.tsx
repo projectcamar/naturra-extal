@@ -93,15 +93,18 @@ export const AdminOnboardingCard: React.FC<OnboardingCardProps> = ({ username, o
           }
           .onboarding-card {
             background: #fff;
-            width: 90%;
-            max-width: 500px;
-            border-radius: 24px;
-            padding: 40px;
+            width: 92%;
+            max-width: 420px;
+            border-radius: 20px;
+            padding: 32px;
             position: relative;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
             transform: translateY(20px);
             transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
           }
           .onboarding-overlay.active .onboarding-card {
             transform: translateY(0);
@@ -112,105 +115,109 @@ export const AdminOnboardingCard: React.FC<OnboardingCardProps> = ({ username, o
             top: 0;
             left: 0;
             right: 0;
-            height: 6px;
+            height: 4px;
             background: linear-gradient(90deg, #004D2C, #2E7D32);
           }
           .onboarding-close {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 16px;
+            right: 16px;
             background: none;
             border: none;
-            color: #ccc;
+            color: #ddd;
             cursor: pointer;
+            padding: 4px;
             transition: color 0.3s;
           }
           .onboarding-close:hover {
-            color: #666;
+            color: #999;
           }
           .onboarding-header {
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
           }
           .onboarding-icon-wrap {
-            width: 64px;
-            height: 64px;
+            width: 54px;
+            height: 54px;
             background: #f0fdf4;
-            border-radius: 16px;
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             color: #004D2C;
           }
           .icon-sparkle {
             animation: pulse 2s infinite;
           }
           .onboarding-badge {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 700;
             letter-spacing: 0.1em;
             color: #004D2C;
             background: #e6f4ea;
-            padding: 4px 12px;
+            padding: 4px 10px;
             border-radius: 100px;
           }
           .onboarding-title {
-            font-size: 2rem;
+            font-size: 1.6rem;
             color: #1a1a1a;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             text-align: center;
             font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
           }
           .onboarding-title .highlight {
             color: #004D2C;
-            position: relative;
           }
           .onboarding-text {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 24px;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 20px;
             text-align: center;
+            font-size: 0.95rem;
           }
           .founder-badge {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             background: #fff8e1;
             color: #b8860b;
-            padding: 6px 12px;
+            padding: 5px 10px;
             border-radius: 8px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            margin: 0 auto 16px auto;
+            margin: 0 auto 12px auto;
             border: 1px solid #ffecb3;
           }
           .rifki-special-msg {
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
           }
           .onboarding-features {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 12px;
-            margin-bottom: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 24px;
+            width: 100%;
           }
           .feature-item {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             color: #444;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             background: #f8f9fa;
-            padding: 12px 16px;
-            border-radius: 12px;
+            padding: 10px 14px;
+            border-radius: 10px;
           }
           .feature-bullet {
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
             background: #fff;
             border-radius: 50%;
             display: flex;
@@ -218,23 +225,28 @@ export const AdminOnboardingCard: React.FC<OnboardingCardProps> = ({ username, o
             justify-content: center;
             color: #004D2C;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            flex-shrink: 0;
           }
           .onboarding-footer {
             display: flex;
             justify-content: center;
+            width: 100%;
           }
           .onboarding-btn {
             background: #004D2C;
             color: #fff;
             border: none;
-            padding: 14px 32px;
-            border-radius: 14px;
+            padding: 12px 28px;
+            border-radius: 12px;
             font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             cursor: pointer;
             transition: transform 0.3s, background 0.3s;
+            width: 100%;
+            justify-content: center;
+            font-size: 0.95rem;
           }
           .onboarding-btn:hover {
             background: #003d23;
