@@ -695,7 +695,9 @@ const AdminBlogManager: React.FC = () => {
                                                                     setDeploymentStatus('ready');
                                                                     addLog('Force Check SUCCESS: Content is finally live!', 'success');
                                                                 } else {
-                                                                    if (deploymentStatus === 'ready' || deploymentStatus === 'failed') {
+                                                                    // Use a type cast to bypass narrowing if we want to force reset from terminal states
+                                                                    const currentStatus = deploymentStatus as string;
+                                                                    if (currentStatus === 'ready' || currentStatus === 'failed') {
                                                                         setDeploymentStatus('verifying');
                                                                         setVerifyAttempts(0);
                                                                     }
