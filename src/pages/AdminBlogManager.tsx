@@ -10,6 +10,7 @@ import { BLOG_POSTS, type BlogPost } from '../data/blog'
 import type { LanguageCode } from '../utils/languageManager'
 import { BlogContentEditor } from '../components/BlogContentEditor'
 import './Admin.css'
+import { useTutorial } from '../context/TutorialContext'
 
 
 const AdminBlogManager: React.FC = () => {
