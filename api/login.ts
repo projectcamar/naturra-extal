@@ -15,7 +15,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // We prioritize environment variables for security
     const VALID_USERS: Record<string, string | undefined> = {
         'rioanggara': process.env.ADMIN_PASSWORD,
-        'brifki': process.env.BRIFKI_PASSWORD || 'bebirifki67' // Fallback to provided password if env var not set yet
+        'brifki': process.env.BRIFKI_PASSWORD || 'bebirifki67',
+        'rifki': process.env.BRIFKI_PASSWORD || 'bebirifki67' // Alias for brifki
     };
 
     const targetPassword = VALID_USERS[cleanUsername];

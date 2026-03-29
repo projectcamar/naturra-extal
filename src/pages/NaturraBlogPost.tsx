@@ -499,22 +499,18 @@ const NaturraBlogPost: React.FC = () => {
                   <div className="blog-post-author-card">
                     <AuthorCard
                       name="Mohamad Bebi Rifki"
-                      title={post.category === 'Export & International'
-                        ? "Export Associate at Asiatop / Unpad"
-                        : "Export Associate di Asiatop / Unpad"}
-                      experience={post.category === 'Export & International'
-                        ? [
-                          'International Business Development',
-                          'Export Operations Specialist',
-                          'Agricultural Commodity Supply Chain',
-                          'Market Research & Analysis'
-                        ]
-                        : [
-                          'Pengembangan Bisnis Internasional',
-                          'Spesialis Operasi Ekspor',
-                          'Rantai Pasok Komoditas Pertanian',
-                          'Riset & Analisis Pasar'
-                        ]}
+                      title={language === 'id' ? 'Export Associate di Asiatop / Unpad' : 'Export Associate at Asiatop / Unpad'}
+                      experience={language === 'id' ? [
+                        'Pengembangan Bisnis Internasional',
+                        'Spesialis Operasi Ekspor',
+                        'Rantai Pasok Komoditas Pertanian',
+                        'Riset & Analisis Pasar'
+                      ] : [
+                        'International Business Development',
+                        'Export Operations Specialist',
+                        'Agricultural Commodity Supply Chain',
+                        'Market Research & Analysis'
+                      ]}
                       linkedIn="https://www.linkedin.com/in/mohamad-bebi-rifki/"
                       language={language}
                     />
@@ -571,12 +567,21 @@ const NaturraBlogPost: React.FC = () => {
                     </p>
                   </div>
                   <div className="blog-post-cta-actions">
-                    <Link to="/shop" className="btn-primary">
+                    <Link to="/products" className="btn-primary">
                       {CTA_TRANSLATIONS[language]?.viewAllProducts || CTA_TRANSLATIONS.en.viewAllProducts}
                     </Link>
-                    <Link to="/contact-us" className="btn-secondary">
+                    <a
+                      href="https://wa.me/628951395752"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-secondary"
+                      onClick={() => trackWhatsAppClick('blog_post_cta_whatsapp', {
+                        blogPost: post?.title || '',
+                        language: language
+                      })}
+                    >
                       {CTA_TRANSLATIONS[language]?.contactUs || CTA_TRANSLATIONS.en.contactUs}
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </article>

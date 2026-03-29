@@ -390,7 +390,7 @@ const BlogProductShowcase: React.FC<BlogProductShowcaseProps> = ({
 
           <div className="blog-product-showcase-footer">
             <Link
-              to="/shop"
+              to="/products"
               className="blog-product-showcase-all-products-btn"
               title={translations.viewAllProductsTitle}
               rel="nofollow"

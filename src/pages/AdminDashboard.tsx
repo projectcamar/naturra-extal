@@ -21,8 +21,20 @@ const AdminDashboard: React.FC = () => {
         const hasSeen = localStorage.getItem(seenKey);
 
         if (!hasSeen) {
-            setShowOnboarding(username.toLowerCase() === 'brifki');
+            setShowOnboarding(username.toLowerCase() === 'brifki' || username.toLowerCase() === 'rifki');
         }
+
+        // Add secret toggle for tutorial (Ctrl + G)
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.ctrlKey && e.key === 'g') {
+                e.preventDefault();
+                setShowOnboarding(true);
+                setTutorialStep(0); // Reset tutorial
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
     }, [username]);
 
     const closeOnboarding = () => {
