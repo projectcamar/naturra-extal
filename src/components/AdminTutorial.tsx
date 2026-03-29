@@ -168,7 +168,7 @@ const AdminTutorial: React.FC = () => {
                 />
             )}
 
-            <div className="tutorial-bar-container" style={cardPosition}>
+            <div className="tutorial-bar-container" style={cardPosition as any}>
                 <div className={`tutorial-bar step-${currentStep}`}>
                     <div className="bar-badge">
                         <span>{currentStep}/8</span>
