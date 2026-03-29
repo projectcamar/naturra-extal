@@ -399,7 +399,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1615273831852-0157b5fd484b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxiaWppJTIwa29waSUyMHJvYnVzdGElMjBoaWphdXxlbnwwfDB8fHwxNzc0NzkzNzk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 21:01",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Kopi robusta dikenal karena rasanya yang kuat dan pahit. Namun, untuk mendapatkan kopi robusta yang berkualitas, dibutuhkan pemilihan biji yang tepat. Pada artikel ini, kita akan membahas beberapa tips memilih biji kopi robusta yang robusta dan berkualitas.",
       "keyPoints": [
@@ -432,6 +432,50 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dengan memilih biji kopi robusta yang tepat dan berkualitas, Anda dapat mendapatkan kopi robusta yang kuat dan enak. Naturra Extal siap membantu Anda dalam memilih biji kopi robusta yang berkualitas dan menyediakan produk yang berkelanjutan."
+    }
+  },
+  {
+    "id": 17,
+    "slug": "tips-mengoptimalkan-kualitas-bubuk-kakao",
+    "title": "Tips Mengoptimalkan Kualitas Bubuk Kakao",
+    "category": "Tips and Trick",
+    "excerpt": "Tips untuk meningkatkan kualitas bubuk kakao Anda",
+    "image": "https://images.unsplash.com/photo-1690983322622-765f664952e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGNvY29hJTIwcG93ZGVyJTIwb24lMjB3b29kZW4lMjBzcG9vbnxlbnwwfDB8fHwxNzc0Nzk0Mjk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-29 21:24",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Bubuk kakao merupakan salah satu komoditas yang paling diminati di dunia. Namun, kualitas bubuk kakao dapat menurun jika tidak ditangani dengan benar. Berikut beberapa tips untuk mengoptimalkan kualitas bubuk kakao Anda.",
+      "keyPoints": [
+        "Pilih biji kakao berkualitas tinggi",
+        "Simpan bubuk kakao di tempat yang kering",
+        "Gunakan metode pengolahan yang tepat"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengapa Kualitas Bubuk Kakao Penting?",
+          "content": "Kualitas bubuk kakao sangat penting karena dapat mempengaruhi rasa dan aroma produk akhir. Bubuk kakao yang berkualitas tinggi dapat memberikan rasa yang kaya dan aroma yang kuat, sedangkan bubuk kakao yang berkualitas rendah dapat memberikan rasa yang hambar dan aroma yang lemah.",
+          "imageSearchQuery": "bubuk kakao premium",
+          "image": "https://images.unsplash.com/photo-1619615174792-a5edcfeafdfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxidWJ1ayUyMGtha2FvJTIwcHJlbWl1bXxlbnwwfDB8fHwxNzc0Nzk0MjkyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "bubuk kakao premium"
+        },
+        {
+          "heading": "Tips Mengoptimalkan Kualitas Bubuk Kakao",
+          "content": "Berikut beberapa tips untuk mengoptimalkan kualitas bubuk kakao: <strong>pilih biji kakao berkualitas tinggi</strong>, <em>simpan bubuk kakao di tempat yang kering</em>, dan <strong>gunakan metode pengolahan yang tepat</strong>. Dengan mengikuti tips ini, Anda dapat meningkatkan kualitas bubuk kakao Anda dan memberikan produk akhir yang lebih baik."
+        },
+        {
+          "heading": "Solusi Naturra Extal",
+          "content": "Naturra Extal menawarkan solusi untuk meningkatkan kualitas bubuk kakao Anda. Kami menyediakan biji kakao berkualitas tinggi dan metode pengolahan yang tepat untuk membantu Anda mengoptimalkan kualitas bubuk kakao Anda. <br> Dengan menggunakan produk kami, Anda dapat meningkatkan kualitas bubuk kakao Anda dan memberikan produk akhir yang lebih baik. Kami juga menawarkan <strong>Produk Bubuk Kakao V10</strong> yang merupakan salah satu produk unggulan kami.",
+          "productId": 1
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda ingin meningkatkan kualitas bubuk kakao Anda, hubungi kami untuk mendapatkan informasi lebih lanjut tentang produk dan solusi kami. Kami siap membantu Anda mengoptimalkan kualitas bubuk kakao Anda dan memberikan produk akhir yang lebih baik.",
+          "productId": 2
+        }
+      ],
+      "conclusion": "Dengan mengikuti tips dan menggunakan solusi Naturra Extal, Anda dapat meningkatkan kualitas bubuk kakao Anda dan memberikan produk akhir yang lebih baik. Kami berharap artikel ini dapat membantu Anda mengoptimalkan kualitas bubuk kakao Anda dan meningkatkan bisnis Anda."
     }
   }
 ];
