@@ -51,52 +51,61 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
     {
         id: 5,
         title: "AI Generation Core",
-        text: "The most powerful tool in your arsenal. Enter a prompt and let AI generate a full article with images and SEO metadata.",
+        text: "The most powerful tool in your arsenal. Click here to open the AI assistant.",
         targetId: "admin-ai-generate-btn",
-        targetPage: "/admin/blog", // View will be 'editor'
-        btnText: "Got it!",
+        targetPage: "/admin/blog",
+        btnText: "Open AI Modal",
         position: "bottom"
     },
     {
         id: 6,
         title: "Magic in the Making",
-        text: "Type a descriptive prompt here (e.g., 'Tips on vanilla extraction'). The more detail you give, the better the article!",
+        text: "Fill something here! Type a descriptive prompt (e.g., 'Strategi ekspor vanila premium'). The more detail you give, the better the article!",
         targetId: "admin-ai-prompt-input",
         targetPage: "/admin/blog",
-        btnText: "Next: Generate",
+        btnText: "Got it!",
         position: "bottom"
     },
     {
         id: 7,
         title: "Release the AI",
-        text: "Click this button to let our AI write the full article, find a matching cover image, and set up SEO - all in one go!",
+        text: "Click here to generate! Our AI will write the full article, find a matching cover image, and set up SEO - all in one go!",
         targetId: "admin-ai-submit-btn",
         targetPage: "/admin/blog",
-        btnText: "Let's Generate!",
+        btnText: "Generate Now",
         position: "top"
     },
     {
         id: 8,
-        title: "Metadata & SEO",
-        text: "Fine-tune your URL slugs, categories, and languages to rank higher on Google.",
-        targetId: "admin-metadata-editor",
+        title: "Review Your Masterpiece",
+        text: "Review here! Take a look at the generated content. You can always tweak the introduction or key takeaways if needed.",
+        targetId: "admin-content-editor",
         targetPage: "/admin/blog",
-        btnText: "Next: Content",
+        btnText: "Looks Good!",
         position: "top"
     },
     {
         id: 9,
+        title: "Metadata & SEO",
+        text: "Fine-tune your URL slugs, categories, and languages to rank higher on Google.",
+        targetId: "admin-metadata-editor",
+        targetPage: "/admin/blog",
+        btnText: "Next: Details",
+        position: "top"
+    },
+    {
+        id: 10,
         title: "Interactive Editor",
-        text: "Write your introduction, add key takeaways, and build dynamic content sections effortlessly.",
+        text: "The main content area is now filled. Feel free to add more sections or refine the existing ones.",
         targetId: "admin-content-editor",
         targetPage: "/admin/blog",
         btnText: "Almost Done",
         position: "top"
     },
     {
-        id: 10,
+        id: 11,
         title: "Deploy with Confidence",
-        text: "Once you're done, click here to save your work. Then deploy it live to the global market!",
+        text: "Once you're satisfied, click here to save your work. Then deploy it live to the global market!",
         targetId: "admin-save-btn",
         targetPage: "/admin/blog",
         btnText: "Finish Tutorial 🚀",

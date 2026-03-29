@@ -370,6 +370,7 @@ const AdminBlogManager: React.FC = () => {
             return
         }
 
+        if (currentStep === 7) nextStep();
         setIsGenerating(true)
         setMessage(null)
 
@@ -450,6 +451,7 @@ const AdminBlogManager: React.FC = () => {
             setMessage({ type: 'error', text: `AI generation failed: ${error instanceof Error ? error.message : 'Unknown error'}` })
         } finally {
             setIsGenerating(false)
+            if (currentStep === 7) nextStep(); // Move to Review step after generation
         }
     }
 
@@ -981,7 +983,10 @@ const AdminBlogManager: React.FC = () => {
                                         <button
                                             id="admin-ai-generate-btn"
                                             className="ai-generate-btn"
-                                            onClick={() => setShowAIModal(true)}
+                                            onClick={() => {
+                                                setShowAIModal(true);
+                                                if (currentStep === 5) nextStep();
+                                            }}
                                             disabled={isGenerating}
                                         >
                                             <Sparkles size={18} />
@@ -1098,12 +1103,12 @@ const AdminBlogManager: React.FC = () => {
                                             onChange={e => setEditingPost(p => p ? { ...p, category: e.target.value } : null)}
                                         >
                                             <option>Tips and Trick</option>
-                                            <option>Workshop & Production</option>
-                                            <option>Commercial Furniture</option>
-                                            <option>About Furniture</option>
-                                            <option>Furniture Information</option>
-                                            <option>Furniture Guide</option>
-                                            <option>Design Inspiration</option>
+                                            <option>Agricultural Commodity</option>
+                                            <option>Cocoa & Spices</option>
+                                            <option>Cocopeat Guide</option>
+                                            <option>Export Standards</option>
+                                            <option>Sustainable Farming</option>
+                                            <option>Industry Insight</option>
                                         </select>
                                     </div>
                                     <div className="input-group-compact" style={{ marginTop: '15px' }}>
@@ -1260,7 +1265,12 @@ const AdminBlogManager: React.FC = () => {
                             <textarea
                                 id="admin-ai-prompt-input"
                                 value={aiPrompt}
-                                onChange={(e) => setAiPrompt(e.target.value)}
+                                onChange={(e) => {
+                                    setAiPrompt(e.target.value);
+                                    if (currentStep === 6 && e.target.value.length > 30) {
+                                        nextStep();
+                                    }
+                                }}
                                 placeholder="Example: Strategi ekspor biji kopi robusta ke pasar Eropa: Panduan kualitas dan logistik 2025"
                                 rows={4}
                                 disabled={isGenerating}
