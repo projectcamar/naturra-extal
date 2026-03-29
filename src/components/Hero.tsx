@@ -64,17 +64,13 @@ const Hero: React.FC<HeroProps> = ({ language = 'en' }) => {
           muted
           loop
           playsInline
+          preload="auto"
           poster={heroImage}
           className="hero-bg-video"
+          src="/video-hero-mainlandingpage.mp4"
           aria-hidden="true"
         >
-          <source src="/video-hero-mainlandingpage.mp4" type="video/mp4" />
-          {/* Fallback image if video fails to load */}
-          <img
-            src={heroImage}
-            alt="Premium Agricultural Commodities by Naturra Extal"
-            className="hero-bg-image"
-          />
+          Your browser does not support the video tag.
         </video>
         <div className="hero-overlay"></div>
       </div>
