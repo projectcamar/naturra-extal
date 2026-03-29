@@ -2,14 +2,36 @@
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://naturraextal.com/blog/future-sustainable-cocoa-indonesia</loc>
+    <loc>https://naturraextal.com/blog/exporting-skipjack-tuna-tips</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1647964147585-623a38bfae15?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxmcm96ZW4lMjBza2lwamFjayUyMHR1bmElMjBvbiUyMGElMjBwYWxsZXR8ZW58MHwwfHx8MTc3NDc1ODY2M3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080</image:loc>
+      <image:title>Exporting Skipjack Tuna</image:title>
+      <image:caption>Exporting Skipjack Tuna</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://naturraextal.com/blog/the-future-of-sustainable-cocoa-sourcing-in-indonesia</loc>
     <lastmod>2025-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&amp;fit=crop&amp;q=80&amp;w=1200</image:loc>
-      <image:title>The Future of Sustainable Cocoa Sourcing in Indonesia</image:title>
-      <image:caption>The Future of Sustainable Cocoa Sourcing in Indonesia</image:caption>
+      <image:loc>https://images.unsplash.com/photo-1714102367897-4a19259feb75?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwY29jb2ElMjBmYXJtZXIlMjBzdXN0YWluYWJsZSUyMGZhcm1pbmd8ZW58MHwwfHx8MTc3NDc1ODU4OXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080</image:loc>
+      <image:title>Sustainable Cocoa Sourcing</image:title>
+      <image:caption>Sustainable Cocoa Sourcing</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://naturraextal.com/blog/cloves-gold-standard-global-spices</loc>
+    <lastmod>2025-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&amp;fit=crop&amp;q=80&amp;w=1200</image:loc>
+      <image:title>Why Indonesian Cloves (Cengkeh) are the Global Gold Standard</image:title>
+      <image:caption>Why Indonesian Cloves (Cengkeh) are the Global Gold Standard</image:caption>
     </image:image>
   </url>
   <url>
@@ -35,6 +57,17 @@
     </image:image>
   </url>
   <url>
+    <loc>https://naturraextal.com/blog/cocopeat-sustainable-horticulture-revolution</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&amp;fit=crop&amp;q=80&amp;w=1200</image:loc>
+      <image:title>How Cocopeat is Revolutionizing Sustainable Horticulture</image:title>
+      <image:caption>How Cocopeat is Revolutionizing Sustainable Horticulture</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://naturraextal.com/blog/exporting-cocoa-powder-quality-standards</loc>
     <lastmod>2025-10-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -43,6 +76,28 @@
       <image:loc>https://images.unsplash.com/photo-1613919920110-394ffdc5bfaa?auto=format&amp;fit=crop&amp;q=80&amp;w=1200</image:loc>
       <image:title>Essential Quality Standards for Exporting Premium Cocoa Powder</image:title>
       <image:caption>Essential Quality Standards for Exporting Premium Cocoa Powder</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://naturraextal.com/blog/exporting-cocoa-powder-quality-standards</loc>
+    <lastmod>2025-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1613919920110-394ffdc5bfaa?auto=format&amp;fit=crop&amp;q=80&amp;w=1200</image:loc>
+      <image:title>Essential Quality Standards for Exporting Premium Cocoa Powder</image:title>
+      <image:caption>Essential Quality Standards for Exporting Premium Cocoa Powder</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://naturraextal.com/blog/bridging-the-gap-indonesian-farmers-global-market</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&amp;fit=crop&amp;q=80&amp;w=1200</image:loc>
+      <image:title>Bridging the Gap: Connecting Indonesian Farmers to Global Markets</image:title>
+      <image:caption>Bridging the Gap: Connecting Indonesian Farmers to Global Markets</image:caption>
     </image:image>
   </url>
   <url>
@@ -68,6 +123,28 @@
     </image:image>
   </url>
   <url>
+    <loc>https://naturraextal.com/blog/navigating-commodity-export-logistics-indonesia</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&amp;fit=crop&amp;q=80&amp;w=1200</image:loc>
+      <image:title>Navigating Commodity Export Logistics from Indonesia</image:title>
+      <image:caption>Navigating Commodity Export Logistics from Indonesia</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://naturraextal.com/blog/sulawesi-cocoa-rich-heritage</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&amp;fit=crop&amp;q=80&amp;w=1200</image:loc>
+      <image:title>Sulawesi Cocoa: A Rich Heritage of Indonesian Flavor</image:title>
+      <image:caption>Sulawesi Cocoa: A Rich Heritage of Indonesian Flavor</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://naturraextal.com/blog/sulawesi-cocoa-rich-heritage</loc>
     <lastmod>2025-10-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -90,6 +167,17 @@
     </image:image>
   </url>
   <url>
+    <loc>https://naturraextal.com/blog/cengkeh-aromatic-excellence</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&amp;fit=crop&amp;q=80&amp;w=1200</image:loc>
+      <image:title>Cengkeh: The Aromatic Excellence of the Spice Islands</image:title>
+      <image:caption>Cengkeh: The Aromatic Excellence of the Spice Islands</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://naturraextal.com/blog/cocopeat-processing-surabaya</loc>
     <lastmod>2025-10-07</lastmod>
     <changefreq>monthly</changefreq>
@@ -98,6 +186,28 @@
       <image:loc>https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&amp;fit=crop&amp;q=80&amp;w=1200</image:loc>
       <image:title>Precision Cocopeat Processing: Quality Control in Surabaya</image:title>
       <image:caption>Precision Cocopeat Processing: Quality Control in Surabaya</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://naturraextal.com/blog/cocopeat-processing-surabaya</loc>
+    <lastmod>2025-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&amp;fit=crop&amp;q=80&amp;w=1200</image:loc>
+      <image:title>Precision Cocopeat Processing: Quality Control in Surabaya</image:title>
+      <image:caption>Precision Cocopeat Processing: Quality Control in Surabaya</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://naturraextal.com/blog/international-trade-trends-2025</loc>
+    <lastmod>2025-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&amp;fit=crop&amp;q=80&amp;w=1200</image:loc>
+      <image:title>International Commodity Trade Trends to Watch in 2025</image:title>
+      <image:caption>International Commodity Trade Trends to Watch in 2025</image:caption>
     </image:image>
   </url>
   <url>
