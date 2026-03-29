@@ -53,6 +53,7 @@ const AdminBlogManager: React.FC = () => {
     const [showLogs, setShowLogs] = useState(false)
     const [deploymentTargetSlug, setDeploymentTargetSlug] = useState<string | null>(null)
     const [deploymentSlugs, setDeploymentSlugs] = useState<string[]>([])
+    const [verifyAttempts, setVerifyAttempts] = useState(0)
 
     // Pagination state
     const [itemsPerPage, setItemsPerPage] = useState<number | 'all'>(10)
@@ -154,22 +155,22 @@ const AdminBlogManager: React.FC = () => {
                     const remoteSlug = data.latestPost?.slug;
                     const isTargetLive = deploymentSlugs.includes(remoteSlug) || (deploymentTargetSlug === remoteSlug);
 
-                    if (data.success && (countMatches && latestPostMatches || isTargetLive)) {
+                    setVerifyAttempts(prev => prev + 1);
+
+                    if (data.success && isTargetLive) {
                         setDeploymentStatus('ready');
-                        addLog(`✨ EH, INI DAH GA 404 LAGI LOH! Detected "${remoteSlug}" is officially live!`, 'success');
-                        addLog(`✅ All synced pages are verified. Sync complete!`, 'success');
+                        addLog(`✨ EH, INI DAH GA 404 LAGI LOH! Detected "${remoteSlug}" is live!`, 'success');
+                        addLog(`✅ Verification complete after ${verifyAttempts + 1} attempts. Site is updated.`, 'success');
                         if (statusIntervalId) clearInterval(statusIntervalId);
                         if (liveIntervalId) clearInterval(liveIntervalId);
                         if (iframeIntervalId) clearInterval(iframeIntervalId);
                     } else {
-                        // More human-like progress logs
-                        if (Math.random() > 0.7) {
-                            const remainingSlugs = deploymentSlugs.filter(s => s !== remoteSlug);
-                            if (remoteSlug && deploymentSlugs.includes(remoteSlug)) {
-                                addLog(`Detected "${remoteSlug}" is live! Checking other updated pages...`, 'info');
-                            } else {
-                                addLog(`Still 404? Looking for "${deploymentTargetSlug || 'updates'}" on live site...`, 'warning');
-                            }
+                        // Deterministic logging for every attempt
+                        const targetLabel = deploymentTargetSlug ? `/blog/${deploymentTargetSlug}` : 'multiple pages';
+                        if (remoteSlug && remoteSlug !== 'home') {
+                            addLog(`[Attempt #${verifyAttempts + 1}] Live site matches "${remoteSlug}", but still waiting for "${deploymentTargetSlug}"...`, 'info');
+                        } else {
+                            addLog(`[Attempt #${verifyAttempts + 1}] Still 404 - Looking for ${targetLabel} on live site...`, 'warning');
                         }
                         setIframeKey(k => k + 1);
                     }
@@ -180,8 +181,8 @@ const AdminBlogManager: React.FC = () => {
 
             checkStatus();
             verifyLive();
-            statusIntervalId = setInterval(checkStatus, 4000);
-            liveIntervalId = setInterval(verifyLive, 6000);
+            statusIntervalId = setInterval(checkStatus, 3000);
+            liveIntervalId = setInterval(verifyLive, 3000);
 
             // Auto-refresh iframe every 10 seconds to detect visual updates
             iframeIntervalId = setInterval(() => {
