@@ -106,6 +106,7 @@ const AdminBlogManager: React.FC = () => {
 
                     if (data.status === 'ready' && deploymentStatus !== 'verifying') {
                         setDeploymentStatus('verifying');
+                        console.log('Vercel Ready, switching to live verification...');
                     } else if (data.status !== 'ready') {
                         setDeploymentStatus(data.status);
                     }
@@ -125,8 +126,15 @@ const AdminBlogManager: React.FC = () => {
                     if (!response.ok) return;
                     const data = await response.json();
 
-                    if (data.success && data.postCount === posts.length) {
+                    // If the remote post count matches our current local post count, it's live!
+                    // Also check latest post ID to be 100% sure
+                    const latestLocalPost = posts[posts.length - 1];
+                    const countMatches = data.postCount === posts.length;
+                    const latestPostMatches = !latestLocalPost || (data.latestPost && data.latestPost.id === latestLocalPost.id);
+
+                    if (data.success && countMatches && latestPostMatches) {
                         setDeploymentStatus('ready');
+                        console.log('Live Verification SUCCESS: Content is live.');
                         clearInterval(statusIntervalId);
                         clearInterval(liveIntervalId);
                     }
@@ -541,7 +549,7 @@ const AdminBlogManager: React.FC = () => {
                                 {deploymentStatus === 'ready' ? <Check size={20} /> :
                                     deploymentStatus === 'failed' ? <X size={20} /> :
                                         <Loader2 size={20} className="animate-spin" />}
-                                <h3>Vercel Deployment: {deploymentStatus === 'verifying' ? 'VERIFYING LIVE' : deploymentStatus.toUpperCase()}</h3>
+                                <h3>NATURRA LIVE SYNC: {deploymentStatus === 'verifying' ? 'CHECKING WEBSITE' : deploymentStatus.toUpperCase()}</h3>
                             </div>
                             <button className="close-status" onClick={() => setActiveDeploymentSha(null)}>
                                 <X size={16} />
@@ -550,12 +558,12 @@ const AdminBlogManager: React.FC = () => {
 
                         <div className="status-body">
                             <p>
-                                {deploymentStatus === 'idle' && 'Initializing deployment tracking...'}
-                                {deploymentStatus === 'queued' && 'Deployment is queued. Waiting for Vercel builders...'}
-                                {deploymentStatus === 'building' && 'Vercel is currently building your site with the latest changes.'}
-                                {deploymentStatus === 'verifying' && '🔍 Vercel build SUCCESS! Now verifying that content is live globally...'}
-                                {deploymentStatus === 'ready' && '✅ Site is LIVE and updated!'}
-                                {deploymentStatus === 'failed' && '❌ Deployment failed. Please check Vercel dashboard.'}
+                                {deploymentStatus === 'idle' && '🚀 Preparing to sync your changes...'}
+                                {deploymentStatus === 'queued' && '⚙️ Syncing to Cloud. Vercel build is queued (Website checking active...)'}
+                                {deploymentStatus === 'building' && '⚒️ Vercel is currently building your site with the latest changes. Stay tuned!'}
+                                {deploymentStatus === 'verifying' && '🔍 Vercel build SUCCESS! Now verifying your content is live on the website...'}
+                                {deploymentStatus === 'ready' && '✨ EXCELLENT! Your changes are now LIVE and accessible on the website.'}
+                                {deploymentStatus === 'failed' && '❌ Sync failed. Please contact support or check the Vercel logs.'}
                             </p>
 
                             {deploymentDetails?.checkRunUrl && (
