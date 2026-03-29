@@ -699,7 +699,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1759689975472-c302b63b3b71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGZvb2QlMjBpbmdyZWRpZW50cyUyMG9uJTIwd29vZGVuJTIwdGFibGV8ZW58MHwwfHx8MTc3NDc5NDQxOHww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 23:22",
     "author": "Angga",
-    "status": "synced",
+    "status": "draft",
     "customContent": {
       "introduction": "Dalam industri makanan dan minuman, kualitas bahan baku sangat penting untuk menentukan hasil akhir produk. Namun, banyak dari kita yang masih bingung bagaimana memilih bahan baku yang tepat. Pada artikel ini, kita akan membahas beberapa tips memilih bahan baku yang berkualitas.",
       "keyPoints": [
@@ -743,7 +743,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1490106087286-bd050867d86e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGRhcmslMjBjaG9jb2xhdGUlMjBwaWVjZXMlMjBvbiUyMHdvb2RlbiUyMHRhYmxlfGVufDB8MHx8fDE3NzQ4MDE2MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 23:26",
     "author": "Angga",
-    "status": "synced",
+    "status": "draft",
     "customContent": {
       "introduction": "Cokelat adalah salah satu bahan paling populer dalam industri makanan dan minuman. Namun, mengolah cokelat tidaklah mudah. Dalam artikel ini, kita akan membahas beberapa tips mengolah cokelat untuk hasil terbaik.",
       "keyPoints": [
