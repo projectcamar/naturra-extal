@@ -146,9 +146,10 @@ const AdminBlogManager: React.FC = () => {
     const handleNew = () => {
         if (currentStep === 4) nextStep();
         const newId = posts.length > 0 ? Math.max(...posts.map(p => p.id)) + 1 : 1
-        // Include full date and time
+        // Include full date and time in local timezone
         const now = new Date()
-        const dateString = now.toISOString().replace('T', ' ').substring(0, 16)
+        const tzOffset = now.getTimezoneOffset() * 60000;
+        const localISOTime = (new Date(now.getTime() - tzOffset)).toISOString().slice(0, 16).replace('T', ' ');
 
         setEditingPost({
             id: newId,
@@ -157,7 +158,7 @@ const AdminBlogManager: React.FC = () => {
             category: 'Tips and Trick',
             excerpt: '',
             image: '',
-            date: dateString,
+            date: localISOTime,
             author: username === 'brifki' || username === 'rifki' ? 'Moh Rifki' : username === 'rio' ? 'Rio' : username,
             status: 'draft',
             customContent: {
@@ -328,11 +329,11 @@ const AdminBlogManager: React.FC = () => {
             }
 
             if (result.image) {
-                setEditingPost(p => p ? { ...p, image: result.url } : null)
+                setEditingPost(p => p ? { ...p, image: result.image } : null)
                 setMessage({
                     type: 'success',
                     text: `✨ Found a perfect image for: "${result.searchQuery}"`,
-                    imageUrl: result.url
+                    imageUrl: result.image
                 })
             } else {
                 setMessage({ type: 'error', text: 'No matching image found on Unsplash' })
