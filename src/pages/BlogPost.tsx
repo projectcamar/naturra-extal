@@ -821,23 +821,27 @@ const BlogPost: React.FC = () => {
                   </div>
                 )}
 
-                <div className="blog-post-cta card">
-                  <div className="section-header">
-                    <h2>
-                      {CTA_TRANSLATIONS[language]?.title || CTA_TRANSLATIONS.en.title}
-                    </h2>
-                    <p className="section-subtitle">
-                      {CTA_TRANSLATIONS[language]?.subtitle || CTA_TRANSLATIONS.en.subtitle}
-                    </p>
+                <div className="blog-post-cta-v2">
+                  <div className="cta-v2-container">
+                    <div className="cta-v2-content">
+                      <div className="cta-v2-badge">International Commodity Sourcing</div>
+                      <h2 className="cta-v2-title">
+                        {CTA_TRANSLATIONS[language]?.title || CTA_TRANSLATIONS.en.title}
+                      </h2>
+                      <p className="cta-v2-subtitle">
+                        {CTA_TRANSLATIONS[language]?.subtitle || CTA_TRANSLATIONS.en.subtitle}
+                      </p>
+                    </div>
+                    <div className="cta-v2-actions">
+                      <Link to="/products" className="btn-v2-primary">
+                        {CTA_TRANSLATIONS[language]?.viewAllProducts || CTA_TRANSLATIONS.en.viewAllProducts}
+                      </Link>
+                      <Link to="/contact-us" className="btn-v2-secondary">
+                        {CTA_TRANSLATIONS[language]?.contactUs || CTA_TRANSLATIONS.en.contactUs}
+                      </Link>
+                    </div>
                   </div>
-                  <div className="blog-post-cta-actions">
-                    <Link to="/shop" className="btn-primary">
-                      {CTA_TRANSLATIONS[language]?.viewAllProducts || CTA_TRANSLATIONS.en.viewAllProducts}
-                    </Link>
-                    <Link to="/contact-us" className="btn-secondary">
-                      {CTA_TRANSLATIONS[language]?.contactUs || CTA_TRANSLATIONS.en.contactUs}
-                    </Link>
-                  </div>
+                  <div className="cta-v2-decorator" />
                 </div>
               </article>
 
