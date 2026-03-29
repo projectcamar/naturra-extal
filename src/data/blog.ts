@@ -443,7 +443,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1690983322622-765f664952e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGNvY29hJTIwcG93ZGVyJTIwb24lMjB3b29kZW4lMjBzcG9vbnxlbnwwfDB8fHwxNzc0Nzk0Mjk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 21:24",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Bubuk kakao merupakan salah satu komoditas yang paling diminati di dunia. Namun, kualitas bubuk kakao dapat menurun jika tidak ditangani dengan benar. Berikut beberapa tips untuk mengoptimalkan kualitas bubuk kakao Anda.",
       "keyPoints": [
@@ -476,6 +476,49 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dengan mengikuti tips dan menggunakan solusi Naturra Extal, Anda dapat meningkatkan kualitas bubuk kakao Anda dan memberikan produk akhir yang lebih baik. Kami berharap artikel ini dapat membantu Anda mengoptimalkan kualitas bubuk kakao Anda dan meningkatkan bisnis Anda."
+    }
+  },
+  {
+    "id": 18,
+    "slug": "tips-meningkatkan-kualitas-komoditas",
+    "title": "Meningkatkan Kualitas",
+    "category": "Tips and Trick",
+    "excerpt": "Tips meningkatkan kualitas komoditas untuk industri makanan dan minuman",
+    "image": "https://images.unsplash.com/photo-1759689975472-c302b63b3b71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGZvb2QlMjBpbmdyZWRpZW50cyUyMG9uJTIwd29vZGVuJTIwdGFibGV8ZW58MHwwfHx8MTc3NDc5NDQxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-29 21:26",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Kualitas komoditas sangat penting dalam industri makanan dan minuman. Dalam artikel ini, kita akan membahas beberapa tips untuk meningkatkan kualitas komoditas Anda. <strong>Naturra Extal</strong> sebagai perusahaan komoditas terkemuka di Indonesia, berkomitmen untuk menyediakan komoditas berkualitas tinggi untuk pelanggan kami.",
+      "keyPoints": [
+        "Pemilihan bahan baku yang tepat",
+        "Proses pengolahan yang baik",
+        "Pengawasan kualitas yang ketat"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengapa Kualitas Penting?",
+          "content": "Kualitas komoditas sangat berpengaruh pada hasil akhir produk. <em>Bahan baku yang berkualitas</em> akan menghasilkan produk yang lebih baik dan lebih sehat. Oleh karena itu, penting untuk memilih bahan baku yang tepat dan melakukan proses pengolahan yang baik.",
+          "imageSearchQuery": "bahan baku makanan berkualitas",
+          "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxiYWhhbiUyMGJha3UlMjBtYWthbmFuJTIwYmVya3VhbGl0YXN8ZW58MHwwfHx8MTc3NDc5NDQwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "bahan baku makanan berkualitas"
+        },
+        {
+          "heading": "Tips Meningkatkan Kualitas",
+          "content": "Berikut beberapa tips untuk meningkatkan kualitas komoditas Anda: <br> 1. Pilih bahan baku yang segar dan berkualitas. <br> 2. Lakukan proses pengolahan yang baik dan higienis. <br> 3. Lakukan pengawasan kualitas yang ketat pada setiap tahap produksi."
+        },
+        {
+          "heading": "Solusi Naturra Extal",
+          "content": "Naturra Extal menyediakan komoditas berkualitas tinggi untuk industri makanan dan minuman. Kami memiliki <strong>produk unggulan</strong> seperti Natural Cocoa Powder V10 (produk id 1) yang diproses dengan baik dan memiliki kualitas yang tinggi.",
+          "productId": 1
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda ingin meningkatkan kualitas komoditas Anda, hubungi kami untuk mendapatkan informasi lebih lanjut tentang produk dan layanan kami. Kami siap membantu Anda untuk meningkatkan kualitas produk Anda."
+        }
+      ],
+      "conclusion": "Dalam meningkatkan kualitas komoditas, penting untuk memilih bahan baku yang tepat, melakukan proses pengolahan yang baik, dan melakukan pengawasan kualitas yang ketat. Dengan demikian, Anda dapat meningkatkan kualitas produk Anda dan memenuhi kebutuhan pelanggan Anda."
     }
   }
 ];
