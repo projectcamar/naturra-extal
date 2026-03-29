@@ -34,15 +34,7 @@ body:has(.announcement-bar):has(.currency-highlight) .hero {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: opacity 1s ease-in-out;
-}
-
-.hero-bg-video.is-loading {
-  opacity: 0;
-}
-
-.hero-bg-video.is-loaded {
-  opacity: 1;
+  background: #000;
 }
 
 .hero-overlay {

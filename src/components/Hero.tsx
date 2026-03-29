@@ -1,9 +1,7 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Hero.css'
 
-// Premium Agricultural Commodity Hero Image (Cinematic Logistics)
-const heroImage = 'https://images.unsplash.com/photo-1494412574743-019485b78287?q=80&w=1920'
 
 interface HeroProps {
   isIndonesian?: boolean
@@ -12,7 +10,6 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ language = 'en' }) => {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false)
 
   const translations: Record<string, { title: string, subtitle: string, button: string }> = {
     en: {
@@ -78,9 +75,7 @@ const Hero: React.FC<HeroProps> = ({ language = 'en' }) => {
           loop
           playsInline
           preload="auto"
-          poster={heroImage}
-          className={`hero-bg-video ${isVideoLoaded ? 'is-loaded' : 'is-loading'}`}
-          onCanPlayThrough={() => setIsVideoLoaded(true)}
+          className="hero-bg-video"
           aria-hidden="true"
         >
           <source src="/video-hero-mainlandingpage.mp4" type="video/mp4" />
