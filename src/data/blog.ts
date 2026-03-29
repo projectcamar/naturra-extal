@@ -354,7 +354,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1761195696590-3490ea770aa1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHBlb3BsZSUyMHNoYWtpbmclMjBoYW5kcyUyMGluJTIwYSUyMHdhcmVob3VzZXxlbnwwfDB8fHwxNzc0NzkyMzY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 20:52",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "In the world of international trade, finding a reliable supplier is crucial for the success of your business. A trustworthy supplier can provide you with high-quality products, competitive pricing, and timely delivery. At Naturra Extal, we understand the importance of building strong relationships with our suppliers and partners. In this article, we will share some valuable tips and tricks for finding reliable suppliers for your business.",
       "keyPoints": [
@@ -392,44 +392,46 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     "id": 16,
-    "slug": "seblak-pedas-ala-naturra",
-    "title": "Seblak Pedas Ala Naturra",
+    "slug": "robusta-kuat",
+    "title": "Robusta Kuat",
     "category": "Tips and Trick",
-    "excerpt": "Resep seblak pedas dengan bumbu alami dari Naturra Extal",
-    "image": "",
+    "excerpt": "Tips memilih biji kopi robusta berkualitas",
+    "image": "https://images.unsplash.com/photo-1615273831852-0157b5fd484b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxiaWppJTIwa29waSUyMHJvYnVzdGElMjBoaWphdXxlbnwwfDB8fHwxNzc0NzkzNzk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 21:01",
     "author": "Angga",
     "status": "draft",
     "customContent": {
-      "introduction": "Seblak adalah salah satu makanan khas Bandung yang sangat populer di Indonesia. Makanan ini terbuat dari kerupuk yang direbus dengan bumbu pedas dan lezat. Di artikel ini, kami akan membagikan resep seblak pedas ala Naturra Extal menggunakan bumbu alami dan produk unggulan kami.",
+      "introduction": "Kopi robusta dikenal karena rasanya yang kuat dan pahit. Namun, untuk mendapatkan kopi robusta yang berkualitas, dibutuhkan pemilihan biji yang tepat. Pada artikel ini, kita akan membahas beberapa tips memilih biji kopi robusta yang robusta dan berkualitas.",
       "keyPoints": [
-        "Resep seblak pedas dengan bumbu alami",
-        "Tips memilih kerupuk yang tepat",
-        "Cara membuat seblak dengan bumbu Naturra Extal"
+        "Pilih biji kopi robusta yang segar",
+        "Perhatikan ukuran dan bentuk biji",
+        "Cari biji kopi robusta yang memiliki kadar air rendah"
       ],
       "language": "id",
       "sections": [
         {
-          "heading": "Bahan-Bahan yang Dibutuhkan",
-          "content": "Untuk membuat seblak pedas, Anda membutuhkan beberapa bahan seperti kerupuk, bawang merah, bawang putih, cabai rawit, garam, dan gula. Anda juga bisa menambahkan bumbu lain seperti <strong>lada hitam</strong> dari Naturra Extal untuk menambahkan rasa yang lebih lezat.",
-          "imageSearchQuery": "indonesian ingredients for seblak"
+          "heading": "Mengapa Robusta Kuat?",
+          "content": "Kopi robusta dikenal karena rasanya yang kuat dan pahit. Hal ini disebabkan oleh kandungan kafein yang lebih tinggi dibandingkan dengan kopi arabika. Selain itu, kopi robusta juga memiliki rasa yang lebih berat dan lebih sedikit asam.",
+          "imageSearchQuery": "kopi robusta di gelas",
+          "image": "https://images.unsplash.com/photo-1699848011190-73a1d429cf5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxrb3BpJTIwcm9idXN0YSUyMGRpJTIwZ2VsYXN8ZW58MHwwfHx8MTc3NDc5Mzc5NXww&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "kopi robusta di gelas"
         },
         {
-          "heading": "Cara Membuat Seblak Pedas",
-          "content": "Cara membuat seblak pedas sangat mudah. Pertama, rebus kerupuk hingga lunak. Lalu, tumis bawang merah, bawang putih, dan cabai rawit hingga harum. Setelah itu, tambahkan garam, gula, dan <em>bumbu lada hitam</em> dari Naturra Extal. Aduk rata dan masukkan kerupuk yang telah direbus. Masak hingga bumbu meresap dan seblak pedas siap disajikan."
+          "heading": "Panduan Praktis Memilih Biji Kopi Robusta",
+          "content": "Untuk mendapatkan kopi robusta yang berkualitas, dibutuhkan pemilihan biji yang tepat. Berikut beberapa tips memilih biji kopi robusta: <br> - Pilih biji kopi robusta yang segar <br> - Perhatikan ukuran dan bentuk biji <br> - Cari biji kopi robusta yang memiliki kadar air rendah"
         },
         {
-          "heading": "Tips Memilih Kerupuk yang Tepat",
-          "content": "Memilih kerupuk yang tepat sangat penting untuk membuat seblak pedas yang lezat. Pastikan Anda memilih kerupuk yang masih segar dan tidak lembek. Anda bisa menggunakan kerupuk yang dijual di pasar atau toko online. Jangan lupa untuk mencuci kerupuk sebelum direbus untuk menghilangkan kotoran dan debu.",
-          "productId": 3
+          "heading": "Naturra Extal Solusi",
+          "content": "Naturra Extal menyediakan biji kopi robusta berkualitas yang dipilih langsung dari petani. Kami memiliki komitmen untuk menyediakan produk yang berkualitas dan berkelanjutan. Dengan memilih Naturra Extal, Anda dapat mendapatkan kopi robusta yang kuat dan berkualitas.",
+          "productId": 1
         },
         {
-          "heading": "Kelebihan Menggunakan Bumbu Naturra Extal",
-          "content": "Menggunakan bumbu Naturra Extal memiliki beberapa kelebihan. Pertama, bumbu kami diproduksi dengan menggunakan bahan alami yang segar dan berkualitas. Kedua, bumbu kami tidak mengandung MSG atau bahan tambahan lainnya yang dapat membahayakan kesehatan. Dengan demikian, Anda bisa menikmati seblak pedas yang lezat dan sehat.",
-          "productId": 7
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda ingin mendapatkan kopi robusta yang berkualitas, segera hubungi kami. Kami siap membantu Anda dalam memilih biji kopi robusta yang tepat dan menyediakan produk yang berkualitas.",
+          "productId": 1
         }
       ],
-      "conclusion": "Itulah resep seblak pedas ala Naturra Extal yang bisa Anda coba di rumah. Dengan menggunakan bumbu alami dan produk unggulan kami, Anda bisa menikmati seblak pedas yang lezat dan sehat. Jangan ragu untuk mencoba resep ini dan bagikan pengalaman Anda dengan kami!"
+      "conclusion": "Dengan memilih biji kopi robusta yang tepat dan berkualitas, Anda dapat mendapatkan kopi robusta yang kuat dan enak. Naturra Extal siap membantu Anda dalam memilih biji kopi robusta yang berkualitas dan menyediakan produk yang berkelanjutan."
     }
   }
 ];
