@@ -107,7 +107,7 @@ const AdminBlogManager: React.FC = () => {
                     if (data.status === 'ready' && deploymentStatus !== 'verifying') {
                         setDeploymentStatus('verifying');
                         console.log('Vercel Ready, switching to live verification...');
-                    } else if (data.status !== 'ready') {
+                    } else if (data.status !== 'ready' && deploymentStatus !== 'verifying') {
                         setDeploymentStatus(data.status);
                     }
                     setDeploymentDetails(data);
@@ -121,13 +121,13 @@ const AdminBlogManager: React.FC = () => {
             };
 
             const verifyLive = async () => {
+                if (deploymentStatus === 'ready') return; // Stop if already ready
+
                 try {
                     const response = await fetch(`/api/admin/health?t=${Date.now()}`);
                     if (!response.ok) return;
                     const data = await response.json();
 
-                    // If the remote post count matches our current local post count, it's live!
-                    // Also check latest post ID to be 100% sure
                     const latestLocalPost = posts[posts.length - 1];
                     const countMatches = data.postCount === posts.length;
                     const latestPostMatches = !latestLocalPost || (data.latestPost && data.latestPost.id === latestLocalPost.id);
@@ -135,8 +135,8 @@ const AdminBlogManager: React.FC = () => {
                     if (data.success && countMatches && latestPostMatches) {
                         setDeploymentStatus('ready');
                         console.log('Live Verification SUCCESS: Content is live.');
-                        clearInterval(statusIntervalId);
-                        clearInterval(liveIntervalId);
+                        if (statusIntervalId) clearInterval(statusIntervalId);
+                        if (liveIntervalId) clearInterval(liveIntervalId);
                     }
                 } catch (error) {
                     console.error('Live verification error:', error);
@@ -153,7 +153,7 @@ const AdminBlogManager: React.FC = () => {
             if (statusIntervalId) clearInterval(statusIntervalId);
             if (liveIntervalId) clearInterval(liveIntervalId);
         };
-    }, [activeDeploymentSha, deploymentStatus, posts.length])
+    }, [activeDeploymentSha, deploymentStatus, posts])
 
     const handleEdit = (post: BlogPost) => {
         setEditingPost({
@@ -303,15 +303,16 @@ const AdminBlogManager: React.FC = () => {
             }
 
             const article = result.article
+            if (!editingPost) return; // Should not happen but for TS
 
             // 1. Prepare updated post object
-            const updatedPost: BlogPost = p ? {
-                ...p,
-                title: article.title || p.title,
-                slug: article.slug || p.slug,
-                excerpt: article.excerpt || p.excerpt,
-                category: article.category || p.category,
-                image: article.image || p.image,
+            const updatedPost: BlogPost = {
+                ...editingPost,
+                title: article.title || editingPost.title,
+                slug: article.slug || editingPost.slug,
+                excerpt: article.excerpt || editingPost.excerpt,
+                category: article.category || editingPost.category,
+                image: article.image || editingPost.image,
                 customContent: {
                     introduction: article.introduction || '',
                     keyPoints: article.keyPoints || [],
@@ -319,7 +320,7 @@ const AdminBlogManager: React.FC = () => {
                     sections: article.sections || [],
                     conclusion: article.conclusion || ''
                 }
-            } : p;
+            };
 
             // 2. Set the post state
             setEditingPost(updatedPost);
@@ -588,12 +589,27 @@ const AdminBlogManager: React.FC = () => {
 
                         <div className="status-body">
                             <p>
-                                {deploymentStatus === 'idle' && '🚀 Preparing to sync your changes...'}
-                                {deploymentStatus === 'queued' && '⚙️ Syncing to Cloud. Vercel build is queued (Website checking active...)'}
-                                {deploymentStatus === 'building' && '⚒️ Vercel is currently building your site with the latest changes. Stay tuned!'}
-                                {deploymentStatus === 'verifying' && '🔍 Vercel build SUCCESS! Now verifying your content is live on the website...'}
-                                {deploymentStatus === 'ready' && '✨ EXCELLENT! Your changes are now LIVE and accessible on the website.'}
-                                {deploymentStatus === 'failed' && '❌ Sync failed. Please contact support or check the Vercel logs.'}
+                                {deploymentStatus === 'ready' && '✨ EXCELLENT! Your changes are now LIVE.'}
+                                {deploymentStatus === 'failed' && '❌ Sync failed. Please contact support.'}
+                                {(deploymentStatus === 'queued' || deploymentStatus === 'building' || deploymentStatus === 'verifying') && (
+                                    <button
+                                        className="inline-recheck-btn"
+                                        onClick={() => {
+                                            fetch(`/api/admin/health?t=${Date.now()}`)
+                                                .then(r => r.json())
+                                                .then(data => {
+                                                    const latestLocalPost = posts[posts.length - 1];
+                                                    if (data.postCount === posts.length && (!latestLocalPost || data.latestPost?.id === latestLocalPost.id)) {
+                                                        setDeploymentStatus('ready');
+                                                    } else {
+                                                        setMessage({ type: 'error', text: 'Health Check: Remote content still pending...' });
+                                                    }
+                                                });
+                                        }}
+                                    >
+                                        Force Re-check Live Site
+                                    </button>
+                                )}
                             </p>
 
                             {deploymentDetails?.checkRunUrl && (
@@ -1724,7 +1740,7 @@ const AdminBlogManager: React.FC = () => {
                 /* Admin Message / Toast */
                 .admin-message {
                     position: fixed;
-                    top: 25px;
+                    bottom: 25px;
                     right: 25px;
                     z-index: 2500;
                     width: 300px;
@@ -1772,6 +1788,21 @@ const AdminBlogManager: React.FC = () => {
                     transition: color 0.2s;
                 }
                 .message-close:hover { color: #1e293b; }
+
+                .inline-recheck-btn {
+                    margin-top: 10px;
+                    padding: 8px 16px;
+                    background: #004D2C;
+                    color: white;
+                    border: none;
+                    border-radius: 8px;
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                    display: block;
+                }
+                .inline-recheck-btn:hover { background: #003d22; transform: translateY(-1px); }
             `}</style>
         </div>
     )
