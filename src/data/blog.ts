@@ -655,7 +655,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1758873268364-15bef4162221?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHN0cmF0ZWd5JTIwbWVldGluZyUyMGluJTIwbW9kZXJuJTIwb2ZmaWNlfGVufDB8MHx8fDE3NzQ4MDA3NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 23:12",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "تعتبر الاستراتيجية خطة عمل شاملة لتحقيق الأهداف والغايات، في هذا المقال سنناقش استراتيجية النجاح لشركات التوريد. <br> سنcovered كيفية وضع خطة استراتيجية ناجحة، وكيفية تحديد الأهداف والغايات. <br> كما سنناقش كيفية وضع خطة عمل لتحقيق هذه الأهداف.",
       "keyPoints": [
@@ -688,6 +688,50 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "الاستراتيجية هي خطة عمل شاملة لتحقيق الأهداف والغايات، وهي تعتبر أساسية لنجاح أي شركة. <br> يجب عليك وضع خطة استراتيجية ناجحة، وتحديد الأهداف والغايات. <br> Naturra Extal يمكن أن تساعدك على وضع خطة استراتيجية ناجحة، وتقدم خدماتها لتحقيق الأهداف والغايات."
+    }
+  },
+  {
+    "id": 23,
+    "slug": "tips-memilih-bahan-baku",
+    "title": "Tips Memilih Bahan Baku",
+    "category": "Tips and Trick",
+    "excerpt": "Tips memilih bahan baku yang berkualitas untuk industri makanan dan minuman",
+    "image": "https://images.unsplash.com/photo-1759689975472-c302b63b3b71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGZvb2QlMjBpbmdyZWRpZW50cyUyMG9uJTIwd29vZGVuJTIwdGFibGV8ZW58MHwwfHx8MTc3NDc5NDQxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-29 23:22",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Dalam industri makanan dan minuman, kualitas bahan baku sangat penting untuk menentukan hasil akhir produk. Namun, banyak dari kita yang masih bingung bagaimana memilih bahan baku yang tepat. Pada artikel ini, kita akan membahas beberapa tips memilih bahan baku yang berkualitas.",
+      "keyPoints": [
+        "Pilih bahan baku yang segar",
+        "Periksa kualitas bahan baku",
+        "Pertimbangkan sumber bahan baku"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengapa Kualitas Bahan Baku Penting?",
+          "content": "Kualitas bahan baku sangat penting karena dapat mempengaruhi rasa, tekstur, dan keselamatan produk akhir. Bahan baku yang berkualitas dapat membuat produk lebih lezat dan aman untuk dikonsumsi. Di sisi lain, bahan baku yang berkualitas rendah dapat membuat produk menjadi tidak enak dan bahkan berbahaya.",
+          "imageSearchQuery": "kualitas bahan baku makanan",
+          "image": "https://images.unsplash.com/photo-1593759608363-fde2fa65f5d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxrdWFsaXRhcyUyMGJhaGFuJTIwYmFrdSUyMG1ha2FuYW58ZW58MHwwfHx8MTc3NDgwMTMyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "kualitas bahan baku makanan"
+        },
+        {
+          "heading": "Tips Memilih Bahan Baku yang Berkualitas",
+          "content": "Berikut beberapa tips memilih bahan baku yang berkualitas: <br> 1. Pilih bahan baku yang segar <br> 2. Periksa kualitas bahan baku <br> 3. Pertimbangkan sumber bahan baku. <br> Dengan memilih bahan baku yang berkualitas, Anda dapat meningkatkan kualitas produk akhir dan memuaskan pelanggan."
+        },
+        {
+          "heading": "Naturra Extal Solusi untuk Kebutuhan Bahan Baku",
+          "content": "Naturra Extal adalah perusahaan yang bergerak di bidang perdagangan komoditas, termasuk bahan baku makanan dan minuman. Kami menyediakan bahan baku yang berkualitas tinggi dan segar, sehingga Anda dapat meningkatkan kualitas produk akhir. Kami juga memiliki jaringan petani dan pemasok yang luas, sehingga Anda dapat memperoleh bahan baku dengan harga yang kompetitif.",
+          "productId": 1
+        },
+        {
+          "heading": "Next Steps",
+          "content": "Jika Anda ingin memperoleh bahan baku yang berkualitas tinggi untuk industri makanan dan minuman, silakan hubungi kami di Naturra Extal. Kami siap membantu Anda memenuhi kebutuhan bahan baku Anda.",
+          "productId": 3
+        }
+      ],
+      "conclusion": "Dengan memilih bahan baku yang berkualitas, Anda dapat meningkatkan kualitas produk akhir dan memuaskan pelanggan. Naturra Extal adalah solusi untuk kebutuhan bahan baku Anda, dengan menyediakan bahan baku yang berkualitas tinggi dan segar. Silakan hubungi kami untuk memperoleh informasi lebih lanjut."
     }
   }
 ];
