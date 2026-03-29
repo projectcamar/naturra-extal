@@ -93,7 +93,7 @@ export const id = {
         whatsappResponse: 'Response time: 1-3 jam (Global Support)',
 
         emailTitle: 'Email Resmi',
-        emailGeneral: 'hello@naturraextal.com',
+        emailGeneral: 'naturraextal@gmail.com',
         emailSales: 'sales@naturraextal.com',
         emailNote: 'Untuk quotation resmi, kontrak, and partnership',
 

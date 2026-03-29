@@ -6,9 +6,9 @@ import { trackEvent } from '../utils/analytics'
 import { getLanguageFromLocation, type LanguageCode } from '../utils/languageManager'
 
 // Import multiple product images for collage
-// legacy Naturra image import removed
-// legacy Naturra image import removed
-// legacy Naturra image import removed
+const catalogPreview1 = 'https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800' // Cocoa beans
+const catalogPreview2 = 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80'
+const catalogPreview3 = 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80'
 
 interface CatalogModalProps {
   show?: boolean
@@ -45,7 +45,7 @@ const CatalogModal: React.FC<CatalogModalProps> = ({ show, onClose }) => {
     },
     ar: {
       title: 'شكراً لتحميل الكتالوج',
-      subtitle: 'كتالوج مانجالا 2026 في طريقه إليك! انضم إلى قائمتنا البريدية للحصول على تحديثات حصرية. بإرسال هذا النموذج، سنقوم أيضاً بإرسال نسخة PDF مباشرة إلى بريدك الإلكتروني!',
+      subtitle: 'كتالوج ناتورا 2026 في طريقه إليك! انضم إلى قائمتنا البريدية للحصول على تحديثات حصرية. بإرسال هذا النموذج، سنقوم أيضاً بإرسال نسخة PDF مباشرة إلى بريدك الإلكتروني!',
       firstName: 'الاسم الكامل',
       email: 'البريد الإلكتروني',
       whatsapp: 'رقم واتساب',
@@ -53,7 +53,7 @@ const CatalogModal: React.FC<CatalogModalProps> = ({ show, onClose }) => {
     },
     zh: {
       title: '感谢您下载目录',
-      subtitle: '您的 2026 曼加拉目录即将推出！加入我们的邮件列表，获取独家更新。提交此表格后，我们还将把 PDF 副本直接发送到您的电子邮箱！',
+      subtitle: '您的 2026 Naturra 目录即将推出！加入我们的邮件列表，获取独家更新。提交此表格后，我们还将把 PDF 副本直接发送到您的电子邮箱！',
       firstName: '全名',
       email: '电子邮件',
       whatsapp: 'WhatsApp号码',
@@ -61,7 +61,7 @@ const CatalogModal: React.FC<CatalogModalProps> = ({ show, onClose }) => {
     },
     ja: {
       title: 'ダウンロードしていただきありがとうございます',
-      subtitle: '2026 マンガラカタログをお届けします！限定アップデートを得るために、メールリストにご登録ください。このフォームを送信すると、PDFのコピーもあなたのメールに直接お送りします！',
+      subtitle: '2026 Naturraカタログをお届けします！限定アップデートを得るために、メールリストにご登録ください。このフォームを送信すると、PDFのコピーもあなたのメールに直接お送りします！',
       firstName: '氏名',
       email: 'メールアドレス',
       whatsapp: 'WhatsApp番号',
@@ -85,7 +85,7 @@ const CatalogModal: React.FC<CatalogModalProps> = ({ show, onClose }) => {
     },
     ko: {
       title: '다운로드해주셔서 감사합니다',
-      subtitle: '2026 망갈라 카탈로그가 준비되었습니다! 독점 업데이트를 받으려면 이메일 목록에 가입하세요. 이 양식을 제출하시면 PDF 사본을 이메일로 직접 보내드립니다!',
+      subtitle: '2026 나투라 카탈로그가 준비되었습니다! 독점 업데이트를 받으려면 이메일 목록에 가입하세요. 이 양식을 제출하시면 PDF 사본을 이메일로 직접 보내드립니다!',
       firstName: '성함',
       email: '이메일',
       whatsapp: 'WhatsApp 번호',
@@ -275,7 +275,7 @@ const CatalogModal: React.FC<CatalogModalProps> = ({ show, onClose }) => {
                 <div className="collage-image collage-image-1">
                   <img
                     src={catalogPreview1}
-                    alt="Naturra Extal Agricultural Commodities - Corner Bench"
+                    alt="Naturra Extal - Premium Cocoa Beans"
                     loading="lazy"
                   />
                 </div>
@@ -283,7 +283,7 @@ const CatalogModal: React.FC<CatalogModalProps> = ({ show, onClose }) => {
                 <div className="collage-image collage-image-2">
                   <img
                     src={catalogPreview2}
-                    alt="Naturra Extal Agricultural Commodities - Dining Table"
+                    alt="Naturra Extal - Quality Cloves"
                     loading="lazy"
                   />
                 </div>
@@ -291,7 +291,7 @@ const CatalogModal: React.FC<CatalogModalProps> = ({ show, onClose }) => {
                 <div className="collage-image collage-image-3">
                   <img
                     src={catalogPreview3}
-                    alt="Naturra Extal Agricultural Commodities - Bar Chair"
+                    alt="Naturra Extal - Sustainable Cocopeat"
                     loading="lazy"
                   />
                 </div>

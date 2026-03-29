@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import Header from '../components/Header'
+import NaturraHeader from '../components/NaturraHeader'
 import Footer from '../components/Footer'
 // Premium Agricultural Commodity Images
 const heroImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1920&q=80'
@@ -386,7 +386,7 @@ const Partnership: React.FC = () => {
         ))}
       </Helmet>
 
-      <Header isIndonesian={isIndonesian} language={language} />
+      <NaturraHeader isIndonesian={isIndonesian} language={language} />
 
       {/* Hero Section */}
       <section className="partnership-hero">
@@ -598,8 +598,8 @@ const Partnership: React.FC = () => {
               </a>
             </p>
             <p className="partnership-contact-email">
-              <a href="mailto:hello@naturraextal.com" style={{ color: '#8B7355', textDecoration: 'underline' }}>
-                hello@naturraextal.com
+              <a href="mailto:naturraextal@gmail.com" style={{ color: '#8B7355', textDecoration: 'underline' }}>
+                naturraextal@gmail.com
               </a>
             </p>
           </div>

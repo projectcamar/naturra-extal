@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useLocation, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import Header from '../components/Header'
+import NaturraHeader from '../components/NaturraHeader'
 import CurrencyHighlight from '../components/CurrencyHighlight'
 import Footer from '../components/Footer'
 import Breadcrumb from '../components/Breadcrumb'
@@ -433,7 +433,7 @@ function SearchResults() {
         ))}
       </Helmet>
 
-      <Header isIndonesian={isIndonesian} language={language} />
+      <NaturraHeader isIndonesian={isIndonesian} language={language} />
       <CurrencyHighlight isIndonesian={isIndonesian} language={language} />
 
       <div className="container">

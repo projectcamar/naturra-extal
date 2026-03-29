@@ -317,7 +317,7 @@ const NaturraHome: React.FC = () => {
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17L17 7M17 7H7M17 7V17" /></svg>
                             </a>
                             <a
-                                href="mailto:hello@naturraextal.com"
+                                href="mailto:naturraextal@gmail.com"
                                 className="naturra-home__cta-btn naturra-home__cta-btn--secondary"
                             >
                                 {t.ctaBtn2}
@@ -331,7 +331,7 @@ const NaturraHome: React.FC = () => {
                                 <Mail size={24} />
                             </div>
                             <h4 className="naturra-home__cta-card-title">{t.emailTitle}</h4>
-                            <p className="naturra-home__cta-card-desc">hello@naturraextal.com</p>
+                            <p className="naturra-home__cta-card-desc">naturraextal@gmail.com</p>
                         </div>
                         <div className="naturra-home__cta-card">
                             <div className="naturra-home__cta-card-icon">

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router-dom'
 
 // Components
-import Header from '../components/Header'
+import NaturraHeader from '../components/NaturraHeader'
 import Hero from '../components/Hero'
 import CatalogModal from '../components/CatalogModal'
 import CategoriesSection from '../components/CategoriesSection'
@@ -302,7 +302,7 @@ const Home: React.FC = () => {
               "@id": "https://naturraextal.com",
               "url": "https://naturraextal.com",
               "telephone": "+6289513957752",
-              "email": "hello@naturraextal.com",
+              "email": "naturraextal@gmail.com",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Jl. Raya Setu Cibitung - Bekasi, Telajung",
@@ -342,7 +342,7 @@ const Home: React.FC = () => {
           {JSON.stringify(generateWebSiteStructuredData())}
         </script>
       </Helmet>
-      <Header isIndonesian={isIndonesian} language={language} />
+      <NaturraHeader isIndonesian={isIndonesian} language={language} />
       <Hero isIndonesian={isIndonesian} language={language} />
 
 

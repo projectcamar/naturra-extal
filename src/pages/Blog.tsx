@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link, useLocation, useSearchParams } from 'react-router-dom'
 import { ChevronDown, ChevronUp } from 'lucide-react'
-import Header from '../components/Header'
+import NaturraHeader from '../components/NaturraHeader'
 import Footer from '../components/Footer'
 import { getPostsByPage, getTotalPages, getAllBlogPosts } from '../data/blog'
 import { generateLanguageSpecificMeta, generateLocalizedUrls, truncateTitle, truncateMetaDescription } from '../utils/seo'
@@ -293,7 +293,7 @@ const Blog: React.FC = () => {
         <meta property="og:locale:alternate" content="en_US" />
       </Helmet>
 
-      <Header isIndonesian={isIndonesian} language={language} />
+      <NaturraHeader isIndonesian={isIndonesian} language={language} />
 
       {/* Hero Section */}
       <section className="blog-hero">

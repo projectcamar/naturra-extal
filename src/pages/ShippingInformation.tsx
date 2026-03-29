@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router-dom'
 import { Clock, MapPin, Phone, Mail, Globe } from 'lucide-react'
 import Footer from '../components/Footer'
-import Header from '../components/Header'
+import NaturraHeader from '../components/NaturraHeader'
 import ServiceAreasSection from '../components/ServiceAreasSection'
 // Premium Agricultural Commodity Images
 const heroImage = 'https://images.unsplash.com/photo-1586528116311-ad866efd92bf?w=1920&q=80'
@@ -545,7 +545,7 @@ const ShippingInformation: React.FC = () => {
         <meta property="og:description" content={t.meta.description} />
       </Helmet>
 
-      <Header isIndonesian={isIndonesian} language={language} />
+      <NaturraHeader isIndonesian={isIndonesian} language={language} />
 
       <section className="shipping-hero">
         <div className="shipping-hero-image">
@@ -695,7 +695,7 @@ const ShippingInformation: React.FC = () => {
                     href="mailto:hello@naturraextal.com"
                     style={{ color: '#8B7355', textDecoration: 'underline' }}
                   >
-                    hello@naturraextal.com
+                    naturraextal@gmail.com
                   </a>
                 </p>
               </div>

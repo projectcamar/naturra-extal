@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router-dom'
 import { Diamond, DollarSign, Globe, Wrench } from 'lucide-react'
 import Footer from '../components/Footer'
-import Header from '../components/Header'
+import NaturraHeader from '../components/NaturraHeader'
 import { generateFAQSchema, generateLocalBusinessStructuredData } from '../utils/structuredData'
 import { getFAQBySlug } from '../data/faq'
 // Premium Agricultural Commodity Images
@@ -683,7 +683,7 @@ const About: React.FC = () => {
         {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
       </Helmet>
 
-      <Header isIndonesian={isIndonesian} language={language} />
+      <NaturraHeader isIndonesian={isIndonesian} language={language} />
 
       <section className="about-hero">
         <div className="about-hero-image">

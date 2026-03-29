@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useParams, Link, useLocation, Navigate } from 'react-router-dom'
 import { Mail, MessageCircle, Share2, Facebook, Twitter, Linkedin, Copy, Check } from 'lucide-react'
-import Header from '../components/Header'
+import NaturraHeader from '../components/NaturraHeader'
 import Footer from '../components/Footer'
 import Breadcrumb from '../components/Breadcrumb'
 import ServiceAreasSection from '../components/ServiceAreasSection'
@@ -413,7 +413,7 @@ const BlogPost: React.FC = () => {
   if (isLanguageLoading) {
     return (
       <div className="blog-page blog-post-page">
-        <Header isIndonesian={isIndonesian} language={language} />
+        <NaturraHeader isIndonesian={isIndonesian} language={language} />
         <main className="blog-post-main" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60vh' }}>
           <div style={{ textAlign: 'center' }}>
             <div style={{
@@ -626,7 +626,7 @@ const BlogPost: React.FC = () => {
           </script>
         )}
       </Helmet>
-      <Header isIndonesian={isIndonesian} language={language} />
+      <NaturraHeader isIndonesian={isIndonesian} language={language} />
 
       <section className="blog-post-hero" aria-labelledby="blog-post-title">
         <div className="blog-post-hero-image">

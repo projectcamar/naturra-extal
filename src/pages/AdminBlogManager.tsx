@@ -999,7 +999,7 @@ const AdminBlogManager: React.FC = () => {
                                     </div>
                                 </section>
 
-                                <section className="editor-section">
+                                <section id="admin-content-editor" className="editor-section">
                                     <h2 className="section-title">
                                         <FileText size={22} color="#004D2C" />
                                         Blog Content Editor
@@ -1064,7 +1064,7 @@ const AdminBlogManager: React.FC = () => {
                             </div>
 
                             <div className="editor-sidebar-panel">
-                                <div className="editor-sidebar-card">
+                                <div id="admin-metadata-editor" className="editor-sidebar-card">
                                     <h3><Settings size={18} /> General Metadata</h3>
                                     <div className="input-group-compact">
                                         <label>Article Title</label>
@@ -1258,6 +1258,7 @@ const AdminBlogManager: React.FC = () => {
 
                             <label style={{ fontSize: '13px', fontWeight: '700', color: '#444', marginBottom: '8px', display: 'block' }}>What would you like to write about?</label>
                             <textarea
+                                id="admin-ai-prompt-input"
                                 value={aiPrompt}
                                 onChange={(e) => setAiPrompt(e.target.value)}
                                 placeholder="Example: Strategi ekspor biji kopi robusta ke pasar Eropa: Panduan kualitas dan logistik 2025"
@@ -1279,6 +1280,7 @@ const AdminBlogManager: React.FC = () => {
                                 Cancel
                             </button>
                             <button
+                                id="admin-ai-submit-btn"
                                 className="ai-modal-generate"
                                 onClick={handleGenerateWithAI}
                                 disabled={isGenerating || !aiPrompt.trim()}

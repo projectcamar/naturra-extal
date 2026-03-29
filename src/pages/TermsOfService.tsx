@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router-dom'
-import Header from '../components/Header'
+import NaturraHeader from '../components/NaturraHeader'
 import Footer from '../components/Footer'
-// legacy Naturra image import removed
+const heroImage = 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=1920'
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
 import { trackWhatsAppClick } from '../utils/whatsappTracking'
 import { getCurrentLanguage, getStoredLanguage, detectLanguageFromIP, type LanguageCode } from '../utils/languageManager'
@@ -65,7 +65,7 @@ const TermsOfService: React.FC = () => {
         <meta property="og:locale:alternate" content="en_US" />
       </Helmet>
 
-      <Header isIndonesian={isIndonesian} language={language} />
+      <NaturraHeader isIndonesian={isIndonesian} language={language} />
 
       {/* Hero Section */}
       <section className="terms-hero">
@@ -377,7 +377,7 @@ const TermsOfService: React.FC = () => {
                 </p>
                 <p className="workshop-email">
                   <a href="mailto:hello@naturraextal.com" style={{ color: '#8B7355', textDecoration: 'underline' }}>
-                    hello@naturraextal.com
+                    naturraextal@gmail.com
                   </a>
                 </p>
                 <p className="workshop-hours">

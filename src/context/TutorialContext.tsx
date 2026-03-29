@@ -59,6 +59,24 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
     },
     {
         id: 6,
+        title: "Magic in the Making",
+        text: "Type a descriptive prompt here (e.g., 'Tips on vanilla extraction'). The more detail you give, the better the article!",
+        targetId: "admin-ai-prompt-input",
+        targetPage: "/admin/blog",
+        btnText: "Next: Generate",
+        position: "bottom"
+    },
+    {
+        id: 7,
+        title: "Release the AI",
+        text: "Click this button to let our AI write the full article, find a matching cover image, and set up SEO - all in one go!",
+        targetId: "admin-ai-submit-btn",
+        targetPage: "/admin/blog",
+        btnText: "Let's Generate!",
+        position: "top"
+    },
+    {
+        id: 8,
         title: "Metadata & SEO",
         text: "Fine-tune your URL slugs, categories, and languages to rank higher on Google.",
         targetId: "admin-metadata-editor",
@@ -67,7 +85,7 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
         position: "top"
     },
     {
-        id: 7,
+        id: 9,
         title: "Interactive Editor",
         text: "Write your introduction, add key takeaways, and build dynamic content sections effortlessly.",
         targetId: "admin-content-editor",
@@ -76,7 +94,7 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
         position: "top"
     },
     {
-        id: 8,
+        id: 10,
         title: "Deploy with Confidence",
         text: "Once you're done, click here to save your work. Then deploy it live to the global market!",
         targetId: "admin-save-btn",

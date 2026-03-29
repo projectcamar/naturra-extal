@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { ChevronDown } from 'lucide-react'
-import Header from '../components/Header'
+import NaturraHeader from '../components/NaturraHeader'
 import Footer from '../components/Footer'
 import Breadcrumb from '../components/Breadcrumb'
 import CategoryAIContent from '../components/CategoryAIContent'
@@ -493,7 +493,7 @@ const Shop: React.FC = () => {
         </script>
       </Helmet>
 
-      <Header isIndonesian={isIndonesian} language={language} />
+      <NaturraHeader isIndonesian={isIndonesian} language={language} />
       <CurrencyHighlight isIndonesian={isIndonesian} language={language} />
 
       <main className="category-main">

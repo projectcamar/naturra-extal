@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router-dom'
 import { FileText, MessageCircle, Truck, Wrench } from 'lucide-react'
 import Footer from '../components/Footer'
-import Header from '../components/Header'
+import NaturraHeader from '../components/NaturraHeader'
 // Premium Agricultural Commodity Images
 const heroImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1920&q=80'
 const showroomImage = 'https://images.unsplash.com/photo-1516053303028-569806443c52?w=1200'
@@ -575,7 +575,7 @@ const CustomOrder: React.FC = () => {
         <meta property="og:description" content={t.meta.description} />
       </Helmet>
 
-      <Header isIndonesian={isIndonesian} language={language} />
+      <NaturraHeader isIndonesian={isIndonesian} language={language} />
 
       <section className="custom-order-hero">
         <div className="custom-order-hero-image">

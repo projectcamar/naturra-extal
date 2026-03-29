@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react'
 import { useParams, Link, useLocation, Navigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { ChevronDown } from 'lucide-react'
-import Header from '../components/Header'
+import NaturraHeader from '../components/NaturraHeader'
 import Footer from '../components/Footer'
 import Breadcrumb from '../components/Breadcrumb'
 import CategoryAIContent from '../components/CategoryAIContent'
@@ -445,7 +445,7 @@ const ProductCategory: React.FC = () => {
   if (isLoading) {
     return (
       <div className="product-category-page">
-        <Header isIndonesian={isIndonesian} language={language} />
+        <NaturraHeader isIndonesian={isIndonesian} language={language} />
         <div style={{
           display: 'flex',
           justifyContent: 'center',
@@ -560,7 +560,7 @@ const ProductCategory: React.FC = () => {
         </script>
       </Helmet>
 
-      <Header isIndonesian={isIndonesian} language={language} />
+      <NaturraHeader isIndonesian={isIndonesian} language={language} />
 
       <main className="category-main">
         <div className="container">

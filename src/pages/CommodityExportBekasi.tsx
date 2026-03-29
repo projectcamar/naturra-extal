@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link, useLocation } from 'react-router-dom'
-import { CheckCircle, Phone, Mail, MapPin, Clock, Award, Shield, Zap, Globe } from 'lucide-react'
-import Header from '../components/Header'
+import { CheckCircle, Phone, Mail, MapPin, Award, Shield, Zap, Globe } from 'lucide-react'
+import NaturraHeader from '../components/NaturraHeader'
 import NaturraFooter from '../components/NaturraFooter'
 import { generateLocalBusinessStructuredData, generateFAQSchema } from '../utils/structuredData'
 import { getFAQBySlug } from '../data/faq'
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
-import { trackWhatsAppClick } from '../utils/whatsappTracking'
 import './LandingPage.css'
 
 // LANDING PAGE: Commodity Export Bekasi & Indonesia
@@ -60,7 +59,7 @@ const CommodityExportBekasi: React.FC = () => {
         )}
       </Helmet>
 
-      <Header isIndonesian={isIndonesian} language={language} />
+      <NaturraHeader isIndonesian={isIndonesian} language={language} />
 
       {/* Hero Section */}
       <section className="landing-hero">

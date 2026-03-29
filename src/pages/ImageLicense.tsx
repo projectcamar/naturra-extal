@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router-dom'
 import Footer from '../components/Footer'
-import Header from '../components/Header'
-// legacy Naturra image import removed
+import NaturraHeader from '../components/NaturraHeader'
+const heroImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1920'
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
 import { DEFAULT_IMAGE_RIGHTS_METADATA } from '../utils/structuredData'
 import { getCurrentLanguage, getStoredLanguage, detectLanguageFromIP, type LanguageCode } from '../utils/languageManager'
@@ -539,7 +539,7 @@ const ImageLicense: React.FC = () => {
         <script type="application/ld+json">{JSON.stringify(imageObjectSchema)}</script>
       </Helmet>
 
-      <Header isIndonesian={isIndonesian} language={language} />
+      <NaturraHeader isIndonesian={isIndonesian} language={language} />
 
       <section className="image-license-hero">
         <div className="image-license-hero-media">

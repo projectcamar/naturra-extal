@@ -1,13 +1,13 @@
 {
   "name": "Naturra Extal International - Agricultural Commodity Trading",
   "short_name": "Naturra Extal",
-  "description": "Premium Indonesian agricultural commodity trader and exporter. Specializing in Cocoa, Spices, and Cocopeat.",
+  "description": "Naturra Extal is a premium Indonesian agricultural commodity trader and exporter. Specializing in Cocoa, Spices, and Cocopeat since 1999.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#ffffff",
-  "theme_color": "#8B7355",
+  "theme_color": "#004D2C",
   "lang": "id",
   "categories": [
     "business",

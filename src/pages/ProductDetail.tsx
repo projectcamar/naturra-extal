@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react'
 import { useParams, Link, useLocation, Navigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { X, Play } from 'lucide-react'
-import Header from '../components/Header'
+import NaturraHeader from '../components/NaturraHeader'
 import Footer from '../components/Footer'
 import Breadcrumb from '../components/Breadcrumb'
 import ProductDetailAIContent from '../components/ProductDetailAIContent'
@@ -706,7 +706,7 @@ const ProductDetail: React.FC = () => {
   if (isLoading) {
     return (
       <div className="product-detail-page">
-        <Header isIndonesian={isIndonesian} language={language} />
+        <NaturraHeader isIndonesian={isIndonesian} language={language} />
         <div style={{
           display: 'flex',
           justifyContent: 'center',
@@ -848,7 +848,7 @@ const ProductDetail: React.FC = () => {
             "@type": "ContactPoint",
             "telephone": "+6289513957752",
             "contactType": "customer service",
-            "email": "hello@naturraextal.com",
+            "email": "naturraextal@gmail.com",
             "availableLanguage": ["Indonesian", "English"]
           }
         },
@@ -989,7 +989,7 @@ const ProductDetail: React.FC = () => {
         ))}
       </Helmet>
 
-      <Header isIndonesian={isIndonesian} language={language} />
+      <NaturraHeader isIndonesian={isIndonesian} language={language} />
 
       <main className="product-detail-main">
         <div className="container">

@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const ROOT_DIR = path.resolve(__dirname, '..')
-const BASE_URL = process.env.SITEMAP_BASE_URL || 'https://mangala-living.com'
+const BASE_URL = process.env.SITEMAP_BASE_URL || 'https://naturraextal.com'
 
 const BLOG_FILE = path.join(ROOT_DIR, 'src', 'data', 'blog.ts')
 const BLOG_CONTENT_FILE = path.join(ROOT_DIR, 'src', 'data', 'blogContent.ts')
@@ -522,7 +522,7 @@ const generateHeaderHTML = (isIndonesian) => `
             <a class="header-top-link" href="${BASE_URL}/contact-us">${isIndonesian ? 'Contact Us' : 'Contact Us'}</a>
         </nav>
           <a class="logo" href="${BASE_URL}/">
-            <span class="logo-text">MANGALA</span>
+            <span class="logo-text">NATURRA</span>
           </a>
           <div class="header-top-actions">
             <div class="language-switcher">
@@ -534,7 +534,7 @@ const generateHeaderHTML = (isIndonesian) => `
             <button class="search-btn" type="button" aria-label="${isIndonesian ? 'Cari' : 'Search'}">
               <span>${isIndonesian ? 'Cari' : 'Search'}</span>
             </button>
-            <a class="catalog-btn" href="${BASE_URL}/assets/Mangala-Living-Catalog-2025.pdf" target="_blank" rel="noopener noreferrer">
+            <a class="catalog-btn" href="${BASE_URL}/products" target="_blank" rel="noopener noreferrer">
               ${isIndonesian ? 'Unduh Katalog Kami' : 'Download Our Catalog'}
             </a>
       </div>
@@ -594,7 +594,7 @@ const generateBreadcrumbHTML = (post) => {
 
 const generateArticleMetaHTML = (post, formattedDate) => `
   <p class="blog-post-meta">
-    ${escapeHtml(post.author || 'Mangala Living')} · ${formattedDate}
+    ${escapeHtml(post.author || 'Naturra Extal')} · ${formattedDate}
   </p>
 `
 
@@ -617,7 +617,7 @@ const generateSectionHTML = (section, post, index) => {
       <figure class="blog-post-figure">
         <img
           src="${section.image}"
-          alt="${escapeHtml(section.imageAlt || `${post.title} - ${section.heading || 'Industrial Furniture Article'} - Mangala Living`)}"
+          alt="${escapeHtml(section.imageAlt || `${post.title} - ${section.heading || 'Agricultural Commodities Article'} - Naturra Extal`)}"
           loading="${index <= 1 ? 'eager' : 'lazy'}"
           width="800"
           height="500"
@@ -657,7 +657,7 @@ const generateProductShowcaseHTML = (products, heading, isIndonesian) => {
   const displayProducts = products.slice(0, 3)
   const description = isIndonesian
     ? 'Berikut adalah produk industrial pilihan kami yang relevan dengan topik artikel ini. Semua produk dibuat dengan kualitas premium dan material industrial grade di workshop kami di Bekasi.'
-    : 'Discover our premium industrial furniture collection, manufactured in our Bekasi workshop with high-quality materials and powder coating finish.'
+    : 'Discover our premium agricultural commodities collection, sourced directly from Indonesian farmers with international quality standards.'
 
   const cards = displayProducts.map((product, index) => {
     const categories = Array.isArray(product.categories) ? product.categories : []
@@ -788,8 +788,8 @@ const generateCTAHTML = (post, isIndonesian) => {
         <h2>${isExport ? 'Interested in Our Industrial Furniture?' : 'Tertarik dengan Furniture Industrial Kami?'}</h2>
         <p class="section-subtitle">
           ${isExport
-      ? 'Visit our complete collection of high-quality custom industrial furniture from Mangala Living.'
-      : 'Kunjungi koleksi lengkap furniture industrial custom berkualitas tinggi dari Mangala Living.'}
+      ? 'Visit our complete collection of high-quality agricultural commodities from Naturra Extal.'
+      : 'Kunjungi koleksi lengkap komoditas pertanian berkualitas tinggi dari Naturra Extal.'}
         </p>
       </div>
       <div class="blog-post-cta-actions">
@@ -873,14 +873,14 @@ const generateServiceAreasHTML = (isIndonesian) => `
         <div class="cta-content">
           <h3>${isIndonesian ? 'Area Anda Tidak Tercantum?' : 'Your Area Not Listed?'}</h3>
           <p>${isIndonesian ? 'Hubungi kami untuk diskusi cakupan layanan kami. Kami melayani seluruh Jabodetabek dan sekitarnya.' : 'Contact us to discuss our service coverage. We serve entire Jabodetabek and surrounding areas.'}</p>
-          <a class="cta-button" href="https://wa.me/+6288801146881?text=Halo%20Mangala%20Living%2C%20saya%20tertarik%20dengan%20furniture%20industrial%20untuk%20area%20saya" target="_blank" rel="noopener noreferrer">
+          <a class="cta-button" href="https://wa.me/628951395752?text=Halo%20Naturra%20Extal%2C%20saya%20tertarik%20dengan%20komoditas%20pertanian" target="_blank" rel="noopener noreferrer">
             <span class="whatsapp-icon">WA</span>
             ${isIndonesian ? 'Konsultasi Gratis' : 'Free Consultation'}
           </a>
         </div>
       </div>
       <div class="service-areas-seo-text">
-        <p><strong>Mangala Living</strong> adalah workshop furniture industrial terpercaya yang melayani seluruh wilayah Bekasi, Jakarta, dan Jabodetabek. Kami menyediakan solusi custom furniture besi industrial untuk cafe, restoran, hotel, kantor, dan proyek komersial lainnya.</p>
+        <p><strong>Naturra Extal</strong> adalah eksportir komoditas pertanian terpercaya yang melayani pasar global dari Bekasi. Kami menyediakan solusi pasokan Kakao, Cengkeh, dan Cocopeat berkualitas tinggi langsung dari petani di seluruh Indonesia.</p>
       </div>
     </div>
   </section>
@@ -891,12 +891,12 @@ const generateFooterHTML = (isIndonesian) => `
     <div class="footer-container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <h2 class="footer-logo">MANGALA</h2>
-          <p class="footer-description">${isIndonesian ? 'Pilihan terbaik untuk furniture industrial scandinavian premium sejak 1999. Melayani coffee shop, restoran, dan bisnis di seluruh Indonesia. Pesanan custom diterima.' : 'Your best choice for premium industrial Scandinavian furniture since 1999. Serving coffee shops, restaurants, and businesses across Indonesia. Custom orders welcome.'}</p>
+          <h2 class="footer-logo">NATURRA</h2>
+          <p class="footer-description">${isIndonesian ? 'Pilihan terbaik untuk komoditas pertanian premium Indonesia sejak 1999. Melayani industri makanan, minuman, dan hortikultura di seluruh dunia.' : 'Your best choice for premium Indonesian agricultural commodities since 1999. Serving food, beverage, and horticulture industries worldwide.'}</p>
           <div class="footer-contact-info">
             <h4>${isIndonesian ? 'Hubungi Kami' : 'Contact Us'}</h4>
-            <p><a href="mailto:lifewithmangala@gmail.com">lifewithmangala@gmail.com</a></p>
-            <p><a href="https://wa.me/+6288801146881" target="_blank" rel="noopener noreferrer">+6288801146881</a></p>
+            <p><a href="mailto:naturraextal@gmail.com">naturraextal@gmail.com</a></p>
+            <p><a href="https://wa.me/628951395752" target="_blank" rel="noopener noreferrer">+62 895-1395-7752</a></p>
         </div>
         </div>
         <div class="footer-column">
@@ -928,7 +928,7 @@ const generateFooterHTML = (isIndonesian) => `
         </div>
         </div>
       <div class="footer-bottom">
-        <p>Copyright ${new Date().getFullYear()} Mangala Living. ${isIndonesian ? 'Seluruh hak cipta dilindungi.' : 'All rights reserved.'}</p>
+        <p>Copyright ${new Date().getFullYear()} Naturra Extal. ${isIndonesian ? 'Seluruh hak cipta dilindungi.' : 'All rights reserved.'}</p>
       </div>
     </div>
   </footer>
@@ -949,16 +949,16 @@ const generateProductSchemas = (products, post, baseUrl) => {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": product.name,
-      "description": `${product.name} - ${product.categories.join(', ')} Industrial Furniture berkualitas premium dari Mangala Living Workshop Bekasi.`,
+      "description": `${product.name} - ${product.categories.join(', ')} Komoditas Pertanian berkualitas premium dari Naturra Extal Bekasi.`,
       "image": imageUrl,
       "category": product.categories.join(', '),
       "brand": {
         "@type": "Brand",
-        "name": "Mangala Living"
+        "name": "Naturra Extal"
       },
       "manufacturer": {
         "@type": "Organization",
-        "name": "Mangala Living",
+        "name": "Naturra Extal",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Bekasi",
@@ -975,7 +975,7 @@ const generateProductSchemas = (products, post, baseUrl) => {
         "priceValidUntil": "2026-12-31",
         "seller": {
           "@type": "Organization",
-          "name": "Mangala Living",
+          "name": "Naturra Extal",
           "url": trimmedBase
         }
       }
@@ -990,43 +990,43 @@ const createFallbackContent = (post) => {
       {
         paragraphs: [
           post.excerpt,
-          `Mangala Living memproduksi ${titleHighlight.toLowerCase()} dengan kualitas workshop premium di Bekasi. Semua furniture dibuat menggunakan material industrial grade, konstruksi welding profesional, dan finishing powder coating tahan lama.`,
-          `Kami telah membantu 1000+ project komersial sejak 1999. Dengan pengalaman lebih dari 25 tahun, kami memahami standar kualitas, timeline, dan anggaran yang diperlukan untuk menghadirkan solusi furniture yang tepat untuk bisnis Anda.`
+          `Naturra Extal menyediakan ${titleHighlight.toLowerCase()} dengan kualitas ekspor premium. Semua komoditas bersumber langsung dari komunitas petani dengan standar kontrol kualitas yang ketat.`,
+          `Kami telah membantu pembeli internasional sejak 1999. Dengan pengalaman lebih dari 25 tahun, kami memahami rantai pasok, standar kualitas internasional, dan pentingnya panen berkelanjutan.`
         ]
       },
       {
-        heading: 'Keunggulan Utama Mangala Living',
+        heading: 'Keunggulan Utama Naturra Extal',
         list: [
-          '<strong>Produksi In-House:</strong> Semua proses mulai dari design, fabrikasi, powder coating, hingga quality control dilakukan di workshop kami sendiri.',
-          '<strong>Custom Sesuai Project:</strong> Dimensi, material, dan finishing bisa disesuaikan dengan kebutuhan brand atau konsep interior Anda.',
-          '<strong>Durability Terjamin:</strong> Struktur besi berkualitas, powder coating outdoor-grade, dan kayu pilihan memastikan ketahanan 5-8 tahun untuk penggunaan komersial.',
-          '<strong>Pengiriman Profesional:</strong> Packing aman, supervisi loading, serta dokumentasi lengkap untuk pengiriman domestik maupun ekspor.'
+          '<strong>Sumber Langsung Petani:</strong> Kami bekerja sama langsung dengan petani di Sulawesi, Maluku, dan Jawa untuk memastikan kualitas dan ketertelusuran produk.',
+          '<strong>Standar Kualitas Ekspor:</strong> Setiap produk melalui proses seleksi manual dan pengujian laboratorium untuk memenuhi standar internasional (HS 1805/1806).',
+          '<strong>Kapasitas Pasokan Stabil:</strong> Jaringan distribusi kami memastikan ketersediaan produk sepanjang tahun untuk kebutuhan industri skala besar.',
+          '<strong>Dokumentasi Lengkap:</strong> Kami menangani seluruh dokumen ekspor, sertifikasi fitosanitari, dan logistik internasional dengan profesional.'
         ]
       },
       {
-        heading: 'Solusi Furniture yang Kami Sediakan',
+        heading: 'Spesialis Komoditas Pertanian Kami',
         paragraphs: [
-          'Tim design dan produksi kami melayani kebutuhan cafe, restoran, hotel, kantor, hingga developer properti. Produk meliputi meja-kursi dining, bar set, lounge furniture, rak display, cabinetry, hingga custom furniture untuk area outdoor.',
-          'Setiap project mendapat pendampingan konsultatif: mulai dari pemilihan produk, layout, penyesuaian budget, hingga instalasi di lokasi.'
+          'Tim operasional kami melayani kebutuhan industri makanan & minuman, farmasi, serta sektor hortikultura global. Produk unggulan kami meliputi Cocoa Powder (Premium & Sweetened), Cengkeh (Grade A), dan Cocopeat (Low EC).',
+          'Setiap kemitraan bersifat jangka panjang: kami memberikan transparansi harga, kepastian jadwal pengiriman, dan dukungan logistik lengkap.'
         ]
       },
       {
-        heading: 'Langkah Order & Konsultasi',
+        heading: 'Langkah Pemesanan & Kerjasama',
         list: [
-          '<strong>1. Konsultasi Awal:</strong> Kirimkan kebutuhan melalui WhatsApp atau email. Sertakan jumlah unit, ukuran ruangan, referensi desain, dan target budget.',
-          '<strong>2. Proposal & Quotation:</strong> Kami susun rekomendasi produk, material, serta estimasi biaya lengkap dengan timeline produksi.',
-          '<strong>3. Produksi & Quality Control:</strong> Setelah DP 50%, produksi dimulai. Kami kirimkan update berkala (foto/video) dan jadwalkan inspeksi sebelum pengiriman.',
-          '<strong>4. Pengiriman & Instalasi:</strong> Tim kami menyiapkan packing aman, koordinasi logistik, serta instalasi (untuk area Jabodetabek).'
+          '<strong>1. Konsultasi Kebutuhan:</strong> Hubungi kami melalui WhatsApp atau email untuk mendiskusikan spesifikasi produk dan volume yang dibutuhkan.',
+          '<strong>2. Penawaran & Sampel:</strong> Kami mengirimkan lembar spesifikasi produk (COA) dan sampel jika diperlukan untuk verifikasi kualitas Anda.',
+          '<strong>3. Kontrak & Logistik:</strong> Setelah kesepakatan harga (FOB/CNF), kami menjadwalkan produksi/pemrosesan dan pengurusan dokumen ekspor.',
+          '<strong>4. Pengiriman Global:</strong> Tim logistik kami memastikan pemuatan kontainer yang aman dan pengiriman tepat waktu ke pelabuhan tujuan Anda.'
         ]
       },
       {
-        heading: 'Hubungi Tim Mangala Living',
+        heading: 'Hubungi Tim Naturra Extal',
         paragraphs: [
-          'Hubungi kami untuk konsultasi gratis dan mendapatkan katalog terbaru:',
-          '<strong>WhatsApp:</strong> +6288801146881 (Fast Response)',
-          '<strong>Email:</strong> lifewithmangala@gmail.com',
-          '<strong>Workshop:</strong> Jl. Raya Setu Cibitung - Bekasi, Jawa Barat 17320',
-          'Kami siap membantu Anda mewujudkan furniture industrial yang estetik, fungsional, dan tahan lama untuk bisnis Anda.'
+          'Hubungi kami untuk mendapatkan penawaran terbaik dan sampel produk:',
+          '<strong>WhatsApp:</strong> +62 895-1395-7752 (Respon Cepat)',
+          '<strong>Email:</strong> naturraextal@gmail.com',
+          '<strong>Kantor Operasional:</strong> Bekasi, Jawa Barat, Indonesia',
+          'Kami siap menjadi mitra strategis Anda dalam penyediaan komoditas pertanian Indonesia berkualitas dunia.'
         ]
       }
     ]
@@ -1100,11 +1100,11 @@ const generateBlogPostHTML = (post, content, {
     "dateModified": post.date,
     "author": {
       "@type": "Person",
-      "name": post.author || 'Mangala Living'
+      "name": post.author || 'Naturra Extal'
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Mangala Living",
+      "name": "Naturra Extal",
       "logo": {
         "@type": "ImageObject",
         "url": `${trimmedBaseUrl}/logo.png`
@@ -1152,10 +1152,10 @@ const generateBlogPostHTML = (post, content, {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${escapeHtml(post.title)} | Mangala Living</title>
+  <title>${escapeHtml(post.title)} | Naturra Extal</title>
   <meta name="description" content="${escapeHtml(metaDescription)}">
-  <meta name="keywords" content="furniture industrial, ${escapeHtml(post.title)}, mangala living, furniture bekasi">
-  <meta name="author" content="${escapeHtml(post.author || 'Mangala Living')}">
+  <meta name="keywords" content="komoditas pertanian, ${escapeHtml(post.title)}, naturra extal, eksportir bekasi">
+  <meta name="author" content="${escapeHtml(post.author || 'Naturra Extal')}">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="${canonicalUrl}">
   <meta property="og:type" content="article">
@@ -1164,7 +1164,7 @@ const generateBlogPostHTML = (post, content, {
   <meta property="og:description" content="${escapeHtml(metaDescription)}">
   <meta property="og:image" content="${post.image}">
   <meta property="article:published_time" content="${post.date}">
-  <meta property="article:author" content="${escapeHtml(post.author || 'Mangala Living')}">
+  <meta property="article:author" content="${escapeHtml(post.author || 'Naturra Extal')}">
   <meta property="article:section" content="${escapeHtml(post.category || 'Blog')}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="${canonicalUrl}">
