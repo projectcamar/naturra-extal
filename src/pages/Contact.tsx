@@ -3,7 +3,8 @@ import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router-dom'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-// legacy Naturra image import removed
+// Premium Agricultural Commodity Images
+const heroImage = 'https://images.unsplash.com/photo-1586528116311-ad866efd92bf?w=1920&q=80'
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
 import { trackWhatsAppClick } from '../utils/whatsappTracking'
 import { getCurrentLanguage, getStoredLanguage, detectLanguageFromIP, type LanguageCode } from '../utils/languageManager'
@@ -47,15 +48,15 @@ type ContactTranslation = {
 const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
   en: {
     meta: {
-      title: 'Contact Furniture Workshop Bekasi: WhatsApp, Location, Operating Hours - Naturra Extal',
+      title: 'Contact Agricultural Export Hub Bekasi: WhatsApp, Location, Operating Hours - Naturra Extal',
       description:
-        'How to contact Naturra Extal? WhatsApp: +6288801146881 (1-3 hour response), Email: lifewithNaturra@gmail.com, Workshop address: Jl. Raya Setu Cibitung Bekasi (10 minutes from Cibitung toll gate, 25 minutes from East Jakarta). Operating hours: Monday-Saturday 08.00-17.00 WIB. Service area: FREE survey for Bekasi, East Jakarta, Cikarang. Free Agricultural Commodities consultation via WhatsApp.',
+        'How to contact Naturra Extal? WhatsApp: +6289513957752 (1-3 hour response), Email: hello@naturraextal.com, Export hub address: Jl. Raya Setu Cibitung Bekasi (10 minutes from Cibitung toll gate, 25 minutes from East Jakarta). Operating hours: Monday-Saturday 08.00-17.00 WIB. Service area: Global export from Indonesia. Free Agricultural Commodities consultation via WhatsApp.',
       keywords:
-        'contact Naturra Extal, whatsapp furniture bekasi, furniture workshop bekasi contact, Naturra Extal location, workshop address bekasi, operating hours furniture bekasi, free furniture consultation'
+        'contact Naturra Extal, whatsapp agricultural commodities, export hub bekasi contact, Naturra Extal location, workshop address bekasi, operating hours agricultural export, free commodity consultation'
     },
     heroTitle: 'Contact Us',
     introTitle:
-      "We're happy to discuss your custom furniture needs or answer any questions. Get in touch with our welding workshop team below.",
+      "We're happy to discuss your commodity supply needs or answer any questions. Get in touch with our export team below.",
     form: {
       title: 'Enquiry Form',
       subtitle:
@@ -85,15 +86,15 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
   },
   id: {
     meta: {
-      title: 'Hubungi Workshop Furniture Bekasi: WhatsApp, Lokasi, Jam Operasional - Naturra Extal',
+      title: 'Hubungi Hub Ekspor Pertanian Bekasi: WhatsApp, Lokasi, Jam Operasional - Naturra Extal',
       description:
-        'Bagaimana cara menghubungi Naturra Extal? WhatsApp: +6288801146881 (response 1-3 jam), Email: lifewithNaturra@gmail.com, Alamat workshop: Jl. Raya Setu Cibitung Bekasi (10 menit dari tol Cibitung, 25 menit dari Jakarta Timur). Jam buka: Senin-Sabtu 08.00-17.00 WIB. Area melayani: FREE survey Bekasi, Jakarta Timur, Cikarang. Konsultasi agricultural commodities gratis via WhatsApp.',
+        'Bagaimana cara menghubungi Naturra Extal? WhatsApp: +6289513957752 (response 1-3 jam), Email: hello@naturraextal.com, Alamat hub ekspor: Jl. Raya Setu Cibitung Bekasi (10 menit dari tol Cibitung, 25 menit dari Jakarta Timur). Jam buka: Senin-Sabtu 08.00-17.00 WIB. Area melayani: Ekspor Global dari Indonesia. Konsultasi komoditas pertanian gratis via WhatsApp.',
       keywords:
-        'hubungi Naturra Extal, whatsapp furniture bekasi, nomor workshop furniture bekasi, lokasi workshop furniture bekasi, alamat Naturra Extal bekasi, jam buka furniture bekasi, cara menghubungi workshop furniture, konsultasi agricultural commodities gratis, kontak furniture besi bekasi, email Naturra Extal, survey furniture gratis bekasi'
+        'hubungi Naturra Extal, whatsapp komoditas pertanian, nomor hub ekspor bekasi, lokasi hub ekspor bekasi, alamat Naturra Extal bekasi, jam buka ekspor pertanian bekasi, cara menghubungi hub ekspor, konsultasi komoditas pertanian gratis, kontak logistik pertanian bekasi, email Naturra Extal, survey kualitas komoditas bekasi'
     },
     heroTitle: 'Hubungi Kami',
     introTitle:
-      'Kami senang mendiskusikan kebutuhan custom furniture Anda atau menjawab pertanyaan. Hubungi tim workshop kami di bawah ini.',
+      'Kami senang mendiskusikan kebutuhan pasokan komoditas global Anda atau menjawab pertanyaan. Hubungi tim ekspor kami di bawah ini.',
     form: {
       title: 'Formulir Pertanyaan',
       subtitle:
@@ -125,7 +126,7 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
     meta: {
       title: 'تواصل مع ورشة الأثاث في بيكاسي: واتساب، الموقع، ساعات العمل - Naturra Extal',
       description:
-        'كيف تتواصل مع Naturra Extal؟ واتساب: +6288801146881 (استجابة خلال 1-3 ساعات)، البريد الإلكتروني: lifewithNaturra@gmail.com، عنوان الورشة: Jl. Raya Setu Cibitung Bekasi (10 دقائق من مخرج تول تشيبيتونغ، 25 دقيقة من شرق جاكرتا). ساعات العمل: الاثنين إلى السبت 08:00-17:00 بتوقيت جاكرتا. نطاق الخدمة: زيارة مجانية لبيكاسي، شرق جاكرتا، تشيكارانغ. استشارة مجانية للأثاث الصناعي عبر واتساب.',
+        'كيف تتواصل مع Naturra Extal؟ واتساب: +6289513957752 (استجابة خلال 1-3 ساعات)، البريد الإلكتروني: hello@naturraextal.com، عنوان الورشة: Jl. Raya Setu Cibitung Bekasi (10 دقائق من مخرج تول تشيبيتونغ، 25 دقيقة من شرق جاكرتا). ساعات العمل: الاثنين إلى السبت 08:00-17:00 بتوقيت جاكرتا. نطاق الخدمة: زيارة مجانية لبيكاسي، شرق جاكرتا، تشيكارانغ. استشارة مجانية للأثاث الصناعي عبر واتساب.',
       keywords:
         'اتصال Naturra Extal، ورشة أثاث بيكاسي، واتساب أثاث بيكاسي، عنوان ورشة Naturra Extal، ساعات عمل الأثاث في بيكاسي، استشارة أثاث صناعي مجانية'
     },
@@ -163,7 +164,7 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
     meta: {
       title: '联系贝卡西家具工坊：WhatsApp、地址、营业时间 - Naturra Extal',
       description:
-        '如何联系 Naturra Extal？WhatsApp：+6288801146881（1-3 小时内回复），邮箱：lifewithNaturra@gmail.com，工坊地址：Jl. Raya Setu Cibitung Bekasi（距 Cibitung 收费站 10 分钟，距雅加达东区 25 分钟）。营业时间：周一至周六 08:00-17:00 WIB。服务范围：贝卡西、雅加达东区、芝卡朗提供免费勘察。通过 WhatsApp 免费咨询工业风家具。',
+        '如何联系 Naturra Extal？WhatsApp：+6289513957752（1-3 小时内回复），邮箱：hello@naturraextal.com，工坊地址：Jl. Raya Setu Cibitung Bekasi（距 Cibitung 收费站 10 分钟，距雅加达东区 25 分钟）。营业时间：周一至周六 08:00-17:00 WIB。服务范围：贝卡西、雅加达东区、芝卡朗提供免费勘察。通过 WhatsApp 免费咨询工业风家具。',
       keywords:
         '联系 Naturra Extal, 贝卡西家具 WhatsApp, 家具工坊联系方式, Naturra Extal 地址, 贝卡西家具营业时间, 免费工业家具咨询'
     },
@@ -199,7 +200,7 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
     meta: {
       title: 'ベカシ家具工房へのお問い合わせ：WhatsApp・所在地・営業時間 - Naturra Extal',
       description:
-        'Naturra Extal への連絡方法: WhatsApp: +6288801146881（1〜3 時間以内に返信）、メール: lifewithNaturra@gmail.com、工房住所: Jl. Raya Setu Cibitung Bekasi（チビトゥン料金所から 10 分、東ジャカルタから 25 分）。営業時間: 月曜日〜土曜日 08:00-17:00 WIB。対応エリア: ベカシ、東ジャカルタ、チカランで無料現地調査。WhatsApp で工業家具の無料相談が可能です。',
+        'Naturra Extal への連絡方法: WhatsApp: +6289513957752（1〜3 時間以内に返信）、メール: hello@naturraextal.com、工房住所: Jl. Raya Setu Cibitung Bekasi（チビトゥン料金所から 10 分、東ジャカルタから 25 分）。営業時間: 月曜日〜土曜日 08:00-17:00 WIB。対応エリア: ベカシ、東ジャカルタ、チカランで無料現地調査。WhatsApp で工業家具の無料相談が可能です。',
       keywords:
         'Naturra Extal 問い合わせ, ベカシ 家具 WhatsApp, 家具工房 連絡先, Naturra Extal 住所, 家具 営業時間, 工業系家具 無料相談'
     },
@@ -237,7 +238,7 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
     meta: {
       title: 'Contactar Taller de Muebles en Bekasi: WhatsApp, Ubicación y Horario - Naturra Extal',
       description:
-        '¿Cómo contactar a Naturra Extal? WhatsApp: +6288801146881 (respuesta en 1-3 horas), correo: lifewithNaturra@gmail.com, dirección del taller: Jl. Raya Setu Cibitung Bekasi (a 10 minutos del peaje de Cibitung, 25 minutos del Este de Yakarta). Horario: lunes a sábado 08:00-17:00 WIB. Área de servicio: encuesta gratuita para Bekasi, Yakarta Este y Cikarang. Consulta gratuita sobre muebles industriales por WhatsApp.',
+        '¿Cómo contactar a Naturra Extal? WhatsApp: +6289513957752 (respuesta en 1-3 horas), correo: hello@naturraextal.com, dirección del taller: Jl. Raya Setu Cibitung Bekasi (a 10 minutos del peaje de Cibitung, 25 minutos del Este de Yakarta). Horario: lunes a sábado 08:00-17:00 WIB. Área de servicio: encuesta gratuita para Bekasi, Yakarta Este y Cikarang. Consulta gratuita sobre muebles industriales por WhatsApp.',
       keywords:
         'contactar Naturra Extal, WhatsApp muebles Bekasi, taller muebles Bekasi, dirección Naturra Extal, horario taller Bekasi, consulta muebles industriales gratis'
     },
@@ -275,7 +276,7 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
     meta: {
       title: 'Contact Atelier de Mobilier à Bekasi : WhatsApp, Adresse, Horaires - Naturra Extal',
       description:
-        "Comment contacter Naturra Extal ? WhatsApp : +6288801146881 (réponse en 1 à 3 heures), email : lifewithNaturra@gmail.com, adresse de l'atelier : Jl. Raya Setu Cibitung Bekasi (10 minutes du péage de Cibitung, 25 minutes de Jakarta Est). Horaires : lundi-samedi 08h00-17h00 WIB. Zone desservie : visite gratuite pour Bekasi, Jakarta Est, Cikarang. Consultation gratuite sur les meubles industriels via WhatsApp.",
+        "Comment contacter Naturra Extal ? WhatsApp : +6289513957752 (réponse en 1 à 3 heures), email : hello@naturraextal.com, adresse de l'atelier : Jl. Raya Setu Cibitung Bekasi (10 minutes du péage de Cibitung, 25 minutes de Jakarta Est). Horaires : lundi-samedi 08h00-17h00 WIB. Zone desservie : visite gratuite pour Bekasi, Jakarta Est, Cikarang. Consultation gratuite sur les meubles industriels via WhatsApp.",
       keywords:
         'contacter Naturra Extal, WhatsApp mobilier Bekasi, atelier mobilier Bekasi, adresse Naturra Extal, horaires atelier Bekasi, consultation mobilier industriel gratuite'
     },
@@ -313,7 +314,7 @@ const CONTACT_TRANSLATIONS: Record<LanguageCode, ContactTranslation> = {
     meta: {
       title: '베카시 가구 공방 문의: WhatsApp, 위치, 운영 시간 - Naturra Extal',
       description:
-        'Naturra Extal에 연락하는 방법은? WhatsApp: +6288801146881 (1-3시간 내 응답), 이메일: lifewithNaturra@gmail.com, 공방 주소: Jl. Raya Setu Cibitung Bekasi (치비툰 톨게이트에서 10분, 동자카르타에서 25분). 운영 시간: 월~토 08:00-17:00 WIB. 서비스 지역: 베카시, 동자카르타, 치카랑 무료 방문. WhatsApp으로 산업용 가구 무료 상담.',
+        'Naturra Extal에 연락하는 방법은? WhatsApp: +6289513957752 (1-3시간 내 응답), 이메일: hello@naturraextal.com, 공방 주소: Jl. Raya Setu Cibitung Bekasi (치비툰 톨게이트에서 10분, 동자카르타에서 25분). 운영 시간: 월~토 08:00-17:00 WIB. 서비스 지역: 베카시, 동자카르타, 치카랑 무료 방문. WhatsApp으로 산업용 가구 무료 상담.',
       keywords:
         'Naturra Extal 문의, 베카시 가구 WhatsApp, 가구 공방 연락처, Naturra Extal 주소, 베카시 가구 운영 시간, 산업용 가구 무료 상담'
     },
@@ -419,7 +420,7 @@ const Contact: React.FC = () => {
       t.whatsapp.closing
     ]
 
-    const whatsappUrl = `https://wa.me/+6288801146881?text=${encodeURIComponent(messageLines.join('\n'))}`
+    const whatsappUrl = `https://wa.me/+6289513957752?text=${encodeURIComponent(messageLines.join('\n'))}`
     window.open(whatsappUrl, '_blank')
 
     setFormData({
@@ -466,8 +467,8 @@ const Contact: React.FC = () => {
         <div className="contact-hero-image">
           <img
             src={heroImage}
-            alt="Contact Naturra Extal - Hubungi Workshop agricultural commodities Bekasi - WhatsApp +6288801146881"
-            title="Contact Naturra Extal - Get in Touch with Agricultural Commodities Manufacturer"
+            alt="Contact Naturra Extal - Hubungi Hub Ekspor agricultural commodities Bekasi - WhatsApp +6289513957752"
+            title="Contact Naturra Extal - Get in Touch with Agricultural Commodities Export Team"
             loading="eager"
             fetchPriority="high"
             width="1920"
@@ -584,13 +585,13 @@ const Contact: React.FC = () => {
             </div>
             <div>
               <a
-                href="https://wa.me/+6288801146881"
+                href="https://wa.me/+6289513957752"
                 style={{ color: '#8B7355', textDecoration: 'underline', fontWeight: '500' }}
                 onClick={() => trackWhatsAppClick('contact_page_workshop_address')}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                +6288801146881
+                +6289513957752
               </a>
             </div>
           </div>
@@ -620,7 +621,7 @@ const Contact: React.FC = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Naturra Extal Workshop Map"
+                title="Naturra Extal Export Hub Map"
               ></iframe>
             </div>
           </div>
@@ -633,3 +634,4 @@ const Contact: React.FC = () => {
 }
 
 export default Contact
+

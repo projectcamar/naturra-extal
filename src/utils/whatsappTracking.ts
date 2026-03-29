@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * WhatsApp Click Tracking Utility
  * Tracks all WhatsApp link clicks and sends email notifications
@@ -54,13 +55,13 @@ export const trackWhatsAppClick = async (
  * Usage: onClick={(e) => handleWhatsAppClick(e, 'footer')}
  */
 export const handleWhatsAppClick = async (
-  event: React.MouseEvent<HTMLAnchorElement>,
+  _event: React.MouseEvent<HTMLAnchorElement>,
   source: string,
   additionalInfo?: Record<string, any>
 ): Promise<void> => {
   // Track the click (don't wait for it to complete)
   trackWhatsAppClick(source, additionalInfo);
-  
+
   // Let the link navigation continue normally
   // The tracking happens in the background
 };
@@ -71,18 +72,18 @@ export const handleWhatsAppClick = async (
  * @param message - Optional pre-filled message
  */
 export const createTrackedWhatsAppUrl = (
-  source: string,
+  _source: string,
   message?: string,
-  additionalInfo?: Record<string, any>
+  _additionalInfo?: Record<string, any>
 ): string => {
   // Track on URL creation (will be called when component renders)
   // We'll track again on actual click for accuracy
-  const baseUrl = 'https://wa.me/+6288801146881';
-  
+  const baseUrl = 'https://wa.me/+6289513957752';
+
   if (message) {
     return `${baseUrl}?text=${encodeURIComponent(message)}`;
   }
-  
+
   return baseUrl;
 };
 
@@ -101,3 +102,4 @@ export const withWhatsAppTracking = (
     }
   };
 };
+

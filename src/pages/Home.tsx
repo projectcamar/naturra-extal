@@ -105,57 +105,57 @@ const Home: React.FC = () => {
   // Multi-language translations - SEO Optimized with Priority Keywords
   const translations = {
     title: language === 'id'
-      ? "agricultural commodities Indonesia | Manufacturer Besi Custom Bekasi Sejak 1999"
+      ? "Komoditas Pertanian Indonesia | Eksportir Kakao, Cengkeh, Cocopeat Sejak 1999"
       : language === 'ar'
-        ? "أثاث صناعي من الحديد - طقم بار وطقم صالة ورفوف تخزين | مانجالا ليفينج"
+        ? "السلع الزراعية الإندونيسية - الكاكاو والقرنفل والكوكوبيت | ناتورا إكستال"
         : language === 'zh'
-          ? "工业家具吧台套装休息区套装储物架新品 | 曼加拉生活"
+          ? "印度尼西亚农产品 - 可可、丁香和椰糠 | Naturra Extal"
           : language === 'ja'
-            ? "インダストリアル家具バーセットラウンジセット収納新着 | マンガラリビング"
+            ? "インドネシア農産物 - カカオ、クローブ、ココピート | Naturra Extal"
             : language === 'es'
-              ? "Muebles Industriales Set de Bar Set de Sala Almacenamiento Novedades | Naturra Extal"
+              ? "Mercancías Agrícolas de Indonesia - Cacao, Clavo y Cocopeat | Naturra Extal"
               : language === 'fr'
-                ? "Mobilier Industriel Set de Bar Set de Salon Rangement Nouveautés | Naturra Extal"
-                : "Agricultural Commodities Indonesia | Custom Steel Furniture Manufacturer Bekasi Since 1999",
+                ? "Matières Premières Agricoles d'Indonésie - Cacao, Girofle et Cocopeat | Naturra Extal"
+                : "Agricultural Commodities Indonesia | Cocoa, Cloves, & Cocopeat Exporter Since 1999",
     description: language === 'id'
-      ? "agricultural commodities & scandinavian premium sejak 1999. Melayani coffee shop, restoran, dan bisnis di seluruh Indonesia. Pesanan custom tersedia. Garansi 1 tahun."
+      ? "Komoditas pertanian Indonesia kualitas premium sejak 1999. Menyediakan bubuk kakao, cengkeh, dan cocopeat untuk pasar global. Pesanan curah tersedia."
       : language === 'ar'
-        ? "أثاث صناعي واسكندنافي فاخر منذ عام 1999. نخدم المقاهي والمطاعم والأعمال في جميع أنحاء إندونيسيا. نرحب بالطلبات المخصصة."
+        ? "سلع زراعية إندونيسية فاخرة منذ عام 1999. نوفر مسحوق الكاكاو والقرنفل والكوكوبيت للأسواق العالمية. تتوفر طلبات الجملة."
         : language === 'zh'
-          ? "自1999年以来的优质工业和斯堪的纳维亚家具。为印度尼西亚的咖啡馆、餐厅和企业提供服务。欢迎定制家具订单。"
+          ? "自1999年以来的优质印度尼西亚农产品。为全球市场提供可可粉、丁香和椰糠。提供大宗订单。"
           : language === 'ja'
-            ? "1999年以来のプレミアム家具。インドネシア全土のカフェ、レストラン、ビジネスに対応。カスタムオーダーも承ります。"
+            ? "1999年以来のプレミアムなインドネシア農産物。グローバル市場向けにココアパウダー、クローブ、ココピートを提供しています。バルク注文も承ります。"
             : language === 'es'
-              ? "Muebles industriales y escandinavos premium desde 1999. Sirviendo a cafeterías, restaurantes y negocios en toda Indonesia. Pedidos personalizados bienvenidos."
+              ? "Mercancías agrícolas indonesias de primera calidad desde 1999. Suministro de cacao en polvo, clavo y cocopeat para el mercado global. Pedidos a granel disponibles."
               : language === 'fr'
-                ? "Meubles industriels et scandinaves premium depuis 1999. Au service des cafés, restaurants et entreprises en Indonésie. Commandes personnalisées bienvenues."
-                : "Premium industrial & scandinavian furniture since 1999. Serving coffee shops, restaurants, and businesses across Indonesia. Custom furniture orders welcome.",
+                ? "Matières premières agricoles indonésiennes de qualité supérieure depuis 1999. Fourniture de poudre de cacao, clous de girofle et cocopeat pour le marché mondial."
+                : "Premium Indonesian agricultural commodities since 1999. Supplying cocoa powder, cloves, and cocopeat for the global market. Bulk orders available.",
     ogTitle: language === 'id'
-      ? "agricultural commodities Besi Custom Bekasi | Cafe & Restoran"
+      ? "Eksportir Komoditas Pertanian Indonesia | Kualitas Global"
       : language === 'ar'
-        ? "أثاث صناعي من الحديد مخصص بيكاسي | للمقاهي والمطاعم"
+        ? "مصدر السلع الزراعية الإندونيسية | جودة عالمية"
         : language === 'zh'
-          ? "勿加泗定制工业铁艺家具 | 咖啡馆和餐厅"
+          ? "印度尼西亚农产品出口商 | 全球品质"
           : language === 'ja'
-            ? "ブカシ カスタムインダストリアル鉄家具 | カフェ＆レストラン"
+            ? "インドネシア農産物輸出業者 | グローバル品質"
             : language === 'es'
-              ? "Muebles Industriales de Hierro Personalizados Bekasi | Café y Restaurante"
+              ? "Exportador de Mercancías Agrícolas de Indonesia | Calidad Global"
               : language === 'fr'
-                ? "Mobilier Industriel en Fer Sur Mesure Bekasi | Café & Restaurant"
-                : "Agricultural Commodities Besi Custom Bekasi | Cafe & Restoran",
+                ? "Exportateur de Matières Premières Agricoles d'Indonésie | Qualité Mondiale"
+                : "Indonesian Agricultural Commodities Exporter | Global Quality",
     ogDescription: language === 'id'
-      ? "Manufacturer agricultural commodities: bar set outdoor, lounge set, sofa bench, storage rack, new arrivals untuk cafe restoran hotel. Workshop Bekasi 25+ tahun. Harga pabrik."
+      ? "Eksportir komoditas pertanian: bubuk kakao, cengkeh Indonesia, cocopeat media tanam. Pengalaman 25+ tahun. Harga kompetitif dan kualitas ekspor."
       : language === 'ar'
-        ? "مصنع الأثاث الصناعي: طقم بار خارجي، طقم صالة، أريكة، رفوف تخزين للمقاهي والمطاعم والفنادق. ورشة بيكاسي 25+ عام. أسعار المصنع."
+        ? "مصدر السلع الزراعية: مسحوق الكاكاو، القرنفل الإندونيسي، بيئة الكوكوبيت. خبرة 25+ عاماً. أسعار تنافسية وجودة تصدير."
         : language === 'zh'
-          ? "工业家具制造商：户外吧台套装、休息区套装、沙发长椅、储物架，适用于咖啡馆、餐厅、酒店。勿加泗工作坊25年以上。工厂价格。"
+          ? "农产品出口商：可可粉、印度尼西亚丁香、椰糠培养基。25年以上经验。具有竞争力的价格和出口品质。"
           : language === 'ja'
-            ? "インダストリアル家具メーカー：屋外バーセット、ラウンジセット、ソファベンチ、収納ラック、カフェ・レストラン・ホテル向け。ブカシ工房25年以上。工場価格。"
+            ? "農産物輸出業者：ココアパウダー、インドネシア産クローブ、ココピート培地。25年以上の経験。競争力のある価格と輸出品質。"
             : language === 'es'
-              ? "Fabricante de muebles industriales: set de bar exterior, set de sala, sofá banco, estantería de almacenamiento para cafés, restaurantes, hoteles. Taller Bekasi 25+ años. Precios de fábrica."
+              ? "Exportador de mercancías agrícolas: cacao en polvo, clavo de Indonesia, sustrato de cocopeat. Más de 25 años de experiencia. Precios competitivos y calidad de exportación."
               : language === 'fr'
-                ? "Fabricant de meubles industriels : set de bar extérieur, set de salon, banc canapé, étagère de rangement pour cafés, restaurants, hôtels. Atelier Bekasi 25+ ans. Prix d'usine."
-                : "Manufacturer Agricultural Commodities: bar set outdoor, lounge set, sofa bench, storage rack, new arrivals for cafes restaurants hotels. Bekasi workshop 25+ years. Factory prices."
+                ? "Exportateur de matières premières agricoles : poudre de cacao, clous de girofle indonésiens, substrat cocopeat. 25+ ans d'expérience. Prix compétitifs et qualité export."
+                : "Exporter of agricultural commodities: cocoa powder, Indonesian cloves, cocopeat growing media. 25+ years experience. Competitive pricing and export quality."
   }
 
   return (
@@ -164,14 +164,14 @@ const Home: React.FC = () => {
       <Helmet htmlAttributes={{ lang: language === 'ar' ? 'ar' : (language === 'zh' ? 'zh' : (language === 'ja' ? 'ja' : (language === 'es' ? 'es' : (language === 'fr' ? 'fr' : (language === 'ko' ? 'ko' : localeMeta.lang))))), dir: language === 'ar' ? 'rtl' : 'ltr', 'data-language': language }}>
         <title>{translations.title}</title>
         <meta name="description" content={translations.description} />
-        <meta name="keywords" content="agricultural commodities indonesia, furniture besi custom, furniture bekasi, agricultural commodities jakarta, meja industrial, kursi bar industrial, furniture cafe, furniture restoran, manufacturer agricultural commodities, furniture besi custom bekasi, workshop furniture bekasi, agricultural commodities jabodetabek, bar set outdoor, lounge set, sofa bench, storage rack, display rack, meja kursi cafe, Naturra Extal" />
+        <meta name="keywords" content="agricultural commodities indonesia, cocoa powder exporter, indonesian cloves supplier, cocopeat block, spices and herbs indonesia, essential oils manufacturer, sustainable growing media, export quality agriculture, Naturra Extal" />
         <meta httpEquiv="content-language" content={localeMeta.lang} />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={translations.ogTitle} />
         <meta property="og:description" content={translations.ogDescription} />
-        <meta property="og:image" content="https://Naturra-living.com/og-image.jpg" />
+        <meta property="og:image" content="https://naturraextal.com/og-image.jpg" />
         <meta property="og:url" content={localizedUrls.canonical} />
         <meta property="og:locale" content={localeMeta.locale} />
         <meta property="og:locale:alternate" content="id_ID" />
@@ -179,9 +179,9 @@ const Home: React.FC = () => {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="agricultural commodities Bar Set Lounge Set Storage - Naturra Extal" />
-        <meta name="twitter:description" content="Bar set outdoor, lounge set sofa bench, storage rack, new arrivals agricultural commodities untuk cafe restoran hotel. Workshop Bekasi 25+ tahun." />
-        <meta name="twitter:image" content="https://Naturra-living.com/og-image.jpg" />
+        <meta name="twitter:title" content="Indonesian Agricultural Commodities - Naturra Extal" />
+        <meta name="twitter:description" content="Premium cocoa powder, Indonesian cloves, and cocopeat media. Export quality agricultural commodities. 25+ years experience in global supply." />
+        <meta name="twitter:image" content="https://naturraextal.com/og-image.jpg" />
 
         {/* Additional SEO tags */}
         <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -200,13 +200,13 @@ const Home: React.FC = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ItemList",
-            "name": "agricultural commodities Naturra Extal",
-            "description": "Koleksi agricultural commodities besi custom untuk cafe, restoran, dan hotel",
+            "name": "Naturra Extal Agricultural Commodities",
+            "description": "Koleksi komoditas pertanian premium: Kakao, Cengkeh, dan Cocopeat untuk pasar internasional",
             "numberOfItems": ALL_PRODUCTS.length,
             "itemListElement": ALL_PRODUCTS.map((product, index) => {
               const imageUrl = getProductImageUrl(product.image, product.slug)
               const priceNumeric = product.price.replace(/[^\d]/g, '')
-              const description = `Agricultural Commodities ${product.name} by Naturra Extal. Premium quality furniture made in Indonesia since 1999.`
+              const description = `${product.name} agricultural commodity by Naturra Extal. Premium quality products from Indonesia since 1999.`
 
               return {
                 "@type": "ListItem",
@@ -216,7 +216,7 @@ const Home: React.FC = () => {
                   "name": product.name,
                   "description": description,
                   "image": imageUrl,
-                  "url": `https://Naturra-living.com/product/${product.slug}`,
+                  "url": `https://naturraextal.com/product/${product.slug}`,
                   "brand": {
                     "@type": "Brand",
                     "name": "Naturra Extal"
@@ -227,7 +227,7 @@ const Home: React.FC = () => {
                     "priceCurrency": "IDR",
                     "availability": "https://schema.org/InStock",
                     "priceValidUntil": "2026-12-31",
-                    "url": `https://Naturra-living.com/product/${product.slug}`,
+                    "url": `https://naturraextal.com/product/${product.slug}`,
                     "hasMerchantReturnPolicy": {
                       "@type": "MerchantReturnPolicy",
                       "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
@@ -271,10 +271,10 @@ const Home: React.FC = () => {
                     "seller": {
                       "@type": "Organization",
                       "name": "Naturra Extal",
-                      "url": "https://Naturra-living.com",
-                      "logo": "https://Naturra-living.com/logo.png",
-                      "image": "https://Naturra-living.com/og-image.jpg",
-                      "description": "Premium Industrial Scandinavian Furniture for Coffee Shops, Restaurants & Offices. Custom Solutions Since 1999."
+                      "url": "https://naturraextal.com",
+                      "logo": "https://naturraextal.com/logo.png",
+                      "image": "https://naturraextal.com/og-image.jpg",
+                      "description": "Premium Indonesian agricultural commodities exporter. Supplying cocoa, cloves, and cocopeat worldwide since 1999."
                     }
                   },
                   "aggregateRating": {
@@ -298,11 +298,11 @@ const Home: React.FC = () => {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Naturra Extal",
-              "image": "https://Naturra-living.com/og-image.jpg",
-              "@id": "https://Naturra-living.com",
-              "url": "https://Naturra-living.com",
-              "telephone": "+6288801146881",
-              "email": "lifewithNaturra@gmail.com",
+              "image": "https://naturraextal.com/og-image.jpg",
+              "@id": "https://naturraextal.com",
+              "url": "https://naturraextal.com",
+              "telephone": "+6289513957752",
+              "email": "hello@naturraextal.com",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Jl. Raya Setu Cibitung - Bekasi, Telajung",
@@ -362,3 +362,4 @@ const Home: React.FC = () => {
 }
 
 export default Home
+

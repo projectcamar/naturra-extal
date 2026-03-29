@@ -5,27 +5,47 @@ import NaturraFooter from '../components/NaturraFooter'
 import './NaturraProducts.css'
 
 import { NATURRA_PRODUCTS } from '../data/naturraProducts'
-
-const CATEGORIES = [
-    { key: 'all', label: 'All Products' },
-    { key: 'cocoa', label: 'Cocoa Products' },
-    { key: 'cloves', label: 'Cengkeh (Cloves)' },
-    { key: 'cocopeat', label: 'Cocopeat' },
-]
+import { useLanguage } from '../utils/languageContext.tsx'
+import { NATURRA_PRODUCTS_TRANSLATIONS } from '../utils/productsTranslations'
+import { ALL_PRODUCT_TRANSLATIONS } from '../data/productTranslations'
+import type { LanguageCode } from '../utils/languageManager'
 
 const NaturraProducts: React.FC = () => {
+    const { language } = useLanguage() as { language: LanguageCode }
+    const t = NATURRA_PRODUCTS_TRANSLATIONS[language] || NATURRA_PRODUCTS_TRANSLATIONS.en
+    const detailTranslations = ALL_PRODUCT_TRANSLATIONS[language] || ALL_PRODUCT_TRANSLATIONS.en
     const [activeCategory, setActiveCategory] = useState('all')
+
+    const CATEGORIES = [
+        { key: 'all', label: t.allProducts },
+        { key: 'cocoa', label: t.cocoaProducts },
+        { key: 'cloves', label: t.clovesProducts },
+        { key: 'cocopeat', label: t.cocopeatProducts },
+    ]
 
     const filteredProducts = activeCategory === 'all'
         ? NATURRA_PRODUCTS
         : NATURRA_PRODUCTS.filter(p => p.category === activeCategory)
 
+    // Helper to get localized product name/desc from modular translations
+    const getLocalizedName = (product: any) => {
+        return detailTranslations[product.id]?.name || product.name
+    }
+    const getLocalizedDesc = (product: any) => {
+        return detailTranslations[product.id]?.description || product.description
+    }
+
+    const getLocalizedSpec = (_product: any, spec: string, _index: number) => {
+        // You could also localize specs here if needed, or keep as is
+        return spec
+    }
+
     return (
         <div className="naturra-products">
             <Helmet>
-                <title>Products | Naturra Extal International - Cocoa, Cloves, Cocopeat</title>
-                <meta name="description" content="Browse our product portfolio: Premium Indonesian cocoa powder (HS 1805 & 1806), cengkeh (cloves), and cocopeat. Sourced directly from Indonesian farmers." />
-                <link rel="canonical" href="https://naturra-extal.com/products" />
+                <title>{t.pageTitle}</title>
+                <meta name="description" content={t.metaDescription} />
+                <link rel="canonical" href="https://naturraextal.com/products" />
             </Helmet>
 
             <NaturraHeader />
@@ -33,9 +53,9 @@ const NaturraProducts: React.FC = () => {
             {/* ===== HERO ===== */}
             <section className="naturra-products__hero">
                 <div className="naturra-products__hero-inner">
-                    <h1 className="naturra-products__hero-title">Products</h1>
+                    <h1 className="naturra-products__hero-title">{t.heroTitle}</h1>
                     <p className="naturra-products__hero-subtitle">
-                        Premium Indonesian agricultural commodities for global markets
+                        {t.heroSubtitle}
                     </p>
                 </div>
             </section>
@@ -60,7 +80,7 @@ const NaturraProducts: React.FC = () => {
                 {/* Sidebar Filters */}
                 <aside className="naturra-products__sidebar">
                     <div className="naturra-products__filter-group">
-                        <h3 className="naturra-products__filter-title">Product Category</h3>
+                        <h3 className="naturra-products__filter-title">{t.filterTitleCategory}</h3>
                         {CATEGORIES.map(cat => (
                             <label
                                 key={cat.key}
@@ -78,23 +98,23 @@ const NaturraProducts: React.FC = () => {
                     </div>
 
                     <div className="naturra-products__filter-group">
-                        <h3 className="naturra-products__filter-title">HS Code</h3>
+                        <h3 className="naturra-products__filter-title">{t.filterTitleHS}</h3>
                         <div className="naturra-products__filter-option">
-                            <span>1805.00.0 — Pure Cocoa Powder</span>
+                            <span>1805.00.0 — {t.hsPure}</span>
                         </div>
                         <div className="naturra-products__filter-option">
-                            <span>1806.00.0 — Sweetened Cocoa</span>
+                            <span>1806.00.0 — {t.hsSweet}</span>
                         </div>
                     </div>
 
                     <div className="naturra-products__filter-group">
-                        <h3 className="naturra-products__filter-title">Applications</h3>
-                        <div className="naturra-products__filter-option"><span>Confectionery</span></div>
-                        <div className="naturra-products__filter-option"><span>Bakery</span></div>
-                        <div className="naturra-products__filter-option"><span>Beverages</span></div>
-                        <div className="naturra-products__filter-option"><span>Horticulture</span></div>
-                        <div className="naturra-products__filter-option"><span>Pharmaceuticals</span></div>
-                        <div className="naturra-products__filter-option"><span>Industrial</span></div>
+                        <h3 className="naturra-products__filter-title">{t.filterTitleApps}</h3>
+                        <div className="naturra-products__filter-option"><span>{t.appConf}</span></div>
+                        <div className="naturra-products__filter-option"><span>{t.appBak}</span></div>
+                        <div className="naturra-products__filter-option"><span>{t.appBev}</span></div>
+                        <div className="naturra-products__filter-option"><span>{t.appHort}</span></div>
+                        <div className="naturra-products__filter-option"><span>{t.appPharm}</span></div>
+                        <div className="naturra-products__filter-option"><span>{t.appInd}</span></div>
                     </div>
                 </aside>
 
@@ -106,34 +126,34 @@ const NaturraProducts: React.FC = () => {
                                 <img
                                     className="naturra-products__card-image"
                                     src={product.image}
-                                    alt={product.name}
+                                    alt={getLocalizedName(product)}
                                     loading="lazy"
                                 />
                                 <span className="naturra-products__card-badge">{product.badge}</span>
                             </div>
                             <div className="naturra-products__card-body">
-                                <h3 className="naturra-products__card-name">{product.name}</h3>
-                                <p className="naturra-products__card-desc">{product.description}</p>
+                                <h3 className="naturra-products__card-name">{getLocalizedName(product)}</h3>
+                                <p className="naturra-products__card-desc">{getLocalizedDesc(product)}</p>
                                 <div className="naturra-products__card-specs">
                                     {product.specs.map((spec, i) => (
-                                        <span key={i} className="naturra-products__card-spec">{spec}</span>
+                                        <span key={i} className="naturra-products__card-spec">{getLocalizedSpec(product, spec, i)}</span>
                                     ))}
                                 </div>
                                 <div className="naturra-products__card-actions">
                                     <a
-                                        href="https://wa.me/628951395752"
+                                        href="https://wa.me/6289513957752"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="naturra-products__card-btn naturra-products__card-btn--primary"
                                     >
-                                        Inquire
+                                        {t.inquire}
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17L17 7M17 7H7M17 7V17" /></svg>
                                     </a>
                                     <a
-                                        href="mailto:naturraextal@gmail.com"
+                                        href="mailto:hello@naturraextal.com"
                                         className="naturra-products__card-btn naturra-products__card-btn--secondary"
                                     >
-                                        Email
+                                        {t.email}
                                     </a>
                                 </div>
                             </div>
@@ -155,30 +175,27 @@ const NaturraProducts: React.FC = () => {
                         />
                     </div>
                     <div>
-                        <span className="naturra-products__detail-eyebrow">Product Focus</span>
-                        <h2 className="naturra-products__detail-title">Cocoa Products</h2>
+                        <span className="naturra-products__detail-eyebrow">{t.productFocus}</span>
+                        <h2 className="naturra-products__detail-title">{t.cocoaDetailTitle}</h2>
                         <p className="naturra-products__detail-text">
-                            Indonesia is the world's third-largest cocoa producer. Our cocoa products range from
-                            raw fermented beans to processed cocoa powder in both pure (HS 1805.00.0) and sweetened
-                            (HS 1806.00.0) varieties. Sourced primarily from Sulawesi and Sumatra, our cocoa is known
-                            for its rich flavor profile and consistent quality.
+                            {t.cocoaDetailText}
                         </p>
                         <ul className="naturra-products__detail-specs-list">
                             <li>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
-                                HS 1805.00.0 — Cocoa Powder Pure
+                                HS 1805.00.0 — {t.hsPure}
                             </li>
                             <li>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
-                                HS 1806.00.0 — Cocoa Powder Sweetened
+                                HS 1806.00.0 — {t.hsSweet}
                             </li>
                             <li>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
-                                Sourced from Sulawesi &amp; Sumatra
+                                {t.originTitle}
                             </li>
                             <li>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
-                                International quality standards
+                                {t.qualityTitle}
                             </li>
                         </ul>
                     </div>
@@ -196,13 +213,10 @@ const NaturraProducts: React.FC = () => {
                         />
                     </div>
                     <div>
-                        <span className="naturra-products__detail-eyebrow">Product Focus</span>
-                        <h2 className="naturra-products__detail-title">Cengkeh (Cloves)</h2>
+                        <span className="naturra-products__detail-eyebrow">{t.productFocus}</span>
+                        <h2 className="naturra-products__detail-title">{t.clovesDetailTitle}</h2>
                         <p className="naturra-products__detail-text">
-                            Indonesia has been the world's premier clove-producing nation since ancient times.
-                            Our cloves are hand-picked from the legendary Spice Islands (Maluku) and North Sulawesi,
-                            ensuring the highest essential oil content and aromatic quality for culinary, pharmaceutical,
-                            and industrial applications.
+                            {t.clovesDetailText}
                         </p>
                         <ul className="naturra-products__detail-specs-list">
                             <li>
@@ -237,12 +251,10 @@ const NaturraProducts: React.FC = () => {
                         />
                     </div>
                     <div>
-                        <span className="naturra-products__detail-eyebrow">Product Focus</span>
-                        <h2 className="naturra-products__detail-title">Cocopeat</h2>
+                        <span className="naturra-products__detail-eyebrow">{t.productFocus}</span>
+                        <h2 className="naturra-products__detail-title">{t.cocopeatDetailTitle}</h2>
                         <p className="naturra-products__detail-text">
-                            Our cocopeat is sourced from selected suppliers in Surabaya, East Java. Made from coconut
-                            husk fibers, cocopeat is an eco-friendly growing medium perfect for horticulture, agriculture,
-                            and landscaping. Available in compressed blocks and loose bulk packaging.
+                            {t.cocopeatDetailText}
                         </p>
                         <ul className="naturra-products__detail-specs-list">
                             <li>
@@ -270,27 +282,26 @@ const NaturraProducts: React.FC = () => {
             <section className="naturra-products__cta">
                 <div className="naturra-products__cta-inner">
                     <h2 className="naturra-products__cta-title">
-                        Interested in our products?
+                        {t.ctaTitle}
                     </h2>
                     <p className="naturra-products__cta-desc">
-                        Contact us to discuss pricing, specifications, minimum order quantities,
-                        and shipping arrangements for your commodity needs.
+                        {t.ctaDesc}
                     </p>
                     <div className="naturra-products__cta-actions">
                         <a
-                            href="https://wa.me/628951395752"
+                            href="https://wa.me/6289513957752"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="naturra-products__cta-btn naturra-products__cta-btn--white"
                         >
-                            WhatsApp Us
+                            {t.whatsappUs}
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17L17 7M17 7H7M17 7V17" /></svg>
                         </a>
                         <a
-                            href="mailto:naturraextal@gmail.com"
+                            href="mailto:hello@naturraextal.com"
                             className="naturra-products__cta-btn naturra-products__cta-btn--outline"
                         >
-                            Email: naturraextal@gmail.com
+                            {t.emailUs}
                         </a>
                     </div>
                 </div>

@@ -23,6 +23,18 @@ const products = ALL_PRODUCTS.slice(0, 8).map(p => ({
   link: `/product/${p.slug}`
 }))
 
+// Language to currency mapping (only non-IDR highlight currencies)
+const LANGUAGE_CURRENCY_MAP: { [key in 'en' | 'id' | 'ar' | 'zh' | 'ja' | 'es' | 'fr' | 'ko']: 'KRW' | 'JPY' | 'CNY' | 'SAR' | 'EUR' | 'USD' | null } = {
+  'ko': 'KRW',
+  'ja': 'JPY',
+  'zh': 'CNY',
+  'ar': 'SAR',
+  'es': 'EUR',
+  'fr': 'EUR',
+  'en': 'USD', // English highlights USD
+  'id': null   // Indonesian highlights IDR (original price)
+}
+
 const BestSellersSection: React.FC<BestSellersSectionProps> = ({ isIndonesian = false, language = 'en' }) => {
   const getTitle = () => {
     switch (language) {
@@ -52,18 +64,6 @@ const BestSellersSection: React.FC<BestSellersSectionProps> = ({ isIndonesian = 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [usdPrices, setUsdPrices] = useState<{ [key: number]: string }>({})
   const [highlightedPrices, setHighlightedPrices] = useState<{ [key: number]: string }>({})
-
-  // Language to currency mapping (only non-IDR highlight currencies)
-  const LANGUAGE_CURRENCY_MAP: { [key: string]: 'KRW' | 'JPY' | 'CNY' | 'SAR' | 'EUR' | 'USD' | null } = {
-    'ko': 'KRW',
-    'ja': 'JPY',
-    'zh': 'CNY',
-    'ar': 'SAR',
-    'es': 'EUR',
-    'fr': 'EUR',
-    'en': 'USD', // English highlights USD
-    'id': null   // Indonesian highlights IDR (original price)
-  }
 
   useEffect(() => {
     const convertPrices = async () => {
@@ -141,7 +141,7 @@ const BestSellersSection: React.FC<BestSellersSectionProps> = ({ isIndonesian = 
 
           <div className="products-grid">
             {visibleProducts.map((product) => {
-              const translatedName = getProductName(product.slug, isIndonesian, language) || product.name
+              const translatedName = getProductName(product.slug, language) || product.name
               return (
                 <Link
                   key={product.id}

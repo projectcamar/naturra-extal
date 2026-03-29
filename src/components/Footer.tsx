@@ -111,45 +111,45 @@ const Footer: React.FC<FooterProps> = ({ language = 'en' }) => {
             <h2 className="footer-logo">Naturra</h2>
             <p className="footer-description">
               {language === 'id'
-                ? "Pilihan terbaik untuk agricultural commodities scandinavian premium sejak 1999. Melayani coffee shop, restoran, dan bisnis di seluruh Indonesia. Pesanan custom diterima."
+                ? "Mitra terpercaya untuk komoditas pertanian Indonesia sejak 1999. Menyediakan bubuk kakao, cengkeh, dan cocopeat berkualitas ekspor untuk pasar global. Pesanan custom dan curah diterima."
                 : language === 'ar'
-                  ? "خيارك الأفضل للأثاث الصناعي الاسكندنافي الفاخر منذ عام 1999. نخدم المقاهي والمطاعم والأعمال في جميع أنحاء إندونيسيا وجاكرتا والأسواق الدولية الرئيسية. نرحب بالطلبات المخصصة."
+                  ? "شريكك الموثوق للمنتجات الزراعية الإندونيسية منذ عام 1999. نوفر مسحوق الكاكاو والقرنفل والكوكوبيت عالي الجودة للأسواق العالمية. نرحب بالطلبات المخصصة والكميات الكبيرة."
                   : language === 'zh'
-                    ? "自1999年以来，您的优质工业斯堪的纳维亚家具的最佳选择。服务于印度尼西亚、雅加达和主要国际市场的咖啡店、餐厅和企业。欢迎定制订单。"
+                    ? "自1999年以来，您值得信赖的印度尼西亚农产品合作伙伴。为全球市场提供优质可可粉、丁香和椰糠。欢迎定制和大宗订单。"
                     : language === 'ja'
-                      ? "1999年以来、プレミアムインダストリアル・スカンジナビア家具のベストチョイス。インドネシア、ジャカルタ、主要国際市場のカフェ、レストラン、ビジネスにサービスを提供。カスタムオーダー歓迎。"
+                      ? "1999年以来、インドネシア農産物の信頼できるパートナー。グローバル市場向けに高品質なココアパウダー、クローブ、ココピートを提供しています。カスタムオーダーおよびバルク注文を歓迎します。"
                       : language === 'es'
-                        ? "Su mejor opción para muebles industriales escandinavos premium desde 1999. Sirviendo a cafeterías, restaurantes y negocios en Indonesia, Yakarta y principales mercados internacionales. Pedidos personalizados bienvenidos."
+                        ? "Su socio confiable para productos agrícolas indonesios desde 1999. Proveemos cacao en polvo, clavos y cocopeat de calidad de exportación para el mercado global. Pedidos personalizados y a granel bienvenidos."
                         : language === 'fr'
-                          ? "Votre meilleur choix pour des meubles industriels scandinaves premium depuis 1999. Au service des cafés, restaurants et entreprises à travers l'Indonésie, Jakarta et les principaux marchés internationaux. Commandes personnalisées bienvenues."
+                          ? "Votre partenaire de confiance pour les produits agricoles indonésiens depuis 1999. Nous fournissons de la poudre de cacao, des clous de girofle et du cocopeat de qualité export pour le marché mondial."
                           : language === 'ko'
-                            ? "1999년부터 프리미엄 산업용 스칸디나비아 가구의 최고 선택. 인도네시아, 자카르타 및 주요 국제 시장의 카페, 레스토랑, 비즈니스에 서비스 제공. 맞춤 주문 환영."
-                            : "Your best choice for premium industrial scandinavian furniture since 1999. Serving coffee shops, restaurants, and businesses across Indonesia, Jabodetabek, Jakarta, and major international markets. Custom orders welcome."
+                            ? "1999년부터 인도네시아 농산물의 신뢰할 수 있는 파트너. 글로벌 시장을 위해 수출 품질의 코코아 가루, 정향, 코코피트를 공급합니다. 맞춤형 및 벌크 주문을 환영합니다."
+                            : "Your trusted partner for Indonesian agricultural commodities since 1999. Providing export-quality cocoa powder, cloves, and cocopeat for the global market. Custom and bulk orders welcome."
               }
             </p>
             <div className="footer-contact-info">
               <h4>{language === 'id' ? "Hubungi Kami" : language === 'ar' ? "اتصل بنا" : language === 'zh' ? "联系我们" : language === 'ja' ? "お問い合わせ" : language === 'es' ? "Contáctenos" : language === 'fr' ? "Contactez-nous" : language === 'ko' ? "연락처" : "Contact Us"}</h4>
               <p>
-                <a href="mailto:lifewithNaturra@gmail.com" style={{ color: 'inherit', textDecoration: 'underline' }}>
-                  lifewithNaturra@gmail.com
+                <a href="mailto:hello@naturraextal.com" style={{ color: 'inherit', textDecoration: 'underline' }}>
+                  hello@naturraextal.com
                 </a>
               </p>
               <p>
                 <a
-                  href="https://wa.me/+6288801146881"
+                  href="https://wa.me/+6289513957752"
                   style={{ color: 'inherit', textDecoration: 'underline' }}
                   onClick={() => trackWhatsAppClick('footer_contact_info')}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  +6288801146881
+                  +6289513957752
                 </a>
               </p>
               <div className="footer-social-icons">
                 <a href="https://instagram.com/Naturra_living" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <Instagram size={20} />
                 </a>
-                <a href="https://facebook.com/Naturraliving" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <a href="https://facebook.com/naturraextal" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <Facebook size={20} />
                 </a>
               </div>
@@ -173,13 +173,13 @@ const Footer: React.FC<FooterProps> = ({ language = 'en' }) => {
               </p>
               <p className="footer-phone">
                 <a
-                  href="https://wa.me/+6288801146881"
+                  href="https://wa.me/+6289513957752"
                   style={{ color: 'inherit', textDecoration: 'underline' }}
                   onClick={() => trackWhatsAppClick('footer_workshop_address')}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  +6288801146881
+                  +6289513957752
                 </a>
               </p>
               <h5 className="footer-certifications-title">
@@ -259,15 +259,12 @@ const Footer: React.FC<FooterProps> = ({ language = 'en' }) => {
             <h4>{language === 'id' ? 'Kategori' : language === 'ar' ? 'الفئات' : language === 'zh' ? '类别' : language === 'ja' ? 'カテゴリー' : language === 'es' ? 'Categorías' : language === 'fr' ? 'Catégories' : language === 'ko' ? '카테고리' : 'Categories'}</h4>
             <ul className="footer-links">
               <li><Link to={getLinkWithLanguage("/product-category/new-arrivals", language)} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>{language === 'id' ? 'Produk Baru' : language === 'ar' ? 'وصل حديثاً' : language === 'zh' ? '新品' : language === 'ja' ? '新着' : language === 'es' ? 'Novedades' : language === 'fr' ? 'Nouveautés' : language === 'ko' ? '신제품' : 'New Arrivals'}</Link></li>
-              <li><Link to={getLinkWithLanguage("/product-category/lounge-seating-set", language)} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>{language === 'id' ? 'Set Lounge' : language === 'ar' ? 'طقم صالة' : language === 'zh' ? '休息区套装' : language === 'ja' ? 'ラウンジセット' : language === 'es' ? 'Set de Sala' : language === 'fr' ? 'Set de Salon' : language === 'ko' ? '라운지 세트' : 'Lounge Set'}</Link></li>
-              <li><Link to={getLinkWithLanguage("/product-category/industrial-sofa-bench", language)} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>{language === 'id' ? 'Sofa Bench' : language === 'ar' ? 'أريكة' : language === 'zh' ? '沙发长椅' : language === 'ja' ? 'ソファベンチ' : language === 'es' ? 'Sofá Banco' : language === 'fr' ? 'Banc Canapé' : language === 'ko' ? '소파 벤치' : 'Sofa Bench'}</Link></li>
-              <li><Link to={getLinkWithLanguage("/product-category/dining-set-collection", language)} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>{language === 'id' ? 'Set Makan' : language === 'ar' ? 'طقم طعام' : language === 'zh' ? '餐桌套装' : language === 'ja' ? 'ダイニングセット' : language === 'es' ? 'Set de Comedor' : language === 'fr' ? 'Set de Salle à Manger' : language === 'ko' ? '다이닝 세트' : 'Dining Set'}</Link></li>
-              <li><Link to={getLinkWithLanguage("/product-category/bar-furniture-collection", language)} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>{language === 'id' ? 'Set Bar' : language === 'ar' ? 'طقم بار' : language === 'zh' ? '吧台套装' : language === 'ja' ? 'バーセット' : language === 'es' ? 'Set de Bar' : language === 'fr' ? 'Set de Bar' : language === 'ko' ? '바 세트' : 'Bar Set'}</Link></li>
-              <li><Link to={getLinkWithLanguage("/product-category/balcony-outdoor-collection", language)} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>{language === 'id' ? 'Outdoor' : language === 'ar' ? 'خارجي' : language === 'zh' ? '户外' : language === 'ja' ? 'アウトドア' : language === 'es' ? 'Exterior' : language === 'fr' ? 'Extérieur' : language === 'ko' ? '야외용' : 'Outdoor'}</Link></li>
-              <li><Link to={getLinkWithLanguage("/product-category/daybed-lounge-frame", language)} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>{language === 'id' ? 'Daybed' : language === 'ar' ? 'سرير نهاري' : language === 'zh' ? '躺椅' : language === 'ja' ? 'デイベッド' : language === 'es' ? 'Cama de Día' : language === 'fr' ? 'Lit de Jour' : language === 'ko' ? '데이베드' : 'Daybed'}</Link></li>
-              <li><Link to={getLinkWithLanguage("/product-category/accessories-storage", language)} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>{language === 'id' ? 'Penyimpanan' : language === 'ar' ? 'تخزين' : language === 'zh' ? '储物' : language === 'ja' ? '収納' : language === 'es' ? 'Almacenamiento' : language === 'fr' ? 'Rangement' : language === 'ko' ? '수납' : 'Storage'}</Link></li>
-              <li><Link to={getLinkWithLanguage("/product-category/table-collection", language)} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>{language === 'id' ? 'Meja' : language === 'ar' ? 'طاولات' : language === 'zh' ? '桌子' : language === 'ja' ? 'テーブル' : language === 'es' ? 'Mesas' : language === 'fr' ? 'Tables' : language === 'ko' ? '테이블' : 'Tables'}</Link></li>
-              <li><Link to={getLinkWithLanguage("/product-category/dining-table-collection", language)} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>{language === 'id' ? 'Meja Makan' : language === 'ar' ? 'طاولة طعام' : language === 'zh' ? '餐桌' : language === 'ja' ? 'ダイニングテーブル' : language === 'es' ? 'Mesa de Comedor' : language === 'fr' ? 'Table à Manger' : language === 'ko' ? '식탁' : 'Dine Table'}</Link></li>
+              <li><Link to={getLinkWithLanguage("/product-category/cocoa-powder", language)} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>{language === 'id' ? 'Bubuk Kakao' : language === 'ar' ? 'مسحوق الكاكاو' : language === 'zh' ? '可可粉' : language === 'ja' ? 'ココアパウダー' : language === 'es' ? 'Cacao en Polvo' : language === 'fr' ? 'Poudre de Cacao' : language === 'ko' ? '코코아 가루' : 'Cocoa Powder'}</Link></li>
+              <li><Link to={getLinkWithLanguage("/product-category/indonesian-cloves", language)} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>{language === 'id' ? 'Cengkeh' : language === 'ar' ? 'قرنفل' : language === 'zh' ? '丁香' : language === 'ja' ? 'クローブ' : language === 'es' ? 'Clavo' : language === 'fr' ? 'Girofle' : language === 'ko' ? '정향' : 'Cloves'}</Link></li>
+              <li><Link to={getLinkWithLanguage("/product-category/cocopeat-media", language)} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>{language === 'id' ? 'Media Cocopeat' : language === 'ar' ? 'كوكوبيت' : language === 'zh' ? '椰糠' : language === 'ja' ? 'ココピート' : language === 'es' ? 'Cocopeat' : language === 'fr' ? 'Cocopeat' : language === 'ko' ? '코코피트' : 'Cocopeat'}</Link></li>
+              <li><Link to={getLinkWithLanguage("/product-category/spices-herbs", language)} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>{language === 'id' ? 'Rempah' : language === 'ar' ? 'توابل' : language === 'zh' ? '香料' : language === 'ja' ? 'スパイス' : language === 'es' ? 'Especias' : language === 'fr' ? 'Épices' : language === 'ko' ? '향신료' : 'Spices'}</Link></li>
+              <li><Link to={getLinkWithLanguage("/product-category/essential-oils", language)} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>{language === 'id' ? 'Minyak Atsiri' : language === 'ar' ? 'زيوت عطرية' : language === 'zh' ? '精油' : language === 'ja' ? '精油' : language === 'es' ? 'Aceites Esenciales' : language === 'fr' ? 'Huiles Essentielles' : language === 'ko' ? '에센셜 오일' : 'Essential Oils'}</Link></li>
+              <li><Link to={getLinkWithLanguage("/product-category/sustainable-growing", language)} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>{language === 'id' ? 'Berkelanjutan' : language === 'ar' ? 'مستدام' : language === 'zh' ? '可持续' : language === 'ja' ? 'サステナブル' : language === 'es' ? 'Sostenible' : language === 'fr' ? 'Durable' : language === 'ko' ? '지속 가능' : 'Sustainable'}</Link></li>
             </ul>
           </div>
 
@@ -348,3 +345,4 @@ const Footer: React.FC<FooterProps> = ({ language = 'en' }) => {
 }
 
 export default Footer
+

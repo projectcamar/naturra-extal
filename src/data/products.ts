@@ -1,39 +1,17 @@
-// Video imports
-import kabinetDapurVideo from '../assets/Kabinet-Industrial-Dapur.mp4'
-import kabinetLemariVideo from '../assets/kabinet-lemari-industrial.mp4'
-import kursiBarStallVideo from '../assets/kursi-bar-stall-chair.mp4'
-import kursiBarstoolVideo from '../assets/kursi-barstool.mp4'
-import mejaMakanVideo from '../assets/meja-makan-industrial.mp4'
-import hollowlineDisplayRackVideo from '../assets/hollowline-display-rack.mp4'
-import benchCornerLoungeVideo from '../assets/Bench-corner-kursi-sudut-kursi-santai.mp4'
-import industrialDaybedVideo from '../assets/industrial-daybed.mp4'
-import loungeSetCoffeeTableVideo from '../assets/longue-set-coffee-table.mp4'
-import industrialHangingShelfVideo from '../assets/rak-gantung-industrial.mp4'
-import rakDisplayPartisiVideo from '../assets/rak-display-partisi-industrial-besi.mp4'
-
 // Product image URLs (Unsplash – commodity/agricultural placeholders)
-const frameLoftBookshelfImage = 'https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=600&q=80'
-const balconyBarTableImage = 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80'
-const loungeSetCoffeeTableImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80'
-const benchCornerImage = 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=600&q=80'
-const daybedBoneOnlyImage = 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80'
-const mejaMakanImage = 'https://images.unsplash.com/photo-1582218155981-0675ea108dca?w=600&q=80'
-const mejaMakanSetImage = 'https://images.unsplash.com/photo-1621217646581-bcbe05ff19ee?w=600&q=80'
-const barChairImage = 'https://images.unsplash.com/photo-1548848222-777651a084eb?w=600&q=80'
-const kursiBarStallImage = 'https://images.unsplash.com/photo-1499558913904-206263eb210b?w=600&q=80'
-const steelframeOutdoorBarSetImage = 'https://images.unsplash.com/photo-1596541223130-5d5644a5a6fc?w=600&q=80'
-const kabinetDapurImage = 'https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=600&q=80'
-const kabinetLemariImage = 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80'
-const hollowlineDisplayRackImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80'
-const rakDisplayPartisiImage = 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=600&q=80'
-const rakGantungIndustrialImage = 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80'
-const gantunganBajuImage = 'https://images.unsplash.com/photo-1582218155981-0675ea108dca?w=600&q=80'
-const mejaKerjaImage = 'https://images.unsplash.com/photo-1621217646581-bcbe05ff19ee?w=600&q=80'
+const cocoaPowderImage = 'https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=600&q=80' // Cocoa beans/powder
+const clovesImage = 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80' // Spices
+const cocopeatImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80' // Soil/Organic
+const spicesImage = 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=600&q=80' // Garden/Spices
+const cassavaImage = 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80' // Agriculture
+const vanillaImage = 'https://images.unsplash.com/photo-1582218155981-0675ea108dca?w=600&q=80' // Vanilla/Spices
+const pepperImage = 'https://images.unsplash.com/photo-1621217646581-bcbe05ff19ee?w=600&q=80' // Black Pepper
 
 export interface ProductVariant {
   name: string
   price: string
   dimensions?: string
+  specification?: string
 }
 
 export interface Product {
@@ -48,194 +26,142 @@ export interface Product {
 }
 
 export const ALL_PRODUCTS: Product[] = [
-  // New Arrivals
+  // Cocoa Powder
   {
     id: 1,
-    slug: 'frame-loft-bookshelf',
-    name: 'Frame Loft Bookshelf',
-    categories: ['New Arrivals', 'Storage'],
-    price: 'Rp3.500.000',
-    image: frameLoftBookshelfImage
+    slug: 'natural-cocoa-powder-v10',
+    name: 'Natural Cocoa Powder V10',
+    categories: ['New Arrivals', 'Cocoa Powder', 'Export Quality'],
+    price: 'Contact for Quote',
+    image: cocoaPowderImage,
+    variants: [
+      { name: 'Bulk 25kg Bag', price: 'Negotiable', specification: 'Fat 10-12%, pH 5.0-6.0' },
+      { name: 'Retail 1kg Pack', price: 'Negotiable', specification: 'Premium Grade' }
+    ]
   },
   {
     id: 2,
-    slug: 'balcony-bar-table',
-    name: 'Balcony Bar Table',
-    categories: ['New Arrivals', 'Bar Set', 'Outdoor'],
-    price: 'Rp350.000',
-    image: balconyBarTableImage
-  },
-
-  // Lounge Set
-  {
-    id: 3,
-    slug: 'lounge-set-coffee-table',
-    name: 'Lounge Set Coffee Table',
-    categories: ['Lounge Set', 'Tables'],
-    price: 'Rp2.000.000',
-    image: loungeSetCoffeeTableImage,
-    video: loungeSetCoffeeTableVideo
-  },
-  {
-    id: 17,
-    slug: 'bench-corner-lounge',
-    name: 'Bench Corner Lounge',
-    categories: ['Lounge Set', 'Sofa Bench'],
-    price: 'Rp3.500.000',
-    image: benchCornerImage,
-    video: benchCornerLoungeVideo,
+    slug: 'alkalized-cocoa-powder-dark',
+    name: 'Alkalized Cocoa Powder Dark',
+    categories: ['Cocoa Powder', 'Export Quality'],
+    price: 'Contact for Quote',
+    image: cocoaPowderImage,
     variants: [
-      { name: '200x50x50', price: 'Rp3.500.000', dimensions: '200x50x50' },
-      { name: '150x50x50', price: 'Rp2.800.000', dimensions: '150x50x50' }
+      { name: 'Bulk 25kg Bag', price: 'Negotiable', specification: 'Fat 10-12%, pH 7.0-8.0' }
     ]
   },
 
-  // Daybed
+  // Indonesian Cloves
   {
-    id: 16,
-    slug: 'industrial-daybed-frame',
-    name: 'Industrial Daybed Frame',
-    categories: ['Daybed'],
-    price: 'Rp3.200.000',
-    image: daybedBoneOnlyImage,
-    video: industrialDaybedVideo
+    id: 3,
+    slug: 'premium-indonesian-cloves-lal-pari',
+    name: 'Premium Indonesian Cloves (Lal Pari)',
+    categories: ['New Arrivals', 'Indonesian Cloves', 'Spices & Herbs'],
+    price: 'Contact for Quote',
+    image: clovesImage,
+    variants: [
+      { name: 'Grade A (Lal Pari)', price: 'Market Price', specification: 'Moisture <12%, Eugenol >17%' },
+      { name: 'Standard Grade', price: 'Market Price', specification: 'Moisture <13%' }
+    ]
   },
 
-  // Dining Set
+  // Cocopeat Media
   {
     id: 4,
-    slug: 'bandung-pipe-dining-table',
-    name: 'Bandung Pipe Dining Table',
-    categories: ['Dining Set', 'Dine Table'],
-    price: 'Rp2.800.000',
-    image: mejaMakanImage,
+    slug: 'cocopeat-block-5kg-low-ec',
+    name: 'Cocopeat Block 5kg (Low EC)',
+    categories: ['Cocopeat Media', 'Sustainable Growing'],
+    price: 'Contact for Quote',
+    image: cocopeatImage,
     variants: [
-      { name: 'Meja Saja', price: 'Rp2.800.000', dimensions: '120x60x75' },
-      { name: 'Meja + 2 Kursi', price: 'Rp3.600.000', dimensions: '120x60x75' },
-      { name: 'Meja 150x80x120', price: 'Rp3.800.000', dimensions: '150x80x120' }
+      { name: 'Low EC (< 0.5 ms/cm)', price: 'Bulk pricing', specification: 'Washed' },
+      { name: 'High EC (> 1.0 ms/cm)', price: 'Bulk pricing', specification: 'Unwashed' }
     ]
   },
   {
     id: 5,
-    slug: 'dining-set-with-2-chairs',
-    name: 'Dining Set with 2 Chairs',
-    categories: ['Dining Set', 'Dine Table'],
-    price: 'Rp4.000.000',
-    image: mejaMakanSetImage,
-    video: mejaMakanVideo
+    slug: 'cocopeat-briquettes-650g',
+    name: 'Cocopeat Briquettes 650g',
+    categories: ['Cocopeat Media', 'Sustainable Growing'],
+    price: 'Contact for Quote',
+    image: cocopeatImage
   },
 
-  // Bar Set
+  // Spices & Herbs
   {
     id: 6,
-    slug: 'beam-industrial-bar-chair',
-    name: 'Beam Industrial Bar Chair',
-    categories: ['Bar Set'],
-    price: 'Rp450.000',
-    image: barChairImage,
-    video: kursiBarstoolVideo
+    slug: 'vanilla-planifolia-beans-gourmet',
+    name: 'Vanilla Planifolia Beans Gourmet',
+    categories: ['Spices & Herbs', 'Export Quality'],
+    price: 'Contact for Quote',
+    image: vanillaImage,
+    variants: [
+      { name: 'Grade A (16cm+)', price: 'Market Price', specification: 'Moisture 30-35%' },
+      { name: 'Grade B (13-15cm)', price: 'Market Price', specification: 'Moisture 20-25%' }
+    ]
   },
   {
     id: 7,
-    slug: 'bar-stall-chair',
-    name: 'Bar Stall Chair',
-    categories: ['Bar Set'],
-    price: 'Rp450.000',
-    image: kursiBarStallImage,
-    video: kursiBarStallVideo
+    slug: 'lampung-black-pepper-b1',
+    name: 'Lampung Black Pepper B1',
+    categories: ['Spices & Herbs', 'Export Quality'],
+    price: 'Contact for Quote',
+    image: pepperImage,
+    variants: [
+      { name: 'Whole Black Pepper', price: 'Market Price', specification: 'Density 550g/l' }
+    ]
   },
   {
     id: 8,
-    slug: 'steelframe-outdoor-bar-set',
-    name: 'Steelframe Outdoor Bar Set',
-    categories: ['Bar Set', 'Outdoor'],
-    price: 'Rp8.150.000',
-    image: steelframeOutdoorBarSetImage
+    slug: 'muntok-white-pepper-premium',
+    name: 'Muntok White Pepper Premium',
+    categories: ['Spices & Herbs', 'Export Quality'],
+    price: 'Contact for Quote',
+    image: pepperImage,
+    variants: [
+      { name: 'Grade A', price: 'Market Price', specification: 'Moisture <13.5%' }
+    ]
   },
 
-  // Storage
+  // Essential Oils
   {
     id: 9,
-    slug: 'industrial-kitchen-cabinet',
-    name: 'Industrial Kitchen Cabinet',
-    categories: ['Storage'],
-    price: 'Rp6.500.000',
-    image: kabinetDapurImage,
-    video: kabinetDapurVideo,
-    variants: [
-      { name: '280x40x110', price: 'Rp6.500.000', dimensions: '280x40x110' },
-      { name: '200x40x110', price: 'Rp5.800.000', dimensions: '200x40x110' },
-      { name: '150x40x90', price: 'Rp4.500.000', dimensions: '150x40x90' }
-    ]
+    slug: 'clove-leaf-oil-eugenol-80',
+    name: 'Clove Leaf Oil (Eugenol 80%)',
+    categories: ['Essential Oils', 'Export Quality'],
+    price: 'Contact for Quote',
+    image: spicesImage
   },
   {
     id: 10,
-    slug: 'kabinet-lemari-industrial',
-    name: 'Kabinet Lemari Industrial',
-    categories: ['Storage'],
-    price: 'Rp4.500.000',
-    image: kabinetLemariImage,
-    video: kabinetLemariVideo
+    slug: 'patchouli-oil-sumatra',
+    name: 'Patchouli Oil (Sumatra)',
+    categories: ['Essential Oils', 'Export Quality'],
+    price: 'Contact for Quote',
+    image: spicesImage
   },
+
+  // Export Quality Others
   {
     id: 11,
-    slug: 'hollowline-display-rack',
-    name: 'Hollowline Display Rack',
-    categories: ['Storage'],
-    price: 'Rp3.700.000',
-    image: hollowlineDisplayRackImage,
-    video: hollowlineDisplayRackVideo
+    slug: 'modified-cassava-flour-mocaf',
+    name: 'Modified Cassava Flour (MOCAF)',
+    categories: ['Export Quality'],
+    price: 'Contact for Quote',
+    image: cassavaImage,
+    variants: [
+      { name: 'Food Grade', price: 'Bulk pricing', specification: 'Gluten Free' }
+    ]
   },
   {
     id: 12,
-    slug: 'ladder-frame-display-stand',
-    name: 'Ladder Frame Display Stand',
-    categories: ['Storage'],
-    price: 'Rp3.700.000',
-    image: rakDisplayPartisiImage,
-    video: rakDisplayPartisiVideo
-  },
-  {
-    id: 13,
-    slug: 'industrial-hanging-shelf',
-    name: 'Industrial Hanging Shelf',
-    categories: ['Storage'],
-    price: 'Rp1.800.000',
-    image: rakGantungIndustrialImage,
-    video: industrialHangingShelfVideo,
+    slug: 'organic-coconut-sugar',
+    name: 'Organic Coconut Sugar (Granule)',
+    categories: ['Export Quality', 'Sustainable Growing'],
+    price: 'Contact for Quote',
+    image: cocopeatImage,
     variants: [
-      { name: '180x30x90', price: 'Rp1.800.000', dimensions: '180x30x90' },
-      { name: '120x30x90', price: 'Rp1.200.000', dimensions: '120x30x90' },
-      { name: '120x20x60', price: 'Rp850.000', dimensions: '120x20x60' },
-      { name: '120x20x90', price: 'Rp950.000', dimensions: '120x20x90' },
-      { name: '120x30x60', price: 'Rp950.000', dimensions: '120x30x60' },
-      { name: '150x20x60', price: 'Rp950.000', dimensions: '150x20x60' },
-      { name: '150x20x90', price: 'Rp1.050.000', dimensions: '150x20x90' },
-      { name: '180x20x60', price: 'Rp1.300.000', dimensions: '180x20x60' },
-      { name: '180x20x90', price: 'Rp1.600.000', dimensions: '180x20x90' },
-      { name: '180x30x60', price: 'Rp1.600.000', dimensions: '180x30x60' }
+      { name: 'Mesh 16', price: 'Negotiable', specification: 'Organic Certified' }
     ]
-  },
-  {
-    id: 14,
-    slug: 'industrial-coat-rack',
-    name: 'Industrial Coat Rack',
-    categories: ['Storage'],
-    price: 'Rp2.500.000',
-    image: gantunganBajuImage
-  },
-
-  // Tables
-  {
-    id: 15,
-    slug: 'meja-kerja-industrial',
-    name: 'Meja Kerja Industrial',
-    categories: ['Tables'],
-    price: 'Rp2.800.000',
-    image: mejaKerjaImage,
-    variants: [
-      { name: '120x60x90', price: 'Rp2.800.000', dimensions: '120x60x90' },
-      { name: '140x60x90', price: 'Rp3.200.000', dimensions: '140x60x90' }
-    ]
-  },
+  }
 ]

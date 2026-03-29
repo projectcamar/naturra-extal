@@ -19,83 +19,104 @@ const BLOG_PRODUCT_SHOWCASE_TRANSLATIONS: Record<LanguageCode, {
   defaultHeading: string
   defaultDescription: string
   ourProduct: string
+  ourCommodity: string
   viewProductDetails: string
   viewAllProducts: string
   viewAllProductsTitle: string
   viewAllProductsAria: string
 }> = {
   id: {
-    defaultHeading: 'Produk Industrial Terkait',
-    defaultDescription: 'Berikut adalah produk industrial pilihan kami yang relevan dengan topik artikel ini. Semua produk dibuat dengan kualitas premium dan material industrial grade di workshop kami di Bekasi.',
+    defaultHeading: 'Komoditas Pertanian Terkait',
+    defaultDescription: 'Berikut adalah komoditas pertanian pilihan kami yang relevan dengan topik artikel ini. Semua produk memenuhi standar ekspor premium dari fasilitas kami di Bekasi.',
     ourProduct: 'PRODUK KAMI',
+    ourCommodity: 'KOMODITAS KAMI',
     viewProductDetails: 'Lihat Detail Produk',
     viewAllProducts: 'Lihat Semua Produk',
-    viewAllProductsTitle: 'Lihat Semua Produk Industrial Naturra Extal',
+    viewAllProductsTitle: 'Lihat Semua Komoditas Pertanian Naturra Extal',
     viewAllProductsAria: 'Lihat semua produk agricultural commodities'
   },
   en: {
-    defaultHeading: 'Related Industrial Products',
-    defaultDescription: 'Below are our selected industrial products relevant to this article topic. All products are made with premium quality and industrial-grade materials in our Bekasi workshop.',
+    defaultHeading: 'Related Agricultural Commodities',
+    defaultDescription: 'Below are our selected agricultural commodities relevant to this article topic. All products meet premium export standards from our Bekasi facility.',
     ourProduct: 'OUR PRODUCT',
+    ourCommodity: 'OUR COMMODITY',
     viewProductDetails: 'View Product Details',
     viewAllProducts: 'View All Products',
-    viewAllProductsTitle: 'View All Industrial Products',
+    viewAllProductsTitle: 'View All Agricultural Commodities',
     viewAllProductsAria: 'View all Agricultural Commodities products'
   },
   ar: {
-    defaultHeading: 'منتجات صناعية ذات صلة',
-    defaultDescription: 'فيما يلي منتجاتنا الصناعية المختارة ذات الصلة بموضوع هذه المقالة. تم تصنيع جميع المنتجات بجودة عالية ومواد من الدرجة الصناعية في ورشتنا في بيكاسي.',
+    defaultHeading: 'السلع الزراعية ذات الصلة',
+    defaultDescription: 'فيما يلي سلعنا الزراعية المختارة ذات الصلة بموضوع هذا المقال. تلبي جميع المنتجات معايير التصدير الممتازة من مرفقنا في بيكاسي.',
     ourProduct: 'منتجنا',
+    ourCommodity: 'سلعتنا',
     viewProductDetails: 'عرض تفاصيل المنتج',
-    viewAllProducts: 'عرض جميع المنتجات',
-    viewAllProductsTitle: 'عرض جميع المنتجات الصناعية من Naturra Extal',
-    viewAllProductsAria: 'عرض جميع منتجات الأثاث الصناعي'
+    viewAllProducts: 'عرض جميع السلع',
+    viewAllProductsTitle: 'عرض جميع السلع الزراعية من Naturra Extal',
+    viewAllProductsAria: 'عرض جميع منتجات السلع الزراعية'
   },
   zh: {
-    defaultHeading: '相关工业风产品',
-    defaultDescription: '以下是与本文主题相关的精选工业风产品。所有产品均在我们在Bekasi的工坊中使用优质材料和工业级工艺制造。',
+    defaultHeading: '相关农业大宗商品',
+    defaultDescription: '以下是与本文主题相关的精选农业大宗商品。所有产品均符合我们贝卡西工厂的优质出口标准。',
     ourProduct: '我们的产品',
+    ourCommodity: '我们的商品',
     viewProductDetails: '查看产品详情',
     viewAllProducts: '查看所有产品',
-    viewAllProductsTitle: '查看Naturra Extal所有工业风产品',
-    viewAllProductsAria: '查看所有工业风家具产品'
+    viewAllProductsTitle: '查看Naturra Extal所有农业大宗商品',
+    viewAllProductsAria: '查看所有农业大宗商品产品'
   },
   ja: {
-    defaultHeading: '関連する工業風製品',
-    defaultDescription: '以下は、この記事のトピックに関連する当社の工業風製品です。すべての製品は、Bekasiのワークショップでプレミアム品質と工業グレードの材料で作られています。',
+    defaultHeading: '関連する農業大宗商品',
+    defaultDescription: '以下は、この記事のトピックに関連する当社の農業大宗商品です。すべての製品は、ベカシの施設からのプレミアム輸出基準を満たしています。',
     ourProduct: '当社の製品',
+    ourCommodity: '当社の商品',
     viewProductDetails: '製品の詳細を見る',
     viewAllProducts: 'すべての製品を見る',
-    viewAllProductsTitle: 'Naturra Extalのすべての工業風製品を見る',
-    viewAllProductsAria: 'すべての工業風家具製品を見る'
+    viewAllProductsTitle: 'Naturra Extalのすべての農業大宗商品を見る',
+    viewAllProductsAria: 'すべての農業大宗商品製品を見る'
   },
   es: {
-    defaultHeading: 'Productos Industriales Relacionados',
-    defaultDescription: 'A continuación se muestran nuestros productos industriales seleccionados relevantes para el tema de este artículo. Todos los productos están hechos con calidad premium y materiales de grado industrial en nuestro taller de Bekasi.',
+    defaultHeading: 'Materias Primas Agrícolas Relacionadas',
+    defaultDescription: 'A continuación se muestran nuestras materias primas agrícolas seleccionadas relevantes para el tema de este artículo. Todos los productos cumplen con los estándares de exportación premium de nuestra instalación de Bekasi.',
     ourProduct: 'NUESTRO PRODUCTO',
+    ourCommodity: 'NUESTRA MERCANCÍA',
     viewProductDetails: 'Ver Detalles del Producto',
     viewAllProducts: 'Ver Todos los Productos',
-    viewAllProductsTitle: 'Ver Todos los Productos Industriales',
-    viewAllProductsAria: 'Ver todos los productos de mobiliario industrial'
+    viewAllProductsTitle: 'Ver Todas las Materias Primas Agrícolas',
+    viewAllProductsAria: 'Ver todos los productos de materias primas agrícolas'
   },
   fr: {
-    defaultHeading: 'Produits Industriels Associés',
-    defaultDescription: 'Voici nos produits industriels sélectionnés pertinents pour le sujet de cet article. Tous les produits sont fabriqués avec une qualité premium et des matériaux de qualité industrielle dans notre atelier de Bekasi.',
+    defaultHeading: 'Matières Premières Agricoles Associées',
+    defaultDescription: 'Voici nos matières premières agricoles sélectionnées pertinentes pour le sujet de cet article. Tous les produits répondent aux normes d\'exportation premium de notre usine de Bekasi.',
     ourProduct: 'NOTRE PRODUIT',
+    ourCommodity: 'NOTRE MARCHANDISE',
     viewProductDetails: 'Voir les Détails du Produit',
     viewAllProducts: 'Voir Tous les Produits',
-    viewAllProductsTitle: 'Voir Tous les Produits Industriels',
-    viewAllProductsAria: 'Voir tous les produits de mobilier industriel'
+    viewAllProductsTitle: 'Voir Toutes les Matières Premières Agricoles',
+    viewAllProductsAria: 'Voir tous les produits de matières premières agricoles'
   },
   ko: {
-    defaultHeading: '관련 산업용 제품',
-    defaultDescription: '다음은 이 기사의 주제와 관련된 당사의 산업용 제품입니다. 모든 제품은 Bekasi의 작업장에서 프리미엄 품질과 산업 등급 재료로 제조됩니다.',
+    defaultHeading: '관련 농산물',
+    defaultDescription: '다음은 이 기사의 주제와 관련된 당사의 농산물입니다. 모든 제품은 베카시 시설의 프리미엄 수출 표준을 충족합니다.',
     ourProduct: '우리의 제품',
+    ourCommodity: '우리의 상품',
     viewProductDetails: '제품 상세 보기',
     viewAllProducts: '모든 제품 보기',
-    viewAllProductsTitle: 'Naturra Extal의 모든 산업용 제품 보기',
-    viewAllProductsAria: '모든 산업용 가구 제품 보기'
+    viewAllProductsTitle: 'Naturra Extal의 모든 농산물 보기',
+    viewAllProductsAria: '모든 농산물 제품 보기'
   }
+}
+
+// Language to currency mapping (only non-IDR highlight currencies)
+const LANGUAGE_CURRENCY_MAP: { [key: string]: 'KRW' | 'JPY' | 'CNY' | 'SAR' | 'EUR' | 'USD' | null } = {
+  'ko': 'KRW',
+  'ja': 'JPY',
+  'zh': 'CNY',
+  'ar': 'SAR',
+  'es': 'EUR',
+  'fr': 'EUR',
+  'en': 'USD', // English highlights USD
+  'id': null   // Indonesian highlights IDR (original price)
 }
 
 /**
@@ -107,22 +128,10 @@ const BlogProductShowcase: React.FC<BlogProductShowcaseProps> = ({
   products,
   heading,
   description,
-  language = 'id'
+  language = 'en'
 }) => {
   const [usdPrices, setUsdPrices] = useState<{ [key: number]: string }>({})
   const [highlightedPrices, setHighlightedPrices] = useState<{ [key: number]: string }>({})
-
-  // Language to currency mapping (only non-IDR highlight currencies)
-  const LANGUAGE_CURRENCY_MAP: { [key: string]: 'KRW' | 'JPY' | 'CNY' | 'SAR' | 'EUR' | 'USD' | null } = {
-    'ko': 'KRW',
-    'ja': 'JPY',
-    'zh': 'CNY',
-    'ar': 'SAR',
-    'es': 'EUR',
-    'fr': 'EUR',
-    'en': 'USD', // English highlights USD
-    'id': null   // Indonesian highlights IDR (original price)
-  }
 
   const translations = BLOG_PRODUCT_SHOWCASE_TRANSLATIONS[language] || BLOG_PRODUCT_SHOWCASE_TRANSLATIONS.en
 
@@ -175,7 +184,7 @@ const BlogProductShowcase: React.FC<BlogProductShowcaseProps> = ({
       "@context": "https://schema.org",
       "@type": "Product",
       "name": product.name,
-      "description": `${product.name} - ${product.categories.join(', ')} Agricultural Commodities berkualitas premium dari Naturra Extal Workshop Bekasi. Material industrial grade, finishing powder coating tahan lama.`,
+      "description": `${product.name} - ${product.categories.join(', ')} Agricultural Commodities berkualitas premium dari Naturra Extal. Standar kualitas ekspor internasional untuk Cocoa, Cloves, dan Cocopeat.`,
       "image": product.image,
       "category": product.categories.join(', '),
       "brand": {
@@ -194,7 +203,7 @@ const BlogProductShowcase: React.FC<BlogProductShowcaseProps> = ({
       },
       "offers": {
         "@type": "Offer",
-        "url": `https://Naturra-living.com/product/${product.slug}`,
+        "url": `https://naturraextal.com/product/${product.slug}`,
         "priceCurrency": "IDR",
         "price": priceValue,
         "availability": "https://schema.org/InStock",
@@ -202,10 +211,10 @@ const BlogProductShowcase: React.FC<BlogProductShowcaseProps> = ({
         "seller": {
           "@type": "Organization",
           "name": "Naturra Extal",
-          "url": "https://Naturra-living.com",
-          "logo": "https://Naturra-living.com/logo.png",
-          "image": "https://Naturra-living.com/og-image.jpg",
-          "description": "Premium Industrial Scandinavian Furniture for Coffee Shops, Restaurants & Offices. Custom Solutions Since 1999."
+          "url": "https://naturraextal.com",
+          "logo": "https://naturraextal.com/logo.png",
+          "image": "https://naturraextal.com/og-image.jpg",
+          "description": "Premium Indonesian Agricultural Commodities Exporter. Specializing in Cocoa Powder, Cloves, and Cocopeat Media for Global Markets Since 1999."
         }
       },
       "aggregateRating": {
@@ -241,7 +250,7 @@ const BlogProductShowcase: React.FC<BlogProductShowcaseProps> = ({
       title: `${product.name} - Premium Quality Agricultural Commodities`,
       width: 350,
       height: 250,
-      description: `${product.name} dari koleksi Agricultural Commodities Naturra Extal. Produk berkualitas premium dengan material industrial grade dan finishing powder coating.`,
+      description: `${product.name} dari koleksi Agricultural Commodities Naturra Extal. Produk berkualitas premium dengan standar ekspor internasional.`,
       caption: `${product.name} - ${product.categories.join(', ')} Agricultural Commodities`
     })
   })
@@ -287,8 +296,8 @@ const BlogProductShowcase: React.FC<BlogProductShowcaseProps> = ({
 
           <div className="blog-product-showcase-grid" itemProp="itemListElement" itemScope itemType="https://schema.org/ItemList">
             {displayProducts.map((product, index) => {
-              const fullAlt = `${product.name} - ${product.categories.join(' ')} Agricultural Commodities Naturra Extal Bekasi. Material berkualitas, finishing powder coating, harga ${product.price}.`
-              const fullTitle = `${product.name} - Premium Quality Agricultural Commodities dari Naturra Extal Workshop Bekasi. ${product.categories.join(', ')} dengan desain modern dan durable.`
+              const fullAlt = `${product.name} - ${product.categories.join(' ')} Agricultural Commodities Naturra Extal. Kualitas ekspor premium, pengiriman global, harga ${product.price}.`
+              const fullTitle = `${product.name} - Premium Quality Agricultural Commodities dari Naturra Extal. ${product.categories.join(', ')} dengan standar kualitas internasional.`
 
               return (
                 <article
@@ -337,7 +346,7 @@ const BlogProductShowcase: React.FC<BlogProductShowcaseProps> = ({
                       <h3 className="blog-product-showcase-name" itemProp="name">
                         {product.name}
                       </h3>
-                      <meta itemProp="description" content={`${product.name} - ${product.categories.join(', ')} Agricultural Commodities berkualitas premium. Material industrial grade, finishing powder coating tahan lama. Harga ${product.price}.`} />
+                      <meta itemProp="description" content={`${product.name} - ${product.categories.join(', ')} Agricultural Commodities berkualitas premium. Standar ekspor internasional untuk industri global. Harga ${product.price}.`} />
 
                       <div className="blog-product-showcase-categories">
                         {product.categories.map((cat, idx) => (
@@ -397,3 +406,4 @@ const BlogProductShowcase: React.FC<BlogProductShowcaseProps> = ({
 }
 
 export default BlogProductShowcase
+

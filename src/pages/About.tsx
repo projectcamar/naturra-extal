@@ -6,8 +6,9 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { generateFAQSchema, generateLocalBusinessStructuredData } from '../utils/structuredData'
 import { getFAQBySlug } from '../data/faq'
-// legacy Naturra image import removed
-// legacy Naturra image import removed
+// Premium Agricultural Commodity Images
+const heroImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1920&q=80'
+const showroomImage = 'https://images.unsplash.com/photo-1516053303028-569806443c52?w=1200'
 import logoILW from '../assets/LOGO-ILW-800.png'
 import logoSVLK from '../assets/SVLK-LOGO-INDONESIA.png'
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
@@ -40,598 +41,571 @@ type AboutTranslation = {
 const ABOUT_TRANSLATIONS: Record<LanguageCode, AboutTranslation> = {
   en: {
     meta: {
-      title: 'About Naturra Extal: Custom Agricultural Commodities Workshop Bekasi Since 1999 - 1000+ Projects',
+      title: 'About Naturra Extal: Premium Indonesian Agricultural Commodities Since 1999',
       description:
-        'Who is Naturra Extal? Trusted custom steel furniture workshop in Bekasi since 1999 with 1000+ completed projects. Specialists in Agricultural Commodities for cafes, restaurants, hotels—premium materials, powder-coating finish, factory-direct prices. Why choose Naturra? 25 years of experience, 800 m² modern workshop, free design consultation, 2-year warranty, serving Greater Jakarta.',
+        'Who is Naturra Extal? Trusted exporter of premium Indonesian agricultural commodities since 1999. Specialists in Cocoa Powder, Indonesian Cloves, and Cocopeat Media for global markets. Why choose Naturra? 25 years of experience, direct factory sourcing, export-quality certification, and global supply chain expertise.',
       keywords:
-        'about Naturra Extal, trusted furniture workshop bekasi, Agricultural Commodities bekasi since 1999, custom steel furniture manufacturer, cafe furniture bekasi'
+        'about Naturra Extal, agricultural commodities exporter, cocoa powder supplier, indonesian cloves exporter, cocopeat block manufacturer'
     },
     hero: {
       title: 'About Us',
       imageAlt:
-        'About Naturra Extal - Workshop agricultural commodities Bekasi Since 1999 - Premium Quality Manufacturer',
-      imageTitle: 'About Naturra Extal - Agricultural Commodities Manufacturer with 25+ Years Experience'
+        'About Naturra Extal - Premium Agricultural Commodities Exporter Since 1999',
+      imageTitle: 'Naturra Extal - 25+ Years of Excellence in Agricultural Commodity Export'
     },
     message: {
       title: 'Message from Naturra',
       paragraphs: [
-        "Since 1999, Naturra Extal has been Indonesia's premier manufacturer specializing in custom industrial scandinavian furniture. With 25 years of experience, we've proudly served over 1,000 orders from businesses across Indonesia, Jabodetabek, Jakarta, and major international markets including the USA, Japan, Australia, Singapore, Malaysia, Thailand, Vietnam, and the Philippines—making us the best partner for commercial furniture solutions.",
-        'Our network spans the entire Indonesian archipelago, providing top-tier furniture solutions for coffee shops, restaurants, offices, hotels, co-working spaces, and retail projects. Each piece is crafted with precision manufacturing techniques and obsessive attention to detail.',
-        'We fully embrace custom requests and collaborate closely with clients to bring their vision to life. Whether you need industrial dining sets, bar furniture, shelving systems, or unique bespoke pieces, our skilled craftsmen deliver exactly what your business requires.'
+        "Since 1999, Naturra Extal has been Indonesia's premier exporter specializing in premium agricultural commodities. With 25 years of experience, we've successfully fulfilled bulk orders for businesses across the globe, including major markets in the USA, Europe, Japan, and the Middle East—making us the best partner for your commodity needs.",
+        'Our network spans the lush agricultural regions of Indonesia, sourcing only the finest Cocoa, Cloves, and raw materials for Cocopeat. Each product undergoes rigorous quality control to ensure it meets international export standards.',
+        'We specialize in bulk supply and customized logistics to meet our clients\' specific requirements. Whether you need industrial-grade cocoa powder, hand-picked cloves, or sustainable growing media, our team delivers exactly what your industry requires.'
       ],
-      imageAlt: 'Naturra Extal Workshop'
+      imageAlt: 'Naturra Extal Agricultural Facility'
     },
     showrooms: {
-      title: 'Our Workshop',
+      title: 'Our Facility',
       intro:
-        'Visit our workshop in Bekasi to explore our industrial scandinavian furniture collection and discuss your custom order needs:',
+        'Visit our industrial facility in Bekasi to explore our processing capabilities and discuss your bulk order needs:',
       description:
-        'Our workshop offers a complete manufacturing facility dedicated to custom Agricultural Commodities. The experienced team can discuss your requirements and help you find the most suitable solutions for your coffee shop, restaurant, hotel, or office.',
-      workshopHeading: 'Workshop Bekasi',
-      button: 'Visit Workshop',
-      workshopLabel: 'Workshop Bekasi:'
+        'Our facility offers a complete processing and logistics hub dedicated to export-quality agricultural commodities. Our experienced team can discuss your specifications and help you find the most efficient supply solutions for your global business.',
+      workshopHeading: 'Processing Facility Bekasi',
+      button: 'View Location',
+      workshopLabel: 'Facility Bekasi:'
     },
     whyChoose: {
       title: 'Why Choose Naturra?',
       items: [
         {
-          title: 'Premium Quality',
-          description: '25 years of experience with top-tier manufacturing techniques and industrial-grade materials.'
+          title: 'Export Quality',
+          description: '25 years of experience with top-tier processing techniques and export-grade agricultural standards.'
         },
         {
-          title: 'Factory Direct Pricing',
-          description: 'We produce everything in-house—no middlemen, only the best value for premium Agricultural Commodities.'
+          title: 'Direct Source Pricing',
+          description: 'We source directly from farmers and manage our own processing—eliminating middlemen for the best value.'
         },
         {
-          title: 'Fully Customizable',
+          title: 'Custom Logistics',
           description:
-            "We welcome every custom request. Share your vision and we'll bring it to life for your business."
+            "We provide flexible shipping and packaging solutions. We'll bring the best of Indonesia to your international doorstep."
         },
         {
-          title: 'Nationwide Network',
+          title: 'Global Supply Network',
           description:
-            'Serving 1000+ businesses across Indonesia, Greater Jakarta, and key international markets including cafés, restaurants, hotels, and offices.'
+            'Serving bulk buyers worldwide across the food, beverage, and horticultural industries with consistent premium supply.'
         }
       ]
     },
     certifications: {
-      title: 'Certified Sustainable Wood',
+      title: 'Certified Sustainability',
       subtitle:
-        'Every Naturra Extal project uses timber from audited partners that meet Indonesian forestry regulations and export documentation standards.',
+        'Every Naturra Extal shipment follows strict agricultural protocols and sustainable farming practices that meet international export regulations.',
       items: [
         {
-          name: 'Legal Wood Sourcing (ILW)',
+          name: 'Global GAP Standards',
           description:
-            'Verified suppliers provide complete legality documents and sustainable harvesting proof for every shipment we accept.',
-          imageAlt: 'Legal Wood sourcing badge'
+            'Our sourcing partners are verified for Good Agricultural Practices, ensuring safety and quality for every shipment.',
+          imageAlt: 'Global GAP certification badge'
         },
         {
-          name: 'SVLK Verified Supply Chain',
+          name: 'SVLK Legal Sourcing',
           description:
-            'Official Sistem Verifikasi Legalitas Kayu certification that guarantees traceability, responsible logging, and export-ready compliance.',
-          imageAlt: 'SVLK certification badge'
+            'Official sustainability certification that guarantees traceability and responsible environmental practices across our supply chain.',
+          imageAlt: 'Sustainability certification badge'
         }
       ]
     }
   },
   id: {
     meta: {
-      title: 'Tentang Naturra Extal: Workshop Furniture Besi Bekasi Sejak 1999 - 1000+ Project',
+      title: 'Tentang Naturra Extal: Eksportir Komoditas Pertanian Indonesia Sejak 1999',
       description:
-        'Siapa Naturra Extal? Workshop furniture besi custom Bekasi terpercaya sejak 1999 dengan 1000+ project completed. Spesialis agricultural commodities untuk cafe, restoran, hotel—material premium, finishing powder coating, harga pabrik langsung. Kenapa memilih Naturra? Pengalaman 25 tahun, workshop modern 800 m2, konsultasi desain gratis, garansi 2 tahun, melayani Jabodetabek.',
+        'Siapa Naturra Extal? Eksportir komoditas pertanian Indonesia terpercaya sejak 1999. Spesialis Bubuk Kakao, Cengkeh, dan Cocopeat untuk pasar global. Kenapa memilih Naturra? Pengalaman 25 tahun, sumber langsung dari petani, sertifikasi kualitas ekspor, dan keahlian rantai pasok global.',
       keywords:
-        'tentang Naturra Extal, workshop furniture bekasi, agricultural commodities bekasi, produsen furniture besi, custom furniture bekasi'
+        'tentang Naturra Extal, eksportir komoditas pertanian, supplier bubuk kakao, eksportir cengkeh indonesia, produsen cocopeat block'
     },
     hero: {
       title: 'Tentang Kami',
       imageAlt:
-        'Tentang Naturra Extal - Workshop agricultural commodities Bekasi Sejak 1999 - Produsen Premium',
-      imageTitle: 'Tentang Naturra Extal - Produsen agricultural commodities Berpengalaman 25+ Tahun'
+        'Tentang Naturra Extal - Eksportir Komoditas Pertanian Premium Sejak 1999',
+      imageTitle: 'Tentang Naturra Extal - 25+ Tahun Pengalaman Ekspor Komoditas Pertanian'
     },
     message: {
       title: 'Pesan dari Naturra',
       paragraphs: [
-        'Sejak 1999, Naturra Extal telah menjadi produsen agricultural commodities scandinavian premium terkemuka di Indonesia. Dengan pengalaman 25 tahun, kami telah melayani lebih dari 1.000 pesanan dari bisnis di seluruh Indonesia, menjadikan kami pilihan terbaik untuk solusi furniture komersial.',
-        'Jaringan kami meliputi seluruh kepulauan Indonesia, menyediakan solusi furniture berkualitas tinggi untuk cafe, restoran, kantor, hotel, co-working space, dan retail. Setiap produk dibuat dengan teknik manufaktur presisi dan perhatian terhadap detail.',
-        'Kami menerima full custom request dan bekerja erat dengan klien untuk mewujudkan visi mereka. Baik Anda membutuhkan dining set industrial, furniture bar, sistem rak, maupun custom piece unik, pengrajin ahli kami mampu menciptakan persis apa yang bisnis Anda butuhkan.'
+        'Sejak 1999, Naturra Extal telah menjadi eksportir terkemuka di Indonesia yang berspesialisasi dalam komoditas pertanian premium. Dengan pengalaman 25 tahun, kami telah melayani berbagai pesanan curah untuk bisnis di seluruh dunia.',
+        'Jaringan kami meliputi wilayah pertanian subur di Indonesia, memasok Kakao, Cengkeh, dan bahan baku Cocopeat terbaik. Setiap produk melewati kontrol kualitas ketat untuk memastikan standar ekspor internasional terpenuhi.',
+        'Kami menerima permintaan curah dan kebutuhan logistik khusus untuk memenuhi spesifikasi klien. Baik Anda membutuhkan bubuk kakao grade industri, cengkeh pilihan, maupun media tanam berkelanjutan, tim kami mampu memberikan persis apa yang bisnis Anda butuhkan.'
       ],
-      imageAlt: 'Workshop Naturra Extal'
+      imageAlt: 'Fasilitas Pertanian Naturra Extal'
     },
     showrooms: {
-      title: 'Workshop Kami',
+      title: 'Fasilitas Kami',
       intro:
-        'Kunjungi workshop kami di Bekasi untuk melihat koleksi agricultural commodities scandinavian dan diskusikan kebutuhan custom order Anda:',
+        'Kunjungi fasilitas industri kami di Bekasi untuk melihat kapabilitas pemrosesan dan diskusikan kebutuhan pesanan curah Anda:',
       description:
-        'Workshop kami dilengkapi fasilitas manufaktur lengkap untuk menciptakan agricultural commodities custom. Tim berpengalaman siap mendiskusikan kebutuhan Anda dan membantu menemukan solusi terbaik untuk cafe, restoran, hotel, atau kantor Anda.',
-      workshopHeading: 'Workshop Bekasi',
-      button: 'Kunjungi Workshop',
-      workshopLabel: 'Workshop Bekasi:'
+        'Fasilitas kami dilengkapi pusat pemrosesan dan logistik lengkap untuk komoditas pertanian kualitas ekspor. Tim berpengalaman siap membantu menemukan solusi pasokan terbaik untuk bisnis global Anda.',
+      workshopHeading: 'Fasilitas Pemrosesan Bekasi',
+      button: 'Lihat Lokasi',
+      workshopLabel: 'Fasilitas Bekasi:'
     },
     whyChoose: {
       title: 'Mengapa Pilih Naturra?',
       items: [
         {
-          title: 'Kualitas Premium',
-          description: '25 tahun pengalaman dengan teknik manufaktur berkualitas tinggi dan material industrial grade.'
+          title: 'Kualitas Ekspor',
+          description: '25 tahun pengalaman dengan teknik pemrosesan tingkat tinggi dan standar komoditas internasional.'
         },
         {
-          title: 'Harga Pabrik Langsung',
-          description: 'Semua produk diproduksi in-house—tanpa tengkulak, hanya harga terbaik untuk agricultural commodities berkualitas.'
+          title: 'Harga Sumber Langsung',
+          description: 'Kami mengambil langsung dari petani dan mengelola pemrosesan sendiri—tanpa tengkulak untuk nilai terbaik.'
         },
         {
-          title: 'Sepenuhnya Custom',
-          description: 'Kami menerima semua custom request. Ceritakan visi Anda dan kami wujudkan untuk bisnis Anda.'
+          title: 'Logistik Kustom',
+          description: 'Kami menyediakan solusi pengiriman dan pengemasan fleksibel. Kami bawa hasil bumi terbaik Indonesia ke pintu Anda.'
         },
         {
-          title: 'Jaringan Nasional',
-          description: 'Melayani 1000+ bisnis di seluruh Indonesia hingga pasar internasional: cafe, restoran, hotel, kantor.'
+          title: 'Jaringan Pasokan Global',
+          description: 'Melayani pembeli curah di seluruh dunia untuk industri makanan, minuman, dan hortikultura secara konsisten.'
         }
       ]
     },
     certifications: {
-      title: 'Sertifikasi Kayu Legal',
+      title: 'Keberlanjutan Terverifikasi',
       subtitle:
-        'Setiap proyek Naturra Extal menggunakan kayu dari mitra yang diaudit dan memenuhi regulasi kehutanan Indonesia beserta kelengkapan dokumen ekspor.',
+        'Setiap pengiriman Naturra Extal mengikuti protokol pertanian ketat dan praktik tani berkelanjutan yang memenuhi regulasi ekspor.',
       items: [
         {
-          name: 'Legal Wood Sourcing (ILW)',
+          name: 'Standar Global GAP',
           description:
-            'Pemasok terverifikasi memberikan dokumen legalitas lengkap dan bukti penebangan berkelanjutan untuk setiap pengiriman.',
-          imageAlt: 'Logo Legal Wood'
+            'Mitra sumber kami diverifikasi untuk Praktik Pertanian yang Baik, memastikan keamanan dan kualitas setiap pengiriman.',
+          imageAlt: 'Logo Global GAP'
         },
         {
-          name: 'Rantai Pasok Tersertifikasi SVLK',
+          name: 'Legal Wood & Sustainability Sourcing',
           description:
-            'Sertifikasi Sistem Verifikasi Legalitas Kayu resmi yang menjamin keterlacakan, praktik logging bertanggung jawab, dan kesiapan dokumen ekspor.',
-          imageAlt: 'Logo Sertifikasi SVLK'
+            'Sertifikasi keberlanjutan resmi yang menjamin keterlacakan dan praktik lingkungan bertanggung jawab di rantai pasok kami.',
+          imageAlt: 'Logo Sertifikasi Keberlanjutan'
         }
       ]
     }
   },
   ar: {
     meta: {
-      title: 'نبذة عن Naturra Extal: ورشة الأثاث الصناعي المخصص في بيكاسي منذ 1999 - أكثر من 1000 مشروع',
+      title: 'حول Naturra Extal: مصدر متميز للسلع الزراعية الإندونيسية منذ عام 1999',
       description:
-        'من هي Naturra Extal؟ ورشة أثاث فولاذي مخصص موثوقة في بيكاسي منذ 1999 مع أكثر من 1000 مشروع منجز. متخصصون في الأثاث الصناعي للمقاهي والمطاعم والفنادق—مواد عالية الجودة، تشطيب بالبودرة، وأسعار المصنع. لماذا تختار Naturra؟ خبرة 25 سنة، ورشة حديثة بمساحة 800 م²، استشارة تصميم مجانية، ضمان لمدة عامين، نخدم منطقة جاكرتا الكبرى.',
+        'من هي Naturra Extal؟ مصدر موثوق للسلع الزراعية الإندونيسية المتميزة منذ عام 1999. متخصصون في مسحوق الكاكاو، والقرنفل الإندونيسي، ووسط كوكوبيت للأسواق العالمية. لماذا تختار Naturra؟ 25 عامًا من الخبرة، توريد مباشر من المصنع، شهادة جودة التصدير، وخبرة في سلسلة التوريد العالمية.',
       keywords:
-        'Naturra Extal, ورشة أثاث بيكاسي, أثاث صناعي مخصص, أثاث للمقاهي, ورشة أثاث منذ 1999, ضمان أثاث صناعي'
+        'حول Naturra Extal, مصدر سلع زراعية, مورد مسحوق كاكاو, مصدر قرنفل إندونيسي, مصنع قوالب كوكوبيت'
     },
     hero: {
       title: 'من نحن',
-      imageAlt: 'نبذة عن Naturra Extal - ورشة الأثاث الصناعي في بيكاسي منذ 1999 - جودة متميزة',
-      imageTitle: 'نبذة عن Naturra Extal - مصنع أثاث صناعي بخبرة تتجاوز 25 عامًا'
+      imageAlt: 'حول Naturra Extal - مصدر متميز للسلع الزراعية منذ عام 1999',
+      imageTitle: 'Naturra Extal - أكثر من 25 عامًا من التميز في تصدير السلع الزراعية'
     },
     message: {
       title: 'رسالة من Naturra',
       paragraphs: [
-        'منذ عام 1999، تعد Naturra Extal الشركة الرائدة في إندونيسيا في تصنيع الأثاث الصناعي الاسكندنافي المخصص. بفضل خبرة تمتد 25 عامًا، نفخر بخدمة أكثر من 1,000 طلب من مختلف الأنشطة التجارية داخل إندونيسيا، ما يجعلنا الشريك الأفضل لحلول الأثاث التجاري.',
-        'يشمل نطاق عملنا أنحاء الأرخبيل الإندونيسي، حيث نوفر حلول أثاث عالية الجودة للمقاهي والمطاعم والمكاتب والفنادق ومساحات العمل المشتركة ومتاجر التجزئة. كل قطعة نصنعها باستخدام تقنيات تصنيع دقيقة واهتمام كبير بالتفاصيل.',
-        'نستقبل جميع الطلبات المخصصة ونعمل جنبًا إلى جنب مع عملائنا لتحويل رؤيتهم إلى حقيقة. سواء احتجت طقم طاولات صناعية أو أثاثًا للحانات أو أنظمة عرض أو قطعًا فريدة، فإن حرفيينا يصنعون ما يلائم نشاطك التجاري تمامًا.'
+        'منذ عام 1999، تعد Naturra Extal المصدر الرائد في إندونيسيا المتخصص في السلع الزراعية المتميزة. مع 25 عامًا من الخبرة، نجحنا في تلبية الطلبات الكبيرة للشركات في جميع أنحاء العالم، بما في ذلك الأسواق الرئيسية في الولايات المتحدة وأوروبا واليابان والشرق الأوسط - مما يجعلنا الشريك الأفضل لاحتياجاتك من السلع.',
+        'تمتد شبكتنا عبر المناطق الزراعية الخصبة في إندونيسيا، حيث نوفر أجود أنواع الكاكاو والقرنفل والمواد الخام للكوكوبيت. يخضع كل منتج لرقابة صارمة على الجودة لضمان تلبية معايير التصدير الدولية.',
+        'نحن متخصصون في التوريد بالجملة والخدمات اللوجستية المخصصة لتلبية المتطلبات المحددة لعملائنا. سواء كنت بحاجة إلى مسحوق كاكاو من الدرجة الصناعية، أو قرنفل منتقى يدويًا، أو وسائط زراعية مستدامة، فإن فريقنا يقدم بالضبط ما تتطلبه صناعتك.'
       ],
-      imageAlt: 'ورشة Naturra Extal'
+      imageAlt: 'مرفق Naturra Extal الزراعي'
     },
     showrooms: {
-      title: 'ورشتنا',
+      title: 'مرفقنا',
       intro:
-        'زر ورشتنا في بيكاسي للاطلاع على مجموعتنا من الأثاث الصناعي الاسكندنافي ولمناقشة احتياجاتك من الطلبات المخصصة:',
+        'زر مرفقنا الصناعي في بيكاسي لاستكشاف قدراتنا في المعالجة ومناقشة احتياجات طلباتك بالجملة:',
       description:
-        'ورشتنا مجهزة بمرافق تصنيع متكاملة لصناعة الأثاث الصناعي المخصص. يمكن لفريقنا الخبير مناقشة احتياجاتك ومساعدتك في إيجاد الحل الأمثل لمقهىك أو مطعمك أو مكتبك.',
-      workshopHeading: 'ورشة بيكاسي',
-      button: 'زر الورشة',
-      workshopLabel: 'ورشة بيكاسي:'
+        'يوفر مرفقنا مركزًا متكاملاً للمعالجة والخدمات اللوجستية مخصصًا للسلع الزراعية عالية الجودة للتصدير. يمكن لفريقنا الخبير مناقشة مواصفاتك ومساعدتك في العثور على أكثر حلول التوريد كفاءة لعملك العالمي.',
+      workshopHeading: 'مرفق المعالجة في بيكاسي',
+      button: 'عرض الموقع',
+      workshopLabel: 'مرفق بيكاسي:'
     },
     whyChoose: {
       title: 'لماذا تختار Naturra؟',
       items: [
         {
-          title: 'جودة متميزة',
-          description: '25 عامًا من الخبرة باستخدام تقنيات تصنيع رفيعة المستوى ومواد صناعية متينة.'
+          title: 'جودة التصدير',
+          description: '25 عامًا من الخبرة في تقنيات المعالجة عالية المستوى ومعايير السلع الزراعية المخصصة للتصدير.'
         },
         {
-          title: 'تسعير مباشر من المصنع',
-          description: 'جميع منتجاتنا مصنّعة داخليًا—من دون وسطاء، ما يعني أفضل سعر لأثاث صناعي عالي الجودة.'
+          title: 'تسعير المصدر المباشر',
+          description: 'نحصل على المواد مباشرة من المزارعين وندير المعالجة الخاصة بنا - مما يلغي الوسائط للحصول على أفضل قيمة.'
         },
         {
-          title: 'قابل للتخصيص بالكامل',
-          description: 'نرحب بكافة الطلبات المخصصة. شاركنا رؤيتك وسنحوّلها إلى واقع لنشاطك التجاري.'
+          title: 'لوجستيات مخصصة',
+          description: 'نحن نقدم حلول شحن وتغليف مرنة. سنجلب أفضل ما في إندونيسيا إلى عتبة داركم الدولية.'
         },
         {
-          title: 'شبكة تغطي أنحاء البلاد',
-          description: 'خدمة لأكثر من 1000 نشاط داخل إندونيسيا والأسواق الدولية، من المقاهي والمطاعم إلى الفنادق والمكاتب.'
+          title: 'شبكة توريد عالمية',
+          description: 'خدمة المشترين بالجملة في جميع أنحاء العالم عبر صناعات الأغذية والمشروبات والبستنة بإمدادات متميزة ومتسقة.'
         }
       ]
     },
     certifications: {
-      title: 'اعتماد الأخشاب المستدامة',
+      title: 'الاستدامة المعتمدة',
       subtitle:
-        'يستخدم كل مشروع من Naturra Extal خشبًا من شركاء مدققين يلتزمون بلوائح الغابات الإندونيسية ومتطلبات التصدير.',
+        'تتبع كل شحنة من Naturra Extal بروتوكولات زراعية صارمة وممارسات زراعية مستدامة تلبي لوائح التصدير الدولية.',
       items: [
         {
-          name: 'توريد Legal Wood (ILW)',
-          description:
-            'يقدم المورّدون المعتمدون مستندات قانونية كاملة وإثبات حصاد مستدام لكل شحنة نستلمها.',
-          imageAlt: 'شارة توريد Legal Wood'
+          name: 'معايير Global GAP',
+          description: 'يتم التحقق من شركائنا في التوريد للممارسات الزراعية الجيدة، مما يضمن السلامة والجودة لكل شحنة.',
+          imageAlt: 'شارة شهادة Global GAP'
         },
         {
-          name: 'سلسلة توريد معتمدة SVLK',
-          description:
-            'شهادة نظام التحقق من شرعية الأخشاب (SVLK) الرسمية التي تضمن إمكانية التتبع، وممارسات قطع مسؤولة، واستعدادًا كاملاً للتصدير.',
-          imageAlt: 'شارة اعتماد SVLK'
+          name: 'توريد قانوني ومستدام',
+          description: 'شهادة استدامة رسمية تضمن إمكانية التتبع والممارسات البيئية المسؤولة عبر سلسلة التوريد الخاصة بنا.',
+          imageAlt: 'شارة شهادة الاستدامة'
         }
       ]
     }
   },
   zh: {
     meta: {
-      title: '关于 Naturra Extal：自1999年起的贝卡西工业风定制家具工坊 - 超过1000个项目',
+      title: '关于 Naturra Extal：自1999年起的优质印尼农业大宗商品出口商',
       description:
-        'Naturra Extal 是谁？创立于1999年的贝卡西定制钢制家具工坊，已完成1000多个项目。专注于为咖啡馆、餐厅、酒店提供工业风家具——高端材料、静电喷涂工艺、工厂直供价格。选择 Naturra 的理由：25年经验、800平方米现代化工坊、免费设计咨询、2年质保、服务雅加达大都会。',
+        'Naturra Extal 是谁？自1999年以来值得信赖的印尼优质农业大宗商品出口商。专注于为全球市场提供可可粉、印尼丁香和椰糠基质。选择 Naturra 的理由：25年行业经验、工厂直接货源、出口质量认证以及全球供应链专业知识。',
       keywords:
-        'Naturra Extal, 贝卡西家具工坊, 工业风定制家具, 咖啡馆家具, 25年家具经验, 免费设计咨询'
+        '关于 Naturra Extal, 农业大宗商品出口商, 可可粉供应商, 印尼丁香出口商, 椰糠块制造商'
     },
     hero: {
       title: '关于我们',
-      imageAlt: '关于 Naturra Extal - 自1999年来自贝卡西的工业风家具工坊 - 高端品质制造商',
-      imageTitle: '关于 Naturra Extal - 拥有25年以上经验的工业家具制造商'
+      imageAlt: '关于 Naturra Extal - 自1999年起的优质农业大宗商品出口商',
+      imageTitle: 'Naturra Extal - 超过25年的农业大宗商品出口卓越经验'
     },
     message: {
       title: '来自 Naturra 的寄语',
       paragraphs: [
-        '自1999年以来，Naturra Extal 一直是印尼领先的工业风斯堪的纳维亚家具制造商。凭借25年的经验，我们已为印尼及国际市场（包括美国、日本、澳大利亚、新加坡、马来西亚、泰国、越南、菲律宾）完成超过1000个项目，是商业家具解决方案的理想合作伙伴。',
-        '我们的服务网络覆盖整个印尼群岛，为咖啡馆、餐厅、办公室、酒店、联合办公空间和零售项目提供高品质家具。每一件作品都以精密的制造技术与对细节的专注打造。',
-        '我们全面接受定制需求，并与客户紧密合作，将他们的构想变为现实。无论是工业风餐桌椅、吧台家具、陈列系统还是独特的定制作品，我们的工匠都能精确呈现您的业务所需。'
+        '自1999年以来，Naturra Extal 一直是印尼领先的优质农业大宗商品出口商。凭借25年的经验，我们已成功为全球各地的企业完成大宗订单，包括美国、欧洲、日本和中东等主要市场，是您大宗商品需求的理想合作伙伴。',
+        '我们的网络覆盖印尼肥沃的农业产区，搜寻最优质的可可、丁香和椰糠原料。每件产品都经过严格的质量控制，以确保符合国际出口标准。',
+        '我们专注于大宗供应和定制化物流方案，以满足客户的特定需求。无论您需要工业级可可粉、精选丁香还是可持续生长的培养基，我们的团队都能精确呈现您的业务所需。'
       ],
-      imageAlt: 'Naturra Extal 工坊'
+      imageAlt: 'Naturra Extal 农业设施'
     },
     showrooms: {
-      title: '我们的工坊',
-      intro:
-        '欢迎到访贝卡西工坊，亲身体验我们的工业风斯堪的纳维亚家具，并与我们讨论您的定制需求：',
+      title: '我们的设施',
+      intro: '欢迎到访我们位于贝卡西的工业设施，了解我们的加工能力并讨论您的大宗订单需求：',
       description:
-        '工坊配备完善的生产设施，专注打造工业风定制家具。经验丰富的团队乐于了解您的需求，为咖啡馆、餐厅或办公室找到最合适的解决方案。',
-      workshopHeading: '贝卡西工坊',
-      button: '参观工坊',
-      workshopLabel: '贝卡西工坊：'
+        '我们的设施配备完善的加工与物流中心，专注打造出口级的农业大宗商品。经验丰富的团队乐于了解您的规格要求，为您的全球业务寻找最高效的供应方案。',
+      workshopHeading: '贝卡西加工设施',
+      button: '查看位置',
+      workshopLabel: '贝卡西设施：'
     },
     whyChoose: {
       title: '为什么选择 Naturra？',
       items: [
         {
-          title: '卓越品质',
-          description: '25年行业经验，采用顶级制造技术与工业级材料。'
+          title: '出口品质',
+          description: '25年行业经验，采用顶级加工技术与出口级农业标准。'
         },
         {
-          title: '工厂直供价格',
-          description: '全部产品自有生产，无中间商成本，保障高品质家具的优质价格。'
+          title: '直接货源价格',
+          description: '我们直接从农民手中采购并自主管理加工——无中间商成本，保障最优质的价格。'
         },
         {
-          title: '完全可定制',
-          description: '我们欢迎所有定制需求。分享您的想法，我们将为您的业务实现。'
+          title: '定制物流',
+          description: '我们提供灵活的运输和包装方案。我们将把印尼最优质的产品送到您的国际家门口。'
         },
         {
-          title: '覆盖全国的服务网络',
-          description: '服务印尼各地及主要国际市场的1000+企业：咖啡馆、餐厅、酒店、办公空间等。'
+          title: '全球供应网络',
+          description: '为全球食品、饮料和园艺行业的大宗买家提供持续的高端供应。'
         }
       ]
     },
     certifications: {
-      title: '认证可持续木材',
-      subtitle: '每一个 Naturra Extal 项目都使用经过审计的合作伙伴所提供的木材，符合印尼林业法规和出口文件标准。',
+      title: '认证可持续性',
+      subtitle: 'Naturra Extal 的每一批货物均遵循严格的农业规程和符合国际出口法规的可持续耕作方式。',
       items: [
         {
-          name: 'Legal Wood 合法木材体系 (ILW)',
-          description: '经认证的供应商为每一批木材提供完整合法文件与可持续采伐证明，确保原料可追溯。',
-          imageAlt: 'Legal Wood 认证徽章'
+          name: 'Global GAP 标准',
+          description: '我们的采购伙伴均经过良好农业操作规范验证，确保每一批货物的安全与品质。',
+          imageAlt: 'Global GAP 认证徽章'
         },
         {
-          name: 'SVLK 验证供应链',
-          description: '官方木材合法性验证体系，保障可追溯性、负责采伐以及满足出口要求。',
-          imageAlt: 'SVLK 认证徽章'
+          name: '合法与可持续采购',
+          description: '官方可持续性认证，保障我们供应链的可追溯性与环境责任实践。',
+          imageAlt: '可持续性认证徽章'
         }
       ]
     }
   },
   ja: {
     meta: {
-      title: 'Naturra Extal について：1999年創業のベカシ工業系カスタム家具工房 - 1000件超の実績',
+      title: 'Naturra Extal について：1999年創業のインドネシア産高級農業大宗商品輸出商',
       description:
-        'Naturra Extal とは？1999年創業、1000件以上の実績を誇るベカシのカスタムスチール家具工房。カフェ・レストラン・ホテル向けの工業系家具を専門に、ハイグレード素材とパウダーコーティング仕上げ、工場直販価格で提供。Naturra を選ぶ理由：25年の経験、800㎡の最新工房、無料デザイン相談、2年保証、ジャカルタ首都圏にサービス提供。',
+        'Naturra Extal とは？1999年創業、信頼のインドネシア産高級農業大宗商品輸出商。世界市場向けにココアパウダー、インドネシア産クローブ、ココピート基質を専門に提供。Naturra を選ぶ理由：25年の経験、工場直接仕入れ、輸出品質認証、グローバルなサプライチェーンの専門知識。',
       keywords:
-        'Naturra Extal, ベカシ 家具工房, 工業系 カスタム家具, カフェ用家具, 1999年 創業工房, 無料デザイン相談'
+        'Naturra Extal について, 農業大宗商品輸出商, ココアパウダー供給元, インドネシア産クローブ輸出商, ココピートブロック製造元'
     },
     hero: {
       title: '私たちについて',
-      imageAlt:
-        'Naturra Extal について - 1999年創業のベカシ工業系家具工房 - 高品質メーカー',
-      imageTitle: 'Naturra Extal について - 25年以上の経験を持つ工業家具メーカー'
+      imageAlt: 'Naturra Extal について - 1999年創業の高級農業大宗商品輸出商',
+      imageTitle: 'Naturra Extal - 農業大宗商品輸出における25年以上の卓越した経験'
     },
     message: {
       title: 'Naturra からのメッセージ',
       paragraphs: [
-        '1999年以来、Naturra Extal はインドネシアを代表する工業系スカンジナビアン家具のカスタムメーカーです。25年の経験を持ち、国内外（米国、日本、オーストラリア、シンガポール、マレーシア、タイ、ベトナム、フィリピン）で1000件以上の案件を手掛け、商業用家具の最適なパートナーとして信頼を得てきました。',
-        '私たちのネットワークはインドネシア全土に広がり、カフェ、レストラン、オフィス、ホテル、コワーキングスペース、小売店向けに高品質な家具ソリューションを提供しています。すべての製品を精密な製造技術と細部へのこだわりで仕上げています。',
-        '全てのカスタムリクエストに対応し、お客様と共にビジョンを具現化します。工業風ダイニングセット、バー用家具、ディスプレイシステム、唯一無二の特注品まで、熟練のクラフトマンがビジネスニーズに寄り添った家具を製作します。'
+        '1999年以来、Naturra Extal はインドネシアを代表する高級農業大宗商品の輸出商です。25年の経験を持ち、米国、欧州、日本、中東を含む主要なグローバル市場でバルク注文を成功させてきました。お客様の商品ニーズにおける最適なパートナーです。',
+        '私たちのネットワークはインドネシアの肥沃な農業地帯に広がり、最高級のココア、クローブ、ココピート原料を仕入れています。すべての製品は、国際的な輸出基準を満たすよう、厳格な品質管理を経て出荷されます。',
+        'お客様の特定の要件に応えるため、バルク供給とカスタマイズされた物流を専門としています。工業用グレードのココアパウダー、厳選されたクローブ、サステナブルな栽培基質など、お客様の業界が求めるものを正確にお届けします。'
       ],
-      imageAlt: 'Naturra Extal ワークショップ'
+      imageAlt: 'Naturra Extal 農業施設'
     },
     showrooms: {
-      title: '私たちの工房',
-      intro:
-        'ベカシの工房にぜひお越しください。工業系スカンジナビアン家具のコレクションをご覧いただき、カスタムオーダーについてご相談ください。',
+      title: '私たちの施設',
+      intro: 'ベカシの工業施設にぜひお越しください。加工能力をご覧いただき、バルク注文についてご相談ください。',
       description:
-        '工房にはカスタム工業家具を製作するための設備が整っており、経験豊富なチームがカフェ、レストラン、ホテル、オフィスに最適なソリューションをご提案します。',
-      workshopHeading: 'ベカシ工房',
-      button: '工房を訪ねる',
-      workshopLabel: 'ベカシ工房：'
+        '施設には、輸出品質の農業大宗商品を専門に扱う加工・物流拠点が整っており、経験豊富なチームが世界的なビジネスに最適な提案をいたします。',
+      workshopHeading: 'ベカシ加工施設',
+      button: '場所を見る',
+      workshopLabel: 'ベカシ施設：'
     },
     whyChoose: {
-      title: 'Naturra が選ばれる理由',
+      title: 'Naturra が选ばれる理由',
       items: [
         {
-          title: 'プレミアムクオリティ',
-          description: '25年の経験と最高水準の製造技術、工業グレードの素材を使用しています。'
+          title: '輸出クオリティ',
+          description: '25年の経験と最高水準の加工技術、輸出グレードの農業基準を維持しています。'
         },
         {
-          title: '工場直販価格',
-          description: 'すべて自社で製造するため中間コストがなく、高品質な家具を適正価格で提供します。'
+          title: '直接仕入れ価格',
+          description: '農家から直接仕入れ、自社で加工管理を行うため、中間コストがなく高品質な商品を適正価格で提供します。'
         },
         {
-          title: '完全カスタム対応',
-          description: '全てのカスタムリクエストに応じます。ビジョンを共有いただければ、ビジネスに合わせて形にします。'
+          title: 'カスタム物流',
+          description: '柔軟な配送・梱包ソリューションを提供します。インドネシアの最高な産物を世界のお客様の元へ届けます。'
         },
         {
-          title: '全国へ広がるサービス',
-          description: 'インドネシア全国および主要国際市場で1000件以上の案件を手掛け、カフェ・レストラン・ホテル・オフィスをサポートしています。'
+          title: '世界的な供給網',
+          description: '食品、飲料、園芸業界における世界中のバルクバイヤーに対し、安定した高級供給を行っています。'
         }
       ]
     },
     certifications: {
-      title: '認証済みサステナブルウッド',
+      title: '認証済みサステナビリティ',
       subtitle:
-        'Naturra Extal の家具はすべて、インドネシアの森林規制と輸出書類基準を満たす監査済みパートナーから仕入れた木材を使用しています。',
+        'Naturra Extal の出荷はすべて、国際的な輸出規制を満たす厳格な農業プロトコルと持続可能な農法に基づいています。',
       items: [
         {
-          name: 'Legal Wood ソーシング (ILW)',
-          description:
-            '認定サプライヤーが各ロットに対し、完全な合法性書類と持続可能な伐採証明を提供し、素材の追跡性を確保します。',
-          imageAlt: 'Legal Wood 認証バッジ'
+          name: 'Global GAP 基準',
+          description: 'すべての出荷において安全性と品質を保証するため、供給パートナーは適正農業規範（GAP）の検証を受けています。',
+          imageAlt: 'Global GAP 認証バッジ'
         },
         {
-          name: 'SVLK 承認サプライチェーン',
-          description:
-            'インドネシア公式の木材合法性検証制度で、トレーサビリティと責任ある伐採、輸出要件への準拠を保証します。',
-          imageAlt: 'SVLK 認証バッジ'
+          name: '合法的かつ持続可能な調達',
+          description: 'サプライチェーンにおけるトレーサビリティと責任ある環境慣行を保証する公式のサステナビリティ認証を受けています。',
+          imageAlt: 'サステナビリティ認証バッジ'
         }
       ]
     }
   },
   es: {
     meta: {
-      title: 'Sobre Naturra Extal: Taller de muebles industriales a medida en Bekasi desde 1999 - Más de 1000 proyectos',
+      title: 'Sobre Naturra Extal: Exportador de Materias Primas Agrícolas de Indonesia desde 1999',
       description:
-        '¿Quién es Naturra Extal? Taller de muebles de acero a medida en Bekasi desde 1999 con más de 1000 proyectos finalizados. Especialistas en muebles industriales para cafés, restaurantes y hoteles—materiales premium, acabado powder coating, precios directos de fábrica. ¿Por qué elegir Naturra? 25 años de experiencia, taller moderno de 800 m², asesoría de diseño gratuita, garantía de 2 años, servicio en Yakarta y alrededores.',
+        '¿Quién es Naturra Extal? Exportador de confianza de materias primas agrícolas de Indonesia desde 1999. Especialistas en cacao en polvo, clavos de olor y sustrato de cocopeat para mercados globales. ¿Por qué elegir Naturra? 25 años de experiencia, abastecimiento directo de fábrica, certificación de calidad de exportación y experiencia en la cadena de suministro global.',
       keywords:
-        'Naturra Extal, taller de muebles Bekasi, muebles industriales a medida, muebles para café, taller desde 1999'
+        'sobre Naturra Extal, exportador de materias primas agrícolas, proveedor de cacao en polvo, exportador de clavos de olor, fabricante de bloques de cocopeat'
     },
     hero: {
       title: 'Sobre nosotros',
-      imageAlt:
-        'Sobre Naturra Extal - Taller de muebles industriales en Bekasi desde 1999 - Fabricante de alta calidad',
-      imageTitle: 'Sobre Naturra Extal - Fabricante de muebles industriales con 25 años de experiencia'
+      imageAlt: 'Sobre Naturra Extal - Exportador de materias primas agrícolas premium desde 1999',
+      imageTitle: 'Naturra Extal - Más de 25 años de excelencia en la exportación de materias primas agrícolas'
     },
     message: {
       title: 'Mensaje de Naturra',
       paragraphs: [
-        'Desde 1999, Naturra Extal es el fabricante líder en Indonesia especializado en mobiliario industrial de estilo escandinavo a medida. Con 25 años de experiencia y más de 1.000 pedidos atendidos en Indonesia y mercados internacionales (Estados Unidos, Japón, Australia, Singapur, Malasia, Tailandia, Vietnam, Filipinas), somos el socio ideal para soluciones de mobiliario comercial.',
-        'Nuestra red cubre todo el archipiélago indonesio, ofreciendo soluciones de alta calidad para cafés, restaurantes, oficinas, hoteles, espacios de coworking y comercios. Cada pieza se fabrica con técnicas precisas y máximo cuidado en cada detalle.',
-        'Aceptamos pedidos totalmente personalizados y trabajamos codo a codo con nuestros clientes para materializar sus ideas. Ya necesites juegos de comedor industriales, mobiliario para barra, sistemas de exhibición o piezas únicas, nuestros artesanos crearán exactamente lo que necesita tu negocio.'
+        'Desde 1999, Naturra Extal es el principal exportador de Indonesia especializado en materias primas agrícolas premium. Con 25 años de experiencia, hemos cumplido con éxito pedidos al por mayor para empresas de todo el mundo, incluidos los principales mercados de EE. UU., Europa, Japón y Oriente Medio, lo que nos convierte en el mejor socio para sus necesidades de materias primas.',
+        'Nuestra red cubre las exuberantes regiones agrícolas de Indonesia, obteniendo solo el mejor cacao, clavos de olor y materias primas para cocopeat. Cada producto se somete a un riguroso control de calidad para garantizar que cumple con los estándares internacionales de exportación.',
+        'Nos especializamos en el suministro al por mayor y logística personalizada para satisfacer los requisitos específicos de nuestros clientes. Ya sea que necesite cacao en polvo de grado industrial, clavos de olor seleccionados a mano o sustratos de cultivo sostenibles, nuestro equipo ofrece exactamente lo que su industria requiere.'
       ],
-      imageAlt: 'Taller de Naturra Extal'
+      imageAlt: 'Instalación agrícola de Naturra Extal'
     },
     showrooms: {
-      title: 'Nuestro taller',
+      title: 'Nuestra instalación',
       intro:
-        'Visita nuestro taller en Bekasi para conocer nuestra colección de mobiliario industrial escandinavo y conversar sobre tus necesidades de pedido a medida:',
+        'Visite nuestra instalación industrial en Bekasi para conocer nuestras capacidades de procesamiento y analizar sus necesidades de pedidos al por mayor:',
       description:
-        'Nuestro taller cuenta con instalaciones completas para fabricar muebles industriales personalizados. El equipo, con amplia experiencia, puede analizar tus requerimientos y ayudarte a encontrar la mejor solución para tu café, restaurante, hotel u oficina.',
-      workshopHeading: 'Taller de Bekasi',
-      button: 'Visitar el taller',
-      workshopLabel: 'Taller de Bekasi:'
+        'Nuestra instalación ofrece un centro completo de procesamiento y logística dedicado a materias primas agrícolas de calidad de exportación. Nuestro experimentado equipo puede analizar sus especificaciones y ayudarlo a encontrar las soluciones de suministro más eficientes para su negocio global.',
+      workshopHeading: 'Planta de procesamiento Bekasi',
+      button: 'Ver ubicación',
+      workshopLabel: 'Planta Bekasi:'
     },
     whyChoose: {
       title: '¿Por qué elegir Naturra?',
       items: [
         {
-          title: 'Calidad premium',
-          description: '25 años de experiencia con técnicas de fabricación de alta calidad y materiales de grado industrial.'
+          title: 'Calidad de exportación',
+          description: '25 años de experiencia con técnicas de procesamiento de primer nivel y estándares agrícolas de grado de exportación.'
         },
         {
-          title: 'Precio directo de fábrica',
-          description:
-            'Fabricamos todo internamente—sin intermediarios, ofreciendo el mejor precio para muebles industriales de alta calidad.'
+          title: 'Precio de origen directo',
+          description: 'Abastecemos directamente de los agricultores y gestionamos nuestro propio procesamiento, eliminando intermediarios para obtener el mejor valor.'
         },
         {
-          title: 'Personalización total',
-          description:
-            'Aceptamos cualquier solicitud personalizada. Cuéntanos tu visión y la haremos realidad para tu negocio.'
+          title: 'Logística personalizada',
+          description: 'Ofrecemos soluciones flexibles de envío y embalaje. Llevaremos lo mejor de Indonesia a su puerta internacional.'
         },
         {
-          title: 'Red nacional e internacional',
-          description:
-            'Atendemos a más de 1000 negocios en toda Indonesia y en mercados internacionales clave: cafés, restaurantes, hoteles y oficinas.'
+          title: 'Red de suministro global',
+          description: 'Atendemos a compradores al por mayor en todo el mundo en las industrias de alimentos, bebidas y horticultura con un suministro premium constante.'
         }
       ]
     },
     certifications: {
-      title: 'Madera sostenible certificada',
+      title: 'Sostenibilidad certificada',
       subtitle:
-        'Cada proyecto de Naturra Extal utiliza madera proveniente de socios auditados que cumplen la normativa forestal de Indonesia y los requisitos documentales de exportación.',
+        'Cada envío de Naturra Extal sigue estrictos protocolos agrícolas y prácticas de cultivo sostenibles que cumplen con las regulaciones internacionales de exportación.',
       items: [
         {
-          name: 'Legal Wood Sourcing (ILW)',
-          description:
-            'Los proveedores verificados entregan documentación legal completa y evidencia de tala sostenible para cada lote que recibimos.',
-          imageAlt: 'Insignia de Legal Wood'
+          name: 'Estándares Global GAP',
+          description: 'Nuestros socios de abastecimiento están verificados para Buenas Prácticas Agrícolas, garantizando la seguridad y calidad de cada envío.',
+          imageAlt: 'Insignia de certificación Global GAP'
         },
         {
-          name: 'Cadena de suministro verificada SVLK',
-          description:
-            'Certificación oficial del Sistema de Verificación de Legalidad de la Madera que garantiza trazabilidad, tala responsable y cumplimiento para exportación.',
-          imageAlt: 'Insignia de certificación SVLK'
+          name: 'Abastecimiento legal y sostenible',
+          description: 'Certificación oficial de sostenibilidad que garantiza la trazabilidad y las prácticas ambientales responsables en toda nuestra cadena de suministro.',
+          imageAlt: 'Insignia de certificación de sostenibilidad'
         }
       ]
     }
   },
   fr: {
     meta: {
-      title: 'À propos de Naturra Extal : Atelier de mobilier industriel sur mesure à Bekasi depuis 1999 - Plus de 1000 projets',
+      title: 'À propos de Naturra Extal : Exportateur de matières premières agricoles indonésiennes depuis 1999',
       description:
-        'Qui est Naturra Extal ? Atelier de mobilier acier sur mesure à Bekasi depuis 1999, avec plus de 1000 projets réalisés. Spécialistes du mobilier industriel pour cafés, restaurants et hôtels—matériaux premium, finition powder coating, prix direct usine. Pourquoi choisir Naturra ? 25 ans d’expérience, atelier moderne de 800 m², consultation design gratuite, garantie 2 ans, service dans la région de Jakarta.',
+        'Qui est Naturra Extal ? Exportateur de confiance de matières premières agricoles indonésiennes depuis 1999. Spécialistes du cacao en poudre, clous de girofle indonésiens et substrat cocopeat pour les marchés mondiaux. Pourquoi choisir Naturra ? 25 ans d’expérience, approvisionnement direct usine, certification qualité export et expertise en supply chain mondiale.',
       keywords:
-        'Naturra Extal, atelier de mobilier Bekasi, mobilier industriel sur mesure, mobilier pour cafés, atelier depuis 1999'
+        'à propos de Naturra Extal, exportateur de matières premières agricoles, fournisseur de cacao en poudre, exportateur de clous de girofle indonésien, fabricant de blocs de cocopeat'
     },
     hero: {
       title: 'À propos de nous',
-      imageAlt:
-        'À propos de Naturra Extal - Atelier de mobilier industriel à Bekasi depuis 1999 - Fabricant de haute qualité',
-      imageTitle:
-        'À propos de Naturra Extal - Fabricant de mobilier industriel avec plus de 25 ans d’expérience'
+      imageAlt: 'À propos de Naturra Extal - Exportateur de matières premières agricoles premium depuis 1999',
+      imageTitle: 'Naturra Extal - Plus de 25 ans d’excellence dans l’exportation de matières premières agricoles'
     },
     message: {
       title: 'Message de Naturra',
       paragraphs: [
-        'Depuis 1999, Naturra Extal est le fabricant de référence en Indonésie spécialisé dans le mobilier industriel scandinave sur mesure. Forts de 25 ans d’expérience et de plus de 1 000 projets livrés en Indonésie et sur les marchés internationaux (États-Unis, Japon, Australie, Singapour, Malaisie, Thaïlande, Vietnam, Philippines), nous sommes le partenaire idéal pour vos besoins en mobilier professionnel.',
-        'Notre réseau couvre l’ensemble de l’archipel indonésien, fournissant des solutions haut de gamme aux cafés, restaurants, bureaux, hôtels, espaces de coworking et commerces. Chaque pièce est fabriquée avec des techniques précises et une attention méticuleuse aux détails.',
-        'Nous acceptons toutes les demandes personnalisées et collaborons étroitement avec nos clients pour concrétiser leur vision. Qu’il s’agisse de tables industrielles, de mobilier de bar, de systèmes de rayonnage ou de pièces uniques, nos artisans créent exactement ce dont votre entreprise a besoin.'
+        "Depuis 1999, Naturra Extal est le principal exportateur d'Indonésie spécialisé dans les matières premières agricoles haut de gamme. Avec 25 ans d'expérience, nous avons servi avec succès des commandes en gros pour des entreprises du monde entier, y compris sur les marchés majeurs des États-Unis, de l'Europe, du Japon et du Moyen-Orient, ce qui fait de nous le meilleur partenaire pour vos besoins en matières premières.",
+        'Notre réseau couvre Java, Sumatra et Sulawesi, produisant les meilleurs produits agricoles. Notre poudre de cacao, nos clous de girofle et notre cocopeat répondent aux normes internationales grâce à un contrôle qualité strict.',
+        "Nous sommes spécialisés dans la fourniture en gros et la logistique personnalisée pour nos clients. Que vous ayez besoin de cacao industriel, de clous de girofle sélectionnés ou de cocopeat durable, notre équipe livre exactement ce dont votre industrie a besoin."
       ],
-      imageAlt: 'Atelier Naturra Extal'
+      imageAlt: 'Installation agricole de Naturra Extal'
     },
     showrooms: {
-      title: 'Notre atelier',
+      title: 'Notre installation',
       intro:
-        'Visitez notre atelier de Bekasi pour découvrir notre collection de mobilier industriel scandinave et discuter de vos besoins sur mesure :',
+        'Visitez notre installation industrielle à Bekasi pour découvrir nos capacités de traitement et discuter de vos besoins en commandes groupées :',
       description:
-        'Notre atelier dispose d’installations complètes pour créer des meubles industriels personnalisés. Notre équipe expérimentée peut analyser vos besoins et vous aider à trouver la solution idéale pour votre café, restaurant, hôtel ou bureau.',
-      workshopHeading: 'Atelier de Bekasi',
-      button: 'Visiter l’atelier',
-      workshopLabel: 'Atelier de Bekasi :'
+        'Notre installation offre un centre complet de traitement et de logistique dédié aux matières premières agricoles de qualité export. Notre équipe expérimentée peut analyser vos spécifications et vous aider à trouver les solutions d’approvisionnement les plus efficaces pour votre activité mondiale.',
+      workshopHeading: 'Usine de traitement de Bekasi',
+      button: 'Voir l’emplacement',
+      workshopLabel: 'Usine de Bekasi :'
     },
     whyChoose: {
       title: 'Pourquoi choisir Naturra ?',
       items: [
         {
-          title: 'Qualité premium',
-          description:
-            '25 ans d’expérience, des techniques de fabrication de haut niveau et l’utilisation de matériaux industriels durables.'
+          title: 'Qualité export',
+          description: '25 ans d’expérience, techniques de traitement haut de gamme et normes agricoles de grade export.'
         },
         {
-          title: 'Prix direct usine',
-          description:
-            'Nous produisons tout en interne—aucun intermédiaire, ce qui garantit les meilleurs tarifs pour du mobilier industriel de qualité.'
+          title: 'Prix direct source',
+          description: 'Nous nous approvisionnons directement auprès des agriculteurs et gérons notre propre traitement—aucun intermédiaire pour une meilleure valeur.'
         },
         {
-          title: 'Entièrement personnalisable',
-          description:
-            'Nous répondons à toutes les demandes sur mesure. Faites-nous part de votre vision et nous la réaliserons pour votre entreprise.'
+          title: 'Logistique personnalisée',
+          description: 'Nous offrons des solutions flexibles d’expédition et d’emballage. Nous apportons le meilleur de l’Indonésie à votre porte internationale.'
         },
         {
-          title: 'Réseau national',
-          description:
-            'Plus de 1000 entreprises accompagnées en Indonésie et sur les principaux marchés internationaux : cafés, restaurants, hôtels, bureaux.'
+          title: 'Réseau d’approvisionnement mondial',
+          description: 'Nous servons les acheteurs en gros du monde entier dans les industries de l’alimentation, des boissons et de l’horticulture avec un approvisionnement premium constant.'
         }
       ]
     },
     certifications: {
-      title: 'Bois durable certifié',
+      title: 'Durabilité certifiée',
       subtitle:
-        'Chaque projet Naturra Extal utilise du bois issu de partenaires audités respectant la réglementation forestière indonésienne et les exigences documentaires d’exportation.',
+        'Chaque expédition de Naturra Extal suit des protocoles agricoles stricts et des pratiques agricoles durables conformes aux réglementations internationales d’exportation.',
       items: [
         {
-          name: 'Approvisionnement Legal Wood (ILW)',
-          description:
-            'Nos fournisseurs vérifiés fournissent des dossiers de légalité complets et des preuves de coupe durable pour chaque lot livré.',
-          imageAlt: 'Badge Legal Wood'
+          name: 'Normes Global GAP',
+          description: 'Nos partenaires d’approvisionnement sont vérifiés pour leurs bonnes pratiques agricoles, garantissant la sécurité et la qualité de chaque expédition.',
+          imageAlt: 'Badge Global GAP'
         },
         {
-          name: 'Chaîne d’approvisionnement certifiée SVLK',
-          description:
-            'Certification officielle du Sistem Verifikasi Legalitas Kayu garantissant la traçabilité, l’exploitation responsable et la conformité pour l’export.',
-          imageAlt: 'Badge de certification SVLK'
+          name: 'Sourcing légal et durable',
+          description: 'Certification officielle de durabilité garantissant la traçabilité et des pratiques environnementales responsables sur toute notre supply chain.',
+          imageAlt: 'Badge de certification de durabilité'
         }
       ]
     }
   },
   ko: {
     meta: {
-      title: 'Naturra Extal 소개: 1999년부터 베카시에서 맞춤 산업용 가구 제작 - 1000건 이상의 프로젝트',
+      title: 'Naturra Extal 소개: 1999년부터 인도네시아산 프리미엄 농산물 수출',
       description:
-        'Naturra Extal은 어떤 곳인가요? 1999년부터 운영된 베카시의 맞춤 철제 가구 공방으로, 1000건 이상의 프로젝트를 수행했습니다. 카페·레스토랑·호텔을 위한 산업풍 가구를 전문으로 하며, 프리미엄 소재와 파우더 코팅, 공장 직판가를 제공합니다. Naturra를 선택해야 하는 이유: 25년 경험, 800㎡ 규모의 현대식 공방, 무료 디자인 상담, 2년 보증, 자카르타 수도권 서비스.',
+        'Naturra Extal은 어떤 곳인가요? 1999년부터 운영된 신뢰받는 인도네시아 프리미엄 농산물 수출업체입니다. 글로벌 시장을 위한 코코아 분말, 인도네시아산 정향, 코코피트 배지를 전문으로 취급합니다. Naturra를 선택해야 하는 이유: 25년의 경험, 농장 및 공장 직접 소싱, 수출 품질 인증 및 글로벌 공급망 전문성.',
       keywords:
-        'Naturra Extal, 베카시 맞춤 가구 공방, 산업풍 맞춤 가구, 카페 가구, 1999년 설립 공방, 무료 디자인 상담'
+        'Naturra Extal 소개, 농산물 수출업체, 코코아 분말 공급업체, 인도네시아 정향 수출, 코코피트 블록 제조'
     },
     hero: {
       title: '회사 소개',
-      imageAlt: 'Naturra Extal 소개 - 1999년부터 베카시에서 운영 중인 산업용 맞춤 가구 공방 - 프리미엄 제조업체',
-      imageTitle: 'Naturra Extal 소개 - 25년 이상 경력을 보유한 산업 가구 제조사'
+      imageAlt: 'Naturra Extal 소개 - 1999년부터 운영 중인 프리미엄 농산물 수출업체',
+      imageTitle: 'Naturra Extal - 25년 이상 농산물 수출 분야의 우수성 보유'
     },
     message: {
       title: 'Naturra의 메시지',
       paragraphs: [
-        '1999년 이래 Naturra Extal은 인도네시아 대표 산업풍 스칸디나비아 가구 제작사로 성장했습니다. 25년의 경험과 1000건 이상의 프로젝트를 통해, 인도네시아 전역과 국제 시장(미국, 일본, 호주, 싱가포르, 말레이시아, 태국, 베트남, 필리핀)에 상업용 가구 솔루션을 제공해 왔습니다.',
-        '우리는 인도네시아 전역의 커피숍, 레스토랑, 오피스, 호텔, 코워킹 스페이스, 리테일 공간에 맞춤형 고품질 가구를 공급하고 있습니다. 모든 제품은 정밀한 제작 기술과 디테일에 대한 집념으로 완성됩니다.',
-        '모든 맞춤 요청을 적극 수용하며 고객과 함께 비전을 실현합니다. 산업풍 다이닝 세트, 바 가구, 진열 시스템, 독창적인 커스텀 제품까지—숙련된 장인이 사업에 꼭 맞는 솔루션을 제공합니다.'
+        '1999년 이래 Naturra Extal은 인도네시아를 대표하는 프리미엄 농산물 수출업체로 성장했습니다. 25년의 경험을 통해 미국, 유럽, 일본, 중동 등 주요 글로벌 시장의 기업들에 대량 주문을 성공적으로 공급해 왔으며, 귀사의 원자재 요구사항을 위한 최적의 파트너가 되었습니다.',
+        '우리는 인도네시아 전역의 비옥한 농업 지역 네트워크를 통해 최고급 코코아, 정향 및 코코피트 원료를 확보하고 있습니다. 모든 제품은 국제 수출 표준을 충족하도록 엄격한 품질 관리를 거칩니다.',
+        '우리는 고객의 특정 요구사항을 충족하기 위한 벌크 공급 및 맞춤형 물류 솔루션을 전문으로 합니다. 산업용 등급의 코코아 분말, 엄선된 정향, 또는 지속 가능한 재배 배지 등 귀사에서 필요로 하는 최적의 솔루션을 제공합니다.'
       ],
-      imageAlt: 'Naturra Extal 공방'
+      imageAlt: 'Naturra Extal 농업 시설'
     },
     showrooms: {
-      title: '우리의 공방',
-      intro:
-        '베카시 공방을 방문하여 산업풍 스칸디나비아 가구 컬렉션을 체험하고, 맞춤 주문에 대한 상담을 받아보세요.',
+      title: '우리의 시설',
+      intro: '베카시 공방을 방문하여 당사의 가공 역량을 확인하고 대량 주문 상담을 받아보세요.',
       description:
-        '공방에는 산업용 맞춤 가구를 생산하기 위한 장비가 갖춰져 있으며, 경험 많은 팀이 카페·레스토랑·호텔·오피스에 가장 적합한 솔루션을 함께 고민해 드립니다.',
-      workshopHeading: '베카시 공방',
-      button: '공방 방문하기',
-      workshopLabel: '베카시 공방:'
+        '당사 시설은 수출 품질의 농산물 전문 가공 및 물류 허브를 갖추고 있습니다. 숙련된 팀이 귀사의 사양을 검토하고 글로벌 비즈니스를 위한 가장 효율적인 공급 솔루션을 제안해 드립니다.',
+      workshopHeading: '베카시 가공 시설',
+      button: '위치 확인',
+      workshopLabel: '베카시 시설:'
     },
     whyChoose: {
       title: 'Naturra를 선택해야 하는 이유',
       items: [
         {
-          title: '프리미엄 품질',
-          description: '25년의 노하우와 최고 수준의 제작 기술, 그리고 산업용 등급의 소재를 사용합니다.'
+          title: '수출 등급 품질',
+          description: '25년의 노하우와 최상급 가공 기술, 국제 수출용 농산물 표준을 준수합니다.'
         },
         {
-          title: '공장 직판 가격',
-          description:
-            '모든 제품을 자체 제작하여 중간 마진이 없습니다. 합리적인 가격으로 고품질 가구를 제공합니다.'
+          title: '생산지 직거래 가격',
+          description: '농가에서 직접 수확하고 공장에서 직접 가공하여 유통 단계를 줄임으로써 최상의 가치를 제공합니다.'
         },
         {
-          title: '완벽한 맞춤 제작',
-          description: '모든 커스텀 요청을 적극 수용합니다. 비전을 공유해 주시면 비즈니스에 맞춰 구현해 드립니다.'
+          title: '고객 맞춤 물류',
+          description: '유연한 배송 및 포장 솔루션을 제공합니다. 인도네시아 최고의 수확물을 전 세계 고객님의 문 앞까지 전달합니다.'
         },
         {
-          title: '전국적 네트워크',
-          description:
-            '인도네시아 및 주요 국제 시장에서 1000건 이상의 프로젝트를 수행하며, 카페·레스토랑·호텔·오피스를 지원합니다.'
+          title: '글로벌 공급 네트워크',
+          description: '전 세계 식음료 및 원예 산업의 대량 구매 고객들에게 일관된 품질의 프리미엄 제품을 공급하고 있습니다.'
         }
       ]
     },
     certifications: {
-      title: '인증된 지속가능 목재',
-      subtitle:
-        'Naturra Extal의 모든 제품은 인도네시아 산림 규정과 수출 서류 요건을 충족하는 감사 완료 파트너로부터 공급된 목재를 사용합니다.',
+      title: '인증된 지속가능성',
+      subtitle: 'Naturra Extal의 모든 출하물은 국제 수출 규정을 충족하는 엄격한 농업 프로토콜과 지속 가능한 농법을 따릅니다.',
       items: [
         {
-          name: 'Legal Wood 소싱 (ILW)',
-          description:
-            '검증된 공급업체가 각 선적마다 완전한 합법성 서류와 지속 가능한 벌채 증빙을 제공하여 원자재 추적성을 보장합니다.',
-          imageAlt: 'Legal Wood 인증 배지'
+          name: 'Global GAP 표준',
+          description: '당사의 소싱 파트너는 우수 농산물 관리 기준(GAP) 인증을 받아 모든 제품의 안전과 품질을 보장합니다.',
+          imageAlt: 'Global GAP 인증 배지'
         },
         {
-          name: 'SVLK 인증 공급망',
-          description:
-            'Sistem Verifikasi Legalitas Kayu 공식 인증으로, 책임 있는 벌채와 추적 가능성, 수출 규정 준수를 보증합니다.',
-          imageAlt: 'SVLK 인증 배지'
+          name: '법적 및 지속 가능한 조싱',
+          description: '공식 지속가능성 인증을 통해 공급망 전체의 추적 가능성과 환경적 책임을 보증합니다.',
+          imageAlt: '지속가능성 인증 배지'
         }
       ]
     }
@@ -675,7 +649,7 @@ const About: React.FC = () => {
   const isIndonesian = language === 'id'
 
   const localBusinessSchema = generateLocalBusinessStructuredData()
-  const faqData = getFAQBySlug('furniture-besi-custom-bekasi')
+  const faqData = getFAQBySlug('commodity-export-bekasi')
   const faqSchema = faqData ? generateFAQSchema(faqData.faqs) : null
 
   const localeMeta = generateLanguageSpecificMeta(language)
@@ -765,7 +739,7 @@ const About: React.FC = () => {
                   Jl. Raya Setu Cibitung - Bekasi, Telajung, Kec. Cikarang Bar., Kabupaten Bekasi, Jawa Barat 17320
                 </a>
               </p>
-              <p className="footer-phone">+6288801146881</p>
+              <p className="footer-phone">+6289513957752</p>
             </div>
           </div>
 
@@ -790,7 +764,7 @@ const About: React.FC = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Naturra Extal Workshop Map"
+                title="Naturra Extal Facility Map"
               ></iframe>
             </div>
           </div>
@@ -863,4 +837,5 @@ const About: React.FC = () => {
 }
 
 export default About
+
 

@@ -25,17 +25,29 @@ const products = ALL_PRODUCTS.slice(8, 28)
     link: `/product/${p.slug}`
   }))
 
-const OurProductsSection: React.FC<OurProductsSectionProps> = ({ isIndonesian = false, language = 'en' }) => {
+// Language to currency mapping (only non-IDR highlight currencies)
+const LANGUAGE_CURRENCY_MAP: { [key in 'en' | 'id' | 'ar' | 'zh' | 'ja' | 'es' | 'fr' | 'ko']: 'KRW' | 'JPY' | 'CNY' | 'SAR' | 'EUR' | 'USD' | null } = {
+  'ko': 'KRW',
+  'ja': 'JPY',
+  'zh': 'CNY',
+  'ar': 'SAR',
+  'es': 'EUR',
+  'fr': 'EUR',
+  'en': 'USD', // English highlights USD
+  'id': null   // Indonesian highlights IDR (original price)
+}
+
+const OurProductsSection: React.FC<OurProductsSectionProps> = ({ language = 'en' }) => {
   const getTitle = () => {
     switch (language) {
-      case 'id': return 'Koleksi Produk: Bar Set, Lounge Set, Storage & agricultural commodities'
-      case 'ar': return 'مجموعتنا: طقم بار، طقم صالة، تخزين وأثاث صناعي'
-      case 'zh': return '我们的系列：吧台套装、休息区套装、储物和工业家具'
-      case 'ja': return 'コレクション：バーセット、ラウンジセット、収納、インダストリアル家具'
-      case 'es': return 'Nuestra Colección: Set de Bar, Set de Sala, Almacenamiento y Muebles Industriales'
-      case 'fr': return 'Notre Collection: Set de Bar, Set de Salon, Rangement et Mobilier Industriel'
-      case 'ko': return '우리의 컨렉션: 바 세트, 라운지 세트, 수납 및 산업용 가구'
-      default: return 'Our Collection: Bar Set, Lounge Set, Storage & Agricultural Commodities'
+      case 'id': return 'Koleksi Komoditas: Kakao, Cengkeh, & Cocopeat Premium'
+      case 'ar': return 'مجموعتنا: الكاكاو والقرنفل والكوكوبيت الإندونيسي الفاخر'
+      case 'zh': return '我们的系列：优质印尼可可、丁香和椰糠'
+      case 'ja': return 'コレクション：プレミアムなインドネシア産ココア、クローブ、ココピート'
+      case 'es': return 'Nuestra Colección: Cacao, Clavo y Cocopeat Indonesio Premium'
+      case 'fr': return 'Notre Collection : Cacao, Clous de Girofle et Cocopeat d\'Indonésie Premium'
+      case 'ko': return '우리의 컬렉션: 프리미엄 인도네시아 코코아, 정향 및 코코피트'
+      default: return 'Our Collection: Premium Indonesian Cocoa, Cloves & Cocopeat'
     }
   }
 
@@ -53,18 +65,6 @@ const OurProductsSection: React.FC<OurProductsSectionProps> = ({ isIndonesian = 
   }
   const [usdPrices, setUsdPrices] = useState<{ [key: number]: string }>({})
   const [highlightedPrices, setHighlightedPrices] = useState<{ [key: number]: string }>({})
-
-  // Language to currency mapping (only non-IDR highlight currencies)
-  const LANGUAGE_CURRENCY_MAP: { [key: string]: 'KRW' | 'JPY' | 'CNY' | 'SAR' | 'EUR' | 'USD' | null } = {
-    'ko': 'KRW',
-    'ja': 'JPY',
-    'zh': 'CNY',
-    'ar': 'SAR',
-    'es': 'EUR',
-    'fr': 'EUR',
-    'en': 'USD', // English highlights USD
-    'id': null   // Indonesian highlights IDR (original price)
-  }
 
   useEffect(() => {
     const convertPrices = async () => {
@@ -115,7 +115,7 @@ const OurProductsSection: React.FC<OurProductsSectionProps> = ({ isIndonesian = 
 
         <div className="products-grid-full">
           {products.map((product) => {
-            const translatedName = getProductName(product.slug, isIndonesian, language) || product.name
+            const translatedName = getProductName(product.slug, language) || product.name
             return (
               <Link
                 key={product.id}

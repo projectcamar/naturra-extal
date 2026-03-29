@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Hero.css'
-// legacy Naturra image import removed
+
+// Premium Agricultural Commodity Hero Image
+const heroImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1920&q=80'
 
 interface HeroProps {
   isIndonesian?: boolean
@@ -10,30 +12,30 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ language = 'en' }) => {
   const subtitle = language === 'id'
-    ? "Sejak 1999, kami menghadirkan bar set outdoor, lounge set, sofa bench, storage rack dan agricultural commodities terbaik untuk cafe, hotel dan restoran dari workshop Bekasi"
+    ? "Mitra Terpercaya untuk Komoditas Pertanian Indonesia. Sejak 1999, kami mengekspor Bubuk Kakao, Cengkeh, dan Cocopeat kualitas premium dari fasilitas industri kami di Bekasi ke seluruh dunia."
     : language === 'ar'
-      ? "منذ عام 1999، نقدم أطقم بار خارجية فاخرة، أطقم صالة، أرائك، رفوف تخزين وأثاث صناعي للمقاهي والفنادق والمطاعم من ورشتنا في بيكاسي"
+      ? "شريكك الموثوق للمنتجات الزراعية الإندونيسية. منذ عام 1999، نقوم بتصدير مسحوق الكاكاو والقرنفل والكوكوبيت عالي الجودة من منشأتنا الصناعية في بيكاسي إلى العالم."
       : language === 'zh'
-        ? "自1999年以来，我们从勿加泗工作坊为咖啡馆、酒店和餐厅提供优质户外吧台套装、休息区套装、沙发长椅、储物架和工业家具"
+        ? "印度尼西亚农产品的可靠合作伙伴。自1999年以来，我们一直从勿加泗的工业设施向全球出口优质可可粉、丁香和椰糠。"
         : language === 'ja'
-          ? "1999年以来、ブカシ工房からカフェ、ホテル、レストラン向けに高品質な屋外バーセット、ラウンジセット、ソファベンチ、収納ラック、インダストリアル家具を提供しています"
+          ? "インドネシア農産物の信頼できるパートナー。1999年以来、ブカシの産業施設からプレミアム品質のココアパウダー、クローブ、ココピートを世界中に輸出しています。"
           : language === 'es'
-            ? "Desde 1999, entregamos sets de bar exterior premium, sets de sala, sofás banco, estanterías de almacenamiento y muebles industriales para cafés, hoteles y restaurantes desde nuestro taller en Bekasi"
+            ? "Su socio confiable para productos agrícolas indonesios. Desde 1999, exportamos cacao en polvo, clavos y cocopeat de calidad premium desde nuestra instalación industrial en Bekasi al mundo."
             : language === 'fr'
-              ? "Depuis 1999, nous livrons des sets de bar extérieur premium, sets de salon, bancs canapés, étagères de rangement et meubles industriels pour cafés, hôtels et restaurants depuis notre atelier à Bekasi"
+              ? "Votre partenaire de confiance pour les produits agricoles indonésiens. Depuis 1999, nous exportons de la poudre de cacao, des clous de girofle et du cocopeat de qualité supérieure."
               : language === 'ko'
-                ? "1999년부터 브카시 워크숍에서 카페, 호텔, 레스토랑을 위한 프리미엄 야외 바 세트, 라운지 세트, 소파 벤치, 수납 선반 및 산업용 가구를 제공합니다"
-                : "Since 1999, we deliver premium bar set outdoor, lounge set, sofa bench, storage rack and Agricultural Commodities for cafes, hotels and restaurants from our Bekasi workshop"
+                ? "인도네시아 농산물의 신뢰할 수 있는 파트너. 1999년부터 브카시 산업 시설에서 프리미엄 코코아 가루, 정향, 코코피트를 전 세계로 수출하고 있습니다."
+                : "Your Trusted Partner for Indonesian Agricultural Commodities. Since 1999, we export premium Cocoa Powder, Cloves, and Cocopeat from our industrial facility in Bekasi to the world."
 
-  const buttonText = language === 'id' ? "BELANJA SEKARANG" : language === 'ar' ? "تسوق الآن" : language === 'zh' ? "立即购买" : language === 'ja' ? "今すぐ購入" : language === 'es' ? "COMPRAR AHORA" : language === 'fr' ? "ACHETER MAINTENANT" : language === 'ko' ? "지금 쇼핑" : "SHOP NOW"
+  const buttonText = language === 'id' ? "LIHAT PRODUK" : language === 'ar' ? "تصفح المنتجات" : language === 'zh' ? "查看产品" : language === 'ja' ? "製品を見る" : language === 'es' ? "VER PRODUCTOS" : language === 'fr' ? "VOIR LES PRODUITS" : language === 'ko' ? "제품 보기" : "EXPLORE PRODUCTS"
 
   return (
     <section className="hero" role="banner" aria-labelledby="hero-title">
       <div className="hero-background">
         <img
           src={heroImage}
-          alt="Agricultural Commodities Collection by Naturra Extal - Premium Furniture Besi Custom Bekasi Since 1999"
-          title="Naturra Extal - Agricultural Commodities Manufacturer Workshop Bekasi - Premium Quality Since 1999"
+          alt="Premium Agricultural Commodities by Naturra Extal - Cocoa, Cloves, Cocopeat Export Since 1999"
+          title="Naturra Extal - Agricultural Commodities Exporter Bekasi - Premium Quality Since 1999"
           className="hero-bg-image"
           loading="eager"
           fetchPriority="high"
@@ -53,7 +55,7 @@ const Hero: React.FC<HeroProps> = ({ language = 'en' }) => {
         <p className="hero-subtitle">
           {subtitle}
         </p>
-        <Link to="/shop" className="hero-btn">
+        <Link to="/products" className="hero-btn">
           {buttonText}
         </Link>
       </div>

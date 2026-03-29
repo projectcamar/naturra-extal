@@ -73,7 +73,7 @@ const IMAGE_LICENSE_TRANSLATIONS: Record<LanguageCode, ImageLicenseTranslation> 
       ],
       copyrightHeading: 'Copyright & Attribution',
       copyrightParagraph:
-        'Each image contains digital watermarking and metadata trails to safeguard copyright. Attribution usage must include "Naturra Extal" and a link to https://Naturra-living.com.',
+        'Each image contains digital watermarking and metadata trails to safeguard copyright. Attribution usage must include "Naturra Extal" and a link to https://naturraextal.com.',
       requestHeading: 'How to Request Image Licensing',
       requestIntro: 'Follow these steps to request official licensing approval:',
       requestSteps: [
@@ -122,7 +122,7 @@ const IMAGE_LICENSE_TRANSLATIONS: Record<LanguageCode, ImageLicenseTranslation> 
       ],
       copyrightHeading: 'Hak Cipta & Atribusi',
       copyrightParagraph:
-        'Setiap gambar memiliki watermark digital dan catatan metadata untuk memastikan perlindungan hak cipta. Penggunaan dengan atribusi harus mencantumkan "Naturra Extal" dan tautan ke https://Naturra-living.com.',
+        'Setiap gambar memiliki watermark digital dan catatan metadata untuk memastikan perlindungan hak cipta. Penggunaan dengan atribusi harus mencantumkan "Naturra Extal" dan tautan ke https://naturraextal.com.',
       requestHeading: 'Cara Mengajukan Lisensi Penggunaan',
       requestIntro: 'Ikuti langkah berikut untuk mengajukan permohonan lisensi resmi:',
       requestSteps: [
@@ -170,7 +170,7 @@ const IMAGE_LICENSE_TRANSLATIONS: Record<LanguageCode, ImageLicenseTranslation> 
       ],
       copyrightHeading: 'حقوق النشر والإسناد',
       copyrightParagraph:
-        'تحتوي كل صورة على علامة مائية رقمية وبيانات وصفية لحماية حقوق النشر. يجب أن يتضمن الاستخدام مع الإسناد اسم "Naturra Extal" ورابطًا إلى https://Naturra-living.com.',
+        'تحتوي كل صورة على علامة مائية رقمية وبيانات وصفية لحماية حقوق النشر. يجب أن يتضمن الاستخدام مع الإسناد اسم "Naturra Extal" ورابطًا إلى https://naturraextal.com.',
       requestHeading: 'كيفية طلب ترخيص استخدام الصور',
       requestIntro: 'اتبع الخطوات التالية للحصول على موافقة ترخيص رسمية:',
       requestSteps: [
@@ -216,7 +216,7 @@ const IMAGE_LICENSE_TRANSLATIONS: Record<LanguageCode, ImageLicenseTranslation> 
       ],
       copyrightHeading: '版权与署名',
       copyrightParagraph:
-        '每张图片都包含数字水印和元数据以保护版权。署名使用时必须注明 “Naturra Extal” 并附上 https://Naturra-living.com 链接。',
+        '每张图片都包含数字水印和元数据以保护版权。署名使用时必须注明 “Naturra Extal” 并附上 https://naturraextal.com 链接。',
       requestHeading: '如何申请图片使用授权',
       requestIntro: '请按照以下步骤申请官方授权：',
       requestSteps: [
@@ -263,7 +263,7 @@ const IMAGE_LICENSE_TRANSLATIONS: Record<LanguageCode, ImageLicenseTranslation> 
       ],
       copyrightHeading: '著作権とクレジット',
       copyrightParagraph:
-        '各画像には著作権保護のためのデジタル透かしとメタデータが含まれています。クレジット表記を行う場合は「Naturra Extal」と https://Naturra-living.com へのリンクを必ず記載してください。',
+        '各画像には著作権保護のためのデジタル透かしとメタデータが含まれています。クレジット表記を行う場合は「Naturra Extal」と https://naturraextal.com へのリンクを必ず記載してください。',
       requestHeading: 'ライセンス申請の手順',
       requestIntro: '公式な使用許可を取得するには、以下の手順に従ってください。',
       requestSteps: [
@@ -312,7 +312,7 @@ const IMAGE_LICENSE_TRANSLATIONS: Record<LanguageCode, ImageLicenseTranslation> 
       ],
       copyrightHeading: 'Derechos de autor y atribución',
       copyrightParagraph:
-        'Cada imagen contiene marcas de agua digitales y metadatos para proteger los derechos de autor. La atribución debe incluir “Naturra Extal” y un enlace a https://Naturra-living.com.',
+        'Cada imagen contiene marcas de agua digitales y metadatos para proteger los derechos de autor. La atribución debe incluir “Naturra Extal” y un enlace a https://naturraextal.com.',
       requestHeading: 'Cómo solicitar una licencia de uso',
       requestIntro: 'Sigue estos pasos para solicitar la aprobación oficial:',
       requestSteps: [
@@ -361,7 +361,7 @@ const IMAGE_LICENSE_TRANSLATIONS: Record<LanguageCode, ImageLicenseTranslation> 
       ],
       copyrightHeading: 'Droit d’auteur & attribution',
       copyrightParagraph:
-        'Chaque image comporte un filigrane numérique et des métadonnées pour assurer la protection du droit d’auteur. Toute attribution doit mentionner “Naturra Extal” et inclure le lien https://Naturra-living.com.',
+        'Chaque image comporte un filigrane numérique et des métadonnées pour assurer la protection du droit d’auteur. Toute attribution doit mentionner “Naturra Extal” et inclure le lien https://naturraextal.com.',
       requestHeading: 'Comment demander une licence d’utilisation',
       requestIntro: 'Suivez les étapes ci-dessous pour obtenir une autorisation officielle :',
       requestSteps: [
@@ -408,7 +408,7 @@ const IMAGE_LICENSE_TRANSLATIONS: Record<LanguageCode, ImageLicenseTranslation> 
       ],
       copyrightHeading: '저작권 및 출처 표기',
       copyrightParagraph:
-        '각 이미지는 저작권 보호를 위한 디지털 워터마크와 메타데이터를 포함하고 있습니다. 출처 표기 시 “Naturra Extal”과 https://Naturra-living.com 링크를 반드시 포함해 주세요.',
+        '각 이미지는 저작권 보호를 위한 디지털 워터마크와 메타데이터를 포함하고 있습니다. 출처 표기 시 “Naturra Extal”과 https://naturraextal.com 링크를 반드시 포함해 주세요.',
       requestHeading: '이미지 라이선스 신청 방법',
       requestIntro: '공식 라이선스를 신청하려면 다음 단계를 따라 주세요.',
       requestSteps: [
@@ -428,7 +428,7 @@ const IMAGE_LICENSE_TRANSLATIONS: Record<LanguageCode, ImageLicenseTranslation> 
 }
 
 const HERO_IMAGE_URL =
-  'https://Naturra-living.com/assets/pngtree-a-welder-works-with-metal-in-a-factory-shop.webp'
+  'https://naturraextal.com/assets/pngtree-a-welder-works-with-metal-in-a-factory-shop.webp'
 
 const ImageLicense: React.FC = () => {
   const location = useLocation()
@@ -478,7 +478,7 @@ const ImageLicense: React.FC = () => {
     copyrightHolder: {
       '@type': 'Organization',
       name: 'Naturra Extal',
-      url: 'https://Naturra-living.com'
+      url: 'https://naturraextal.com'
     },
     ...DEFAULT_IMAGE_RIGHTS_METADATA
   }
@@ -493,7 +493,7 @@ const ImageLicense: React.FC = () => {
     mainEntity: {
       '@type': 'Organization',
       name: 'Naturra Extal',
-      url: 'https://Naturra-living.com'
+      url: 'https://naturraextal.com'
     },
     primaryImageOfPage: {
       ...imageObjectSchema
@@ -503,7 +503,7 @@ const ImageLicense: React.FC = () => {
       name: 'Naturra Extal',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://Naturra-living.com/logo.png',
+        url: 'https://naturraextal.com/logo.png',
         ...DEFAULT_IMAGE_RIGHTS_METADATA
       }
     }
@@ -603,7 +603,7 @@ const ImageLicense: React.FC = () => {
             <p>{t.cta.description}</p>
             <a
               className="image-license-button"
-              href="https://Naturra-living.com/contact-us"
+              href="https://naturraextal.com/contact-us"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -619,3 +619,4 @@ const ImageLicense: React.FC = () => {
 }
 
 export default ImageLicense
+

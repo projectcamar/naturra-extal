@@ -5,7 +5,8 @@ import { Clock, MapPin, Phone, Mail, Globe } from 'lucide-react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import ServiceAreasSection from '../components/ServiceAreasSection'
-// legacy Naturra image import removed
+// Premium Agricultural Commodity Images
+const heroImage = 'https://images.unsplash.com/photo-1586528116311-ad866efd92bf?w=1920&q=80'
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
 import { trackWhatsAppClick } from '../utils/whatsappTracking'
 import { getCurrentLanguage, getStoredLanguage, detectLanguageFromIP, type LanguageCode } from '../utils/languageManager'
@@ -54,8 +55,8 @@ const SHIPPING_TRANSLATIONS: Record<LanguageCode, ShippingTranslation> = {
     meta: {
       title: 'Shipping Information - Naturra Extal',
       description:
-        'Complete information about furniture shipping from Naturra Extal. Shipping times, costs, and international shipping procedures.',
-      keywords: 'furniture shipping, international shipping, furniture export, shipping times'
+        'Complete information about agricultural commodity shipping from Naturra Extal. Shipping times, vessel procedures, and international export procedures.',
+      keywords: 'agricultural shipping, commodity export, cocoa export, cloves shipping, cocopeat logistics'
     },
     heroTitle: 'Shipping Information',
     mainSection: {
@@ -108,8 +109,8 @@ const SHIPPING_TRANSLATIONS: Record<LanguageCode, ShippingTranslation> = {
     meta: {
       title: 'Informasi Pengiriman - Naturra Extal',
       description:
-        'Informasi lengkap tentang pengiriman furniture dari Naturra Extal. Waktu pengiriman, biaya, dan prosedur pengiriman internasional.',
-      keywords: 'pengiriman furniture, shipping furniture, ekspor furniture, pengiriman internasional'
+        'Informasi lengkap tentang pengiriman komoditas pertanian dari Naturra Extal. Waktu pengiriman, prosedur kapal, dan ekspor internasional.',
+      keywords: 'pengiriman pertanian, ekspor komoditas, pengiriman cokelat, ekspor cengkeh, logistik cocopeat'
     },
     heroTitle: 'Informasi Pengiriman',
     mainSection: {
@@ -671,13 +672,13 @@ const ShippingInformation: React.FC = () => {
                 <h3 className="shipping-contact-label">{t.contactSection.phoneLabel}</h3>
                 <p className="shipping-contact-value">
                   <a
-                    href="https://wa.me/+6288801146881"
+                    href="https://wa.me/+6289513957752"
                     style={{ color: '#8B7355', textDecoration: 'underline' }}
                     onClick={() => trackWhatsAppClick('shipping_info_contact')}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    +6288801146881
+                    +6289513957752
                   </a>
                 </p>
               </div>
@@ -691,10 +692,10 @@ const ShippingInformation: React.FC = () => {
                 <h3 className="shipping-contact-label">{t.contactSection.emailLabel}</h3>
                 <p className="shipping-contact-value">
                   <a
-                    href="mailto:lifewithNaturra@gmail.com"
+                    href="mailto:hello@naturraextal.com"
                     style={{ color: '#8B7355', textDecoration: 'underline' }}
                   >
-                    lifewithNaturra@gmail.com
+                    hello@naturraextal.com
                   </a>
                 </p>
               </div>
@@ -708,12 +709,12 @@ const ShippingInformation: React.FC = () => {
                 <h3 className="shipping-contact-label">{t.contactSection.websiteLabel}</h3>
                 <p className="shipping-contact-value">
                   <a
-                    href="https://www.Naturraliving.com"
+                    href="https://www.naturraextal.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ color: '#8B7355', textDecoration: 'underline' }}
                   >
-                    www.Naturraliving.com
+                    www.naturraextal.com
                   </a>
                 </p>
               </div>
@@ -728,3 +729,4 @@ const ShippingInformation: React.FC = () => {
 }
 
 export default ShippingInformation
+

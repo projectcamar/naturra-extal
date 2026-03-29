@@ -133,7 +133,7 @@ const BestSellers: React.FC = () => {
 
           <div className="category-products-grid">
             {sortedProducts.map((product) => {
-              const translatedName = getProductName(product.slug, isIndonesian, language) || product.name
+              const translatedName = getProductName(product.slug, language) || product.name
               return (
                 <Link
                   key={product.id}
@@ -144,7 +144,7 @@ const BestSellers: React.FC = () => {
                     <img
                       src={product.image}
                       alt={`${translatedName} - Best Seller Agricultural Commodities ${product.categories.join(' ')} Naturra Extal`}
-                      title={`${translatedName} - Best Seller ${product.categories.join(' ')} Premium Furniture`}
+                      title={`${translatedName} - Best Seller ${product.categories.join(' ')} Premium Commodities`}
                       loading="lazy"
                       width="300"
                       height="200"

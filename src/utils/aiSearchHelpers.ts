@@ -2,43 +2,43 @@
 
 export const generateAIMetaTags = (pageType: string, _isIndonesian: boolean) => {
   const baseTags = {
-    'ai-content-type': 'furniture-manufacturer',
-    'ai-business-type': 'industrial-furniture-manufacturer',
+    'ai-content-type': 'agricultural-commodity-exporter',
+    'ai-business-type': 'commodity-trading-firm',
     'ai-location': 'bekasi-indonesia',
-    'ai-specialization': 'custom-industrial-furniture',
-    'ai-target-audience': 'cafe-restaurant-hotel-office-owners',
+    'ai-specialization': 'cocoa-cloves-cocopeat-export',
+    'ai-target-audience': 'food-industry-horticulture-businesses',
     'ai-experience-years': '25',
     'ai-clients-served': '1000+',
-    'ai-service-area': 'indonesia',
-    'ai-customization': 'available',
-    'ai-shipping': 'nationwide',
-    'ai-warranty': '1-year',
-    'ai-payment-methods': 'cash-bank-transfer-credit-card',
-    'ai-languages': 'indonesian-english',
-    'ai-response-time': 'same-day',
-    'ai-manufacturing-time': '2-4-weeks'
+    'ai-service-area': 'global',
+    'ai-sourcing': 'direct-from-farmers',
+    'ai-shipping': 'worldwide',
+    'ai-quality-control': 'certified-standards',
+    'ai-payment-methods': 'lc-tt-bank-transfer',
+    'ai-languages': 'indonesian-english-multilingual',
+    'ai-response-time': 'fast',
+    'ai-lead-time': '14-25-days'
   }
 
   const pageSpecificTags = {
     'home': {
       'ai-page-type': 'homepage',
-      'ai-primary-content': 'furniture-catalog-showcase'
+      'ai-primary-content': 'commodity-portfolio-showcase'
     },
     'product': {
       'ai-page-type': 'product-detail',
-      'ai-primary-content': 'product-information'
+      'ai-primary-content': 'commodity-specifications'
     },
     'category': {
       'ai-page-type': 'category-listing',
-      'ai-primary-content': 'product-category-showcase'
+      'ai-primary-content': 'commodity-category-overview'
     },
     'about': {
       'ai-page-type': 'about-page',
-      'ai-primary-content': 'company-information'
+      'ai-primary-content': 'company-heritage-and-supply-chain'
     },
     'contact': {
       'ai-page-type': 'contact-page',
-      'ai-primary-content': 'contact-information'
+      'ai-primary-content': 'inquiry-and-quote-requests'
     }
   }
 
@@ -51,27 +51,27 @@ export const generateAIMetaTags = (pageType: string, _isIndonesian: boolean) => 
 export const generateAIContentSummary = (isIndonesian: boolean) => {
   return {
     businessName: "Naturra Extal",
-    businessType: isIndonesian 
-      ? "Manufacturer agricultural commodities Besi Custom" 
-      : "Industrial Steel Custom Furniture Manufacturer",
+    businessType: isIndonesian
+      ? "Eksportir Komoditas Pertanian Premium"
+      : "Premium Agricultural Commodity Exporter",
     location: "Bekasi, Indonesia",
     established: "1999",
     experience: "25+ tahun",
     clientsServed: "1000+",
-    specialization: isIndonesian 
-      ? "agricultural commodities untuk Cafe, Restoran, Hotel, Kantor" 
-      : "Agricultural Commodities for Cafes, Restaurants, Hotels, Offices",
+    specialization: isIndonesian
+      ? "Bubuk Kakao, Cengkeh, dan Cocopeat untuk Pasar Global"
+      : "Cocoa Powder, Cloves, and Cocopeat for Global Markets",
     keyFeatures: [
-      isIndonesian ? "Custom Design" : "Custom Design",
-      isIndonesian ? "Material Berkualitas Tinggi" : "High Quality Materials",
-      isIndonesian ? "Harga Kompetitif" : "Competitive Prices",
-      isIndonesian ? "Pengiriman Seluruh Indonesia" : "Nationwide Shipping",
-      isIndonesian ? "Garansi 1 Tahun" : "1 Year Warranty"
+      isIndonesian ? "Sumber Langsung dari Petani" : "Direct Sourcing from Farmers",
+      isIndonesian ? "Standar Kualitas Ekspor" : "Export Quality Standards",
+      isIndonesian ? "Harga Kompetitif" : "Competitive Pricing",
+      isIndonesian ? "Pengiriman Seluruh Dunia" : "Worldwide Shipping",
+      isIndonesian ? "Kemitraan Jangka Panjang" : "Long-term Partnerships"
     ],
     contactInfo: {
-      phone: "+6288801146881",
-      email: "lifewithNaturra@gmail.com",
-      whatsapp: "https://wa.me/+6288801146881"
+      phone: "+6289513957752",
+      email: "hello@naturraextal.com",
+      whatsapp: "https://wa.me/+6289513957752"
     }
   }
 }
@@ -79,41 +79,39 @@ export const generateAIContentSummary = (isIndonesian: boolean) => {
 export const generateAISearchKeywords = (isIndonesian: boolean) => {
   const baseKeywords = [
     "agricultural commodities indonesia",
-    "furniture besi custom",
+    "cocoa powder export",
     "Naturra Extal",
-    "furniture manufacturer bekasi",
-    "Agricultural Commodities custom",
-    "steel furniture indonesia"
+    "cloves supplier indonesia",
+    "cocopeat manufacturer bekasi",
+    "indonesian spices export"
   ]
 
   const indonesianKeywords = [
-    "furniture cafe",
-    "furniture restoran",
-    "furniture hotel",
-    "meja industrial",
-    "kursi bar",
-    "rak display industrial",
-    "furniture besi bekasi",
-    "manufacturer agricultural commodities",
-    "furniture custom bekasi",
-    "meja kursi cafe",
-    "furniture kantor",
-    "furniture outdoor"
+    "ekspor bubuk kakao",
+    "supplier cengkeh",
+    "pabrik cocopeat",
+    "komoditas pertanian bekasi",
+    "perdagangan rempah indonesia",
+    "eksportir indonesia terpercaya",
+    "bahan baku industri makanan",
+    "media tanam hortikultura",
+    "kakao sulawesi sumatra",
+    "cengkeh lal pari",
+    "pengiriman komoditas ekspor"
   ]
 
   const englishKeywords = [
-    "cafe furniture",
-    "restaurant furniture",
-    "hotel furniture",
-    "industrial table",
-    "bar chair",
-    "display rack industrial",
-    "steel furniture bekasi",
-    "Agricultural Commodities manufacturer",
-    "custom furniture bekasi",
-    "cafe table chair",
-    "office furniture",
-    "outdoor furniture"
+    "cocoa powder manufacturer",
+    "bulk cloves supplier",
+    "cocopeat block exporter",
+    "indonesian agro products",
+    "commodity sourcing indonesia",
+    "global agriculture supply chain",
+    "premium cocoa exporter",
+    "clove oil sourcing",
+    "sustainable cocopeat",
+    "indonesian spices market",
+    "commodity export logistics"
   ]
 
   return [
@@ -125,24 +123,24 @@ export const generateAISearchKeywords = (isIndonesian: boolean) => {
 export const generateAIContextualData = (_pageType: string, isIndonesian: boolean) => {
   const contextualData = {
     businessContext: {
-      industry: "Furniture Manufacturing",
-      subIndustry: "Agricultural Commodities",
-      targetMarket: "B2B Commercial",
-      businessModel: "Manufacturing + Custom Design",
-      competitiveAdvantage: "25+ years experience, custom design, quality materials"
+      industry: "Agricultural Commodity Trading",
+      subIndustry: "Exporter & Supplier",
+      targetMarket: "B2B International & Industrial",
+      businessModel: "Sourcing + Quality Control + Export",
+      competitiveAdvantage: "25+ years experience, direct farmer network, export quality"
     },
     contentContext: {
       language: isIndonesian ? "Indonesian" : "English",
       region: "Indonesia",
-      currency: "IDR",
+      currency: "USD / IDR",
       timezone: "WIB",
       businessHours: "Monday-Saturday 08:00-17:00"
     },
     technicalContext: {
-      websiteType: "E-commerce + Corporate",
-      primaryGoal: "Lead Generation + Product Showcase",
-      conversionActions: ["WhatsApp Contact", "Phone Call", "Email Inquiry"],
-      userJourney: "Discovery -> Product Browse -> Contact -> Custom Quote"
+      websiteType: "Professional Exporter Corporate",
+      primaryGoal: "Lead Generation + Global Sourcing Partner",
+      conversionActions: ["Inquiry Form", "WhatsApp Contact", "Email Quote"],
+      userJourney: "Search -> Category Explore -> Product Spec -> Inquiry"
     }
   }
 

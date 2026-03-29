@@ -13,9 +13,9 @@ export const generateEnhancedOrganizationSchema = () => {
     "@type": "LocalBusiness",
     "name": "Naturra Extal",
     "alternateName": [
-      "Naturra Extal Furniture",
-      "Naturra agricultural commodities",
-      "Workshop Furniture Besi Bekasi"
+      "Naturra Extal Trading",
+      "Naturra Agricultural Commodities",
+      "Agricultural Commodity Exporter Bekasi"
     ],
     "url": "https://naturraextal.com",
     "logo": {
@@ -32,7 +32,7 @@ export const generateEnhancedOrganizationSchema = () => {
       "height": 630,
       ...DEFAULT_IMAGE_RIGHTS_METADATA
     },
-    "description": "Naturra Extal adalah manufacturer agricultural commodities besi custom terpercaya di Bekasi sejak 1999. Spesialis furniture cafe, restoran, hotel, dan kantor dengan pengalaman 25+ tahun dan 1000+ klien puas di seluruh Indonesia.",
+    "description": "Naturra Extal adalah eksportir agricultural commodities terpercaya di Bekasi sejak 1999. Spesialis Cocoa Powder, Cengkeh (Cloves), dan Cocopeat dengan pengalaman 25+ tahun melayani pasar internasional.",
     "foundingDate": "1999-01-01",
     "foundingLocation": {
       "@type": "Place",
@@ -41,7 +41,7 @@ export const generateEnhancedOrganizationSchema = () => {
     "founder": {
       "@type": "Person",
       "name": "Naturra Extal Founders",
-      "jobTitle": "Furniture Manufacturer & Designer"
+      "jobTitle": "Agricultural Commodity Exporter"
     },
     "numberOfEmployees": {
       "@type": "QuantitativeValue",
@@ -90,8 +90,8 @@ export const generateEnhancedOrganizationSchema = () => {
       }
     ],
     "sameAs": [
-      "https://www.instagram.com/Naturraliving",
-      "https://www.facebook.com/Naturraliving",
+      "https://www.instagram.com/naturraextal",
+      "https://www.facebook.com/naturraextal",
       "https://wa.me/6289513957752"
     ],
     "areaServed": {
@@ -104,14 +104,14 @@ export const generateEnhancedOrganizationSchema = () => {
     },
     "knowsAbout": [
       "Agricultural Commodities Manufacturing",
-      "Custom Steel Furniture Design",
-      "Commercial Furniture Production",
-      "Cafe Furniture Installation",
-      "Restaurant Furniture Design",
-      "Hotel Furniture Manufacturing",
-      "Powder Coating Technology",
-      "Steel Welding Techniques",
-      "Interior Design Consultation"
+      "Cocoa Powder Export",
+      "Indonesian Cloves Sourcing",
+      "Cocopeat Supply Chain",
+      "Sustainable Agriculture",
+      "International Commodity Trading",
+      "Export Logistics",
+      "Quality Assurance",
+      "Global Market Development"
     ],
     "award": [
       "1000+ Satisfied Clients Since 1999",
@@ -129,9 +129,9 @@ export const generateEnhancedOrganizationSchema = () => {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Custom Agricultural Commodities Manufacturing",
-          "description": "Jasa pembuatan agricultural commodities custom dengan desain unik dan material berkualitas tinggi",
-          "serviceType": "Manufacturing",
+          "name": "Custom Agricultural Commodities Grading & Packaging",
+          "description": "Jasa grading dan pengemasan komoditas pertanian kustom dengan standar ekspor internasional dan parameter teknis presisi",
+          "serviceType": "Processing",
           "provider": {
             "@type": "Organization",
             "name": "Naturra Extal"
@@ -144,8 +144,8 @@ export const generateEnhancedOrganizationSchema = () => {
         "priceCurrency": "IDR",
         "itemOffered": {
           "@type": "Service",
-          "name": "Furniture Design Consultation",
-          "description": "Konsultasi gratis untuk desain agricultural commodities sesuai kebutuhan bisnis Anda",
+          "name": "Commodity Sourcing Consultation",
+          "description": "Konsultasi gratis untuk pengadaan agricultural commodities sesuai kebutuhan bisnis Anda",
           "serviceType": "Consultation"
         }
       },
@@ -154,7 +154,7 @@ export const generateEnhancedOrganizationSchema = () => {
         "itemOffered": {
           "@type": "Service",
           "name": "Installation & Delivery Service",
-          "description": "Layanan instalasi dan pengiriman furniture ke seluruh Indonesia",
+          "description": "Layanan inspeksi kualitas dan pengiriman komoditas ke seluruh dunia",
           "serviceType": "Delivery",
           "areaServed": {
             "@type": "Country",
@@ -165,8 +165,8 @@ export const generateEnhancedOrganizationSchema = () => {
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Agricultural Commodities Collection 2025",
-      "description": "Koleksi lengkap agricultural commodities untuk cafe, restoran, hotel, dan kantor"
+      "name": "Agricultural Commodities Catalog 2025",
+      "description": "Koleksi lengkap komoditas pertanian unggulan: Cocoa, Cloves, dan Cocopeat"
     }
   }
 }
@@ -277,10 +277,10 @@ export const generateMetaDescription = (params: {
   const { product, service, location, type, cta } = params
 
   const descriptions = {
-    product: `${product} dari Naturra Extal - agricultural commodities berkualitas premium. Harga pabrik, custom design, garansi 1 tahun. ${location || 'Bekasi'}. ${cta || 'Pesan sekarang!'}`,
-    service: `${service} oleh Naturra Extal. Pengalaman 25+ tahun, 1000+ klien puas. Material premium, finishing powder coating. ${location || 'Melayani Jakarta, Bekasi, Jabodetabek'}. ${cta || 'Konsultasi gratis!'}`,
-    blog: `Panduan lengkap ${product || service} untuk cafe & restoran. Tips dari expert agricultural commodities dengan 25+ tahun pengalaman. ${cta || 'Baca selengkapnya!'}`,
-    page: `${product || service} - Naturra Extal workshop agricultural commodities Bekasi sejak 1999. Harga terjangkau, kualitas terbaik. ${cta || 'Hubungi kami!'}`
+    product: `${product} dari Naturra Extal - agricultural commodities kualitas ekspor. Kapasitas besar, grade premium, sertifikasi lengkap. ${location || 'Bekasi'}. ${cta || 'Hubungi kami!'}`,
+    service: `${service} oleh Naturra Extal. Pengalaman 25+ tahun di perdagangan internasional. Cocoa, Cloves, Cocopeat. ${location || 'Global Export'}. ${cta || 'Konsultasi gratis!'}`,
+    blog: `Analisis pasar ${product || service}. Insight dari expert agricultural commodities dengan 25+ tahun pengalaman. ${cta || 'Baca selengkapnya!'}`,
+    page: `${product || service} - Naturra Extal eksportir agricultural commodities Bekasi sejak 1999. Partner dagang terpercaya. ${cta || 'Hubungi kami!'}`
   }
 
   return descriptions[type].substring(0, 160) // Google truncates at ~160 chars
@@ -292,8 +292,9 @@ export const generateMetaDescription = (params: {
 export const generateKeywords = (primary: string[], secondary: string[], location: string[] = []) => {
   const baseKeywords = [
     'agricultural commodities',
-    'furniture besi custom',
-    'furniture bekasi',
+    'agricultural commodities',
+    'export indonesia',
+    'trade bekasi',
     'Naturra Extal'
   ]
 
@@ -336,7 +337,7 @@ export const generateTwitterTags = (params: {
     'twitter:title': params.title,
     'twitter:description': params.description,
     'twitter:image': params.image || 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200',
-    'twitter:site': '@Naturraliving'
+    'twitter:site': '@naturraextal'
   }
 }
 
@@ -353,10 +354,10 @@ export const generateImageAlt = (params: {
 
   const parts = [
     productName,
-    category && `${category} industrial`,
-    action || 'furniture besi custom',
+    category && `${category} export grade`,
+    action || 'ekspor komoditas pertanian',
     'Naturra Extal',
-    location && `${location} Bekasi`
+    location && `${location}`
   ].filter(Boolean)
 
   return parts.join(' - ')
@@ -489,7 +490,7 @@ export const generateArticleSchema = (article: {
     "author": {
       "@type": "Person",
       "name": article.author,
-      "jobTitle": "Furniture Design Expert",
+      "jobTitle": "Agricultural Commodity Expert",
       "worksFor": {
         "@type": "Organization",
         "name": "Naturra Extal"
@@ -517,7 +518,7 @@ export const generateArticleSchema = (article: {
     "about": {
       "@type": "Thing",
       "name": "Agricultural Commodities",
-      "sameAs": "https://en.wikipedia.org/wiki/Furniture"
+      "sameAs": "https://en.wikipedia.org/wiki/Agricultural_commodity"
     }
   }
 }
@@ -528,8 +529,8 @@ export const generateArticleSchema = (article: {
 export const generateEnhancedLocalBusinessSchema = () => {
   return {
     "@context": "https://schema.org",
-    "@type": ["FurnitureStore", "LocalBusiness", "Store"],
-    "name": "Naturra Extal - Workshop agricultural commodities Bekasi",
+    "@type": ["WholesaleStore", "LocalBusiness"],
+    "name": "Naturra Extal - International Agricultural Commodity Trading",
     "image": [
       {
         "@type": "ImageObject",
@@ -618,22 +619,5 @@ export const getImageDimensions = (context: 'hero' | 'product' | 'thumbnail' | '
   return dimensions[context]
 }
 
-export default {
-  generateEnhancedOrganizationSchema,
-  generateBreadcrumbSchema,
-  generateWebPageSchema,
-  generateHowToSchema,
-  generateMetaDescription,
-  generateKeywords,
-  generateOGTags,
-  generateTwitterTags,
-  generateImageAlt,
-  generateVideoSchema,
-  generateItemListSchema,
-  generateReviewSchema,
-  generateArticleSchema,
-  generateEnhancedLocalBusinessSchema,
-  getImageLoadingStrategy,
-  getImageDimensions,
-  calculateReadingTime
-}
+// Named exports are already provided for each function
+

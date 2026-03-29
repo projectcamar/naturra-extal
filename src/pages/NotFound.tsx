@@ -184,7 +184,8 @@ const NotFound: React.FC = () => {
               </h3>
               <div className="products-grid">
                 {FEATURED_PRODUCTS.map((product) => {
-                  const translatedName = getProductName(product.slug, isIndonesian) || product.name
+                  const langCode: any = isIndonesian ? 'id' : 'en'
+                  const translatedName = getProductName(product.slug, langCode) || product.name
                   return (
                     <Link
                       key={product.id}

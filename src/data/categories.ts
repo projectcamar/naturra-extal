@@ -1,31 +1,23 @@
 // Centralized categories for consistency across all pages
 export const CATEGORIES = [
   'New Arrivals',
-  'Lounge Set',
-  'Sofa Bench',
-  'Dining Set',
-  'Bar Set',
-  'Outdoor',
-  'Daybed',
-  'Storage',
-  'Tables',
-  'Dine Table',
+  'Cocoa Powder',
+  'Indonesian Cloves',
+  'Cocopeat Media',
+  'Spices & Herbs',
+  'Sustainable Growing',
+  'Essential Oils',
+  'Export Quality',
 ] as const
 
 export const CATEGORY_MAP: { [key: string]: string } = {
   'new-arrivals': 'New Arrivals',
-  'lounge-seating-set': 'Lounge Set',
-  'industrial-sofa-bench': 'Sofa Bench',
-  'dining-set-collection': 'Dining Set',
-  'bar-furniture-collection': 'Bar Set',
-  'balcony-outdoor-collection': 'Outdoor',
-  'outdoor': 'Outdoor', // Add direct mapping
-  'daybed-lounge-frame': 'Daybed',
-  'daybed-collection': 'Daybed',
-  'accessories-storage': 'Storage',
-  'storage-shelving': 'Storage',
-  'table-collection': 'Tables',
-  'work-study-tables': 'Tables',
-  'dining-table-collection': 'Dine Table',
+  'cocoa-powder': 'Cocoa Powder',
+  'indonesian-cloves': 'Indonesian Cloves',
+  'cocopeat-media': 'Cocopeat Media',
+  'spices-herbs': 'Spices & Herbs',
+  'sustainable-growing': 'Sustainable Growing',
+  'essential-oils': 'Essential Oils',
+  'export-quality': 'Export Quality',
 }
 

@@ -8,17 +8,11 @@ interface CategoriesSectionProps {
   language?: 'en' | 'id' | 'ar' | 'zh' | 'ja' | 'es' | 'fr' | 'ko'
 }
 
-// Category images (Unsplash)
-const frameLoftBookshelfImage = 'https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=600&q=80'
-const loungeSetCoffeeTableImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80'
-const benchImage = 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=600&q=80'
-const mejaMakanImage = 'https://images.unsplash.com/photo-1582218155981-0675ea108dca?w=600&q=80'
-const barChairImage = 'https://images.unsplash.com/photo-1548848222-777651a084eb?w=600&q=80'
-const balconyBarImage = 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80'
-const daybedImage = 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80'
-const hollowlineDisplayRackImage = 'https://images.unsplash.com/photo-1596541223130-5d5644a5a6fc?w=600&q=80'
-const mejaKerjaImage = 'https://images.unsplash.com/photo-1621217646581-bcbe05ff19ee?w=600&q=80'
-const mejaImage = 'https://images.unsplash.com/photo-1499558913904-206263eb210b?w=600&q=80'
+// Commodity images (Unsplash)
+const cocoaImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80'
+const clovesImage = 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80'
+const cocopeatImage = 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80'
+const industryImage = 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80'
 
 interface Category {
   id: number
@@ -30,175 +24,91 @@ interface Category {
 const categories: Category[] = [
   {
     id: 1,
-    nameKey: 'newArrivals',
-    image: frameLoftBookshelfImage, // Frame Loft Bookshelf - produk new arrivals
-    link: '/product-category/new-arrivals'
+    nameKey: 'cocoa',
+    image: cocoaImage,
+    link: '/products?category=cocoa'
   },
   {
     id: 2,
-    nameKey: 'loungeSet',
-    image: loungeSetCoffeeTableImage, // Lounge Set Coffee Table - sesuai kategori lounge
-    link: '/product-category/lounge-seating-set'
+    nameKey: 'cloves',
+    image: clovesImage,
+    link: '/products?category=cloves'
   },
   {
     id: 3,
-    nameKey: 'sofaBench',
-    image: benchImage, // Bench Corner - sesuai kategori sofa bench
-    link: '/product-category/industrial-sofa-bench'
+    nameKey: 'cocopeat',
+    image: cocopeatImage,
+    link: '/products?category=cocopeat'
   },
   {
     id: 4,
-    nameKey: 'diningSet',
-    image: mejaMakanImage, // Meja makan dengan 2 kursi - sesuai dining set
-    link: '/product-category/dining-set-collection'
-  },
-  {
-    id: 5,
-    nameKey: 'barSet',
-    image: barChairImage, // Bar Chair - sesuai kategori bar
-    link: '/product-category/bar-furniture-collection'
-  },
-  {
-    id: 6,
-    nameKey: 'outdoor',
-    image: balconyBarImage, // Balcony Bar Table - sesuai outdoor
-    link: '/product-category/balcony-outdoor-collection'
-  },
-  {
-    id: 7,
-    nameKey: 'daybed',
-    image: daybedImage, // Industrial Daybed Frame - sesuai kategori daybed
-    link: '/product-category/daybed-lounge-frame'
-  },
-  {
-    id: 8,
-    nameKey: 'storage',
-    image: hollowlineDisplayRackImage, // Display Rack - sesuai storage
-    link: '/product-category/accessories-storage'
-  },
-  {
-    id: 9,
-    nameKey: 'tables',
-    image: mejaKerjaImage, // Meja Kerja - sesuai kategori tables
-    link: '/product-category/table-collection'
-  },
-  {
-    id: 10,
-    nameKey: 'dineTable',
-    image: mejaImage, // Meja makan industrial - sesuai dine table
-    link: '/product-category/dining-table-collection'
+    nameKey: 'all',
+    image: industryImage,
+    link: '/products'
   }
 ]
 
 const translations = {
   en: {
-    title: 'Our Categories',
-    newArrivals: 'New Arrivals',
-    loungeSet: 'Lounge Set',
-    sofaBench: 'Sofa Bench',
-    diningSet: 'Dining Set',
-    barSet: 'Bar Set',
-    outdoor: 'Outdoor',
-    daybed: 'Daybed',
-    storage: 'Storage',
-    tables: 'Tables',
-    dineTable: 'Dine Table'
+    title: 'Our Commodities',
+    cocoa: 'Cocoa Products',
+    cloves: 'Indonesian Cloves',
+    cocopeat: 'Cocopeat & Media',
+    all: 'All Products'
   },
   id: {
-    title: 'Kategori Produk Kami',
-    newArrivals: 'Produk Baru',
-    loungeSet: 'Set Lounge',
-    sofaBench: 'Sofa Bench',
-    diningSet: 'Set Makan',
-    barSet: 'Set Bar',
-    outdoor: 'Outdoor',
-    daybed: 'Daybed',
-    storage: 'Penyimpanan',
-    tables: 'Meja',
-    dineTable: 'Meja Makan'
+    title: 'Komoditas Kami',
+    cocoa: 'Produk Kakao',
+    cloves: 'Cengkeh Indonesia',
+    cocopeat: 'Cocopeat & Media',
+    all: 'Semua Produk'
   },
   ar: {
-    title: 'فئاتنا',
-    newArrivals: 'وصل حديثاً',
-    loungeSet: 'طقم صالة',
-    sofaBench: 'أريكة',
-    diningSet: 'طقم طعام',
-    barSet: 'طقم بار',
-    outdoor: 'خارجي',
-    daybed: 'سرير نهاري',
-    storage: 'تخزين',
-    tables: 'طاولات',
-    dineTable: 'طاولة طعام'
+    title: 'سلعنا',
+    cocoa: 'منتجات الكاكاو',
+    cloves: 'القرنفل الإندونيسي',
+    cocopeat: 'كوكوبيت',
+    all: 'جميع المنتجات'
   },
   zh: {
-    title: '我们的类别',
-    newArrivals: '新品',
-    loungeSet: '休息区套装',
-    sofaBench: '沙发长椅',
-    diningSet: '餐桌套装',
-    barSet: '吧台套装',
-    outdoor: '户外',
-    daybed: '躺椅',
-    storage: '储物',
-    tables: '桌子',
-    dineTable: '餐桌'
+    title: '我们的商品',
+    cocoa: '可可产品',
+    cloves: '印度尼西亚丁香',
+    cocopeat: '椰糠及培养基',
+    all: '所有产品'
   },
   ja: {
-    title: 'カテゴリー',
-    newArrivals: '新着',
-    loungeSet: 'ラウンジセット',
-    sofaBench: 'ソファベンチ',
-    diningSet: 'ダイニングセット',
-    barSet: 'バーセット',
-    outdoor: 'アウトドア',
-    daybed: 'デイベッド',
-    storage: '収納',
-    tables: 'テーブル',
-    dineTable: 'ダイニングテーブル'
+    title: '取扱商品',
+    cocoa: 'カカオ製品',
+    cloves: 'インドネシア産クローブ',
+    cocopeat: 'ココピート',
+    all: '全商品'
   },
   es: {
-    title: 'Nuestras Categorías',
-    newArrivals: 'Novedades',
-    loungeSet: 'Set de Sala',
-    sofaBench: 'Sofá Banco',
-    diningSet: 'Set de Comedor',
-    barSet: 'Set de Bar',
-    outdoor: 'Exterior',
-    daybed: 'Cama de Día',
-    storage: 'Almacenamiento',
-    tables: 'Mesas',
-    dineTable: 'Mesa de Comedor'
+    title: 'Nuestras Mercancías',
+    cocoa: 'Productos de Cacao',
+    cloves: 'Clavo de Indonesia',
+    cocopeat: 'Cocopeat y Medios',
+    all: 'Todos los productos'
   },
   fr: {
-    title: 'Nos Catégories',
-    newArrivals: 'Nouveautés',
-    loungeSet: 'Set de Salon',
-    sofaBench: 'Banc Canapé',
-    diningSet: 'Set de Salle à Manger',
-    barSet: 'Set de Bar',
-    outdoor: 'Extérieur',
-    daybed: 'Lit de Jour',
-    storage: 'Rangement',
-    tables: 'Tables',
-    dineTable: 'Table à Manger'
+    title: 'Nos Matières Premières',
+    cocoa: 'Produits de Cacao',
+    cloves: 'Clous de Girofle d\'Indonésie',
+    cocopeat: 'Cocopeat',
+    all: 'Tous les produits'
   },
   ko: {
-    title: '카테고리',
-    newArrivals: '신제품',
-    loungeSet: '라운지 세트',
-    sofaBench: '소파 벤치',
-    diningSet: '다이닝 세트',
-    barSet: '바 세트',
-    outdoor: '야외용',
-    daybed: '데이베드',
-    storage: '수납',
-    tables: '테이블',
-    dineTable: '식탁'
+    title: '주요 농산물',
+    cocoa: '코코아 제품',
+    cloves: '인도네시아 정향',
+    cocopeat: '코코피트 배양토',
+    all: '전체 제품'
   }
 }
 
 const CategoriesSection: React.FC<CategoriesSectionProps> = ({ isIndonesian = false, language = 'en' }) => {
-  const t = translations[language]
+  const t = translations[language] || translations.en
   return (
     <section className="categories-section">
       <div className="container">
@@ -217,15 +127,13 @@ const CategoriesSection: React.FC<CategoriesSectionProps> = ({ isIndonesian = fa
               <div className="category-image-wrapper">
                 <img
                   src={category.image}
-                  alt={`${t[category.nameKey as keyof typeof t]} Collection - Naturra Extal`}
+                  alt={`${t[category.nameKey as keyof typeof t]} - Naturra Extal`}
                   title={`${t[category.nameKey as keyof typeof t]} - Naturra Extal`}
                   className="category-image"
                   loading="lazy"
                   width="300"
-                  height="200"
+                  height="300"
                   itemProp="image"
-                  data-image-type="category"
-                  data-category={(t[category.nameKey as keyof typeof t] as string).toLowerCase().replace(/\s+/g, '-')}
                 />
               </div>
               <h3 className="category-name">{t[category.nameKey as keyof typeof t]}</h3>
@@ -238,4 +146,3 @@ const CategoriesSection: React.FC<CategoriesSectionProps> = ({ isIndonesian = fa
 }
 
 export default CategoriesSection
-

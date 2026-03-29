@@ -9,7 +9,7 @@ import { trackWhatsAppClick } from '../utils/whatsappTracking'
 import { getCurrentLanguage, getStoredLanguage, detectLanguageFromIP, type LanguageCode } from '../utils/languageManager'
 import './NaturraCustomOrder.css'
 
-import { NATURRA_CUSTOM_ORDER_TRANSLATIONS as CUSTOM_ORDER_TRANSLATIONS } from '../utils/NaturraTranslations'
+import { NATURRA_CUSTOM_ORDER_TRANSLATIONS as CUSTOM_ORDER_TRANSLATIONS } from '../utils/customOrderTranslations'
 
 const NaturraCustomOrder: React.FC = () => {
   const location = useLocation()

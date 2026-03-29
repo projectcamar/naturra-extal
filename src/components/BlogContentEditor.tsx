@@ -1,3 +1,4 @@
+import React from 'react';
 import { Plus, Trash2, Sparkles, Package } from 'lucide-react';
 import { ALL_PRODUCTS } from '../data/products';
 

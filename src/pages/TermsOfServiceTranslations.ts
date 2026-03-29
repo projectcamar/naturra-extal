@@ -84,12 +84,12 @@ export const TERMS_TRANSLATIONS: Record<LanguageCode, {
   id: {
     meta: {
       title: 'Syarat dan Ketentuan - Naturra Extal',
-      description: 'Syarat dan ketentuan layanan Naturra Extal untuk pemesanan agricultural commodities scandinavian premium'
+      description: 'Syarat dan ketentuan layanan Naturra Extal untuk ekspor komoditas pertanian premium'
     },
     hero: {
       title: 'Syarat dan Ketentuan'
     },
-    intro: 'Syarat dan ketentuan layanan Naturra Extal untuk pemesanan agricultural commodities scandinavian premium',
+    intro: 'Syarat dan ketentuan layanan Naturra Extal untuk ekspor komoditas pertanian premium',
     sections: {
       howToOrder: {
         title: 'Cara Pemesanan',
@@ -143,11 +143,11 @@ export const TERMS_TRANSLATIONS: Record<LanguageCode, {
         badge: '30 Hari Garansi',
         whatsCovered: {
           title: 'Yang Dijamin',
-          description: 'Kerusakan konstruksi akibat kesalahan pertukangan'
+          description: 'Kesesuaian kualitas produk dan integritas kemasan sesuai spesifikasi'
         },
         notCovered: {
           title: 'Tidak Dijamin',
-          description: 'Rayap, perubahan warna, kain luntur, pemuaian kayu alami'
+          description: 'Kerusakan akibat penanganan pihak ketiga, kondisi penyimpanan pembeli, atau degradasi alami selama transit'
         },
         note: {
           title: 'Catatan',
@@ -165,12 +165,12 @@ export const TERMS_TRANSLATIONS: Record<LanguageCode, {
   en: {
     meta: {
       title: 'Terms of Service - Naturra Extal',
-      description: 'Terms of service for Naturra Extal premium industrial scandinavian furniture orders'
+      description: 'Terms of service for Naturra Extal premium agricultural commodity export orders'
     },
     hero: {
       title: 'Terms of Service'
     },
-    intro: 'Terms of service for Naturra Extal premium industrial scandinavian furniture orders',
+    intro: 'Terms of service for Naturra Extal premium agricultural commodity export orders',
     sections: {
       howToOrder: {
         title: 'How to Order',
@@ -224,11 +224,11 @@ export const TERMS_TRANSLATIONS: Record<LanguageCode, {
         badge: '30 Days Warranty',
         whatsCovered: {
           title: 'What\'s Covered',
-          description: 'Construction damage due to workmanship errors'
+          description: 'Product quality compliance and packaging integrity according to specifications'
         },
         notCovered: {
           title: 'Not Covered',
-          description: 'Termites, color changes, fabric fading, natural wood expansion'
+          description: 'Damage due to third-party handling, buyer storage conditions, or natural degradation during transit'
         },
         note: {
           title: 'Note',
@@ -489,12 +489,12 @@ export const TERMS_TRANSLATIONS: Record<LanguageCode, {
   es: {
     meta: {
       title: 'Términos de Servicio - Naturra Extal',
-      description: 'Términos de servicio para pedidos de muebles escandinavos industriales premium de Naturra Extal'
+      description: 'Términos de servicio para pedidos de productos agrícolas premium de Naturra Extal'
     },
     hero: {
       title: 'Términos de Servicio'
     },
-    intro: 'Términos de servicio para pedidos de muebles escandinavos industriales premium de Naturra Extal',
+    intro: 'Términos de servicio para pedidos de productos agrícolas premium de Naturra Extal',
     sections: {
       howToOrder: {
         title: 'Cómo Pedir',

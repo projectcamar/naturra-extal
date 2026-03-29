@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const ROOT_DIR = path.resolve(__dirname, '..')
-const BASE_URL = process.env.SITEMAP_BASE_URL || 'https://mangala-living.com'
+const BASE_URL = process.env.SITEMAP_BASE_URL || 'https://naturraextal.com'
 
 const BLOG_FILE = path.join(ROOT_DIR, 'src', 'data', 'blog.ts')
 const PRODUCTS_FILE = path.join(ROOT_DIR, 'src', 'data', 'products.ts')
@@ -153,58 +153,29 @@ const parseProducts = (source, imageMap) => {
 }
 
 const curatedSearchKeywords = [
-  'industrial furniture',
-  'industrial furniture indonesia',
-  'industrial furniture bekasi',
-  'industrial furniture jakarta',
-  'industrial furniture custom',
-  'custom furniture cafe',
-  'custom furniture restoran',
-  'custom furniture hotel',
-  'custom furniture kantor',
-  'industrial dining table',
-  'industrial dining set',
-  'industrial lounge set',
-  'industrial bar set',
-  'industrial bar table',
-  'industrial sofa bench',
-  'industrial coffee table',
-  'industrial outdoor furniture',
-  'industrial daybed',
-  'industrial storage rack',
-  'industrial kitchen cabinet',
-  'industrial bookshelf',
-  'industrial display rack',
-  'industrial coat rack',
-  'industrial hanging shelf',
-  'industrial workstation desk',
-  'industrial conference table',
-  'industrial office furniture',
-  'furniture cafe industrial',
-  'furniture restoran industrial',
-  'furniture hotel industrial',
-  'furniture kantor industrial',
-  'furniture minimalis industrial',
-  'furniture scandinavian industrial',
-  'furniture custom bekasi',
-  'furniture custom jabodetabek',
-  'industrial bench corner',
-  'industrial barstool',
-  'industrial bar chair',
-  'industrial pipe furniture',
-  'custom dining table steel',
-  'custom dining set steel',
-  'metal frame furniture',
-  'welding furniture bekasi',
-  'furniture besi industrial',
-  'furniture besi custom',
-  'furniture mangala living',
-  'mangala living catalog',
-  'mangala living dining set',
-  'mangala living lounge set',
-  'mangala living bar set',
-  'mangala living outdoor furniture',
-  'mangala living daybed'
+  'cocoa powder distributor',
+  'indonesian cocoa beans',
+  'premium fermented cocoa',
+  'bulk cloves supplier',
+  'indonesian spices export',
+  'lal pari cloves grade',
+  'cocopeat block supplier',
+  'coconut husk medium',
+  'low ec cocopeat',
+  'agricultural commodity indonesia',
+  'cocoa powder alkalized',
+  'cocoa powder natural',
+  'cloves grade a supplier',
+  'cocopeat 5kg block',
+  'bulk agricultural export',
+  'natural spices supplier indonesia',
+  'cocoa bean supplier bekasi',
+  'cloves exporter indonesia',
+  'cocopeat horticulture grade',
+  'organic growing medium cocopeat',
+  'naturra extal commodity',
+  'naturra extal cocoa',
+  'naturra extal cloves'
 ]
 
 const toTitleCase = (str) => str.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase())
@@ -231,10 +202,10 @@ const buildSearchQueryEntries = (products, lastModified) => {
 
     addQuery(unescapedName)
     addQuery(`${unescapedName} price`)
-    addQuery(`${unescapedName} Mangala Living`)
-    addQuery(`${titleSlug} furniture`)
-    addQuery(`industrial ${slugWords}`)
-    addQuery(`${slugWords} custom furniture`)
+    addQuery(`${unescapedName} Naturra Extal`)
+    addQuery(`${titleSlug} commodity`)
+    addQuery(`premium ${slugWords}`)
+    addQuery(`${slugWords} bulk supplier`)
   })
 
   const queries = Array.from(map.values()).slice(0, 60)
@@ -295,18 +266,16 @@ const getFileLastModified = async (relativePath) => {
 
 const buildStaticPages = async () => {
   const staticPages = [
-    { loc: `${BASE_URL}/`, file: 'src/pages/Home.tsx', changefreq: 'weekly', priority: 1.0 },
-    { loc: `${BASE_URL}/shop`, file: 'src/pages/Shop.tsx', changefreq: 'weekly', priority: 0.9 },
-    { loc: `${BASE_URL}/blog`, file: 'src/pages/Blog.tsx', changefreq: 'daily', priority: 0.9 },
-    { loc: `${BASE_URL}/about`, file: 'src/pages/About.tsx', changefreq: 'monthly', priority: 0.7 },
-    { loc: `${BASE_URL}/contact-us`, file: 'src/pages/Contact.tsx', changefreq: 'monthly', priority: 0.7 },
-    { loc: `${BASE_URL}/custom-order`, file: 'src/pages/CustomOrder.tsx', changefreq: 'monthly', priority: 0.7 },
-    { loc: `${BASE_URL}/partnership`, file: 'src/pages/Partnership.tsx', changefreq: 'monthly', priority: 0.7 },
+    { loc: `${BASE_URL}/`, file: 'src/pages/NaturraHome.tsx', changefreq: 'weekly', priority: 1.0 },
+    { loc: `${BASE_URL}/products`, file: 'src/pages/NaturraProducts.tsx', changefreq: 'weekly', priority: 0.9 },
+    { loc: `${BASE_URL}/blog`, file: 'src/pages/NaturraBlog.tsx', changefreq: 'daily', priority: 0.9 },
+    { loc: `${BASE_URL}/about`, file: 'src/pages/NaturraAbout.tsx', changefreq: 'monthly', priority: 0.7 },
+    { loc: `${BASE_URL}/custom-order`, file: 'src/pages/NaturraCustomOrder.tsx', changefreq: 'monthly', priority: 0.7 },
+    { loc: `${BASE_URL}/partnership`, file: 'src/pages/NaturraPartnership.tsx', changefreq: 'monthly', priority: 0.7 },
     { loc: `${BASE_URL}/terms-of-service`, file: 'src/pages/TermsOfService.tsx', changefreq: 'yearly', priority: 0.4 },
     { loc: `${BASE_URL}/shipping-information`, file: 'src/pages/ShippingInformation.tsx', changefreq: 'yearly', priority: 0.4 },
     { loc: `${BASE_URL}/search`, file: 'src/pages/SearchResults.tsx', changefreq: 'monthly', priority: 0.4 },
-    { loc: `${BASE_URL}/product-tag/best-seller`, file: 'src/pages/BestSellers.tsx', changefreq: 'weekly', priority: 0.6 },
-    { loc: `${BASE_URL}/furniture-besi-custom-bekasi`, file: 'src/pages/FurnitureBesiCustomBekasi.tsx', changefreq: 'monthly', priority: 0.75 },
+    { loc: `${BASE_URL}/commodity-export-bekasi`, file: 'src/pages/CommodityExportBekasi.tsx', changefreq: 'monthly', priority: 0.75 },
     { loc: `${BASE_URL}/image-license`, file: 'src/pages/ImageLicense.tsx', changefreq: 'yearly', priority: 0.3 }
   ]
 
@@ -539,7 +508,7 @@ const generateAttachmentSitemap = (products, posts) => {
         '    <image:image>',
         `      <image:loc>${product.image}</image:loc>`,
         `      <image:title>${product.name}</image:title>`,
-        `      <image:caption>${product.name} - Furniture Industrial Custom Bekasi</image:caption>`,
+        `      <image:caption>${product.name} - Premium Agricultural Commodities Indonesia</image:caption>`,
         '    </image:image>',
         '  </url>'
       ].join('\n'))

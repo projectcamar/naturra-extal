@@ -4,11 +4,12 @@ import { Link, useLocation, useSearchParams } from 'react-router-dom'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-// legacy Naturra image import removed
 import { getPostsByPage, getTotalPages, getAllBlogPosts } from '../data/blog'
 import { generateLanguageSpecificMeta, generateLocalizedUrls, truncateTitle, truncateMetaDescription } from '../utils/seo'
 import { getCurrentLanguage, getLinkWithLanguage, type LanguageCode } from '../utils/languageManager'
 import './Blog.css'
+
+const heroImage = "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1920"
 
 const BLOG_INTRO_TRANSLATIONS: Record<
   LanguageCode,
@@ -22,218 +23,186 @@ const BLOG_INTRO_TRANSLATIONS: Record<
   }
 > = {
   id: {
-    mainTitle: '135+ Artikel agricultural commodities: Panduan Lengkap dari Workshop Bekasi',
+    mainTitle: '135+ Artikel seputar Perdagangan Komoditas Internasional',
     introParagraph:
-      'Temukan jawaban lengkap untuk pertanyaan Anda tentang agricultural commodities. Artikel kami ditulis berdasarkan pengalaman nyata menangani 1000+ project sejak 1999 di Jabodetabek.',
+      'Dapatkan wawasan mendalam tentang dunia pertanian Indonesia. Artikel kami ditulis berdasarkan pengalaman puluhan tahun dalam perdagangan global, pengadaan, dan kontrol kualitas.',
     bullets: [
       {
-        title: 'Tips & Panduan Praktis',
-        description:
-          'Cara memilih, merawat, dan mengoptimalkan agricultural commodities untuk bisnis Anda'
+        title: 'Panduan Perdagangan & Pengadaan',
+        description: 'Saran ahli tentang pengadaan kakao, cengkeh, dan cocopeat premium langsung dari petani Indonesia.'
       },
       {
-        title: 'Perbandingan Material & Harga',
-        description:
-          'Data objektif furniture besi vs kayu, custom vs ready, powder coating vs cat'
+        title: 'Kualitas & Spesifikasi',
+        description: 'Data teknis terperinci tentang Kode HS, grade produk, dan standar ekspor internasional.'
       },
       {
-        title: 'Local Area Guide',
-        description:
-          'Coverage area lengkap Bekasi, Cikarang, Jakarta dengan workshop terdekat'
+        title: 'Wawasan Ekspor Global',
+        description: 'Pembaruan tentang tren pasar, logistik, dan kepatuhan untuk pembeli internasional.'
       },
       {
-        title: 'Design Inspiration',
-        description:
-          'Tren 2025, kombinasi material, layout optimization untuk cafe dan restoran'
+        title: 'Keberlanjutan & Dampak',
+        description: 'Bagaimana kami memastikan perdagangan adil dan praktik berkelanjutan di seluruh kepulauan Indonesia.'
       }
     ]
   },
   en: {
-    mainTitle: '135+ Agricultural Commodities Articles: Complete Guide from Our Bekasi Workshop',
+    mainTitle: '135+ Articles on International Commodity Trading',
     introParagraph:
-      'Find clear, practical answers to all your questions about Agricultural Commodities. Every article is written based on real projects – 1,000+ jobs handled since 1999 across Greater Jakarta (Jabodetabek).',
+      'Gain deep insights into the world of Indonesian agriculture. Our articles are based on decades of experience in global trade, sourcing, and quality control.',
     bullets: [
       {
-        title: 'Practical Tips & Guides',
-        description:
-          'How to choose, maintain, and optimize Agricultural Commodities for your café, restaurant, office, or hotel'
+        title: 'Trade & Sourcing Guides',
+        description: 'Expert advice on sourcing premium cocoa, cloves, and cocopeat directly from Indonesian farmers.'
       },
       {
-        title: 'Material & Price Comparisons',
-        description:
-          'Objective data on steel vs wood, custom vs ready-made, powder coating vs standard paint'
+        title: 'Quality & Specifications',
+        description: 'Detailed technical data on HS Codes, product grades, and international export standards.'
       },
       {
-        title: 'Local Area Guides',
-        description:
-          'Coverage for Bekasi, Cikarang, Jakarta and nearby areas with the nearest workshop support'
+        title: 'Global Export Insights',
+        description: 'Updates on market trends, logistics, and compliance for international buyers.'
       },
       {
-        title: 'Design Inspiration',
-        description:
-          '2025 trends, material combinations, and layout optimization ideas for hospitality and commercial spaces'
+        title: 'Sustainability & Impact',
+        description: 'How we ensure fair trade and sustainable practices across the Indonesian archipelago.'
       }
     ]
   },
   ar: {
-    mainTitle: 'أكثر من 135 مقالاً عن الأثاث الصناعي: دليل متكامل من ورشة بيكاسي',
+    mainTitle: 'أكثر من 135 مقالاً حول تجارة السلع الدولية',
     introParagraph:
-      'اكتشف إجابات عملية وواضحة عن جميع أسئلتك حول الأثاث الصناعي. كل مقال مبني على خبرة حقيقية من أكثر من 1000 مشروع منذ عام 1999 في منطقة جاكرتا الكبرى.',
+      'احصل على رؤى عميقة حول عالم الزراعة الإندونيسية. تعتمد مقالاتنا على عقود من الخبرة في التجارة العالمية والمصادر ومراقبة الجودة.',
     bullets: [
       {
-        title: 'نصائح وإرشادات عملية',
-        description:
-          'كيفية اختيار الأثاث الصناعي المناسب، المحافظة عليه، والاستفادة القصوى منه في مشروعك التجاري'
+        title: 'أدلة التجارة والمصادر',
+        description: 'نصائح الخبراء حول الحصول على الكاكاو والقرنفل والكوكوبيت المتميز مباشرة من المزارعين الإندونيسيين.'
       },
       {
-        title: 'مقارنات المواد والأسعار',
-        description:
-          'بيانات موضوعية حول الأثاث المعدني مقابل الخشبي، المخصص مقابل الجاهز، بودرة كوتينغ مقابل الدهان العادي'
+        title: 'الجودة والمواصفات',
+        description: 'بيانات فنية مفصلة حول رموز النظام المنسق ودرجات المنتجات ومعايير التصدير الدولية.'
       },
       {
-        title: 'دليل المناطق المحلية',
-        description:
-          'تغطية كاملة لمناطق بيكاسي، تشيكارانغ، جاكرتا مع أقرب ورشة دعم'
+        title: 'رؤى التصدير العالمية',
+        description: 'تحديثات حول اتجاهات السوق والخدمات اللوجستية والامتثال للمشترين الدوليين.'
       },
       {
-        title: 'إلهام للتصميم',
-        description:
-          'اتجاهات 2025، دمج المواد، وأفكار لتخطيط المساحات للمقاهي والمطاعم'
+        title: 'الاستدامة والأثر',
+        description: 'كيف نضمن التجارة العادلة والممارسات المستدامة في جميع أنحاء الأرخبيل الإندونيسي.'
       }
     ]
   },
   zh: {
-    mainTitle: '135+ 篇工业风家具文章：来自勿加泗工坊的完整指南',
+    mainTitle: '135+ 篇国际大宗商品交易文章',
     introParagraph:
-      '在这里，你可以找到关于工业风家具的大部分问题的系统答案。所有文章都基于真实项目经验——自 1999 年以来完成 1000+ 个雅加达都会区项目。',
+      '深入了解印尼农业世界。我们的文章基于数十年在全球贸易、采购和质量控制方面的经验。',
     bullets: [
       {
-        title: '实用技巧与操作指南',
-        description:
-          '如何为咖啡馆、餐厅、办公室、酒店选择、保养并高效利用工业风家具'
+        title: '贸易与采购指南',
+        description: '有关直接从印尼农民手中采购优质可可、丁香和椰糠的专家建议。'
       },
       {
-        title: '材质与价格对比',
-        description:
-          '客观对比钢材 vs 木材、定制 vs 成品、粉末喷涂 vs 普通油漆'
+        title: '质量与规格',
+        description: '有关海关编码、产品等级和国际出口标准的详细技术数据。'
       },
       {
-        title: '本地区域指南',
-        description:
-          '覆盖勿加泗、芝卡朗、雅加达等区域，并说明就近工坊支持情况'
+        title: '全球出口洞察',
+        description: '面向国际买家的市场趋势、物流和合规性更新。'
       },
       {
-        title: '设计灵感',
-        description:
-          '2025 年趋势、材质搭配，以及适用于咖啡馆和餐厅的平面布局优化'
+        title: '可持续性与影响',
+        description: '我们如何确保印尼群岛各地的公平贸易和可持续做法。'
       }
     ]
   },
   ja: {
-    mainTitle: '135本以上の工業系家具記事：ベカシ工房からの完全ガイド',
+    mainTitle: '135本以上の国際商品取引に関する記事',
     introParagraph:
-      '工業系家具についての疑問に、実務に基づいた答えをご用意しました。1999年以降、ジャボデタベックで1,000件以上のプロジェクトを手掛けてきた経験を記事化しています。',
+      'インドネシア農業の世界についての深い洞察を提供します。当社の記事は、世界貿易、ソーシング、品質管理における数十年の経験に基づいています。',
     bullets: [
       {
-        title: '実践的なヒントとガイド',
-        description:
-          'カフェ・レストラン・オフィス・ホテル向けの工業系家具の選び方、メンテナンス方法、活用ノウハウ'
+        title: '取引・調達ガイド',
+        description: 'インドネシアの農家から直接、プレミアムなカカオ、クローブ、ココピートを調達するための専門的なアドバイス。'
       },
       {
-        title: '素材・価格比較',
-        description:
-          'スチール vs 木材、オーダーメイド vs 既製品、パウダーコーティング vs 通常塗装の客観的な比較'
+        title: '品質と仕様',
+        description: 'HSコード、製品グレード、および国際輸出基準に関する詳細な技術データ。'
       },
       {
-        title: 'ローカルエリアガイド',
-        description:
-          'ベカシ・チカラン・ジャカルタ周辺エリアの対応範囲と最寄り工房のご案内'
+        title: 'グローバル輸出の洞察',
+        description: '国際的なバイヤーのための市場動向、物流、およびコンプライアンスに関するアップデート。'
       },
       {
-        title: 'デザインインスピレーション',
-        description:
-          '2025年トレンド、素材ミックス、カフェ／レストランのレイアウト最適化アイデア'
+        title: '持続可能性と影響',
+        description: 'インドネシア諸島全体で公平な取引と持続可能な慣行をどのように確保しているか。'
       }
     ]
   },
   es: {
-    mainTitle: '135+ Artículos sobre Muebles Industriales: Guía Completa desde nuestro Taller en Bekasi',
+    mainTitle: 'Más de 135 artículos sobre comercio internacional de materias primas',
     introParagraph:
-      'Encuentra respuestas claras y prácticas a tus dudas sobre muebles industriales. Cada artículo está basado en proyectos reales: más de 1.000 trabajos realizados desde 1999 en el área de Yakarta (Jabodetabek).',
+      'Obtenga información detallada sobre el mundo de la agricultura indonesia. Nuestros artículos se basan en décadas de experiencia en el comercio mundial, el abastecimiento y el control de calidad.',
     bullets: [
       {
-        title: 'Consejos y Guías Prácticas',
-        description:
-          'Cómo elegir, mantener y sacar el máximo provecho a los muebles industriales en tu negocio'
+        title: 'Guías de comercio y abastecimiento',
+        description: 'Consejos de expertos sobre el abastecimiento de cacao, clavo y fibra de coco de primera calidad directamente de los agricultores indonesios.'
       },
       {
-        title: 'Comparación de Materiales y Precios',
-        description:
-          'Datos objetivos sobre acero vs madera, muebles a medida vs estándar, powder coating vs pintura convencional'
+        title: 'Calidad y especificaciones',
+        description: 'Datos técnicos detallados sobre códigos del SA, grados de productos y normas internacionales de exportación.'
       },
       {
-        title: 'Guías por Zonas',
-        description:
-          'Cobertura detallada para Bekasi, Cikarang y Yakarta con apoyo de taller cercano'
+        title: 'Información sobre exportaciones mundiales',
+        description: 'Actualizaciones sobre tendencias del mercado, logística y cumplimiento para compradores internacionales.'
       },
       {
-        title: 'Inspiración de Diseño',
-        description:
-          'Tendencias 2025, combinaciones de materiales y optimización de distribución para cafés y restaurantes'
+        title: 'Sostenibilidad e impacto',
+        description: 'Cómo garantizamos el comercio justo y las prácticas sostenibles en todo el archipiélago indonesio.'
       }
     ]
   },
   fr: {
-    mainTitle: '135+ Articles sur le mobilier industriel : guide complet depuis notre atelier de Bekasi',
+    mainTitle: 'Plus de 135 articles sur le commerce international des matières premières',
     introParagraph:
-      'Trouvez des réponses précises et concrètes à toutes vos questions sur le mobilier industriel. Chaque article s’appuie sur des projets réels : plus de 1 000 réalisations depuis 1999 dans la région de Jakarta (Jabodetabek).',
+      'Découvrez en profondeur le monde de l\'agriculture indonésienne. Nos articles s\'appuient sur des décennies d\'expérience dans le commerce mondial, l\'approvisionnement et le contrôle qualité.',
     bullets: [
       {
-        title: 'Conseils & Guides Pratiques',
-        description:
-          'Comment choisir, entretenir et optimiser le mobilier industriel pour votre café, restaurant, bureau ou hôtel'
+        title: 'Guides de commerce et d\'approvisionnement',
+        description: 'Conseils d\'experts sur l\'approvisionnement en cacao, clous de girofle et fibre de coco de qualité supérieure directement auprès des agriculteurs indonésiens.'
       },
       {
-        title: 'Comparatifs Matériaux & Prix',
-        description:
-          'Analyse objective acier vs bois, sur‑mesure vs prêt‑à‑l’emploi, powder coating vs peinture classique'
+        title: 'Qualité et spécifications',
+        description: 'Données techniques détaillées sur les codes SH, les qualités des produits et les normes d\'exportation internationales.'
       },
       {
-        title: 'Guides Locaux',
-        description:
-          'Couverture détaillée de Bekasi, Cikarang et Jakarta avec indication de l’atelier le plus proche'
+        title: 'Aperçus sur l\'exportation mondiale',
+        description: 'Mises à jour sur les tendances du marché, la logistique et la conformité pour les acheteurs internationaux.'
       },
       {
-        title: 'Inspiration Design',
-        description:
-          'Tendances 2025, associations de matériaux et optimisation des plans pour cafés et restaurants'
+        title: 'Durabilité et impact',
+        description: 'Comment nous garantissons un commerce équitable et des pratiques durables à travers l\'archipel indonésien.'
       }
     ]
   },
   ko: {
-    mainTitle: '135편 이상의 산업용 가구 블로그: 베카시 공방에서 전하는 완전 가이드',
+    mainTitle: '135개 이상의 국제 상품 거래 관련 기사',
     introParagraph:
-      '산업용 가구에 대한 궁금증을 실제 현장 경험을 바탕으로 정리했습니다. 1999년 이후 자보데타벡 전역에서 1,000개 이상의 프로젝트를 수행한 노하우를 글로 담았습니다.',
+      '인도네시아 농업의 세계에 대한 깊은 통찰력을 얻으십시오. 당사의 기사는 수십 년간의 글로벌 무역, 소싱 및 품질 관리 경험을 바탕으로 합니다.',
     bullets: [
       {
-        title: '실전 팁 & 가이드',
-        description:
-          '카페·레스토랑·오피스·호텔에 맞는 산업용 가구 선택, 관리, 활용 방법'
+        title: '무역 및 소싱 가이드',
+        description: '인도네시아 농가에서 직접 프리미엄 코코아, 정향 및 코코피트를 조딩하기 위한 전문가 조언.'
       },
       {
-        title: '자재 & 가격 비교',
-        description:
-          '철제 vs 원목, 맞춤 제작 vs 기성품, 파우더 코팅 vs 일반 도장에 대한 객관적인 비교'
+        title: '품질 및 사양',
+        description: 'HS 코드, 제품 등급 및 국제 수출 표준에 대한 상세한 기술 데이터.'
       },
       {
-        title: '로컬 서비스 지역 안내',
-        description:
-          '베카시, 치카랑, 자카르타 등 서비스 가능 지역과 인근 공방 정보'
+        title: '글로벌 수출 인사이트',
+        description: '해외 구매자를 위한 시장 트렌드, 물류 및 규정 준수에 대한 업데이트.'
       },
       {
-        title: '디자인 인스피레이션',
-        description:
-          '2025년 트렌드, 소재 조합, 카페·레스토랑 공간 레이아웃 최적화 아이디어'
+        title: '지속 가능성 및 영향',
+        description: '인도네시아 전역에서 공정 무역과 지속 가능한 관행을 보장하는 방법.'
       }
     ]
   }
@@ -245,16 +214,17 @@ const BLOG_PAGINATION_TRANSLATIONS: Record<
     prev: string
     next: string
     numberLocale: string
+    archiveTitle: string
   }
 > = {
-  id: { prev: 'Sebelumnya', next: 'Selanjutnya', numberLocale: 'id-ID' },
-  en: { prev: 'Prev', next: 'Next', numberLocale: 'en-US' },
-  ar: { prev: 'السابق', next: 'التالي', numberLocale: 'ar-EG' },
-  zh: { prev: '上一页', next: '下一页', numberLocale: 'zh-CN' },
-  ja: { prev: '前へ', next: '次へ', numberLocale: 'ja-JP' },
-  es: { prev: 'Anterior', next: 'Siguiente', numberLocale: 'es-ES' },
-  fr: { prev: 'Précédent', next: 'Suivant', numberLocale: 'fr-FR' },
-  ko: { prev: '이전', next: '다음', numberLocale: 'ko-KR' }
+  id: { prev: 'Sebelumnya', next: 'Selanjutnya', numberLocale: 'id-ID', archiveTitle: 'Arsip Blog Lengkap (Semua Artikel)' },
+  en: { prev: 'Prev', next: 'Next', numberLocale: 'en-US', archiveTitle: 'Complete Blog Archive (All Articles)' },
+  ar: { prev: 'السابق', next: 'التالي', numberLocale: 'ar-EG', archiveTitle: 'أرشيف المدونة الكامل (جميع المقالات)' },
+  zh: { prev: '上一页', next: '下一页', numberLocale: 'zh-CN', archiveTitle: '完整博客存档（所有文章）' },
+  ja: { prev: '前へ', next: '次へ', numberLocale: 'ja-JP', archiveTitle: '完全なブログアーカイブ（すべての記事）' },
+  es: { prev: 'Anterior', next: 'Siguiente', numberLocale: 'es-ES', archiveTitle: 'Archivo Completo del Blog (Todos los Artículos)' },
+  fr: { prev: 'Précédent', next: 'Suivant', numberLocale: 'fr-FR', archiveTitle: 'Archive Complète du Blog (Tous les Articles)' },
+  ko: { prev: '이전', next: '다음', numberLocale: 'ko-KR', archiveTitle: '전체 블로그 아카이브 (모든 기사)' }
 }
 
 const Blog: React.FC = () => {
@@ -300,9 +270,9 @@ const Blog: React.FC = () => {
   return (
     <div className="blog-page">
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
-        <title>{truncateTitle('Blog agricultural commodities & Tips Desain - Naturra Extal')}</title>
-        <meta name="description" content={truncateMetaDescription('Panduan lengkap agricultural commodities untuk cafe, restoran, hotel. Tips memilih furniture besi custom, cara merawat, tren desain 2025, perbandingan material, harga, dan area workshop Bekasi Jakarta. 135+ artikel berbasis pengalaman 25 tahun Naturra Extal.')} />
-        <meta name="keywords" content="blog agricultural commodities, tips furniture cafe, cara memilih furniture restoran, furniture besi custom panduan, workshop furniture bekasi, harga agricultural commodities 2025, tips desain interior industrial, furniture cafe murah, perbandingan furniture besi vs kayu, cara merawat agricultural commodities, tren furniture 2025, furniture bekasi guide, furniture jakarta tips, inspirasi desain cafe industrial" />
+        <title>{truncateTitle('Naturra Extal Blog: International Commodity Trading Insights')}</title>
+        <meta name="description" content={truncateMetaDescription('Expert insights on Indonesian agricultural commodities: Cocoa, Cloves, and Cocopeat. Learn about global trade trends, quality standards, and sustainable sourcing directly from Indonesian farmers.')} />
+        <meta name="keywords" content="commodity trading blog, cocoa powder export, indonesian cloves trading, cocopeat global supply, agricultural commodities indonesia, international spice trade, sustainable cocoa sourcing, Naturra Extal insights" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta httpEquiv="content-language" content={localeMeta.lang} />
@@ -310,12 +280,12 @@ const Blog: React.FC = () => {
         {localizedUrls.alternates.map((alternate) => (
           <link key={`blog-hreflang-${alternate.hrefLang}`} rel="alternate" hrefLang={alternate.hrefLang} href={alternate.href} />
         ))}
-        {prevUrl && <link rel="prev" href={`https://Naturra-living.com${prevUrl}`} />}
-        {nextUrl && <link rel="next" href={`https://Naturra-living.com${nextUrl}`} />}
+        {prevUrl && <link rel="prev" href={localizedUrls.canonical + `?page=${currentPage - 1}`} />}
+        {nextUrl && <link rel="next" href={localizedUrls.canonical + `?page=${currentPage + 1}`} />}
 
         {/* AI Search Optimization: Clear article purpose */}
-        <meta property="og:title" content="Blog agricultural commodities - 135+ Artikel Tips & Panduan Lengkap" />
-        <meta property="og:description" content="Artikel komprehensif tentang agricultural commodities: tips pemilihan, perbandingan material, panduan harga, area coverage Jabodetabek, dan best practices dari 1000+ project sejak 1999." />
+        <meta property="og:title" content="Naturra Extal Blog - International Commodity Trading Insights" />
+        <meta property="og:description" content="Comprehensive articles on Indonesian agricultural commodities: Cocoa, Cloves, and Cocopeat. Expert insights on quality control and global trade." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={localizedUrls.canonical} />
         <meta property="og:locale" content={localeMeta.locale} />
@@ -330,8 +300,8 @@ const Blog: React.FC = () => {
         <div className="blog-hero-image">
           <img
             src={heroImage}
-            alt="Blog agricultural commodities & Tips Desain Cafe Restoran - 135+ Artikel Panduan Lengkap Naturra Extal"
-            title="Blog agricultural commodities - Tips & Panduan Lengkap dari Workshop Bekasi Naturra Extal"
+            alt="International Commodity Trading Blog - Naturra Extal"
+            title="Naturra Extal Blog: Insights on Indonesian Agricultural Commodities"
             loading="eager"
             fetchPriority="high"
             width="1920"
@@ -347,214 +317,123 @@ const Blog: React.FC = () => {
         </div>
       </section>
 
-      {/* Blog Content Section */}
-      <section className="blog-content-section">
-        <div className="blog-container">
-          {/* AI Search Optimized: Clear intent and value proposition */}
-          <h2 className="blog-main-title">{intro.mainTitle}</h2>
-          <div style={{
-            maxWidth: '900px',
-            margin: '0 auto 3rem',
-            padding: '1.5rem',
-            background: '#f8f9fa',
-            borderRadius: '8px',
-            borderLeft: '4px solid #2C3E50'
-          }}>
-            <p style={{ margin: '0 0 1rem', fontSize: '1rem', lineHeight: '1.6', color: '#2C3E50' }}>
-              {intro.introParagraph}
-            </p>
-            <ul style={{ margin: 0, paddingLeft: '1.5rem', fontSize: '0.95rem', lineHeight: '1.7', color: '#555' }}>
-              {intro.bullets.map((item, index) => (
-                <li key={index}>
-                  <strong>{item.title}:</strong> {item.description}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Blog Grid */}
-          <div className="blog-grid">
-            {posts.map((post) => (
-              <article key={post.id} className="blog-card">
-                <Link to={`/blog/${post.slug}`} className="blog-card-link">
-                  <div className="blog-card-image">
-                    <img
-                      src={post.image}
-                      alt={`${post.title} - ${post.category} Blog agricultural commodities Naturra Extal`}
-                      title={`${post.title} - ${post.category} Artikel agricultural commodities`}
-                      loading="lazy"
-                      width="400"
-                      height="250"
-                      itemProp="image"
-                      data-image-type="blog-post"
-                      data-post-slug={post.slug}
-                      data-category={post.category}
-                    />
-                    <div className="blog-card-badge">Naturra</div>
+      {/* Welcome Section */}
+      <section className="blog-intro">
+        <div className="blog-intro-container">
+          <div className="blog-intro-grid">
+            <div className="blog-intro-text">
+              <h2 className="blog-intro-title">{intro.mainTitle}</h2>
+              <p className="blog-intro-paragraph">{intro.introParagraph}</p>
+            </div>
+            <div className="blog-intro-bullets">
+              {intro.bullets.map((bullet, idx) => (
+                <div key={idx} className="blog-intro-bullet-item">
+                  <div className="blog-intro-bullet-dot"></div>
+                  <div className="blog-intro-bullet-content">
+                    <h4 className="blog-intro-bullet-title">{bullet.title}</h4>
+                    <p className="blog-intro-bullet-desc">{bullet.description}</p>
                   </div>
-                  <div className="blog-card-content">
-                    <span className="blog-card-category">{post.category.toUpperCase()}</span>
-                    <h3 className="blog-card-title">{post.title}</h3>
-                  </div>
-                </Link>
-              </article>
-            ))}
-          </div>
-
-          {/* Pagination - Compact Version */}
-          {totalPages > 1 && (
-            <nav className="blog-pagination" aria-label="Blog pagination">
-              {currentPage > 1 && (
-                <Link
-                  to={buildPageUrl(currentPage - 1)}
-                  className="pagination-btn pagination-prev"
-                  aria-label="Previous page"
-                >
-                  {paginationTexts.prev}
-                </Link>
-              )}
-
-              {/* Smart Pagination with Ellipsis */}
-              {(() => {
-                const pages: (number | string)[] = []
-                const showEllipsis = totalPages > 7
-
-                if (!showEllipsis) {
-                  // Show all pages if 7 or less
-                  for (let i = 1; i <= totalPages; i++) {
-                    pages.push(i)
-                  }
-                } else {
-                  // Always show first page
-                  pages.push(1)
-
-                  if (currentPage <= 3) {
-                    // Near the beginning
-                    pages.push(2, 3, 4, 5, '...', totalPages)
-                  } else if (currentPage >= totalPages - 2) {
-                    // Near the end
-                    pages.push('...', totalPages - 4, totalPages - 3, totalPages - 2, totalPages - 1, totalPages)
-                  } else {
-                    // In the middle
-                    pages.push('...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages)
-                  }
-                }
-
-                return pages.map((page, index) => {
-                  if (page === '...') {
-                    return (
-                      <span key={`ellipsis-${index}`} className="pagination-ellipsis" aria-hidden="true">
-                        ...
-                      </span>
-                    )
-                  }
-
-                  const pageNumber = page as number
-                  return (
-                    <Link
-                      key={pageNumber}
-                      to={buildPageUrl(pageNumber)}
-                      className={`pagination-btn pagination-number ${currentPage === pageNumber ? 'active' : ''}`}
-                      aria-current={currentPage === pageNumber ? 'page' : undefined}
-                    >
-                      {formatPageNumber(pageNumber)}
-                    </Link>
-                  )
-                })
-              })()}
-
-              {currentPage < totalPages && (
-                <Link
-                  to={buildPageUrl(currentPage + 1)}
-                  className="pagination-btn pagination-next"
-                  aria-label="Next page"
-                >
-                  {paginationTexts.next}
-                </Link>
-              )}
-            </nav>
-          )}
-
-          {/* Complete Blog Archive - Collapsible for SEO */}
-          <div className="blog-archive-section" style={{ marginTop: '4rem', paddingTop: '3rem', borderTop: '1px solid #e0e0e0' }}>
-            <button
-              className="blog-archive-toggle"
-              onClick={() => setIsArchiveExpanded(!isArchiveExpanded)}
-              aria-expanded={isArchiveExpanded}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                width: '100%',
-                background: 'none',
-                border: 'none',
-                padding: '1rem 0',
-                cursor: 'pointer',
-                color: '#2C3E50',
-                fontSize: '1.1rem',
-                fontWeight: 600
-              }}
-            >
-              <span>
-                {language === 'id' ? "Arsip Blog Lengkap (Semua Artikel)" :
-                  language === 'ar' ? "أرشيف المدونة الكامل (جميع المقالات)" :
-                    language === 'zh' ? "完整博客存档（所有文章）" :
-                      language === 'ja' ? "完全なブログアーカイブ（全記事）" :
-                        language === 'es' ? "Archivo Completo del Blog (Todos los Artículos)" :
-                          language === 'fr' ? "Archives Complètes du Blog (Tous les Articles)" :
-                            language === 'ko' ? "완전한 블로그 아카이브 (모든 기사)" :
-                              "Complete Blog Archive (All Articles)"}
-              </span>
-              {isArchiveExpanded ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
-            </button>
-            <nav
-              className={`blog-archive-links ${isArchiveExpanded ? 'expanded' : 'collapsed'}`}
-              aria-label="All blog posts"
-              aria-hidden={!isArchiveExpanded}
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-                gap: '10px 20px',
-                overflow: 'hidden',
-                transition: 'max-height 0.4s ease, opacity 0.3s ease',
-                maxHeight: isArchiveExpanded ? '800px' : '0',
-                opacity: isArchiveExpanded ? 1 : 0,
-                paddingTop: isArchiveExpanded ? '1rem' : '0',
-                paddingBottom: isArchiveExpanded ? '1rem' : '0'
-              }}
-            >
-              {allBlogPosts.map((post) => (
-                <Link
-                  key={post.id}
-                  to={getLinkWithLanguage(`/blog/${post.slug}`, language)}
-                  style={{
-                    color: '#555',
-                    textDecoration: 'none',
-                    fontSize: '0.9rem',
-                    lineHeight: 1.5,
-                    padding: '0.5rem 0',
-                    borderBottom: '1px solid #f0f0f0',
-                    transition: 'color 0.3s ease',
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                    whiteSpace: 'nowrap'
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = '#8B7355'}
-                  onMouseLeave={(e) => e.currentTarget.style.color = '#555'}
-                >
-                  {post.title}
-                </Link>
+                </div>
               ))}
-            </nav>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Blog Feed */}
+      <section className="blog-feed">
+        <div className="blog-container">
+          <div className="blog-grid">
+            {posts.map((post) => (
+              <article key={post.id} className="blog-card" itemScope itemType="https://schema.org/BlogPosting">
+                <Link to={getLinkWithLanguage(`/blog/${post.slug}`, language)} className="blog-card-image-link">
+                  <div className="blog-card-image">
+                    <img src={post.image} alt={post.title} loading="lazy" itemProp="image" />
+                    <div className="blog-card-category">{post.category}</div>
+                  </div>
+                </Link>
+                <div className="blog-card-content">
+                  <div className="blog-card-meta">
+                    <time dateTime={post.date} itemProp="datePublished">{post.date}</time>
+                    <span className="blog-card-author" itemProp="author">{post.author}</span>
+                  </div>
+                  <h3 className="blog-card-title" itemProp="headline">
+                    <Link to={getLinkWithLanguage(`/blog/${post.slug}`, language)}>{post.title}</Link>
+                  </h3>
+                  <p className="blog-card-excerpt" itemProp="description">{post.excerpt}</p>
+                  <Link to={getLinkWithLanguage(`/blog/${post.slug}`, language)} className="blog-card-more">
+                    Read More
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
 
-      <Footer isIndonesian={isIndonesian} language={language} />
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="blog-pagination">
+              {prevUrl ? (
+                <Link to={prevUrl} className="blog-pagination-btn">
+                  {paginationTexts.prev}
+                </Link>
+              ) : (
+                <span className="blog-pagination-btn disabled">{paginationTexts.prev}</span>
+              )}
+
+              <div className="blog-pagination-numbers">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => (
+                  <Link
+                    key={num}
+                    to={buildPageUrl(num)}
+                    className={`blog-pagination-num ${currentPage === num ? 'active' : ''}`}
+                  >
+                    {formatPageNumber(num)}
+                  </Link>
+                ))}
+              </div>
+
+              {nextUrl ? (
+                <Link to={nextUrl} className="blog-pagination-btn">
+                  {paginationTexts.next}
+                </Link>
+              ) : (
+                <span className="blog-pagination-btn disabled">{paginationTexts.next}</span>
+              )}
+            </div>
+          )}
+
+          {/* Archive Toggle */}
+          <div className="blog-archive-section">
+            <button
+              className="blog-archive-toggle"
+              onClick={() => setIsArchiveExpanded(!isArchiveExpanded)}
+              aria-expanded={isArchiveExpanded}
+            >
+              <h3 className="blog-archive-title">{paginationTexts.archiveTitle}</h3>
+              {isArchiveExpanded ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+            </button>
+
+            {isArchiveExpanded && (
+              <div className="blog-archive-grid">
+                {allBlogPosts.map((post) => (
+                  <Link
+                    key={`archive-${post.id}`}
+                    to={getLinkWithLanguage(`/blog/${post.slug}`, language)}
+                    className="blog-archive-item"
+                  >
+                    <span className="blog-archive-date">{post.date}</span>
+                    <span className="blog-archive-link-title">{post.title}</span>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      <Footer isIndonesian={isIndonesian} />
     </div>
   )
 }
 
 export default Blog
-

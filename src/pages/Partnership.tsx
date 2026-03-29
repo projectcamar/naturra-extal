@@ -3,7 +3,13 @@ import { useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-// legacy Naturra image import removed
+// Premium Agricultural Commodity Images
+const heroImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1920&q=80'
+const experienceImage = 'https://images.unsplash.com/photo-1516053303028-569806443c52?w=1200'
+const collaborationImage = 'https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?w=1200'
+const flexibilityImage = 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1200'
+const scaleImage = 'https://images.unsplash.com/photo-1586528116311-ad866efd92bf?w=1200'
+
 import projectVideo from '../assets/meja-makan-industrial.mp4'
 // legacy Naturra image import removed
 // legacy Naturra image import removed
@@ -40,73 +46,74 @@ const PARTNERSHIP_TRANSLATIONS: Record<
   }
 > = {
   id: {
-    pageTitle: `Partnership Program agricultural commodities: Kontraktor, Desainer, Developer - Naturra Extal`,
-    metaDescription: `Bagaimana cara kerja sama dengan Naturra Extal untuk project furniture? Program partnership untuk kontraktor, interior designer, property developer, hotel chain. Keuntungan partnership: Volume pricing hingga 20% discount, dedicated project manager, priority production, 3D rendering gratis, technical support on-site, invoice termin fleksibel. Pengalaman handling project hotel 100+ kamar, restoran chain 10+ outlet, mall tenant 50+ unit. Syarat partnership minimum project Rp 50 juta atau 5+ project/tahun.`,
-    metaKeywords: `partnership furniture bekasi, kerja sama agricultural commodities, program mitra furniture bekasi, diskon volume furniture bekasi, kontraktor furniture partner, interior designer furniture supplier, developer furniture bekasi, pengadaan furniture hotel bekasi, furniture project besar bekasi, supplier furniture kontraktor, mitra furniture restoran chain, furniture mall tenant bekasi`,
+    pageTitle: `Program Kemitraan Komoditas Pertanian: Importir, Wholesaler, Industri - Naturra Extal`,
+    metaDescription: `Bagaimana cara kerja sama dengan Naturra Extal untuk pasokan komoditas pertanian? Program partnership untuk importir global, wholesaler, dan industri makanan. Keuntungan partnership: Harga volume kompetitif, jaminan kualitas, prioritas pengiriman, dukungan logistik internasional, dan fleksibilitas kontrak. Pengalaman menangani ekspor skala besar ke Asia, Eropa, dan Amerika.`,
+    metaKeywords: `partnership komoditas pertanian, ekspor cokelat, supplier cengkeh, distributor cocopeat, mitra ekspor pertanian indonesia`,
     heroTitle: `Kerja Sama`,
     mainTitle: `Setiap proyek punya cerita sendiri`,
     mainParagraphs: [
-      `Baik itu pengadaan furnitur hotel, vila, restoran, atau rumah tinggal - yang dibutuhkan bukan hanya produk, tapi mitra kerja yang bisa dipercaya. Naturra Extal hadir bukan sebagai penjual, tapi sebagai bagian dari tim Anda.`,
-      `Kami mengerti bahwa sebuah proyek berarti tenggat, spesifikasi ketat, revisi mendadak, dan harapan yang tinggi. Anda butuh rekan yang bisa mengakomodasi, bukan menambah kerumitan. Yang bisa mendengar, bukan hanya menjawab.`
+      `Baik itu pasokan Cocoa Powder untuk industri cokelat, Cengkeh premium untuk ritel, atau Cocopeat untuk kebutuhan agrikultur skala besar - yang dibutuhkan bukan hanya produk, tapi mitra eksportir yang bisa dipercaya. Naturra Extal hadir sebagai bagian dari rantai pasok global Anda.`,
+      `Kami mengerti bahwa ekspor berarti standar kualitas ketat, kepastian logistik, pemenuhan kuota tepat waktu, dan transparansi harga. Anda butuh rekan yang bisa mengakomodasi kebutuhan industri, bukan menambah kerumitan birokrasi.`
     ],
     experienceTitle: `Pengalaman Jadi Nilai Tambah`,
     experienceParagraphs: [
-      `Kami sudah terbiasa ikut dalam banyak skema proyek - dari apartemen di tengah kota, resor di pinggir pantai, hingga pengadaan ruang publik. Setiap klien membawa tantangan berbeda. Justru itu yang membuat kami terlatih, bukan sekadar ahli membuat furnitur, tapi juga memahami dinamika proyeknya.`,
-      `Mulai dari proses penyesuaian desain, pemilihan material, hingga skema pengiriman bertahap, semuanya bisa dikomunikasikan. Anda tidak perlu menjelaskan dua kali. Kami tahu bagaimana menyusun alur kerja yang efisien.`
+      `Kami sudah terbiasa ikut dalam banyak skema pasokan internasional - dari pemenuhan bahan baku industri manufaktur di Eropa hingga distributor rempah-rempah di Timur Tengah. Setiap pasar membawa tantangan regulasi berbeda.`,
+      `Mulai dari proses penyesuaian sertifikasi, pemilihan grading teknis, hingga skema pengiriman laut/udara yang efisien, semuanya bisa dikomunikasikan secara profesional. Kami tahu bagaimana menyusun alur pasokan komoditas yang handal.`
     ],
-    collaborationTitle: `Bukan Sekadar Produksi, Tapi Kolaborasi`,
-    collaborationSubtitle: `Kontraktor Mebel`,
+    collaborationTitle: `Bukan Sekadar Suplai, Tapi Kemitraan Strategis`,
+    collaborationSubtitle: `Mitra Ekspor Komoditas Global`,
     collaborationParagraphs: [
-      `Kami percaya, keberhasilan proyek bukan dari banyaknya item yang diproduksi, tapi dari seberapa tepat kami mengeksekusi ide Anda. Ada klien yang datang dengan moodboard, ada yang cuma kirim foto, bahkan ada yang hanya bilang: "Saya butuh nuansa tropis, hangat, tapi tetap elegan."`,
-      `Semua bisa dibicarakan. Tim kami terbuka untuk berdiskusi dari awal. Anda bisa menyampaikan keperluan khusus: ukuran ruang, batasan anggaran, gaya desain interior, atau detail konstruksi.`,
-      `Kami akan bantu merumuskan solusi. Bukan dengan kata-kata manis, tapi dengan sketsa, perhitungan material dan prototipe bila dibutuhkan. Semuanya jelas dan terukur.`
+      `Kami percaya, keberhasilan kemitraan bukan hanya dari volume yang dikirim, tapi dari seberapa akurat kami memenuhi spesifikasi teknis industri Anda. Kami siap melayani permintaan khusus terkait parameter kimia, tingkat kadar air, hingga metode pengemasan bulk.`,
+      `Tim kami terbuka untuk berdiskusi terkait kontrak jangka panjang dan jaminan kontinuitas pasokan. Anda bisa menyampaikan keperluan khusus: standardisasi kualitas, batasan anggaran logistik, atau detail pengiriman internasional.`,
+      `Kami akan bantu merumuskan solusi pasokan. Bukan hanya janji ketersediaan, tapi dengan data teknis, laporan inspeksi kualitas, dan prototipe produk bila diperlukan untuk pengujian laboratorium Anda.`
     ],
-    flexibilityTitle: `Tahu Kapan Harus Cepat, Tahu Kapan Harus Teliti`,
+    flexibilityTitle: `Fleksibilitas Logistik & Volume`,
     flexibilityParagraphs: [
-      `Beberapa klien butuh cepat. Ada yang menginginkan tahap pengiriman per zona. Ada pula yang meminta penyesuaian produksi berdasarkan hasil site inspection. Semua itu masuk akal dan bisa dibicarakan.`,
-      `Kami tidak menawarkan paket seragam untuk semua proyek. Anda bisa memilih. Mau fokus pada kayu solid dengan sentuhan handmade? Atau kombinasi antara efisiensi produksi dan detail artistik? Kami bantu wujudkan.`
+      `Beberapa klien butuh pengiriman cepat skala LCL. Ada yang menginginkan kontrak tahunan skala FCL. Ada pula yang meminta penyesuaian grading berdasarkan hasil pengujian sampel awal. Semua itu bisa dibicarakan.`,
+      `Kami tidak menawarkan paket kaku untuk semua mitra. Anda bisa memilih. Mau fokus pada kualitas premium (Grade A) untuk pasar ritel? Atau kombinasi antara efisiensi biaya dan volume besar untuk kebutuhan industri? Kami bantu wujudkan.`
     ],
-    scaleTitle: `Proyek Besar atau Kecil, Sama-Sama Serius`,
-    scaleDescription: `Pernah mengerjakan ratusan unit dalam satu waktu. Pernah juga hanya buat satu set kursi untuk area tamu privat. Skala bukan penentu. Yang penting: apakah proyek Anda berarti?`,
-    scaleQuestion: `Bila jawabannya ya, mari kita bicarakan lebih lanjut.`,
-    ctaTitle: `Siap Bahas Proyek Anda?`,
-    ctaDescription: `Ceritakan kebutuhan proyek Anda sekarang. Kirimkan gambar, denah, atau referensi, dan kami akan bantu merumuskannya jadi langkah nyata.`,
-    ctaButton: `Hubungi kami sekarang`,
+    scaleTitle: `Kemitraan Skala Global`,
+    scaleDescription: `Telah menangani pengiriman kontainer dalam jumlah besar secara berkelanjutan. Juga siap membantu bisnis menengah yang sedang berekspansi ke pasar internasional. Skala volume bukan penghambat komitmen kami.`,
+    scaleQuestion: `Jika Anda mencari mitra suplai komoditas yang handal, mari kita bicarakan kerja sama ini.`,
+    ctaTitle: `Siap Membahas Rencana Suplai Anda?`,
+    ctaDescription: `Ceritakan kebutuhan komoditas Anda sekarang. Kirimkan spesifikasi teknis, estimasi volume, atau detail proyek Anda, dan kami akan membantu merumuskannya jadi langkah nyata.`,
+    ctaButton: `Hubungi tim ekspor kami`,
     contactTitle: `Temukan Kami`
   },
   en: {
-    pageTitle: `Agricultural Commodities Partnership Program: Contractors, Designers, Developers - Naturra Extal`,
-    metaDescription: `How to partner with Naturra Extal for furniture projects? Partnership program for contractors, interior designers, property developers, hotel chains. Partnership benefits: Volume pricing up to 20% discount, dedicated project manager, priority production, free 3D rendering, on-site technical support, flexible payment terms. Experience handling 100+ room hotel projects, 10+ outlet restaurant chains, 50+ mall tenant units. Partnership requirements: minimum Rp 50 million project or 5+ projects/year.`,
-    metaKeywords: `furniture partnership bekasi, Agricultural Commodities collaboration, furniture contractor bekasi, interior designer furniture supplier, developer furniture partnership, hotel furniture procurement, commercial furniture supplier`,
+    pageTitle: `Agricultural Commodities Partnership Program: Importers, Wholesalers, Industry - Naturra Extal`,
+    metaDescription: `How to partner with Naturra Extal for agricultural commodity supply? Partnership program for global importers, wholesalers, and food industries. Partnership benefits: Competitive volume pricing, quality assurance, shipping priority, international logistics support, and contract flexibility. Experience handling large-scale exports to Asia, Europe, and America.`,
+    metaKeywords: `agricultural partnership, cocoa export partner, clove supplier, cocopeat distributor, indonesia export partner`,
     heroTitle: `Partnership`,
-    mainTitle: `Every project has its own story`,
+    mainTitle: `Global Supply Chain Excellence`,
     mainParagraphs: [
-      `Whether it's hotel, villa, restaurant, or residential furniture procurement - what's needed is not just products, but a trusted work partner. Naturra Extal is here not as a seller, but as part of your team.`,
-      `We understand that a project means deadlines, strict specifications, sudden revisions, and high expectations. You need a partner who can accommodate, not add complexity. Who can listen, not just answer.`
+      `Whether it's Cocoa Powder for the chocolate industry, premium Cloves for retail, or Cocopeat for large-scale agricultural needs - what's required is not just a product, but a trusted export partner. Naturra Extal serves as an integral part of your global supply chain.`,
+      `We understand that export means strict quality standards, logistical certainty, timely quota fulfillment, and price transparency. You need a partner who can accommodate industrial needs without adding bureaucratic complexity.`
     ],
-    experienceTitle: `Experience Becomes Added Value`,
+    experienceTitle: `Experience as Added Value`,
     experienceParagraphs: [
-      `We're already accustomed to participating in many project schemes - from apartments in the city center, resorts on the beach, to public space procurement. Each client brings different challenges. That's exactly what makes us trained, not just experts at making furniture, but also understanding project dynamics.`,
-      `From the design adjustment process, material selection, to phased delivery schemes, everything can be communicated. You don't need to explain twice. We know how to organize efficient workflows.`
+      `We are accustomed to participating in many international supply schemes - from fulfilling raw material needs for manufacturing in Europe to spice distributors in the Middle East. Each market brings different regulatory challenges.`,
+      `From certification adjustment processes to technical grading selection and efficient sea/air shipping schemes, everything can be communicated professionally. We know how to organize reliable commodity supply flows.`
     ],
-    collaborationTitle: `Not Just Production, But Collaboration`,
-    collaborationSubtitle: `Furniture Contractor`,
+    collaborationTitle: `More Than Supply, A Strategic Partnership`,
+    collaborationSubtitle: `Global Commodity Export Partner`,
     collaborationParagraphs: [
-      `We believe project success is not from the number of items produced, but from how precisely we execute your ideas. Some clients come with moodboards, some just send photos, even some just say: "I need a tropical, warm, yet elegant atmosphere."`,
-      `Everything can be discussed. Our team is open to discussion from the start. You can convey special needs: room dimensions, budget constraints, interior design style, or construction details.`,
-      `We'll help formulate solutions. Not with sweet words, but with sketches, material calculations and prototypes when needed. Everything is clear and measurable.`
+      `We believe partnership success is not just about the volume shipped, but how accurately we meet your industry's technical specifications. We are ready to serve special requests regarding chemical parameters, moisture levels, and bulk packaging methods.`,
+      `Our team is open to discussing long-term contracts and supply continuity guarantees. You can convey specific needs: quality standardization, logistics budget constraints, or international shipping details.`,
+      `We will help formulate supply solutions. Not just availability promises, but with technical data, quality inspection reports, and product prototypes if needed for your laboratory testing.`
     ],
-    flexibilityTitle: `Know When to Be Fast, Know When to Be Careful`,
+    flexibilityTitle: `Logistics & Volume Flexibility`,
     flexibilityParagraphs: [
-      `Some clients need speed. Some want phased delivery per zone. Others request production adjustments based on site inspection results. All of that makes sense and can be discussed.`,
-      `We don't offer uniform packages for all projects. You can choose. Want to focus on solid wood with handmade touches? Or a combination of production efficiency and artistic details? We'll help make it happen.`
+      `Some clients need fast LCL shipments. Some want FCL annual contracts. Others request grading adjustments based on initial sample testing results. All of this can be discussed.`,
+      `We don't offer rigid packages for all partners. You can choose. Want to focus on premium quality (Grade A) for the retail market? Or a combination of cost efficiency and large volume for industrial needs? We'll help make it happen.`
     ],
-    scaleTitle: `Large or Small Projects, Both Taken Seriously`,
-    scaleDescription: `We've worked on hundreds of units at once. We've also made just one set of chairs for a private guest area. Scale is not the determining factor. What matters: does your project matter?`,
-    scaleQuestion: `If the answer is yes, let's discuss further.`,
-    ctaTitle: `Ready to Discuss Your Project?`,
-    ctaDescription: `Tell us about your project needs now. Send images, floor plans, or references, and we'll help formulate them into concrete steps.`,
-    ctaButton: `Contact us now`,
+    scaleTitle: `Global Scale Partnership`,
+    scaleDescription: `Handling large-scale container shipments sustainably. Also ready to assist medium businesses expanding into international markets. Volume scale is not a hindrance to our commitment.`,
+    scaleQuestion: `If you are looking for a reliable commodity supply partner, let's discuss this cooperation.`,
+    ctaTitle: `Ready to Discuss Your Supply Plan?`,
+    ctaDescription: `Tell us your commodity needs now. Send technical specifications, volume estimates, or your project details, and we will help formulate them into concrete steps.`,
+    ctaButton: `Contact our export team`,
+
     contactTitle: `Find Us`
   },
   ar: {
@@ -215,111 +222,112 @@ const PARTNERSHIP_TRANSLATIONS: Record<
     contactTitle: `アクセス`
   },
   es: {
-    pageTitle: `Programa de Alianzas de Muebles Industriales: Contratistas, Diseñadores y Desarrolladores - Naturra Extal`,
-    metaDescription: `¿Cómo colaborar con Naturra Extal en proyectos de mobiliario? Programa de partnership para contratistas, interioristas, desarrolladores inmobiliarios y cadenas hoteleras. Beneficios: precios por volumen con hasta 20% de descuento, project manager dedicado, producción prioritaria, renders 3D gratuitos, soporte técnico en obra y condiciones de pago flexibles. Experiencia en hoteles de más de 100 habitaciones, cadenas de restaurantes con más de 10 locales y 50 espacios comerciales en centros comerciales. Requisitos: proyectos desde 50 millones de rupias o más de 5 proyectos al año.`,
-    metaKeywords: `alianza muebles bekasi, proveedor muebles industriales, socio muebles para diseñadores, abastecimiento muebles hotel, mobiliario comercial a medida`,
+    pageTitle: `Programa de Alianzas de Materias Primas Agrícolas: Importadores, Mayoristas e Industria - Naturra Extal`,
+    metaDescription: `¿Cómo colaborar con Naturra Extal para el suministro de materias primas agrícolas? Programa de asociación para importadores globales, mayoristas e industrias alimentarias. Beneficios: Precios competitivos por volumen, garantía de calidad, prioridad de envío, soporte logístico internacional y flexibilidad de contratos. Experiencia en exportaciones a gran escala a Asia, Europa y América.`,
+    metaKeywords: `alianza agrícola, exportación de cacao, proveedor de clavo, distribuidor de cocopeat, socio de exportación indonesia`,
     heroTitle: `Alianzas`,
-    mainTitle: `Cada proyecto tiene su propia historia`,
+    mainTitle: `Excelencia en la Cadena de Suministro Global`,
     mainParagraphs: [
-      `Ya sea para un hotel, una villa, un restaurante o una residencia, lo que se necesita no son solo productos, sino un socio confiable. Naturra Extal está aquí no como vendedor, sino como parte de tu equipo.`,
-      `Sabemos que un proyecto implica plazos, especificaciones estrictas, cambios inesperados y expectativas altas. Necesitas un aliado que pueda adaptarse, no que complique las cosas. Alguien que escuche, no solo que responda.`
+      `Ya sea para el suministro de cacao en polvo para la industria del chocolate, clavo de olor premium para el sector minorista o cocopeat para necesidades agrícolas a gran escala, lo que se necesita no es solo un producto, sino un socio exportador confiable. Naturra Extal actúa como una parte integral de su cadena de suministro global.`,
+      `Entendemos que la exportación significa estándares de calidad estrictos, certeza logística, cumplimiento puntual de cuotas y transparencia de precios. Usted necesita un socio que pueda adaptarse a las necesidades industriales sin añadir complejidad burocrática.`
     ],
-    experienceTitle: `La experiencia suma valor`,
+    experienceTitle: `La Experiencia como Valor Añadido`,
     experienceParagraphs: [
-      `Estamos acostumbrados a trabajar en distintos formatos de proyecto: apartamentos urbanos, resorts en la costa, espacios públicos. Cada cliente trae desafíos diferentes y eso nos ha entrenado no solo para fabricar muebles, sino para entender la dinámica de cada proyecto.`,
-      `Desde ajustes de diseño y selección de materiales hasta esquemas de entrega por etapas, todo puede conversarse. No tendrás que explicar dos veces; sabemos cómo organizar un flujo de trabajo eficiente.`
+      `Estamos acostumbrados a participar en diversos esquemas de suministro internacional, desde el abastecimiento de materias primas para la industria manufacturera en Europa hasta distribuidores de especias en Oriente Medio. Cada mercado presenta desafíos regulatorios diferentes.`,
+      `Desde procesos de ajuste de certificación hasta selección de grados técnicos y esquemas eficientes de envío marítimo/aéreo, todo se puede comunicar profesionalmente. Sabemos cómo organizar flujos de suministro de productos básicos confiables.`
     ],
-    collaborationTitle: `No solo producción, sino verdadera colaboración`,
-    collaborationSubtitle: `Contratistas de mobiliario`,
+    collaborationTitle: `Más que Suministro, una Alianza Estratégica`,
+    collaborationSubtitle: `Socio de Exportación de Productos Básicos Globales`,
     collaborationParagraphs: [
-      `Creemos que el éxito del proyecto no se mide por cuántas piezas fabricamos, sino por qué tan fielmente ejecutamos tus ideas. Hay clientes que llegan con moodboards, otros envían fotos y algunos solo dicen: "Quiero una atmósfera tropical, cálida pero elegante".`,
-      `Todo se puede conversar. Nuestro equipo está abierto al diálogo desde el principio. Puedes contarnos requisitos especiales: dimensiones del espacio, límite de presupuesto, estilo interior o detalles constructivos.`,
-      `Te ayudamos a convertirlos en soluciones concretas: no con promesas vacías, sino con bocetos, cálculos de materiales e incluso prototipos cuando es necesario. Todo queda claro y medible.`
+      `Creemos que el éxito de una asociación no se basa solo en el volumen enviado, sino en la precisión con la que cumplimos las especificaciones técnicas de su industria. Estamos listos para atender solicitudes especiales sobre parámetros químicos, niveles de humedad y métodos de embalaje a granel.`,
+      `Nuestro equipo está abierto a discutir contratos a largo plazo y garantías de continuidad del suministro. Puede comunicarnos sus necesidades específicas: estandarización de calidad, restricciones presupuestarias logísticas o detalles de envío internacional.`,
+      `Ayudaremos a formular soluciones de suministro. No solo promesas de disponibilidad, sino con datos técnicos, informes de inspección de calidad y prototipos de productos si es necesario para sus pruebas de laboratorio.`
     ],
-    flexibilityTitle: `Sabemos cuándo acelerar y cuándo cuidar los detalles`,
+    flexibilityTitle: `Flexibilidad Logística y de Volumen`,
     flexibilityParagraphs: [
-      `Algunos clientes necesitan rapidez. Otros desean entregas por zonas. También hay quienes piden ajustes tras una visita en obra. Todo eso es razonable y se puede planificar juntos.`,
-      `No ofrecemos un paquete estándar para todos. Tú decides: ¿quieres resaltar la madera maciza y el toque artesanal? ¿O equilibrar eficiencia productiva con detalle estético? Te ayudaremos a conseguirlo.`
+      `Algunos clientes requieren envíos rápidos LCL. Otros desean contratos anuales FCL. Algunos solicitan ajustes de grado basados en resultados de pruebas de muestras iniciales. Todo esto se puede discutir.`,
+      `No ofrecemos paquetes rígidos para todos los socios. Usted puede elegir. ¿Quiere centrarse en calidad premium (Grado A) para el mercado minorista? ¿O una combinación de eficiencia de costos y gran volumen para necesidades industriales? Ayudaremos a que suceda.`
     ],
-    scaleTitle: `Proyectos grandes o pequeños, el compromiso es el mismo`,
-    scaleDescription: `Hemos fabricado cientos de piezas a la vez y también un solo set de sillas para un área VIP. La escala no determina nuestra dedicación; lo importante es si el proyecto tiene sentido para ti.`,
-    scaleQuestion: `Si la respuesta es sí, hablemos con más detalle.`,
-    ctaTitle: `¿Listo para hablar de tu proyecto?`,
-    ctaDescription: `Cuéntanos lo que necesitas. Envía imágenes, planos o referencias y te ayudaremos a convertirlas en pasos concretos.`,
-    ctaButton: `Contactarnos ahora`,
+    scaleTitle: `Alianza a Escala Global`,
+    scaleDescription: `Manejo de envíos de contenedores a gran escala de manera sostenible. También estamos listos para ayudar a medianas empresas que se expanden a mercados internacionales. La escala de volumen no es un obstáculo para nuestro compromiso.`,
+    scaleQuestion: `Si busca un socio confiable para el suministro de materias primas, hablemos de esta cooperación.`,
+    ctaTitle: `¿Listo para Discutir su Plan de Suministro?`,
+    ctaDescription: `Cuéntenos sus necesidades de productos ahora. Envíe especificaciones técnicas, estimaciones de volumen o detalles de su proyecto, y ayudaremos a formularlos en pasos concretos.`,
+    ctaButton: `Contactar a nuestro equipo de exportación`,
     contactTitle: `Encuéntranos`
   },
   fr: {
-    pageTitle: `Programme de partenariat pour mobilier industriel : entrepreneurs, designers et promoteurs - Naturra Extal`,
-    metaDescription: `Comment collaborer avec Naturra Extal pour vos projets de mobilier ? Programme destiné aux entrepreneurs, designers d’intérieur, promoteurs immobiliers et chaînes hôtelières. Avantages : tarifs volume jusqu’à 20 % de remise, chef de projet dédié, production prioritaire, rendus 3D gratuits, support technique sur site et conditions de paiement flexibles. Expérience sur des hôtels de plus de 100 chambres, des chaînes de restaurants de plus de 10 établissements et 50 espaces commerciaux en centre commercial. Conditions : projet d’au moins 50 millions de rupies ou plus de 5 projets par an.`,
-    metaKeywords: `partenariat mobilier bekasi, fournisseur mobilier industriel, partenaire mobilier pour designers, mobilier hôtelier, mobilier commercial sur mesure`,
+    pageTitle: `Programme de Partenariat Agricole : Importateurs, Grossistes et Industrie - Naturra Extal`,
+    metaDescription: `Comment s'associer avec Naturra Extal pour l'approvisionnement en matières premières agricoles ? Programme de partenariat pour les importateurs mondiaux, les grossistes et les industries agroalimentaires. Avantages : Prix de volume compétitifs, assurance qualité, priorité d'expédition, support logistique international et flexibilité contractuelle. Expérience dans la gestion d'exportations à grande échelle vers l'Asie, l'Europe et l'Amérique.`,
+    metaKeywords: `partenariat agricole, export cacao, fournisseur clous de girofle, distributeur cocopeat, partenaire export indonésie`,
     heroTitle: `Partenariat`,
-    mainTitle: `Chaque projet a sa propre histoire`,
+    mainTitle: `Excellence de la Chaîne d'Approvisionnement Mondiale`,
     mainParagraphs: [
-      `Qu’il s’agisse d’équiper un hôtel, une villa, un restaurant ou une résidence, il faut plus que des produits : il faut un partenaire de confiance. Naturra Extal n’est pas là comme simple vendeur, mais comme membre de votre équipe.`,
-      `Nous savons qu’un projet signifie délais serrés, cahier des charges strict, révisions de dernière minute et attentes élevées. Vous avez besoin d’un partenaire qui facilite les choses, pas qui les complique. Quelqu’un qui écoute vraiment, pas qui se contente de répondre.`
+      `Qu'il s'agisse de poudre de cacao pour l'industrie chocolatière, de clous de girofle premium pour la vente au détail ou de cocopeat pour des besoins agricoles à grande échelle - ce qu'il faut, ce n'est pas seulement un produit, mais un partenaire exportateur de confiance. Naturra Extal fait partie intégrante de votre chaîne d'approvisionnement mondiale.`,
+      `Nous comprenons que l'exportation signifie des normes de qualité strictes, une certitude logistique, le respect des quotas et une transparence des prix. Vous avez besoin d'un partenaire capable de répondre aux besoins industriels sans ajouter de complexité bureaucratique.`
     ],
-    experienceTitle: `L’expérience fait la différence`,
+    experienceTitle: `L'Expérience comme Valeur Ajoutée`,
     experienceParagraphs: [
-      `Nous avons l’habitude de nous adapter à des projets variés : appartements urbains, resorts en bord de mer, espaces publics. Chaque client apporte son lot de défis, et c’est ce qui nous a formés non seulement à fabriquer du mobilier, mais aussi à comprendre la dynamique d’un projet.`,
-      `Du réglage des designs au choix des matériaux, jusqu’aux livraisons par étapes, tout est discutable. Inutile de répéter vos besoins : nous savons construire un flux de travail efficace.`
+      `Nous avons l'habitude de participer à de nombreux schémas d'approvisionnement internationaux - de la fourniture de matières premières pour l'industrie manufacturière en Europe aux distributeurs d'épices au Moyen-Orient. Chaque marché apporte des défis réglementaires différents.`,
+      `Des processus d'ajustement de certification à la sélection du grading technique et aux schémas d'expédition maritime/aérienne efficaces, tout peut être communiqué professionnellement. Nous savons comment organiser des flux d'approvisionnement fiables en matières premières.`
     ],
-    collaborationTitle: `Au-delà de la production, une vraie collaboration`,
-    collaborationSubtitle: `Partenaire mobilier`,
+    collaborationTitle: `Plus qu'un Approvisionnement, un Partenariat Stratégique`,
+    collaborationSubtitle: `Partenaire Export de Matières Premières Globales`,
     collaborationParagraphs: [
-      `Pour nous, la réussite d’un projet ne se mesure pas au nombre de pièces produites, mais à la précision avec laquelle nous traduisons vos idées. Certains clients arrivent avec un moodboard, d’autres envoient une photo, parfois ils disent simplement : « Nous voulons une ambiance tropicale, chaleureuse et élégante. »`,
-      `Tout peut se discuter. Notre équipe est ouverte dès le départ. Partagez vos besoins spécifiques : dimensions, budget, style intérieur, détails constructifs.`,
-      `Nous transformons ces éléments en solutions tangibles, non pas avec de belles promesses, mais avec des croquis, des calculs de matériaux et, si nécessaire, des prototypes. Tout est clair et mesurable.`
+      `Nous pensons que le succès d'un partenariat ne réside pas seulement dans le volume expédié, mais dans la précision avec laquelle nous répondons aux spécifications techniques de votre industrie. Nous sommes prêts à répondre aux demandes spéciales concernant les paramètres chimiques, les taux d'humidité et les méthodes d'emballage en vrac.`,
+      `Notre équipe est ouverte à la discussion sur des contrats à long terme et des garanties de continuité d'approvisionnement. Vous pouvez nous faire part de vos besoins spécifiques : standardisation de la qualité, contraintes budgétaires logistiques ou détails d'expédition internationale.`,
+      `Nous vous aiderons à formuler des solutions d'approvisionnement. Pas seulement des promesses de disponibilité, mais avec des données techniques, des rapports d'inspection qualité et des prototypes de produits si nécessaire pour vos tests en laboratoire.`
     ],
-    flexibilityTitle: `Savoir être rapide, savoir être minutieux`,
+    flexibilityTitle: `Flexibilité Logistique et de Volume`,
     flexibilityParagraphs: [
-      `Certains projets exigent de la rapidité. D’autres préfèrent des livraisons par zone. Parfois, les résultats d’une inspection de site imposent des ajustements de production. Tout cela est logique et faisable.`,
-      `Nous n’imposons pas un forfait unique. À vous de choisir : privilégier le bois massif et le travail artisanal ? Ou trouver l’équilibre entre efficacité et détail esthétique ? Nous vous accompagnons.`
+      `Certains clients ont besoin d'expéditions LCL rapides. D'autres souhaitent des contrats annuels FCL. D'autres encore demandent des ajustements de grading basés sur les résultats des tests d'échantillons initiaux. Tout cela peut être discuté.`,
+      `Nous n'offrons pas de forfaits rigides pour tous les partenaires. Vous pouvez choisir. Vous voulez vous concentrer sur la qualité premium (Grade A) pour le marché de détail ? Ou une combinaison d'efficacité des coûts et de gros volumes pour les besoins industriels ? Nous vous aiderons à y parvenir.`
     ],
-    scaleTitle: `Grands ou petits projets, même engagement`,
-    scaleDescription: `Nous avons déjà livré des centaines d’unités en une fois, mais aussi un seul ensemble de chaises pour un salon privé. La taille n’est pas le critère. Ce qui compte, c’est l’importance de votre projet.`,
-    scaleQuestion: `Si oui, parlons-en plus en détail.`,
-    ctaTitle: `Prêt à parler de votre projet ?`,
-    ctaDescription: `Expliquez-nous vos besoins dès maintenant. Envoyez plans, images ou références et nous les traduirons en étapes concrètes.`,
-    ctaButton: `Nous contacter maintenant`,
+    scaleTitle: `Partenariat à l'Échelle Mondiale`,
+    scaleDescription: `Gestion durable des expéditions de conteneurs à grande échelle. Également prêt à aider les moyennes entreprises qui se développent sur les marchés internationaux. L'échelle du volume n'est pas un obstacle à notre engagement.`,
+    scaleQuestion: `Si vous recherchez un partenaire fiable pour l'approvisionnement en matières premières, discutons de cette coopération.`,
+    ctaTitle: `Prêt à Discuter de Votre Plan d'Approvisionnement ?`,
+    ctaDescription: `Dites-nous vos besoins en matières premières dès maintenant. Envoyez des spécifications techniques, des estimations de volume ou les détails de votre projet, et nous vous aiderons à les transformer en étapes concrètes.`,
+    ctaButton: `Contactez notre équipe export`,
     contactTitle: `Nous trouver`
   },
   ko: {
-    pageTitle: `산업용 가구 파트너십 프로그램: 시공사·디자이너·개발사 - Naturra Extal`,
-    metaDescription: `Naturra Extal과 가구 프로젝트를 함께 진행하는 방법은? 시공사, 인테리어 디자이너, 부동산 개발사, 호텔 체인을 위한 파트너십 프로그램입니다. 혜택: 최대 20% 볼륨 할인, 전담 프로젝트 매니저, 생산 우선순위, 무료 3D 렌더링, 현장 기술 지원, 유연한 결제 조건. 100객실 이상의 호텔, 10개 이상 매장의 외식 체인, 50개 이상의 쇼핑몰 테넌트 프로젝트 경험 보유. 조건: 최소 5천만 루피아의 프로젝트 또는 연간 5건 이상의 협업.`,
-    metaKeywords: `가구 파트너십 베카시, 산업용 가구 공급, 디자이너 가구 파트너, 호텔 가구 조달, 상업용 맞춤 가구`,
+    pageTitle: `농산물 원자재 파트너십 프로그램: 수입업체·도매업체·산업군 - Naturra Extal`,
+    metaDescription: `농산물 원자재 공급을 위해 Naturra Extal과 협력하는 방법은 무엇입니까? 글로벌 수입업체, 도매업체 및 식품 산업을 위한 파트너십 프로그램입니다. 파트너십 혜택: 경쟁력 있는 대량 구매 가격, 품질 보증, 배송 우선순위, 국제 물류 지원 및 계약 유연성. 아시아, 유럽 및 미주 지역 대규모 수출 처리 경험 보유.`,
+    metaKeywords: `농업 파트너십, 코코아 수출 파트너, 정향 공급업체, 코코피트 유통업체, 인도네시아 수출 협력`,
     heroTitle: `파트너십`,
-    mainTitle: `프로젝트마다 각자의 이야기가 있습니다`,
+    mainTitle: `글로벌 공급망 우수성`,
     mainParagraphs: [
-      `호텔, 빌라, 레스토랑, 주거 공간을 위한 가구 조달에서 필요한 것은 제품만이 아니라 믿을 수 있는 파트너입니다. Naturra Extal은 판매자가 아니라 당신 팀의 일원으로 함께합니다.`,
-      `프로젝트에는 촉박한 마감, 까다로운 규격, 갑작스러운 수정, 높은 기대치가 따른다는 것을 잘 알고 있습니다. 복잡성을 더하지 않고 조율해 줄 파트너가 필요합니다. 대답만 하는 사람이 아니라 귀 기울여 듣는 사람이 필요합니다.`
+      `초콜릿 산업을 위한 코코아 파우더, 소매용 프리미엄 정향, 또는 대규모 농업용 코코피트 공급 등 필요한 것은 단순히 제품뿐만 아니라 신뢰할 수 있는 수출 파트너입니다. Naturra Extal은 귀하의 글로벌 공급망의 핵심 일원으로서 봉사합니다.`,
+      `수출은 엄격한 품질 표준, 물류의 확실성, 적시 쿼터 이행 및 가격 투명성을 의미한다는 것을 잘 알고 있습니다. 복잡한 관료적 절차 없이 산업적 요구를 수용할 수 있는 파트너가 필요합니다.`
     ],
-    experienceTitle: `경험이 가치를 만듭니다`,
+    experienceTitle: `가치를 더하는 경험`,
     experienceParagraphs: [
-      `도심 아파트, 해변 리조트, 공공 공간까지 다양한 프로젝트를 경험했습니다. 고객마다 도전이 다르며, 그것이 우리를 단련시켜 단순한 가구 제작을 넘어 프로젝트의 흐름까지 이해하게 만들었습니다.`,
-      `디자인 조정, 자재 선정, 단계별 납품 계획까지 모든 과정을 함께 논의할 수 있습니다. 두 번 설명할 필요가 없습니다. 효율적인 워크플로를 구성하는 방법을 잘 알고 있습니다.`
+      `유럽의 제조업 원료 공급부터 중동의 향신료 유통업체까지 다양한 국제 공급 체계에 참여해 왔습니다. 각 시장은 서로 다른 규제적 도전을 제시합니다.`,
+      `인증 조정 프로세스부터 기술적 등급 선정, 효율적인 해상/항공 운송 체계에 이르기까지 모든 과정을 전문적으로 소통할 수 있습니다. 우리는 신뢰할 수 있는 원자재 공급 흐름을 조직하는 방법을 알고 있습니다.`
     ],
-    collaborationTitle: `생산을 넘어서는 협업`,
-    collaborationSubtitle: `가구 시공 파트너`,
+    collaborationTitle: `공급을 넘어선 전략적 파트너십`,
+    collaborationSubtitle: `글로벌 농산물 수출 파트너`,
     collaborationParagraphs: [
-      `프로젝트 성공은 생산한 수량이 아니라 당신의 아이디어를 얼마나 정확하게 구현했는지에 달려 있다고 믿습니다. 어떤 고객은 무드보드를 가져오고, 어떤 고객은 사진 한 장만 보내며, 또 어떤 고객은 “따뜻하면서도 우아한 트로피컬 분위기를 원합니다”라고 말합니다.`,
-      `모두 가능한 이야기입니다. 우리는 초기 단계부터 열린 마음으로 대화합니다. 공간 크기, 예산 한도, 인테리어 스타일, 구조 디테일 등 필요한 내용을 알려주세요.`,
-      `멋진 말이 아니라 스케치, 자재 산출, 필요하다면 시제품으로 해결책을 제시합니다. 모든 과정을 명확하게 하고 측정 가능한 형태로 진행합니다.`
+      `파트너십의 성공은 단순히 선적된 물량뿐만 아니라 귀사의 산업 기술 사양을 얼마나 정확하게 충족하느냐에 달려 있다고 믿습니다. 화학적 파라미터, 수분 함량 및 대량 포장 방식에 관한 특별 요청을 처리할 준비가 되어 있습니다.`,
+      `우리 팀은 장기 계약 및 공급 연속성 보장에 대해 논의할 준비가 되어 있습니다. 품질 표준화, 물류 예산 제약 또는 국제 배송 상세 내용 등 구체적인 요구 사항을 전달해 주십시오.`,
+      `우리는 공급 솔루션을 수립하는 데 도움을 드릴 것입니다. 단순한 가용성 약속이 아니라, 귀사의 연구소 테스트에 필요한 경우 기술 데이터, 품질 검사 보고서 및 제품 샘플을 함께 제공합니다.`
     ],
-    flexibilityTitle: `빠르게 할 때와 꼼꼼히 할 때를 알고 있습니다`,
+    flexibilityTitle: `물류 및 물량의 유연성`,
     flexibilityParagraphs: [
-      `빠른 납품이 필요한 고객도 있고, 구역별 단계 납품을 원하는 고객도 있으며, 현장 점검 결과에 따라 생산 조정을 요청하는 경우도 있습니다. 모두 합리적이며 함께 조율할 수 있습니다.`,
-      `모든 프로젝트에 동일한 패키지를 적용하지 않습니다. 수제 감성이 느껴지는 원목에 집중할지, 생산 효율과 디테일을 균형 있게 잡을지 선택하세요. 우리가 함께 구현합니다.`
+      `신속한 LCL 선적이 필요한 클라이언트도 있고, 연간 FCL 계약을 원하는 클라이언트도 있습니다. 초기 샘플 테스트 결과에 따라 등급 조정을 요청하는 경우도 있습니다. 이 모든 것이 논의 가능합니다.`,
+      `우리는 모든 파트너에게 천편일률적인 패키지를 제안하지 않습니다. 선택은 귀하의 몫입니다. 소매 시장을 위한 프리미엄 품질(Grade A)에 집중하시겠습니까? 아니면 산업적 요구를 위한 비용 효율성과 대량 물량의 조합을 원하십니까? 우리가 실현을 돕겠습니다.`
     ],
-    scaleTitle: `큰 프로젝트든 작은 프로젝트든 똑같이 진지합니다`,
-    scaleDescription: `한 번에 수백 세트를 제작한 경험도 있고, 프라이빗 라운지를 위해 의자 한 세트만 만든 적도 있습니다. 규모가 아니라 프로젝트의 중요성이 기준입니다.`,
-    scaleQuestion: `그렇다면 지금 바로 자세한 이야기를 나눠 보겠습니다.`,
-    ctaTitle: `프로젝트 상담을 시작할 준비가 되었나요?`,
-    ctaDescription: `필요한 내용을 지금 알려주세요. 이미지, 도면, 참고 자료를 보내주시면 실행 가능한 단계로 정리해 드립니다.`,
-    ctaButton: `지금 문의하기`,
+    scaleTitle: `글로벌 스케일 파트너십`,
+    scaleDescription: `대규모 컨테이너 선적을 지속 가능하게 처리하고 있습니다. 또한 국제 시장으로 확장 중인 중소기업을 도울 준비가 되어 있습니다. 물량 규모는 우리의 약속에 걸림돌이 되지 않습니다.`,
+    scaleQuestion: `신뢰할 수 있는 원자재 공급 파트너를 찾고 계시다면, 이번 협력에 대해 논의해 봅시다.`,
+    ctaTitle: `공급 계획을 논의할 준비가 되셨나요?`,
+    ctaDescription: `지금 바로 필요한 원자재에 대해 알려주세요. 기술 사양, 예상 물량 또는 프로젝트 상세 내용을 보내주시면 구체적인 단계로 수립해 드립니다.`,
+    ctaButton: `수출팀에 문의하기`,
     contactTitle: `찾아오시는 길`
   }
 }
+
 
 const OG_LOCALES = ['id_ID', 'en_US', 'ar_SA', 'zh_CN', 'ja_JP', 'es_ES', 'fr_FR', 'ko_KR'] as const
 
@@ -546,7 +554,7 @@ const Partnership: React.FC = () => {
 
           <div className="partnership-cta-buttons">
             <a
-              href="https://wa.me/+6288801146881"
+              href="https://wa.me/+6289513957752"
               target="_blank"
               rel="noopener noreferrer"
               className="partnership-cta-button"
@@ -580,18 +588,18 @@ const Partnership: React.FC = () => {
             </div>
             <p className="partnership-contact-phone">
               <a
-                href="https://wa.me/+6288801146881"
+                href="https://wa.me/+6289513957752"
                 style={{ color: '#8B7355', textDecoration: 'underline' }}
                 onClick={() => trackWhatsAppClick('partnership_page_contact_info')}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                +6288801146881
+                +6289513957752
               </a>
             </p>
             <p className="partnership-contact-email">
-              <a href="mailto:lifewithNaturra@gmail.com" style={{ color: '#8B7355', textDecoration: 'underline' }}>
-                lifewithNaturra@gmail.com
+              <a href="mailto:hello@naturraextal.com" style={{ color: '#8B7355', textDecoration: 'underline' }}>
+                hello@naturraextal.com
               </a>
             </p>
           </div>
@@ -604,3 +612,4 @@ const Partnership: React.FC = () => {
 }
 
 export default Partnership
+

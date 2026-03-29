@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     // Better code splitting
+    /*
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -28,6 +29,7 @@ export default defineConfig({
         }
       }
     },
+    */
     // Enable minification with esbuild (faster than terser)
     minify: 'esbuild',
     // Chunk size warnings

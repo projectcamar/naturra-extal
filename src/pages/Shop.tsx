@@ -20,6 +20,18 @@ import './Shop.css'
 
 const PRODUCTS_PER_PAGE = 24
 
+// Language to currency mapping (only non-IDR highlight currencies)
+const LANGUAGE_CURRENCY_MAP: { [key in LanguageCode]: 'KRW' | 'JPY' | 'CNY' | 'SAR' | 'EUR' | 'USD' | null } = {
+  'ko': 'KRW',
+  'ja': 'JPY',
+  'zh': 'CNY',
+  'ar': 'SAR',
+  'es': 'EUR',
+  'fr': 'EUR',
+  'en': 'USD', // English highlights USD
+  'id': null   // Indonesian highlights IDR (original price)
+}
+
 const Shop: React.FC = () => {
   const [sortBy, setSortBy] = useState('default')
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
@@ -32,18 +44,6 @@ const Shop: React.FC = () => {
   const [usdPrices, setUsdPrices] = useState<{ [key: number]: string }>({})
   const [highlightedPrices, setHighlightedPrices] = useState<{ [key: number]: string }>({})
   const location = useLocation()
-
-  // Language to currency mapping (only non-IDR highlight currencies)
-  const LANGUAGE_CURRENCY_MAP: { [key in LanguageCode]: 'KRW' | 'JPY' | 'CNY' | 'SAR' | 'EUR' | 'USD' | null } = {
-    'ko': 'KRW',
-    'ja': 'JPY',
-    'zh': 'CNY',
-    'ar': 'SAR',
-    'es': 'EUR',
-    'fr': 'EUR',
-    'en': 'USD', // English highlights USD
-    'id': null   // Indonesian highlights IDR (original price)
-  }
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -363,9 +363,9 @@ const Shop: React.FC = () => {
   return (
     <div className="product-category-page shop-page-layout">
       <Helmet htmlAttributes={{ lang: localeMeta.lang, dir: localeMeta.direction, 'data-language': localeMeta.lang }}>
-        <title>All Products - Bar Set Lounge Set Storage agricultural commodities | Naturra Extal</title>
-        <meta name="description" content="Browse all Agricultural Commodities: bar set outdoor, lounge set sofa bench, storage rack display, new arrivals untuk cafe restoran hotel. Kualitas terbaik, harga terjangkau." />
-        <meta name="keywords" content="bar set, lounge set, sofa bench, storage rack, new arrivals, outdoor furniture set, Agricultural Commodities, furniture besi, furniture custom, furniture cafe, furniture restoran, Naturra Extal, furniture bekasi" />
+        <title>All Products - Cocoa, Cloves, Cocopeat & Agricultural Commodities | Naturra Extal</title>
+        <meta name="description" content="Browse all Agricultural Commodities: Premium Cocoa Powder, Indonesian Cloves, and Cocopeat Media. Export quality products from Bekasi Indonesia." />
+        <meta name="keywords" content="cocoa powder, indonesian cloves, cocopeat media, spices and herbs, essential oils, agricultural commodities exporter, Naturra Extal, export quality" />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="content-language" content={localeMeta.lang} />
         <link rel="canonical" href={localizedUrls.canonical} />
@@ -374,8 +374,8 @@ const Shop: React.FC = () => {
         ))}
 
         {/* Open Graph */}
-        <meta property="og:title" content="All Products - Bar Set Lounge Set Storage agricultural commodities | Naturra Extal" />
-        <meta property="og:description" content="Browse all agricultural commodities: bar set outdoor, lounge set, sofa bench, storage rack, new arrivals untuk cafe restoran hotel." />
+        <meta property="og:title" content="All Products - Cocoa, Cloves, & Agricultural Commodities | Naturra Extal" />
+        <meta property="og:description" content="Browse our complete collection of premium agricultural commodities including Cocoa Powder, Indonesian Cloves, and Cocopeat." />
         <meta property="og:url" content={localizedUrls.canonical} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content={localeMeta.locale} />
@@ -384,8 +384,8 @@ const Shop: React.FC = () => {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="All Products - Bar Set Lounge Set Storage New Arrivals | Naturra Extal" />
-        <meta name="twitter:description" content="Browse bar set outdoor, lounge set sofa bench, storage rack display, new arrivals agricultural commodities at Naturra Extal." />
+        <meta name="twitter:title" content="Indonesian Agricultural Commodities - Naturra Extal" />
+        <meta name="twitter:description" content="Explore our premium collection of Cocoa, Cloves, and Cocopeat agricultural commodities at Naturra Extal." />
 
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -393,15 +393,15 @@ const Shop: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
             "name": "Agricultural Commodities Collection - Naturra Extal",
-            "description": "Browse our complete collection of Agricultural Commodities for cafes, restaurants, and offices. Premium quality furniture made in Indonesia since 1999.",
-            "url": "https://Naturra-living.com/shop",
+            "description": "Browse our complete collection of Agricultural Commodities: Cocoa, Cloves, and Cocopeat. Premium quality products exported from Indonesia since 1999.",
+            "url": "https://naturraextal.com/shop",
             "mainEntity": {
               "@type": "ItemList",
               "numberOfItems": ALL_PRODUCTS.length,
               "itemListElement": ALL_PRODUCTS.map((product, index) => {
                 const imageUrl = getProductImageUrl(product.image, product.slug)
                 const priceNumeric = product.price.replace(/[^\d]/g, '')
-                const description = `Agricultural Commodities ${product.name} by Naturra Extal. Premium quality furniture made in Indonesia since 1999.`
+                const description = `${product.name} agricultural commodity by Naturra Extal. Premium quality product from Indonesia since 1999.`
 
                 return {
                   "@type": "ListItem",
@@ -410,7 +410,7 @@ const Shop: React.FC = () => {
                     "@type": "Product",
                     "name": product.name,
                     "description": description,
-                    "url": `https://Naturra-living.com/product/${product.slug}`,
+                    "url": `https://naturraextal.com/product/${product.slug}`,
                     "image": imageUrl,
                     "brand": {
                       "@type": "Brand",
@@ -422,7 +422,7 @@ const Shop: React.FC = () => {
                       "priceCurrency": "IDR",
                       "availability": "https://schema.org/InStock",
                       "priceValidUntil": "2026-12-31",
-                      "url": `https://Naturra-living.com/product/${product.slug}`,
+                      "url": `https://naturraextal.com/product/${product.slug}`,
                       "hasMerchantReturnPolicy": {
                         "@type": "MerchantReturnPolicy",
                         "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
@@ -466,10 +466,10 @@ const Shop: React.FC = () => {
                       "seller": {
                         "@type": "Organization",
                         "name": "Naturra Extal",
-                        "url": "https://Naturra-living.com",
-                        "logo": "https://Naturra-living.com/logo.png",
-                        "image": "https://Naturra-living.com/og-image.jpg",
-                        "description": "Premium Industrial Scandinavian Furniture for Coffee Shops, Restaurants & Offices. Custom Solutions Since 1999."
+                        "url": "https://naturraextal.com",
+                        "logo": "https://naturraextal.com/logo.png",
+                        "image": "https://naturraextal.com/og-image.jpg",
+                        "description": "Premium Indonesian agricultural commodities exporter. Supplying cocoa, cloves, and cocopeat worldwide since 1999."
                       }
                     },
                     "aggregateRating": {
@@ -595,7 +595,7 @@ const Shop: React.FC = () => {
 
               <div className="category-products-grid">
                 {currentProducts.map((product) => {
-                  const translatedName = getProductName(product.slug, isIndonesian, language) || product.name
+                  const translatedName = getProductName(product.slug, language) || product.name
                   return (
                     <Link
                       key={product.id}
@@ -707,3 +707,4 @@ const Shop: React.FC = () => {
 }
 
 export default Shop
+

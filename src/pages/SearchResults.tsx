@@ -200,6 +200,18 @@ const allProducts: Product[] = ALL_PRODUCTS.map(p => ({
   slug: p.slug
 }))
 
+// Language to currency mapping (only non-IDR highlight currencies)
+const LANGUAGE_CURRENCY_MAP: { [key in LanguageCode]: 'KRW' | 'JPY' | 'CNY' | 'SAR' | 'EUR' | 'USD' | null } = {
+  'ko': 'KRW',
+  'ja': 'JPY',
+  'zh': 'CNY',
+  'ar': 'SAR',
+  'es': 'EUR',
+  'fr': 'EUR',
+  'en': 'USD', // English highlights USD
+  'id': null   // Indonesian highlights IDR (original price)
+}
+
 function SearchResults() {
   const location = useLocation()
   const searchParams = new URLSearchParams(location.search)
@@ -210,18 +222,6 @@ function SearchResults() {
   const [usdPrices, setUsdPrices] = useState<Record<number, string>>({})
   const [highlightedPrices, setHighlightedPrices] = useState<Record<number, string>>({})
   const [isDetectingLanguage, setIsDetectingLanguage] = useState(true)
-
-  // Language to currency mapping (only non-IDR highlight currencies)
-  const LANGUAGE_CURRENCY_MAP: { [key in LanguageCode]: 'KRW' | 'JPY' | 'CNY' | 'SAR' | 'EUR' | 'USD' | null } = {
-    'ko': 'KRW',
-    'ja': 'JPY',
-    'zh': 'CNY',
-    'ar': 'SAR',
-    'es': 'EUR',
-    'fr': 'EUR',
-    'en': 'USD', // English highlights USD
-    'id': null   // Indonesian highlights IDR (original price)
-  }
 
   // Language detection - instant, no async needed!
   useEffect(() => {
@@ -467,7 +467,7 @@ function SearchResults() {
         {sortedProducts.length > 0 ? (
           <div className="products-grid">
             {sortedProducts.map((product) => {
-              const translatedName = getProductName(product.slug, isIndonesian) || product.name
+              const translatedName = getProductName(product.slug, language) || product.name
               return (
                 <Link
                   key={product.id}

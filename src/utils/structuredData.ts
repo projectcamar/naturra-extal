@@ -49,7 +49,7 @@ export const generateImageObjectSchema = (image: {
     "url": image.url,
     "contentUrl": image.contentUrl || image.url,
     "caption": image.caption || image.alt || image.title || "Agricultural Commodities by Naturra Extal",
-    "description": image.description || image.alt || image.title || "Premium Agricultural Commodities from Naturra Extal Workshop Bekasi",
+    "description": image.description || image.alt || image.title || "Premium Agricultural Commodities from Naturra Extal Bekasi",
     ...(image.width && { "width": image.width }),
     ...(image.height && { "height": image.height }),
     "creditText": "Naturra Extal",
@@ -117,72 +117,29 @@ export const generateBlogPostingSchema = (post: {
   category: string
   author?: string
 }) => {
-  // If author is specified (Helmi Ramdan), use Person schema with full credentials
+  // If author is specified (Mohamad Bebi Rifki), use Person schema with full credentials
   // Otherwise fallback to Organization
-  const authorSchema = post.author === 'Helmi Ramdan' ? {
+  const authorSchema = post.author === 'Mohamad Bebi Rifki' ? {
     "@type": "Person",
-    "name": "Helmi Ramdan",
-    "url": "https://www.linkedin.com/in/helmi-ramdan-067912118/",
-    "sameAs": "https://www.linkedin.com/in/helmi-ramdan-067912118/",
-    "jobTitle": "Associate - Housing & Settlement Infrastructure",
+    "name": "Mohamad Bebi Rifki",
+    "url": "https://www.linkedin.com/in/mohamad-bebi-rifki/",
+    "sameAs": "https://www.linkedin.com/in/mohamad-bebi-rifki/",
+    "jobTitle": "Founder & CEO",
     "worksFor": {
       "@type": "Organization",
-      "name": "Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta"
-    },
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "Universitas Diponegoro"
+      "name": "Naturra Extal"
     },
     "knowsAbout": [
-      "Architecture",
-      "Interior Design",
-      "Commercial Space Design",
-      "Infrastructure Engineering",
-      "Construction",
-      "Furniture Design",
+      "International Trade",
       "Agricultural Commodities",
-      "Space Planning",
-      "Project Management"
+      "Export Logistics",
+      "Cocoa Supply Chain",
+      "Global Market Development",
+      "Sustainability",
+      "Fair Trade",
+      "Business Strategy"
     ],
-    "hasCredential": [
-      {
-        "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "degree",
-        "educationalLevel": "Diploma III",
-        "name": "Desain Arsitektur"
-      }
-    ],
-    "hasOccupation": [
-      {
-        "@type": "Occupation",
-        "name": "Associate",
-        "occupationLocation": {
-          "@type": "City",
-          "name": "Jakarta"
-        },
-        "skills": "Architecture, Infrastructure, Design Engineering"
-      },
-      {
-        "@type": "Occupation",
-        "name": "Infrastructure Engineer",
-        "occupationLocation": {
-          "@type": "City",
-          "name": "Bekasi"
-        },
-        "skills": "Infrastructure Development, Project Management"
-      },
-      {
-        "@type": "Occupation",
-        "name": "Design Engineer",
-        "skills": "Architectural Design, CAD, Technical Drawing"
-      },
-      {
-        "@type": "Occupation",
-        "name": "Architectural Drafter",
-        "skills": "AutoCAD, 3D Modeling, Construction Documentation"
-      }
-    ],
-    "description": "Architecture and infrastructure professional with 10+ years of experience in commercial space design, construction, and furniture consultation. Currently serving as Associate at Jakarta Provincial Housing and Settlement Agency, with previous roles in infrastructure engineering, procurement, and architectural drafting.",
+    "description": "Professional in International Business Development and Export Operations. Specialized in the Indonesian agricultural commodity sector, including cocoa, cloves, and sustainable products. Expertise in bridging the gap between local farming communities and the global market through efficient supply chain management and international trade compliance.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Jakarta",
@@ -206,7 +163,7 @@ export const generateBlogPostingSchema = (post: {
       "@type": "ImageObject",
       "url": post.image,
       "contentUrl": post.image,
-      "caption": `${post.title} - ${post.category} Blog agricultural commodities`,
+      "caption": `${post.title} - ${post.category} Blog Agricultural Commodities`,
       "description": post.excerpt,
       "width": 1200,
       "height": 630,
@@ -237,12 +194,12 @@ export const generateBlogPostingSchema = (post: {
     "inLanguage": "id-ID",
     "keywords": [
       "agricultural commodities",
-      "furniture besi custom",
-      "furniture bekasi",
-      "meja industrial",
-      "kursi bar",
-      "furniture cafe",
-      "furniture restoran"
+      "cocoa powder export",
+      "indonesian cloves",
+      "cocopeat supplier",
+      "international trade indonesia",
+      "premium cocoa",
+      "sustainable farming"
     ]
   }
 }
@@ -272,7 +229,7 @@ export const generateMerchantStructuredData = () => {
     "url": "https://naturraextal.com",
     "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
     "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
-    "description": "Premium Industrial Scandinavian Furniture for Coffee Shops, Restaurants & Offices. Custom Solutions Since 1999.",
+    "description": "Premium Indonesian Agricultural Commodities. Specializing in Cocoa Powder, Cloves, and Cocopeat Sourced Directly from Farmers.",
     "foundingDate": "1999",
     "address": {
       "@type": "PostalAddress",
@@ -301,22 +258,22 @@ export const generateMerchantStructuredData = () => {
       }
     ],
     "sameAs": [
-      "https://www.instagram.com/Naturraliving",
-      "https://www.facebook.com/Naturraliving",
+      "https://www.instagram.com/naturraextal",
+      "https://www.facebook.com/naturraextal",
       "https://wa.me/6289513957752"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Agricultural Commodities Collection",
-      "description": "Complete collection of Agricultural Commodities for commercial and residential use",
+      "name": "Agricultural Commodities Catalog",
+      "description": "Complete collection of premium Indonesian agricultural commodities for global export",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Product",
             "name": "Agricultural Commodities",
-            "category": "Furniture",
-            "description": "Premium Agricultural Commodities made from high-quality materials",
+            "category": "Agricultural Commodities",
+            "description": "Premium Indonesian agricultural commodities including cocoa, cloves, and cocopeat",
             "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
             "offers": {
               "@type": "Offer",
@@ -380,11 +337,11 @@ export const generateMerchantStructuredData = () => {
 export const generateLocalBusinessStructuredData = () => {
   return {
     "@context": "https://schema.org",
-    "@type": ["FurnitureStore", "LocalBusiness"],
-    "name": "Naturra Extal - Workshop agricultural commodities Bekasi",
-    "alternateName": "Naturra Extal agricultural commodities Bekasi",
+    "@type": ["WholesaleStore", "LocalBusiness"],
+    "name": "Naturra Extal International - Agricultural Commodity Trading",
+    "alternateName": "Naturra Extal International",
     "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
-    "description": "Workshop Furniture Besi Custom Bekasi sejak 1999. Spesialis Agricultural Commodities untuk Cafe, Restoran, Hotel, Kantor. Produksi langsung harga pabrik, material berkualitas, finishing powder coating. Melayani Jakarta, Bekasi, Jabodetabek.",
+    "description": "Leading Indonesian agricultural commodity trading company. We source premium cocoa, cloves, and cocopeat directly from farming communities across Indonesia for global export.",
     "url": "https://naturraextal.com",
     "telephone": "6289513957752",
     "email": "hello@naturraextal.com",
@@ -458,7 +415,7 @@ export const generateLocalBusinessStructuredData = () => {
       },
       "geoRadius": "100000"
     },
-    "slogan": "agricultural commodities Bekasi - Workshop Terpercaya Sejak 1999",
+    "slogan": "Bridging Indonesia's Harvest to the Global Market",
     "foundingDate": "1999",
     "openingHoursSpecification": [
       {
@@ -487,28 +444,28 @@ export const generateLocalBusinessStructuredData = () => {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Furniture Besi Custom Bekasi",
-          "description": "Jasa pembuatan furniture besi custom untuk cafe, restoran, hotel, dan kantor"
+          "name": "Cocoa Powder Export",
+          "description": "Pure and sweetened cocoa powder (HS 1805 & 1806) for global confectionery and industrial use"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Agricultural Commodities Bekasi",
-          "description": "Produksi agricultural commodities dengan desain modern dan material berkualitas"
+          "name": "Indonesian Cloves Sourcing",
+          "description": "Premium hand-picked cloves (Cengkeh) from Sulawesi and Maluku"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Furniture Cafe Industrial Bekasi",
-          "description": "Spesialis furniture cafe industrial: meja, kursi, display rack, kitchen cabinet"
+          "name": "Cocopeat Growing Media",
+          "description": "Eco-friendly sustainable growing media for horticulture and agriculture"
         }
       }
     ],
-    "keywords": "furniture besi custom bekasi, Agricultural Commodities bekasi, furniture cafe industrial bekasi, workshop furniture besi bekasi, jual agricultural commodities jakarta bekasi, meja makan besi custom bekasi, meja cafe industrial besi, furniture besi hotel custom, bikin furniture besi custom jabodetabek, furniture besi untuk restoran, furniture bekasi barat, furniture bekasi timur, furniture bekasi selatan, furniture bekasi utara, furniture cikarang barat, furniture cikarang utara, furniture cikarang selatan, furniture cikarang timur, furniture cikarang pusat, furniture harapan indah, furniture summarecon bekasi, furniture jatiasih, furniture pekayon, furniture tambun, furniture pondok gede, furniture mustika jaya, furniture rawalumbu, furniture medan satria, furniture lippo cikarang, furniture jababeka, furniture grand galaxy city, furniture galaxy bekasi, furniture kemang pratama, furniture deltamas, furniture ejip, furniture greenland cikarang, furniture mm2100, furniture jakarta timur, furniture jakarta pusat, furniture jakarta selatan, furniture depok, furniture bogor, furniture karawang, furniture cibitung, furniture setu, furniture kranji, furniture bintara, furniture kayuringin, furniture pekayon jaya, furniture margahayu, furniture kaliabang"
+    "keywords": "agricultural commodities, cocoa powder trader, Indonesian cloves export, cocopeat supplier, global spice trade, sustainable agriculture, fair trade cocoa, Indonesian exports"
   }
 }
 
@@ -526,7 +483,7 @@ export const generateServiceAreaSchema = () => {
     { name: "Medan Satria", lat: -6.1951, lon: 107.0071, kelurahan: ["Kali Baru", "Pejuang", "Harapan Baru", "Medan Satria"] },
     { name: "Bantargebang", lat: -6.3238, lon: 106.9951, kelurahan: ["Bantargebang", "Sumur Batu"] },
     { name: "Jatiasih", lat: -6.2765, lon: 106.9557, kelurahan: ["Jatiasih", "Jatiluhur", "Jatisari", "Jatimekar"] },
-    
+
     // BEKASI KABUPATEN - CIKARANG
     { name: "Cikarang Barat", lat: -6.2703, lon: 107.1483, kelurahan: ["Lippo Cikarang", "Cibatu", "Telaga Murni", "Pasir Gombong", "Gandamekar"] },
     { name: "Cikarang Utara", lat: -6.2481, lon: 107.1529, kelurahan: ["Karang Asih", "Simpangan", "Sukamaju", "Danau Indah", "Mekarmukti"] },
@@ -538,7 +495,7 @@ export const generateServiceAreaSchema = () => {
     { name: "Cibitung", lat: -6.2369, lon: 107.0969, kelurahan: ["Wanajaya", "Mekarjaya", "Cikedokan", "Lambang Jaya"] },
     { name: "Setu", lat: -6.2088, lon: 107.1002, kelurahan: ["Telajung", "Lubang Buaya", "Kertajaya", "Cijengkol"] },
     { name: "Sukatani", lat: -6.1832, lon: 107.0724, kelurahan: ["Sukatani", "Sukaramai", "Ciledug", "Hegarmanah"] },
-    
+
     // KAWASAN KOMERSIAL & INDUSTRIAL ESTATE
     { name: "Summarecon Bekasi", lat: -6.2235, lon: 107.0024, kelurahan: ["Marga Mulya", "Boulevard Summarecon"], commercial: true },
     { name: "Harapan Indah", lat: -6.2148, lon: 107.0053, kelurahan: ["Boulevard Harapan Indah", "Taman Harapan Indah"], commercial: true },
@@ -551,12 +508,12 @@ export const generateServiceAreaSchema = () => {
     { name: "EJIP", lat: -6.3210, lon: 107.1642, kelurahan: ["Lemahabang", "Sukaresmi"], industrial: true },
     { name: "Greenland International", lat: -6.2915, lon: 107.1548, kelurahan: ["Pasirsari"], commercial: true },
     { name: "MM2100", lat: -6.2583, lon: 107.1489, kelurahan: ["Gandasari", "Cibatu"], industrial: true },
-    
+
     // JAKARTA (PERBATASAN & AREA UTAMA)
     { name: "Jakarta Timur", lat: -6.2607, lon: 106.9003, kelurahan: ["Cakung", "Kramat Jati", "Makasar", "Cipayung", "Pondok Gede"], jakarta: true },
     { name: "Jakarta Pusat", lat: -6.1863, lon: 106.8341, kelurahan: ["Sudirman", "Thamrin", "Kuningan"], jakarta: true },
     { name: "Jakarta Selatan", lat: -6.2608, lon: 106.8106, kelurahan: ["Kemang", "SCBD", "Senopati", "Kebayoran"], jakarta: true },
-    
+
     // JABODETABEK LAINNYA
     { name: "Depok", lat: -6.4025, lon: 106.7942, kelurahan: ["Margonda", "UI", "Sawangan", "Beji"], jabodetabek: true },
     { name: "Bogor", lat: -6.5974, lon: 106.8060, kelurahan: ["Bogor Kota", "Cibinong", "Sentul City"], jabodetabek: true },
@@ -567,7 +524,7 @@ export const generateServiceAreaSchema = () => {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "Furniture Besi Custom & Agricultural Commodities Manufacturing",
+    "serviceType": "Agricultural Commodities Trading & Export",
     "provider": {
       "@type": "LocalBusiness",
       "name": "Naturra Extal",

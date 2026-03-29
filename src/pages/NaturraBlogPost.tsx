@@ -17,225 +17,18 @@ import BlogProductShowcase from '../components/BlogProductShowcase'
 import { getRelevantProductsForBlog, getProductShowcaseHeading } from '../utils/blogProductMapping'
 import { getCurrentLanguage, type LanguageCode } from '../utils/languageManager'
 import { trackWhatsAppClick } from '../utils/whatsappTracking'
+import {
+  SIDEBAR_FEATURES_TRANSLATIONS,
+  BLOG_PRODUCT_SHOWCASE_DESCRIPTION,
+  MENTIONED_PRODUCT_LABEL,
+  VIEW_PRODUCT_LABEL,
+  CTA_TRANSLATIONS
+} from '../utils/blogTranslations'
 import './NaturraBlog.css'
 import './NaturraBlogPost.css'
 import '../components/DualLanguage.css'
 
-// Translations for sidebar features
-const SIDEBAR_FEATURES_TRANSLATIONS: Record<LanguageCode, {
-  newsletter: {
-    title: string
-    description: string
-    placeholder: string
-    button: string
-    success: string
-  }
-  share: {
-    title: string
-    description: string
-    copied: string
-    shareOn: string
-  }
-  consultation: {
-    title: string
-    description: string
-    button: string
-  }
-}> = {
-  id: {
-    newsletter: {
-      title: 'Dapatkan Update Artikel',
-      description: 'Subscribe untuk menerima artikel terbaru tentang komoditas pertanian langsung ke email Anda.',
-      placeholder: 'Masukkan email Anda',
-      button: 'Subscribe',
-      success: 'Terima kasih! Silakan cek email Anda untuk konfirmasi.'
-    },
-    share: {
-      title: 'Bagikan Artikel',
-      description: 'Bagikan artikel ini ke teman atau kolega Anda',
-      copied: 'Link berhasil disalin!',
-      shareOn: 'Bagikan di'
-    },
-    consultation: {
-      title: 'Konsultasi Gratis',
-      description: 'Butuh bantuan untuk kebutuhan komoditas Anda? Chat langsung dengan tim kami.',
-      button: 'Chat via WhatsApp'
-    }
-  },
-  en: {
-    newsletter: {
-      title: 'Get Article Updates',
-      description: 'Subscribe to receive the latest agricultural commodity articles directly to your email.',
-      placeholder: 'Enter your email',
-      button: 'Subscribe',
-      success: 'Thank you! Please check your email for confirmation.'
-    },
-    share: {
-      title: 'Share Article',
-      description: 'Share this article with your friends or colleagues',
-      copied: 'Link copied successfully!',
-      shareOn: 'Share on'
-    },
-    consultation: {
-      title: 'Free Consultation',
-      description: 'Need assistance with your commodity requirements? Chat directly with our team.',
-      button: 'Chat via WhatsApp'
-    }
-  },
-  ar: {
-    newsletter: {
-      title: 'احصل على تحديثات المقالات',
-      description: 'اشترك لتلقي أحدث مقالات السلع الزراعية مباشرة إلى بريدك الإلكتروني.',
-      placeholder: 'أدخل بريدك الإلكتروني',
-      button: 'اشترك',
-      success: 'شكراً لك! يرجى التحقق من بريدك الإلكتروني للتأكيد.'
-    },
-    share: {
-      title: 'شارك المقال',
-      description: 'شارك هذه المقالة مع أصدقائك أو زملائك',
-      copied: 'تم نسخ الرابط بنجاح!',
-      shareOn: 'شارك على'
-    },
-    consultation: {
-      title: 'استشارة مجانية',
-      description: 'تحتاج إلى مساعدة في متطلبات السلع الخاصة بك؟ تواصل مباشرة مع فريقنا.',
-      button: 'الدردشة عبر واتساب'
-    }
-  },
-  zh: {
-    newsletter: {
-      title: '获取文章更新',
-      description: '订阅以直接通过电子邮件接收最新的农产品文章。',
-      placeholder: '输入您的邮箱',
-      button: '订阅',
-      success: '谢谢！请查看您的邮箱进行确认。'
-    },
-    share: {
-      title: '分享文章',
-      description: '与您的朋友或同事分享这篇文章',
-      copied: '链接已成功复制！',
-      shareOn: '分享到'
-    },
-    consultation: {
-      title: '免费咨询',
-      description: '需要农产品需求方面的帮助？直接与我们团队聊天。',
-      button: '通过 WhatsApp 聊天'
-    }
-  },
-  ja: {
-    newsletter: {
-      title: '記事の更新を受け取る',
-      description: '最新の農産物記事をメールで直接受け取るために購読してください。',
-      placeholder: 'メールアドレスを入力',
-      button: '購読',
-      success: 'ありがとうございます！メールで確認してください。'
-    },
-    share: {
-      title: '記事を共有',
-      description: 'この記事を友達や同僚と共有してください',
-      copied: 'リンクが正常にコピーされました！',
-      shareOn: 'で共有'
-    },
-    consultation: {
-      title: '無料相談',
-      description: '農産物の要件についてサポートが必要ですか？チームに直接チャットできます。',
-      button: 'WhatsApp でチャット'
-    }
-  },
-  es: {
-    newsletter: {
-      title: 'Recibe Actualizaciones',
-      description: 'Suscríbete para recibir los últimos artículos sobre muebles industriales directamente en tu correo.',
-      placeholder: 'Ingresa tu correo',
-      button: 'Suscribirse',
-      success: '¡Gracias! Por favor revisa tu correo para confirmar.'
-    },
-    share: {
-      title: 'Compartir Artículo',
-      description: 'Comparte este artículo con tus amigos o colegas',
-      copied: '¡Enlace copiado con éxito!',
-      shareOn: 'Compartir en'
-    },
-    consultation: {
-      title: 'Consulta Gratuita',
-      description: '¿Necesitas asesoramiento para tu proyecto de muebles? Chatea directamente con nuestro equipo.',
-      button: 'Chatear por WhatsApp'
-    }
-  },
-  fr: {
-    newsletter: {
-      title: 'Recevoir les Mises à Jour',
-      description: 'Abonnez-vous pour recevoir les derniers articles sur le mobilier industriel directement par e-mail.',
-      placeholder: 'Entrez votre e-mail',
-      button: "S'abonner",
-      success: 'Merci ! Veuillez vérifier votre e-mail pour confirmation.'
-    },
-    share: {
-      title: 'Partager l\'Article',
-      description: 'Partagez cet article avec vos amis ou collègues',
-      copied: 'Lien copié avec succès !',
-      shareOn: 'Partager sur'
-    },
-    consultation: {
-      title: 'Consultation Gratuite',
-      description: 'Besoin de conseils pour votre projet de mobilier ? Discutez directement avec notre équipe.',
-      button: 'Discuter via WhatsApp'
-    }
-  },
-  ko: {
-    newsletter: {
-      title: '기사 업데이트 받기',
-      description: '최신 산업용 가구 기사를 이메일로 직접 받으려면 구독하세요.',
-      placeholder: '이메일 주소 입력',
-      button: '구독',
-      success: '감사합니다! 이메일에서 확인해 주세요.'
-    },
-    share: {
-      title: '기사 공유',
-      description: '이 기사를 친구나 동료와 공유하세요',
-      copied: '링크가 성공적으로 복사되었습니다!',
-      shareOn: '에서 공유'
-    },
-    consultation: {
-      title: '무료 상담',
-      description: '가구 프로젝트에 대한 조언이 필요하신가요? 저희 팀과 직접 채팅하세요.',
-      button: 'WhatsApp으로 채팅'
-    }
-  }
-}
-
-const BLOG_PRODUCT_SHOWCASE_DESCRIPTION: Record<LanguageCode, string> = {
-  id: "Jelajahi koleksi agricultural commodities premium kami yang dirancang khusus untuk mempercantik dan memperkuat karakter bisnis Anda.",
-  en: "Explore our premium Agricultural Commodities collection designed to enhance and strengthen your business character.",
-  ar: "استكشف مجموعتنا المتميزة من الأثاث الصناعي المصممة لتعزيز وتقوية شخصية عملك.",
-  zh: "探索我们的优质工业家具系列，旨在增强和加强您的业务特色。",
-  ja: "あなたのビジネスキャラクターを強化し、強化するために設計されたプレミアム工業家具コレクションをご覧ください。",
-  es: "Explore nuestra colección de muebles industriales premium diseñada para mejorar y fortalecer el carácter de su negocio.",
-  fr: "Explorez notre collection de meubles industriels haut de gamme conçue pour améliorer et renforcer le caractère de votre entreprise.",
-  ko: "비즈니스 특성을 향상시키고 강화하도록 설계된 프리미ウム 산업용 가구 컬렉션을 살펴보세요."
-}
-
-const MENTIONED_PRODUCT_LABEL: Record<LanguageCode, string> = {
-  id: "Komoditas Pilihan",
-  en: "Featured Commodity",
-  ar: "سلعة مميزة",
-  zh: "精选商品",
-  ja: "注目の商品",
-  es: "Producto Destacado",
-  fr: "Produit Vedette",
-  ko: "주요 상품"
-}
-
-const VIEW_PRODUCT_LABEL: Record<LanguageCode, string> = {
-  id: "Lihat Detail",
-  en: "View Details",
-  ar: "عرض التفاصيل",
-  zh: "查看详情",
-  ja: "詳細を見る",
-  es: "Ver Detalles",
-  fr: "Voir les Détails",
-  ko: "자세히 보기"
-}
+// Translations imported from ../utils/blogTranslations
 
 /**
  * Component to handle localized currency display for mentioned products
@@ -292,61 +85,7 @@ const ProductMentionPrice: React.FC<{ price: string; language: LanguageCode }> =
   );
 };
 
-const CTA_TRANSLATIONS: Record<LanguageCode, {
-  title: string
-  subtitle: string
-  viewAllProducts: string
-  contactUs: string
-}> = {
-  id: {
-    title: 'Tertarik dengan Komoditas Premium Kami?',
-    subtitle: 'Kunjungi koleksi lengkap komoditas pertanian berkualitas ekspor dari Naturra Extal.',
-    viewAllProducts: 'Lihat Semua Produk',
-    contactUs: 'Hubungi Kami'
-  },
-  en: {
-    title: 'Interested in Our Premium Commodities?',
-    subtitle: 'Visit our complete collection of high-quality export agricultural commodities from Naturra Extal.',
-    viewAllProducts: 'View All Products',
-    contactUs: 'Contact Us'
-  },
-  ar: {
-    title: 'هل أنت مهتم بسلعنا الفاخرة؟',
-    subtitle: 'زر مجموعتنا الكاملة من السلع الزراعية عالية الجودة للتصدير من Naturra Extal.',
-    viewAllProducts: 'عرض جميع المنتجات',
-    contactUs: 'اتصل بنا'
-  },
-  zh: {
-    title: '对我们的优质农产品感兴趣吗？',
-    subtitle: '访问我们完整的 Naturra Extal 高品质出口农产品系列。',
-    viewAllProducts: '查看所有产品',
-    contactUs: '联系我们'
-  },
-  ja: {
-    title: '当社のプレミアム農産物にご興味はおありですか？',
-    subtitle: 'Naturra Extalの高品質な輸出用農産物の完全なコレクションをご覧ください。',
-    viewAllProducts: 'すべての製品を見る',
-    contactUs: 'お問い合わせ'
-  },
-  es: {
-    title: '¿Interesado en Nuestros Productos Premium?',
-    subtitle: 'Visite nuestra colección completa de productos agrícolas de exportación de alta calidad de Naturra Extal.',
-    viewAllProducts: 'Ver Todos los Productos',
-    contactUs: 'Contáctenos'
-  },
-  fr: {
-    title: 'Intéressé par Nos Produits Premium ?',
-    subtitle: 'Visitez notre collection complète de produits agricoles d\'exportation de haute qualité de Naturra Extal.',
-    viewAllProducts: 'Voir Tous les Produits',
-    contactUs: 'Nous Contacter'
-  },
-  ko: {
-    title: '저희 프리미엄 농산물에 관심이 있으신가요?',
-    subtitle: 'Naturra Extal의 고품질 수출용 농산물 컬렉션 전체를 둘러보세요.',
-    viewAllProducts: '모든 제품 보기',
-    contactUs: '문의하기'
-  }
-}
+// CTA translations imported from ../utils/blogTranslations
 
 const NaturraBlogPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>()
@@ -595,16 +334,16 @@ const NaturraBlogPost: React.FC = () => {
         <meta property="og:locale" content={localeMeta.locale} />
         <meta property="og:locale:alternate" content="id_ID" />
         <meta property="og:locale:alternate" content="en_US" />
-        {post.author === 'Helmi Ramdan' && (
+        {post.author === 'Mohamad Bebi Rifki' && (
           <>
-            <meta name="author" content="Helmi Ramdan" />
-            <meta name="article:author" content="Helmi Ramdan" />
-            <meta name="article:author:role" content="Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta, Infrastructure Engineer" />
-            <meta name="article:author:expertise" content="Commercial Space Design, Construction Management, Infrastructure Engineering, Architectural Drafting, Furniture Design Consultation" />
-            <meta name="article:author:experience" content="8+ years total: 3+ years Infrastructure Engineering at Damai Putra Group, 5+ years Design Engineering & Architectural Drafting" />
-            <meta name="article:author:education" content="Universitas Diponegoro" />
-            <meta name="article:author:specialization" content="Commercial Space Design & Construction" />
-            <link rel="author" href="https://www.linkedin.com/in/helmi-ramdan-067912118/" />
+            <meta name="author" content="Mohamad Bebi Rifki" />
+            <meta name="article:author" content="Mohamad Bebi Rifki" />
+            <meta name="article:author:role" content="Export Associate / International Business Development at Naturra Extal" />
+            <meta name="article:author:expertise" content="International Trade, Agricultural Commodities, Export Logistics, Cocoa Supply Chain, Global Market Development" />
+            <meta name="article:author:experience" content="Specialized in the Indonesian agricultural commodity sector, bridging the gap between local farming communities and the global market." />
+            <meta name="article:author:education" content="Asiatop / Universitas Padjadjaran" />
+            <meta name="article:author:specialization" content="International Business Development & Export Operations" />
+            <link rel="author" href="https://www.linkedin.com/in/mohamad-bebi-rifki/" />
           </>
         )}
 
@@ -755,27 +494,27 @@ const NaturraBlogPost: React.FC = () => {
                   </React.Fragment>
                 ))}
 
-                {post.author === 'Helmi Ramdan' && (
+                {post.author === 'Mohamad Bebi Rifki' && (
                   <div className="blog-post-author-card">
                     <AuthorCard
-                      name="Helmi Ramdan"
+                      name="Mohamad Bebi Rifki"
                       title={post.category === 'Export & International'
-                        ? "Associate at Housing and Settlement Department, DKI Jakarta Province"
-                        : "Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta"}
+                        ? "Export Associate at Asiatop / Unpad"
+                        : "Export Associate di Asiatop / Unpad"}
                       experience={post.category === 'Export & International'
                         ? [
-                          'Infrastructure Engineer at Damai Putra Group (3+ years)',
-                          'Design Engineer & Architectural Drafter (5+ years)',
-                          'Alumni of Diponegoro University',
-                          'Commercial Space Design & Construction Specialist'
+                          'International Business Development',
+                          'Export Operations Specialist',
+                          'Agricultural Commodity Supply Chain',
+                          'Market Research & Analysis'
                         ]
                         : [
-                          'Infrastructure Engineer at Damai Putra Group (3+ tahun)',
-                          'Design Engineer & Architectural Drafter (5+ tahun)',
-                          'Alumni Universitas Diponegoro',
-                          'Spesialis Commercial Space Design & Construction'
+                          'Pengembangan Bisnis Internasional',
+                          'Spesialis Operasi Ekspor',
+                          'Rantai Pasok Komoditas Pertanian',
+                          'Riset & Analisis Pasar'
                         ]}
-                      linkedIn="https://www.linkedin.com/in/helmi-ramdan-067912118/"
+                      linkedIn="https://www.linkedin.com/in/mohamad-bebi-rifki/"
                       language={language}
                     />
                   </div>
@@ -968,7 +707,7 @@ const NaturraBlogPost: React.FC = () => {
                     <h3 className="sidebar-feature-title">{sidebarFeatures.consultation.title}</h3>
                     <p className="sidebar-feature-description">{sidebarFeatures.consultation.description}</p>
                     <a
-                      href={`https://wa.me/+6288801146881?text=${encodeURIComponent(
+                      href={`https://wa.me/+6289513957752?text=${encodeURIComponent(
                         post?.category === 'Export & International'
                           ? `Hello Naturra Extal,\n\nI just read your article: "${post?.title}". I'm interested in Agricultural Commodities for my project. Can I get more information and consultation?\n\nArticle: ${window.location.href}\n\nThank you!`
                           : `Halo Naturra Extal,\n\nSaya baru membaca artikel Anda: "${post?.title}". Saya tertarik dengan agricultural commodities untuk project saya. Bisakah saya mendapatkan informasi lebih lanjut dan konsultasi?\n\nArtikel: ${window.location.href}\n\nTerima kasih!`
@@ -1001,3 +740,4 @@ const NaturraBlogPost: React.FC = () => {
 }
 
 export default NaturraBlogPost
+

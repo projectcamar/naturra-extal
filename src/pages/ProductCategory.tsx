@@ -26,95 +26,75 @@ const CATEGORY_NAME_TRANSLATIONS: Record<string, Record<LanguageCode, string>> =
     fr: 'Nouveautés',
     ko: '신제품'
   },
-  'Lounge Set': {
-    id: 'Set Lounge',
-    en: 'Lounge Set',
-    ar: 'طقم صالة',
-    zh: '休闲套装',
-    ja: 'ラウンジセット',
-    es: 'Set de sala',
-    fr: 'Set de salon',
-    ko: '라운지 세트'
+  'Cocoa Powder': {
+    id: 'Bubuk Kakao',
+    en: 'Cocoa Powder',
+    ar: 'مسحوق الكاكاو',
+    zh: '可可粉',
+    ja: 'ココアパウダー',
+    es: 'Cacao en polvo',
+    fr: 'Poudre de cacao',
+    ko: '코코아 가루'
   },
-  'Sofa Bench': {
-    id: 'Sofa Bench',
-    en: 'Sofa Bench',
-    ar: 'أريكة بمقعد',
-    zh: '沙发长凳',
-    ja: 'ソファベンチ',
-    es: 'Banco sofá',
-    fr: 'Banc canapé',
-    ko: '소파 벤치'
+  'Indonesian Cloves': {
+    id: 'Cengkeh Indonesia',
+    en: 'Indonesian Cloves',
+    ar: 'القرنفل الإندونيسي',
+    zh: '印度尼西亚丁香',
+    ja: 'インドネシア産クローブ',
+    es: 'Clavos indonesios',
+    fr: 'Clous de girofle indonésiens',
+    ko: '인도네시아 정향'
   },
-  'Dining Set': {
-    id: 'Set Makan',
-    en: 'Dining Set',
-    ar: 'طقم طعام',
-    zh: '餐桌套装',
-    ja: 'ダイニングセット',
-    es: 'Juego de comedor',
-    fr: 'Ensemble de salle à manger',
-    ko: '다이닝 세트'
+  'Cocopeat Media': {
+    id: 'Media Cocopeat',
+    en: 'Cocopeat Media',
+    ar: 'بيئة الكوكوبيت',
+    zh: '椰糠介质',
+    ja: 'ココピート培地',
+    es: 'Sustrato de cocopeat',
+    fr: 'Substrat de cocopeat',
+    ko: '코코피트 상토'
   },
-  'Bar Set': {
-    id: 'Set Bar',
-    en: 'Bar Set',
-    ar: 'طقم بار',
-    zh: '吧台套装',
-    ja: 'バーセット',
-    es: 'Juego de bar',
-    fr: 'Set de bar',
-    ko: '바 세트'
+  'Spices & Herbs': {
+    id: 'Rempah & Herbal',
+    en: 'Spices & Herbs',
+    ar: 'توابل وأعشاب',
+    zh: '香料与草药',
+    ja: 'スパイス＆ハーブ',
+    es: 'Especias y hierbas',
+    fr: 'Épices et herbes',
+    ko: '향신료 및 허브'
   },
-  'Outdoor': {
-    id: 'Outdoor',
-    en: 'Outdoor',
-    ar: 'خارجي',
-    zh: '户外',
-    ja: 'アウトドア',
-    es: 'Exterior',
-    fr: 'Extérieur',
-    ko: '야외용'
+  'Sustainable Growing': {
+    id: 'Berkelanjutan',
+    en: 'Sustainable Growing',
+    ar: 'نمو مستدام',
+    zh: '可持续种植',
+    ja: 'サステナブル',
+    es: 'Cultivo sostenible',
+    fr: 'Culture durable',
+    ko: '지속 가능 재배'
   },
-  'Daybed': {
-    id: 'Daybed',
-    en: 'Daybed',
-    ar: 'سرير نهاري',
-    zh: '躺椅',
-    ja: 'デイベッド',
-    es: 'Cama de día',
-    fr: 'Lit de jour',
-    ko: '데이베드'
+  'Essential Oils': {
+    id: 'Minyak Atsiri',
+    en: 'Essential Oils',
+    ar: 'زيوت عطرية',
+    zh: '精油',
+    ja: '精油',
+    es: 'Aceites esenciales',
+    fr: 'Huiles essentielles',
+    ko: '에센셜 오일'
   },
-  'Storage': {
-    id: 'Penyimpanan',
-    en: 'Storage',
-    ar: 'تخزين',
-    zh: '储物',
-    ja: '収納',
-    es: 'Almacenamiento',
-    fr: 'Rangement',
-    ko: '수납'
-  },
-  'Tables': {
-    id: 'Meja',
-    en: 'Tables',
-    ar: 'طاولات',
-    zh: '桌子',
-    ja: 'テーブル',
-    es: 'Mesas',
-    fr: 'Tables',
-    ko: '테이블'
-  },
-  'Dine Table': {
-    id: 'Meja Makan',
-    en: 'Dine Table',
-    ar: 'طاولة طعام',
-    zh: '餐桌',
-    ja: 'ダイニングテーブル',
-    es: 'Mesa de comedor',
-    fr: 'Table à manger',
-    ko: '식탁'
+  'Export Quality': {
+    id: 'Kualitas Ekspor',
+    en: 'Export Quality',
+    ar: 'جودة التصدير',
+    zh: '出口品质',
+    ja: '輸出品質',
+    es: 'Calidad de exportación',
+    fr: 'Qualité export',
+    ko: '수출 품질'
   },
   'Products': {
     id: 'Produk',
@@ -167,15 +147,15 @@ const CATEGORY_UI_TRANSLATIONS: Record<
     priceHigh: 'Harga: Tinggi ke Rendah',
     noResults: 'Tidak ada produk ditemukan',
     home: 'Beranda',
-    pageTitle: (category) => `${category} Industrial Bekasi - Furniture Berkualitas | Naturra Extal`,
+    pageTitle: (category) => `${category} Agricultural Commodities Bekasi - Kualitas Ekspor | Naturra Extal`,
     metaDescription: (category, count) =>
-      `${category} industrial custom dari Naturra Extal Bekasi. Harga pabrik, kualitas premium, pengalaman 25+ tahun. Workshop langsung melayani Jabodetabek. ${count} produk tersedia.`,
+      `${category} premium dari Naturra Extal Bekasi. Harga export, kualitas grade A, pengalaman 25+ tahun. Terdapat ${count} produk tersedia.`,
     metaKeywords: (category) =>
-      `${category.toLowerCase()} industrial bekasi, ${category.toLowerCase()} custom, agricultural commodities bekasi, furniture besi custom, Naturra Extal`,
-    ogTitle: (category) => `${category} Industrial - Naturra Extal Bekasi`,
-    ogDescription: (category) => `${category} industrial custom dengan harga pabrik. Workshop di Bekasi, pengalaman 25+ tahun.`,
-    twitterTitle: (category) => `${category} Industrial - Naturra Extal`,
-    twitterDescription: (category, count) => `${count} produk ${category} industrial berkualitas premium.`,
+      `${category.toLowerCase()} export quality, ${category.toLowerCase()} premium, agricultural commodities bekasi, commodity supplier, Naturra Extal`,
+    ogTitle: (category) => `${category} Agricultural Commodities - Naturra Extal Bekasi`,
+    ogDescription: (category) => `Supplier ${category} premium dengan standar ekspor. Hub di Bekasi, pengalaman 25+ tahun.`,
+    twitterTitle: (category) => `${category} Agricultural Commodities - Naturra Extal`,
+    twitterDescription: (category, count) => `${count} produk ${category} kualitas ekspor premium.`,
     collectionName: (category) => `${category} agricultural commodities - Naturra Extal`,
     collectionDescription: (category, count) =>
       `Koleksi ${category} agricultural commodities. Kualitas premium, harga pabrik, pengalaman 25+ tahun. Workshop Bekasi melayani Jabodetabek. ${count} produk.`
@@ -192,7 +172,7 @@ const CATEGORY_UI_TRANSLATIONS: Record<
     home: 'Home',
     pageTitle: (category) => `${category} Agricultural Commodities Bekasi - Premium Quality | Naturra Extal`,
     metaDescription: (category, count) =>
-      `${category} industrial custom furniture by Naturra Extal Bekasi. Factory-direct pricing, premium quality, 25+ years experience. Serving Jabodetabek. ${count} products available.`,
+      `${category} premium commodities by Naturra Extal Bekasi. Direct-export pricing, premium quality beans & materials, 25+ years experience. ${count} products available.`,
     metaKeywords: (category) =>
       `${category.toLowerCase()} Agricultural Commodities, ${category.toLowerCase()} bekasi, custom Agricultural Commodities, Naturra Extal`,
     ogTitle: (category) => `${category} Industrial - Naturra Extal Bekasi`,
@@ -282,9 +262,9 @@ const CATEGORY_UI_TRANSLATIONS: Record<
     priceHigh: 'Precio: de mayor a menor',
     noResults: 'No se encontraron productos',
     home: 'Inicio',
-    pageTitle: (category) => `${category} Muebles Industriales Bekasi - Calidad Premium | Naturra Extal`,
+    pageTitle: (category) => `${category} Agricultural Commodities Bekasi - Premium Quality | Naturra Extal`,
     metaDescription: (category, count) =>
-      `${category} muebles industriales personalizados de Naturra Extal Bekasi. Precios de fábrica, calidad premium, más de 25 años de experiencia. Servicio en Jabodetabek. ${count} productos disponibles.`,
+      `Supplier ${category} premium de Naturra Extal Bekasi. Calidad de exportación, experiencia de más de 25 años. Servicio global. ${count} productos disponibles.`,
     metaKeywords: (category) =>
       `${category.toLowerCase()} muebles industriales, ${category.toLowerCase()} bekasi, muebles industriales personalizados, Naturra Extal`,
     ogTitle: (category) => `${category} Industrial - Naturra Extal Bekasi`,
@@ -345,6 +325,18 @@ const CATEGORY_UI_TRANSLATIONS: Record<
 
 const OG_LOCALES = ['id_ID', 'en_US', 'ar_SA', 'zh_CN', 'ja_JP', 'es_ES', 'fr_FR', 'ko_KR'] as const
 
+// Language to currency mapping
+const LANGUAGE_CURRENCY_MAP: { [key in LanguageCode]: 'KRW' | 'JPY' | 'CNY' | 'SAR' | 'EUR' | 'USD' | null } = {
+  'ko': 'KRW',
+  'ja': 'JPY',
+  'zh': 'CNY',
+  'ar': 'SAR',
+  'es': 'EUR',
+  'fr': 'EUR',
+  'en': 'USD',
+  'id': 'USD'
+}
+
 const ProductCategory: React.FC = () => {
   const { category } = useParams<{ category: string }>()
   const location = useLocation()
@@ -356,18 +348,6 @@ const ProductCategory: React.FC = () => {
   })
   const [usdPrices, setUsdPrices] = useState<{ [key: number]: string }>({})
   const [highlightedPrices, setHighlightedPrices] = useState<{ [key: number]: string }>({})
-
-  // Language to currency mapping
-  const LANGUAGE_CURRENCY_MAP: { [key in LanguageCode]: 'KRW' | 'JPY' | 'CNY' | 'SAR' | 'EUR' | 'USD' | null } = {
-    'ko': 'KRW',
-    'ja': 'JPY',
-    'zh': 'CNY',
-    'ar': 'SAR',
-    'es': 'EUR',
-    'fr': 'EUR',
-    'en': 'USD',
-    'id': 'USD'
-  }
 
   // Check if category exists in CATEGORY_MAP - if not, redirect to 404 to prevent Soft 404
   const categoryName = category ? CATEGORY_MAP[category] : null
@@ -536,13 +516,13 @@ const ProductCategory: React.FC = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": uiTranslations.home,
-                "item": "https://Naturra-living.com/"
+                "item": "https://naturraextal.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": localizedCategoryName,
-                "item": `https://Naturra-living.com/product-category/${category}`
+                "item": `https://naturraextal.com/product-category/${category}`
               }
             ]
           })}
@@ -555,7 +535,7 @@ const ProductCategory: React.FC = () => {
             "@type": "CollectionPage",
             "name": uiTranslations.collectionName(localizedCategoryName),
             "description": uiTranslations.collectionDescription(localizedCategoryName, filteredProducts.length),
-            "url": `https://Naturra-living.com/product-category/${category}`,
+            "url": `https://naturraextal.com/product-category/${category}`,
             "mainEntity": {
               "@type": "ItemList",
               "numberOfItems": filteredProducts.length,
@@ -565,7 +545,7 @@ const ProductCategory: React.FC = () => {
                 "item": {
                   "@type": "Product",
                   "name": product.name,
-                  "url": `https://Naturra-living.com/product/${product.slug}`,
+                  "url": `https://naturraextal.com/product/${product.slug}`,
                   "image": product.image,
                   "offers": {
                     "@type": "Offer",
@@ -620,7 +600,7 @@ const ProductCategory: React.FC = () => {
 
           <div className="category-products-grid">
             {filteredProducts.map((product) => {
-              const translatedName = getProductName(product.slug, isIndonesian) || product.name
+              const translatedName = getProductName(product.slug, language) || product.name
               return (
                 <Link
                   key={product.id}
@@ -631,7 +611,7 @@ const ProductCategory: React.FC = () => {
                     <img
                       src={product.image}
                       alt={`${translatedName} - ${localizedCategoryName} Agricultural Commodities Collection Naturra Extal`}
-                      title={`${translatedName} - ${localizedCategoryName} Premium Furniture from Naturra Extal Workshop Bekasi`}
+                      title={`${translatedName} - ${localizedCategoryName} Premium Products from Naturra Extal Indonesia`}
                       loading="lazy"
                       width="300"
                       height="200"
@@ -695,4 +675,5 @@ const ProductCategory: React.FC = () => {
 }
 
 export default ProductCategory
+
 

@@ -14,97 +14,97 @@ const ProductDetailAI: React.FC<ProductDetailAIProps> = ({ product, isIndonesian
       <script type="application/ld+json">
         {JSON.stringify(generateProductStructuredData(product))}
       </script>
-      
+
       {/* Hidden content for AI search engines */}
       <div style={{ display: 'none' }} aria-hidden="true">
         <h1>
-          {isIndonesian 
-            ? `${product.name} - agricultural commodities Besi Custom | Naturra Extal`
-            : `${product.name} - Industrial Steel Custom Furniture | Naturra Extal`
+          {isIndonesian
+            ? `${product.name} - Komoditas Pertanian Kualitas Ekspor | Naturra Extal`
+            : `${product.name} - Premium Agricultural Commodity Export Grade | Naturra Extal`
           }
         </h1>
-        
+
         <h2>
-          {isIndonesian 
-            ? `Deskripsi Produk ${product.name}`
-            : `${product.name} Product Description`
+          {isIndonesian
+            ? `Deskripsi Teknis ${product.name}`
+            : `${product.name} Technical Description`
           }
         </h2>
-        
+
         <p>
-          {isIndonesian 
-            ? `${product.name} adalah agricultural commodities besi custom berkualitas tinggi yang diproduksi oleh Naturra Extal. Produk ini cocok untuk digunakan di cafe, restoran, hotel, kantor, dan berbagai kebutuhan komersial lainnya.`
-            : `${product.name} is a high-quality industrial steel custom furniture produced by Naturra Extal. This product is suitable for use in cafes, restaurants, hotels, offices, and various other commercial needs.`
+          {isIndonesian
+            ? `${product.name} adalah komoditas pertanian unggulan dari Indonesia yang diproses dengan standar ekspor internasional oleh Naturra Extal. Produk ini memenuhi spesifikasi industri untuk manufaktur makanan, kosmetik, dan kebutuhan agrikultur global.`
+            : `${product.name} is a premium Indonesian agricultural commodity processed to international export standards by Naturra Extal. This product meets industrial specifications for food manufacturing, cosmetics, and global agricultural needs.`
           }
         </p>
-        
+
         <h3>
-          {isIndonesian 
-            ? "Spesifikasi Produk"
-            : "Product Specifications"
+          {isIndonesian
+            ? "Spesifikasi Teknis"
+            : "Technical Specifications"
           }
         </h3>
-        
+
         <ul>
           <li><strong>{isIndonesian ? "Nama Produk:" : "Product Name:"}</strong> {product.name}</li>
           <li><strong>{isIndonesian ? "Kategori:" : "Category:"}</strong> {product.categories.join(', ')}</li>
           <li><strong>{isIndonesian ? "Harga:" : "Price:"}</strong> {product.price}</li>
-          <li><strong>{isIndonesian ? "Material:" : "Material:"}</strong> {isIndonesian ? "Besi Industrial Grade" : "Industrial Grade Steel"}</li>
-          <li><strong>{isIndonesian ? "Finishing:" : "Finishing:"}</strong> {isIndonesian ? "Powder Coating / Cat Duco" : "Powder Coating / Duco Paint"}</li>
-          <li><strong>{isIndonesian ? "Garansi:" : "Warranty:"}</strong> {isIndonesian ? "1 Tahun" : "1 Year"}</li>
-          <li><strong>{isIndonesian ? "Pengiriman:" : "Shipping:"}</strong> {isIndonesian ? "Seluruh Indonesia" : "Throughout Indonesia"}</li>
+          <li><strong>{isIndonesian ? "Kualitas:" : "Quality:"}</strong> {isIndonesian ? "Grade Ekspor Premium" : "Premium Export Grade"}</li>
+          <li><strong>{isIndonesian ? "Asal:" : "Origin:"}</strong> {isIndonesian ? "Indonesia (Sourcing Langsung)" : "Indonesia (Direct Sourcing)"}</li>
+          <li><strong>{isIndonesian ? "Kapasitas Guna:" : "Use Capacity:"}</strong> {isIndonesian ? "Skala Industri & Retail" : "Industrial & Retail Scale"}</li>
+          <li><strong>{isIndonesian ? "Pengiriman:" : "Shipping:"}</strong> {isIndonesian ? "Seluruh Dunia (FOB/CIF)" : "Worldwide Shipping (FOB/CIF)"}</li>
         </ul>
-        
+
         <h3>
-          {isIndonesian 
-            ? "Keunggulan Produk"
-            : "Product Advantages"
+          {isIndonesian
+            ? "Keunggulan Komoditas"
+            : "Commodity Advantages"
           }
         </h3>
-        
+
         <ul>
-          <li>{isIndonesian ? "Material berkualitas tinggi" : "High-quality materials"}</li>
-          <li>{isIndonesian ? "Desain modern dan elegan" : "Modern and elegant design"}</li>
-          <li>{isIndonesian ? "Tahan lama dan awet" : "Durable and long-lasting"}</li>
-          <li>{isIndonesian ? "Mudah perawatan" : "Easy maintenance"}</li>
-          <li>{isIndonesian ? "Custom sesuai kebutuhan" : "Customizable according to needs"}</li>
-          <li>{isIndonesian ? "Harga kompetitif" : "Competitive price"}</li>
+          <li>{isIndonesian ? "Sumber langsung dari jaringan petani" : "Directly sourced from farmer network"}</li>
+          <li>{isIndonesian ? "Kontrol kualitas ketat" : "Strict quality control"}</li>
+          <li>{isIndonesian ? "Parameter teknis presisi (Kadar Air, Lemak, dll)" : "Precise technical parameters (Moisture, Fat, etc.)"}</li>
+          <li>{isIndonesian ? "Pasokan kontinu dan stabil" : "Continuous and stable supply"}</li>
+          <li>{isIndonesian ? "Kemasan kustom sesuai standar logistik" : "Custom packaging per logistics standards"}</li>
+          <li>{isIndonesian ? "Harga kompetitif pasar global" : "Global market competitive pricing"}</li>
         </ul>
-        
+
         <h3>
-          {isIndonesian 
-            ? "Cara Pemesanan"
-            : "How to Order"
+          {isIndonesian
+            ? "Prosedur Pemesanan & Ekspor"
+            : "Ordering & Export Procedure"
           }
         </h3>
-        
+
         <p>
-          {isIndonesian 
-            ? "Untuk memesan produk ini, silakan hubungi kami melalui WhatsApp di +6288801146881 atau email lifewithNaturra@gmail.com. Tim kami akan membantu Anda dengan konsultasi desain dan estimasi harga yang sesuai dengan kebutuhan Anda."
-            : "To order this product, please contact us via WhatsApp at +6288801146881 or email lifewithNaturra@gmail.com. Our team will help you with design consultation and price estimation according to your needs."
+          {isIndonesian
+            ? "Untuk permintaan penawaran harga (RFQ) atau spesifikasi teknis khusus, silakan hubungi tim ekspor kami melalui WhatsApp di +6289513957752 atau email hello@naturraextal.com. Kami melayani pengiriman kontainer (FCL) maupun muatan parsial (LCL) ke pelabuhan tujuan Anda."
+            : "For Request for Quotation (RFQ) or specific technical specifications, please contact our export team via WhatsApp at +6289513957752 or email hello@naturraextal.com. We handle Full Container Load (FCL) and Less than Container Load (LCL) shipments to your port of destination."
           }
         </p>
-        
+
         <h3>
-          {isIndonesian 
-            ? "FAQ Produk"
-            : "Product FAQ"
+          {isIndonesian
+            ? "FAQ Produk Ekspor"
+            : "Export Product FAQ"
           }
         </h3>
-        
+
         <p>
-          <strong>Q: {isIndonesian ? "Apakah produk ini bisa di-custom?" : "Can this product be customized?"}</strong><br/>
-          A: {isIndonesian 
-            ? "Ya, semua produk kami bisa di-custom sesuai kebutuhan dan budget Anda."
-            : "Yes, all our products can be customized according to your needs and budget."
+          <strong>Q: {isIndonesian ? "Apakah tersedia sampel produk?" : "Are product samples available?"}</strong><br />
+          A: {isIndonesian
+            ? "Ya, kami dapat mengirimkan sampel untuk pengujian laboratorium sebelum pemesanan skala besar."
+            : "Yes, we can provide samples for laboratory testing before bulk ordering."
           }
         </p>
-        
+
         <p>
-          <strong>Q: {isIndonesian ? "Berapa lama proses pembuatan?" : "How long is the manufacturing process?"}</strong><br/>
-          A: {isIndonesian 
-            ? "Proses pembuatan membutuhkan waktu 2-4 minggu tergantung kompleksitas custom."
-            : "The manufacturing process takes 2-4 weeks depending on customization complexity."
+          <strong>Q: {isIndonesian ? "Berapa kapasitas produksi bulanan?" : "What is the monthly production capacity?"}</strong><br />
+          A: {isIndonesian
+            ? "Kapasitas kami bervariasi per produk, namun kami menjamin ketersediaan stok untuk kontrak jangka panjang."
+            : "Our capacity varies by product, but we guarantee stock availability for long-term contracts."
           }
         </p>
       </div>
@@ -113,3 +113,4 @@ const ProductDetailAI: React.FC<ProductDetailAIProps> = ({ product, isIndonesian
 }
 
 export default ProductDetailAI
+

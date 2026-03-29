@@ -23,7 +23,7 @@ export const initializeGlobalWhatsAppTracking = (): void => {
     const href = link.getAttribute('href');
     
     // Check if it's a WhatsApp link
-    if (href && (href.includes('wa.me/+6288801146881') || href.includes('wa.me/6288801146881'))) {
+    if (href && (href.includes('wa.me/+6289513957752') || href.includes('wa.me/6289513957752'))) {
       // Determine the source based on context
       let source = 'unknown';
       
@@ -101,3 +101,4 @@ export const cleanupGlobalWhatsAppTracking = (): void => {
   // In practice, the tracking will remain active for the lifetime of the page.
   console.log('Global WhatsApp tracking cleanup requested');
 };
+
