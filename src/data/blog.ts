@@ -1038,6 +1038,50 @@ export const BLOG_POSTS: BlogPost[] = [
       ],
       "conclusion": "总之，高品质农产品是保证食品安全和质量的关键。通过选择信誉好的供应商和了解农产品的来源，您可以提升您的采购水平。Naturra Extal作为一家专业的农产品供应商，我们始终致力于提供高品质的农产品，帮助您找到最适合您的产品。"
     }
+  },
+  {
+    "id": 31,
+    "slug": "ngasah-biji-kakao-tips-dan-trik",
+    "title": "Ngasah Biji Kakao",
+    "category": "Tips and Trick",
+    "excerpt": "Tips dan trik ngasah biji kakao untuk mendapatkan hasil terbaik",
+    "image": "https://images.unsplash.com/photo-1585428522589-592f41523318?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxjb2NvYSUyMGJlYW5zJTIwb24lMjB3b29kZW4lMjB0YWJsZXxlbnwwfDB8fHwxNzc0ODAzNjM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-30 00:00",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Ngasah biji kakao adalah proses penting dalam produksi cokelat. Dengan teknik yang tepat, Anda dapat menghasilkan cokelat dengan rasa dan aroma yang lezat. Berikut beberapa tips dan trik ngasah biji kakao untuk mendapatkan hasil terbaik.",
+      "keyPoints": [
+        "Pilih biji kakao yang berkualitas",
+        "Tentukan tingkat kehalusan yang tepat",
+        "Gunakan mesin ngasah yang sesuai"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengapa Ngasah Biji Kakao Penting?",
+          "content": "Ngasah biji kakao adalah proses yang penting karena dapat mempengaruhi rasa dan aroma cokelat. Dengan ngasah biji kakao, Anda dapat menghasilkan cokelat dengan rasa yang lebih lengkap dan aroma yang lebih kuat. Selain itu, ngasah biji kakao juga dapat membantu menghilangkan kandungan asam dan biji-bijian yang tidak diinginkan.",
+          "imageSearchQuery": "biji kakao sebelum dan sesudah ngasah",
+          "image": "https://images.unsplash.com/photo-1619615174792-a5edcfeafdfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxiaWppJTIwa2FrYW8lMjBzZWJlbHVtJTIwZGFuJTIwc2VzdWRhaCUyMG5nYXNhaHxlbnwwfDB8fHwxNzc0ODAzNjM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "biji kakao sebelum dan sesudah ngasah"
+        },
+        {
+          "heading": "Tips dan Trik Ngasah Biji Kakao",
+          "content": "Berikut beberapa tips dan trik ngasah biji kakao yang dapat Anda coba: <br> - Pilih biji kakao yang berkualitas <br> - Tentukan tingkat kehalusan yang tepat <br> - Gunakan mesin ngasah yang sesuai <br> - Lakukan ngasah biji kakao dalam beberapa tahap untuk mendapatkan hasil yang optimal"
+        },
+        {
+          "heading": "Naturra Extal Solusi Ngasah Biji Kakao",
+          "content": "Naturra Extal menawarkan solusi ngasah biji kakao yang lengkap dan profesional. Kami menyediakan mesin ngasah biji kakao yang berkualitas dan dapat disesuaikan dengan kebutuhan Anda. Selain itu, kami juga menyediakan biji kakao yang berkualitas dan dapat diolah menjadi cokelat dengan rasa dan aroma yang lezat.",
+          "productId": 1
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda ingin memulai ngasah biji kakao, Anda dapat menghubungi kami untuk mendapatkan informasi lebih lanjut tentang mesin ngasah biji kakao dan biji kakao yang berkualitas. Kami siap membantu Anda dalam proses ngasah biji kakao dan menghasilkan cokelat dengan rasa dan aroma yang lezat.",
+          "productId": 2
+        }
+      ],
+      "conclusion": "Ngasah biji kakao adalah proses yang penting dalam produksi cokelat. Dengan tips dan trik yang tepat, Anda dapat menghasilkan cokelat dengan rasa dan aroma yang lezat. Naturra Extal siap membantu Anda dalam proses ngasah biji kakao dan menghasilkan cokelat dengan kualitas yang tinggi."
+    }
   }
 ];
 
