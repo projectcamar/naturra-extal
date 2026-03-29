@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Hero.css'
 
@@ -11,6 +11,9 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ language = 'en' }) => {
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false)
+
   const translations: Record<string, { title: string, subtitle: string, button: string }> = {
     en: {
       title: "CV Naturra Extal International",
@@ -34,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({ language = 'en' }) => {
     },
     ja: {
       title: "CV Naturra Extal International",
-      subtitle: "インドネシア農産物の信頼できるパートナー。1999年以来、ブカシの産業施設からプレミアム品質のココアパウダー、クローブ、ココピートを世界中に輸出しています。",
+      subtitle: "インドネシア農産物の信頼できるパートナー。1999年以来、ブカシの産業施設 from プレミアム品質のココアパウダー、クローブ、ココピートを世界中に輸出しています。",
       button: "製品を見る"
     },
     es: {
@@ -56,20 +59,32 @@ const Hero: React.FC<HeroProps> = ({ language = 'en' }) => {
 
   const t = translations[language] || translations.en
 
+  useEffect(() => {
+    if (videoRef.current) {
+      // Robustly trigger play
+      videoRef.current.play().catch(error => {
+        console.warn("Hero video autoplay failed:", error)
+      })
+    }
+  }, [])
+
   return (
     <section className="hero" role="banner" aria-labelledby="hero-title">
       <div className="hero-background">
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
           poster={heroImage}
-          className="hero-bg-video"
-          src="/video-hero-mainlandingpage.mp4"
+          className={`hero-bg-video ${isVideoLoaded ? 'is-loaded' : 'is-loading'}`}
+          onCanPlayThrough={() => setIsVideoLoaded(true)}
           aria-hidden="true"
         >
+          <source src="/video-hero-mainlandingpage.mp4" type="video/mp4" />
+          <source src="./video-hero-mainlandingpage.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="hero-overlay"></div>
