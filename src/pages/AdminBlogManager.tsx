@@ -19,7 +19,14 @@ const AdminBlogManager: React.FC = () => {
     const { currentStep, nextStep } = useTutorial()
 
     const [posts, setPosts] = useState<BlogPost[]>([])
-    // ... same states ...
+
+    // Auto-sync view with tutorial steps
+    useEffect(() => {
+        if (currentStep >= 5 && view === 'list') {
+            handleNew();
+        }
+    }, [currentStep, view]);
+
     const [searchTerm, setSearchTerm] = useState('')
     const [isSaving, setIsSaving] = useState(false)
     const [isLoading, setIsLoading] = useState(true)

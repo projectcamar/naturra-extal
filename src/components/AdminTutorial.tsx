@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react'
-import { ArrowRight, Sparkles, BookOpen, Layout, FileText, MousePointer2 } from 'lucide-react'
+import { ArrowRight, Sparkles, BookOpen, Layout, FileText, Info } from 'lucide-react'
 import { useTutorial } from '../context/TutorialContext'
 
 const AdminTutorial: React.FC = () => {
@@ -13,10 +13,9 @@ const AdminTutorial: React.FC = () => {
         const el = document.getElementById(stepData.targetId);
         if (el) {
             const rect = el.getBoundingClientRect();
-            // Basic value comparison to avoid unnecessary updates
             setTargetRect(prev => {
                 if (!prev) return rect;
-                if (prev.top === rect.top && prev.left === rect.left && prev.width === rect.width) return prev;
+                if (Math.abs(prev.top - rect.top) < 1 && Math.abs(prev.left - rect.left) < 1 && Math.abs(prev.width - rect.width) < 1) return prev;
                 return rect;
             });
         } else {
@@ -34,7 +33,7 @@ const AdminTutorial: React.FC = () => {
         window.addEventListener('scroll', updateRect, true);
         window.addEventListener('resize', updateRect);
 
-        const interval = setInterval(updateRect, 1000);
+        const interval = setInterval(updateRect, 800);
 
         return () => {
             window.removeEventListener('scroll', updateRect, true);
@@ -57,11 +56,14 @@ const AdminTutorial: React.FC = () => {
     }, [targetRect]);
 
     const cardPosition = useMemo(() => {
-        if (!targetRect || !stepData) return { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' };
+        if (!targetRect || !stepData) {
+            // Safe fallback: Bottom docked banner
+            return { bottom: '40px', left: '50%', transform: 'translateX(-50%)' };
+        }
 
-        const padding = 24;
-        const cardWidth = 400;
-        const cardHeight = 280;
+        const padding = 20;
+        const cardWidth = 560;
+        const cardHeight = 84;
 
         const rect = {
             top: targetRect.top || 0,
@@ -72,49 +74,33 @@ const AdminTutorial: React.FC = () => {
             height: targetRect.height || 0
         };
 
-        let pos = { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' };
+        // Determine best side to place the horizontal bar
+        // Default to 'bottom' if it fits, else 'top'
+        let top = rect.bottom + padding;
+        let left = rect.left + rect.width / 2 - cardWidth / 2;
 
-        switch (stepData.position) {
-            case 'bottom':
-                pos = {
-                    top: `${rect.bottom + padding}px`,
-                    left: `${rect.left + rect.width / 2 - cardWidth / 2}px`,
-                    transform: 'none'
-                };
-                break;
-            case 'top':
-                pos = {
-                    top: `${rect.top - cardHeight - padding}px`,
-                    left: `${rect.left + rect.width / 2 - cardWidth / 2}px`,
-                    transform: 'none'
-                };
-                break;
-            case 'left':
-                pos = {
-                    top: `${rect.top + rect.height / 2 - cardHeight / 2}px`,
-                    left: `${rect.left - cardWidth - padding}px`,
-                    transform: 'none'
-                };
-                break;
-            case 'right':
-                pos = {
-                    top: `${rect.top + rect.height / 2 - cardHeight / 2}px`,
-                    left: `${rect.right + padding}px`,
-                    transform: 'none'
-                };
-                break;
+        if (stepData.position === 'top' || (top + cardHeight > window.innerHeight - 20)) {
+            top = rect.top - cardHeight - padding;
         }
 
-        return pos;
+        // Horizontal clamping
+        if (left < 20) left = 20;
+        if (left + cardWidth > window.innerWidth - 20) left = window.innerWidth - cardWidth - 20;
+
+        return {
+            top: `${top}px`,
+            left: `${left}px`,
+            transform: 'none'
+        };
     }, [targetRect, stepData]);
 
     const getIcon = (title: string) => {
         const t = title || '';
-        if (t.includes('Welcome')) return <Layout className="text-blue-500" size={32} />;
-        if (t.includes('Blog')) return <BookOpen className="text-green-500" size={32} />;
-        if (t.includes('Article')) return <FileText className="text-purple-500" size={32} />;
-        if (t.includes('AI')) return <Sparkles className="text-amber-500" size={32} />;
-        return <MousePointer2 className="text-indigo-500" size={32} />;
+        if (t.includes('Welcome')) return <Layout className="text-blue-500" size={24} />;
+        if (t.includes('Blog')) return <BookOpen className="text-green-500" size={24} />;
+        if (t.includes('Article')) return <FileText className="text-purple-500" size={24} />;
+        if (t.includes('AI')) return <Sparkles className="text-amber-500" size={24} />;
+        return <Info className="text-indigo-500" size={24} />;
     };
 
     if (!isActive || !stepData) return null;
@@ -135,29 +121,25 @@ const AdminTutorial: React.FC = () => {
                 />
             )}
 
-            <div className="tutorial-card-container" style={cardPosition}>
-                <div className={`tutorial-card step-${currentStep}`}>
-                    <div className="tutorial-header">
-                        <div className="tutorial-icon">
-                            {getIcon(stepData.title || '')}
-                        </div>
-                        <div className="tutorial-badge">TUTORIAL STEP {currentStep}/8</div>
+            <div className="tutorial-bar-container" style={cardPosition}>
+                <div className={`tutorial-bar step-${currentStep}`}>
+                    <div className="bar-badge">
+                        <span>{currentStep}/8</span>
                     </div>
 
-                    <h3 className="tutorial-title">{stepData.title || ''}</h3>
-                    <p className="tutorial-text">{stepData.text || ''}</p>
+                    <div className="bar-main">
+                        <div className="bar-icon">{getIcon(stepData.title || '')}</div>
+                        <div className="bar-content">
+                            <h4 className="bar-title">{stepData.title}</h4>
+                            <p className="bar-text">{stepData.text}</p>
+                        </div>
+                    </div>
 
-                    <div className="tutorial-footer">
-                        <button className="tutorial-btn" onClick={nextStep}>
-                            {stepData.btnText || 'Next'}
+                    <div className="bar-footer">
+                        <button className="bar-next-btn" onClick={nextStep}>
+                            <span>{stepData.btnText || 'Next'}</span>
                             {currentStep === 8 ? <Sparkles size={16} /> : <ArrowRight size={16} />}
                         </button>
-                    </div>
-
-                    <div className="tutorial-progress">
-                        {[...Array(8)].map((_, i) => (
-                            <div key={i} className={`progress-dot ${currentStep > i ? 'active' : ''}`} />
-                        ))}
                     </div>
                 </div>
             </div>
@@ -173,10 +155,8 @@ const AdminTutorial: React.FC = () => {
         .tutorial-overlay {
           position: absolute;
           inset: 0;
-          background: rgba(0, 0, 0, 0.75);
+          background: rgba(0, 0, 0, 0.7);
           pointer-events: auto;
-          /* Removed backdrop-filter to prevent browser crashes */
-          /* Removed clip-path transition to ensure stability */
         }
 
         .tutorial-highlight-box {
@@ -186,115 +166,113 @@ const AdminTutorial: React.FC = () => {
           box-shadow: 0 0 0 4px rgba(0, 77, 44, 0.2), 0 0 20px rgba(0, 77, 44, 0.4);
           z-index: 10001;
           pointer-events: none;
-          /* Removed transition here too */
         }
 
-        .tutorial-card-container {
+        .tutorial-bar-container {
           position: absolute;
           z-index: 10002;
           pointer-events: auto;
-          /* Removed transition here too */
+          width: fit-content;
         }
 
-        .tutorial-card {
+        .tutorial-bar {
           background: #fff;
-          width: 400px;
-          border-radius: 24px;
-          padding: 32px;
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+          width: 580px;
+          height: 84px;
+          border-radius: 100px;
+          padding: 8px 12px 8px 8px;
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+          display: flex;
+          align-items: center;
+          gap: 16px;
           animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          border: 1px solid rgba(0, 77, 44, 0.1);
         }
 
-        .tutorial-header {
+        .bar-badge {
+          width: 48px;
+          height: 48px;
+          background: #004D2C;
+          color: #fff;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.75rem;
+          font-weight: 800;
+          flex-shrink: 0;
+          box-shadow: 0 4px 10px rgba(0, 77, 44, 0.3);
+        }
+
+        .bar-main {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          flex: 1;
+        }
+
+        .bar-icon {
+          width: 40px;
+          height: 40px;
+          background: #f8fafc;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+
+        .bar-content {
           display: flex;
           flex-direction: column;
-          align-items: center;
-          margin-bottom: 20px;
-        }
-
-        .tutorial-icon {
-          width: 64px;
-          height: 64px;
-          background: #f8fafc;
-          border-radius: 20px;
-          display: flex;
-          align-items: center;
           justify-content: center;
-          margin-bottom: 12px;
+          min-width: 0;
         }
 
-        .tutorial-badge {
-          font-size: 0.7rem;
-          font-weight: 800;
-          letter-spacing: 0.1em;
-          color: #64748b;
-          background: #f1f5f9;
-          padding: 4px 10px;
-          border-radius: 100px;
-        }
-
-        .tutorial-title {
-          font-size: 1.5rem;
+        .bar-title {
+          font-size: 0.95rem;
           font-weight: 700;
           color: #0f172a;
-          margin-bottom: 12px;
-          text-align: center;
+          margin: 0;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
-        .tutorial-text {
-          font-size: 0.95rem;
-          line-height: 1.6;
-          color: #475569;
-          text-align: center;
-          margin-bottom: 24px;
+        .bar-text {
+          font-size: 0.8rem;
+          color: #64748b;
+          margin: 2px 0 0 0;
+          line-height: 1.3;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
 
-        .tutorial-footer {
-          display: flex;
-          justify-content: center;
+        .bar-footer {
+          flex-shrink: 0;
         }
 
-        .tutorial-btn {
+        .bar-next-btn {
           background: #004D2C;
           color: #fff;
           border: none;
-          padding: 14px 24px;
-          border-radius: 12px;
+          padding: 10px 18px;
+          border-radius: 100px;
           font-weight: 600;
           display: flex;
           align-items: center;
-          gap: 10px;
+          gap: 8px;
           cursor: pointer;
           transition: all 0.3s;
-          width: 100%;
-          justify-content: center;
+          font-size: 0.85rem;
         }
 
-        .tutorial-btn:hover {
+        .bar-next-btn:hover {
           background: #003d23;
           transform: translateY(-2px);
           box-shadow: 0 4px 12px rgba(0, 77, 44, 0.2);
-        }
-
-        .tutorial-progress {
-          display: flex;
-          justify-content: center;
-          gap: 6px;
-          margin-top: 24px;
-        }
-
-        .progress-dot {
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background: #e2e8f0;
-          transition: all 0.3s;
-        }
-
-        .progress-dot.active {
-          background: #004D2C;
-          width: 16px;
-          border-radius: 3px;
         }
 
         @keyframes slideUp {
@@ -303,15 +281,17 @@ const AdminTutorial: React.FC = () => {
         }
 
         @media (max-width: 768px) {
-          .tutorial-card-container {
-             top: 50% !important;
-             left: 50% !important;
-             transform: translate(-50%, -50%) !important;
+          .tutorial-bar {
+            width: 94vw;
+            border-radius: 20px;
+            height: auto;
+            padding: 16px;
+            flex-direction: column;
+            gap: 12px;
           }
-          .tutorial-card {
-            width: 90vw;
-            padding: 24px;
-          }
+          .bar-badge { display: none; }
+          .bar-main { width: 100%; }
+          .bar-next-btn { width: 100%; justify-content: center; }
         }
       `}</style>
         </div>
