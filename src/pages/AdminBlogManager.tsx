@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { useNavigate, useLocation, Link } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import {
     Plus, Edit, Trash2, Search, ArrowLeft, Save,
     FileText, AlertCircle, Loader2, Check, X,
@@ -13,8 +13,10 @@ import './Admin.css'
 
 import { useTutorial } from '../context/TutorialContext'
 
+import { getAdminUser } from '../utils/adminAuth'
+
 const AdminBlogManager: React.FC = () => {
-    const location = useLocation()
+    const username = getAdminUser()
     const [view, setView] = useState<'list' | 'editor'>('list')
     const { currentStep, nextStep } = useTutorial()
 
@@ -156,7 +158,7 @@ const AdminBlogManager: React.FC = () => {
             excerpt: '',
             image: '',
             date: dateString,
-            author: 'Helmi Ramdan',
+            author: username === 'brifki' || username === 'rifki' ? 'Moh Rifki' : username === 'rio' ? 'Rio' : username,
             status: 'draft',
             customContent: {
                 introduction: '',
@@ -535,6 +537,28 @@ const AdminBlogManager: React.FC = () => {
 
                 {view === 'list' ? (
                     <div className="admin-blog-list-view">
+                        <div className="admin-stats-bar">
+                            <div className="stat-item">
+                                <span className="stat-label">Total Articles</span>
+                                <span className="stat-count">{posts.length}</span>
+                            </div>
+                            <div className="stat-divider"></div>
+                            <div className="stat-item">
+                                <span className="stat-label">Rifki</span>
+                                <span className="stat-count">{posts.filter(p => p.author?.toLowerCase().includes('rifki') || p.author?.toLowerCase() === 'brifki').length}</span>
+                            </div>
+                            <div className="stat-divider"></div>
+                            <div className="stat-item">
+                                <span className="stat-label">Rio</span>
+                                <span className="stat-count">{posts.filter(p => p.author?.toLowerCase().includes('rio')).length}</span>
+                            </div>
+                            <div className="stat-divider"></div>
+                            <div className="stat-item">
+                                <span className="stat-label">Others</span>
+                                <span className="stat-count">{posts.length - posts.filter(p => p.author?.toLowerCase().includes('rifki') || p.author?.toLowerCase() === 'brifki' || p.author?.toLowerCase().includes('rio')).length}</span>
+                            </div>
+                        </div>
+
                         <div className="manager-toolbar">
                             <div className="search-box">
                                 <Search size={18} />
@@ -576,8 +600,13 @@ const AdminBlogManager: React.FC = () => {
                                                     </div>
                                                     <div className="post-title-info">
                                                         <span className="post-title-text">{post.title}</span>
-                                                        <span className="post-slug-text">{post.slug}</span>
-                                                        <span className="post-date-text">{post.date}</span>
+                                                        <div className="post-meta-line">
+                                                            <span className="post-author-tag">by {post.author || 'System'}</span>
+                                                            <span className="meta-dot">•</span>
+                                                            <span className="post-slug-text">{post.slug}</span>
+                                                            <span className="meta-dot">•</span>
+                                                            <span className="post-date-text">{post.date}</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </td>
@@ -931,16 +960,17 @@ const AdminBlogManager: React.FC = () => {
                                 </select>
                             </div>
 
-                            <label>What would you like to write about?</label>
+                            <label style={{ fontSize: '13px', fontWeight: '700', color: '#444', marginBottom: '8px', display: 'block' }}>What would you like to write about?</label>
                             <textarea
                                 value={aiPrompt}
                                 onChange={(e) => setAiPrompt(e.target.value)}
-                                placeholder="Example: Panduan memilih furniture cafe industrial yang tahan lama dan hemat budget untuk cafe kecil di Jakarta"
-                                rows={5}
+                                placeholder="Example: Strategi ekspor biji kopi robusta ke pasar Eropa: Panduan kualitas dan logistik 2025"
+                                rows={4}
                                 disabled={isGenerating}
+                                style={{ minHeight: '100px' }}
                             />
-                            <p className="ai-modal-hint">
-                                💡 Tip: You can write the prompt in any language! The AI will automatically translate and generate the full article in the <strong>Target Language</strong> selected above.
+                            <p className="ai-modal-hint" style={{ marginTop: '10px', fontSize: '11px' }}>
+                                💡 Tip: You can write the prompt in any language! The AI will automatically translate and generate the full article.
                             </p>
                         </div>
 
@@ -1519,6 +1549,61 @@ const AdminBlogManager: React.FC = () => {
                     min-width: 100px;
                     text-align: center;
                 }
+
+                /* Stats Bar */
+                .admin-stats-bar {
+                    display: flex;
+                    align-items: center;
+                    background: #fff;
+                    padding: 12px 25px;
+                    border-radius: 12px;
+                    margin-bottom: 20px;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+                    border: 1px solid #f0f0f0;
+                }
+                .stat-item {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+                }
+                .stat-label { font-size: 0.65rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; }
+                .stat-count { font-size: 1.1rem; font-weight: 800; color: #1e293b; }
+                .stat-divider { width: 1px; height: 30px; background: #f1f5f9; margin: 0 30px; }
+
+                .post-title-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                    min-width: 0;
+                }
+                .post-meta-line {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    flex-wrap: wrap;
+                }
+                .meta-dot { color: #e2e8f0; font-size: 10px; }
+                .post-author-tag {
+                    font-size: 0.7rem;
+                    font-weight: 700;
+                    color: #004D2C;
+                    background: #f0fdf4;
+                    padding: 1px 6px;
+                    border-radius: 4px;
+                }
+
+                .ai-modal-content {
+                    background: #fff;
+                    width: 95%;
+                    max-width: 550px;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    box-shadow: 0 25px 70px rgba(0,0,0,0.15);
+                    animation: modalSlideUp 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+                }
+                .ai-modal-body { padding: 20px 30px; }
+                .ai-modal-header { padding: 20px 30px; border-bottom: 1px solid #f1f5f9; }
+                .ai-modal-footer { padding: 15px 30px; background: #f8fafc; }
             `}</style>
         </div>
     )
