@@ -657,16 +657,15 @@ const AdminBlogManager: React.FC = () => {
                                         <Sparkles size={22} color="#004D2C" />
                                         AI Power Tools
                                     </h2>
-                                    <div style={{ display: 'flex', gap: '12px' }}>
+                                    <div className="ai-buttons-container">
                                         <button
                                             id="admin-ai-generate-btn"
                                             className="ai-generate-btn"
-                                            style={{ flex: 1 }}
                                             onClick={() => setShowAIModal(true)}
                                             disabled={isGenerating}
                                         >
                                             <Sparkles size={18} />
-                                            <span>Auto-Generate Full Article with AI</span>
+                                            <span>Auto-Generate with AI</span>
                                         </button>
                                         <button
                                             className="ai-generate-btn secondary"
@@ -675,7 +674,7 @@ const AdminBlogManager: React.FC = () => {
                                             title="Suggest image from Unsplash"
                                         >
                                             <Sparkles size={18} />
-                                            <span>Suggest Cover Image</span>
+                                            <span>Suggest Cover</span>
                                         </button>
                                     </div>
                                 </section>
@@ -1237,6 +1236,24 @@ const AdminBlogManager: React.FC = () => {
                 .create-post-btn:hover {
                     box-shadow: 0 8px 25px rgba(0, 77, 44, 0.3);
                     transform: translateY(-2px);
+                }
+
+                .ai-buttons-container {
+                    display: flex;
+                    gap: 12px;
+                }
+
+                @media (max-width: 600px) {
+                    .ai-buttons-container {
+                        flex-direction: column;
+                    }
+                    .ai-generate-btn {
+                        width: 100%;
+                        justify-content: center;
+                    }
+                    .editor-section, .editor-sidebar-card {
+                        padding: 15px;
+                    }
                 }
 
                 /* Article List Redesign - Compact */
