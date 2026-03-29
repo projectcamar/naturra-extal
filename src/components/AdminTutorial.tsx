@@ -29,6 +29,11 @@ const AdminTutorial: React.FC = () => {
             return;
         }
 
+        const el = document.getElementById(stepData.targetId);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
         updateRect();
         window.addEventListener('scroll', updateRect, true);
         window.addEventListener('resize', updateRect);
