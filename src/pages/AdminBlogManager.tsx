@@ -328,11 +328,11 @@ const AdminBlogManager: React.FC = () => {
             }
 
             if (result.image) {
-                setEditingPost(p => p ? { ...p, image: result.url } : null)
+                setEditingPost(p => p ? { ...p, image: result.image } : null)
                 setMessage({
                     type: 'success',
                     text: `✨ Found a perfect image for: "${result.searchQuery}"`,
-                    imageUrl: result.url
+                    imageUrl: result.image
                 })
             } else {
                 setMessage({ type: 'error', text: 'No matching image found on Unsplash' })
@@ -394,7 +394,7 @@ const AdminBlogManager: React.FC = () => {
                 setMessage({
                     type: 'success',
                     text: `✨ Found section image for: "${result.searchQuery}"`,
-                    imageUrl: result.url
+                    imageUrl: result.image
                 })
             } else {
                 setMessage({ type: 'error', text: 'No matching image found on Unsplash' })
@@ -871,6 +871,11 @@ const AdminBlogManager: React.FC = () => {
                                             onChange={e => setEditingPost(p => p ? { ...p, image: e.target.value } : null)}
                                             placeholder="https://..."
                                         />
+                                        {editingPost?.image && (
+                                            <div className="editor-image-stream-preview">
+                                                <img src={editingPost.image} alt="Featured Preview" />
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="input-group-compact" style={{ marginTop: '15px' }}>
                                         <label>SEO Excerpt</label>
@@ -1673,6 +1678,22 @@ const AdminBlogManager: React.FC = () => {
                     transition: color 0.2s;
                 }
                 .message-close:hover { color: #1e293b; }
+
+                /* Editor Image Stream Preview */
+                .editor-image-stream-preview {
+                    margin-top: 10px;
+                    width: 100%;
+                    height: 120px;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    background: #f8fafc;
+                    border: 1px solid #e2e8f0;
+                }
+                .editor-image-stream-preview img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             `}</style>
         </div>
     )

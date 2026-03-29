@@ -212,6 +212,11 @@ export const BlogContentEditor: React.FC<BlogContentEditorProps> = ({
                                                 <span style={{ fontSize: '11px' }}>AI Suggest</span>
                                             </button>
                                         </div>
+                                        {section.image && (
+                                            <div className="section-image-stream-preview" style={{ marginTop: '10px', width: '100%', height: '100px', borderRadius: '4px', overflow: 'hidden', border: '1px solid #eee' }}>
+                                                <img src={section.image} alt="Section Preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="input-group-compact">
                                         <label style={{ fontSize: '12px', color: '#666', marginBottom: '5px', display: 'block' }}>Alt Text (SEO)</label>
@@ -258,6 +263,11 @@ export const BlogContentEditor: React.FC<BlogContentEditorProps> = ({
                                             placeholder="Image URL"
                                             style={{ width: '100%', padding: '6px', border: '1px solid #ddd', borderRadius: '4px', fontSize: '12px' }}
                                         />
+                                        {section.image && (
+                                            <div className="section-image-stream-preview" style={{ marginTop: '5px', width: '100%', height: '60px', borderRadius: '4px', overflow: 'hidden', border: '1px solid #eee' }}>
+                                                <img src={section.image} alt="Override Preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="input-group-compact">
                                         <input

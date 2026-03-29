@@ -41,7 +41,7 @@ const AdminDashboard: React.FC = () => {
     };
 
     return (
-        <div className="admin-dashboard">
+        <div className="admin-dashboard lobby-mode">
             {showOnboarding && (
                 <AdminOnboardingCard
                     username={username}
@@ -54,86 +54,111 @@ const AdminDashboard: React.FC = () => {
                 <meta name="robots" content="noindex, nofollow" />
             </Helmet>
 
-            <header className="admin-header">
+            <header className="admin-header lobby-header">
                 <div className="admin-header-title">
-                    <h1>NATURRA <span style={{ color: '#004D2C' }}>EXTAL</span></h1>
+                    <div className="system-status-indicator pulse"></div>
+                    <h1>NATURRA <span className="brand-accent">EXTAL</span> <span className="admin-tag">COMMAND CENTER</span></h1>
                 </div>
 
                 <div className="admin-user-nav">
-                    <div className="admin-user-info">
-                        <Users size={18} />
-                        <span style={{ textTransform: 'capitalize' }}>{username}</span>
+                    <div className="admin-user-info glass-profile">
+                        <div className="user-avatar-hex">
+                            <Users size={16} />
+                        </div>
+                        <div className="user-status-text">
+                            <span className="user-name">{username}</span>
+                            <span className="status-label">OPERATOR LEVEL 1</span>
+                        </div>
                     </div>
-                    <button onClick={logoutAdmin} className="logout-btn">
+                    <button onClick={logoutAdmin} className="logout-btn-lobby">
                         <LogOut size={16} />
-                        <span>Logout</span>
+                        <span>DISCONNECT</span>
                     </button>
                 </div>
             </header>
 
-            <main className="admin-main">
-                <div id="admin-welcome-banner" className="welcome-banner">
+            <main className="admin-main lobby-layout">
+                <div id="admin-welcome-banner" className="welcome-banner-lobby glass-morphism">
+                    <div className="banner-glitch-overlay"></div>
                     <div className="welcome-content">
-                        <h2>Welcome to your Dashboard</h2>
-                        <p>This is the beginning of the Naturra Extal administration portal. From here, you will soon be able to manage products, content, and track site activity.</p>
-                        <button
-                            className="recall-tutorial-btn"
-                            onClick={() => setShowOnboarding(true)}
-                        >
-                            <Settings size={16} />
-                            Tutorial
-                        </button>
+                        <div className="banner-tag">SECURE CONNECTION ESTABLISHED</div>
+                        <h2>System Initialization Complete</h2>
+                        <p>Welcome to the core administration node. Neural link stabilized. You have full access to product management, content streams, and site telemetry.</p>
+                        <div className="banner-actions">
+                            <button
+                                className="lobby-action-btn primary"
+                                onClick={() => setShowOnboarding(true)}
+                            >
+                                <Settings size={16} />
+                                RUN SYSTEM TUTORIAL
+                            </button>
+                            <div className="system-ping">
+                                <BarChart3 size={14} />
+                                <span>LATENCY: 24ms</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div className="dashboard-stats">
-                    <div id="admin-blog-card" className="stat-card clickable" onClick={() => navigate('/admin/blog')}>
-                        <div className="stat-icon">
-                            <FileText size={28} />
+                <div className="dashboard-grid-lobby">
+                    <div id="admin-blog-card" className="lobby-card clickable" onClick={() => navigate('/admin/blog')}>
+                        <div className="card-hex-bg"></div>
+                        <div className="card-glow"></div>
+                        <div className="stat-icon-lobby">
+                            <FileText size={32} />
                         </div>
-                        <div className="stat-info">
-                            <h3>Blog Manager</h3>
-                            <div className="stat-value">{articleCount} Articles</div>
+                        <div className="stat-info-lobby">
+                            <span className="stat-label">MODULE</span>
+                            <h3>BLOG MANAGER</h3>
+                            <div className="stat-value-lobby">{articleCount} DATA CORES</div>
                         </div>
-                    </div>
-
-                    <div className="stat-card">
-                        <div className="stat-icon">
-                            <LayoutDashboard size={28} />
-                        </div>
-                        <div className="stat-info">
-                            <h3>System Status</h3>
-                            <div className="stat-value">Active</div>
+                        <div className="card-footer-lobby">
+                            <span>ACCESS NODE</span>
+                            <div className="arrow-right"></div>
                         </div>
                     </div>
 
-                    <div className="stat-card">
-                        <div className="stat-icon">
-                            <Database size={28} />
+                    <div className="lobby-card">
+                        <div className="stat-icon-lobby active">
+                            <LayoutDashboard size={32} />
                         </div>
-                        <div className="stat-info">
-                            <h3>Database</h3>
-                            <div className="stat-value">Connected</div>
-                        </div>
-                    </div>
-
-                    <div className="stat-card">
-                        <div className="stat-icon">
-                            <BarChart3 size={28} />
-                        </div>
-                        <div className="stat-info">
-                            <h3>Recent Leads</h3>
-                            <div className="stat-value">Tracking...</div>
+                        <div className="stat-info-lobby">
+                            <span className="stat-label">CORE STATUS</span>
+                            <h3>SYSTEM ENGINE</h3>
+                            <div className="stat-value-lobby status-online">OPTIMIZED</div>
                         </div>
                     </div>
 
-                    <div className="stat-card">
-                        <div className="stat-icon">
-                            <Settings size={28} />
+                    <div className="lobby-card">
+                        <div className="stat-icon-lobby">
+                            <Database size={32} />
                         </div>
-                        <div className="stat-info">
-                            <h3>Settings</h3>
-                            <div className="stat-value">v1.0.0</div>
+                        <div className="stat-info-lobby">
+                            <span className="stat-label">STORAGE</span>
+                            <h3>NEURAL DATABASE</h3>
+                            <div className="stat-value-lobby">ENCRYPTED</div>
+                        </div>
+                    </div>
+
+                    <div className="lobby-card warning">
+                        <div className="stat-icon-lobby">
+                            <BarChart3 size={32} />
+                        </div>
+                        <div className="stat-info-lobby">
+                            <span className="stat-label">TELEMETRY</span>
+                            <h3>ACTIVE LEADS</h3>
+                            <div className="stat-value-lobby">ACQUIRING...</div>
+                        </div>
+                    </div>
+
+                    <div className="lobby-card">
+                        <div className="stat-icon-lobby">
+                            <Settings size={32} />
+                        </div>
+                        <div className="stat-info-lobby">
+                            <span className="stat-label">VERSION</span>
+                            <h3>FIRMWARE</h3>
+                            <div className="stat-value-lobby">OS v1.0.0</div>
                         </div>
                     </div>
                 </div>
