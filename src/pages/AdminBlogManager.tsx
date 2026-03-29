@@ -1397,16 +1397,105 @@ const AdminBlogManager: React.FC = () => {
                     align-items: center;
                 }
                 
-                .pagination-stats { font-size: 0.8rem; color: #666; }
+                /* Save/Back Buttons */
+                .save-btn {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+                    color: #fff;
+                    border: none;
+                    padding: 10px 18px;
+                    border-radius: 50px;
+                    font-weight: 700;
+                    font-size: 0.85rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+                }
+
+                .save-btn:hover {
+                    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+                    transform: translateY(-2px);
+                }
+
+                .back-link {
+                    color: #64748b;
+                    transition: color 0.2s;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                }
+
+                .back-link:hover {
+                    background: #f1f5f9;
+                    color: #004D2C;
+                }
+
+                /* Pagination - Fully Styled */
+                .pagination-wrapper {
+                    padding: 15px 25px;
+                    background: #fff;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-top: 1px solid #f0f0f0;
+                }
+                
+                .pagination-info { 
+                    font-size: 0.85rem; 
+                    color: #64748b;
+                    font-weight: 500;
+                }
+
+                .pagination-controls {
+                    display: flex;
+                    align-items: center;
+                    gap: 30px;
+                }
+
+                .items-per-page {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 0.85rem;
+                    color: #64748b;
+                }
+
+                .size-btn {
+                    background: transparent;
+                    border: 1px solid #e2e8f0;
+                    color: #64748b;
+                    padding: 4px 10px;
+                    border-radius: 6px;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                }
+
+                .size-btn:hover { border-color: #004D2C; color: #004D2C; }
+                .size-btn.active { background: #004D2C; color: #fff; border-color: #004D2C; }
+
+                .page-btns {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                }
 
                 .nav-btn {
-                    padding: 6px 15px;
-                    border-radius: 4px;
-                    font-size: 0.8rem;
-                    font-weight: 600;
-                    color: #444;
+                    padding: 8px 16px;
+                    border-radius: 8px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    color: #1e293b;
                     background: #fff;
-                    border: 1px solid #eee;
+                    border: 1px solid #e2e8f0;
                     transition: all 0.2s;
                     cursor: pointer;
                 }
@@ -1414,6 +1503,21 @@ const AdminBlogManager: React.FC = () => {
                 .nav-btn:hover:not(:disabled) {
                     border-color: #004D2C;
                     color: #004D2C;
+                    background: #f0fdf4;
+                }
+
+                .nav-btn:disabled {
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                    background: #f8fafc;
+                }
+
+                .page-num {
+                    font-size: 0.85rem;
+                    color: #1e293b;
+                    font-weight: 600;
+                    min-width: 100px;
+                    text-align: center;
                 }
             `}</style>
         </div>
