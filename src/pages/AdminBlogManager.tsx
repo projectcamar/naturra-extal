@@ -24,7 +24,8 @@ const AdminBlogManager: React.FC = () => {
 
     // Auto-sync view with tutorial steps
     useEffect(() => {
-        if (currentStep >= 5 && view === 'list') {
+        // Only force editor view for the initial AI generation tutorial steps
+        if (currentStep >= 5 && currentStep <= 8 && view === 'list') {
             handleNew();
         }
     }, [currentStep, view]);
@@ -281,7 +282,6 @@ const AdminBlogManager: React.FC = () => {
             return
         }
 
-        if (currentStep === 9) nextStep();
 
         // New or edited posts get 'draft' status
         const postToSave = { ...editingPost, status: 'draft' as const }
@@ -297,6 +297,7 @@ const AdminBlogManager: React.FC = () => {
 
         setPosts(updatedPosts)
         setView('list')
+        if (currentStep === 9) nextStep();
         setMessage({ type: 'success', text: 'Post saved locally as draft. Click "Deploy Changes" to make it live.' })
     }
 
