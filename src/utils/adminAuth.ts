@@ -18,7 +18,7 @@ export const isAdminAuthenticated = () => {
     if (!token) return false;
 
     // Basic check - in a real app we'd verify the token with the backend or check expiry
-    return token.startsWith('Naturra_admin_session_');
+    return token.startsWith('naturra_admin_session_');
 };
 
 export const logoutAdmin = () => {
