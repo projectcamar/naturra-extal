@@ -600,7 +600,7 @@ const AdminBlogManager: React.FC = () => {
                                             <td className="actions-cell">
                                                 {post.status !== 'draft' && (
                                                     <a
-                                                        href={`https://NATURRA-EXTAL.com/blog/${post.slug}`}
+                                                        href={`/blog/${post.slug}`}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         className="action-btn preview"
