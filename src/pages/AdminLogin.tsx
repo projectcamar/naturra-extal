@@ -87,7 +87,7 @@ const AdminLogin: React.FC = () => {
                                     id="username"
                                     value={username}
                                     onChange={(e) => setUsername(e.target.value)}
-                                    placeholder="rioanggara"
+                                    placeholder="Angga"
                                     required
                                     autoComplete="username"
                                 />

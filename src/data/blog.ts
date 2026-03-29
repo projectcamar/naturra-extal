@@ -178,7 +178,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "Maximizing profit in skipjack tuna export with expert tips",
     "image": "https://images.unsplash.com/photo-1647964147585-623a38bfae15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxmcm96ZW4lMjBza2lwamFjayUyMHR1bmElMjBvbiUyMGElMjBwYWxsZXR8ZW58MHwwfHx8MTc3NDc1ODY2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 11:30",
-    "author": "rioanggara",
+    "author": "Angga",
     "status": "draft",
     "customContent": {
       "introduction": "Skipjack tuna is one of the most widely consumed fish species globally, with a significant demand in international markets. As an exporter, understanding the intricacies of the skipjack tuna export process is crucial for maximizing profits. In this article, we will delve into the world of skipjack tuna export, highlighting key considerations and expert tips for a successful export journey.",
