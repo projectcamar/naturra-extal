@@ -1,73 +1,26 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { ALL_PRODUCTS } from '../data/products'
 import { convertIDRToUSD } from '../utils/currencyConverter'
 import { getProductName } from '../data/productDescriptions'
+import { useLanguage } from '../utils/languageContext'
 import './NotFound.css'
 
 const FEATURED_PRODUCTS = ALL_PRODUCTS.slice(0, 4)
 
 const NotFound: React.FC = () => {
-  const [isIndonesian, setIsIndonesian] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
+  const { language } = useLanguage()
+  const isIndonesian = language === 'id'
+  const [isLoading, setIsLoading] = useState(false)
   const [usdPrices, setUsdPrices] = useState<{ [key: number]: string }>({})
-  const location = useLocation()
 
   useEffect(() => {
-    // Check query parameter first (lang=id or lang=en)
-    const searchParams = new URLSearchParams(location.search)
-    const langParam = searchParams.get('lang')
-    if (langParam === 'id') {
-      setIsIndonesian(true)
-      setIsLoading(false)
-      return
-    }
-    if (langParam === 'en' || langParam === 'eng') {
-      setIsIndonesian(false)
-      setIsLoading(false)
-      return
-    }
-
-    // Check URL for language prefix
-    const path = location.pathname
-    if (path.startsWith('/id')) {
-      setIsIndonesian(true)
-      setIsLoading(false)
-      return
-    }
-    if (path.startsWith('/eng')) {
-      setIsIndonesian(false)
-      setIsLoading(false)
-      return
-    }
-
-    // If no language prefix, detect from IP
-    const detectLocation = async () => {
-      try {
-        // Try to get location from IP
-        const response = await fetch('https://ipapi.co/json/')
-        const data = await response.json()
-
-        if (data.country_code === 'ID') {
-          setIsIndonesian(true)
-        }
-      } catch (error) {
-        console.log('IP detection failed, checking browser language')
-        // Fallback: check browser language
-        const browserLang = navigator.language || navigator.languages?.[0]
-        if (browserLang?.startsWith('id')) {
-          setIsIndonesian(true)
-        }
-      } finally {
-        setIsLoading(false)
-      }
-    }
-
-    detectLocation()
-  }, [location.pathname, location.search])
+    // Current language is managed by context
+    setIsLoading(false)
+  }, [language])
 
   useEffect(() => {
     let isMounted = true

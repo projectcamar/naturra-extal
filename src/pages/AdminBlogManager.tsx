@@ -149,18 +149,16 @@ const AdminBlogManager: React.FC = () => {
                     const latestLocalPost = posts[posts.length - 1];
                     const countMatches = data.postCount === posts.length;
                     const latestPostMatches = !latestLocalPost || (data.latestPost && data.latestPost.id === latestLocalPost.id);
+                    const slugMatches = deploymentTargetSlug && data.latestPost && data.latestPost.slug === deploymentTargetSlug;
 
-                    if (data.success && countMatches && latestPostMatches) {
+                    if (data.success && (countMatches && latestPostMatches || slugMatches)) {
                         setDeploymentStatus('ready');
-                        addLog('LIVE VERIFICATION SUCCESS: All changes are officially live!', 'success');
+                        addLog('LIVE VERIFICATION SUCCESS: Your target content is now live!', 'success');
                         if (statusIntervalId) clearInterval(statusIntervalId);
                         if (liveIntervalId) clearInterval(liveIntervalId);
                         if (iframeIntervalId) clearInterval(iframeIntervalId);
                     } else {
-                        // Only log if something changed or on a slower interval
-                        const targetLabel = deploymentTargetSlug ? `/blog/${deploymentTargetSlug}` : 'content';
-                        // addLog(`Scanning ${targetLabel} for updates...`, 'info'); 
-                        // Removed frequent logs to avoid terminal spam
+                        // Only force iframe refresh, no log spam
                         setIframeKey(k => k + 1);
                     }
                 } catch (error) {
