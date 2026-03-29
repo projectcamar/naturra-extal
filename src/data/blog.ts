@@ -613,7 +613,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1710345919674-77407de09148?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHx2aWJyYW50JTIwSW5kb25lc2lhbiUyMHRyYWRpdGlvbmFsJTIwbWFya2V0JTIwc2NlbmV8ZW58MHwwfHx8MTc3NDgwMDM1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 23:05",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Pasar adalah salah satu komponen penting dalam perekonomian Indonesia. Dengan sumber daya alam yang melimpah, Indonesia memiliki potensi besar untuk menjadi salah satu pengekspor komoditas terbesar di dunia. Namun, masih banyak tantangan yang harus dihadapi dalam mengembangkan pasar Indonesia. <br> Dalam artikel ini, kita akan membahas beberapa tips dan trik untuk mengenal pasar Indonesia dan bagaimana Naturra Extal dapat membantu Anda dalam mengembangkan bisnis Anda.",
       "keyPoints": [
@@ -644,6 +644,50 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dengan demikian, kita dapat menyimpulkan bahwa pasar Indonesia memiliki potensi yang sangat besar untuk dikembangkan. Dengan tips dan trik yang tepat, serta mitra yang dapat membantu Anda, seperti Naturra Extal, Anda dapat meningkatkan kesempatan sukses Anda di pasar Indonesia. Segera hubungi Naturra Extal untuk mengembangkan bisnis Anda!"
+    }
+  },
+  {
+    "id": 22,
+    "slug": "استراتيجية-النجاح-في-الторيد",
+    "title": "استراتيجية النجاح",
+    "category": "Tips and Trick",
+    "excerpt": "استراتيجية التجارة الناجحة لشركات التوريد",
+    "image": "https://images.unsplash.com/photo-1758873268364-15bef4162221?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHN0cmF0ZWd5JTIwbWVldGluZyUyMGluJTIwbW9kZXJuJTIwb2ZmaWNlfGVufDB8MHx8fDE3NzQ4MDA3NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-29 23:12",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "تعتبر الاستراتيجية خطة عمل شاملة لتحقيق الأهداف والغايات، في هذا المقال سنناقش استراتيجية النجاح لشركات التوريد. <br> سنcovered كيفية وضع خطة استراتيجية ناجحة، وكيفية تحديد الأهداف والغايات. <br> كما سنناقش كيفية وضع خطة عمل لتحقيق هذه الأهداف.",
+      "keyPoints": [
+        "وضع خطة استراتيجية ناجحة",
+        "تحديد الأهداف والغايات",
+        "وضع خطة عمل لتحقيق الأهداف"
+      ],
+      "language": "ar",
+      "sections": [
+        {
+          "heading": "لماذا الاستراتيجية مهمة؟",
+          "content": "الاستراتيجية هي خطة عمل شاملة لتحقيق الأهداف والغايات، وهي تعتبر أساسية لنجاح أي شركة. <br> без استراتيجية، لن تكون هناك خطة واضحة لتحقيق الأهداف، وستكون الشركة عرضة للخطر. <br> الاستراتيجية تساعد على تحديد الأهداف والغايات، وتوفر خطة عمل لتحقيق هذه الأهداف.",
+          "imageSearchQuery": "business strategy importance",
+          "image": "https://images.unsplash.com/photo-1542744094-24638eff58bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHN0cmF0ZWd5JTIwaW1wb3J0YW5jZXxlbnwwfDB8fHwxNzc0ODAwNzUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "business strategy importance"
+        },
+        {
+          "heading": "كيفية وضع خطة استراتيجية ناجحة",
+          "content": "للوضع خطة استراتيجية ناجحة، يجب عليك أولاً تحديد الأهداف والغايات. <br> يجب عليك تحديد ما تريد تحقيقه، وما هي الأهداف التي تريد تحقيقها. <br> بعد ذلك، يجب عليك وضع خطة عمل لتحقيق هذه الأهداف. <br> الخطة يجب أن تكون واضحة ومحددة، و phải تكون هناك خطة بديلة في حالة الفشل."
+        },
+        {
+          "heading": "دور Naturra Extal في الاستراتيجية",
+          "content": "Naturra Extal هي شركة رائدة في مجال التوريد، وتقدم خدمات عالية الجودة لشركات التوريد. <br> Naturra Extal يمكن أن تساعدك على وضع خطة استراتيجية ناجحة، وتقدم خدماتها لتحقيق الأهداف والغايات. <br> يمكنك الاتصال بنا للاستفادة من خدماتنا.",
+          "productId": 1
+        },
+        {
+          "heading": "الاستراتيجية والبيئة",
+          "content": "الاستراتيجية يجب أن تكون متوافقة مع البيئة، ويجب أن تكون هناك خطة لتعامل مع التغيرات البيئية. <br> Naturra Extal تهتم بالبيئة، وتقدم خدماتها لتعزيز الاستدامة والبيئة. <br> يمكنك الاتصال بنا للاستفادة من خدماتنا.",
+          "productId": 5
+        }
+      ],
+      "conclusion": "الاستراتيجية هي خطة عمل شاملة لتحقيق الأهداف والغايات، وهي تعتبر أساسية لنجاح أي شركة. <br> يجب عليك وضع خطة استراتيجية ناجحة، وتحديد الأهداف والغايات. <br> Naturra Extal يمكن أن تساعدك على وضع خطة استراتيجية ناجحة، وتقدم خدماتها لتحقيق الأهداف والغايات."
     }
   }
 ];
