@@ -530,7 +530,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1585428522589-592f41523318?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGNvY29hJTIwYmVhbnMlMjBvbiUyMHdvb2RlbiUyMHRhYmxlfGVufDB8MHx8fDE3NzQ3OTg3ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 22:39",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Biji kakao merupakan bahan baku utama dalam produksi cokelat. Oleh karena itu, penting untuk memilih biji kakao yang berkualitas tinggi. Dalam artikel ini, kita akan membahas beberapa tips untuk memilih biji kakao yang tepat untuk kebutuhan Anda.",
       "keyPoints": [
@@ -558,6 +558,50 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dengan memilih biji kakao yang berkualitas tinggi, Anda dapat menghasilkan cokelat dengan rasa yang kaya dan aroma yang kuat. Naturra Extal menawarkan biji kakao berkualitas yang dipilih dengan teliti dan diproses dengan baik untuk menghasilkan kualitas terbaik. Silakan hubungi kami untuk informasi lebih lanjut tentang produk kami."
+    }
+  },
+  {
+    "id": 20,
+    "slug": "tips-mengolah-koko",
+    "title": "Tips Mengolah Koko",
+    "category": "Tips and Trick",
+    "excerpt": "Tips dan trik mengolah koko untuk mendapatkan hasil terbaik",
+    "image": "https://images.unsplash.com/photo-1585428522589-592f41523318?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGNvY29hJTIwYmVhbnMlMjBvbiUyMHdvb2RlbiUyMHRhYmxlfGVufDB8MHx8fDE3NzQ3OTg3ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-29 23:00",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Koko adalah salah satu komoditas yang paling penting di Indonesia, namun banyak orang yang masih belum tahu cara mengolahnya dengan benar. Dalam artikel ini, kita akan membahas beberapa tips dan trik mengolah koko untuk mendapatkan hasil terbaik.",
+      "keyPoints": [
+        "Pemilihan bahan baku yang berkualitas",
+        "Proses pengolahan yang tepat",
+        "Penyimpanan yang baik"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Pemilihan Bahan Baku",
+          "content": "Pemilihan bahan baku yang berkualitas adalah langkah pertama dalam mengolah koko. Pastikan Anda memilih biji koko yang segar dan memiliki kualitas yang baik. <strong>Biji koko yang berkualitas</strong> akan memiliki warna yang merata dan tidak memiliki bau yang tidak sedap.",
+          "imageSearchQuery": "cocoa beans selection",
+          "image": "https://images.unsplash.com/photo-1447753072467-2f56032d1d48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxjb2NvYSUyMGJlYW5zJTIwc2VsZWN0aW9ufGVufDB8MHx8fDE3NzQ4MDAwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "cocoa beans selection"
+        },
+        {
+          "heading": "Proses Pengolahan",
+          "content": "Proses pengolahan koko yang tepat sangat penting untuk mendapatkan hasil yang baik. <em>Proses pengolahan</em> harus dilakukan dengan hati-hati dan teliti untuk menghindari kerusakan pada biji koko. Pastikan Anda mengikuti prosedur yang benar dan menggunakan peralatan yang bersih."
+        },
+        {
+          "heading": "Naturra Extal Solutions",
+          "content": "Naturra Extal adalah perusahaan yang bergerak di bidang komoditas koko dan memiliki pengalaman yang luas dalam mengolah koko. Kami menawarkan <strong>Natural Cocoa Powder V10</strong> yang diproduksi dengan menggunakan biji koko yang berkualitas dan proses pengolahan yang tepat. Dengan menggunakan produk kami, Anda dapat mendapatkan hasil yang terbaik untuk bisnis Anda.",
+          "productId": 1
+        },
+        {
+          "heading": "Tips dan Trik Tambahan",
+          "content": "Berikut beberapa tips dan trik tambahan yang dapat Anda gunakan dalam mengolah koko: <br> - Pastikan Anda menyimpan biji koko dalam tempat yang kering dan sejuk. <br> - Jangan mencuci biji koko sebelum mengolahnya. <br> - Gunakan peralatan yang bersih dan steril untuk menghindari kontaminasi.",
+          "productId": 12
+        }
+      ],
+      "conclusion": "Dengan mengikuti tips dan trik yang telah kami bagikan, Anda dapat mendapatkan hasil yang terbaik dalam mengolah koko. Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan atau memerlukan bantuan lebih lanjut. Naturra Extal siap membantu Anda dalam mengembangkan bisnis koko Anda."
     }
   }
 ];
