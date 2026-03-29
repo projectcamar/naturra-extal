@@ -1,7 +1,7 @@
 {
-  "name": "Mangala Living - Furniture Industrial Indonesia",
-  "short_name": "Mangala Living",
-  "description": "Manufacturer furniture industrial besi custom untuk cafe, restoran, hotel. Workshop Bekasi sejak 1999.",
+  "name": "Naturra Extal International - Agricultural Commodity Trading",
+  "short_name": "Naturra Extal",
+  "description": "Premium Indonesian agricultural commodity trader and exporter. Specializing in Cocoa, Spices, and Cocopeat.",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#8B7355",
@@ -26,7 +26,11 @@
       "type": "image/png"
     }
   ],
-  "categories": ["business", "shopping", "lifestyle"],
+  "categories": [
+    "business",
+    "shopping",
+    "lifestyle"
+  ],
   "lang": "id",
   "dir": "ltr",
   "screenshots": []

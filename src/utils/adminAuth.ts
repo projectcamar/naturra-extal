@@ -4,9 +4,18 @@
  */
 
 const ADMIN_TOKEN_KEY = 'Naturra_admin_token';
+const ADMIN_USER_KEY = 'Naturra_admin_user';
 
 export const setAdminSession = (token: string) => {
     sessionStorage.setItem(ADMIN_TOKEN_KEY, token);
+};
+
+export const setAdminUser = (username: string) => {
+    sessionStorage.setItem(ADMIN_USER_KEY, username);
+};
+
+export const getAdminUser = () => {
+    return sessionStorage.getItem(ADMIN_USER_KEY) || 'admin';
 };
 
 export const getAdminToken = () => {
@@ -23,5 +32,6 @@ export const isAdminAuthenticated = () => {
 
 export const logoutAdmin = () => {
     sessionStorage.removeItem(ADMIN_TOKEN_KEY);
+    sessionStorage.removeItem(ADMIN_USER_KEY);
     window.location.href = '/admin/login';
 };

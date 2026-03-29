@@ -113,13 +113,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         <p style="margin: 5px 0;"><strong>Accept Language:</strong> ${req.headers['accept-language'] || 'Unknown'}</p>
       </div>
       <div style="margin-top: 30px; border-top: 2px solid #8B7355; padding-top: 15px; font-size: 12px; color: #777;">
-        <p>This is an automated notification from lifewithmangala.com</p>
+        <p>This is an automated notification from naturraextal.com</p>
         <p>You're receiving this because a visitor interacted with your website.</p>
       </div>
     `;
 
     if (isCatalog || notificationType === 'order_now' || notificationType === 'whatsapp_click' || notificationType === 'chatbot_lead' || notificationType === 'chatbot_message' || notificationType === 'subscription') {
-      subject = `Mangala Notification: ${notificationType.replace('_', ' ').toUpperCase()}`;
+      subject = `Naturra Notification: ${notificationType.replace('_', ' ').toUpperCase()}`;
       html = `
         <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 25px; color: #333; line-height: 1.6; max-width: 600px; border: 1px solid #ddd; border-radius: 8px;">
           <h2 style="color: #8B7355; border-bottom: 2px solid #8B7355; padding-bottom: 10px;">🔔 New ${notificationType.replace('_', ' ').toUpperCase()}</h2>
@@ -142,7 +142,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(400).json({ error: 'Invalid notification type' });
     }
 
-    const recipients = ['lifewithmangala@gmail.com'];
+    const recipients = ['hello@naturraextal.com', 'projectcamar@gmail.com'];
     const results = [];
 
     // 1. Send Admin Notification (Existing Logic)
@@ -150,7 +150,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       console.log(`[SUBSCRIPTION] Attempting to send notification to admin: ${recipient}`);
       try {
         const { data, error } = await resend.emails.send({
-          from: 'Mangala Living <catalog@mangala-living.com>',
+          from: 'Naturra Extal <catalog@naturraextal.com>',
           to: recipient,
           subject: subject,
           html: html,
@@ -173,7 +173,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     if ((isCatalog || notificationType === 'subscription') && email && email.includes('@')) {
       console.log(`[SUBSCRIPTION] Attempting to send catalog to customer: ${email}`);
 
-      const pdfBaseUrl = 'https://mangala-living.com/fonts/Mangala-Living-Catalog-2026';
+      const pdfBaseUrl = 'https://naturraextal.com/fonts/Naturra-Extal-Catalog-2026';
       const langSuffix = catalogLanguage && catalogLanguage !== 'en' && catalogLanguage !== 'id'
         ? `-${catalogLanguage.toUpperCase()}`
         : '';
@@ -201,111 +201,111 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           intro: 'Terima kasih telah menyatakan minat pada koleksi kami. Sesuai permintaan Anda, berikut adalah tautan untuk mengunduh Katalog Premium Mangala Living 2026 kami.',
           downloadCta: 'UNDUH KATALOG PDF',
           fallbackText: 'Jika tombol di atas tidak berfungsi, salin dan tempel tautan ini ke browser Anda:',
-          showcaseHeading: 'Produk Industrial Terkait',
-          showcaseDesc: 'Explore koleksi furniture industrial premium kami yang dirancang untuk memperkuat karakter bisnis Anda.',
+          showcaseHeading: 'Produk Unggulan Terkait',
+          showcaseDesc: 'Jelajahi koleksi komoditas pertanian premium kami yang dirancang untuk memenuhi standar kualitas internasional.',
           viewDetails: 'Lihat Detail Produk',
           viewAll: 'Lihat Semua Produk',
           bestRegards: 'Salam Hangat,',
-          team: 'Tim Mangala Living',
-          contactRemarks: 'Jika Anda memiliki pertanyaan, silakan hubungi kami di lifewithmangala@gmail.com. Mohon jangan membalas email no-reply ini.'
+          team: 'Tim Naturra Extal',
+          contactRemarks: 'Jika Anda memiliki pertanyaan, silakan hubungi kami di hello@naturraextal.com. Mohon jangan membalas email no-reply ini.'
         },
         en: {
-          subject: 'Your Mangala Living 2026 Catalog',
+          subject: 'Your Naturra Extal 2026 Catalog',
           greeting: (name) => `Dear ${name},`,
-          intro: 'Thank you for your interest in our collections. As requested, here is the link to download our Mangala Living 2026 Premium Catalog.',
+          intro: 'Thank you for your interest in our collections. As requested, here is the link to download our Naturra Extal 2026 Premium Catalog.',
           downloadCta: 'DOWNLOAD PDF CATALOG',
           fallbackText: 'If the button above doesn\'t work, copy and paste this link into your browser:',
-          showcaseHeading: 'Related Industrial Products',
-          showcaseDesc: 'Explore our collection of premium industrial furniture designed to enhance and strengthen the character of your business.',
+          showcaseHeading: 'Related Premium Products',
+          showcaseDesc: 'Explore our collection of premium agricultural commodities designed to meet international quality standards.',
           viewDetails: 'View Product Details',
           viewAll: 'View All Products',
           bestRegards: 'Best Regards,',
-          team: 'Mangala Living Team',
-          contactRemarks: 'If you have any questions, please contact us at lifewithmangala@gmail.com. Please do not reply to this no-reply email.'
+          team: 'Naturra Extal Team',
+          contactRemarks: 'If you have any questions, please contact us at hello@naturraextal.com. Please do not reply to this no-reply email.'
         },
         es: {
-          subject: 'Su Catálogo Mangala Living 2026',
+          subject: 'Su Catálogo Naturra Extal 2026',
           greeting: (name) => `Estimado/a ${name},`,
-          intro: 'Gracias por su interés en nuestras colecciones. Según lo solicitado, aquí tiene el enlace para descargar nuestro Catálogo Premium Mangala Living 2026.',
+          intro: 'Gracias por su interés en nuestras colecciones. Según lo solicitado, aquí tiene el enlace para descargar nuestro Catálogo Premium Naturra Extal 2026.',
           downloadCta: 'DESCARGAR CATÁLOGO PDF',
           fallbackText: 'Si el botón de arriba no funciona, copie y pegue este enlace en su navegador:',
-          showcaseHeading: 'Productos Industriales Relacionados',
-          showcaseDesc: 'Explore nuestra colección de muebles industriales premium diseñada para mejorar y fortalecer el carácter de su negocio.',
+          showcaseHeading: 'Productos Relacionados',
+          showcaseDesc: 'Explore nuestra colección de productos agrícolas premium diseñada para cumplir con los estándares de calidad internacionales.',
           viewDetails: 'Ver Detalles del Producto',
           viewAll: 'Ver Todos los Productos',
           bestRegards: 'Atentamente,',
-          team: 'Equipo Mangala Living',
-          contactRemarks: 'Si tiene alguna pregunta, contáctenos en lifewithmangala@gmail.com. Por favor, no responda a este correo electrónico de no respuesta.'
+          team: 'Naturra Extal Team',
+          contactRemarks: 'If you have information/questions, please contact us at hello@naturraextal.com.'
         },
         fr: {
-          subject: 'Votre Catalogue Mangala Living 2026',
+          subject: 'Votre Catalogue Naturra Extal 2026',
           greeting: (name) => `Cher/Chère ${name},`,
-          intro: 'Merci de votre intérêt pour nos collections. Comme demandé, voici le lien pour télécharger notre Catalogue Premium Mangala Living 2026.',
+          intro: 'Merci de votre intérêt pour nos collections. Comme demandé, voici le lien pour télécharger notre Catalogue Premium Naturra Extal 2026.',
           downloadCta: 'TÉLÉCHARGER LE CATALOGUE PDF',
           fallbackText: 'Si le bouton ci-dessus ne fonctionne pas, copiez et collez ce lien dans votre navigateur:',
-          showcaseHeading: 'Produits Industriels Associés',
-          showcaseDesc: 'Explorez notre collection de meubles industriels haut de gamme conçus pour renforcer le caractère de votre entreprise.',
+          showcaseHeading: 'Produits Associés',
+          showcaseDesc: 'Explorez notre collection de produits agricoles haut de gamme conçus pour répondre aux normes de qualité internationales.',
           viewDetails: 'Voir les Détails du Produit',
           viewAll: 'Voir Tous les Produits',
           bestRegards: 'Cordialement,',
-          team: 'L\'équipe Mangala Living',
-          contactRemarks: 'Si vous avez des questions, veuillez nous contacter à lifewithmangala@gmail.com. Veuillez ne pas répondre à cet e-mail de non-réponse.'
+          team: 'L\'équipe Naturra Extal',
+          contactRemarks: 'Si vous avez des questions, veuillez nous contacter à hello@naturraextal.com.'
         },
         ko: {
-          subject: '2026 망갈라 리빙 카탈로그',
+          subject: '2026 나투라 엑스탈 카탈로그',
           greeting: (name) => `친애하는 ${name}님,`,
-          intro: '저희 컬렉션에 관심을 가져주셔서 감사합니다. 요청하신 대로 2026 망갈라 리빙 프리미엄 카탈로그를 다운로드할 수 있는 링크를 보내드립니다.',
+          intro: '저희 컬렉션에 관심을 가져주셔서 감사합니다. 요청하신 대로 2026 나투라 엑스탈 프리미엄 카탈로그를 다운로드할 수 있는 링크를 보내드립니다.',
           downloadCta: 'PDF 카탈로그 다운로드',
           fallbackText: '위 버튼이 작동하지 않으면 이 링크를 복사하여 브라우저에 붙여넣으세요:',
           showcaseHeading: '관련 제품 안내',
-          showcaseDesc: '귀사의 비즈니스 캐릭터를 강화하고 돋보이게 디자인된 프리미엄 산업용 가구 컬렉션을 만나보세요.',
+          showcaseDesc: '국제 품질 기준을 충족하도록 설계된 프리미엄 농산물 컬렉션을 만나보세요.',
           viewDetails: '제품 상세 보기',
           viewAll: '모든 제품 보기',
           bestRegards: '감사합니다.',
-          team: '망갈라 리빙 팀',
-          contactRemarks: '문의 사항이 있으시면 lifewithmangala@gmail.com으로 연락주시기 바랍니다. 본 메일은 발신 전용 메일이므로 회신하지 마십시오.'
+          team: '나투라 엑스탈 팀',
+          contactRemarks: '문의 사항이 있으시면 hello@naturraextal.com으로 연락주시기 바랍니다.'
         },
         ja: {
-          subject: '2026 マンガラリビングカタログ',
+          subject: '2026 ナトゥラ・エクスタル カタログ',
           greeting: (name) => `親愛なる ${name} 様、`,
-          intro: '当社のコレクションにご興味をお持ちいただきありがとうございます。ご要望通り、2026マンガラリビングプレミアムカタログのダウンロードリンクをお送りいたします。',
+          intro: '当社のコレクションにご興味をお持ちいただきありがとうございます。ご要望通り、2026ナトゥラ・エクスタルプレミアムカタログのダウンロードリンクをお送りいたします。',
           downloadCta: 'PDFカタログをダウンロード',
           fallbackText: '上のボタンが機能しない場合は、このリンクをコピーしてブラウザに貼り付けてください：',
-          showcaseHeading: '関連する工業風製品',
-          showcaseDesc: 'あなたのビジネスの個性を高め、強化するためにデザインされたプレミアムな工業風家具のコレクションをご覧ください。',
+          showcaseHeading: '関連製品',
+          showcaseDesc: '国際的な品質基準を満たすように設計された、プレミアムな農産物のコレクションをご覧ください。',
           viewDetails: '製品の詳細を見る',
           viewAll: 'すべての製品を見る',
           bestRegards: '今後ともよろしくお願いいたします。',
-          team: 'マンガラリビングチーム',
-          contactRemarks: 'ご不明な点がございましたら、lifewithmangala@gmail.com までお問い合わせください。このメールは送信専用ですので、返信しないでください。'
+          team: 'ナトゥラ・エクスタル チーム',
+          contactRemarks: 'ご不明な点がございましたら、hello@naturraextal.com までお問い合わせください。'
         },
         zh: {
-          subject: '您的 2026 曼加拉生活目录',
+          subject: '您的 2026 Naturra Extal 目录',
           greeting: (name) => `亲爱的 ${name}，`,
-          intro: '感谢您对我们系列的关注。应您的要求，这是下载我们的 2026 曼加拉生活高级目录的链接。',
+          intro: '感谢您对我们系列的关注。应您的要求，这是下载我们的 2026 Naturra Extal 高级目录的链接。',
           downloadCta: '下载 PDF 目录',
           fallbackText: '如果上面的按钮不起作用，请将此链接复制并粘贴到您的浏览器中：',
-          showcaseHeading: '相关工业风产品',
-          showcaseDesc: '探索我们专为增强和加强您的业务特色而设计的优质工业风家具系列。',
+          showcaseHeading: '相关优质产品',
+          showcaseDesc: '探索我们专为满足国际质量标准而设计的优质农产品系列。',
           viewDetails: '查看产品详情',
           viewAll: '查看所有产品',
           bestRegards: '致以最诚挚的问候，',
-          team: '曼加拉生活团队',
-          contactRemarks: '如果您有任何问题，请通过 lifewithmangala@gmail.com 与我们联系。请不要回复此自动回复邮件。'
+          team: 'Naturra Extal 团队',
+          contactRemarks: '如果您有任何问题，请通过 hello@naturraextal.com 与我们联系。'
         },
         ar: {
-          subject: 'كتالوج مانجالا ليفينج 2026 الخاص بك',
+          subject: 'كتالوج Naturra Extal 2026 الخاص بك',
           greeting: (name) => `عزيزي ${name}،`,
-          intro: 'شكرًا لاهتمامك بمجموعاتنا. بناءً على طلبك، إليك الرابط لتحميل كتالوج مانجالا ليفينج 2026 المتميز.',
+          intro: 'شكرًا لاهتمامك بمجموعاتنا. بناءً على طلبك، إليك الرابط لتحميل كتالوج Naturra Extal 2026 المتميز.',
           downloadCta: 'تحميل كتالوج PDF',
           fallbackText: 'إذا لم يعمل الزر أعلاه، فقم بنسخ هذا الرابط ولصقه في متصفحك:',
-          showcaseHeading: 'منتجات صناعية ذات صلة',
-          showcaseDesc: 'استكشف مجموعتنا من الأثاث الصناعي المتميز المصمم لتعزيز وتقوية طابع عملك.',
+          showcaseHeading: 'منتجات ذات صلة',
+          showcaseDesc: 'استكشف مجموعتنا من المنتجات الزراعية المتميزة المصممة لتلبية معايير الجودة الدولية.',
           viewDetails: 'عرض تفاصيل المنتج',
           viewAll: 'عرض جميع المنتجات',
           bestRegards: 'مع أطيب التحيات،',
-          team: 'فريق مانجالا ليفينج',
-          contactRemarks: 'إذا كان لديك أي أسئلة، يرجى الاتصال بنا على lifewithmangala@gmail.com. يرجى عدم الرد على هذا البريد الإلكتروني.'
+          team: 'فريق Naturra Extal',
+          contactRemarks: 'إذا كان لديك أي أسئلة، يرجى الاتصال بنا على hello@naturraextal.com.'
         }
       };
 
@@ -313,12 +313,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
       // Random Product Showcase Logic - Using verified public image paths
       const allProducts = [
-        { name: 'Frame Loft Bookshelf', slug: 'frame-loft-bookshelf', price: 'Rp3.500.000', img: 'https://mangala-living.com/images/products/frame-Loft-Bookshelf.webp' },
-        { name: 'Balcony Bar Table', slug: 'balcony-bar-table', price: 'Rp350.000', img: 'https://mangala-living.com/images/products/balcony-bar-table.webp' },
-        { name: 'Lounge Set Coffee Table', slug: 'lounge-set-coffee-table', price: 'Rp2.000.000', img: 'https://mangala-living.com/images/products/longue-set-coffee-table.webp' },
-        { name: 'Industrial Daybed', slug: 'industrial-daybed-frame', price: 'Rp3.200.000', img: 'https://mangala-living.com/images/products/industrial-daybed-boneonly.webp' },
-        { name: 'Bar Stall Chair', slug: 'bar-stall-chair', price: 'Rp450.000', img: 'https://mangala-living.com/images/products/Kursi-Bar-kursi-stall-chair.webp' },
-        { name: 'Hollowline Display Rack', slug: 'hollowline-display-rack', price: 'Rp3.700.000', img: 'https://mangala-living.com/images/products/Hollowline-Display-Rack.webp' }
+        { name: 'Naturra Cocoa Powder', slug: 'cocoa-powder', price: 'Rp145.000', img: 'https://naturraextal.com/assets/cocoa-powder-export.webp' },
+        { name: 'Sumatra Cloves Grade A', slug: 'cloves', price: 'Rp120.000', img: 'https://naturraextal.com/assets/cloves-grade-a.webp' },
+        { name: 'High-Density Cocopeat Block', slug: 'cocopeat', price: 'Rp35.000', img: 'https://naturraextal.com/assets/cocopeat-block.webp' }
       ];
 
       const getPrice = (idr: string, targetLang: string) => {
@@ -353,8 +350,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       const userHtml = `
         <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 30px; color: #333; line-height: 1.6; max-width: 600px; margin: 0 auto; border: 1px solid #eee; border-radius: 12px; background-color: #fcfcfc;">
           <div style="text-align: center; margin-bottom: 30px;">
-            <h1 style="color: #8B7355; margin: 0; letter-spacing: 2px;">MANGALA LIVING</h1>
-            <p style="color: #999; text-transform: uppercase; font-size: 12px; margin-top: 5px;">Premium Industrial Furniture</p>
+            <h1 style="color: #004D2C; margin: 0; letter-spacing: 2px;">NATURRA EXTAL</h1>
+            <p style="color: #999; text-transform: uppercase; font-size: 12px; margin-top: 5px;">Premium Agricultural Commodities</p>
           </div>
           
           <h2 style="color: #444; border-bottom: 1px solid #f0f0f0; padding-bottom: 15px;">${t.greeting(firstName || 'Visitor')}</h2>
@@ -389,15 +386,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #f0f0f0;">
             <p style="margin-bottom: 10px; color: #666; font-size: 13px;">${t.contactRemarks}</p>
             <p style="margin-bottom: 5px; font-size: 14px;"><strong>Contact Us:</strong></p>
-            <p style="margin: 0; font-size: 13px;">WhatsApp: <a href="https://wa.me/6288801146881" style="color: #8B7355; text-decoration: none;">+62 888 0114 6881</a></p>
-            <p style="margin: 0; font-size: 13px;">Email: <a href="mailto:lifewithmangala@gmail.com" style="color: #8B7355; text-decoration: none;">lifewithmangala@gmail.com</a></p>
+            <p style="margin: 0; font-size: 13px;">WhatsApp: <a href="https://wa.me/6289513957752" style="color: #004D2C; text-decoration: none;">+62 895 1395 7752</a></p>
+            <p style="margin: 0; font-size: 13px;">Email: <a href="mailto:hello@naturraextal.com" style="color: #004D2C; text-decoration: none;">hello@naturraextal.com</a></p>
             
             <div style="margin-top: 30px;">
               <p style="margin-bottom: 5px;"><strong>${t.bestRegards}</strong></p>
               <p style="margin-top: 0; color: #8B7355;"><strong>${t.team}</strong></p>
               <p style="font-size: 12px; color: #999;">
                 Bekasi, West Java, Indonesia<br/>
-                <a href="https://mangala-living.com" style="color: #999; text-decoration: none;">www.mangala-living.com</a>
+                <a href="https://naturraextal.com" style="color: #999; text-decoration: none;">www.naturraextal.com</a>
               </p>
             </div>
           </div>
@@ -406,7 +403,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
       try {
         await resend.emails.send({
-          from: 'Mangala Living <no-reply-catalog@mangala-living.com>',
+          from: 'Naturra Extal <no-reply-catalog@naturraextal.com>',
           to: email,
           subject: t.subject,
           html: userHtml,

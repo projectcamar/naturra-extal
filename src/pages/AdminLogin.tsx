@@ -37,6 +37,10 @@ const AdminLogin: React.FC = () => {
 
             if (response.ok && data.success) {
                 setAdminSession(data.token)
+                if (data.user && data.user.username) {
+                    const { setAdminUser } = await import('../utils/adminAuth')
+                    setAdminUser(data.user.username)
+                }
                 navigate('/admin/dashboard')
             } else {
                 setError(data.error || 'Login failed. Please check your credentials.')

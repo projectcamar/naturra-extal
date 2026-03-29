@@ -1,17 +1,42 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { LogOut, LayoutDashboard, Database, Settings, BarChart3, Users, FileText } from 'lucide-react'
-import { logoutAdmin } from '../utils/adminAuth'
+import { logoutAdmin, getAdminUser } from '../utils/adminAuth'
 import { useNavigate } from 'react-router-dom'
 import { BLOG_POSTS } from '../data/blog'
+import { AdminOnboardingCard } from '../components/AdminOnboardingCard'
 import './Admin.css'
 
 const AdminDashboard: React.FC = () => {
     const navigate = useNavigate()
     const articleCount = BLOG_POSTS.length
+    const username = getAdminUser()
+    const [showOnboarding, setShowOnboarding] = React.useState(false)
+
+    React.useEffect(() => {
+        // Check if onboarding was already seen
+        const seenKey = `naturra_onboarded_${username.toLowerCase()}`;
+        const hasSeen = localStorage.getItem(seenKey);
+
+        if (!hasSeen) {
+            setShowOnboarding(username.toLowerCase() === 'brifki');
+        }
+    }, [username]);
+
+    const closeOnboarding = () => {
+        const seenKey = `naturra_onboarded_${username.toLowerCase()}`;
+        localStorage.setItem(seenKey, 'true');
+        setShowOnboarding(false);
+    };
 
     return (
         <div className="admin-dashboard">
+            {showOnboarding && (
+                <AdminOnboardingCard
+                    username={username}
+                    onClose={closeOnboarding}
+                />
+            )}
             <Helmet>
                 <title>Admin Dashboard | Naturra Extal</title>
                 <meta name="robots" content="noindex, nofollow" />
@@ -25,7 +50,7 @@ const AdminDashboard: React.FC = () => {
                 <div className="admin-user-nav">
                     <div className="admin-user-info">
                         <Users size={18} />
-                        <span>rioanggara</span>
+                        <span style={{ textTransform: 'capitalize' }}>{username}</span>
                     </div>
                     <button onClick={logoutAdmin} className="logout-btn">
                         <LogOut size={16} />
