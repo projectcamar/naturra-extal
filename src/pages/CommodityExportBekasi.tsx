@@ -110,7 +110,7 @@ const CommodityExportBekasi: React.FC = () => {
 
         <div className="landing-hero-image">
           <img
-            src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1559133967-313620786524?w=1200&auto=format&fit=crop"
             alt="Commodity Export Bekasi - Naturra Extal Industrial Facility"
             title="Naturra Extal - Agricultural Commodity Export Specialist"
             loading="eager"

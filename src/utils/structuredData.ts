@@ -63,7 +63,7 @@ export const generateImageObjectSchema = (image: {
       "name": "Naturra Extal",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
+        "url": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=800",
         ...DEFAULT_IMAGE_RIGHTS_METADATA
       }
     }
@@ -100,7 +100,7 @@ export const generateProductImageGallerySchema = (images: Array<{
       "name": "Naturra Extal",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
+        "url": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=800",
         ...DEFAULT_IMAGE_RIGHTS_METADATA
       }
     }
@@ -150,8 +150,8 @@ export const generateBlogPostingSchema = (post: {
     "@type": "Organization",
     "name": "Naturra Extal",
     "url": "https://naturraextal.com",
-    "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
-    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200"
+    "logo": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=800",
+    "image": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200"
   }
 
   return {
@@ -182,7 +182,7 @@ export const generateBlogPostingSchema = (post: {
       "name": "Naturra Extal",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
+        "url": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=800",
         ...DEFAULT_IMAGE_RIGHTS_METADATA
       }
     },
@@ -227,8 +227,8 @@ export const generateMerchantStructuredData = () => {
     "@type": "Organization",
     "name": "Naturra Extal",
     "url": "https://naturraextal.com",
-    "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
-    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
+    "logo": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=800",
+    "image": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200",
     "description": "Premium Indonesian Agricultural Commodities. Specializing in Cocoa Powder, Cloves, and Cocopeat Sourced Directly from Farmers.",
     "foundingDate": "1999",
     "address": {
@@ -274,7 +274,7 @@ export const generateMerchantStructuredData = () => {
             "name": "Agricultural Commodities",
             "category": "Agricultural Commodities",
             "description": "Premium Indonesian agricultural commodities including cocoa, cloves, and cocopeat",
-            "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
+            "image": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200",
             "offers": {
               "@type": "Offer",
               "price": "1500000",
@@ -340,7 +340,7 @@ export const generateLocalBusinessStructuredData = () => {
     "@type": ["WholesaleStore", "LocalBusiness"],
     "name": "Naturra Extal International - Agricultural Commodity Trading",
     "alternateName": "Naturra Extal International",
-    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
+    "image": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200",
     "description": "Leading Indonesian agricultural commodity trading company. We source premium cocoa, cloves, and cocopeat directly from farming communities across Indonesia for global export.",
     "url": "https://naturraextal.com",
     "telephone": "6289513957752",

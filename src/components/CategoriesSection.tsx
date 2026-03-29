@@ -9,7 +9,7 @@ interface CategoriesSectionProps {
 }
 
 // Commodity images (Unsplash)
-const cocoaImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80'
+const cocoaImage = 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=800&q=80'
 const clovesImage = 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80'
 const cocopeatImage = 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80'
 const industryImage = 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80'

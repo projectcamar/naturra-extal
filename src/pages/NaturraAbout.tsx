@@ -344,7 +344,7 @@ const NaturraAbout: React.FC = () => {
             {/* OUR JOURNEY */}
             <section className="naturra-about__journey">
                 <div className="naturra-about__journey-bg">
-                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200" alt="Sustainable Indonesian agriculture" loading="lazy" />
+                    <img src="https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200" alt="Sustainable Indonesian agriculture" loading="lazy" />
                 </div>
                 <div className="naturra-about__journey-overlay" />
                 <div className="naturra-about__journey-inner">

@@ -24,11 +24,13 @@
     z-index: 0;
 }
 
-.naturra-home__hero-bg img {
+.naturra-home__hero-bg img,
+.naturra-home__hero-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+    background: #000;
 }
 
 .naturra-home__hero-overlay {

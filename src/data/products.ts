@@ -1,7 +1,7 @@
 // Product image URLs (Unsplash – commodity/agricultural placeholders)
 const cocoaPowderImage = 'https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=600&q=80' // Cocoa beans/powder
 const clovesImage = 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80' // Spices
-const cocopeatImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80' // Soil/Organic
+const cocopeatImage = 'https://images.unsplash.com/photo-1611080626919-7cf5a9831168?w=600&q=80' // Soil/Organic
 const spicesImage = 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=600&q=80' // Garden/Spices
 const cassavaImage = 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80' // Agriculture
 const vanillaImage = 'https://images.unsplash.com/photo-1582218155981-0675ea108dca?w=600&q=80' // Vanilla/Spices

@@ -123,7 +123,7 @@ const MessageSection: React.FC<MessageSectionProps> = ({ isIndonesian = false, l
 
           <div className="about-message-image-wrapper">
             <img
-              src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200"
+              src="https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200"
               alt={isIndonesian ? "Fasilitas Ekspor Naturra Extal - Pengiriman Komoditas Pertanian Premium dengan Standar Internasional" : "Naturra Extal Export Facility - Shipping Premium Agricultural Commodities with International Standards"}
               title={isIndonesian ? "Naturra Extal - Eksportir Komoditas Pertanian Premium sejak 1999" : "Naturra Extal - Premium Agricultural Commodity Exporter Since 1999"}
               className="about-message-image"

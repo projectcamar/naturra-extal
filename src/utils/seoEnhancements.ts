@@ -20,14 +20,14 @@ export const generateEnhancedOrganizationSchema = () => {
     "url": "https://naturraextal.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
+      "url": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=800",
       "width": 250,
       "height": 60,
       ...DEFAULT_IMAGE_RIGHTS_METADATA
     },
     "image": {
       "@type": "ImageObject",
-      "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
+      "url": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200",
       "width": 1200,
       "height": 630,
       ...DEFAULT_IMAGE_RIGHTS_METADATA
@@ -121,7 +121,7 @@ export const generateEnhancedOrganizationSchema = () => {
     "brand": {
       "@type": "Brand",
       "name": "Naturra Extal",
-      "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
+      "logo": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=800",
       "slogan": "Premium Agricultural Commodities Since 1999"
     },
     "makesOffer": [
@@ -215,7 +215,7 @@ export const generateWebPageSchema = (page: {
       "name": "Naturra Extal",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
+        "url": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=800",
         ...DEFAULT_IMAGE_RIGHTS_METADATA
       }
     },
@@ -315,7 +315,7 @@ export const generateOGTags = (params: {
     'og:type': params.type || 'website',
     'og:title': params.title,
     'og:description': params.description,
-    'og:image': params.image || 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200',
+    'og:image': params.image || 'https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200',
     'og:image:width': '1200',
     'og:image:height': '630',
     'og:url': `https://naturraextal.com${params.url}`,
@@ -336,7 +336,7 @@ export const generateTwitterTags = (params: {
     'twitter:card': 'summary_large_image',
     'twitter:title': params.title,
     'twitter:description': params.description,
-    'twitter:image': params.image || 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200',
+    'twitter:image': params.image || 'https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200',
     'twitter:site': '@naturraextal'
   }
 }
@@ -388,7 +388,7 @@ export const generateVideoSchema = (video: {
       "name": "Naturra Extal",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
+        "url": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=800",
         ...DEFAULT_IMAGE_RIGHTS_METADATA
       }
     }
@@ -501,7 +501,7 @@ export const generateArticleSchema = (article: {
       "name": "Naturra Extal",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
+        "url": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=800",
         "width": 250,
         "height": 60,
         ...DEFAULT_IMAGE_RIGHTS_METADATA
@@ -534,12 +534,12 @@ export const generateEnhancedLocalBusinessSchema = () => {
     "image": [
       {
         "@type": "ImageObject",
-        "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
+        "url": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200",
         ...DEFAULT_IMAGE_RIGHTS_METADATA
       },
       {
         "@type": "ImageObject",
-        "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1920",
+        "url": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1920",
         ...DEFAULT_IMAGE_RIGHTS_METADATA
       }
     ],

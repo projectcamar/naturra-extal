@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link, useLocation } from 'react-router-dom'
 import { Mail, MessageCircle, Globe, Building2 } from 'lucide-react'
@@ -15,8 +15,9 @@ const OG_LOCALES = ['id_ID', 'en_US', 'ar_SA', 'zh_CN', 'ja_JP', 'es_ES', 'fr_FR
 const NaturraHome: React.FC = () => {
     const location = useLocation()
     const { language, setLanguage } = useLanguage()
+    const videoRef = useRef<HTMLVideoElement>(null)
 
-    // IP detection for first visit
+    // IP detection for first visit... (logic same)
     useEffect(() => {
         const stored = getStoredLanguage()
         const urlLang = getCurrentLanguage(location.pathname, location.search)
@@ -35,9 +36,18 @@ const NaturraHome: React.FC = () => {
         detectIP()
     }, [])
 
+    // Robust video playback trigger
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.play().catch(err => console.warn("Home hero video play failed:", err))
+        }
+    }, [])
+
     const t = NATURRA_HOME_TRANSLATIONS[language] ?? NATURRA_HOME_TRANSLATIONS.en
     const localeMeta = generateLanguageSpecificMeta(language)
     const localizedUrls = generateLocalizedUrls(location.pathname, location.search)
+
+    const socialImage = 'https://images.unsplash.com/photo-1559133967-313620786524?q=80&w=1200'
 
     return (
         <div className="naturra-home">
@@ -54,6 +64,8 @@ const NaturraHome: React.FC = () => {
                 <meta property="og:description" content="Leaders in Indonesian agricultural commodity trading. Premium cocoa, cloves, and cocopeat sourced directly from Indonesian farmers." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={localizedUrls.canonical} />
+                <meta property="og:image" content={socialImage} />
+                <meta property="twitter:image" content={socialImage} />
                 <meta property="og:locale" content={localeMeta.locale} />
                 {OG_LOCALES.filter(altLocale => altLocale !== localeMeta.locale).map((altLocale) => (
                     <meta key={`home-og-${altLocale}`} property="og:locale:alternate" content={altLocale} />
@@ -65,11 +77,18 @@ const NaturraHome: React.FC = () => {
             {/* ===== HERO SECTION ===== */}
             <section className="naturra-home__hero">
                 <div className="naturra-home__hero-bg">
-                    <img
-                        src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1920"
-                        alt="Indonesian sustainable agriculture"
-                        loading="eager"
-                    />
+                    <video
+                        ref={videoRef}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="auto"
+                        className="naturra-home__hero-video"
+                    >
+                        <source src="/video-hero-mainlandingpage.mp4" type="video/mp4" />
+                        <source src="./video-hero-mainlandingpage.mp4" type="video/mp4" />
+                    </video>
                 </div>
                 <div className="naturra-home__hero-overlay" />
                 <div className="naturra-home__hero-content">

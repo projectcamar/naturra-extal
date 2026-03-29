@@ -9,8 +9,8 @@ export const generateAIOptimizedStructuredData = () => {
     "alternateName": ["Naturra Extal Trading", "Agricultural Commodities Indonesia", "Naturra Commodities Export"],
     "description": "Premium Agricultural Commodity Exporter specializing in Cocoa Powder, Cloves, and Cocopeat. Established 1999 in Bekasi, Indonesia. Serving global markets including the USA, Japan, Australia, Europe, and Asia.",
     "url": "https://naturraextal.com",
-    "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
-    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
+    "logo": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=800",
+    "image": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200",
     "foundingDate": "1999",
     "founder": {
       "@type": "Person",
@@ -142,8 +142,8 @@ export const generateProductStructuredData = (product: any) => {
       "@type": "Organization",
       "name": "Naturra Extal",
       "url": "https://naturraextal.com",
-      "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
-      "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200"
+      "logo": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=800",
+      "image": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200"
     },
     "category": product.category || "Agricultural Commodities",
     "keywords": [
@@ -164,8 +164,8 @@ export const generateProductStructuredData = (product: any) => {
         "@type": "Organization",
         "name": "Naturra Extal",
         "url": "https://naturraextal.com",
-        "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
-        "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
+        "logo": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=800",
+        "image": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200",
         "description": "Premium Agricultural Commodity Exporter for Global Industries. Cocoa, Cloves, and Cocopeat Solutions Since 1999."
       }
     },
@@ -251,8 +251,8 @@ export const generateWebSiteStructuredData = () => {
       "@type": "Organization",
       "name": "Naturra Extal",
       "url": "https://naturraextal.com",
-      "logo": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
-      "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200"
+      "logo": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=800",
+      "image": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200"
     }
   }
 }

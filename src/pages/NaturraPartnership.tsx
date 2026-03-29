@@ -358,7 +358,7 @@ const NaturraPartnership: React.FC = () => {
       <section className="partnership-hero">
         <div className="partnership-hero-image">
           <img
-            src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1920"
+            src="https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1920"
             alt={t.heroTitle}
             title={t.heroTitle}
             loading="eager"
