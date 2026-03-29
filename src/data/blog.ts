@@ -693,7 +693,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     "id": 23,
     "slug": "tips-memilih-bahan-baku",
-    "title": "Tips Memilih Bahan Baku",
+    "title": "Tips Memilih Bahan Bakuu",
     "category": "Tips and Trick",
     "excerpt": "Tips memilih bahan baku yang berkualitas untuk industri makanan dan minuman",
     "image": "https://images.unsplash.com/photo-1759689975472-c302b63b3b71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGZvb2QlMjBpbmdyZWRpZW50cyUyMG9uJTIwd29vZGVuJTIwdGFibGV8ZW58MHwwfHx8MTc3NDc5NDQxOHww&ixlib=rb-4.1.0&q=80&w=1080",
@@ -732,6 +732,48 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dengan memilih bahan baku yang berkualitas, Anda dapat meningkatkan kualitas produk akhir dan memuaskan pelanggan. Naturra Extal adalah solusi untuk kebutuhan bahan baku Anda, dengan menyediakan bahan baku yang berkualitas tinggi dan segar. Silakan hubungi kami untuk memperoleh informasi lebih lanjut."
+    }
+  },
+  {
+    "id": 24,
+    "slug": "tips-mengolah-cokelat",
+    "title": "Tips Mengolah Cokelat",
+    "category": "Tips and Trick",
+    "excerpt": "Tips mengolah cokelat untuk hasil terbaik",
+    "image": "https://images.unsplash.com/photo-1490106087286-bd050867d86e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGRhcmslMjBjaG9jb2xhdGUlMjBwaWVjZXMlMjBvbiUyMHdvb2RlbiUyMHRhYmxlfGVufDB8MHx8fDE3NzQ4MDE2MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-29 23:26",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Cokelat adalah salah satu bahan paling populer dalam industri makanan dan minuman. Namun, mengolah cokelat tidaklah mudah. Dalam artikel ini, kita akan membahas beberapa tips mengolah cokelat untuk hasil terbaik.",
+      "keyPoints": [
+        "Pilih cokelat berkualitas tinggi",
+        "Perhatikan suhu dan kelembaban",
+        "Gunakan teknik pengolahan yang tepat"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Pemilihan Cokelat yang Tepat",
+          "content": "Pemilihan cokelat yang tepat sangat penting dalam menghasilkan produk cokelat yang berkualitas. <strong>Naturra Extal</strong> menawarkan cokelat bubuk berkualitas tinggi yang diproduksi dari biji cokelat terbaik. Dengan memilih cokelat yang tepat, Anda dapat memastikan bahwa produk cokelat Anda memiliki rasa dan aroma yang khas.",
+          "imageSearchQuery": "biji cokelat terbaik"
+        },
+        {
+          "heading": "Teknik Pengolahan Cokelat",
+          "content": "Teknik pengolahan cokelat juga sangat penting dalam menghasilkan produk cokelat yang berkualitas. <em>Conching</em> adalah salah satu teknik pengolahan cokelat yang paling umum digunakan. Dengan menggunakan teknik ini, Anda dapat memastikan bahwa cokelat Anda memiliki tekstur dan rasa yang halus."
+        },
+        {
+          "heading": "Solusi dari Naturra Extal",
+          "content": "Naturra Extal menawarkan solusi untuk kebutuhan cokelat Anda. Dengan produk cokelat bubuk berkualitas tinggi dan teknik pengolahan yang tepat, Anda dapat memastikan bahwa produk cokelat Anda memiliki kualitas terbaik. <strong>Produk cokelat bubuk V10</strong> dari Naturra Extal adalah salah satu pilihan terbaik untuk Anda.",
+          "productId": 1
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda ingin memproduksi produk cokelat yang berkualitas, segera hubungi Naturra Extal untuk mendapatkan informasi lebih lanjut tentang produk dan layanan kami. Dengan bekerja sama dengan Naturra Extal, Anda dapat memastikan bahwa produk cokelat Anda memiliki kualitas terbaik dan dapat bersaing di pasar internasional.",
+          "productId": 2
+        }
+      ],
+      "conclusion": "Dalam mengolah cokelat, penting untuk memilih cokelat berkualitas tinggi, memperhatikan suhu dan kelembaban, dan menggunakan teknik pengolahan yang tepat. Dengan menggunakan tips dan solusi dari Naturra Extal, Anda dapat memastikan bahwa produk cokelat Anda memiliki kualitas terbaik dan dapat bersaing di pasar internasional."
     }
   }
 ];
