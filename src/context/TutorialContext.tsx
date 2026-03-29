@@ -9,6 +9,7 @@ export interface TutorialStep {
     targetPage: string;
     btnText: string;
     position: 'top' | 'bottom' | 'left' | 'right' | 'center';
+    hideNext?: boolean;
 }
 
 export const TUTORIAL_STEPS: TutorialStep[] = [
@@ -51,11 +52,12 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
     {
         id: 5,
         title: "AI Generation Core",
-        text: "The most powerful tool in your arsenal. Click here to open the AI assistant.",
+        text: "The most powerful tool in your arsenal. Click the button highlighted below to open our AI content assistant.",
         targetId: "admin-ai-generate-btn",
         targetPage: "/admin/blog",
         btnText: "Open AI Modal",
-        position: "bottom"
+        position: "bottom",
+        hideNext: true
     },
     {
         id: 6,
@@ -69,11 +71,12 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
     {
         id: 7,
         title: "Release the AI",
-        text: "Click here to generate! Our AI will write the full article, find a matching cover image, and set up SEO - all in one go!",
+        text: "Ready? Click the 'Generate Article' button highlighted below! Our AI will now handle the writing and SEO.",
         targetId: "admin-ai-submit-btn",
         targetPage: "/admin/blog",
         btnText: "Generate Now",
-        position: "top"
+        position: "top",
+        hideNext: true
     },
     {
         id: 8,

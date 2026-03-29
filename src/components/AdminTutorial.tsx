@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react'
 import { ArrowRight, Sparkles, BookOpen, Layout, FileText, Info } from 'lucide-react'
-import { useTutorial } from '../context/TutorialContext'
+import { useTutorial, TUTORIAL_STEPS } from '../context/TutorialContext'
 
 const AdminTutorial: React.FC = () => {
     const { currentStep, nextStep, getStepData, isActive } = useTutorial();
@@ -171,7 +171,7 @@ const AdminTutorial: React.FC = () => {
             <div className="tutorial-bar-container" style={cardPosition as any}>
                 <div className={`tutorial-bar step-${currentStep}`}>
                     <div className="bar-badge">
-                        <span>{currentStep}/8</span>
+                        <span>{currentStep}/{TUTORIAL_STEPS.length}</span>
                     </div>
 
                     <div className="bar-main">
@@ -182,12 +182,14 @@ const AdminTutorial: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="bar-footer">
-                        <button className="bar-next-btn" onClick={nextStep}>
-                            <span>{stepData.btnText || 'Next'}</span>
-                            {currentStep === 8 ? <Sparkles size={16} /> : <ArrowRight size={16} />}
-                        </button>
-                    </div>
+                    {!stepData.hideNext && (
+                        <div className="bar-footer">
+                            <button className="bar-next-btn" onClick={nextStep}>
+                                <span>{stepData.btnText || 'Next'}</span>
+                                {currentStep === TUTORIAL_STEPS.length ? <Sparkles size={16} /> : <ArrowRight size={16} />}
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
 
