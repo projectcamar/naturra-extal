@@ -267,7 +267,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1619615174792-a5edcfeafdfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxrb3BpJTIwYXJhYmlrYSUyMGRpJTIwdGFuYWh8ZW58MHwwfHx8MTc3NDc5MDk1OXww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 20:29",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Kopi adalah salah satu minuman yang paling populer di dunia, dan Indonesia adalah salah satu produsen kopi terbesar. Namun, memilih kopi yang berkualitas tidaklah mudah. Dalam artikel ini, kita akan membahas beberapa tips untuk memilih kopi yang berkualitas dan menikmati pengalaman rasa terbaik.",
       "keyPoints": [
@@ -300,8 +300,52 @@ export const BLOG_POSTS: BlogPost[] = [
       ],
       "conclusion": "Dengan memilih kopi yang berkualitas dan memperhatikan asal usul kopi, Anda dapat menikmati pengalaman rasa terbaik. Naturra Extal adalah solusi untuk kopi berkualitas, dengan direktori petani yang luas dan proses pengolahan yang benar. Mulailah menikmati kopi berkualitas hari ini juga!"
     }
+  },
+  {
+    "id": 14,
+    "slug": "mengenal-babak-dalam-pertanian",
+    "title": "Mengenal Babak dalam Pertanian",
+    "category": "Tips and Trick",
+    "excerpt": "Babak dalam pertanian: Tips dan trik untuk meningkatkan hasil panen",
+    "image": "https://images.unsplash.com/photo-1674974423490-05f3b30a83ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHx0YW5hbWFuJTIwcGFkaSUyMGRpJTIwc2F3YWh8ZW58MHwwfHx8MTc3NDc5MTkwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-29 20:44",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Dalam dunia pertanian, babak adalah salah satu faktor penting yang mempengaruhi hasil panen. Babak yang tepat dapat meningkatkan kualitas dan kuantitas hasil panen. Namun, banyak petani yang masih belum memahami tentang babak dan cara menggunakannya dengan efektif. Dalam artikel ini, kita akan membahas tentang babak dalam pertanian dan tips serta trik untuk menggunakannya dengan baik.",
+      "keyPoints": [
+        "Mengenal babak dan fungsinya dalam pertanian",
+        "Cara menentukan babak yang tepat untuk tanaman",
+        "Tips dan trik untuk meningkatkan hasil panen dengan babak"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Apa itu Babak dalam Pertanian?",
+          "content": "Babak dalam pertanian adalah proses pengelolaan tanah dan tanaman untuk meningkatkan hasil panen. Babak meliputi kegiatan seperti pengolahan tanah, penanaman, pemeliharaan, dan pemanenan. Dengan babak yang tepat, petani dapat meningkatkan kualitas dan kuantitas hasil panen, serta mengurangi biaya produksi.",
+          "imageSearchQuery": "petani mengolah tanah",
+          "image": "https://images.unsplash.com/photo-1676772694558-01b3f76a1797?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxwZXRhbmklMjBtZW5nb2xhaCUyMHRhbmFofGVufDB8MHx8fDE3NzQ3OTE5MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "petani mengolah tanah"
+        },
+        {
+          "heading": "Cara Menentukan Babak yang Tepat",
+          "content": "Menentukan babak yang tepat untuk tanaman memerlukan pengetahuan tentang jenis tanaman, iklim, dan kondisi tanah. Petani perlu mempertimbangkan faktor-faktor seperti musim tanam, jarak tanam, dan kebutuhan nutrisi tanaman. Dengan demikian, petani dapat menentukan babak yang tepat untuk tanaman dan meningkatkan hasil panen."
+        },
+        {
+          "heading": "Tips dan Trik untuk Meningkatkan Hasil Panen dengan Babak",
+          "content": "Berikut beberapa tips dan trik untuk meningkatkan hasil panen dengan babak: <br> 1. <strong>Pengolahan tanah yang baik</strong> sebelum menanam dapat meningkatkan kualitas tanah dan hasil panen. <br> 2. <em>Pemeliharaan tanaman yang teratur</em> dapat mengurangi biaya produksi dan meningkatkan hasil panen. <br> 3. <strong>Pemanenan yang tepat waktu</strong> dapat meningkatkan kualitas hasil panen dan mengurangi kerusakan tanaman.",
+          "productId": 4
+        },
+        {
+          "heading": "Naturra Extal: Solusi untuk Pertanian yang Berkelanjutan",
+          "content": "Naturra Extal adalah perusahaan yang bergerak di bidang pertanian dan menyediakan solusi untuk pertanian yang berkelanjutan. Dengan produk-produk seperti cocopeat dan cocoa powder, Naturra Extal dapat membantu petani meningkatkan hasil panen dan mengurangi biaya produksi.",
+          "productId": 5
+        }
+      ],
+      "conclusion": "Dalam kesimpulan, babak dalam pertanian adalah faktor penting yang mempengaruhi hasil panen. Dengan memahami tentang babak dan cara menggunakannya dengan efektif, petani dapat meningkatkan kualitas dan kuantitas hasil panen. Naturra Extal adalah solusi untuk pertanian yang berkelanjutan dan dapat membantu petani meningkatkan hasil panen dan mengurangi biaya produksi."
+    }
   }
-];
+];;
 
 export const getAllBlogPosts = () => BLOG_POSTS;
 
