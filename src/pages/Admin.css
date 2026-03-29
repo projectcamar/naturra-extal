@@ -292,6 +292,29 @@
 .welcome-banner p {
   color: #666;
   font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.recall-tutorial-btn {
+  background: #004D2C;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 77, 44, 0.2);
+}
+
+.recall-tutorial-btn:hover {
+  background: #006b3e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 77, 44, 0.3);
 }
 
 .dashboard-stats {

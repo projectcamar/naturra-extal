@@ -184,6 +184,12 @@ const CHAT_TRANSLATIONS: Record<LanguageCode, {
 
 const WhatsAppButton: React.FC = () => {
   const location = useLocation()
+
+  // Hide on Admin pages
+  if (location.pathname.startsWith('/admin')) {
+    return null
+  }
+
   const [isExpanded, setIsExpanded] = useState(false)
   const [language, setLanguage] = useState<LanguageCode>('en')
   const [messages, setMessages] = useState<Message[]>([

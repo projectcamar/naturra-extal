@@ -140,6 +140,28 @@
   font-weight: 600;
 }
 
+.whatsapp-link-button {
+  display: inline-flex;
+  align-items: center;
+  background: #f0fdf4;
+  color: #004D2C;
+  border: 1.5px solid #004D2C;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 4px 0;
+  border-radius: 4px;
+}
+
+.whatsapp-link-button:hover {
+  background: #004D2C;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 77, 44, 0.15);
+}
+
 .message-text a:hover {
   color: #00331d;
 }

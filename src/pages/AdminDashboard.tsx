@@ -73,8 +73,17 @@ const AdminDashboard: React.FC = () => {
 
             <main className="admin-main">
                 <div id="admin-welcome-banner" className="welcome-banner">
-                    <h2>Welcome to your Dashboard</h2>
-                    <p>This is the beginning of the Naturra Extal administration portal. From here, you will soon be able to manage products, content, and track site activity.</p>
+                    <div className="welcome-content">
+                        <h2>Welcome to your Dashboard</h2>
+                        <p>This is the beginning of the Naturra Extal administration portal. From here, you will soon be able to manage products, content, and track site activity.</p>
+                        <button
+                            className="recall-tutorial-btn"
+                            onClick={() => setShowOnboarding(true)}
+                        >
+                            <Settings size={16} />
+                            Tutorial
+                        </button>
+                    </div>
                 </div>
 
                 <div className="dashboard-stats">
