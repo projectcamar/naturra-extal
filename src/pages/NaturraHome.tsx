@@ -47,7 +47,7 @@ const NaturraHome: React.FC = () => {
     const localeMeta = generateLanguageSpecificMeta(language)
     const localizedUrls = generateLocalizedUrls(location.pathname, location.search)
 
-    const socialImage = 'https://images.unsplash.com/photo-1559133967-313620786524?q=80&w=1200'
+    const socialImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1200'
 
     return (
         <div className="naturra-home">

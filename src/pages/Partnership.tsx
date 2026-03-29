@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 // Premium Agricultural Commodity Images
-const heroImage = 'https://images.unsplash.com/photo-1559133967-313620786524?w=1920&q=80'
+const heroImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1920&q=80'
 const experienceImage = 'https://images.unsplash.com/photo-1516053303028-569806443c52?w=1200'
 const collaborationImage = 'https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?w=1200'
 const flexibilityImage = 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1200'

@@ -513,7 +513,7 @@ const NaturraBlogPost: React.FC = () => {
                       ]}
                       linkedIn="https://www.linkedin.com/in/mohamad-bebi-rifki/"
                       language={language}
-                      backgroundImage="https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200"
+                      backgroundImage="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200"
                     />
                   </div>
                 )}

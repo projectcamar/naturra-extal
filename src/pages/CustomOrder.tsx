@@ -5,7 +5,7 @@ import { FileText, MessageCircle, Truck, Wrench } from 'lucide-react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 // Premium Agricultural Commodity Images
-const heroImage = 'https://images.unsplash.com/photo-1559133967-313620786524?w=1920&q=80'
+const heroImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1920&q=80'
 const showroomImage = 'https://images.unsplash.com/photo-1516053303028-569806443c52?w=1200'
 import { generateLanguageSpecificMeta, generateLocalizedUrls } from '../utils/seo'
 import { trackWhatsAppClick } from '../utils/whatsappTracking'

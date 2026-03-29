@@ -9,7 +9,7 @@ import { generateLanguageSpecificMeta, generateLocalizedUrls, truncateTitle, tru
 import { getCurrentLanguage, getLinkWithLanguage, type LanguageCode } from '../utils/languageManager'
 import './Blog.css'
 
-const heroImage = "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1920"
+const heroImage = "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1920"
 
 const BLOG_INTRO_TRANSLATIONS: Record<
   LanguageCode,

@@ -75,7 +75,7 @@ const NaturraCustomOrder: React.FC = () => {
       <section className="custom-order-hero">
         <div className="custom-order-hero-image">
           <img
-            src="https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1920"
+            src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1920"
             alt={t.hero.imageAlt}
             title={t.hero.imageTitle}
             loading="eager"

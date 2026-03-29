@@ -7,7 +7,7 @@ import Header from '../components/Header'
 import { generateFAQSchema, generateLocalBusinessStructuredData } from '../utils/structuredData'
 import { getFAQBySlug } from '../data/faq'
 // Premium Agricultural Commodity Images
-const heroImage = 'https://images.unsplash.com/photo-1559133967-313620786524?w=1920&q=80'
+const heroImage = 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1920&q=80'
 const showroomImage = 'https://images.unsplash.com/photo-1516053303028-569806443c52?w=1200'
 import logoILW from '../assets/LOGO-ILW-800.png'
 import logoSVLK from '../assets/SVLK-LOGO-INDONESIA.png'

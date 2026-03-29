@@ -110,7 +110,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "Bridging the Gap: Connecting Indonesian Farmers to Global Markets",
     "category": "Corporate Story",
     "excerpt": "At Naturra Extal, we cut out the middlemen to ensure fair compensation for farmers and the highest quality for our international clients.",
-    "image": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-11",
     "author": "Moh Rifki",
     "status": "synced"
@@ -121,7 +121,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "Navigating Commodity Export Logistics from Indonesia",
     "category": "Export Guide",
     "excerpt": "From farm gate to container loading, learn the intricacies of shipping agricultural products across continents safely and efficiently.",
-    "image": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-10",
     "author": "Moh Rifki",
     "status": "synced"
@@ -165,7 +165,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "International Commodity Trade Trends to Watch in 2025",
     "category": "Market Trends",
     "excerpt": "Stay ahead of the market with our insights into global demand for cocoa, spices, and sustainable agricultural inputs.",
-    "image": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-06",
     "author": "Moh Rifki",
     "status": "synced"
@@ -253,7 +253,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "Bridging the Gap: Connecting Indonesian Farmers to Global Markets",
     "category": "Corporate Story",
     "excerpt": "At Naturra Extal, we cut out the middlemen to ensure fair compensation for farmers and the highest quality for our international clients.",
-    "image": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-11",
     "author": "Moh Rifki",
     "status": "synced"
@@ -264,7 +264,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "Navigating Commodity Export Logistics from Indonesia",
     "category": "Export Guide",
     "excerpt": "From farm gate to container loading, learn the intricacies of shipping agricultural products across continents safely and efficiently.",
-    "image": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-10",
     "author": "Moh Rifki",
     "status": "synced"
@@ -308,7 +308,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "International Commodity Trade Trends to Watch in 2025",
     "category": "Market Trends",
     "excerpt": "Stay ahead of the market with our insights into global demand for cocoa, spices, and sustainable agricultural inputs.",
-    "image": "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1200",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-06",
     "author": "Moh Rifki",
     "status": "synced"

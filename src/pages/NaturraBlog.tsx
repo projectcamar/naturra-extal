@@ -9,7 +9,7 @@ import { generateLanguageSpecificMeta, generateLocalizedUrls, truncateTitle, tru
 import { getCurrentLanguage, getLinkWithLanguage, type LanguageCode } from '../utils/languageManager'
 import './NaturraBlog.css'
 
-const heroImage = "https://images.unsplash.com/photo-1559133967-313620786524?auto=format&fit=crop&q=80&w=1920"
+const heroImage = "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1920"
 
 const BLOG_INTRO_TRANSLATIONS: Record<
   LanguageCode,
@@ -355,7 +355,7 @@ const NaturraBlog: React.FC = () => {
 
           <div className="naturra-blog-intro">
             <div className="naturra-blog-intro-bg">
-              <img src="https://images.unsplash.com/photo-1559133967-313620786524?w=1200" alt="Agriculture Background" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200" alt="Agriculture Background" loading="lazy" />
               <div className="naturra-blog-intro-overlay"></div>
             </div>
             <div className="naturra-blog-intro-content">
