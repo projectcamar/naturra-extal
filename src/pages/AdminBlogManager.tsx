@@ -60,6 +60,13 @@ const AdminBlogManager: React.FC = () => {
     const deploymentTargetSlugRef = useRef<string | null>(null)
     const deploymentSlugsRef = useRef<string[]>([])
 
+    const addLog = React.useCallback((msg: string, type: 'info' | 'success' | 'error' | 'warning' = 'info') => {
+        const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        setDeploymentLogs(prev => {
+            return [...prev, { msg, time, type }];
+        });
+    }, []);
+
     useEffect(() => {
         deploymentTargetSlugRef.current = deploymentTargetSlug
     }, [deploymentTargetSlug])
@@ -122,14 +129,6 @@ const AdminBlogManager: React.FC = () => {
         let liveIntervalId: any;
         let iframeIntervalId: any;
 
-        const addLog = (msg: string, type: 'info' | 'success' | 'error' | 'warning' = 'info') => {
-            const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-            setDeploymentLogs(prev => {
-                // Prevent duplicate consecutive logs
-                if (prev.length > 0 && prev[prev.length - 1].msg === msg) return prev;
-                return [...prev, { msg, time, type }];
-            });
-        };
 
         if (activeDeploymentSha && deploymentStatus !== 'ready' && deploymentStatus !== 'failed') {
             const checkStatus = async () => {
@@ -220,7 +219,7 @@ const AdminBlogManager: React.FC = () => {
             if (liveIntervalId) clearInterval(liveIntervalId);
             if (iframeIntervalId) clearInterval(iframeIntervalId);
         };
-    }, [activeDeploymentSha, deploymentStatus, posts])
+    }, [activeDeploymentSha, deploymentStatus, posts, addLog])
 
     const handleEdit = (post: BlogPost) => {
         setEditingPost({
@@ -685,21 +684,17 @@ const AdminBlogManager: React.FC = () => {
                                                 <button
                                                     className="inline-recheck-btn highlight"
                                                     onClick={() => {
-                                                        const addLog = (msg: string, type: 'info' | 'success' | 'error' | 'warning' = 'info') => {
-                                                            const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-                                                            setDeploymentLogs(prev => [...prev, { msg, time, type }]);
-                                                        };
                                                         addLog('Force Re-check triggered by user...', 'warning');
                                                         setIframeKey(k => k + 1);
                                                         fetch(`/api/admin/health?t=${Date.now()}`)
                                                             .then(r => r.json())
-                                                            .then(data => {
+                                                            .then((data: any) => {
                                                                 const latestLocalPost = posts[posts.length - 1];
-                                                                if (data.postCount === posts.length && (!latestLocalPost || data.latestPost?.id === latestLocalPost.id)) {
+                                                                const isLive = data.postCount === posts.length && (!latestLocalPost || data.latestPost?.id === latestLocalPost.id);
+                                                                if (isLive) {
                                                                     setDeploymentStatus('ready');
                                                                     addLog('Force Check SUCCESS: Content is finally live!', 'success');
                                                                 } else {
-                                                                    // If user forces and it's not ready, make sure we are in verifying mode to keep intervals running
                                                                     if (deploymentStatus === 'ready' || deploymentStatus === 'failed') {
                                                                         setDeploymentStatus('verifying');
                                                                         setVerifyAttempts(0);
