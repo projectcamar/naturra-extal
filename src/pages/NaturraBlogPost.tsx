@@ -19,6 +19,7 @@ import { getCurrentLanguage, type LanguageCode } from '../utils/languageManager'
 import { trackWhatsAppClick } from '../utils/whatsappTracking'
 import {
   SIDEBAR_FEATURES_TRANSLATIONS,
+  BLOG_POST_TRANSLATIONS,
   BLOG_PRODUCT_SHOWCASE_DESCRIPTION,
   MENTIONED_PRODUCT_LABEL,
   VIEW_PRODUCT_LABEL,
@@ -242,7 +243,7 @@ const NaturraBlogPost: React.FC = () => {
   }
 
   // Get translations for sidebar features
-  const sidebarFeatures = SIDEBAR_FEATURES_TRANSLATIONS[language] ?? SIDEBAR_FEATURES_TRANSLATIONS.en
+  const sidebarFeatures = BLOG_POST_TRANSLATIONS[language] ?? BLOG_POST_TRANSLATIONS.en
 
   const breadcrumbItems = [
     { label: 'Home', path: '/' },
@@ -283,13 +284,13 @@ const NaturraBlogPost: React.FC = () => {
 
     // Parse FAQ list items (format: <strong>Question</strong><br/>Answer)
     return faqSection.list.map(item => {
-      const cleanItem = item.replace(/<[^>]*>/g, ' ').trim()
-      const parts = cleanItem.split(/\s+(?:br\/|:)\s*/)
+      // Split by <br/> or : while preserving the content
+      const parts = item.split(/<br\s*\/?>|:\s*/)
 
       if (parts.length >= 2) {
         return {
-          question: parts[0].trim(),
-          answer: parts.slice(1).join(' ').trim()
+          question: parts[0].replace(/<[^>]*>/g, '').trim(),
+          answer: parts.slice(1).join(' ').replace(/<[^>]*>/g, '').trim()
         }
       }
       return null
