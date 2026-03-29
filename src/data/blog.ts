@@ -29,14 +29,47 @@ export interface BlogPost {
 export const BLOG_POSTS: BlogPost[] = [
   {
     "id": 1,
-    "slug": "future-sustainable-cocoa-indonesia",
-    "title": "The Future of Sustainable Cocoa Sourcing in Indonesia",
+    "slug": "the-future-of-sustainable-cocoa-sourcing-in-indonesia",
+    "title": "Sustainable Cocoa Sourcing",
     "category": "Cocoa Insights",
-    "excerpt": "Indonesia is the third-largest cocoa producer. Explore how Naturra Extal is leading the way in sustainable sourcing and quality control.",
-    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
+    "excerpt": "Discover the future of sustainable cocoa sourcing in Indonesia",
+    "image": "https://images.unsplash.com/photo-1714102367897-4a19259feb75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwY29jb2ElMjBmYXJtZXIlMjBzdXN0YWluYWJsZSUyMGZhcm1pbmd8ZW58MHwwfHx8MTc3NDc1ODU4OXww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2025-10-15",
     "author": "Moh Rifki",
-    "status": "synced"
+    "status": "draft",
+    "customContent": {
+      "introduction": "As the global demand for high-quality cocoa continues to rise, Indonesia is poised to play a significant role in meeting this demand while promoting sustainable cocoa sourcing practices. With its rich soil and favorable climate, Indonesia is home to some of the world's most renowned cocoa-producing regions. In this article, we will explore the future of sustainable cocoa sourcing in Indonesia and how Naturra Extal is committed to supporting environmentally friendly and socially responsible cocoa production.",
+      "keyPoints": [
+        "Indonesia's cocoa industry is expected to grow significantly in the next few years",
+        "Sustainable cocoa sourcing practices are essential for the long-term viability of the industry",
+        "Naturra Extal is committed to supporting environmentally friendly and socially responsible cocoa production"
+      ],
+      "language": "en",
+      "sections": [
+        {
+          "heading": "The Importance of Sustainable Cocoa Sourcing",
+          "content": "Sustainable cocoa sourcing is crucial for the long-term viability of the cocoa industry. Not only does it help to conserve the environment, but it also improves the livelihoods of cocoa farmers and their communities. <strong>Naturra Extal</strong> is dedicated to promoting sustainable cocoa sourcing practices throughout its supply chain, from seed to shelf. By working directly with farmers and providing them with training and support, we are able to ensure that our cocoa is sourced in a responsible and environmentally friendly manner.",
+          "imageSearchQuery": "cocoa farm sustainability",
+          "image": "https://images.unsplash.com/photo-1653481006616-aab561a77a3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxjb2NvYSUyMGZhcm0lMjBzdXN0YWluYWJpbGl0eXxlbnwwfDB8fHwxNzc0NzU4NTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "cocoa farm sustainability"
+        },
+        {
+          "heading": "Challenges Facing the Cocoa Industry",
+          "content": "Despite the growing demand for sustainable cocoa, the industry still faces several challenges. <em>Deforestation</em>, <em>climate change</em>, and <em>poverty</em> are just a few of the issues that cocoa farmers and communities are struggling with. To address these challenges, Naturra Extal is working with local organizations and stakeholders to develop and implement sustainable cocoa production practices that not only benefit the environment but also improve the livelihoods of cocoa farmers and their communities."
+        },
+        {
+          "heading": "Naturra Extal's Commitment to Sustainable Cocoa",
+          "content": "At Naturra Extal, we are committed to sourcing our cocoa from sustainable and responsible sources. We believe that by working together with farmers, communities, and other stakeholders, we can create a more sustainable and equitable cocoa industry. Our <strong>Natural Cocoa Powder V10</strong> (product ID: 1) is a testament to our commitment to sustainability, with its high-quality and rich flavor profile that is sure to meet the demands of even the most discerning manufacturers and food & beverage industries.",
+          "productId": 1
+        },
+        {
+          "heading": "The Future of Sustainable Cocoa Sourcing",
+          "content": "As the global demand for sustainable cocoa continues to grow, Indonesia is well-positioned to play a significant role in meeting this demand. With its rich soil and favorable climate, Indonesia has the potential to become a leader in sustainable cocoa production. At Naturra Extal, we are committed to supporting the growth and development of the Indonesian cocoa industry, while promoting sustainable and responsible cocoa sourcing practices that benefit both the environment and local communities. Our <strong>Alkalized Cocoa Powder Dark</strong> (product ID: 2) is another example of our commitment to sustainability and quality.",
+          "productId": 2
+        }
+      ],
+      "conclusion": "In conclusion, the future of sustainable cocoa sourcing in Indonesia is bright. With the growing demand for sustainable cocoa and the commitment of companies like Naturra Extal to promoting environmentally friendly and socially responsible cocoa production, the Indonesian cocoa industry is poised for significant growth and development. As a leading player in the global cocoa market, Naturra Extal is dedicated to supporting the growth and development of the Indonesian cocoa industry, while promoting sustainable and responsible cocoa sourcing practices that benefit both the environment and local communities."
+    }
   },
   {
     "id": 2,
