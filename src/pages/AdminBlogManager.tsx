@@ -158,39 +158,58 @@ const AdminBlogManager: React.FC = () => {
 
             const verifyLive = async () => {
                 try {
-                    const response = await fetch(`/api/admin/health?t=${Date.now()}`);
-                    if (!response.ok) {
-                        return;
-                    }
-                    const data = await response.json();
-
-                    const latestLocalPost = posts[posts.length - 1];
-                    const countMatches = data.postCount === posts.length;
-                    const latestPostMatches = !latestLocalPost || (data.latestPost && data.latestPost.id === latestLocalPost.id);
-
-                    const remoteSlug = data.latestPost?.slug;
-                    const targetSlugs = deploymentSlugsRef.current;
                     const targetSlug = deploymentTargetSlugRef.current;
-                    const isTargetLive = targetSlugs.includes(remoteSlug) || (targetSlug === remoteSlug);
-
                     const nextAttempt = verifyAttemptsRef.current + 1;
                     setVerifyAttempts(nextAttempt);
 
-                    if (data.success && isTargetLive) {
+                    const targetLabel = targetSlug ? `/blog/${targetSlug}` : 'multiple pages';
+                    console.log(`[Attempt #${nextAttempt}] Verification started for ${targetLabel}`);
+
+                    // 1. Check direct page status (most reliable for "no longer 404")
+                    let directLive = false;
+                    if (targetSlug) {
+                        try {
+                            const targetUrl = `/blog/${targetSlug}`;
+                            const pageCheck = await fetch(targetUrl, { method: 'GET', cache: 'no-store' });
+                            console.log(`Direct check for ${targetUrl} returned status: ${pageCheck.status}`);
+
+                            // If it's a 200 OK, it's definitely NOT a 404 anymore
+                            if (pageCheck.status === 200) {
+                                directLive = true;
+                                addLog(`[Attempt #${nextAttempt}] Direct detection: ${targetUrl} is LIVE (Status 200)!`, 'success');
+                            }
+                        } catch (e) {
+                            console.warn("Direct page check failed:", e);
+                        }
+                    }
+
+                    // 2. Check API health (fallback/multi-slug)
+                    let apiLive = false;
+                    let apiData: any = null;
+                    try {
+                        const response = await fetch(`/api/admin/health?t=${Date.now()}`);
+                        if (response.ok) {
+                            apiData = await response.json();
+                            const remoteSlug = apiData.latestPost?.slug;
+                            const targetSlugs = deploymentSlugsRef.current;
+                            apiLive = apiData.success && (targetSlugs.includes(remoteSlug) || (targetSlug === remoteSlug));
+                            console.log(`API health check: success=${apiData.success}, remoteSlug=${remoteSlug}, apiLive=${apiLive}`);
+                        }
+                    } catch (e) {
+                        console.warn("API health check failed:", e);
+                    }
+
+                    if (directLive || apiLive) {
                         setDeploymentStatus('ready');
-                        addLog(`✨ EH, INI DAH GA 404 LAGI LOH! Detected "${remoteSlug}" is officially live!`, 'success');
+                        const finalSlug = targetSlug || apiData?.latestPost?.slug || 'content';
+                        addLog(`✨ EH, INI DAH GA 404 LAGI LOH! Detected "${finalSlug}" is officially live!`, 'success');
                         addLog(`✅ Verification complete after ${nextAttempt} attempts.`, 'success');
                         if (statusIntervalId) clearInterval(statusIntervalId);
                         if (liveIntervalId) clearInterval(liveIntervalId);
                         if (iframeIntervalId) clearInterval(iframeIntervalId);
                     } else {
-                        // FORCE unique log message to bypass duplicate filter and show activity
-                        const targetLabel = targetSlug ? `/blog/${targetSlug}` : 'multiple pages';
-                        if (remoteSlug && remoteSlug !== 'home') {
-                            addLog(`[Attempt #${nextAttempt}] Live site seeing: "${remoteSlug}", still waiting for: "${targetLabel}"...`, 'info');
-                        } else {
-                            addLog(`[Attempt #${nextAttempt}] Still 404 - Searching for "${targetLabel}"...`, 'warning');
-                        }
+                        // Regular heartbeat to show we are still scanning
+                        addLog(`[Attempt #${nextAttempt}] Site scanning... ${targetLabel} is still 404/Not Ready.`, 'warning');
                         setIframeKey(k => k + 1);
                     }
                 } catch (error) {
