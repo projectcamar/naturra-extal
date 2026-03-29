@@ -31,7 +31,27 @@ const AdminTutorial: React.FC = () => {
 
         const el = document.getElementById(stepData.targetId);
         if (el) {
-            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Calculate where the card will be and scroll to put it in the center
+            const rect = el.getBoundingClientRect();
+            const padding = 20;
+            const cardHeight = 84;
+
+            // Expected top of the bar (bottom placement by default)
+            let expectedBarTop = rect.bottom + padding;
+
+            // If it would go off screen, it flips to top
+            if (stepData.position === 'top' || (expectedBarTop + cardHeight > window.innerHeight - 20)) {
+                expectedBarTop = rect.top - cardHeight - padding;
+            }
+
+            // We want to scroll the window so that 'expectedBarTop' is at viewport middle
+            const currentScrollY = window.scrollY;
+            const targetScrollY = currentScrollY + (expectedBarTop - (window.innerHeight / 2) + (cardHeight / 2));
+
+            window.scrollTo({
+                top: targetScrollY,
+                behavior: 'smooth'
+            });
         }
 
         updateRect();

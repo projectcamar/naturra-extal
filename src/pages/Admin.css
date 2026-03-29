@@ -660,11 +660,12 @@
 
 .ai-modal-content {
   background: #fff;
-
   width: 90%;
-  max-width: 600px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  animation: slideUp 0.3s ease;
+  max-width: 520px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 24px;
+  overflow: hidden;
 }
 
 @keyframes slideUp {
@@ -683,17 +684,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px;
-  border-bottom: 1px solid #e0e0e0;
+  padding: 18px 24px;
+  border-bottom: 1px solid #f0f0f0;
+  background: #fff;
 }
 
 .ai-modal-header h2 {
   margin: 0;
-  font-size: 1.5rem;
-  color: #2C3E50;
+  font-size: 1.25rem;
+  color: #0f172a;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  font-weight: 700;
 }
 
 .ai-modal-close {
@@ -712,15 +715,17 @@
 }
 
 .ai-modal-body {
-  padding: 24px;
+  padding: 20px 24px;
 }
 
 .ai-modal-body label {
   display: block;
-  margin-bottom: 12px;
-  font-weight: 600;
-  color: #2C3E50;
-  font-size: 1rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .ai-model-select {
@@ -792,10 +797,9 @@
   display: flex;
   justify-content: flex-end;
   gap: 12px;
-  padding: 20px 24px;
-  border-top: 1px solid #e0e0e0;
-  background: #f9f9f9;
-
+  padding: 16px 24px;
+  border-top: 1px solid #f0f0f0;
+  background: #f8fafc;
 }
 
 .ai-modal-cancel,
