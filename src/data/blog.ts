@@ -1048,7 +1048,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1585428522589-592f41523318?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxjb2NvYSUyMGJlYW5zJTIwb24lMjB3b29kZW4lMjB0YWJsZXxlbnwwfDB8fHwxNzc0ODAzNjM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-30 00:00",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Ngasah biji kakao adalah proses penting dalam produksi cokelat. Dengan teknik yang tepat, Anda dapat menghasilkan cokelat dengan rasa dan aroma yang lezat. Berikut beberapa tips dan trik ngasah biji kakao untuk mendapatkan hasil terbaik.",
       "keyPoints": [
@@ -1081,6 +1081,135 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Ngasah biji kakao adalah proses yang penting dalam produksi cokelat. Dengan tips dan trik yang tepat, Anda dapat menghasilkan cokelat dengan rasa dan aroma yang lezat. Naturra Extal siap membantu Anda dalam proses ngasah biji kakao dan menghasilkan cokelat dengan kualitas yang tinggi."
+    }
+  },
+  {
+    "id": 32,
+    "slug": "tips-menggunakan-cengkeh",
+    "title": "Tips Menggunakan Cengkeh",
+    "category": "Tips and Trick",
+    "excerpt": "Cengkeh berkualitas tinggi dari Naturra Extal untuk berbagai kebutuhan",
+    "image": "",
+    "date": "2026-03-30 00:02",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Cengkeh merupakan salah satu rempah-rempah yang sangat populer di Indonesia. Dengan aroma yang khas dan rasa yang hangat, cengkeh sering digunakan dalam berbagai masakan, mulai dari masakan tradisional hingga modern. Namun, agar cengkeh dapat digunakan dengan efektif, ada beberapa tips yang perlu Anda ketahui.",
+      "keyPoints": [
+        "Pilih cengkeh yang berkualitas tinggi",
+        "Simpan cengkeh dengan benar",
+        "Gunakan cengkeh dalam jumlah yang tepat"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengapa Cengkeh Berkualitas Tinggi Penting?",
+          "content": "Cengkeh berkualitas tinggi memiliki aroma yang lebih kuat dan rasa yang lebih hangat dibandingkan dengan cengkeh yang berkualitas rendah. Oleh karena itu, penting untuk memilih cengkeh yang berkualitas tinggi agar masakan Anda memiliki rasa yang lebih lezat. Naturra Extal menawarkan cengkeh berkualitas tinggi yang dipilih langsung dari petani terbaik di Indonesia.",
+          "imageSearchQuery": "cengkeh berkualitas tinggi di kebun"
+        },
+        {
+          "heading": "Tips Menggunakan Cengkeh dalam Masakan",
+          "content": "Cengkeh dapat digunakan dalam berbagai masakan, mulai dari masakan tradisional seperti nasi goreng dan sate, hingga masakan modern seperti es krim dan kue. Namun, perlu diingat bahwa cengkeh memiliki rasa yang kuat, sehingga perlu digunakan dalam jumlah yang tepat. Anda dapat menggunakan cengkeh sebagai bumbu utama atau sebagai penambah rasa dalam masakan Anda."
+        },
+        {
+          "heading": "Naturra Extal Solusi Cengkeh Berkualitas Tinggi",
+          "content": "Naturra Extal menawarkan cengkeh berkualitas tinggi yang dipilih langsung dari petani terbaik di Indonesia. Dengan sistem pengolahan yang modern dan pengawasan kualitas yang ketat, kami dapat memastikan bahwa cengkeh kami memiliki aroma yang kuat dan rasa yang hangat. Produk cengkeh kami, seperti <strong>Premium Indonesian Cloves Lal Pari (produk id 3)</strong>, dapat digunakan dalam berbagai masakan dan dapat membantu Anda menciptakan rasa yang lezat dan unik.",
+          "productId": 3
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda ingin mencoba menggunakan cengkeh berkualitas tinggi dalam masakan Anda, Anda dapat memesan produk cengkeh kami secara online atau menghubungi kami langsung. Kami akan dengan senang hati membantu Anda memilih cengkeh yang tepat untuk kebutuhan Anda.",
+          "productId": 3
+        }
+      ],
+      "conclusion": "Dengan memilih cengkeh berkualitas tinggi dan menggunakan tips yang tepat, Anda dapat menciptakan masakan yang lezat dan unik. Naturra Extal siap membantu Anda dalam menciptakan rasa yang lezat dengan cengkeh berkualitas tinggi kami."
+    }
+  },
+  {
+    "id": 33,
+    "slug": "cengkeh-asli-berkualitas",
+    "title": "Cengkeh Asli Berkualitas",
+    "category": "Tips and Trick",
+    "excerpt": "Cengkeh asli berkualitas dari Naturra Extal untuk industri makanan dan minuman",
+    "image": "https://images.unsplash.com/photo-1710996655126-965234821bc9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxjZW5na2VoJTIwaW5kb25lc2lhfGVufDB8MHx8fDE3NzQ4MDM3NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-30 00:02",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Cengkeh asli adalah salah satu komoditas yang sangat penting dalam industri makanan dan minuman. Namun, bagaimana cara memilih cengkeh asli yang berkualitas? Berikut beberapa tips dan trik dari Naturra Extal.",
+      "keyPoints": [
+        "Memilih cengkeh asli dari sumber yang terpercaya",
+        "Mengenal karakteristik cengkeh asli",
+        "Mengetahui cara penyimpanan cengkeh asli"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengenal Cengkeh Asli",
+          "content": "Cengkeh asli adalah salah satu jenis rempah-rempah yang berasal dari Indonesia. Cengkeh memiliki aroma yang khas dan rasa yang kuat, sehingga sering digunakan dalam berbagai masakan dan minuman. <br> Cengkeh asli dari Naturra Extal dipilih langsung dari petani-petani lokal, sehingga kualitasnya terjamin.",
+          "imageSearchQuery": "petani cengkeh indonesia",
+          "image": "https://images.unsplash.com/photo-1631116365480-4134acfddd7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxwZXRhbmklMjBjZW5na2VoJTIwaW5kb25lc2lhfGVufDB8MHx8fDE3NzQ4MDM3NTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "petani cengkeh indonesia"
+        },
+        {
+          "heading": "Tips Memilih Cengkeh Asli",
+          "content": "Untuk memilih cengkeh asli yang berkualitas, perlu diperhatikan beberapa hal. Pertama, perhatikan warna cengkeh. Cengkeh asli memiliki warna coklat tua dan aroma yang kuat. Kedua, perhatikan ukuran cengkeh. Cengkeh asli memiliki ukuran yang seragam dan tidak terlalu kecil. <br> Ketiga, perhatikan kualitas cengkeh. Cengkeh asli harus bebas dari benda-benda asing dan memiliki kualitas yang seragam."
+        },
+        {
+          "heading": "Cara Penyimpanan Cengkeh Asli",
+          "content": "Cengkeh asli harus disimpan dengan baik untuk menjaga kualitasnya. Pertama, simpan cengkeh asli dalam wadah yang tertutup rapat. Kedua, simpan cengkeh asli di tempat yang kering dan sejuk. <br> Ketiga, jangan menyimpan cengkeh asli terlalu lama, karena dapat mempengaruhi kualitasnya. Dengan menyimpan cengkeh asli dengan baik, Anda dapat menikmati aroma dan rasa cengkeh asli yang kuat dan khas.",
+          "productId": 3
+        },
+        {
+          "heading": "Naturra Extal: Solusi Cengkeh Asli Berkualitas",
+          "content": "Naturra Extal adalah salah satu perusahaan yang menyediakan cengkeh asli berkualitas. Kami memiliki pengalaman yang luas dalam menyediakan cengkeh asli untuk industri makanan dan minuman. <br> Dengan memilih cengkeh asli dari Naturra Extal, Anda dapat menikmati kualitas cengkeh asli yang terjamin dan harga yang kompetitif.",
+          "productId": 3
+        }
+      ],
+      "conclusion": "Dengan memilih cengkeh asli yang berkualitas dan menyimpannya dengan baik, Anda dapat menikmati aroma dan rasa cengkeh asli yang kuat dan khas. Naturra Extal siap membantu Anda dalam memenuhi kebutuhan cengkeh asli berkualitas. Hubungi kami sekarang juga untuk mendapatkan informasi lebih lanjut."
+    }
+  },
+  {
+    "id": 34,
+    "slug": "supplier-cengkeh-indonesie",
+    "title": "Cengkeh de haute qualité",
+    "category": "Tips and Trick",
+    "excerpt": "Découvrez les meilleures pratiques pour sélectionner un fournisseur de cengkeh de confiance en Indonésie",
+    "image": "https://images.unsplash.com/photo-1616389594080-93df311a46b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGNsb3ZlcyUyMHBsYW50YXRpb24lMjBpbiUyMEluZG9uZXNpYXxlbnwwfDB8fHwxNzc0ODAzNzgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-30 00:02",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "L'Indonésie est l'un des plus grands producteurs de cengkeh au monde. Avec une demande croissante pour ces épices de haute qualité, il est essentiel de sélectionner un fournisseur de confiance. Dans cet article, nous allons vous présenter les meilleures pratiques pour choisir un fournisseur de cengkeh indonésien fiable.",
+      "keyPoints": [
+        "Sélectionner un fournisseur certifié",
+        "Vérifier la qualité des cengkeh",
+        "Établir des relations solides avec les producteurs locaux"
+      ],
+      "language": "fr",
+      "sections": [
+        {
+          "heading": "Pourquoi choisir un fournisseur indonésien ?",
+          "content": "L'Indonésie offre une grande variété de cengkeh de haute qualité, cultivés dans des conditions climatiques idéales. Les producteurs indonésiens sont connus pour leur expertise et leur dévouement à la production de cengkeh de première classe. En choisissant un fournisseur indonésien, vous bénéficiez d'un accès direct aux meilleures épices du pays.",
+          "imageSearchQuery": "indonesian clove farmers at work",
+          "image": "https://images.unsplash.com/photo-1610449367365-233d33acd4b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwY2xvdmUlMjBmYXJtZXJzJTIwYXQlMjB3b3JrfGVufDB8MHx8fDE3NzQ4MDM3Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "indonesian clove farmers at work"
+        },
+        {
+          "heading": "Comment sélectionner un fournisseur de confiance ?",
+          "content": "Il est essentiel de sélectionner un fournisseur certifié et réputé. Vous devez vérifier la qualité des cengkeh, les conditions de stockage et les procédures de contrôle qualité. Établir des relations solides avec les producteurs locaux est également crucial pour assurer une chaîne d'approvisionnement fiable et durable."
+        },
+        {
+          "heading": "Les avantages de travailler avec Naturra Extal",
+          "content": "En tant que l'un des plus grands fournisseurs de cengkeh en Indonésie, Naturra Extal offre une gamme complète de produits de haute qualité. Nous nous engageons à fournir des cengkeh certifiés, cultivés de manière durable et éthique. Nos clients bénéficient d'un service personnalisé et d'un soutien technique pour répondre à leurs besoins spécifiques.",
+          "productId": 3
+        },
+        {
+          "heading": "Conclusion",
+          "content": "Le choix d'un fournisseur de cengkeh indonésien fiable est crucial pour votre entreprise. En suivant les meilleures pratiques présentées dans cet article, vous pouvez sélectionner un fournisseur de confiance et bénéficier de la haute qualité des cengkeh indonésiens. N'hésitez pas à contacter Naturra Extal pour découvrir nos produits et services."
+        }
+      ],
+      "conclusion": "En résumé, la sélection d'un fournisseur de cengkeh indonésien de confiance est essentielle pour votre entreprise. Avec Naturra Extal, vous pouvez bénéficier de la haute qualité des cengkeh indonésiens et d'un service personnalisé. N'hésitez pas à nous contacter pour en savoir plus sur nos produits et services."
     }
   }
 ];
