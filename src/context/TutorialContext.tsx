@@ -110,19 +110,28 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
     {
         id: 11,
         title: "Real-time Monitoring",
-        text: "The Activity Log shows the step-by-step sync process. Our system will automatically verify when pages are live.",
+        text: "The Activity Log shows every step manually. Green means 'Detected Live', Yellow means 'Scanning'. Wait for the success message here!",
         targetId: "admin-activity-log",
         targetPage: "/admin/blog",
-        btnText: "Monitoring...",
+        btnText: "Wait for Green...",
         position: "top"
     },
     {
         id: 12,
+        title: "Sync Everything",
+        text: "Once everything is Green, click here to refresh the Admin dashboard. This syncs your local state with the global cloud.",
+        targetId: "admin-refresh-sync-btn",
+        targetPage: "/admin/blog",
+        btnText: "Sync Now",
+        position: "top"
+    },
+    {
+        id: 13,
         title: "You are Live!",
-        text: "Success! Once verified, you'll see live links here. Click one to see your new article on the actual website!",
+        text: "Finally, click any of these links to see your masterpiece live on the website. Congratulations, you've mastered Naturra Admin!",
         targetId: "admin-live-link",
         targetPage: "/admin/blog",
-        btnText: "Everything is Done! 🚀",
+        btnText: "Finish Tutorial 🚀",
         position: "top"
     }
 ];
