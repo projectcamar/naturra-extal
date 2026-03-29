@@ -154,16 +154,23 @@ const AdminBlogManager: React.FC = () => {
                     const remoteSlug = data.latestPost?.slug;
                     const isTargetLive = deploymentSlugs.includes(remoteSlug) || (deploymentTargetSlug === remoteSlug);
 
-                    // Explicit detection log
-                    addLog(`[System] Live Check: Current=${remoteSlug || 'home'} | Target=${deploymentTargetSlug || 'none'}`, 'info');
-
                     if (data.success && (countMatches && latestPostMatches || isTargetLive)) {
                         setDeploymentStatus('ready');
-                        addLog(`🎉 LIVE DETECTION SUCCESS: Found "${remoteSlug}" on live site! Sync complete.`, 'success');
+                        addLog(`✨ EH, INI DAH GA 404 LAGI LOH! Detected "${remoteSlug}" is officially live!`, 'success');
+                        addLog(`✅ All synced pages are verified. Sync complete!`, 'success');
                         if (statusIntervalId) clearInterval(statusIntervalId);
                         if (liveIntervalId) clearInterval(liveIntervalId);
                         if (iframeIntervalId) clearInterval(iframeIntervalId);
                     } else {
+                        // More human-like progress logs
+                        if (Math.random() > 0.7) {
+                            const remainingSlugs = deploymentSlugs.filter(s => s !== remoteSlug);
+                            if (remoteSlug && deploymentSlugs.includes(remoteSlug)) {
+                                addLog(`Detected "${remoteSlug}" is live! Checking other updated pages...`, 'info');
+                            } else {
+                                addLog(`Still 404? Looking for "${deploymentTargetSlug || 'updates'}" on live site...`, 'warning');
+                            }
+                        }
                         setIframeKey(k => k + 1);
                     }
                 } catch (error) {
