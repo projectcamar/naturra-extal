@@ -1221,7 +1221,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1679942345838-91212aedb6e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMHZhbmlsbGElMjBiZWFucyUyMG9uJTIwd29vZGVuJTIwdGFibGV8ZW58MHwwfHx8MTc3NDgwOTI4NXww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-30 01:34",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Vanila premium merupakan salah satu komoditas ekspor unggulan Indonesia. Namun, untuk meningkatkan ekspor vanila premium, diperlukan strategi yang tepat. Dalam artikel ini, kita akan membahas beberapa strategi ekspor vanila premium yang efektif.",
       "keyPoints": [
@@ -1265,7 +1265,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1659421000380-7bc91a709356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGRhcmslMjBjaG9jb2xhdGUlMjBpbmdyZWRpZW50cyUyMG9uJTIwd29vZGVuJTIwdGFibGV8ZW58MHwwfHx8MTc3NDc5MDU0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-30 01:39",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Cokelat merupakan salah satu komoditas yang paling digemari di dunia. Namun, untuk mendapatkan hasil yang maksimal, diperlukan tips dan trik yang tepat dalam mengolahnya. Berikut beberapa tips yang dapat membantu Anda mengolah cokelat dengan baik.",
       "keyPoints": [
@@ -1309,7 +1309,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1585428522589-592f41523318?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxzcGVjaWFsdHklMjBjb2ZmZWUlMjBiZWFucyUyMG9uJTIwd29vZGVuJTIwdGFibGV8ZW58MHwwfHx8MTc3NDgxMDI3MHww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-30 01:50",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Kopi adalah salah satu komoditas yang paling banyak dikonsumsi di dunia. Namun, memilih kopi yang berkualitas tidaklah mudah. Dalam artikel ini, kami akan memberikan tips memilih kopi berkualitas dari Naturra Extal.",
       "keyPoints": [
@@ -1340,6 +1340,50 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dengan memilih kopi yang berkualitas, Anda dapat menikmati rasa yang enak dan mendapatkan manfaat bagi kesehatan. Naturra Extal adalah solusi terbaik untuk menemukan kopi yang berkualitas. Kunjungi website kami sekarang juga dan temukan kopi yang sesuai dengan selera Anda."
+    }
+  },
+  {
+    "id": 38,
+    "slug": "tips-mengoptimalkan-kualitas-biji-kakao",
+    "title": "Tips Mengoptimalkan Kualitas Biji Kakao",
+    "category": "Tips and Trick",
+    "excerpt": "Tips untuk meningkatkan kualitas biji kakao dengan teknologi dan praktik terbaik",
+    "image": "https://images.unsplash.com/photo-1733938941418-df8bf946c6aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxjb2NvYSUyMGJlYW5zJTIwaGFydmVzdCUyMGluZG9uZXNpYXxlbnwwfDB8fHwxNzc0ODI2MTE1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-30 06:14",
+    "author": "Moh Rifki",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Kualitas biji kakao sangat penting dalam produksi cokelat. Dengan meningkatkan kualitas biji kakao, Anda dapat meningkatkan kualitas cokelat akhir. Berikut beberapa tips untuk mengoptimalkan kualitas biji kakao.",
+      "keyPoints": [
+        "Pilih varietas unggul",
+        "Gunakan teknologi terbaru",
+        "Lakukan pemeliharaan kebun yang baik"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengapa Kualitas Biji Kakao Penting?",
+          "content": "Kualitas biji kakao sangat berpengaruh pada kualitas cokelat akhir. Biji kakao yang berkualitas tinggi akan menghasilkan cokelat dengan rasa yang lebih baik dan aroma yang lebih kuat. Oleh karena itu, penting untuk meningkatkan kualitas biji kakao dengan teknologi dan praktik terbaik.",
+          "imageSearchQuery": "biji kakao berkualitas tinggi",
+          "image": "https://images.unsplash.com/photo-1619615174792-a5edcfeafdfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxiaWppJTIwa2FrYW8lMjBiZXJrdWFsaXRhcyUyMHRpbmdnaXxlbnwwfDB8fHwxNzc0ODI2MTExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "biji kakao berkualitas tinggi"
+        },
+        {
+          "heading": "Tips Mengoptimalkan Kualitas Biji Kakao",
+          "content": "Berikut beberapa tips untuk mengoptimalkan kualitas biji kakao: <br> 1. Pilih varietas unggul <br> 2. Gunakan teknologi terbaru <br> 3. Lakukan pemeliharaan kebun yang baik <br> Dengan mengikuti tips di atas, Anda dapat meningkatkan kualitas biji kakao dan menghasilkan cokelat yang lebih baik."
+        },
+        {
+          "heading": "Solusi Naturra Extal",
+          "content": "Naturra Extal menawarkan solusi untuk meningkatkan kualitas biji kakao dengan teknologi dan praktik terbaik. Kami bekerja sama dengan petani dan produsen untuk meningkatkan kualitas biji kakao dan menghasilkan cokelat yang lebih baik. <strong>Produk kami</strong> seperti Natural Cocoa Powder V10 (Cocoa Powder - Bulk/Retail) dan Alkalized Cocoa Powder Dark (Cocoa Powder - Dark/Rich) dapat membantu Anda meningkatkan kualitas cokelat akhir.",
+          "productId": 1
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda ingin meningkatkan kualitas biji kakao dan menghasilkan cokelat yang lebih baik, hubungi kami untuk mendapatkan informasi lebih lanjut tentang solusi Naturra Extal. Kami siap membantu Anda meningkatkan kualitas biji kakao dan menghasilkan cokelat yang lebih baik.",
+          "productId": 2
+        }
+      ],
+      "conclusion": "Dengan mengikuti tips di atas dan bekerja sama dengan Naturra Extal, Anda dapat meningkatkan kualitas biji kakao dan menghasilkan cokelat yang lebih baik. Hubungi kami untuk mendapatkan informasi lebih lanjut tentang solusi Naturra Extal."
     }
   }
 ];
