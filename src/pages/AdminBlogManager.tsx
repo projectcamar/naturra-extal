@@ -47,7 +47,6 @@ const AdminBlogManager: React.FC = () => {
     // Deployment Status state
     const [activeDeploymentSha, setActiveDeploymentSha] = useState<string | null>(null)
     const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'queued' | 'building' | 'verifying' | 'ready' | 'failed'>('idle')
-    const [deploymentDetails, setDeploymentDetails] = useState<any>(null)
     const [deploymentLogs, setDeploymentLogs] = useState<{ msg: string, time: string, type: 'info' | 'success' | 'error' | 'warning' }[]>([])
     const [iframeKey, setIframeKey] = useState(0)
     const [showLogs, setShowLogs] = useState(false)
@@ -125,37 +124,12 @@ const AdminBlogManager: React.FC = () => {
 
     // Poll for deployment status and Live Health simultaneously
     useEffect(() => {
-        let statusIntervalId: any;
+
+
         let liveIntervalId: any;
         let iframeIntervalId: any;
 
-
         if (activeDeploymentSha && deploymentStatus !== 'ready' && deploymentStatus !== 'failed') {
-            const checkStatus = async () => {
-                try {
-                    const response = await fetch(`/api/admin/deployment-status?sha=${activeDeploymentSha}`);
-                    if (!response.ok) return;
-                    const data = await response.json();
-
-                    if (data.status === 'ready' && deploymentStatus !== 'verifying') {
-                        setDeploymentStatus('verifying');
-                        addLog('Vercel Build Ready! Now verifying content on live site...', 'success');
-                    } else if (data.status !== deploymentStatus && data.status !== 'verifying') {
-                        setDeploymentStatus(data.status);
-                        addLog(`Status: ${data.status.toUpperCase()} - ${data.message || 'Waiting for build...'}`,
-                            data.status === 'failed' ? 'error' : 'info');
-                    }
-                    setDeploymentDetails(data);
-
-                    if (data.status === 'failed') {
-                        clearInterval(statusIntervalId);
-                    }
-                } catch (error) {
-                    console.error('Status check error:', error);
-                }
-            };
-
-
             const verifyLive = async () => {
                 try {
                     const targetSlug = deploymentTargetSlugRef.current;
@@ -163,27 +137,23 @@ const AdminBlogManager: React.FC = () => {
                     setVerifyAttempts(nextAttempt);
 
                     const targetLabel = targetSlug ? `/blog/${targetSlug}` : 'multiple pages';
-                    console.log(`[Attempt #${nextAttempt}] Verification started for ${targetLabel}`);
 
-                    // 1. Check direct page status (most reliable for "no longer 404")
+                    // Direct page status check (The new Source of Truth)
                     let directLive = false;
                     if (targetSlug) {
                         try {
                             const targetUrl = `/blog/${targetSlug}`;
                             const pageCheck = await fetch(targetUrl, { method: 'GET', cache: 'no-store' });
-                            console.log(`Direct check for ${targetUrl} returned status: ${pageCheck.status}`);
-
-                            // If it's a 200 OK, it's definitely NOT a 404 anymore
                             if (pageCheck.status === 200) {
                                 directLive = true;
-                                addLog(`[Attempt #${nextAttempt}] Direct detection: ${targetUrl} is LIVE (Status 200)!`, 'success');
+                                addLog(`[Attempt #${nextAttempt}] Direct detection: ${targetUrl} is LIVE!`, 'success');
                             }
                         } catch (e) {
-                            console.warn("Direct page check failed:", e);
+                            console.warn("Direct check failed:", e);
                         }
                     }
 
-                    // 2. Check API health (fallback/multi-slug)
+                    // Fallback to API health check
                     let apiLive = false;
                     let apiData: any = null;
                     try {
@@ -193,10 +163,9 @@ const AdminBlogManager: React.FC = () => {
                             const remoteSlug = apiData.latestPost?.slug;
                             const targetSlugs = deploymentSlugsRef.current;
                             apiLive = apiData.success && (targetSlugs.includes(remoteSlug) || (targetSlug === remoteSlug));
-                            console.log(`API health check: success=${apiData.success}, remoteSlug=${remoteSlug}, apiLive=${apiLive}`);
                         }
                     } catch (e) {
-                        console.warn("API health check failed:", e);
+                        console.warn("API check failed:", e);
                     }
 
                     if (directLive || apiLive) {
@@ -204,12 +173,10 @@ const AdminBlogManager: React.FC = () => {
                         const finalSlug = targetSlug || apiData?.latestPost?.slug || 'content';
                         addLog(`✨ EH, INI DAH GA 404 LAGI LOH! Detected "${finalSlug}" is officially live!`, 'success');
                         addLog(`✅ Verification complete after ${nextAttempt} attempts.`, 'success');
-                        if (statusIntervalId) clearInterval(statusIntervalId);
                         if (liveIntervalId) clearInterval(liveIntervalId);
                         if (iframeIntervalId) clearInterval(iframeIntervalId);
                     } else {
-                        // Regular heartbeat to show we are still scanning
-                        addLog(`[Attempt #${nextAttempt}] Site scanning... ${targetLabel} is still 404/Not Ready.`, 'warning');
+                        addLog(`[Attempt #${nextAttempt}] Site scanning... ${targetLabel} is still 404.`, 'warning');
                         setIframeKey(k => k + 1);
                     }
                 } catch (error) {
@@ -217,24 +184,21 @@ const AdminBlogManager: React.FC = () => {
                 }
             };
 
-            checkStatus();
             verifyLive();
-            statusIntervalId = setInterval(checkStatus, 3000);
             liveIntervalId = setInterval(verifyLive, 3000);
 
-            // Auto-refresh iframe every 10 seconds to detect visual updates
+            // Auto-refresh iframe every 10 seconds
             iframeIntervalId = setInterval(() => {
                 setIframeKey(k => k + 1);
                 addLog('Refreshing live preview iframe...', 'info');
             }, 10000);
 
             if (deploymentLogs.length === 0) {
-                addLog('Deployment initiated. Tracking GitHub commit...', 'info');
+                addLog('Deployment initiated. Scanning live site for changes...', 'info');
             }
         }
 
         return () => {
-            if (statusIntervalId) clearInterval(statusIntervalId);
             if (liveIntervalId) clearInterval(liveIntervalId);
             if (iframeIntervalId) clearInterval(iframeIntervalId);
         };
@@ -775,14 +739,6 @@ const AdminBlogManager: React.FC = () => {
                                 )}
                             </div>
 
-                            {deploymentDetails?.checkRunUrl && (
-                                <div className="status-external-links">
-                                    <a href={deploymentDetails.checkRunUrl} target="_blank" rel="noopener noreferrer" className="view-link">
-                                        <ExternalLink size={14} />
-                                        <span>View GitHub Build Process</span>
-                                    </a>
-                                </div>
-                            )}
                         </div>
 
                         {deploymentStatus === 'ready' && (
