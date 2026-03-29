@@ -51,7 +51,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         // Normalize author names to "Angga" and ensure id 12 is handled
         const sanitizedPosts = posts.map((post: any) => ({
             ...post,
-            author: (post.author === 'rioanggara' || !post.author) ? 'Angga' : post.author
+            author: (post.author === 'rioanggara' || post.author === 'rio' || !post.author) ? 'Angga' : post.author
         }));
 
         const newPostsJson = JSON.stringify(sanitizedPosts, null, 2);

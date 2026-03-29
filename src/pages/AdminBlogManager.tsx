@@ -11,6 +11,7 @@ import type { LanguageCode } from '../utils/languageManager'
 import { BlogContentEditor } from '../components/BlogContentEditor'
 import './Admin.css'
 import { useTutorial } from '../context/TutorialContext'
+import { getAdminUser } from '../utils/adminAuth'
 
 
 const AdminBlogManager: React.FC = () => {
@@ -75,17 +76,10 @@ const AdminBlogManager: React.FC = () => {
                 setPosts(mergedPosts)
             } catch (e) {
                 console.error('Error loading drafts:', e)
-                setPosts(basePosts)
             }
         } else {
             setPosts(basePosts)
         }
-
-        // 3. Force normalize authors to "Angga" for UI consistency
-        setPosts(prev => prev.map(p => ({
-            ...p,
-            author: (p.author === 'rioanggara' || !p.author || p.author === 'Rio' || p.author === 'Moh Rifki') ? 'Angga' : p.author
-        })))
 
         setIsLoading(false)
     }, [])
@@ -98,71 +92,60 @@ const AdminBlogManager: React.FC = () => {
         }
     }, [posts, isLoading])
 
-    // Poll for deployment status
+    // Poll for deployment status and Live Health simultaneously
     useEffect(() => {
-        let intervalId: any;
+        let statusIntervalId: any;
+        let liveIntervalId: any;
 
-        if (activeDeploymentSha && (deploymentStatus === 'queued' || deploymentStatus === 'building' || deploymentStatus === 'idle')) {
+        if (activeDeploymentSha && (deploymentStatus === 'queued' || deploymentStatus === 'building' || deploymentStatus === 'idle' || deploymentStatus === 'verifying')) {
             const checkStatus = async () => {
                 try {
                     const response = await fetch(`/api/admin/deployment-status?sha=${activeDeploymentSha}`);
                     if (!response.ok) return;
-
                     const data = await response.json();
 
-                    if (data.status === 'ready') {
-                        // Instead of stopping, move to live verification
+                    if (data.status === 'ready' && deploymentStatus !== 'verifying') {
                         setDeploymentStatus('verifying');
-                        setDeploymentDetails(data);
-                    } else {
+                    } else if (data.status !== 'ready') {
                         setDeploymentStatus(data.status);
-                        setDeploymentDetails(data);
                     }
+                    setDeploymentDetails(data);
 
                     if (data.status === 'failed') {
-                        if (intervalId) clearInterval(intervalId);
+                        clearInterval(statusIntervalId);
                     }
                 } catch (error) {
                     console.error('Status check error:', error);
                 }
             };
 
-            // Initial check
-            checkStatus();
-
-            // Set up polling
-            intervalId = setInterval(checkStatus, 3000); // Check every 3 seconds (real-time feel)
-        }
-
-        // Live content verification polling
-        if (deploymentStatus === 'verifying') {
             const verifyLive = async () => {
                 try {
-                    // Cache-bust with a random param
                     const response = await fetch(`/api/admin/health?t=${Date.now()}`);
                     if (!response.ok) return;
-
                     const data = await response.json();
 
-                    // If the remote post count matches our current local post count, it's live!
                     if (data.success && data.postCount === posts.length) {
                         setDeploymentStatus('ready');
-                        if (intervalId) clearInterval(intervalId);
+                        clearInterval(statusIntervalId);
+                        clearInterval(liveIntervalId);
                     }
                 } catch (error) {
                     console.error('Live verification error:', error);
                 }
             };
 
-            // Set up polling
-            intervalId = setInterval(verifyLive, 3000);
-            verifyLive(); // Initial check
+            checkStatus();
+            verifyLive();
+            statusIntervalId = setInterval(checkStatus, 3000);
+            liveIntervalId = setInterval(verifyLive, 3000);
         }
 
         return () => {
-            if (intervalId) clearInterval(intervalId);
+            if (statusIntervalId) clearInterval(statusIntervalId);
+            if (liveIntervalId) clearInterval(liveIntervalId);
         };
-    }, [activeDeploymentSha, deploymentStatus])
+    }, [activeDeploymentSha, deploymentStatus, posts.length])
 
     const handleEdit = (post: BlogPost) => {
         setEditingPost({
@@ -186,6 +169,11 @@ const AdminBlogManager: React.FC = () => {
         const tzOffset = now.getTimezoneOffset() * 60000;
         const localISOTime = (new Date(now.getTime() - tzOffset)).toISOString().slice(0, 16).replace('T', ' ');
 
+        const username = getAdminUser()
+        const defaultAuthor = username === 'rio' || username === 'rioanggara' ? 'Angga' :
+            (username === 'brifki' || username === 'rifki') ? 'Moh Rifki' :
+                username || 'Angga'
+
         setEditingPost({
             id: newId,
             slug: '',
@@ -194,7 +182,7 @@ const AdminBlogManager: React.FC = () => {
             excerpt: '',
             image: '',
             date: localISOTime,
-            author: 'Angga',
+            author: defaultAuthor,
             status: 'draft',
             customContent: {
                 introduction: '',
@@ -593,13 +581,18 @@ const AdminBlogManager: React.FC = () => {
                     <div className="admin-blog-list-view">
                         <div className="admin-stats-bar">
                             <div className="stat-item">
-                                <span className="stat-label">Published by Angga</span>
+                                <span className="stat-label">Angga</span>
                                 <span className="stat-count">{posts.filter(p => p.author === 'Angga').length}</span>
                             </div>
                             <div className="stat-divider"></div>
                             <div className="stat-item">
+                                <span className="stat-label">Moh Rifki</span>
+                                <span className="stat-count">{posts.filter(p => p.author === 'Moh Rifki').length}</span>
+                            </div>
+                            <div className="stat-divider"></div>
+                            <div className="stat-item">
                                 <span className="stat-label">Others</span>
-                                <span className="stat-count">{posts.length - posts.filter(p => p.author === 'Angga').length}</span>
+                                <span className="stat-count">{posts.length - posts.filter(p => p.author === 'Angga' || p.author === 'Moh Rifki').length}</span>
                             </div>
                         </div>
 

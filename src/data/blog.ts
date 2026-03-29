@@ -35,7 +35,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "Discover the future of sustainable cocoa sourcing in Indonesia",
     "image": "https://images.unsplash.com/photo-1714102367897-4a19259feb75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwY29jb2ElMjBmYXJtZXIlMjBzdXN0YWluYWJsZSUyMGZhcm1pbmd8ZW58MHwwfHx8MTc3NDc1ODU4OXww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2025-10-15",
-    "author": "Angga",
+    "author": "Moh Rifki",
     "status": "synced",
     "customContent": {
       "introduction": "As the global demand for high-quality cocoa continues to rise, Indonesia is poised to play a significant role in meeting this demand while promoting sustainable cocoa sourcing practices. With its rich soil and favorable climate, Indonesia is home to some of the world's most renowned cocoa-producing regions. In this article, we will explore the future of sustainable cocoa sourcing in Indonesia and how Naturra Extal is committed to supporting environmentally friendly and socially responsible cocoa production.",
@@ -79,7 +79,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "Discover the unique aromatic profile and high eugenol content that make Indonesian cloves the most sought-after in the world market.",
     "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-14",
-    "author": "Angga",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
@@ -90,7 +90,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "Learn how this coconut-derived growing medium is becoming the preferred choice for eco-conscious farmers and landscapers worldwide.",
     "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-13",
-    "author": "Angga",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
@@ -101,7 +101,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "Navigating HS 1805 and 1806: A comprehensive guide to the technical specifications required for international cocoa powder trade.",
     "image": "https://images.unsplash.com/photo-1613919920110-394ffdc5bfaa?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-12",
-    "author": "Angga",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
@@ -112,7 +112,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "At Naturra Extal, we cut out the middlemen to ensure fair compensation for farmers and the highest quality for our international clients.",
     "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-11",
-    "author": "Angga",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
@@ -123,7 +123,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "From farm gate to container loading, learn the intricacies of shipping agricultural products across continents safely and efficiently.",
     "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-10",
-    "author": "Angga",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
@@ -134,7 +134,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "Explore why the volcanic soil of Sulawesi produces some of the most complex and flavorful cocoa beans available today.",
     "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-09",
-    "author": "Angga",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
@@ -145,7 +145,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "A deep dive into the harvesting and sun-drying process that preserves the intense aroma of Indonesian cloves.",
     "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-08",
-    "author": "Angga",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
@@ -156,7 +156,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "How our processing facilities in Surabaya ensure optimal EC levels and moisture content for world-class cocopeat blocks.",
     "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-07",
-    "author": "Angga",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
@@ -167,7 +167,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "Stay ahead of the market with our insights into global demand for cocoa, spices, and sustainable agricultural inputs.",
     "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-06",
-    "author": "Angga",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
