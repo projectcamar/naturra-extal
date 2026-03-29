@@ -42,20 +42,29 @@ const AdminTutorial: React.FC = () => {
 
     if (!isActive || !stepData) return null;
 
-    const spotlightStyle = targetRect ? {
-        clipPath: `polygon(
-      0% 0%, 
-      0% 100%, 
-      ${targetRect.left}px 100%, 
-      ${targetRect.left}px ${targetRect.top}px, 
-      ${targetRect.right}px ${targetRect.top}px, 
-      ${targetRect.right}px ${targetRect.bottom}px, 
-      ${targetRect.left}px ${targetRect.bottom}px, 
-      ${targetRect.left}px 100%, 
-      100% 100%, 
-      100% 0%
-    )`
-    } : {};
+    const spotlightStyle = useMemo(() => {
+        if (!targetRect) return {};
+
+        const L = targetRect.left || 0;
+        const T = targetRect.top || 0;
+        const R = targetRect.right || 0;
+        const B = targetRect.bottom || 0;
+
+        return {
+            clipPath: `polygon(
+                0% 0%, 
+                0% 100%, 
+                ${L}px 100%, 
+                ${L}px ${T}px, 
+                ${R}px ${T}px, 
+                ${R}px ${B}px, 
+                ${L}px ${B}px, 
+                ${L}px 100%, 
+                100% 100%, 
+                100% 0%
+            )`
+        };
+    }, [targetRect]);
 
     const cardPosition = useMemo(() => {
         if (!targetRect) return { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' };
@@ -64,26 +73,35 @@ const AdminTutorial: React.FC = () => {
         const cardWidth = 400;
         const cardHeight = 280;
 
+        const rect = {
+            top: targetRect.top || 0,
+            left: targetRect.left || 0,
+            right: targetRect.right || 0,
+            bottom: targetRect.bottom || 0,
+            width: targetRect.width || 0,
+            height: targetRect.height || 0
+        };
+
         switch (stepData.position) {
             case 'bottom':
                 return {
-                    top: `${targetRect.bottom + padding}px`,
-                    left: `${targetRect.left + targetRect.width / 2 - cardWidth / 2}px`
+                    top: `${rect.bottom + padding}px`,
+                    left: `${rect.left + rect.width / 2 - cardWidth / 2}px`
                 };
             case 'top':
                 return {
-                    top: `${targetRect.top - cardHeight - padding}px`,
-                    left: `${targetRect.left + targetRect.width / 2 - cardWidth / 2}px`
+                    top: `${rect.top - cardHeight - padding}px`,
+                    left: `${rect.left + rect.width / 2 - cardWidth / 2}px`
                 };
             case 'left':
                 return {
-                    top: `${targetRect.top + targetRect.height / 2 - cardHeight / 2}px`,
-                    left: `${targetRect.left - cardWidth - padding}px`
+                    top: `${rect.top + rect.height / 2 - cardHeight / 2}px`,
+                    left: `${rect.left - cardWidth - padding}px`
                 };
             case 'right':
                 return {
-                    top: `${targetRect.top + targetRect.height / 2 - cardHeight / 2}px`,
-                    left: `${targetRect.right + padding}px`
+                    top: `${rect.top + rect.height / 2 - cardHeight / 2}px`,
+                    left: `${rect.right + padding}px`
                 };
             default:
                 return { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' };
@@ -91,27 +109,26 @@ const AdminTutorial: React.FC = () => {
     }, [targetRect, stepData]);
 
     const getIcon = (title: string) => {
-        if (title.includes('Welcome')) return <Layout className="text-blue-500" size={32} />;
-        if (title.includes('Blog')) return <BookOpen className="text-green-500" size={32} />;
-        if (title.includes('Article')) return <FileText className="text-purple-500" size={32} />;
-        if (title.includes('AI')) return <Sparkles className="text-amber-500" size={32} />;
+        const t = title || '';
+        if (t.includes('Welcome')) return <Layout className="text-blue-500" size={32} />;
+        if (t.includes('Blog')) return <BookOpen className="text-green-500" size={32} />;
+        if (t.includes('Article')) return <FileText className="text-purple-500" size={32} />;
+        if (t.includes('AI')) return <Sparkles className="text-amber-500" size={32} />;
         return <MousePointer2 className="text-indigo-500" size={32} />;
     };
 
     return (
         <div className="tutorial-root">
-            {/* Dark Overlay with Hole */}
             <div className="tutorial-overlay" style={spotlightStyle} />
 
-            {/* Clear Box for Highlight Border */}
             {targetRect && (
                 <div
                     className="tutorial-highlight-box"
                     style={{
-                        top: targetRect.top - 4,
-                        left: targetRect.left - 4,
-                        width: targetRect.width + 8,
-                        height: targetRect.height + 8
+                        top: (targetRect.top || 0) - 4,
+                        left: (targetRect.left || 0) - 4,
+                        width: (targetRect.width || 0) + 8,
+                        height: (targetRect.height || 0) + 8
                     }}
                 />
             )}
@@ -125,12 +142,12 @@ const AdminTutorial: React.FC = () => {
                         <div className="tutorial-badge">TUTORIAL STEP {currentStep}/8</div>
                     </div>
 
-                    <h3 className="tutorial-title">{stepData.title}</h3>
-                    <p className="tutorial-text">{stepData.text}</p>
+                    <h3 className="tutorial-title">{stepData.title || ''}</h3>
+                    <p className="tutorial-text">{stepData.text || ''}</p>
 
                     <div className="tutorial-footer">
                         <button className="tutorial-btn" onClick={nextStep}>
-                            {stepData.btnText}
+                            {stepData.btnText || 'Next'}
                             {currentStep === 8 ? <Sparkles size={16} /> : <ArrowRight size={16} />}
                         </button>
                     </div>
@@ -155,7 +172,6 @@ const AdminTutorial: React.FC = () => {
           position: absolute;
           inset: 0;
           background: rgba(0, 0, 0, 0.75);
-          backdrop-filter: blur(4px);
           pointer-events: auto;
           transition: clip-path 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
