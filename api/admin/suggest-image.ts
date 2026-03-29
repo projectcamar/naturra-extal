@@ -65,7 +65,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                     },
                     {
                         role: 'user',
-                        content: `Context: ${context}\nArticle/Section Heading: ${title}\nContent Snippet: ${excerpt || ''}\n\nProvide a specific English search query for Unsplash (e.g. "industrial cafe interior", "reclaimed teak dining table", "factory workshop production"). Ensure the query is relevant to the specific context provided.`
+                        content: `Context: ${context}\nArticle/Section Heading: ${title}\nContent Snippet: ${excerpt || ''}\n\nProvide a specific English search query for Unsplash (e.g. "cocoa beans plantation", "traditional spices market", "natural cocopeat blocks", "indonesian agriculture harvest"). Ensure the query is relevant to the specific context provided.`
                     }
                 ],
                 temperature: 0.5,

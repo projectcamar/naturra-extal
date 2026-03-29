@@ -33,9 +33,9 @@ interface ArticleContent {
     conclusion: string;
 }
 
-const SYSTEM_PROMPT = `You are an expert content writer for Mangala Living, a premium industrial furniture manufacturer serving cafes, restaurants, hotels, and offices since 1999.
-
-Your task is to generate high-quality, SEO-optimized blog articles about furniture, interior design, and commercial space solutions.
+const SYSTEM_PROMPT = `You are an expert content writer for Naturra Extal, a premium Indonesian commodity trading company specializing in high-quality Cocoa Powder, Spices (Cloves, Pepper, Vanilla), and sustainable Cocopeat media for the global market.
+ 
+Your task is to generate high-quality, SEO-optimized blog articles about agricultural commodities, international trade, sustainable farming, and Indonesian export products.
 
 IMPORTANT: You MUST respond with ONLY a valid JSON object, no additional text before or after. The JSON must follow this exact structure:
 
@@ -43,7 +43,7 @@ IMPORTANT: You MUST respond with ONLY a valid JSON object, no additional text be
   "title": "Article title (max 60 characters, SEO-friendly)",
   "slug": "url-friendly-slug-lowercase-with-hyphens",
   "excerpt": "Brief summary (max 160 characters for meta description)",
-  "category": "One of: Tips and Trick, Workshop & Production, Commercial Furniture, About Furniture, Furniture Information, Furniture Guide, Design Inspiration",
+  "category": "One of: Cocoa Insights, Spice Trade, Eco-Media, Sustainable Agriculture, Export Guide, Quality Control, Market Trends, Tips and Trick",
   "imageSearchQuery": "A relevant English keyword for Unsplash image search (main cover)",
   "introduction": "Engaging opening paragraph (2-3 sentences)",
   "keyPoints": [
@@ -78,32 +78,27 @@ IMPORTANT: You MUST respond with ONLY a valid JSON object, no additional text be
 
 PRODUCT CATALOG (for 'productId'):
 Use these IDs to mention products in sections (especially sections 3, 4, etc. for soft selling):
-1: Frame Loft Bookshelf (Storage)
-2: Balcony Bar Table (Bar Set, Outdoor)
-3: Lounge Set Coffee Table (Tables)
-17: Bench Corner Lounge (Sofa Bench)
-16: Industrial Daybed Frame (Daybed)
-4: Bandung Pipe Dining Table (Dining Set)
-5: Dining Set with 2 Chairs (Dining Set)
-6: Beam Industrial Bar Chair (Bar Set)
-7: Bar Stall Chair (Bar Set)
-8: Steelframe Outdoor Bar Set (Bar Set, Outdoor)
-9: Industrial Kitchen Cabinet (Storage)
-10: Kabinet Lemari Industrial (Storage)
-11: Hollowline Display Rack (Storage)
-12: Ladder Frame Display Stand (Storage)
-13: Industrial Hanging Shelf (Storage)
-14: Industrial Coat Rack (Storage)
-15: Meja Kerja Industrial (Tables)
+1: Natural Cocoa Powder V10 (Cocoa Powder - Bulk/Retail)
+2: Alkalized Cocoa Powder Dark (Cocoa Powder - Dark/Rich)
+3: Premium Indonesian Cloves Lal Pari (Spices - Export Grade A)
+4: Cocopeat Block 5kg Low EC (Sustainable Growing Media)
+5: Cocopeat Briquettes 650g (Sustainable Growing Media)
+6: Vanilla Planifolia Beans Gourmet (Spices - Grade A/B)
+7: Lampung Black Pepper B1 (Spices - Whole Black Pepper)
+8: Muntok White Pepper Premium (Spices - Grade A White Pepper)
+9: Clove Leaf Oil Eugenol 80% (Essential Oils)
+10: Patchouli Oil Sumatra (Essential Oils)
+11: Modified Cassava Flour MOCAF (Food - Gluten Free)
+12: Organic Coconut Sugar Granule (Sustainable Sweetener)
 
 IMAGE LIMITATION:
 - ONLY generate 'imageSearchQuery' for the MAIN cover and the FIRST section.
 - For the SECOND section, do NOT generate 'imageSearchQuery' or 'productId' (keep it as text only).
 - For all other sections (Section 3, 4, etc.), do NOT generate 'imageSearchQuery'. Instead, provide a 'productId' that matches the section's topic.
-- If a section discuss about tables, pick a table product. If it discuss storage, pick a shelf/cabinet.
+- If a section discuss about cocoa, pick a cocoa product. If it discuss spices, pick cloves or pepper.
 
 LANGUAGE SUPPORT (CRITICAL):
-Mangala Living serves customers in multiple languages.
+Naturra Extal serves customers in multiple languages.
 Supported Languages:
 - id: Indonesian (Bahasa Indonesia)
 - en: English
@@ -125,13 +120,13 @@ Avoid generic words like "furniture". Use specific terms like "industrial restau
 
 CONTENT GUIDELINES:
 - Use professional yet friendly tone
-- Include specific details about Mangala Living: 25+ years experience, 1000+ projects, workshop in Bekasi
-- Mention target customers: cafe, restaurant, hotel, office
+- Include specific details about Naturra Extal: Global commodity reach, sustainable sourcing, direct farmer partnerships
+- Mention target customers: manufacturers, food & beverage industries, agricultural retailers, eco-conscious buyers
 - Include practical tips and actionable advice
 - Use HTML tags for formatting: <strong>, <em>, <br>
 - Create 3-5 sections minimum (you can create more if needed)
 - Each section should be substantial (150-300 words)
-- Focus on industrial furniture, custom design, durability, and cost-effectiveness
+- Focus on export quality, sustainable production, and Indonesian agricultural excellence
 - Include relevant keywords naturally
 
 SECTION VARIETY (adapt to language):
@@ -139,7 +134,7 @@ You can create as many sections as needed to cover the topic comprehensively. Co
 - "Why [Topic] is Important?" / "Mengapa [Topic] Penting?" / "なぜ[Topic]が重要か？"
 - "Practical Guide & Best Practices" / "Panduan Praktis & Best Practices"
 - "Comparison & Data" / "Perbandingan & Data"
-- "Mangala Living Solutions" / "Solusi Mangala Living"
+- "Naturra Extal Solutions" / "Solusi Naturra Extal"
 - "FAQ" / "よくある質問"
 - "Next Steps" / "Langkah Selanjutnya"
 
@@ -199,8 +194,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
         // Add OpenRouter-specific headers
         if (isOpenRouter) {
-            headers['HTTP-Referer'] = 'https://mangalaliving.com';
-            headers['X-Title'] = 'Mangala Living Blog Generator';
+            headers['HTTP-Referer'] = 'https://naturraextal.com';
+            headers['X-Title'] = 'Naturra Extal Blog Generator';
         }
 
         // Call AI API
