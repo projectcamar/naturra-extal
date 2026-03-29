@@ -476,24 +476,11 @@ const NaturraBlog: React.FC = () => {
           )}
 
           {/* Complete Blog Archive - Collapsible for SEO */}
-          <div className="blog-archive-section" style={{ marginTop: '4rem', paddingTop: '3rem', borderTop: '1px solid #e0e0e0' }}>
+          <div className="blog-archive-section">
             <button
               className="blog-archive-toggle"
               onClick={() => setIsArchiveExpanded(!isArchiveExpanded)}
               aria-expanded={isArchiveExpanded}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                width: '100%',
-                background: 'none',
-                border: 'none',
-                padding: '1rem 0',
-                cursor: 'pointer',
-                color: '#004D2C',
-                fontSize: '1.1rem',
-                fontWeight: 600
-              }}
             >
               <span>
                 {language === 'id' ? "Arsip Blog Lengkap (Semua Artikel)" :
@@ -511,36 +498,12 @@ const NaturraBlog: React.FC = () => {
               className={`blog-archive-links ${isArchiveExpanded ? 'expanded' : 'collapsed'}`}
               aria-label="All blog posts"
               aria-hidden={!isArchiveExpanded}
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-                gap: '10px 20px',
-                overflow: 'hidden',
-                transition: 'max-height 0.4s ease, opacity 0.3s ease',
-                maxHeight: isArchiveExpanded ? '800px' : '0',
-                opacity: isArchiveExpanded ? 1 : 0,
-                paddingTop: isArchiveExpanded ? '1rem' : '0',
-                paddingBottom: isArchiveExpanded ? '1rem' : '0'
-              }}
             >
               {allBlogPosts.map((post) => (
                 <Link
                   key={post.id}
                   to={getLinkWithLanguage(`/blog/${post.slug}`, language)}
-                  style={{
-                    color: '#555',
-                    textDecoration: 'none',
-                    fontSize: '0.9rem',
-                    lineHeight: 1.5,
-                    padding: '0.5rem 0',
-                    borderBottom: '1px solid #f0f0f0',
-                    transition: 'color 0.3s ease',
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                    whiteSpace: 'nowrap'
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = '#8B7355'}
-                  onMouseLeave={(e) => e.currentTarget.style.color = '#555'}
+                  className="blog-archive-link"
                 >
                   {post.title}
                 </Link>

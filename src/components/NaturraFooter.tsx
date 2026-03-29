@@ -1,56 +1,16 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { BLOG_POSTS } from '../data/blog'
 import './NaturraFooter.css'
 
-const SEO_LINKS = [
+const SEO_LINKS = BLOG_POSTS.map(post => post.title).concat([
     "Indonesian Agricultural Commodities Export",
-    "Premium Cocoa Powder HL-10 Supplier",
-    "Indonesian Cloves (Lal Pari) Grade A",
-    "Cocopeat Block 5kg Low EC Supplier",
     "Agricultural Commodity Trading Company Indonesia",
     "Sustainable Organic Farming Practices",
     "Export Quality Spices and Herbs Indonesia",
-    "Natural Cocoa Powder Manufacturing Bekasi",
-    "Cloves and Spices Wholesale Indonesia",
-    "Organic Cocopeat Growing Media Benefits",
-    "Indonesian Vanilla Beans Export Quality",
-    "Lampung Black Pepper B1 Wholesale",
-    "Muntok White Pepper Premium Supplier",
-    "Modified Cassava Flour (MOCAF) Export",
-    "Organic Coconut Sugar Manufacturer",
-    "Essential Oils Distillation Indonesia",
-    "Clove Leaf Oil Eugenol 80% Export",
-    "Patchouli Oil Sumatra Wholesale",
     "Agricultural Logistics and Supply Chain",
-    "Sustainable Sourcing from Local Farmers",
-    "Indonesian Commodity Market Trends 2025",
-    "Global Export Standards for Cocoa",
-    "Standardizing Spices Quality for International Market",
-    "Cocopeat for Sustainable Greenhouse Growing",
-    "Indonesian Herbs and Spices Health Benefits",
-    "Agricultural Waste Valorization Cocopeat",
-    "Wholesale Commodity Pricing 2025",
-    "Export Documentation for Indonesian Spices",
-    "Agricultural Commodity Warehouse Bekasi",
-    "Naturra Extal: Your Global Commodity Partner",
-    "Cocoa Processing and Quality Control",
-    "The Future of Indonesian Coffee and Cocoa",
-    "Sustainable Peat Substitutes: Cocopeat",
-    "Indonesian Spice Route: Modern Export",
-    "How to Source High Quality Indonesian Cloves",
-    "Benefits of Pure Indonesian Cocoa Powder",
-    "Cocopeat vs Peat Moss: Sustainable Choice",
-    "Agricultural Export Success Stories",
-    "Bridging the Gap: Farmers to Global Market",
-    "Naturra Extal Corporate Sustainability",
-    "Pure Cocoa vs Alkalized: Which to Choose?",
-    "HS Codes for Agricultural Commodities",
-    "Shipping and Logistics for Spices Export",
-    "Indonesian Agriculture: 2025 Outlook",
-    "Quality Assurance in Commodity Trading",
-    "Naturra Extal Bekasi: Industrial Facility",
-    "Exporting Indonesian Riches to the World"
-]
+    "Naturra Extal: Your Global Commodity Partner"
+]);
 
 const NaturraFooter: React.FC = () => {
     const [subName, setSubName] = useState('')
@@ -174,11 +134,17 @@ const NaturraFooter: React.FC = () => {
                     <details className="naturra-footer__seo-details">
                         <summary>Explore Our Market Insights & Industry Resources</summary>
                         <div className="naturra-footer__seo-grid">
-                            {SEO_LINKS.map((link, idx) => (
-                                <Link key={idx} to={`/blog?tag=${encodeURIComponent(link)}`} className="naturra-footer__seo-link">
-                                    {link}
-                                </Link>
-                            ))}
+                            {SEO_LINKS.map((link, idx) => {
+                                // Find if this link is a real blog post title
+                                const post = BLOG_POSTS.find(p => p.title === link);
+                                const targetUrl = post ? `/blog/${post.slug}` : `/blog?tag=${encodeURIComponent(link)}`;
+
+                                return (
+                                    <Link key={idx} to={targetUrl} className="naturra-footer__seo-link">
+                                        {link}
+                                    </Link>
+                                );
+                            })}
                         </div>
                     </details>
                 </div>
