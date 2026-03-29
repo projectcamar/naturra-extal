@@ -11,26 +11,32 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const cleanUsername = (username || '').trim();
     const cleanPassword = (password || '').trim();
 
-    const ADMIN_USERNAME = 'rioanggara';
-    const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+    // Map of valid users to their password environment variables or hardcoded values
+    // We prioritize environment variables for security
+    const VALID_USERS: Record<string, string | undefined> = {
+        'rioanggara': process.env.ADMIN_PASSWORD,
+        'brifki': process.env.BRIFKI_PASSWORD || 'bebirifki67' // Fallback to provided password if env var not set yet
+    };
 
-    if (!ADMIN_PASSWORD) {
-        console.error('[AUTH_ERROR] ADMIN_PASSWORD environment variable is missing in Vercel settings.');
+    const targetPassword = VALID_USERS[cleanUsername];
+
+    if (!targetPassword && cleanUsername === 'rioanggara') {
+        console.error('[AUTH_ERROR] ADMIN_PASSWORD environment variable is missing for rioanggara.');
         return res.status(500).json({
             error: 'Server configuration error: ADMIN_PASSWORD is not set.',
-            details: 'Please ensure ADMIN_PASSWORD is set in Vercel Environment Variables and that you have REDEPLOYED the project.'
+            details: 'Please ensure ADMIN_PASSWORD is set in Vercel Environment Variables.'
         });
     }
 
-    if (cleanUsername === ADMIN_USERNAME && cleanPassword === ADMIN_PASSWORD) {
+    if (targetPassword && cleanPassword === targetPassword) {
         console.log(`[AUTH_SUCCESS] User ${cleanUsername} logged in successfully.`);
         return res.status(200).json({
             success: true,
             token: 'naturra_admin_session_' + Date.now(),
-            user: { username: ADMIN_USERNAME }
+            user: { username: cleanUsername }
         });
     }
 
     console.warn(`[AUTH_FAILURE] Invalid login attempt for username: "${cleanUsername}"`);
-    return res.status(401).json({ error: 'Invalid username or password. Please check your credentials and ensure no extra spaces were added.' });
+    return res.status(401).json({ error: 'Invalid username or password. Please check your credentials.' });
 }
