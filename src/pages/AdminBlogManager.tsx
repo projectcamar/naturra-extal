@@ -47,7 +47,7 @@ const AdminBlogManager: React.FC = () => {
 
     // Deployment Status state
     const [activeDeploymentSha, setActiveDeploymentSha] = useState<string | null>(null)
-    const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'queued' | 'building' | 'ready' | 'failed'>('idle')
+    const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'queued' | 'building' | 'verifying' | 'ready' | 'failed'>('idle')
     const [deploymentDetails, setDeploymentDetails] = useState<any>(null)
 
     // Pagination state
@@ -105,11 +105,17 @@ const AdminBlogManager: React.FC = () => {
                     if (!response.ok) return;
 
                     const data = await response.json();
-                    setDeploymentStatus(data.status);
-                    setDeploymentDetails(data);
 
-                    if (data.status === 'ready' || data.status === 'failed') {
-                        // Stop polling if finished
+                    if (data.status === 'ready') {
+                        // Instead of stopping, move to live verification
+                        setDeploymentStatus('verifying');
+                        setDeploymentDetails(data);
+                    } else {
+                        setDeploymentStatus(data.status);
+                        setDeploymentDetails(data);
+                    }
+
+                    if (data.status === 'failed') {
                         if (intervalId) clearInterval(intervalId);
                     }
                 } catch (error) {
@@ -122,6 +128,31 @@ const AdminBlogManager: React.FC = () => {
 
             // Set up polling
             intervalId = setInterval(checkStatus, 3000); // Check every 3 seconds (real-time feel)
+        }
+
+        // Live content verification polling
+        if (deploymentStatus === 'verifying') {
+            const verifyLive = async () => {
+                try {
+                    // Cache-bust with a random param
+                    const response = await fetch(`/api/admin/health?t=${Date.now()}`);
+                    if (!response.ok) return;
+
+                    const data = await response.json();
+
+                    // If the remote post count matches our current local post count, it's live!
+                    if (data.success && data.postCount === posts.length) {
+                        setDeploymentStatus('ready');
+                        if (intervalId) clearInterval(intervalId);
+                    }
+                } catch (error) {
+                    console.error('Live verification error:', error);
+                }
+            };
+
+            // Set up polling
+            intervalId = setInterval(verifyLive, 3000);
+            verifyLive(); // Initial check
         }
 
         return () => {
@@ -518,7 +549,7 @@ const AdminBlogManager: React.FC = () => {
                                 {deploymentStatus === 'ready' ? <Check size={20} /> :
                                     deploymentStatus === 'failed' ? <X size={20} /> :
                                         <Loader2 size={20} className="animate-spin" />}
-                                <h3>Vercel Deployment: {deploymentStatus.toUpperCase()}</h3>
+                                <h3>Vercel Deployment: {deploymentStatus === 'verifying' ? 'VERIFYING LIVE' : deploymentStatus.toUpperCase()}</h3>
                             </div>
                             <button className="close-status" onClick={() => setActiveDeploymentSha(null)}>
                                 <X size={16} />
@@ -530,6 +561,7 @@ const AdminBlogManager: React.FC = () => {
                                 {deploymentStatus === 'idle' && 'Initializing deployment tracking...'}
                                 {deploymentStatus === 'queued' && 'Deployment is queued. Waiting for Vercel builders...'}
                                 {deploymentStatus === 'building' && 'Vercel is currently building your site with the latest changes.'}
+                                {deploymentStatus === 'verifying' && '🔍 Vercel build SUCCESS! Now verifying that content is live globally...'}
                                 {deploymentStatus === 'ready' && '✅ Site is LIVE and updated!'}
                                 {deploymentStatus === 'failed' && '❌ Deployment failed. Please check Vercel dashboard.'}
                             </p>
