@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useNavigate, Link } from 'react-router-dom'
 import {
@@ -54,6 +54,23 @@ const AdminBlogManager: React.FC = () => {
     const [deploymentTargetSlug, setDeploymentTargetSlug] = useState<string | null>(null)
     const [deploymentSlugs, setDeploymentSlugs] = useState<string[]>([])
     const [verifyAttempts, setVerifyAttempts] = useState(0)
+
+    // Refs for interval closures to prevent stale state bugs
+    const verifyAttemptsRef = useRef(0)
+    const deploymentTargetSlugRef = useRef<string | null>(null)
+    const deploymentSlugsRef = useRef<string[]>([])
+
+    useEffect(() => {
+        deploymentTargetSlugRef.current = deploymentTargetSlug
+    }, [deploymentTargetSlug])
+
+    useEffect(() => {
+        deploymentSlugsRef.current = deploymentSlugs
+    }, [deploymentSlugs])
+
+    useEffect(() => {
+        verifyAttemptsRef.current = verifyAttempts
+    }, [verifyAttempts])
 
     // Pagination state
     const [itemsPerPage, setItemsPerPage] = useState<number | 'all'>(10)
@@ -153,24 +170,27 @@ const AdminBlogManager: React.FC = () => {
                     const latestPostMatches = !latestLocalPost || (data.latestPost && data.latestPost.id === latestLocalPost.id);
 
                     const remoteSlug = data.latestPost?.slug;
-                    const isTargetLive = deploymentSlugs.includes(remoteSlug) || (deploymentTargetSlug === remoteSlug);
+                    const targetSlugs = deploymentSlugsRef.current;
+                    const targetSlug = deploymentTargetSlugRef.current;
+                    const isTargetLive = targetSlugs.includes(remoteSlug) || (targetSlug === remoteSlug);
 
-                    setVerifyAttempts(prev => prev + 1);
+                    const nextAttempt = verifyAttemptsRef.current + 1;
+                    setVerifyAttempts(nextAttempt);
 
                     if (data.success && isTargetLive) {
                         setDeploymentStatus('ready');
-                        addLog(`✨ EH, INI DAH GA 404 LAGI LOH! Detected "${remoteSlug}" is live!`, 'success');
-                        addLog(`✅ Verification complete after ${verifyAttempts + 1} attempts. Site is updated.`, 'success');
+                        addLog(`✨ EH, INI DAH GA 404 LAGI LOH! Detected "${remoteSlug}" is officially live!`, 'success');
+                        addLog(`✅ Verification complete after ${nextAttempt} attempts.`, 'success');
                         if (statusIntervalId) clearInterval(statusIntervalId);
                         if (liveIntervalId) clearInterval(liveIntervalId);
                         if (iframeIntervalId) clearInterval(iframeIntervalId);
                     } else {
-                        // Deterministic logging for every attempt
-                        const targetLabel = deploymentTargetSlug ? `/blog/${deploymentTargetSlug}` : 'multiple pages';
+                        // FORCE unique log message to bypass duplicate filter and show activity
+                        const targetLabel = targetSlug ? `/blog/${targetSlug}` : 'multiple pages';
                         if (remoteSlug && remoteSlug !== 'home') {
-                            addLog(`[Attempt #${verifyAttempts + 1}] Live site matches "${remoteSlug}", but still waiting for "${deploymentTargetSlug}"...`, 'info');
+                            addLog(`[Attempt #${nextAttempt}] Live site seeing: "${remoteSlug}", still waiting for: "${targetLabel}"...`, 'info');
                         } else {
-                            addLog(`[Attempt #${verifyAttempts + 1}] Still 404 - Looking for ${targetLabel} on live site...`, 'warning');
+                            addLog(`[Attempt #${nextAttempt}] Still 404 - Searching for "${targetLabel}"...`, 'warning');
                         }
                         setIframeKey(k => k + 1);
                     }
@@ -677,10 +697,14 @@ const AdminBlogManager: React.FC = () => {
                                                                 const latestLocalPost = posts[posts.length - 1];
                                                                 if (data.postCount === posts.length && (!latestLocalPost || data.latestPost?.id === latestLocalPost.id)) {
                                                                     setDeploymentStatus('ready');
-                                                                    addLog('Force Check SUCCESS: Content is live!', 'success');
+                                                                    addLog('Force Check SUCCESS: Content is finally live!', 'success');
                                                                 } else {
-                                                                    addLog('Force Check: Remote content still pending...', 'error');
-                                                                    setMessage({ type: 'error', text: 'Health Check: Remote content still pending...' });
+                                                                    // If user forces and it's not ready, make sure we are in verifying mode to keep intervals running
+                                                                    if (deploymentStatus === 'ready' || deploymentStatus === 'failed') {
+                                                                        setDeploymentStatus('verifying');
+                                                                        setVerifyAttempts(0);
+                                                                    }
+                                                                    addLog(`Force Check: Content still pending on live site. Retrying...`, 'warning');
                                                                 }
                                                             });
                                                     }}
