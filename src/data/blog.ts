@@ -569,7 +569,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1585428522589-592f41523318?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGNvY29hJTIwYmVhbnMlMjBvbiUyMHdvb2RlbiUyMHRhYmxlfGVufDB8MHx8fDE3NzQ3OTg3ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 23:00",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Koko adalah salah satu komoditas yang paling penting di Indonesia, namun banyak orang yang masih belum tahu cara mengolahnya dengan benar. Dalam artikel ini, kita akan membahas beberapa tips dan trik mengolah koko untuk mendapatkan hasil terbaik.",
       "keyPoints": [
@@ -602,6 +602,48 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dengan mengikuti tips dan trik yang telah kami bagikan, Anda dapat mendapatkan hasil yang terbaik dalam mengolah koko. Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan atau memerlukan bantuan lebih lanjut. Naturra Extal siap membantu Anda dalam mengembangkan bisnis koko Anda."
+    }
+  },
+  {
+    "id": 21,
+    "slug": "mengenal-pasar-indonesia",
+    "title": "Mengenal Pasar",
+    "category": "Tips and Trick",
+    "excerpt": "Pasar Indonesia, sumber daya alam yang melimpah",
+    "image": "https://images.unsplash.com/photo-1710345919674-77407de09148?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHx2aWJyYW50JTIwSW5kb25lc2lhbiUyMHRyYWRpdGlvbmFsJTIwbWFya2V0JTIwc2NlbmV8ZW58MHwwfHx8MTc3NDgwMDM1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-29 23:05",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Pasar adalah salah satu komponen penting dalam perekonomian Indonesia. Dengan sumber daya alam yang melimpah, Indonesia memiliki potensi besar untuk menjadi salah satu pengekspor komoditas terbesar di dunia. Namun, masih banyak tantangan yang harus dihadapi dalam mengembangkan pasar Indonesia. <br> Dalam artikel ini, kita akan membahas beberapa tips dan trik untuk mengenal pasar Indonesia dan bagaimana Naturra Extal dapat membantu Anda dalam mengembangkan bisnis Anda.",
+      "keyPoints": [
+        "Mengenal pasar Indonesia",
+        "Mengembangkan bisnis dengan Naturra Extal",
+        "Tips dan trik untuk sukses di pasar Indonesia"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengenal Pasar Indonesia",
+          "content": "Pasar Indonesia sangat beragam, mulai dari pasar tradisional hingga pasar modern. Dengan lebih dari 270 juta penduduk, Indonesia memiliki potensi pasar yang sangat besar. Namun, masih banyak tantangan yang harus dihadapi, seperti infrastruktur yang belum memadai dan birokrasi yang kompleks. <br> Dalam menghadapi tantangan ini, Naturra Extal hadir sebagai mitra yang dapat membantu Anda dalam mengembangkan bisnis Anda. Dengan pengalaman yang luas dalam bidang komoditas, Naturra Extal dapat membantu Anda dalam mengenal pasar Indonesia dan mengembangkan strategi yang tepat untuk sukses.",
+          "imageSearchQuery": "pasar modern di indonesia"
+        },
+        {
+          "heading": "Tips dan Trik untuk Sukses di Pasar Indonesia",
+          "content": "Untuk sukses di pasar Indonesia, Anda perlu memiliki strategi yang tepat. Berikut beberapa tips dan trik yang dapat membantu Anda: <br> <strong>Mengenal target pasar</strong>, <em>mengembangkan produk yang berkualitas</em>, dan <strong>menggunakan teknologi yang tepat</strong>. Dengan demikian, Anda dapat meningkatkan kesempatan sukses Anda di pasar Indonesia."
+        },
+        {
+          "heading": "Naturra Extal Solusi",
+          "content": "Naturra Extal hadir sebagai solusi untuk membantu Anda dalam mengembangkan bisnis Anda. Dengan produk yang berkualitas, seperti <strong>Natural Cocoa Powder V10</strong> dan <strong>Cocopeat Block 5kg Low EC</strong>, Naturra Extal dapat membantu Anda dalam menghasilkan produk yang berkualitas dan meningkatkan kesempatan sukses Anda di pasar Indonesia.",
+          "productId": 1
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda ingin mengembangkan bisnis Anda di pasar Indonesia, segera hubungi Naturra Extal. Dengan pengalaman yang luas dan produk yang berkualitas, Naturra Extal dapat membantu Anda dalam menghasilkan produk yang berkualitas dan meningkatkan kesempatan sukses Anda di pasar Indonesia.",
+          "productId": 4
+        }
+      ],
+      "conclusion": "Dengan demikian, kita dapat menyimpulkan bahwa pasar Indonesia memiliki potensi yang sangat besar untuk dikembangkan. Dengan tips dan trik yang tepat, serta mitra yang dapat membantu Anda, seperti Naturra Extal, Anda dapat meningkatkan kesempatan sukses Anda di pasar Indonesia. Segera hubungi Naturra Extal untuk mengembangkan bisnis Anda!"
     }
   }
 ];
