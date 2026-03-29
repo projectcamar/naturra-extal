@@ -51,6 +51,7 @@ const AdminBlogManager: React.FC = () => {
     const [deploymentLogs, setDeploymentLogs] = useState<{ msg: string, time: string, type: 'info' | 'success' | 'error' | 'warning' }[]>([])
     const [iframeKey, setIframeKey] = useState(0)
     const [showLogs, setShowLogs] = useState(false)
+    const [deploymentTargetSlug, setDeploymentTargetSlug] = useState<string | null>(null)
 
     // Pagination state
     const [itemsPerPage, setItemsPerPage] = useState<number | 'all'>(10)
@@ -139,10 +140,8 @@ const AdminBlogManager: React.FC = () => {
 
             const verifyLive = async () => {
                 try {
-                    addLog('Scanning live site for updates...', 'info');
                     const response = await fetch(`/api/admin/health?t=${Date.now()}`);
                     if (!response.ok) {
-                        addLog('Health check failed. Retrying...', 'warning');
                         return;
                     }
                     const data = await response.json();
@@ -158,13 +157,14 @@ const AdminBlogManager: React.FC = () => {
                         if (liveIntervalId) clearInterval(liveIntervalId);
                         if (iframeIntervalId) clearInterval(iframeIntervalId);
                     } else {
-                        addLog(`Content check: Remote=${data.postCount} posts, Local=${posts.length} posts. Waiting for propagation...`, 'warning');
-                        // Also force iframe refresh
+                        // Only log if something changed or on a slower interval
+                        const targetLabel = deploymentTargetSlug ? `/blog/${deploymentTargetSlug}` : 'content';
+                        // addLog(`Scanning ${targetLabel} for updates...`, 'info'); 
+                        // Removed frequent logs to avoid terminal spam
                         setIframeKey(k => k + 1);
                     }
                 } catch (error) {
                     console.error('Live verification error:', error);
-                    addLog('Connection lost. Retrying health check...', 'error');
                 }
             };
 
@@ -289,8 +289,14 @@ const AdminBlogManager: React.FC = () => {
                 if (deployResult.commitSha) {
                     setActiveDeploymentSha(deployResult.commitSha)
                     setDeploymentStatus('idle') // Will trigger polling
+
+                    // Identify the target slug for the preview
+                    const draftPost = posts.find(p => p.status === 'draft');
+                    const targetSlug = draftPost?.slug || posts[posts.length - 1]?.slug;
+                    setDeploymentTargetSlug(targetSlug || null);
+
                     setDeploymentLogs([{
-                        msg: '✅ Changes pushed to GitHub! Vercel build started.',
+                        msg: `🚀 Changes pushed! Targeting: ${targetSlug ? `/blog/${targetSlug}` : 'live site'}`,
                         time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }),
                         type: 'success'
                     }])
@@ -683,12 +689,12 @@ const AdminBlogManager: React.FC = () => {
                                 <div className="iframe-wrapper">
                                     <div className="iframe-header">
                                         <Globe size={12} />
-                                        <span>LIVE PREVIEW (AUTO-REFRESH)</span>
+                                        <span>PREVIEW: {deploymentTargetSlug ? `/blog/${deploymentTargetSlug}` : '/'}</span>
                                         <div className="iframe-dot green"></div>
                                     </div>
                                     <iframe
                                         key={iframeKey}
-                                        src={`/?t=${iframeKey}`}
+                                        src={`/${deploymentTargetSlug ? `blog/${deploymentTargetSlug}` : ''}?t=${iframeKey}`}
                                         className="deployment-preview-iframe"
                                         title="Live Preview"
                                     />
