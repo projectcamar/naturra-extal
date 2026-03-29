@@ -11,9 +11,6 @@ import type { LanguageCode } from '../utils/languageManager'
 import { BlogContentEditor } from '../components/BlogContentEditor'
 import './Admin.css'
 
-import { useTutorial } from '../context/TutorialContext'
-
-import { getAdminUser } from '../utils/adminAuth'
 
 const AdminBlogManager: React.FC = () => {
     const [view, setView] = useState<'list' | 'editor'>('list')
