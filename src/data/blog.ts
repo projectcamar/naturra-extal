@@ -35,7 +35,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "Indonesia is the third-largest cocoa producer. Explore how Naturra Extal is leading the way in sustainable sourcing and quality control.",
     "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-15",
-    "author": "Mohamad Bebi Rifki",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
@@ -46,7 +46,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "Discover the unique aromatic profile and high eugenol content that make Indonesian cloves the most sought-after in the world market.",
     "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-14",
-    "author": "Mohamad Bebi Rifki",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
@@ -57,7 +57,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "Learn how this coconut-derived growing medium is becoming the preferred choice for eco-conscious farmers and landscapers worldwide.",
     "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-13",
-    "author": "Mohamad Bebi Rifki",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
@@ -68,7 +68,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "Navigating HS 1805 and 1806: A comprehensive guide to the technical specifications required for international cocoa powder trade.",
     "image": "https://images.unsplash.com/photo-1613919920110-394ffdc5bfaa?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-12",
-    "author": "Mohamad Bebi Rifki",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
@@ -79,7 +79,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "At Naturra Extal, we cut out the middlemen to ensure fair compensation for farmers and the highest quality for our international clients.",
     "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-11",
-    "author": "Mohamad Bebi Rifki",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
@@ -90,7 +90,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "From farm gate to container loading, learn the intricacies of shipping agricultural products across continents safely and efficiently.",
     "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-10",
-    "author": "Mohamad Bebi Rifki",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
@@ -101,7 +101,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "Explore why the volcanic soil of Sulawesi produces some of the most complex and flavorful cocoa beans available today.",
     "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-09",
-    "author": "Mohamad Bebi Rifki",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
@@ -112,7 +112,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "A deep dive into the harvesting and sun-drying process that preserves the intense aroma of Indonesian cloves.",
     "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-08",
-    "author": "Mohamad Bebi Rifki",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
@@ -123,7 +123,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "How our processing facilities in Surabaya ensure optimal EC levels and moisture content for world-class cocopeat blocks.",
     "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-07",
-    "author": "Mohamad Bebi Rifki",
+    "author": "Moh Rifki",
     "status": "synced"
   },
   {
@@ -134,7 +134,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "excerpt": "Stay ahead of the market with our insights into global demand for cocoa, spices, and sustainable agricultural inputs.",
     "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200",
     "date": "2025-10-06",
-    "author": "Mohamad Bebi Rifki",
+    "author": "Moh Rifki",
     "status": "synced"
   }
 ];

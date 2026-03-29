@@ -117,11 +117,11 @@ export const generateBlogPostingSchema = (post: {
   category: string
   author?: string
 }) => {
-  // If author is specified (Mohamad Bebi Rifki), use Person schema with full credentials
+  // If author is specified (Moh Rifki), use Person schema with full credentials
   // Otherwise fallback to Organization
-  const authorSchema = post.author === 'Mohamad Bebi Rifki' ? {
+  const authorSchema = post.author === 'Moh Rifki' ? {
     "@type": "Person",
-    "name": "Mohamad Bebi Rifki",
+    "name": "Moh Rifki",
     "url": "https://www.linkedin.com/in/mohamad-bebi-rifki/",
     "sameAs": "https://www.linkedin.com/in/mohamad-bebi-rifki/",
     "jobTitle": "Founder & CEO",

@@ -65,7 +65,7 @@ const AdminTutorial: React.FC = () => {
             window.removeEventListener('resize', updateRect);
             clearInterval(interval);
         };
-    }, [isActive, stepData?.targetId, updateRect, currentStep]);
+    }, [isActive, stepData?.targetId, stepData?.position, updateRect, currentStep]);
 
     const spotlightStyle = useMemo(() => {
         if (!targetRect) return {};
@@ -81,13 +81,34 @@ const AdminTutorial: React.FC = () => {
     }, [targetRect]);
 
     const cardPosition = useMemo(() => {
+        const isMobile = window.innerWidth < 768;
+
         if (!targetRect || !stepData) {
-            // Safe fallback: Bottom docked banner
-            return { bottom: '40px', left: '50%', transform: 'translateX(-50%)' };
+            // Central modal for steps without target
+            return {
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                width: isMobile ? '92vw' : '580px',
+                bottom: 'auto',
+                position: 'fixed'
+            };
+        }
+
+        if (isMobile) {
+            // Mobile: Bottom docked banner
+            return {
+                bottom: '20px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: '92vw',
+                top: 'auto',
+                position: 'fixed'
+            };
         }
 
         const padding = 20;
-        const cardWidth = 560;
+        const cardWidth = 580;
         const cardHeight = 84;
 
         const rect = {
@@ -100,7 +121,6 @@ const AdminTutorial: React.FC = () => {
         };
 
         // Determine best side to place the horizontal bar
-        // Default to 'bottom' if it fits, else 'top'
         let top = rect.bottom + padding;
         let left = rect.left + rect.width / 2 - cardWidth / 2;
 
@@ -115,7 +135,9 @@ const AdminTutorial: React.FC = () => {
         return {
             top: `${top}px`,
             left: `${left}px`,
-            transform: 'none'
+            transform: 'none',
+            width: `${cardWidth}px`,
+            position: 'absolute'
         };
     }, [targetRect, stepData]);
 
@@ -197,13 +219,13 @@ const AdminTutorial: React.FC = () => {
           position: absolute;
           z-index: 10002;
           pointer-events: auto;
-          width: fit-content;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .tutorial-bar {
           background: #fff;
-          width: 580px;
-          height: 84px;
+          width: 100%;
+          min-height: 84px;
           border-radius: 100px;
           padding: 8px 12px 8px 8px;
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
@@ -307,8 +329,7 @@ const AdminTutorial: React.FC = () => {
 
         @media (max-width: 768px) {
           .tutorial-bar {
-            width: 94vw;
-            border-radius: 20px;
+            border-radius: 24px;
             height: auto;
             padding: 16px;
             flex-direction: column;
@@ -317,6 +338,7 @@ const AdminTutorial: React.FC = () => {
           .bar-badge { display: none; }
           .bar-main { width: 100%; }
           .bar-next-btn { width: 100%; justify-content: center; }
+          .bar-text { -webkit-line-clamp: 3; }
         }
       `}</style>
         </div>

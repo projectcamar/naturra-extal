@@ -74,8 +74,10 @@ const AuthorCard: React.FC<AuthorCardProps> = ({
             </svg>
           </div>
           <div className="author-info">
-            <span className="author-by-label">{translations.by}</span>
-            <h4 className="author-name">{name}</h4>
+            <h4 className="author-name">
+              <span className="author-by-label">{translations.by} </span>
+              {name}
+            </h4>
             <p className="author-title">{title}</p>
           </div>
         </div>

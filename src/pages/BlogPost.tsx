@@ -597,10 +597,10 @@ const BlogPost: React.FC = () => {
         <meta property="og:locale" content={localeMeta.locale} />
         <meta property="og:locale:alternate" content="id_ID" />
         <meta property="og:locale:alternate" content="en_US" />
-        {post.author === 'Mohamad Bebi Rifki' && (
+        {post.author === 'Moh Rifki' && (
           <>
-            <meta name="author" content="Mohamad Bebi Rifki" />
-            <meta name="article:author" content="Mohamad Bebi Rifki" />
+            <meta name="author" content="Moh Rifki" />
+            <meta name="article:author" content="Moh Rifki" />
             <meta name="article:author:role" content="Founder & CEO of Naturra Extal, Agricultural Export Specialist" />
             <meta name="article:author:expertise" content="Agricultural Commodity Sourcing, International Trade Compliance, Supply Chain Logistics, Global Market Analysis" />
             <meta name="article:author:experience" content="25+ years in agricultural commodity export and international trade supply chain management" />

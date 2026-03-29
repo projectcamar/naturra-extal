@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation, Link } from 'react-router-dom'
 import {
     Plus, Edit, Trash2, Search, ArrowLeft, Save,
     FileText, AlertCircle, Loader2, Check, X,
-    Type, Sparkles, Eye
+    Sparkles, Eye, Settings, Globe, Image
 } from 'lucide-react'
 import { BLOG_POSTS, type BlogPost } from '../data/blog'
 import type { LanguageCode } from '../utils/languageManager'
@@ -534,7 +534,7 @@ const AdminBlogManager: React.FC = () => {
 
 
                 {view === 'list' ? (
-                    <>
+                    <div className="admin-blog-list-view">
                         <div className="manager-toolbar">
                             <div className="search-box">
                                 <Search size={18} />
@@ -547,7 +547,7 @@ const AdminBlogManager: React.FC = () => {
                             </div>
                             <button id="admin-create-post-btn" className="create-post-btn" onClick={handleNew}>
                                 <Plus size={18} />
-                                <span style={{ marginLeft: '5px' }}>New Article</span>
+                                <span>New Article</span>
                             </button>
                         </div>
 
@@ -555,11 +555,10 @@ const AdminBlogManager: React.FC = () => {
                             <table className="posts-table">
                                 <thead>
                                     <tr>
-                                        <th>Title & Thumbnail</th>
+                                        <th>Title & Information</th>
                                         <th>Category</th>
-                                        <th>Lang</th>
+                                        <th>Config</th>
                                         <th>Status</th>
-                                        <th>Date & Time</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -572,47 +571,37 @@ const AdminBlogManager: React.FC = () => {
                                                         {post.image ? (
                                                             <img src={post.image} alt="" />
                                                         ) : (
-                                                            <div className="thumb-placeholder"><FileText size={14} /></div>
+                                                            <div className="thumb-placeholder"><FileText size={18} /></div>
                                                         )}
                                                     </div>
                                                     <div className="post-title-info">
                                                         <span className="post-title-text">{post.title}</span>
                                                         <span className="post-slug-text">{post.slug}</span>
+                                                        <span className="post-date-text">{post.date}</span>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td><span className="cat-badge">{post.category}</span></td>
                                             <td>
-                                                <span className={`lang-badge ${post.customContent?.language || 'id'}`}>
-                                                    {post.customContent?.language?.toUpperCase() || 'ID'}
-                                                </span>
+                                                <div style={{ display: 'flex', gap: '6px' }}>
+                                                    <span className={`lang-badge ${post.customContent?.language || 'id'}`}>
+                                                        {post.customContent?.language?.toUpperCase() || 'ID'}
+                                                    </span>
+                                                </div>
                                             </td>
                                             <td>
-                                                <span className={`status-badge ${post.status || 'synced'}`}>
+                                                <span className={`status-badge ${post.status === 'draft' ? 'draft' : 'live'}`}>
                                                     {post.status === 'draft' ? 'Draft' : 'Live'}
                                                 </span>
                                             </td>
-                                            <td>
-                                                <div className="post-date-cell">
-                                                    {post.date}
-                                                </div>
-                                            </td>
                                             <td className="actions-cell">
-                                                {post.status !== 'draft' && (
-                                                    <a
-                                                        href={`/blog/${post.slug}`}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="action-btn preview"
-                                                        title="View Live Site"
-                                                    >
-                                                        <Eye size={16} />
-                                                    </a>
-                                                )}
-                                                <button className="action-btn edit" onClick={() => handleEdit(post)} title="Edit Content">
+                                                <Link to={`/blog/${post.slug}`} className="action-btn view" title="Preview Live">
+                                                    <Eye size={16} />
+                                                </Link>
+                                                <button className="action-btn edit" onClick={() => handleEdit(post)} title="Edit Article">
                                                     <Edit size={16} />
                                                 </button>
-                                                <button className="action-btn delete" onClick={() => deletePost(post.id)} title="Delete Post">
+                                                <button className="action-btn delete" onClick={() => deletePost(post.id)} title="Delete">
                                                     <Trash2 size={16} />
                                                 </button>
                                             </td>
@@ -620,16 +609,15 @@ const AdminBlogManager: React.FC = () => {
                                     ))}
                                 </tbody>
                             </table>
-
-                            {/* Pagination Controls */}
+                            {/* Pagination */}
                             <div className="pagination-wrapper">
                                 <div className="pagination-info">
-                                    Showing {indexOfFirstItem + 1} to {Math.min(indexOfLastItem, totalItems)} of {totalItems} entries
+                                    Showing {indexOfFirstItem + 1} to {Math.min(indexOfLastItem, totalItems)} of {totalItems} articles
                                 </div>
                                 <div className="pagination-controls">
                                     <div className="items-per-page">
                                         <span>Show:</span>
-                                        {[10, 20, 50, 80, 'all'].map(size => (
+                                        {[10, 20, 50, 'all'].map(size => (
                                             <button
                                                 key={size}
                                                 className={`size-btn ${itemsPerPage === size ? 'active' : ''}`}
@@ -641,17 +629,17 @@ const AdminBlogManager: React.FC = () => {
                                     </div>
                                     <div className="page-btns">
                                         <button
-                                            disabled={currentPage === 1}
-                                            onClick={() => setCurrentPage(p => p - 1)}
                                             className="nav-btn"
+                                            onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                                            disabled={currentPage === 1}
                                         >
-                                            Prev
+                                            Previous
                                         </button>
                                         <span className="page-num">Page {currentPage} of {totalPages}</span>
                                         <button
-                                            disabled={currentPage === totalPages}
-                                            onClick={() => setCurrentPage(p => p + 1)}
                                             className="nav-btn"
+                                            onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                                            disabled={currentPage === totalPages}
                                         >
                                             Next
                                         </button>
@@ -659,197 +647,230 @@ const AdminBlogManager: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                    </>
-                ) : (
-                    <div className="post-editor-container">
-                        <div className="editor-header-actions">
-                            <button
-                                id="admin-ai-generate-btn"
-                                className="ai-generate-btn"
-                                onClick={() => setShowAIModal(true)}
-                                disabled={isGenerating}
-                            >
-                                <Sparkles size={18} />
-                                <span>{isGenerating ? 'Generating...' : 'Generate with AI'}</span>
-                            </button>
-                        </div>
+                    </div>
+                )
+                    : (
+                        <div className="post-editor-container">
+                            <div className="editor-main-panel">
+                                <section className="editor-section">
+                                    <h2 className="section-title">
+                                        <Sparkles size={22} color="#004D2C" />
+                                        AI Power Tools
+                                    </h2>
+                                    <div style={{ display: 'flex', gap: '12px' }}>
+                                        <button
+                                            id="admin-ai-generate-btn"
+                                            className="ai-generate-btn"
+                                            style={{ flex: 1 }}
+                                            onClick={() => setShowAIModal(true)}
+                                            disabled={isGenerating}
+                                        >
+                                            <Sparkles size={18} />
+                                            <span>Auto-Generate Full Article with AI</span>
+                                        </button>
+                                        <button
+                                            className="ai-generate-btn secondary"
+                                            onClick={handleSuggestImage}
+                                            disabled={isGenerating}
+                                            title="Suggest image from Unsplash"
+                                        >
+                                            <Sparkles size={18} />
+                                            <span>Suggest Cover Image</span>
+                                        </button>
+                                    </div>
+                                </section>
 
-                        <section id="admin-metadata-editor" className="editor-section card compact">
-                            <h2 className="editor-h2"><Type size={16} /> Metadata Editor</h2>
-                            <div className="editor-grid-compact">
-                                <div className="input-group-compact span-2">
-                                    <label>Article Title</label>
-                                    <input
-                                        type="text"
-                                        value={editingPost?.title || ''}
-                                        onChange={e => setEditingPost(p => p ? { ...p, title: e.target.value } : null)}
-                                        placeholder="Headline of the article"
-                                    />
-                                </div>
-                                <div className="input-group-compact">
-                                    <label>URL Slug</label>
-                                    <input
-                                        type="text"
-                                        value={editingPost?.slug || ''}
-                                        onChange={e => setEditingPost(p => p ? { ...p, slug: e.target.value } : null)}
-                                        placeholder="e.g. tips-memilih-furniture"
-                                    />
-                                </div>
-
-                                <div className="input-group-compact">
-                                    <label>Category</label>
-                                    <select
-                                        value={editingPost?.category || 'Tips and Trick'}
-                                        onChange={e => setEditingPost(p => p ? { ...p, category: e.target.value } : null)}
-                                    >
-                                        <option>Tips and Trick</option>
-                                        <option>Workshop & Production</option>
-                                        <option>Commercial Furniture</option>
-                                        <option>About Furniture</option>
-                                        <option>Furniture Information</option>
-                                        <option>Furniture Guide</option>
-                                        <option>Design Inspiration</option>
-                                    </select>
-                                </div>
-                                <div className="input-group-compact">
-                                    <label>Language</label>
-                                    <select
-                                        value={editingPost?.customContent?.language || 'id'}
-                                        onChange={e => setEditingPost(p => p ? {
-                                            ...p,
-                                            customContent: {
-                                                ...p.customContent,
-                                                language: e.target.value as LanguageCode,
-                                                introduction: p.customContent?.introduction || '',
-                                                sections: p.customContent?.sections || [],
-                                                conclusion: p.customContent?.conclusion || ''
+                                <section className="editor-section">
+                                    <h2 className="section-title">
+                                        <FileText size={22} color="#004D2C" />
+                                        Blog Content Editor
+                                    </h2>
+                                    {editingPost && (
+                                        <BlogContentEditor
+                                            introduction={editingPost.customContent?.introduction || ''}
+                                            keyPoints={editingPost.customContent?.keyPoints || []}
+                                            sections={editingPost.customContent?.sections || []}
+                                            conclusion={editingPost.customContent?.conclusion || ''}
+                                            onIntroductionChange={(value) =>
+                                                setEditingPost(p => p ? {
+                                                    ...p,
+                                                    customContent: {
+                                                        ...p.customContent,
+                                                        introduction: value,
+                                                        keyPoints: p.customContent?.keyPoints || [],
+                                                        sections: p.customContent?.sections || [],
+                                                        conclusion: p.customContent?.conclusion || ''
+                                                    }
+                                                } : null)
                                             }
-                                        } : null)}
-                                    >
-                                        <option value="id">Indonesian</option>
-                                        <option value="en">English</option>
-                                        <option value="ar">Arabic</option>
-                                        <option value="zh">Chinese</option>
-                                        <option value="ja">Japanese</option>
-                                        <option value="es">Spanish</option>
-                                        <option value="fr">French</option>
-                                        <option value="ko">Korean</option>
-                                    </select>
-                                </div>
-                                <div className="input-group-compact">
-                                    <label>Publish Date</label>
-                                    <input
-                                        type="datetime-local"
-                                        value={editingPost?.date?.includes(' ') ? editingPost.date.replace(' ', 'T') : editingPost?.date}
-                                        onChange={e => setEditingPost(p => p ? { ...p, date: e.target.value.replace('T', ' ') } : null)}
-                                    />
-                                </div>
+                                            onKeyPointsChange={(points) =>
+                                                setEditingPost(p => p ? {
+                                                    ...p,
+                                                    customContent: {
+                                                        ...p.customContent,
+                                                        keyPoints: points,
+                                                        introduction: p.customContent?.introduction || '',
+                                                        sections: p.customContent?.sections || [],
+                                                        conclusion: p.customContent?.conclusion || ''
+                                                    }
+                                                } : null)
+                                            }
+                                            onSectionsChange={(sections) =>
+                                                setEditingPost(p => p ? {
+                                                    ...p,
+                                                    customContent: {
+                                                        ...p.customContent,
+                                                        sections: sections,
+                                                        introduction: p.customContent?.introduction || '',
+                                                        conclusion: p.customContent?.conclusion || ''
+                                                    }
+                                                } : null)
+                                            }
+                                            onConclusionChange={(value) =>
+                                                setEditingPost(p => p ? {
+                                                    ...p,
+                                                    customContent: {
+                                                        ...p.customContent,
+                                                        conclusion: value,
+                                                        introduction: p.customContent?.introduction || '',
+                                                        sections: p.customContent?.sections || []
+                                                    }
+                                                } : null)
+                                            }
+                                            onSuggestSectionImage={handleSuggestSectionImage}
+                                            isGenerating={isGenerating}
+                                        />
+                                    )}
+                                </section>
+                            </div>
 
-                                <div className="input-group-compact span-2">
-                                    <label>Featured Image URL</label>
-                                    <div className="input-with-action">
+                            <div className="editor-sidebar-panel">
+                                <div className="editor-sidebar-card">
+                                    <h3><Settings size={18} /> General Metadata</h3>
+                                    <div className="input-group-compact">
+                                        <label>Article Title</label>
+                                        <textarea
+                                            rows={2}
+                                            style={{ width: '100%', resize: 'vertical' }}
+                                            value={editingPost?.title || ''}
+                                            onChange={e => setEditingPost(p => p ? { ...p, title: e.target.value } : null)}
+                                            placeholder="Headline of the article"
+                                        />
+                                    </div>
+                                    <div className="input-group-compact" style={{ marginTop: '15px' }}>
+                                        <label>URL Slug</label>
                                         <input
                                             type="text"
+                                            style={{ width: '100%' }}
+                                            value={editingPost?.slug || ''}
+                                            onChange={e => setEditingPost(p => p ? { ...p, slug: e.target.value } : null)}
+                                            placeholder="e.g. tips-memilih-furniture"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="editor-sidebar-card">
+                                    <h3><Globe size={18} /> Categorization</h3>
+                                    <div className="input-group-compact">
+                                        <label>Category</label>
+                                        <select
+                                            style={{ width: '100%' }}
+                                            value={editingPost?.category || 'Tips and Trick'}
+                                            onChange={e => setEditingPost(p => p ? { ...p, category: e.target.value } : null)}
+                                        >
+                                            <option>Tips and Trick</option>
+                                            <option>Workshop & Production</option>
+                                            <option>Commercial Furniture</option>
+                                            <option>About Furniture</option>
+                                            <option>Furniture Information</option>
+                                            <option>Furniture Guide</option>
+                                            <option>Design Inspiration</option>
+                                        </select>
+                                    </div>
+                                    <div className="input-group-compact" style={{ marginTop: '15px' }}>
+                                        <label>Language</label>
+                                        <select
+                                            style={{ width: '100%' }}
+                                            value={editingPost?.customContent?.language || 'id'}
+                                            onChange={e => setEditingPost(p => p ? {
+                                                ...p,
+                                                customContent: {
+                                                    ...p.customContent,
+                                                    language: e.target.value as LanguageCode,
+                                                    introduction: p.customContent?.introduction || '',
+                                                    sections: p.customContent?.sections || [],
+                                                    conclusion: p.customContent?.conclusion || ''
+                                                }
+                                            } : null)}
+                                        >
+                                            <option value="id">Indonesian</option>
+                                            <option value="en">English</option>
+                                            <option value="ar">Arabic</option>
+                                            <option value="zh">Chinese</option>
+                                            <option value="ja">Japanese</option>
+                                            <option value="es">Spanish</option>
+                                            <option value="fr">French</option>
+                                            <option value="ko">Korean</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div className="editor-sidebar-card">
+                                    <h3><Image size={18} /> Media & SEO</h3>
+                                    <div className="input-group-compact">
+                                        <label>Featured Image URL</label>
+                                        <input
+                                            type="text"
+                                            style={{ width: '100%' }}
                                             value={editingPost?.image || ''}
                                             onChange={e => setEditingPost(p => p ? { ...p, image: e.target.value } : null)}
                                             placeholder="https://..."
                                         />
-                                        <button
-                                            className="action-input-btn"
-                                            onClick={handleSuggestImage}
-                                            disabled={isGenerating}
-                                            title="Suggest image from Unsplash based on Title"
-                                        >
-                                            <Sparkles size={14} />
-                                            <span>AI Suggest</span>
-                                        </button>
+                                    </div>
+                                    <div className="input-group-compact" style={{ marginTop: '15px' }}>
+                                        <label>SEO Excerpt</label>
+                                        <textarea
+                                            rows={3}
+                                            style={{ width: '100%', resize: 'vertical' }}
+                                            value={editingPost?.excerpt || ''}
+                                            onChange={e => setEditingPost(p => p ? { ...p, excerpt: e.target.value } : null)}
+                                            placeholder="Short description for search results"
+                                        />
+                                    </div>
+                                    <div className="input-group-compact" style={{ marginTop: '15px' }}>
+                                        <label>Author</label>
+                                        <input
+                                            type="text"
+                                            style={{ width: '100%' }}
+                                            value={editingPost?.author || ''}
+                                            onChange={e => setEditingPost(p => p ? { ...p, author: e.target.value } : null)}
+                                        />
+                                    </div>
+                                    <div className="input-group-compact" style={{ marginTop: '15px' }}>
+                                        <label>Publish Date</label>
+                                        <input
+                                            type="datetime-local"
+                                            style={{ width: '100%' }}
+                                            value={editingPost?.date?.includes(' ') ? editingPost.date.replace(' ', 'T') : editingPost?.date}
+                                            onChange={e => setEditingPost(p => p ? { ...p, date: e.target.value.replace('T', ' ') } : null)}
+                                        />
                                     </div>
                                 </div>
-                                <div className="input-group-compact">
-                                    <label>Author</label>
-                                    <input
-                                        type="text"
-                                        value={editingPost?.author || ''}
-                                        onChange={e => setEditingPost(p => p ? { ...p, author: e.target.value } : null)}
-                                    />
-                                </div>
 
-                                <div className="input-group-compact span-3">
-                                    <label>Meta Excerpt (SEO Description)</label>
-                                    <textarea
-                                        rows={2}
-                                        value={editingPost?.excerpt || ''}
-                                        onChange={e => setEditingPost(p => p ? { ...p, excerpt: e.target.value } : null)}
-                                    />
+                                <div className="editor-notice">
+                                    <AlertCircle size={20} color="#004D2C" />
+                                    <div>
+                                        <strong>Auto-Generated Components</strong>
+                                        <p>The following will be automatically added to your blog post:</p>
+                                        <ul style={{ paddingLeft: '20px', fontSize: '0.8rem', marginTop: '5px' }}>
+                                            <li>Product Showcase (after 2nd section)</li>
+                                            <li>Author Bio & CTA (at the end)</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </section>
-
-                        <section className="editor-section">
-                            <h2 className="section-title">
-                                <FileText size={20} />
-                                Blog Content Editor
-                            </h2>
-
-                            {editingPost && (
-                                <BlogContentEditor
-                                    introduction={editingPost.customContent?.introduction || ''}
-                                    keyPoints={editingPost.customContent?.keyPoints || []}
-                                    sections={editingPost.customContent?.sections || []}
-                                    conclusion={editingPost.customContent?.conclusion || ''}
-                                    onIntroductionChange={(value) =>
-                                        setEditingPost(p => p ? {
-                                            ...p,
-                                            customContent: {
-                                                ...p.customContent,
-                                                introduction: value,
-                                                keyPoints: p.customContent?.keyPoints || [],
-                                                sections: p.customContent?.sections || [],
-                                                conclusion: p.customContent?.conclusion || ''
-                                            }
-                                        } : null)
-                                    }
-                                    onKeyPointsChange={(points) =>
-                                        setEditingPost(p => p ? {
-                                            ...p,
-                                            customContent: {
-                                                ...p.customContent,
-                                                keyPoints: points,
-                                                introduction: p.customContent?.introduction || '',
-                                                sections: p.customContent?.sections || [],
-                                                conclusion: p.customContent?.conclusion || ''
-                                            }
-                                        } : null)
-                                    }
-                                    onSectionsChange={(sections) =>
-                                        setEditingPost(p => p ? {
-                                            ...p,
-                                            customContent: {
-                                                ...p.customContent,
-                                                sections: sections,
-                                                introduction: p.customContent?.introduction || '',
-                                                conclusion: p.customContent?.conclusion || ''
-                                            }
-                                        } : null)
-                                    }
-                                    onConclusionChange={(value) =>
-                                        setEditingPost(p => p ? {
-                                            ...p,
-                                            customContent: {
-                                                ...p.customContent,
-                                                conclusion: value,
-                                                introduction: p.customContent?.introduction || '',
-                                                sections: p.customContent?.sections || []
-                                            }
-                                        } : null)
-                                    }
-                                    onSuggestSectionImage={handleSuggestSectionImage}
-                                    isGenerating={isGenerating}
-                                />
-                            )}
-                        </section>
-                    </div>
-                )}
+                        </div>
+                    )}
             </main>
 
             {/* AI Generator Modal */}
@@ -955,232 +976,305 @@ const AdminBlogManager: React.FC = () => {
             )}
 
             <style>{`
-                .close-msg { cursor: pointer; margin-left: auto; opacity: 0.5; }
-                .post-editor-container { animation: fadeIn 0.3s ease; }
-                .editor-h2 { 
-                    display: flex; 
-                    align-items: center; 
-                    gap: 10px; 
-                    margin-bottom: 20px; 
-                    color: #2c3e50; 
-                    font-size: 1.1rem;
-                    border-bottom: 2px solid #004D2C;
-                    padding-bottom: 10px;
-                }
-                .editor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-                .input-group { display: flex; flex-direction: column; gap: 8px; }
-                .input-group.full { grid-column: span 2; }
-                .input-group label { font-size: 0.85rem; font-weight: 700; color: #444; text-transform: uppercase; letter-spacing: 0.5px; }
-                .input-group input, .input-group select, .input-group textarea {
-                    padding: 12px;
-                    border: 1px solid #ddd;
-                    
-                    font-size: 1rem;
-                    outline-color: #004D2C;
-                    background: #fff;
-                    transition: border 0.2s;
-                }
-                .input-group input:focus { border-color: #004D2C; }
+                .admin-blog-list-view, .post-editor-container { animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
                 
-                .editor-notice {
-                    margin-top: 30px;
-                    background: rgba(139, 115, 85, 0.05);
-                    border: 1px solid rgba(139, 115, 85, 0.2);
-                    padding: 20px;
-                    
-                    display: flex;
-                    align-items: flex-start;
-                    gap: 15px;
-                    color: #5d4d3a;
+                @keyframes fadeIn { 
+                    from { opacity: 0; transform: translateY(15px); } 
+                    to { opacity: 1; transform: translateY(0); } 
                 }
-                .editor-notice strong { display: block; margin-bottom: 5px; font-size: 1rem; }
-                .editor-notice p { margin: 0; font-size: 0.9rem; line-height: 1.5; opacity: 0.9; }
 
-                .dev-mode-notice {
-                    margin-bottom: 25px;
-                    background: rgba(41, 128, 185, 0.05);
-                    border: 1px solid rgba(41, 128, 185, 0.2);
-                    padding: 16px 20px;
-                    
+                /* Layout Structure */
+                .manager-toolbar {
                     display: flex;
-                    align-items: flex-start;
-                    gap: 15px;
-                    color: #2980b9;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 30px;
+                    gap: 20px;
                 }
-                .dev-mode-notice strong { display: block; margin-bottom: 5px; font-size: 0.95rem; }
-                .dev-mode-notice p { margin: 0; font-size: 0.85rem; line-height: 1.5; opacity: 0.9; }
 
-                @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-                
-                .admin-blog-manager .manager-toolbar {
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                  margin-bottom: 25px;
-                  gap: 20px;
-                }
-                .search-box {
-                  flex: 1;
-                  display: flex;
-                  align-items: center;
-                  background: #fff;
-                  
-                  padding: 12px 15px;
-                  gap: 10px;
-                  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-                }
-                .search-box input { border: none; outline: none; width: 100%; font-size: 1rem; }
                 .create-post-btn {
-                  background: #2C3E50;
-                  color: #fff;
-                  border: none;
-                  padding: 12px 24px;
-                  
-                  cursor: pointer;
-                  display: flex;
-                  align-items: center;
-                  gap: 8px;
-                  font-weight: 600;
-                  transition: 0.2s;
-                }
-                .create-post-btn:hover { background: #34495e; transform: translateY(-1px); }
-                
-                .posts-table { width: 100%; border-collapse: collapse; text-align: left; }
-                .posts-table th { padding: 18px 20px; font-size: 0.85rem; color: #888; text-transform: uppercase; border-bottom: 2px solid #f4f4f4; letter-spacing: 1px; }
-                .posts-table td { padding: 18px 20px; border-bottom: 1px solid #f4f4f4; font-size: 0.95rem; }
-                .post-title-cell { display: flex; align-items: center; gap: 12px; font-weight: 600; color: #2C3E50; }
-                .post-title-cell span { max-width: 400px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-                .cat-badge { background: #f0ede9; color: #004D2C; padding: 5px 12px;  font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
-                
-                .actions-cell { display: flex; gap: 12px; }
-                .action-btn { background: #f8f9fa; border: 1px solid #eee; cursor: pointer; padding: 8px;  transition: 0.2s; }
-                .action-btn.edit { color: #2980b9; }
-                .action-btn.edit:hover { background: #2980b9; color: #fff; }
-                .action-btn.delete { color: #c0392b; }
-                .action-btn.delete:hover { background: #c0392b; color: #fff; }
-                
-                .save-btn {
-                  background: #004D2C;
-                  color: #fff;
-                  border: none;
-                  padding: 10px 20px;
-                  
-                  cursor: pointer;
-                  display: flex;
-                  align-items: center;
-                  gap: 10px;
-                  font-weight: 600;
-                  transition: all 0.2s;
-                  box-shadow: 0 4px 12px rgba(139, 115, 85, 0.2);
-                }
-                .save-btn:hover:not(:disabled) { background: #7a654a; transform: translateY(-1px); box-shadow: 0 6px 15px rgba(139, 115, 85, 0.3); }
-                .save-btn:disabled { opacity: 0.6; cursor: not-allowed; }
-                
-                .admin-msg { padding: 16px 24px;  margin-bottom: 25px; display: flex; align-items: center; gap: 15px; font-weight: 500; }
-                .admin-msg.success { background: #e6f4ea; color: #1e7e34; border-left: 5px solid #1e7e34; }
-                .admin-msg.error { background: #fce8e8; color: #c53030; border-left: 5px solid #c53030; }
-                
-                /* Enhanced Table Styles */
-                .post-thumb { width: 45px; height: 45px;  overflow: hidden; background: #eee; flex-shrink: 0; }
-                .post-thumb img { width: 100%; height: 100%; object-fit: cover; }
-                .thumb-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #aaa; }
-                .post-title-info { display: flex; flex-direction: column; gap: 2px; }
-                .post-title-text { font-weight: 700; color: #2C3E50; line-height: 1.2; }
-                .post-slug-text { font-size: 0.75rem; color: #888; font-weight: 400; font-family: monospace; }
-                .post-date-cell { font-size: 0.85rem; color: #666; font-family: monospace; }
-                
-                .lang-badge { 
-                    padding: 3px 8px; 
-                     
-                    font-size: 0.7rem; 
-                    font-weight: 800; 
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 14px 28px;
+                    background: linear-gradient(135deg, #004D2C 0%, #006b3e 100%);
+                    color: #white;
+                    border: none;
+                    border-radius: 12px;
+                    font-weight: 800;
+                    font-size: 0.95rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    box-shadow: 0 10px 25px rgba(0, 77, 44, 0.25);
                     color: #fff;
-                    text-shadow: 0 1px 1px rgba(0,0,0,0.1);
                 }
-                .lang-badge.id { background: #e74c3c; } /* Red */
-                .lang-badge.en { background: #3498db; } /* Blue */
-                .lang-badge.ar { background: #27ae60; } /* Green */
-                .lang-badge.zh { background: #f1c40f; color: #333; } /* Yellow */
-                .lang-badge.ja { background: #9b59b6; } /* Purple */
-                .lang-badge.es { background: #e67e22; } /* Orange */
-                .lang-badge.fr { background: #34495e; } /* Navy */
-                .lang-badge.ko { background: #16a085; } /* Teal */
-                
-                .status-badge {
-                    padding: 4px 10px;
+
+                .create-post-btn:hover {
+                    transform: translateY(-5px) scale(1.02);
+                    box-shadow: 0 20px 40px rgba(0, 77, 44, 0.35);
+                    filter: brightness(1.1);
+                }
+
+                .create-post-btn:active {
+                    transform: translateY(0) scale(0.98);
+                }
+
+                .post-editor-container {
+                    display: grid;
+                    grid-template-columns: 1fr 350px;
+                    gap: 30px;
+                    align-items: start;
+                }
+
+                @media (max-width: 1100px) {
+                    .post-editor-container { grid-template-columns: 1fr; }
+                    .editor-sidebar-panel { position: static; }
+                }
+
+                /* Panels */
+                .editor-main-panel { display: flex; flex-direction: column; gap: 25px; }
+                .editor-sidebar-panel { display: flex; flex-direction: column; gap: 20px; position: sticky; top: 20px; }
+
+                .editor-section {
+                    background: #fff;
+                    
+                    padding: 25px;
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+                    border: 1px solid #f0f0f0;
+                }
+
+                .editor-sidebar-card {
+                    background: #fff;
+                    
+                    padding: 20px;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+                    border: 1px solid #f0f0f0;
+                }
+
+                .editor-sidebar-card h3 {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 0.95rem;
+                    font-weight: 700;
+                    color: #004D2C;
+                    margin-bottom: 20px;
+                    padding-bottom: 12px;
+                    border-bottom: 1px solid #f4f4f4;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                }
+
+                .section-title {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    font-size: 1.25rem;
+                    font-weight: 800;
+                    color: #1a1a1a;
+                    margin-bottom: 25px;
+                }
+
+                /* Form Elements */
+                .input-group-compact label {
+                    display: block;
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                    color: #666;
+                    margin-bottom: 6px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                }
+
+                .input-group-compact input, 
+                .input-group-compact select, 
+                .input-group-compact textarea {
+                    width: 100%;
+                    padding: 10px 14px;
+                    border: 1.5px solid #eee;
+                    
+                    font-size: 0.95rem;
+                    color: #2c3e50;
+                    transition: all 0.2s;
+                    background: #fcfcfc;
+                }
+
+                .input-group-compact input:focus, 
+                .input-group-compact select:focus, 
+                .input-group-compact textarea:focus {
+                    border-color: #004D2C;
+                    background: #fff;
+                    box-shadow: 0 0 0 4px rgba(0, 77, 44, 0.05);
+                    outline: none;
+                }
+
+                /* AI Generate Button Redesign */
+                .ai-generate-btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    padding: 14px 24px;
+                    background: linear-gradient(135deg, #004D2C 0%, #006b3e 100%);
+                    color: #fff;
+                    border: none;
+                    
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    box-shadow: 0 4px 15px rgba(0, 77, 44, 0.2);
+                }
+
+                .ai-generate-btn:hover:not(:disabled) {
+                    transform: translateY(-2px);
+                    box-shadow: 0 8px 25px rgba(0, 77, 44, 0.3);
+                    filter: brightness(1.1);
+                }
+
+                .ai-generate-btn.secondary {
+                    background: #fff;
+                    color: #004D2C;
+                    border: 2px solid #004D2C;
+                    box-shadow: none;
+                }
+
+                .ai-generate-btn.secondary:hover:not(:disabled) {
+                    background: #f0faf5;
+                    box-shadow: 0 4px 12px rgba(0, 77, 44, 0.1);
+                }
+
+                /* Article List Redesign */
+                .posts-table-card {
+                    overflow: hidden;
+                    border: none;
+                    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+                    background: #fff;
+                }
+
+                .posts-table th {
+                    background: #fafaf9;
+                    color: #555;
+                    font-weight: 700;
+                    font-size: 0.8rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    padding: 20px;
+                }
+
+                .posts-table tr { transition: background 0.2s; }
+                .posts-table tr:hover { background: #fdfdfd; }
+                .posts-table td { padding: 15px 20px; border-bottom: 1px solid #f4f4f4; }
+
+                .post-title-text {
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: #1a1a1a;
+                    margin-bottom: 2px;
+                    display: block;
+                }
+
+                .post-slug-text {
+                    font-size: 0.75rem;
+                    color: #888;
+                    font-family: 'JetBrains Mono', monospace;
+                }
+
+                .post-date-text {
+                    font-size: 0.75rem;
+                    color: #aaa;
+                    margin-top: 4px;
+                    display: block;
+                }
+
+                .post-thumb {
+                    width: 50px;
+                    height: 50px;
+                    
+                    overflow: hidden;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                }
+
+                .cat-badge {
+                    background: #e8f5e9;
+                    color: #004D2C;
+                    padding: 6px 12px;
                     
                     font-size: 0.75rem;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    color: white;
+                    font-weight: 800;
+                    letter-spacing: 0.5px;
                 }
-                .status-badge.draft { background: #e67e22; } /* Orange */
-                .status-badge.synced { background: #27ae60; } /* Green */
-                
-                .action-btn.preview { color: #004D2C; margin-right: 8px; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px;  border: 1.5px solid #eee; transition: 0.2s; }
-                .action-btn.preview:hover { background: #fdfaf7; border-color: #004D2C; }
 
-                /* Pagination Styles */
-                .pagination-wrapper { 
-                    padding: 20px; 
-                    background: #fff; 
-                    display: flex; 
-                    justify-content: space-between; 
+                .status-badge {
+                    padding: 6px 12px;
+                    
+                    font-size: 0.75rem;
+                    font-weight: 800;
+                    color: #fff;
+                }
+                .status-badge.live { background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); }
+                .status-badge.draft { background: linear-gradient(135deg, #e67e22 0%, #f39c12 100%); }
+
+                .action-btn {
+                    width: 36px;
+                    height: 36px;
+                    display: inline-flex;
                     align-items: center;
+                    justify-content: center;
+                    
+                    border: 1.5px solid #eee;
+                    background: #fff;
+                    color: #555;
+                    transition: all 0.2s;
+                    margin-right: 8px;
+                }
+
+                .action-btn:hover {
+                    transform: scale(1.1);
+                    border-color: #000;
+                    color: #000;
+                }
+
+                .action-btn.delete:hover { border-color: #e74c3c; color: #e74c3c; }
+                .action-btn.edit:hover { border-color: #3498db; color: #3498db; }
+                .action-btn.view:hover { border-color: #004D2C; color: #004D2C; }
+
+                /* Notices */
+                .editor-notice {
+                    background: #fdfaf7;
+                    border-left: 4px solid #004D2C;
+                    padding: 15px;
+                    display: flex;
+                    gap: 12px;
+                    color: #5d4d3a;
+                    font-size: 0.9rem;
+                }
+
+                .editor-notice ul li { margin-bottom: 4px; }
+
+                /* Pagination */
+                .pagination-wrapper {
+                    padding: 25px;
+                    background: #fff;
                     border-top: 1px solid #f0f0f0;
                 }
-                .pagination-info { font-size: 0.85rem; color: #777; }
-                .pagination-controls { display: flex; align-items: center; gap: 25px; }
-                
-                .items-per-page { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #555; }
-                .size-btn { 
-                    background: #f8f9fa; 
-                    border: 1px solid #ddd; 
-                    padding: 4px 10px; 
-                     
-                    cursor: pointer; 
-                    font-size: 0.8rem;
-                    transition: 0.2s;
-                }
-                .size-btn.active { background: #004D2C; color: #fff; border-color: #004D2C; }
-                
-                .page-btns { display: flex; align-items: center; gap: 15px; }
+
                 .nav-btn {
-                    padding: 6px 15px;
-                    
-                    border: 1px solid #ddd;
+                    padding: 10px 20px;
+                    border-radius: 6px;
+                    font-weight: 700;
+                    color: #444;
+                    background: #f8f9fa;
+                    border: 1.5px solid #eee;
+                    transition: all 0.2s;
+                }
+
+                .nav-btn:hover:not(:disabled) {
                     background: #fff;
-                    cursor: pointer;
-                    font-size: 0.85rem;
-                    transition: 0.2s;
+                    border-color: #004D2C;
+                    color: #004D2C;
                 }
-                .nav-btn:hover:not(:disabled) { border-color: #004D2C; color: #004D2C; }
-                .nav-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-                .page-num { font-size: 0.9rem; font-weight: 600; color: #2C3E50; }
-
-                .back-link { background: #fff; border: 1px solid #ddd; color: #444; cursor: pointer; padding: 8px;  margin-right: 15px; transition: 0.2s; }
-                .back-link:hover { background: #f8f9fa; border-color: #004D2C; color: #004D2C; }
-
-                /* Compact Editor Styles */
-                .editor-grid-compact { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
-                .input-group-compact { display: flex; flex-direction: column; gap: 5px; }
-                .input-group-compact label { font-size: 0.75rem; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: 0.5px; }
-                .input-group-compact input, .input-group-compact select, .input-group-compact textarea { 
-                    padding: 8px 12px; border: 1.5px solid #eee;  font-size: 0.9rem; transition: 0.2s; background: #fff;
-                }
-                .input-group-compact input:focus, .input-group-compact select:focus, .input-group-compact textarea:focus { border-color: #004D2C; outline: none; box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1); }
-                .span-2 { grid-column: span 2; }
-                .span-3 { grid-column: span 3; }
-                
-                .input-with-action { display: flex; gap: 8px; }
-                .input-with-action input { flex: 1; }
-                .action-input-btn { 
-                    display: flex; align-items: center; gap: 6px; padding: 0 15px; background: #004D2C; color: #fff; 
-                    border: none;  cursor: pointer; font-size: 0.8rem; font-weight: 600; white-space: nowrap; transition: 0.2s;
-                }
-                .action-input-btn:hover:not(:disabled) { background: #6F5C44; transform: translateY(-1px); }
-                .action-input-btn:disabled { opacity: 0.6; cursor: not-allowed; }
-                
             `}</style>
         </div>
     )

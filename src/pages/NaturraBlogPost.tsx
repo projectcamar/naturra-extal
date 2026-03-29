@@ -335,10 +335,10 @@ const NaturraBlogPost: React.FC = () => {
         <meta property="og:locale" content={localeMeta.locale} />
         <meta property="og:locale:alternate" content="id_ID" />
         <meta property="og:locale:alternate" content="en_US" />
-        {post.author === 'Mohamad Bebi Rifki' && (
+        {post.author === 'Moh Rifki' && (
           <>
-            <meta name="author" content="Mohamad Bebi Rifki" />
-            <meta name="article:author" content="Mohamad Bebi Rifki" />
+            <meta name="author" content="Moh Rifki" />
+            <meta name="article:author" content="Moh Rifki" />
             <meta name="article:author:role" content="Export Associate / International Business Development at Naturra Extal" />
             <meta name="article:author:expertise" content="International Trade, Agricultural Commodities, Export Logistics, Cocoa Supply Chain, Global Market Development" />
             <meta name="article:author:experience" content="Specialized in the Indonesian agricultural commodity sector, bridging the gap between local farming communities and the global market." />
@@ -495,10 +495,10 @@ const NaturraBlogPost: React.FC = () => {
                   </React.Fragment>
                 ))}
 
-                {post.author === 'Mohamad Bebi Rifki' && (
+                {post.author === 'Moh Rifki' && (
                   <div className="blog-post-author-card">
                     <AuthorCard
-                      name="Mohamad Bebi Rifki"
+                      name="Moh Rifki"
                       title={language === 'id' ? 'Export Associate di Asiatop / Unpad' : 'Export Associate at Asiatop / Unpad'}
                       experience={language === 'id' ? [
                         'Pengembangan Bisnis Internasional',
