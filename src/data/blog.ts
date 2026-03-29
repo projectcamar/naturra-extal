@@ -829,7 +829,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1594793762278-fcfdcf5dbed8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxzb2lsJTIwZXJvc2lvbiUyMGNvbnRyb2wlMjBtZWFzdXJlc3xlbnwwfDB8fHwxNzc0ODAzMDI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 23:50",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Ero atau erosi tanah merupakan salah satu masalah lingkungan yang paling serius di Indonesia. Dalam beberapa tahun terakhir, banyak daerah yang mengalami kerusakan lingkungan akibat erosi tanah. Oleh karena itu, penting untuk mengenal teknik konservasi tanah yang efektif untuk mengurangi kerusakan lingkungan. Dalam artikel ini, kita akan membahas tentang ero dan teknik konservasi tanah yang dapat dilakukan.",
       "keyPoints": [
@@ -873,7 +873,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1585428522589-592f41523318?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGNvY29hJTIwYmVhbnMlMjBvbiUyMHdvb2RlbiUyMHRhYmxlfGVufDB8MHx8fDE3NzQ3OTg3ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 23:50",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Kokoa merupakan salah satu komoditas yang paling penting dalam industri makanan dan minuman. Untuk mendapatkan kokoa berkualitas, Anda perlu memperhatikan beberapa hal. Dalam artikel ini, kita akan membahas beberapa tips dan trik untuk memilih kokoa berkualitas.",
       "keyPoints": [
@@ -917,7 +917,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1513985131190-16a51faf53a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwZXhwb3J0JTIwY29tbW9kaXRpZXMlMjB3YXJlaG91c2V8ZW58MHwwfHx8MTc3NDgwMzA2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 23:50",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Dalam dunia ekspor komoditas, kualitas jasa menjadi faktor penting untuk meningkatkan kepuasan pelanggan. Naturra Extal, sebagai perusahaan trading komoditas terkemuka di Indonesia, memahami betapa pentingnya menyediakan jasa ekspor yang berkualitas. Dalam artikel ini, kita akan membahas beberapa tips dan trik untuk meningkatkan kualitas jasa ekspor komoditas.",
       "keyPoints": [
@@ -961,7 +961,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1616996691356-4659297f4baf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxxdWFsaXR5JTIwY29udHJvbCUyMGNlcnRpZmljYXRpb24lMjBsYWJvcmF0b3J5JTIwdGVzdGluZyUyMGVxdWlwbWVudHxlbnwwfDB8fHwxNzc0ODAzMDc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 23:51",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Dalam dunia bisnis, kepercayaan konsumen sangatlah penting. Salah satu cara untuk meningkatkan kepercayaan konsumen adalah dengan memiliki sertifikasi produk. Sertifikasi produk adalah proses verifikasi bahwa produk Anda memenuhi standar tertentu yang ditetapkan oleh lembaga sertifikasi. Dalam artikel ini, kita akan membahas tentang pentingnya sertifikasi produk dan bagaimana Naturra Extal dapat membantu Anda dalam proses sertifikasi.",
       "keyPoints": [
@@ -1005,7 +1005,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1657288649124-b80bdee3c17e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMG9yZ2FuaWMlMjBwcm9kdWNlJTIwb24lMjBmYXJtfGVufDB8MHx8fDE3NzQ4MDMwOTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-29 23:51",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "随着全球农产品贸易的发展，高品质农产品已成为众多采购商的首选。那么，如何才能保证农产品的质量呢？本文将为您揭晓高品质农产品的秘诀，帮助您提升采购水平。",
       "keyPoints": [
@@ -1037,6 +1037,93 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "总之，高品质农产品是保证食品安全和质量的关键。通过选择信誉好的供应商和了解农产品的来源，您可以提升您的采购水平。Naturra Extal作为一家专业的农产品供应商，我们始终致力于提供高品质的农产品，帮助您找到最适合您的产品。"
+    }
+  },
+  {
+    "id": 31,
+    "slug": "tips-mengolah-cokelat",
+    "title": "Tips Mengolah Cokelat",
+    "category": "Tips and Trick",
+    "excerpt": "Tips dan trik mengolah cokelat untuk mendapatkan hasil terbaik",
+    "image": "",
+    "date": "2026-03-29 23:59",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Cokelat adalah salah satu bahan paling populer dalam industri makanan dan minuman. Namun, mengolah cokelat tidaklah semudah yang dibayangkan. Dalam artikel ini, kami akan membagikan beberapa tips dan trik untuk mengolah cokelat dengan hasil terbaik.",
+      "keyPoints": [
+        "Pilih cokelat yang berkualitas",
+        "Gunakan suhu yang tepat",
+        "Jangan over-mix"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengenal Cokelat",
+          "content": "Cokelat adalah bahan yang sangat sensitif terhadap suhu dan kelembaban. Oleh karena itu, penting untuk memahami karakteristik cokelat sebelum mengolahnya. Cokelat dapat dibagi menjadi beberapa jenis, termasuk cokelat bubuk, cokelat batang, dan cokelat cair.",
+          "imageSearchQuery": "jenis cokelat di atas meja",
+          "image": "https://images.unsplash.com/photo-1571391845460-c305d81b5c53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxqZW5pcyUyMGNva2VsYXQlMjBkaSUyMGF0YXMlMjBtZWphfGVufDB8MHx8fDE3NzQ4MDM1NzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "jenis cokelat di atas meja"
+        },
+        {
+          "heading": "Tips Mengolah Cokelat",
+          "content": "Berikut beberapa tips untuk mengolah cokelat: <br> - Pilih cokelat yang berkualitas <br> - Gunakan suhu yang tepat <br> - Jangan over-mix <br> Dengan mengikuti tips di atas, Anda dapat menghasilkan cokelat yang lezat dan berkualitas."
+        },
+        {
+          "heading": "Menggunakan Cokelat dalam Resep",
+          "content": "Cokelat dapat digunakan dalam berbagai resep, termasuk kue, es krim, dan minuman. <strong>Naturra Extal</strong> menawarkan berbagai jenis cokelat yang berkualitas, termasuk <strong>Cocoa Powder V10</strong> yang ideal untuk membuat kue dan es krim. Dengan menggunakan cokelat yang berkualitas, Anda dapat menghasilkan produk yang lezat dan berkualitas.",
+          "productId": 1
+        },
+        {
+          "heading": "Kesimpulan",
+          "content": "Mengolah cokelat memerlukan ketelatenan dan kesabaran. Dengan mengikuti tips dan trik di atas, Anda dapat menghasilkan cokelat yang lezat dan berkualitas. <em>Naturra Extal</em> siap membantu Anda dalam mengolah cokelat dengan menyediakan berbagai jenis cokelat yang berkualitas."
+        }
+      ],
+      "conclusion": "Dengan mengikuti tips dan trik di atas, Anda dapat menghasilkan cokelat yang lezat dan berkualitas. <strong>Naturra Extal</strong> siap membantu Anda dalam mengolah cokelat dengan menyediakan berbagai jenis cokelat yang berkualitas."
+    }
+  },
+  {
+    "id": 32,
+    "slug": "tips-mengolah-cokelat",
+    "title": "Tips Mengolah Cokelat",
+    "category": "Tips and Trick",
+    "excerpt": "Tips dan trik mengolah cokelat dengan baik",
+    "image": "https://images.unsplash.com/photo-1678507673676-0090582965f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGRhcmslMjBjaG9jb2xhdGUlMjB0ZXh0dXJlJTIwb24lMjB3b29kZW4lMjBiYWNrZ3JvdW5kfGVufDB8MHx8fDE3NzQ4MDM1ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-29 23:59",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Cokelat merupakan salah satu komoditas yang paling populer di dunia. Namun, mengolah cokelat dengan baik tidaklah mudah. Dalam artikel ini, kita akan membahas beberapa tips dan trik mengolah cokelat dengan baik.",
+      "keyPoints": [
+        "Pemilihan bahan baku yang tepat",
+        "Pengolahan yang hati-hati",
+        "Penyimpanan yang baik"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Pemilihan Bahan Baku",
+          "content": "Pemilihan bahan baku yang tepat sangat penting dalam mengolah cokelat. <strong>Naturra Extal</strong> menawarkan cokelat bubuk berkualitas tinggi yang diproduksi dari biji cokelat pilihan. Dengan memilih bahan baku yang tepat, Anda dapat memastikan bahwa cokelat Anda memiliki rasa dan aroma yang lezat.",
+          "imageSearchQuery": "biji cokelat pilihan",
+          "image": "https://images.unsplash.com/photo-1733837305577-c23e68e027d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxiaWppJTIwY29rZWxhdCUyMHBpbGloYW58ZW58MHwwfHx8MTc3NDgwMzU4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "biji cokelat pilihan"
+        },
+        {
+          "heading": "Pengolahan yang Hati-Hati",
+          "content": "Pengolahan cokelat yang hati-hati sangat penting untuk memastikan bahwa cokelat Anda memiliki kualitas yang baik. <em>Pastikan Anda mengikuti prosedur pengolahan yang tepat</em> dan menggunakan peralatan yang bersih dan steril. Dengan demikian, Anda dapat meminimalkan risiko kontaminasi dan memastikan bahwa cokelat Anda aman untuk dikonsumsi."
+        },
+        {
+          "heading": "Penyimpanan yang Baik",
+          "content": "Penyimpanan cokelat yang baik sangat penting untuk memastikan bahwa cokelat Anda tetap segar dan berkualitas. <strong>Naturra Extal</strong> menawarkan solusi penyimpanan yang baik dengan produk <strong>Cocopeat Block 5kg Low EC</strong> (produck ID: 4). Dengan menggunakan produk ini, Anda dapat memastikan bahwa cokelat Anda disimpan dalam keadaan yang steril dan kering.",
+          "productId": 4
+        },
+        {
+          "heading": "Kesimpulan",
+          "content": "Dalam mengolah cokelat, ada beberapa hal yang perlu diperhatikan. Dengan memilih bahan baku yang tepat, mengolah dengan hati-hati, dan menyimpan dengan baik, Anda dapat memastikan bahwa cokelat Anda memiliki kualitas yang baik. <strong>Naturra Extal</strong> siap membantu Anda dalam mengolah cokelat dengan baik.",
+          "productId": 1
+        }
+      ],
+      "conclusion": "Dengan mengikuti tips dan trik di atas, Anda dapat memastikan bahwa cokelat Anda memiliki kualitas yang baik. <strong>Naturra Extal</strong> siap membantu Anda dalam mengolah cokelat dengan baik dan memastikan bahwa Anda memiliki pengalaman yang baik dalam mengolah cokelat."
     }
   }
 ];
