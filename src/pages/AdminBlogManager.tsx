@@ -328,11 +328,11 @@ const AdminBlogManager: React.FC = () => {
             }
 
             if (result.image) {
-                setEditingPost(p => p ? { ...p, image: result.image } : null)
+                setEditingPost(p => p ? { ...p, image: result.url } : null)
                 setMessage({
                     type: 'success',
                     text: `✨ Found a perfect image for: "${result.searchQuery}"`,
-                    imageUrl: result.image
+                    imageUrl: result.url
                 })
             } else {
                 setMessage({ type: 'error', text: 'No matching image found on Unsplash' })
@@ -394,7 +394,7 @@ const AdminBlogManager: React.FC = () => {
                 setMessage({
                     type: 'success',
                     text: `✨ Found section image for: "${result.searchQuery}"`,
-                    imageUrl: result.image
+                    imageUrl: result.url
                 })
             } else {
                 setMessage({ type: 'error', text: 'No matching image found on Unsplash' })
@@ -872,7 +872,7 @@ const AdminBlogManager: React.FC = () => {
                                             placeholder="https://..."
                                         />
                                         {editingPost?.image && (
-                                            <div className="editor-image-stream-preview">
+                                            <div className="editor-image-preview-wrapper sidebar">
                                                 <img src={editingPost.image} alt="Featured Preview" />
                                             </div>
                                         )}
@@ -1028,6 +1028,42 @@ const AdminBlogManager: React.FC = () => {
 
             <style>{`
                 .admin-blog-list-view, .post-editor-container { animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+
+                /* Editor Image Previews */
+                .editor-image-preview-wrapper {
+                    margin-top: 10px;
+                    border: 1px dashed #ddd;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    background: #fdfdfd;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 100px;
+                    position: relative;
+                }
+
+                .editor-image-preview-wrapper img {
+                    width: 100%;
+                    height: auto;
+                    max-height: 250px;
+                    object-fit: contain;
+                    display: block;
+                }
+
+                .editor-image-preview-wrapper.sidebar img {
+                    max-height: 180px;
+                }
+
+                .image-preview-placeholder {
+                    padding: 20px;
+                    color: #aaa;
+                    font-size: 0.8rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 8px;
+                }
                 
                 @keyframes fadeIn { 
                     from { opacity: 0; transform: translateY(15px); } 
@@ -1678,22 +1714,6 @@ const AdminBlogManager: React.FC = () => {
                     transition: color 0.2s;
                 }
                 .message-close:hover { color: #1e293b; }
-
-                /* Editor Image Stream Preview */
-                .editor-image-stream-preview {
-                    margin-top: 10px;
-                    width: 100%;
-                    height: 120px;
-                    border-radius: 8px;
-                    overflow: hidden;
-                    background: #f8fafc;
-                    border: 1px solid #e2e8f0;
-                }
-                .editor-image-stream-preview img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
             `}</style>
         </div>
     )

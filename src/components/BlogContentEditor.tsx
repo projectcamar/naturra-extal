@@ -213,8 +213,8 @@ export const BlogContentEditor: React.FC<BlogContentEditorProps> = ({
                                             </button>
                                         </div>
                                         {section.image && (
-                                            <div className="section-image-stream-preview" style={{ marginTop: '10px', width: '100%', height: '100px', borderRadius: '4px', overflow: 'hidden', border: '1px solid #eee' }}>
-                                                <img src={section.image} alt="Section Preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                            <div className="editor-image-preview-wrapper">
+                                                <img src={section.image} alt="Section Preview" />
                                             </div>
                                         )}
                                     </div>
@@ -264,8 +264,8 @@ export const BlogContentEditor: React.FC<BlogContentEditorProps> = ({
                                             style={{ width: '100%', padding: '6px', border: '1px solid #ddd', borderRadius: '4px', fontSize: '12px' }}
                                         />
                                         {section.image && (
-                                            <div className="section-image-stream-preview" style={{ marginTop: '5px', width: '100%', height: '60px', borderRadius: '4px', overflow: 'hidden', border: '1px solid #eee' }}>
-                                                <img src={section.image} alt="Override Preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                            <div className="editor-image-preview-wrapper" style={{ minHeight: '60px' }}>
+                                                <img src={section.image} alt="Override Preview" style={{ maxHeight: '120px' }} />
                                             </div>
                                         )}
                                     </div>
