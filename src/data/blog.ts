@@ -1351,7 +1351,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1733938941418-df8bf946c6aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxjb2NvYSUyMGJlYW5zJTIwaGFydmVzdCUyMGluZG9uZXNpYXxlbnwwfDB8fHwxNzc0ODI2MTE1fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-30 06:14",
     "author": "Moh Rifki",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Kualitas biji kakao sangat penting dalam produksi cokelat. Dengan meningkatkan kualitas biji kakao, Anda dapat meningkatkan kualitas cokelat akhir. Berikut beberapa tips untuk mengoptimalkan kualitas biji kakao.",
       "keyPoints": [
@@ -1384,6 +1384,49 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dengan mengikuti tips di atas dan bekerja sama dengan Naturra Extal, Anda dapat meningkatkan kualitas biji kakao dan menghasilkan cokelat yang lebih baik. Hubungi kami untuk mendapatkan informasi lebih lanjut tentang solusi Naturra Extal."
+    }
+  },
+  {
+    "id": 39,
+    "slug": "logistik-efektif-untuk-bisnis",
+    "title": "Logistik Efektif",
+    "category": "Tips and Trick",
+    "excerpt": "Tips dan trik logistik untuk meningkatkan efisiensi bisnis",
+    "image": "https://images.unsplash.com/photo-1644079446600-219068676743?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3YXJlaG91c2UlMjBpbnRlcmlvciUyMHdpdGglMjBmb3JrbGlmdHMlMjBhbmQlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50JTIwc3lzdGVtc3xlbnwwfDB8fHwxNzc0OTIzNjYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-03-31 09:20",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Dalam dunia bisnis, logistik memegang peranan penting dalam mendukung keberhasilan operasional. Logistik yang efektif dapat meningkatkan efisiensi, mengurangi biaya, dan mempercepat waktu pengiriman. Namun, masih banyak perusahaan yang mengalami kesulitan dalam mengelola logistik mereka. Pada artikel ini, kita akan membahas beberapa tips dan trik logistik untuk meningkatkan efisiensi bisnis Anda.",
+      "keyPoints": [
+        "Mengoptimalkan rute pengiriman",
+        "Menggunakan teknologi logistik terbaru",
+        "Mengembangkan hubungan dengan penyedia jasa logistik"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengapa Logistik Penting?",
+          "content": "Logistik adalah proses perencanaan, koordinasi, dan pengelolaan aliran barang, jasa, dan informasi dari titik asal ke titik tujuan. Logistik yang efektif dapat membantu perusahaan meningkatkan efisiensi, mengurangi biaya, dan mempercepat waktu pengiriman. Dengan demikian, logistik menjadi salah satu faktor kunci dalam keberhasilan bisnis.",
+          "imageSearchQuery": "proses logistik",
+          "image": "https://images.unsplash.com/photo-1730376319010-4ce5b8b2e385?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxwcm9zZXMlMjBsb2dpc3Rpa3xlbnwwfDB8fHwxNzc0OTIzNjU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "proses logistik"
+        },
+        {
+          "heading": "Tips dan Trik Logistik",
+          "content": "Berikut beberapa tips dan trik logistik yang dapat membantu Anda meningkatkan efisiensi bisnis: <br> 1. Mengoptimalkan rute pengiriman dengan menggunakan teknologi GPS dan mapping. <br> 2. Menggunakan kontainer yang tepat untuk mengurangi biaya pengiriman. <br> 3. Mengembangkan hubungan dengan penyedia jasa logistik untuk mendapatkan harga yang kompetitif."
+        },
+        {
+          "heading": "Solusi Logistik dari Naturra Extal",
+          "content": "Naturra Extal menyediakan solusi logistik yang efektif dan efisien untuk mendukung keberhasilan bisnis Anda. Kami memiliki pengalaman luas dalam mengelola logistik untuk berbagai jenis barang, termasuk <strong>Cocoa Powder</strong>, <strong>Spices</strong>, dan <strong>Cocopeat</strong>. Dengan menggunakan jasa logistik dari Naturra Extal, Anda dapat meningkatkan efisiensi, mengurangi biaya, dan mempercepat waktu pengiriman.",
+          "productId": 1
+        },
+        {
+          "heading": "Kesimpulan",
+          "content": "Dalam kesimpulan, logistik yang efektif sangat penting dalam mendukung keberhasilan bisnis. Dengan menggunakan tips dan trik logistik yang tepat, serta memilih penyedia jasa logistik yang tepat, Anda dapat meningkatkan efisiensi, mengurangi biaya, dan mempercepat waktu pengiriman. Naturra Extal siap membantu Anda dalam mengelola logistik dengan efektif dan efisien."
+        }
+      ],
+      "conclusion": "Jangan ragu untuk menghubungi Naturra Extal jika Anda memerlukan solusi logistik yang efektif dan efisien untuk mendukung keberhasilan bisnis Anda."
     }
   }
 ];
