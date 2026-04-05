@@ -30,6 +30,13 @@ const AdminBlogManager: React.FC = () => {
         }
     }, [currentStep, view]);
 
+    // Auto-fill AI prompt for tutorial step 7 if it's empty
+    useEffect(() => {
+        if (currentStep === 7) {
+            setAiPrompt(prev => prev || 'make me random spices article topic could be anything');
+        }
+    }, [currentStep]);
+
     const [searchTerm, setSearchTerm] = useState('')
     const [isSaving, setIsSaving] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
