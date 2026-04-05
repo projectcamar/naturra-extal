@@ -396,15 +396,20 @@
 }
 
 .recall-tutorial-btn.on-welcome {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
-  box-shadow: none;
+  background: #ffffff;
+  color: #004D2C;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 12px 24px;
+  border-radius: 12px;
+  /* Slightly rounded square */
 }
 
 .recall-tutorial-btn.on-welcome:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.4);
+  background: #f8fcf9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  color: #006b3e;
 }
 
 .dashboard-stats {
