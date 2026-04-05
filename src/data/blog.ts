@@ -1568,7 +1568,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1579705745177-b13f157e7f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxzcGljZXMlMjBvbiUyMHdvb2RlbiUyMHNwb29ufGVufDB8MHx8fDE3NzUzOTc2ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-05 21:01",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Rempah-rempah adalah salah satu bahan penting dalam memasak yang dapat meningkatkan rasa dan aroma makanan. Namun, menggunakan rempah dengan benar dapat menjadi tantangan bagi banyak orang. Dalam artikel ini, kita akan membahas beberapa tips dan trik menggunakan rempah untuk meningkatkan rasa makanan Anda.",
       "keyPoints": [
@@ -1599,6 +1599,50 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dengan memahami tips dan trik menggunakan rempah, Anda dapat meningkatkan rasa makanan dan mendapatkan manfaat lain dari rempah. <br> Naturra Extal siap membantu Anda dalam memilih rempah yang berkualitas tinggi dan bersumber dari petani lokal. <br> Kunjungi website kami untuk mendapatkan informasi lebih lanjut tentang rempah-rempah dan produk lainnya."
+    }
+  },
+  {
+    "id": 44,
+    "slug": "rahasia-menggunakan-rempah",
+    "title": "Rahasia Menggunakan Rempah",
+    "category": "Tips and Trick",
+    "excerpt": "Tips dan trik menggunakan rempah untuk meningkatkan rasa makanan",
+    "image": "https://images.unsplash.com/photo-1585808259180-6077edb54355?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGluZG9uZXNpYW4lMjBzcGljZSUyMG1hcmtldCUyMHN0YWxsJTIwd2l0aCUyMHZhcmlvdXMlMjBzcGljZXMlMjBhbmQlMjBoZXJic3xlbnwwfDB8fHwxNzc1Mzk3OTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-05 21:06",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Rempah-rempah telah menjadi bagian tak terpisahkan dari kuliner Indonesia. Dengan berbagai jenis rempah yang tersedia, kita dapat mengolah makanan yang lezat dan kaya akan rasa. Namun, bagaimana cara menggunakan rempah dengan tepat? Berikut beberapa tips dan trik yang dapat membantu Anda.",
+      "keyPoints": [
+        "Pilih rempah yang segar dan berkualitas",
+        "Gunakan rempah dalam jumlah yang tepat",
+        "Campurkan rempah dengan bahan lain untuk meningkatkan rasa"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengenal Jenis Rempah",
+          "content": "Indonesia dikenal sebagai negara dengan kekayaan rempah yang luar biasa. Dari lada, cengkeh, hingga kunyit, setiap jenis rempah memiliki rasa dan aroma yang unik. Mengenal jenis rempah yang tepat dapat membantu Anda membuat makanan yang lezat dan autentik. <br> <strong>Rempah-rempah seperti lada dan cengkeh</strong> dapat menambahkan rasa pedas dan hangat pada makanan, sedangkan <em>kunyit dan jahe</em> dapat memberikan rasa yang gurih dan menyegarkan.",
+          "imageSearchQuery": "rempah-rempah indonesia",
+          "image": "https://images.unsplash.com/photo-1626609940583-15b24846eadd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxyZW1wYWgtcmVtcGFoJTIwaW5kb25lc2lhfGVufDB8MHx8fDE3NzUzOTc5Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "rempah-rempah indonesia"
+        },
+        {
+          "heading": "Tips Menggunakan Rempah",
+          "content": "Menggunakan rempah dengan tepat dapat membuat perbedaan besar pada rasa makanan. Berikut beberapa tips yang dapat membantu Anda: <br> 1. Pilih rempah yang segar dan berkualitas. <br> 2. Gunakan rempah dalam jumlah yang tepat. Terlalu banyak rempah dapat membuat makanan terlalu pedas atau pahit. <br> 3. Campurkan rempah dengan bahan lain untuk meningkatkan rasa. Misalnya, mencampurkan lada dengan garam dapat membuat rasa yang lebih seimbang."
+        },
+        {
+          "heading": "Naturra Extal Solusi Rempah",
+          "content": "Naturra Extal menawarkan berbagai jenis rempah yang berkualitas dan segar. Dengan direktori petani yang luas, kami dapat memastikan bahwa rempah yang kami tawarkan adalah yang terbaik. <br> Produk kami seperti <strong>Premium Indonesian Cloves Lal Pari (Spices - Export Grade A)</strong> dengan kode produk 3, dapat membantu Anda membuat makanan yang lezat dan autentik.",
+          "productId": 3
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Dengan tips dan trik di atas, Anda dapat membuat makanan yang lezat dan kaya akan rasa. Jangan ragu untuk mencoba berbagai jenis rempah dan mencari tahu kombinasi yang tepat untuk Anda. <br> Naturra Extal siap membantu Anda dalam memenuhi kebutuhan rempah Anda. Kunjungi kami untuk mengetahui lebih lanjut tentang produk dan layanan kami.",
+          "productId": 5
+        }
+      ],
+      "conclusion": "Dengan menggunakan rempah dengan tepat, Anda dapat membuat makanan yang lezat dan kaya akan rasa. Jangan lupa untuk memilih rempah yang segar dan berkualitas, serta menggunakan rempah dalam jumlah yang tepat. Naturra Extal siap membantu Anda dalam memenuhi kebutuhan rempah Anda."
     }
   }
 ];
