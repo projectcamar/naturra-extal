@@ -30,9 +30,9 @@ const AdminBlogManager: React.FC = () => {
         }
     }, [currentStep, view]);
 
-    // Auto-fill AI prompt for tutorial step 7 if it's empty
+    // Auto-fill AI prompt for tutorial step 8 if it's empty
     useEffect(() => {
-        if (currentStep === 7) {
+        if (currentStep === 8) {
             setAiPrompt(prev => prev || 'make me random spices article topic could be anything');
         }
     }, [currentStep]);
@@ -304,12 +304,12 @@ const AdminBlogManager: React.FC = () => {
 
         setPosts(updatedPosts)
         setView('list')
-        if (currentStep === 9) nextStep();
+        if (currentStep === 10) nextStep();
         setMessage({ type: 'success', text: 'Post saved locally as draft. Click "Deploy Changes" to make it live.' })
     }
 
     const handleSyncToFiles = async () => {
-        if (currentStep === 10) nextStep();
+        if (currentStep === 11) nextStep();
         setIsSaving(true)
         setMessage(null)
 
@@ -461,7 +461,7 @@ const AdminBlogManager: React.FC = () => {
             setMessage({ type: 'error', text: `AI generation failed: ${error instanceof Error ? error.message : 'Unknown error'}` })
         } finally {
             setIsGenerating(false)
-            if (currentStep === 7) nextStep(); // Move to Review step after generation
+            if (currentStep === 8) nextStep(); // Move to Review step after generation
         }
     }
 
@@ -697,7 +697,19 @@ const AdminBlogManager: React.FC = () => {
                         <div className="status-body">
                             <div className="status-message-main">
                                 <p>
-                                    {deploymentStatus === 'ready' && '✨ EXCELLENT! Your changes are now LIVE.'}
+                                    {deploymentStatus === 'ready' && (
+                                        <>
+                                            <span>✨ EXCELLENT! Your changes are now LIVE.</span>
+                                            <button
+                                                className="inline-recheck-btn highlight"
+                                                onClick={() => setIframeKey(k => k + 1)}
+                                                style={{ marginLeft: '12px' }}
+                                                title="Refresh iframe if preview is empty"
+                                            >
+                                                <RefreshCw size={14} /> Click here to refresh if the page still not appear in preview
+                                            </button>
+                                        </>
+                                    )}
                                     {deploymentStatus === 'failed' && '❌ Sync failed. Please contact support.'}
                                     {(deploymentStatus === 'queued' || deploymentStatus === 'building' || deploymentStatus === 'verifying') && (
                                         <>
@@ -747,6 +759,14 @@ const AdminBlogManager: React.FC = () => {
                                         <div className="iframe-header-left">
                                             <Globe size={12} />
                                             <span className="iframe-url">PREVIEW: {deploymentTargetSlug ? `/blog/${deploymentTargetSlug}` : '/'}</span>
+                                            <button
+                                                className="iframe-nav-btn"
+                                                onClick={() => setIframeKey(k => k + 1)}
+                                                title="Manual refresh preview"
+                                                style={{ marginLeft: '6px', background: 'transparent', border: 'none', color: '#64748b', cursor: 'pointer', padding: '2px' }}
+                                            >
+                                                <RefreshCw size={12} />
+                                            </button>
                                         </div>
 
                                         {deploymentSlugs.length > 1 && (
@@ -1231,6 +1251,7 @@ const AdminBlogManager: React.FC = () => {
                             <div className="input-group">
                                 <label>Target Language</label>
                                 <select
+                                    id="admin-ai-language-select"
                                     value={selectedLanguage}
                                     onChange={(e) => setSelectedLanguage(e.target.value)}
                                     disabled={isGenerating}
@@ -1278,7 +1299,7 @@ const AdminBlogManager: React.FC = () => {
                                 value={aiPrompt}
                                 onChange={(e) => {
                                     setAiPrompt(e.target.value);
-                                    if (currentStep === 6 && e.target.value.length > 30) {
+                                    if (currentStep === 7 && e.target.value.length > 30) {
                                         nextStep();
                                     }
                                 }}

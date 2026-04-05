@@ -61,6 +61,15 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
     },
     {
         id: 6,
+        title: "Choose Language",
+        text: "Select your target language. Naturra supports Multi-language SEO natively, so you can write in any language and it will handle the rest.",
+        targetId: "admin-ai-language-select",
+        targetPage: "/admin/blog",
+        btnText: "Next",
+        position: "bottom"
+    },
+    {
+        id: 7,
         title: "Magic in the Making",
         text: "Fill something here! Type a descriptive prompt (e.g., 'Strategi ekspor vanila premium'). The more detail you give, the better the article!",
         targetId: "admin-ai-prompt-input",
@@ -69,7 +78,7 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
         position: "bottom"
     },
     {
-        id: 7,
+        id: 8,
         title: "Release the AI",
         text: "Ready? Click the 'Generate Article' button highlighted below! Our AI will now handle the writing and SEO.",
         targetId: "admin-ai-submit-btn",
@@ -79,7 +88,7 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
         hideNext: true
     },
     {
-        id: 8,
+        id: 9,
         title: "Review Your Masterpiece",
         text: "Generate complete! Take a moment to review the generated content in the editor. You can refine any section manually.",
         targetId: "admin-content-editor",
@@ -88,7 +97,7 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
         position: "top"
     },
     {
-        id: 9,
+        id: 10,
         title: "Finalizing & Saving",
         text: "Once you are happy with the content, click 'Done Editing' to save your progress locally.",
         targetId: "admin-save-btn",
@@ -98,7 +107,7 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
         hideNext: true
     },
     {
-        id: 10,
+        id: 11,
         title: "Deploying Changes",
         text: "Ready to go live? Click 'Deploy Changes' to push all your drafts to the live website.",
         targetId: "admin-deploy-btn",
@@ -108,7 +117,7 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
         hideNext: true
     },
     {
-        id: 11,
+        id: 12,
         title: "Real-time Monitoring",
         text: "The Activity Log shows every step manually. Green means 'Detected Live', Yellow means 'Scanning'. Wait for the success message here!",
         targetId: "admin-activity-log",
@@ -117,7 +126,7 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
         position: "top"
     },
     {
-        id: 12,
+        id: 13,
         title: "Sync Everything",
         text: "Once everything is Green, click here to refresh the Admin dashboard. This syncs your local state with the global cloud.",
         targetId: "admin-refresh-sync-btn",
@@ -126,7 +135,7 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
         position: "top"
     },
     {
-        id: 13,
+        id: 14,
         title: "You are Live!",
         text: "Finally, click any of these links to see your masterpiece live on the website. Congratulations, you've mastered Naturra Admin!",
         targetId: "admin-live-link",
