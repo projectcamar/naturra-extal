@@ -18,7 +18,6 @@ import { getRelevantProductsForBlog, getProductShowcaseHeading } from '../utils/
 import { getCurrentLanguage, type LanguageCode } from '../utils/languageManager'
 import { trackWhatsAppClick } from '../utils/whatsappTracking'
 import {
-  SIDEBAR_FEATURES_TRANSLATIONS,
   BLOG_POST_TRANSLATIONS,
   BLOG_PRODUCT_SHOWCASE_DESCRIPTION,
   MENTIONED_PRODUCT_LABEL,
@@ -335,7 +334,7 @@ const NaturraBlogPost: React.FC = () => {
         <meta property="og:locale" content={localeMeta.locale} />
         <meta property="og:locale:alternate" content="id_ID" />
         <meta property="og:locale:alternate" content="en_US" />
-        {post.author === 'Moh Rifki' && (
+        {(post.author === 'Moh Rifki' || post.author === 'Angga') && (
           <>
             <meta name="author" content="Moh Rifki" />
             <meta name="article:author" content="Moh Rifki" />
@@ -345,6 +344,19 @@ const NaturraBlogPost: React.FC = () => {
             <meta name="article:author:education" content="Asiatop / Universitas Padjadjaran" />
             <meta name="article:author:specialization" content="International Business Development & Export Operations" />
             <link rel="author" href="https://www.linkedin.com/in/mohamad-bebi-rifki/" />
+          </>
+        )}
+
+        {post.author === 'Helmi Ramdan' && (
+          <>
+            <meta name="author" content="Helmi Ramdan" />
+            <meta name="article:author" content="Helmi Ramdan" />
+            <meta name="article:author:role" content="Infrastructure Engineer & Commercial Space Specialist" />
+            <meta name="article:author:expertise" content="Commercial Space Design, Construction Management, Infrastructure Engineering, Architectural Drafting, Furniture Design Consultation" />
+            <meta name="article:author:experience" content="8+ years total: 3+ years Infrastructure Engineering at Damai Putra Group, 5+ years Design Engineering & Architectural Drafting" />
+            <meta name="article:author:education" content="Universitas Diponegoro" />
+            <meta name="article:author:specialization" content="Commercial Space Design & Construction" />
+            <link rel="author" href="https://www.linkedin.com/in/helmi-ramdan-067912118/" />
           </>
         )}
 
@@ -495,7 +507,7 @@ const NaturraBlogPost: React.FC = () => {
                   </React.Fragment>
                 ))}
 
-                {post.author === 'Moh Rifki' && (
+                {(post.author === 'Moh Rifki' || post.author === 'Angga') && (
                   <div className="blog-post-author-card">
                     <AuthorCard
                       name="Moh Rifki"
@@ -514,6 +526,32 @@ const NaturraBlogPost: React.FC = () => {
                       linkedIn="https://www.linkedin.com/in/mohamad-bebi-rifki/"
                       language={language}
                       backgroundImage="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200"
+                    />
+                  </div>
+                )}
+
+                {post.author === 'Helmi Ramdan' && (
+                  <div className="blog-post-author-card">
+                    <AuthorCard
+                      name="Helmi Ramdan"
+                      title={post.category === 'Export & International'
+                        ? "Associate at Housing and Settlement Department, DKI Jakarta Province"
+                        : "Associate at Dinas Perumahan Rakyat dan Kawasan Permukiman Provinsi DKI Jakarta"}
+                      experience={post.category === 'Export & International'
+                        ? [
+                          'Infrastructure Engineer at Damai Putra Group (3+ years)',
+                          'Design Engineer & Architectural Drafter (5+ years)',
+                          'Alumni of Diponegoro University',
+                          'Commercial Space Design & Construction Specialist'
+                        ]
+                        : [
+                          'Infrastructure Engineer at Damai Putra Group (3+ tahun)',
+                          'Design Engineer & Architectural Drafter (5+ tahun)',
+                          'Alumni Universitas Diponegoro',
+                          'Spesialis Commercial Space Design & Construction'
+                        ]}
+                      linkedIn="https://www.linkedin.com/in/helmi-ramdan-067912118/"
+                      language={language}
                     />
                   </div>
                 )}
