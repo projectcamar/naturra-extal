@@ -73,16 +73,64 @@ const AdminDashboard: React.FC = () => {
 
             <main className="admin-main">
                 <div id="admin-welcome-banner" className="welcome-banner">
-                    <div className="welcome-content">
-                        <h2>Welcome to your Dashboard</h2>
-                        <p>This is the beginning of the Naturra Extal administration portal. From here, you will soon be able to manage products, content, and track site activity.</p>
-                        <button
-                            className="recall-tutorial-btn"
-                            onClick={() => setShowOnboarding(true)}
-                        >
-                            <Settings size={16} />
-                            Tutorial
-                        </button>
+                    <div
+                        className="admin-welcome-card"
+                        style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200)' }}
+                    >
+                        <div className="admin-welcome-card-overlay"></div>
+                        <div className="admin-welcome-card-content">
+                            <div className="admin-welcome-card-header">
+                                <div className="admin-welcome-icon">
+                                    <Users size={28} />
+                                </div>
+                                <div className="admin-welcome-info">
+                                    <span className="admin-welcome-by">Oleh:</span>
+                                    <h2 className="admin-welcome-name">Moh Rifki</h2>
+                                    <p className="admin-welcome-title">Export Associate di Asiatop / Unpad</p>
+                                </div>
+                            </div>
+
+                            <div className="admin-welcome-experience">
+                                <div className="admin-welcome-exp-item">
+                                    <span className="admin-welcome-dot"></span>
+                                    Pengembangan Bisnis Internasional
+                                </div>
+                                <div className="admin-welcome-exp-item">
+                                    <span className="admin-welcome-dot"></span>
+                                    Spesialis Operasi Ekspor
+                                </div>
+                                <div className="admin-welcome-exp-item">
+                                    <span className="admin-welcome-dot"></span>
+                                    Rantai Pasok Komoditas Pertanian
+                                </div>
+                                <div className="admin-welcome-exp-item">
+                                    <span className="admin-welcome-dot"></span>
+                                    Riset & Analisis Pasar
+                                </div>
+                            </div>
+
+                            <div className="admin-welcome-footer">
+                                <a
+                                    href="https://www.linkedin.com/in/mohamad-bebi-rifki/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="admin-welcome-linkedin"
+                                >
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style={{ marginRight: '8px' }}>
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                    </svg>
+                                    Profil LinkedIn
+                                </a>
+
+                                <button
+                                    className="recall-tutorial-btn on-welcome"
+                                    onClick={() => setShowOnboarding(true)}
+                                >
+                                    <Settings size={16} />
+                                    Tutorial
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

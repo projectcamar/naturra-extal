@@ -262,59 +262,149 @@
 }
 
 .welcome-banner {
-  background: linear-gradient(135deg, #ffffff 0%, #f8fcf9 100%);
-  padding: 40px;
-  border-radius: 24px;
-  box-shadow: 0 10px 30px rgba(0, 77, 44, 0.05);
   margin-bottom: 30px;
+}
+
+.admin-welcome-card {
+  background: #ffffff;
   border: 1px solid rgba(0, 77, 44, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 77, 44, 0.05);
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.welcome-banner::after {
-  content: '';
+.admin-welcome-card-overlay {
   position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, rgba(0, 77, 44, 0.05) 0%, transparent 70%);
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 40, 20, 0.92) 0%, rgba(0, 40, 20, 0.7) 100%);
+  z-index: 1;
+}
+
+.admin-welcome-card-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.admin-welcome-card-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.admin-welcome-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+
+.admin-welcome-info {
+  flex: 1;
+}
+
+.admin-welcome-by {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 4px;
+}
+
+.admin-welcome-name {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+  color: #ffffff;
+}
+
+.admin-welcome-title {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 4px 0 0;
+}
+
+.admin-welcome-experience {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-welcome-exp-item {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.admin-welcome-dot {
+  width: 6px;
+  height: 6px;
+  background: #4ade80;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
-.welcome-banner h2 {
-  font-size: 2rem;
-  color: #2C3E50;
-  margin: 0 0 10px;
+.admin-welcome-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.welcome-banner p {
-  color: #666;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-.recall-tutorial-btn {
-  background: #004D2C;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-size: 0.85rem;
-  font-weight: 700;
+.admin-welcome-linkedin {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  cursor: pointer;
+  gap: 10px;
+  background: #0077b5;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 77, 44, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.recall-tutorial-btn:hover {
-  background: #006b3e;
+.admin-welcome-linkedin:hover {
+  background: #005885;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 77, 44, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 119, 181, 0.3);
+}
+
+.recall-tutorial-btn.on-welcome {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  box-shadow: none;
+}
+
+.recall-tutorial-btn.on-welcome:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .dashboard-stats {
