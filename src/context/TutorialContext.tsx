@@ -180,13 +180,13 @@ export const TutorialProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     };
 
     const nextStep = useCallback(() => {
-        const nextIdx = currentStep; // index is currentStep because currentStep is 1-based
-        if (nextIdx >= TUTORIAL_STEPS.length) {
+        const next = currentStep + 1;
+        if (next > TUTORIAL_STEPS.length) {
             closeTutorial();
             return;
         }
 
-        const nextStepData = TUTORIAL_STEPS[nextIdx];
+        const nextStepData = TUTORIAL_STEPS[next - 1];
 
         // Handle navigation if same page but view might change (handled by components)
         // or if different page
@@ -194,8 +194,9 @@ export const TutorialProvider: React.FC<{ children: React.ReactNode }> = ({ chil
             navigate(nextStepData.targetPage);
         }
 
-        setCurrentStep(currentStep + 1);
-    }, [currentStep, location.pathname, navigate]);
+        setCurrentStep(next);
+        localStorage.setItem(STORAGE_KEY, next.toString());
+    }, [currentStep, location.pathname, navigate, closeTutorial]);
 
     const getStepData = useCallback(() => {
         if (currentStep < 1 || currentStep > TUTORIAL_STEPS.length) return undefined;

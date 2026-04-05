@@ -834,7 +834,14 @@ const AdminBlogManager: React.FC = () => {
 
                         {deploymentStatus === 'ready' && (
                             <div className="status-footer">
-                                <button id="admin-refresh-sync-btn" className="refresh-btn" onClick={() => window.location.reload()}>
+                                <button
+                                    id="admin-refresh-sync-btn"
+                                    className="refresh-btn"
+                                    onClick={() => {
+                                        nextStep();
+                                        window.location.reload();
+                                    }}
+                                >
                                     Refresh Admin Page to Sync Everything
                                 </button>
                                 <div className="visit-links-grid">
