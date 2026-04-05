@@ -207,6 +207,7 @@ const AdminBlogManager: React.FC = () => {
                         // All done in this pass
                         setDeploymentStatus('ready');
                         addLog(`✅ SUCCESS: All pages are officially live!`, 'success');
+                        if (currentStep === 12) nextStep();
                         if (liveIntervalId) clearInterval(liveIntervalId);
                         if (iframeIntervalId) clearInterval(iframeIntervalId);
                     }
@@ -675,7 +676,7 @@ const AdminBlogManager: React.FC = () => {
                 )}
 
                 {activeDeploymentSha && (
-                    <div className={`deployment-status-card ${deploymentStatus}`}>
+                    <div id="admin-deployment-status-card" className={`deployment-status-card ${deploymentStatus}`}>
                         <div className="status-header">
                             <div className="status-indicator">
                                 {deploymentStatus === 'ready' ? <Check size={20} /> :

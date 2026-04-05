@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useCallback } from 'react';
+import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 export interface TutorialStep {
@@ -120,10 +120,11 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
         id: 12,
         title: "Real-time Monitoring",
         text: "The Activity Log shows every step manually. Green means 'Detected Live', Yellow means 'Scanning'. Wait for the success message here!",
-        targetId: "admin-activity-log",
+        targetId: "admin-deployment-status-card",
         targetPage: "/admin/blog",
         btnText: "Wait for Green...",
-        position: "top"
+        position: "top",
+        hideNext: true
     },
     {
         id: 13,
@@ -132,7 +133,8 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
         targetId: "admin-refresh-sync-btn",
         targetPage: "/admin/blog",
         btnText: "Sync Now",
-        position: "top"
+        position: "top",
+        hideNext: true
     },
     {
         id: 14,
@@ -156,13 +158,26 @@ interface TutorialContextType {
 
 const TutorialContext = createContext<TutorialContextType | undefined>(undefined);
 
+const STORAGE_KEY = 'NATURRA_tutorial_step';
+
 export const TutorialProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [currentStep, setCurrentStep] = useState(0);
+    const [currentStep, setCurrentStep] = useState(() => {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        return saved ? parseInt(saved, 10) : 0;
+    });
+
     const navigate = useNavigate();
     const location = useLocation();
 
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEY, currentStep.toString());
+    }, [currentStep]);
+
     const startTutorial = () => setCurrentStep(1);
-    const closeTutorial = () => setCurrentStep(0);
+    const closeTutorial = () => {
+        setCurrentStep(0);
+        localStorage.removeItem(STORAGE_KEY);
+    };
 
     const nextStep = useCallback(() => {
         const nextIdx = currentStep; // index is currentStep because currentStep is 1-based
