@@ -1438,7 +1438,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1579705745177-b13f157e7f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwdHJhZGl0aW9uYWwlMjBzcGljZXMlMjBvbiUyMHdvb2RlbiUyMHRhYmxlfGVufDB8MHx8fDE3NzUzOTA3NzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-05 19:05",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Rempah-rempah merupakan salah satu bahan penting dalam masakan Indonesia. Dengan mengolah rempah yang tepat, Anda dapat mendapatkan rasa yang lezat dan aroma yang khas. Namun, bagaimana cara mengolah rempah yang benar? Berikut beberapa tips yang dapat Anda ikuti.",
       "keyPoints": [
@@ -1470,6 +1470,49 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dengan mengikuti tips mengolah rempah di atas, Anda dapat membuat masakan yang lezat dan aroma yang khas. Jangan ragu untuk mencoba berbagai jenis rempah dan mengolahnya dengan cara yang benar untuk mendapatkan rasa yang diinginkan. Naturra Extal siap membantu Anda dalam memilih rempah yang berkualitas dan menyediakan tips mengolah rempah yang benar."
+    }
+  },
+  {
+    "id": 41,
+    "slug": "mengoptimalkan-rasa-dengan-pala",
+    "title": "Mengoptimalkan Rasa Dengan Pala",
+    "category": "Tips and Trick",
+    "excerpt": "Tips dan trik menggunakan pala untuk meningkatkan rasa masakan",
+    "image": "https://images.unsplash.com/photo-1538928760374-76c912ceddb7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHx3aG9sZSUyMG51dG1lZyUyMG9uJTIwd29vZGVuJTIwc3Bvb258ZW58MHwwfHx8MTc3NTM5MDg3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-05 19:07",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Pala adalah salah satu rempah-rempah yang paling sering digunakan dalam masakan Indonesia. Dengan rasa yang hangat dan aroma yang khas, pala dapat menambahkan dimensi baru pada berbagai hidangan. Namun, bagaimana cara mengoptimalkan rasa pala dalam masakan Anda?",
+      "keyPoints": [
+        "Pilih biji pala yang segar",
+        "Gunakan pala dalam jumlah yang tepat",
+        "Campur pala dengan rempah-rempah lain"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengenal Pala",
+          "content": "Pala adalah rempah-rempah yang berasal dari biji pohon pala. Biji pala memiliki rasa yang hangat dan aroma yang khas, membuatnya menjadi salah satu rempah-rempah yang paling populer di Indonesia. <br> Pala dapat digunakan dalam berbagai hidangan, dari masakan tradisional hingga hidangan modern.",
+          "imageSearchQuery": "pohon pala di kebun",
+          "image": "https://images.unsplash.com/photo-1707282399877-8d57c412c5c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxwb2hvbiUyMHBhbGElMjBkaSUyMGtlYnVufGVufDB8MHx8fDE3NzUzOTA4NzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "pohon pala di kebun"
+        },
+        {
+          "heading": "Tips Menggunakan Pala",
+          "content": "Untuk mengoptimalkan rasa pala, ada beberapa tips yang dapat Anda ikuti. Pertama, pilih biji pala yang segar dan memiliki aroma yang kuat. Kedua, gunakan pala dalam jumlah yang tepat, karena terlalu banyak pala dapat membuat hidangan terlalu pedas. <br> Ketiga, campur pala dengan rempah-rempah lain seperti lada dan kunyit untuk membuat rasa yang lebih kompleks."
+        },
+        {
+          "heading": "Pala dan Produk Naturra Extal",
+          "content": "Naturra Extal menawarkan biji pala berkualitas tinggi yang dapat Anda gunakan dalam berbagai hidangan. Dengan sumber daya alam yang melimpah dan proses pengolahan yang canggih, Naturra Extal dapat memastikan bahwa biji pala yang Anda terima adalah yang terbaik. <br> Produk pala Naturra Extal juga memiliki harga yang kompetitif dan kualitas yang konsisten, membuatnya menjadi pilihan yang tepat untuk Anda.",
+          "productId": 3
+        },
+        {
+          "heading": "Kesimpulan",
+          "content": "Dengan mengoptimalkan rasa pala dalam masakan Anda, Anda dapat membuat hidangan yang lebih lezat dan menarik. Dengan tips dan trik yang telah dibagikan, Anda dapat menggunakan pala dengan lebih efektif dan membuat hidangan yang lebih kompleks. <br> Jangan lupa untuk memilih biji pala yang segar dan menggunakan produk pala berkualitas tinggi dari Naturra Extal."
+        }
+      ],
+      "conclusion": "Pala adalah rempah-rempah yang sangat berguna dalam masakan Indonesia. Dengan rasa yang hangat dan aroma yang khas, pala dapat menambahkan dimensi baru pada berbagai hidangan. <br> Dengan mengikuti tips dan trik yang telah dibagikan, Anda dapat mengoptimalkan rasa pala dalam masakan Anda dan membuat hidangan yang lebih lezat dan menarik."
     }
   }
 ];
