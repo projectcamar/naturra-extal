@@ -1610,7 +1610,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1585808259180-6077edb54355?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGluZG9uZXNpYW4lMjBzcGljZSUyMG1hcmtldCUyMHN0YWxsJTIwd2l0aCUyMHZhcmlvdXMlMjBzcGljZXMlMjBhbmQlMjBoZXJic3xlbnwwfDB8fHwxNzc1Mzk3OTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-05 21:06",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Rempah-rempah telah menjadi bagian tak terpisahkan dari kuliner Indonesia. Dengan berbagai jenis rempah yang tersedia, kita dapat mengolah makanan yang lezat dan kaya akan rasa. Namun, bagaimana cara menggunakan rempah dengan tepat? Berikut beberapa tips dan trik yang dapat membantu Anda.",
       "keyPoints": [
@@ -1643,6 +1643,50 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dengan menggunakan rempah dengan tepat, Anda dapat membuat makanan yang lezat dan kaya akan rasa. Jangan lupa untuk memilih rempah yang segar dan berkualitas, serta menggunakan rempah dalam jumlah yang tepat. Naturra Extal siap membantu Anda dalam memenuhi kebutuhan rempah Anda."
+    }
+  },
+  {
+    "id": 45,
+    "slug": "tips-mengolah-kakao",
+    "title": "Tips Mengolah Kakao",
+    "category": "Tips and Trick",
+    "excerpt": "Tips dan trik mengolah kakao untuk hasil terbaik",
+    "image": "https://images.unsplash.com/photo-1614897920852-72084376cd9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxjb2NvYSUyMHBvZHMlMjBvbiUyMHdvb2RlbiUyMHRhYmxlfGVufDB8MHx8fDE3NzUzOTgzOTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-05 21:12",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Kakao adalah salah satu komoditas yang paling populer di Indonesia, dengan kegunaan yang luas dalam industri makanan dan minuman. Namun, mengolah kakao dengan benar sangat penting untuk mendapatkan hasil terbaik. Dalam artikel ini, kita akan membahas beberapa tips dan trik mengolah kakao.",
+      "keyPoints": [
+        "Pemilihan bahan baku yang berkualitas",
+        "Proses pengolahan yang tepat",
+        "Penyimpanan yang benar"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Pemilihan Bahan Baku",
+          "content": "Pemilihan bahan baku yang berkualitas sangat penting dalam mengolah kakao. Pastikan Anda memilih biji kakao yang segar dan memiliki kadar air yang rendah. <strong>Naturra Extal</strong> menawarkan biji kakao berkualitas tinggi yang dipilih langsung dari petani lokal.",
+          "imageSearchQuery": "biji kakao segar",
+          "image": "https://images.unsplash.com/photo-1653908971306-0d637b6c7703?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxiaWppJTIwa2FrYW8lMjBzZWdhcnxlbnwwfDB8fHwxNzc1Mzk4Mzk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "biji kakao segar"
+        },
+        {
+          "heading": "Proses Pengolahan",
+          "content": "Proses pengolahan kakao yang tepat sangat penting untuk mendapatkan hasil terbaik. Pastikan Anda mengikuti proses pengolahan yang benar, mulai dari penyangraian hingga penggilingan. <em>Naturra Extal</em> memiliki tim ahli yang berpengalaman dalam mengolah kakao dengan menggunakan teknologi canggih."
+        },
+        {
+          "heading": "Penyimpanan yang Benar",
+          "content": "Penyimpanan yang benar sangat penting untuk menjaga kualitas kakao. Pastikan Anda menyimpan kakao dalam wadah yang tertutup rapat dan jauh dari sinar matahari langsung. <strong>Naturra Extal</strong> menawarkan solusi penyimpanan yang aman dan efektif untuk kakao.",
+          "productId": 1
+        },
+        {
+          "heading": "Tips dan Trik Lainnya",
+          "content": "Beberapa tips dan trik lainnya dalam mengolah kakao adalah menggunakan peralatan yang bersih dan steril, serta menghindari kontaminasi dengan bahan lain. Dengan mengikuti tips dan trik ini, Anda dapat mendapatkan hasil terbaik dari kakao Anda.",
+          "productId": 2
+        }
+      ],
+      "conclusion": "Dengan mengikuti tips dan trik mengolah kakao yang telah kita bahas, Anda dapat mendapatkan hasil terbaik dari komoditas ini. <strong>Naturra Extal</strong> siap membantu Anda dalam mengolah kakao dengan menggunakan teknologi canggih dan tim ahli yang berpengalaman. Hubungi kami sekarang juga untuk mendapatkan informasi lebih lanjut!"
     }
   }
 ];
