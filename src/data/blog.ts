@@ -1524,7 +1524,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1718018486246-adfaec1bdf03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMHNwaWNlJTIwYmxlbmRzJTIwb24lMjB3b29kZW4lMjBzcG9vbnN8ZW58MHwwfHx8MTc3NTM5Mzc0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-05 19:55",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Las especias son un ingrediente fundamental en la industria alimentaria, ya que aportan sabor y aroma a una variedad de platos. En Naturra Extal, nos enfocamos en proporcionar especias de alta calidad a nuestros clientes. En este artículo, exploraremos algunas de las mejores prácticas para trabajar con especias y cómo nuestras especias pueden elevar tus productos.",
       "keyPoints": [
@@ -1557,6 +1557,48 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "En conclusión, la calidad de las especias es fundamental para la industria alimentaria. En Naturra Extal, nos esforzamos por proporcionar especias de alta calidad y ofrecer consejos y soluciones para ayudar a nuestros clientes a elevar sus productos. ¡No dudes en contactarnos para saber más sobre nuestras especias y cómo podemos ayudarte a lograr el éxito en tus productos!"
+    }
+  },
+  {
+    "id": 43,
+    "slug": "tips-menggunakan-rempah",
+    "title": "Tips Menggunakan Rempah",
+    "category": "Tips and Trick",
+    "excerpt": "Tips dan trik menggunakan rempah untuk meningkatkan rasa makanan",
+    "image": "https://images.unsplash.com/photo-1579705745177-b13f157e7f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxzcGljZXMlMjBvbiUyMHdvb2RlbiUyMHNwb29ufGVufDB8MHx8fDE3NzUzOTc2ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-05 21:01",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Rempah-rempah adalah salah satu bahan penting dalam memasak yang dapat meningkatkan rasa dan aroma makanan. Namun, menggunakan rempah dengan benar dapat menjadi tantangan bagi banyak orang. Dalam artikel ini, kita akan membahas beberapa tips dan trik menggunakan rempah untuk meningkatkan rasa makanan Anda.",
+      "keyPoints": [
+        "Pilih rempah yang segar",
+        "Gunakan rempah dengan proporsi yang tepat",
+        "Tambahkan rempah pada tahap yang tepat"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengenal Jenis Rempah",
+          "content": "Rempah-rempah dapat dibagi menjadi beberapa jenis, seperti <strong>lada</strong>, <strong>kemiri</strong>, dan <strong>ketumbar</strong>. Setiap jenis rempah memiliki rasa dan aroma yang unik, sehingga penting untuk memahami karakteristik masing-masing rempah. <br> Contohnya, lada memiliki rasa pedas dan aroma yang kuat, sehingga sering digunakan dalam masakan yang memerlukan rasa pedas.",
+          "imageSearchQuery": "indonesian spice market"
+        },
+        {
+          "heading": "Tips Menggunakan Rempah",
+          "content": "Berikut beberapa tips menggunakan rempah yang dapat Anda coba: <br> - Pilih rempah yang segar untuk mendapatkan rasa dan aroma yang optimal. <br> - Gunakan rempah dengan proporsi yang tepat, karena menggunakan rempah yang terlalu banyak dapat membuat makanan terasa terlalu pedas atau terlalu kuat. <br> - Tambahkan rempah pada tahap yang tepat, seperti pada awal memasak atau pada akhir memasak, tergantung pada jenis rempah dan masakan yang Anda buat."
+        },
+        {
+          "heading": "Rempah yang Digunakan oleh Naturra Extal",
+          "content": "Naturra Extal merupakan perusahaan yang bergerak di bidang komoditas pertanian, termasuk rempah-rempah. Kami menggunakan <em>rempah-rempah yang berkualitas tinggi</em> dan <em>bersumber dari petani lokal</em> untuk mendukung pertanian yang berkelanjutan. <br> Salah satu rempah yang kami gunakan adalah <strong>Lampung Black Pepper B1 (Produk ID: 7)</strong>, yang memiliki rasa pedas yang kuat dan aroma yang khas.",
+          "productId": 7
+        },
+        {
+          "heading": "Manfaat Menggunakan Rempah",
+          "content": "Menggunakan rempah tidak hanya dapat meningkatkan rasa makanan, tetapi juga memiliki beberapa manfaat lain, seperti <em>mengurangi inflamasi</em> dan <em>meningkatkan sistem kekebalan tubuh</em>. <br> Oleh karena itu, menggunakan rempah yang tepat dapat menjadi salah satu cara untuk meningkatkan kualitas hidup Anda.",
+          "productId": 3
+        }
+      ],
+      "conclusion": "Dengan memahami tips dan trik menggunakan rempah, Anda dapat meningkatkan rasa makanan dan mendapatkan manfaat lain dari rempah. <br> Naturra Extal siap membantu Anda dalam memilih rempah yang berkualitas tinggi dan bersumber dari petani lokal. <br> Kunjungi website kami untuk mendapatkan informasi lebih lanjut tentang rempah-rempah dan produk lainnya."
     }
   }
 ];
