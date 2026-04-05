@@ -1395,7 +1395,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1644079446600-219068676743?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3YXJlaG91c2UlMjBpbnRlcmlvciUyMHdpdGglMjBmb3JrbGlmdHMlMjBhbmQlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50JTIwc3lzdGVtc3xlbnwwfDB8fHwxNzc0OTIzNjYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-03-31 09:20",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Dalam dunia bisnis, logistik memegang peranan penting dalam mendukung keberhasilan operasional. Logistik yang efektif dapat meningkatkan efisiensi, mengurangi biaya, dan mempercepat waktu pengiriman. Namun, masih banyak perusahaan yang mengalami kesulitan dalam mengelola logistik mereka. Pada artikel ini, kita akan membahas beberapa tips dan trik logistik untuk meningkatkan efisiensi bisnis Anda.",
       "keyPoints": [
@@ -1427,6 +1427,49 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Jangan ragu untuk menghubungi Naturra Extal jika Anda memerlukan solusi logistik yang efektif dan efisien untuk mendukung keberhasilan bisnis Anda."
+    }
+  },
+  {
+    "id": 40,
+    "slug": "tips-mengolah-rempah",
+    "title": "Tips Mengolah Rempah",
+    "category": "Tips and Trick",
+    "excerpt": "Tips mengolah rempah untuk mendapatkan rasa yang lezat",
+    "image": "https://images.unsplash.com/photo-1579705745177-b13f157e7f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwdHJhZGl0aW9uYWwlMjBzcGljZXMlMjBvbiUyMHdvb2RlbiUyMHRhYmxlfGVufDB8MHx8fDE3NzUzOTA3NzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-05 19:05",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Rempah-rempah merupakan salah satu bahan penting dalam masakan Indonesia. Dengan mengolah rempah yang tepat, Anda dapat mendapatkan rasa yang lezat dan aroma yang khas. Namun, bagaimana cara mengolah rempah yang benar? Berikut beberapa tips yang dapat Anda ikuti.",
+      "keyPoints": [
+        "Pilih rempah yang segar",
+        "Gunakan proporsi yang tepat",
+        "olah rempah dengan cara yang benar"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengenal Jenis Rempah",
+          "content": "Rempah-rempah yang umum digunakan dalam masakan Indonesia antara lain <strong>lada</strong>, <strong>kapulaga</strong>, dan <strong>ketumbar</strong>. Setiap jenis rempah memiliki rasa dan aroma yang unik, sehingga perlu dipilih dengan tepat untuk mendapatkan rasa yang diinginkan.",
+          "imageSearchQuery": "berbagai jenis lada",
+          "image": "https://images.unsplash.com/photo-1661155320788-9fcec97c8793?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxiZXJiYWdhaSUyMGplbmlzJTIwbGFkYXxlbnwwfDB8fHwxNzc1MzkwNzcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "berbagai jenis lada"
+        },
+        {
+          "heading": "Cara Mengolah Rempah",
+          "content": "Mengolah rempah yang benar dapat membuat rasa dan aroma menjadi lebih lezat. <em>Untuk mengolah rempah</em>, Anda dapat memulai dengan membersihkan dan mengeringkan rempah, kemudian menggiling atau memotongnya sesuai dengan kebutuhan. Pastikan untuk menggunakan proporsi yang tepat agar rasa tidak menjadi terlalu kuat atau terlalu lemah."
+        },
+        {
+          "heading": "Tips Menggunakan Rempah dari Naturra Extal",
+          "content": "Naturra Extal menyediakan berbagai jenis rempah yang berkualitas, termasuk <strong>Lampung Black Pepper B1 (productId: 7)</strong> dan <strong>Premium Indonesian Cloves Lal Pari (productId: 3)</strong>. Dengan menggunakan rempah dari Naturra Extal, Anda dapat mendapatkan rasa yang lezat dan aroma yang khas. Pastikan untuk memilih rempah yang segar dan menggunakannya dengan cara yang benar untuk mendapatkan hasil yang maksimal.",
+          "productId": 7
+        },
+        {
+          "heading": "Kesimpulan",
+          "content": "Mengolah rempah yang benar dapat membuat rasa dan aroma menjadi lebih lezat. Dengan memilih rempah yang segar, menggunakan proporsi yang tepat, dan mengolah rempah dengan cara yang benar, Anda dapat mendapatkan rasa yang diinginkan. Jangan lupa untuk memilih rempah yang berkualitas dari Naturra Extal untuk mendapatkan hasil yang maksimal."
+        }
+      ],
+      "conclusion": "Dengan mengikuti tips mengolah rempah di atas, Anda dapat membuat masakan yang lezat dan aroma yang khas. Jangan ragu untuk mencoba berbagai jenis rempah dan mengolahnya dengan cara yang benar untuk mendapatkan rasa yang diinginkan. Naturra Extal siap membantu Anda dalam memilih rempah yang berkualitas dan menyediakan tips mengolah rempah yang benar."
     }
   }
 ];
