@@ -1481,7 +1481,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1538928760374-76c912ceddb7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHx3aG9sZSUyMG51dG1lZyUyMG9uJTIwd29vZGVuJTIwc3Bvb258ZW58MHwwfHx8MTc3NTM5MDg3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-05 19:07",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Pala adalah salah satu rempah-rempah yang paling sering digunakan dalam masakan Indonesia. Dengan rasa yang hangat dan aroma yang khas, pala dapat menambahkan dimensi baru pada berbagai hidangan. Namun, bagaimana cara mengoptimalkan rasa pala dalam masakan Anda?",
       "keyPoints": [
@@ -1513,6 +1513,50 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Pala adalah rempah-rempah yang sangat berguna dalam masakan Indonesia. Dengan rasa yang hangat dan aroma yang khas, pala dapat menambahkan dimensi baru pada berbagai hidangan. <br> Dengan mengikuti tips dan trik yang telah dibagikan, Anda dapat mengoptimalkan rasa pala dalam masakan Anda dan membuat hidangan yang lebih lezat dan menarik."
+    }
+  },
+  {
+    "id": 42,
+    "slug": "mejores-practicas-para-especias",
+    "title": "Mejores prácticas para especias",
+    "category": "Tips and Trick",
+    "excerpt": "Consejos para especias de alta calidad para la industria alimentaria",
+    "image": "https://images.unsplash.com/photo-1718018486246-adfaec1bdf03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMHNwaWNlJTIwYmxlbmRzJTIwb24lMjB3b29kZW4lMjBzcG9vbnN8ZW58MHwwfHx8MTc3NTM5Mzc0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-05 19:55",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Las especias son un ingrediente fundamental en la industria alimentaria, ya que aportan sabor y aroma a una variedad de platos. En Naturra Extal, nos enfocamos en proporcionar especias de alta calidad a nuestros clientes. En este artículo, exploraremos algunas de las mejores prácticas para trabajar con especias y cómo nuestras especias pueden elevar tus productos.",
+      "keyPoints": [
+        "Selección de especias de alta calidad",
+        "Almacenamiento y manejo adecuado",
+        "Uso de especias en diferentes aplicaciones"
+      ],
+      "language": "es",
+      "sections": [
+        {
+          "heading": "¿Por qué la calidad de las especias es importante?",
+          "content": "La calidad de las especias puede afectar significativamente el sabor y la textura de tus productos. En Naturra Extal, nos esforzamos por proporcionar especias que cumplan con los estándares más altos de calidad. Nuestras especias, como los <strong>clavos de olor</strong> y el <strong>pimienta negra</strong>, se cultivan y procesan con cuidado para garantizar su frescura y potencia.",
+          "imageSearchQuery": "campos de clavos de olor",
+          "image": "https://images.unsplash.com/photo-1725521949851-e9a582ddeb89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxjYW1wb3MlMjBkZSUyMGNsYXZvcyUyMGRlJTIwb2xvcnxlbnwwfDB8fHwxNzc1MzkzNzQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "campos de clavos de olor"
+        },
+        {
+          "heading": "Consejos para el almacenamiento y manejo de especias",
+          "content": "El almacenamiento y el manejo adecuados de las especias son cruciales para mantener su frescura y calidad. Es importante almacenar las especias en un lugar fresco y seco, lejos de la luz directa y el calor. También es recomendable utilizar contenedores herméticos para evitar la contaminación y la humedad."
+        },
+        {
+          "heading": "Uso de especias en diferentes aplicaciones",
+          "content": "Las especias pueden ser utilizadas en una variedad de aplicaciones, desde productos alimenticios hasta productos de cuidado personal. En Naturra Extal, ofrecemos una amplia gama de especias que pueden ser utilizadas en diferentes productos, como <strong>Cocopeat Block 5kg Low EC</strong> para productos de jardinería y <strong>Clavos de olor Lal Pari</strong> para productos alimenticios.",
+          "productId": 3
+        },
+        {
+          "heading": "Naturra Extal: Su proveedor de especias de confianza",
+          "content": "En Naturra Extal, nos comprometemos a proporcionar especias de alta calidad a nuestros clientes. Nuestra experiencia en el cultivo y procesamiento de especias nos permite ofrecer productos que cumplan con los estándares más altos de calidad. ¡Contactanos hoy mismo para saber más sobre nuestras especias y cómo podemos ayudarte a elevar tus productos!",
+          "productId": 5
+        }
+      ],
+      "conclusion": "En conclusión, la calidad de las especias es fundamental para la industria alimentaria. En Naturra Extal, nos esforzamos por proporcionar especias de alta calidad y ofrecer consejos y soluciones para ayudar a nuestros clientes a elevar sus productos. ¡No dudes en contactarnos para saber más sobre nuestras especias y cómo podemos ayudarte a lograr el éxito en tus productos!"
     }
   }
 ];
