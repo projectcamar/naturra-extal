@@ -1830,7 +1830,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1579705745177-b13f157e7f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxhc3NvcnRtZW50JTIwb2YlMjB3aG9sZSUyMHNwaWNlcyUyMG9uJTIwd29vZGVuJTIwdGFibGV8ZW58MHwwfHx8MTc3NTk4MTE1NHww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-12 15:05",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Rempah-rempah adalah bagian penting dalam masakan Indonesia, memberikan rasa dan aroma yang khas. Namun, memilih dan menggunakan rempah yang tepat bisa menjadi tantangan. Dalam artikel ini, kita akan membahas beberapa tips untuk mengoptimalkan rasa dengan rempah.",
       "keyPoints": [
@@ -1863,6 +1863,222 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dengan memahami cara memilih dan menggunakan rempah yang tepat, Anda dapat meningkatkan rasa masakan Anda dan membuatnya lebih menarik. Pastikan untuk memilih rempah yang segar dan berkualitas, dan jangan ragu untuk bereksperimen dengan kombinasi rempah yang unik. Dengan Naturra Extal, Anda dapat yakin bahwa Anda mendapatkan rempah yang berkualitas untuk memenuhi kebutuhan masakan Anda."
+    }
+  },
+  {
+    "id": 51,
+    "title": "Export Seed Strategy",
+    "slug": "export-seed-strategy-for-success",
+    "excerpt": "Optimize your export seed strategy with expert tips from Naturra Extal",
+    "category": "Tips and Trick",
+    "image": "https://images.unsplash.com/photo-1746474072546-9fbda10daffe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxzZWVkcyUyMGluJTIwYSUyMGZhcm1lciUyN3MlMjBoYW5kJTIwd2l0aCUyMGElMjBnbG9iZSUyMGluJTIwdGhlJTIwYmFja2dyb3VuZHxlbnwwfDB8fHwxNzc1OTk4MTk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-12 19:50",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "As a key player in the global commodity market, Naturra Extal understands the importance of a well-planned export seed strategy. With years of experience in sourcing high-quality seeds from Indonesian farmers, we've compiled expert tips to help manufacturers, food & beverage industries, and agricultural retailers succeed in the export market. In this article, we'll explore the best practices for exporting seeds and how to leverage Naturra Extal's sustainable sourcing and direct farmer partnerships to drive business growth.",
+      "keyPoints": [
+        "Conduct thorough market research to identify target markets and seed varieties in demand",
+        "Develop strong relationships with local farmers to ensure consistent seed quality and supply",
+        "Implement efficient logistics and packaging solutions to minimize costs and reduce environmental impact",
+        "Stay up-to-date with regulatory requirements and compliance standards for international seed exports"
+      ],
+      "language": "en",
+      "sections": [
+        {
+          "heading": "Why Export Seed Strategy is Crucial",
+          "content": "A well-planned export seed strategy is essential for businesses looking to expand their reach in the global market. With the increasing demand for high-quality seeds, manufacturers and agricultural retailers must be able to navigate complex international regulations, manage logistics, and maintain consistent quality standards. At Naturra Extal, we believe that a successful export seed strategy starts with <strong>sustainable sourcing</strong> and <em>direct partnerships with local farmers</em>. By working closely with Indonesian farmers, we can ensure that our seeds meet the highest quality standards while promoting environmentally friendly practices.",
+          "imageSearchQuery": "indonesian farmer partnership",
+          "image": "https://images.unsplash.com/photo-1722108499258-bbd299116c43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwZmFybWVyJTIwcGFydG5lcnNoaXB8ZW58MHwwfHx8MTc3NTk5ODIwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "indonesian farmer partnership"
+        },
+        {
+          "heading": "Practical Guide to Export Seed Strategy",
+          "content": "To develop an effective export seed strategy, businesses must conduct thorough market research to identify target markets and seed varieties in demand. This includes analyzing <br> competitor activity, market trends, and regulatory requirements. Additionally, businesses should <strong>invest in efficient logistics and packaging solutions</strong> to minimize costs and reduce environmental impact. At Naturra Extal, we offer a range of <em>export-quality seeds</em> sourced from our network of local farmers, ensuring that our customers receive the best products while supporting sustainable agriculture practices."
+        },
+        {
+          "heading": "Naturra Extal Solutions for Export Seed Strategy",
+          "content": "At Naturra Extal, we're committed to helping businesses succeed in the export market. Our <strong>export-quality seeds</strong>, including <em>Cocopeat Block 5kg Low EC (product ID: 4)</em> and <em>Cocopeat Briquettes 650g (product ID: 5)</em>, are sourced from our network of local farmers and designed to meet the highest international standards. By partnering with us, businesses can leverage our expertise in sustainable sourcing, logistics, and regulatory compliance to drive growth and expansion in the global market.",
+          "productId": 4
+        },
+        {
+          "heading": "Next Steps for Export Seed Strategy",
+          "content": "If you're looking to develop a successful export seed strategy, we invite you to explore our range of export-quality seeds and learn more about our sustainable sourcing practices. Contact us today to discuss how Naturra Extal can support your business goals and help you succeed in the global market. With our expertise and commitment to quality, you can trust that your export seed strategy is in good hands.",
+          "productId": 5
+        }
+      ],
+      "conclusion": "In conclusion, a well-planned export seed strategy is crucial for businesses looking to succeed in the global market. By conducting thorough market research, developing strong relationships with local farmers, and implementing efficient logistics and packaging solutions, businesses can drive growth and expansion while promoting sustainable agriculture practices. At Naturra Extal, we're committed to helping businesses achieve their export seed strategy goals and look forward to partnering with you to succeed in the global market."
+    }
+  },
+  {
+    "id": 52,
+    "title": "Démarrer avec les Biji",
+    "slug": "commencer-avec-les-biji",
+    "excerpt": "Découvrez les secrets pour démarrer avec les biji, des conseils pratiques pour les débutants",
+    "category": "Tips and Trick",
+    "image": "https://images.unsplash.com/photo-1716034353314-8d4d8b9b95cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxzZWVkcyUyMGluJTIwc21hbGwlMjBwb3RzJTIwb24lMjB3b29kZW4lMjB0YWJsZXxlbnwwfDB8fHwxNzc1OTk4NzA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-12 19:58",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Les biji, ou graines de cacao, sont à la base de la fabrication du chocolat. Mais savez-vous comment les utiliser pour créer des produits délicieux ? Dans cet article, nous allons vous présenter des conseils pratiques pour démarrer avec les biji. <br> Nous allons aborder les étapes de base pour préparer les biji, ainsi que quelques astuces pour les utiliser dans vos recettes.",
+      "keyPoints": [
+        "Comprendre les différents types de biji",
+        "Préparer les biji pour la consommation",
+        "Utiliser les biji dans des recettes simples"
+      ],
+      "language": "fr",
+      "sections": [
+        {
+          "heading": "Comprendre les Biji",
+          "content": "Les biji sont les graines de la plante de cacao. Il existe plusieurs types de biji, chacun avec ses caractéristiques uniques. <strong>Les biji de cacao</strong> sont les plus couramment utilisés pour produire du chocolat. <em>Les biji de cacao</em> sont riches en antioxydants et ont des propriétés médicinales.",
+          "imageSearchQuery": "cacao tree with pods",
+          "image": "https://images.unsplash.com/photo-1677123620674-00cbd9dedb64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxjYWNhbyUyMHRyZWUlMjB3aXRoJTIwcG9kc3xlbnwwfDB8fHwxNzc1OTk4NzA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "cacao tree with pods"
+        },
+        {
+          "heading": "Préparer les Biji",
+          "content": "Pour préparer les biji, il faut les <strong>torréfier</strong> pour développer leur saveur. Il est important de <em>contrôler la température</em> pour éviter de brûler les biji. Une fois torréfiés, les biji peuvent être <strong>concassés</strong> pour créer une poudre de cacao."
+        },
+        {
+          "heading": "Utiliser les Biji dans des Recettes",
+          "content": "Les biji peuvent être utilisés dans une variété de recettes, des <strong>boissons chaudes</strong> aux <em>desserts</em>. Vous pouvez ajouter des biji à votre <strong>smoothie</strong> pour un boost d'énergie ou les utiliser pour créer des <em>truffes de chocolat</em>.",
+          "productId": 1
+        },
+        {
+          "heading": "Conclusion",
+          "content": "Les biji sont un ingrédient polyvalent qui peut être utilisé de nombreuses manières. En suivant ces conseils pratiques, vous pourrez créer des produits délicieux avec les biji. N'oubliez pas de toujours <strong>contrôler la qualité</strong> des biji pour obtenir les meilleurs résultats.",
+          "productId": 2
+        }
+      ],
+      "conclusion": "Maintenant que vous avez découvert les secrets pour démarrer avec les biji, vous êtes prêt à créer des produits délicieux avec ces graines de cacao. N'hésitez pas à explorer nos produits de cacao de haute qualité pour réaliser vos recettes."
+    }
+  },
+  {
+    "id": 53,
+    "title": "Biji: Stratégies Avancées",
+    "slug": "biji-strategies-avancees",
+    "excerpt": "Découvrez les stratégies avancées pour optimiser votre production de biji",
+    "category": "Tips and Trick",
+    "image": "https://images.unsplash.com/photo-1758356860542-a2df92aad294?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxzb3JnaHVtJTIwZmFybSUyMGFlcmlhbCUyMHZpZXd8ZW58MHwwfHx8MTc3NTk5ODcxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-12 19:58",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Le biji, également connu sous le nom de vanille, est l'une des épices les plus précieuses au monde. Les producteurs et les exportateurs de biji doivent être à la pointe des dernières tendances et stratégies pour rester compétitifs sur le marché mondial. Dans cet article, nous allons explorer les stratégies avancées pour optimiser votre production de biji et maximiser vos profits.",
+      "keyPoints": [
+        "Comprendre les tendances du marché du biji",
+        "Optimiser la production de biji grâce à des méthodes de culture avancées",
+        "Développer des stratégies de marketing efficaces pour atteindre les clients cibles"
+      ],
+      "language": "fr",
+      "sections": [
+        {
+          "heading": "Comprendre les tendances du marché du biji",
+          "content": "Le marché du biji est en constante évolution, avec des fluctuations de prix et des changements dans les préférences des consommateurs. Il est essentiel de comprendre ces tendances pour ajuster votre production et votre stratégie de marketing en conséquence. <strong>Les producteurs de biji doivent être à la pointe des dernières tendances et prévisions pour rester compétitifs</strong>. Nous recommandons de suivre les rapports de marché et les analyses de l'industrie pour rester informé.",
+          "imageSearchQuery": "global market trends graph",
+          "image": "https://images.unsplash.com/photo-1768242079046-c9c633187db1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBtYXJrZXQlMjB0cmVuZHMlMjBncmFwaHxlbnwwfDB8fHwxNzc1OTk4NzE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "global market trends graph"
+        },
+        {
+          "heading": "Optimiser la production de biji grâce à des méthodes de culture avancées",
+          "content": "Les méthodes de culture avancées peuvent considérablement améliorer la qualité et la quantité de votre production de biji. <em>Les producteurs de biji doivent investir dans des technologies et des équipements modernes pour optimiser leur production</em>. Nous recommandons d'explorer les options de culture en serre, les systèmes d'irrigation précis et les méthodes de fertilisation organique pour améliorer la qualité et la quantité de votre production de biji."
+        },
+        {
+          "heading": "Développer des stratégies de marketing efficaces pour atteindre les clients cibles",
+          "content": "Les stratégies de marketing efficaces sont essentielles pour atteindre les clients cibles et maximiser les profits. <strong>Les producteurs de biji doivent développer des stratégies de marketing ciblées pour atteindre les manufacturiers, les industries alimentaires et les détaillants</strong>. Nous recommandons de créer un site web et des réseaux sociaux pour promouvoir vos produits et vos services, ainsi que d'explorer les options de publicité en ligne et les salons commerciaux pour atteindre les clients cibles.",
+          "productId": 6
+        }
+      ],
+      "conclusion": "En conclusion, les stratégies avancées pour optimiser la production de biji et maximiser les profits sont essentielles pour rester compétitif sur le marché mondial. Nous recommandons de comprendre les tendances du marché, d'optimiser la production grâce à des méthodes de culture avancées et de développer des stratégies de marketing efficaces pour atteindre les clients cibles. <strong>Les producteurs de biji qui adoptent ces stratégies avancées seront bien positionnés pour réussir dans l'industrie du biji</strong>."
+    }
+  },
+  {
+    "id": 54,
+    "title": "Qualité des Biji",
+    "slug": "controle-qualite-biji",
+    "excerpt": "Découvrez les normes de sécurité alimentaire pour les biji",
+    "category": "Tips and Trick",
+    "image": "https://images.unsplash.com/photo-1608604897874-a086af52701c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwY29mZmVlJTIwYmVhbnMlMjBxdWFsaXR5JTIwY29udHJvbHxlbnwwfDB8fHwxNzc1OTk4NzI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-12 19:58",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Les biji, ou graines, sont un ingrédient essentiel dans de nombreux produits alimentaires. Cependant, leur qualité peut varier en fonction de facteurs tels que la source, le traitement et la conservation. Dans cet article, nous allons explorer les normes de qualité, les certifications et les normes de sécurité alimentaire pour les biji.",
+      "keyPoints": [
+        "Comprendre les normes de qualité pour les biji",
+        "Les certifications et labels de qualité pour les biji",
+        "Les normes de sécurité alimentaire pour les biji"
+      ],
+      "language": "fr",
+      "sections": [
+        {
+          "heading": "Pourquoi la qualité des biji est importante ?",
+          "content": "La qualité des biji est cruciale pour la sécurité alimentaire et la satisfaction du consommateur. Les biji de mauvaise qualité peuvent contenir des impuretés, des contaminants ou des résidus de pesticides, ce qui peut avoir des conséquences graves sur la santé. De plus, les biji de haute qualité sont essentiels pour produire des produits alimentaires de qualité supérieure.",
+          "imageSearchQuery": "food quality control laboratory",
+          "image": "https://images.unsplash.com/photo-1764149635098-17adac6c2e76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxmb29kJTIwcXVhbGl0eSUyMGNvbnRyb2wlMjBsYWJvcmF0b3J5fGVufDB8MHx8fDE3NzU5OTg3MjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "food quality control laboratory"
+        },
+        {
+          "heading": "Les normes de qualité pour les biji",
+          "content": "Les normes de qualité pour les biji varient en fonction du type de biji et de son utilisation finale. Par exemple, les biji de café doivent répondre à des normes strictes en termes de teneur en humidité, de taille et de couleur. Les biji de cacao, quant à eux, doivent répondre à des normes de qualité en termes de teneur en cacao, de pH et de teneur en impuretés."
+        },
+        {
+          "heading": "Les certifications et labels de qualité pour les biji",
+          "content": "Il existe plusieurs certifications et labels de qualité pour les biji, tels que le label « Fairtrade » ou « Bio ». Ces certifications garantissent que les biji sont produits de manière durable et responsable. Les producteurs de biji qui souhaitent obtenir ces certifications doivent répondre à des normes strictes en termes de qualité, de sécurité alimentaire et de durabilité.",
+          "productId": 3
+        },
+        {
+          "heading": "Les normes de sécurité alimentaire pour les biji",
+          "content": "Les normes de sécurité alimentaire pour les biji sont essentielles pour prévenir les risques pour la santé. Les producteurs de biji doivent respecter les normes de sécurité alimentaire en termes de stockage, de transport et de manipulation des biji. Les biji doivent être stockés dans des conditions propres et sèches, et doivent être manipulés avec soin pour éviter les contaminations.",
+          "productId": 5
+        }
+      ],
+      "conclusion": "En conclusion, la qualité des biji est un facteur essentiel pour la sécurité alimentaire et la satisfaction du consommateur. Les normes de qualité, les certifications et les normes de sécurité alimentaire pour les biji sont cruciales pour garantir la qualité et la sécurité des produits alimentaires. En choisissant des biji de haute qualité et en respectant les normes de sécurité alimentaire, les producteurs de biji peuvent offrir des produits de qualité supérieure à leurs clients."
+    }
+  },
+  {
+    "id": 55,
+    "title": "Découvrez les Bienfaits des Biji",
+    "slug": "les-bijis-dans-la-culture-indonesienne",
+    "excerpt": "Découvrez l'importance historique et culturelle des biji en Indonésie",
+    "category": "Tips and Trick",
+    "image": "https://images.unsplash.com/photo-1711060266983-92bd378c850c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwdHJhZGl0aW9uYWwlMjByaWNlJTIwZ3JhaW5zJTIwY2xvc2V1cHxlbnwwfDB8fHwxNzc1OTk4NzM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-12 19:58",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Les biji, ou graines, sont une partie intégrante de la culture indonésienne. Depuis des siècles, les Indonésiens cultivent et utilisent ces graines pour diverses applications. Dans cet article, nous allons explorer l'histoire, la signification culturelle et les traditions entourant les biji.",
+      "keyPoints": [
+        "Les biji sont une source importante de revenus pour les agriculteurs indonésiens",
+        "Les biji sont utilisés dans diverses applications, notamment la cuisine, la médecine traditionnelle et les rituels",
+        "La culture des biji est profondément enracinée dans les traditions indonésiennes"
+      ],
+      "language": "fr",
+      "sections": [
+        {
+          "heading": "L'Histoire des Biji en Indonésie",
+          "content": "Les biji ont été cultivés en Indonésie depuis des siècles. Les anciens Indonésiens utilisaient ces graines pour diverses applications, notamment la cuisine, la médecine traditionnelle et les rituels. Les biji étaient également utilisés comme monnaie d'échange dans certaines régions. Aujourd'hui, les biji restent une partie importante de la culture indonésienne et sont toujours cultivés et utilisés pour diverses applications.",
+          "imageSearchQuery": "indonesian traditional market",
+          "image": "https://images.unsplash.com/photo-1545105580-06fbbf96241e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwdHJhZGl0aW9uYWwlMjBtYXJrZXR8ZW58MHwwfHx8MTc3NTk5ODczNHww&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "indonesian traditional market"
+        },
+        {
+          "heading": "Les Différents Types de Biji",
+          "content": "Il existe de nombreux types de biji en Indonésie, chacun ayant ses propres caractéristiques et utilisations. Les biji de cacao, par exemple, sont utilisés pour produire du chocolat, tandis que les biji de café sont utilisés pour produire du café. Les biji de poivre sont utilisés comme épice, tandis que les biji de vanille sont utilisés pour parfumer les aliments."
+        },
+        {
+          "heading": "Les Avantages de la Culture des Biji",
+          "content": "La culture des biji présente de nombreux avantages pour les agriculteurs indonésiens. Les biji sont une source importante de revenus pour les agriculteurs, notamment ceux qui cultivent des biji de cacao ou de café. La culture des biji permet également de préserver les traditions et les pratiques agricoles indonésiennes. <strong>Naturra Extal</strong> est une entreprise qui soutient les agriculteurs indonésiens en leur fournissant des graines de haute qualité et en les aidant à améliorer leurs pratiques agricoles.",
+          "productId": 3
+        },
+        {
+          "heading": "Les Défis de la Culture des Biji",
+          "content": "La culture des biji présente également des défis pour les agriculteurs indonésiens. Les conditions climatiques, les maladies et les parasites peuvent affecter les rendements et la qualité des biji. Les agriculteurs doivent également faire face à la concurrence des producteurs étrangers et aux fluctuations des prix sur le marché mondial. <em>Naturra Extal</em> aide les agriculteurs à surmonter ces défis en leur fournissant des conseils et des soutiens techniques.",
+          "productId": 5
+        }
+      ],
+      "conclusion": "En conclusion, les biji sont une partie intégrante de la culture indonésienne et présentent de nombreux avantages pour les agriculteurs et les consommateurs. La culture des biji permet de préserver les traditions et les pratiques agricoles indonésiennes, tout en fournissant des revenus importants pour les agriculteurs. <strong>Naturra Extal</strong> est fière de soutenir les agriculteurs indonésiens et de promouvoir la culture des biji de haute qualité."
     }
   }
 ];
