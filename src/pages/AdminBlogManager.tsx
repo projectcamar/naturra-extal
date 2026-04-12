@@ -409,14 +409,38 @@ const AdminBlogManager: React.FC = () => {
                 const bulkNewPosts: BlogPost[] = [];
                 let successCount = 0;
 
+                // 10 unique angles so every bulk article covers a different subtopic
+                const angles = [
+                    'Focus on beginner-friendly tips and practical steps.',
+                    'Focus on advanced strategies and market insights.',
+                    'Focus on sustainability, eco-friendly practices, and environmental impact.',
+                    'Focus on the Indonesian export perspective and global demand.',
+                    'Focus on quality control, certification, and food safety standards.',
+                    'Focus on profitability, cost reduction, and business growth.',
+                    'Focus on historical context, cultural significance, and traditions.',
+                    'Focus on technology, innovation, and modern farming techniques.',
+                    'Focus on health benefits and nutritional value for consumers.',
+                    'Focus on supply chain, logistics, and distribution challenges.',
+                ];
+
                 for (let i = 0; i < numArticles; i++) {
                     setBulkProgress(i + 1);
+
+                    // Throttle to avoid hitting API rate limits
+                    if (i > 0) {
+                        await new Promise(resolve => setTimeout(resolve, 2000));
+                    }
+
+                    // Attach a unique angle so the AI generates a truly different article each time
+                    const angle = angles[i % angles.length];
+                    const variatedPrompt = `${aiPrompt}\n\n[UNIQUE ANGLE FOR ARTICLE #${i + 1}: ${angle} Choose a unique subtopic. Do NOT reuse the same title or slug as other variations.]`;
+
                     try {
                         const response = await fetch('/api/admin/generate-article', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({
-                                prompt: aiPrompt,
+                                prompt: variatedPrompt,
                                 category: editingPost?.category || 'Tips and Trick',
                                 model: selectedModel,
                                 language: selectedLanguage
@@ -444,17 +468,22 @@ const AdminBlogManager: React.FC = () => {
                             if (imgRes.ok && imgData.success && imgData.image) {
                                 finalImage = imgData.image;
                             }
-                        } catch (e) { console.warn("Image suggest failed for item", i); }
+                        } catch (e) { console.warn('Image suggest failed for item', i); }
 
                         const currentPostsCombined = [...posts, ...bulkNewPosts];
                         const nextId = currentPostsCombined.length > 0
                             ? Math.max(...currentPostsCombined.map(p => p.id)) + 1
                             : 1;
 
+                        // Guarantee unique slug even if the AI repeats itself
+                        const baseSlug = article.slug || `ai-post-${nextId}`;
+                        const existingSlugs = new Set(currentPostsCombined.map(p => p.slug));
+                        const uniqueSlug = existingSlugs.has(baseSlug) ? `${baseSlug}-${nextId}` : baseSlug;
+
                         const newPost: BlogPost = {
                             id: nextId,
-                            title: article.title || 'Untitled AI Post',
-                            slug: article.slug || `ai-post-${nextId}`,
+                            title: article.title || `Untitled AI Post #${nextId}`,
+                            slug: uniqueSlug,
                             excerpt: article.excerpt || '',
                             category: article.category || editingPost?.category || 'Tips and Trick',
                             image: finalImage,
@@ -472,7 +501,7 @@ const AdminBlogManager: React.FC = () => {
                         bulkNewPosts.push(newPost);
                         successCount++;
                     } catch (err) {
-                        console.error(`Bulk item ${i} failed:`, err);
+                        console.error(`Bulk item ${i + 1} failed:`, err);
                     }
                 }
 
