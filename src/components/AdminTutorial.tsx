@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react'
-import { ArrowRight, Sparkles, BookOpen, Layout, FileText, Info } from 'lucide-react'
+import { ArrowRight, Sparkles, BookOpen, Layout, FileText, Info, X } from 'lucide-react'
 import { useTutorial, TUTORIAL_STEPS } from '../context/TutorialContext'
+import { useLocation } from 'react-router-dom'
 
 const AdminTutorial: React.FC = () => {
-    const { currentStep, nextStep, getStepData, isActive } = useTutorial();
+    const { currentStep, nextStep, getStepData, isActive, closeTutorial } = useTutorial();
+    const location = useLocation();
     const [targetRect, setTargetRect] = useState<DOMRect | null>(null);
 
     const stepData = getStepData();
@@ -150,7 +152,21 @@ const AdminTutorial: React.FC = () => {
         return <Info className="text-indigo-500" size={24} />;
     };
 
-    if (!isActive || !stepData) return null;
+    const isPageMatch = useMemo(() => {
+        if (!stepData) return false;
+        const target = stepData.targetPage;
+        const current = location.pathname;
+
+        if (target === current) return true;
+
+        // Special handling for /admin vs /admin/dashboard
+        if (target === '/admin' && current === '/admin/dashboard') return true;
+        if (target === '/admin/dashboard' && current === '/admin') return true;
+
+        return false;
+    }, [location.pathname, stepData]);
+
+    if (!isActive || !stepData || !isPageMatch) return null;
 
     return (
         <div className="tutorial-root">
@@ -170,6 +186,14 @@ const AdminTutorial: React.FC = () => {
 
             <div className="tutorial-bar-container" style={cardPosition as any}>
                 <div className={`tutorial-bar step-${currentStep}`}>
+                    <button 
+                        className="tutorial-close-btn" 
+                        onClick={closeTutorial}
+                        title="Close Tutorial"
+                    >
+                        <X size={18} />
+                    </button>
+
                     <div className="bar-badge">
                         <span>{currentStep}/{TUTORIAL_STEPS.length}</span>
                     </div>
@@ -182,14 +206,17 @@ const AdminTutorial: React.FC = () => {
                         </div>
                     </div>
 
-                    {!stepData.hideNext && (
-                        <div className="bar-footer">
+                    <div className="bar-footer">
+                        <button className="bar-skip-btn" onClick={closeTutorial}>
+                            Skip Tutorial
+                        </button>
+                        {!stepData.hideNext && (
                             <button className="bar-next-btn" onClick={nextStep}>
                                 <span>{stepData.btnText || 'Next'}</span>
                                 {currentStep === TUTORIAL_STEPS.length ? <Sparkles size={16} /> : <ArrowRight size={16} />}
                             </button>
-                        </div>
-                    )}
+                        )}
+                    </div>
                 </div>
             </div>
 
@@ -236,6 +263,33 @@ const AdminTutorial: React.FC = () => {
           gap: 16px;
           animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
           border: 1px solid rgba(0, 77, 44, 0.1);
+          position: relative;
+        }
+
+        .tutorial-close-btn {
+          position: absolute;
+          top: -10px;
+          right: 20px;
+          background: #fff;
+          border: 1px solid rgba(0, 77, 44, 0.1);
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          color: #64748b;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          transition: all 0.2s;
+          pointer-events: auto;
+          z-index: 10003;
+        }
+
+        .tutorial-close-btn:hover {
+          color: #ef4444;
+          transform: scale(1.1);
+          box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2);
         }
 
         .bar-badge {
@@ -301,6 +355,9 @@ const AdminTutorial: React.FC = () => {
 
         .bar-footer {
           flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          gap: 12px;
         }
 
         .bar-next-btn {
@@ -324,6 +381,24 @@ const AdminTutorial: React.FC = () => {
           box-shadow: 0 4px 12px rgba(0, 77, 44, 0.2);
         }
 
+        .bar-skip-btn {
+          background: transparent;
+          color: #64748b;
+          border: 1px solid #e2e8f0;
+          padding: 8px 14px;
+          border-radius: 100px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.2s;
+          font-size: 0.8rem;
+        }
+
+        .bar-skip-btn:hover {
+          background: #f8fafc;
+          color: #0f172a;
+          border-color: #cbd5e1;
+        }
+
         @keyframes slideUp {
           from { opacity: 0; transform: translateY(20px); }
           to { opacity: 1; transform: translateY(0); }
@@ -337,9 +412,15 @@ const AdminTutorial: React.FC = () => {
             flex-direction: column;
             gap: 12px;
           }
+          .tutorial-close-btn {
+            top: 10px;
+            right: 10px;
+          }
           .bar-badge { display: none; }
           .bar-main { width: 100%; }
-          .bar-next-btn { width: 100%; justify-content: center; }
+          .bar-footer { width: 100%; flex-direction: row; justify-content: space-between; }
+          .bar-next-btn { flex: 1; justify-content: center; }
+          .bar-skip-btn { flex: 1; justify-content: center; }
           .bar-text { -webkit-line-clamp: 3; }
         }
       `}</style>
