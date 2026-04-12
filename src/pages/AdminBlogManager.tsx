@@ -52,6 +52,9 @@ const AdminBlogManager: React.FC = () => {
     const [selectedModel, setSelectedModel] = useState('llama-3.3-70b-versatile')
 
     const [selectedLanguage, setSelectedLanguage] = useState('id')
+    const [numArticles, setNumArticles] = useState(1);
+    const [bulkProgress, setBulkProgress] = useState(0);
+
 
     // Deployment Status state
     const [activeDeploymentSha, setActiveDeploymentSha] = useState<string | null>(null)
@@ -384,84 +387,186 @@ const AdminBlogManager: React.FC = () => {
 
         setIsGenerating(true)
         setMessage(null)
+        setBulkProgress(0)
+
+        // Date helper for local time
+        const getLocalTime = () => {
+            const now = new Date()
+            const tzOffset = now.getTimezoneOffset() * 60000;
+            return (new Date(now.getTime() - tzOffset)).toISOString().slice(0, 16).replace('T', ' ');
+        }
+
+        // Author helper
+        const getAuthor = () => {
+            const username = getAdminUser()
+            return username === 'rio' || username === 'rioanggara' ? 'Angga' :
+                (username === 'brifki' || username === 'rifki') ? 'Moh Rifki' :
+                    username || 'Angga'
+        }
 
         try {
-            const response = await fetch('/api/admin/generate-article', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    prompt: aiPrompt,
-                    category: editingPost?.category,
-                    model: selectedModel,
-                    language: selectedLanguage
-                })
-            })
+            if (numArticles > 1) {
+                const bulkNewPosts: BlogPost[] = [];
+                let successCount = 0;
 
-            const result = await response.json()
+                for (let i = 0; i < numArticles; i++) {
+                    setBulkProgress(i + 1);
+                    try {
+                        const response = await fetch('/api/admin/generate-article', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                prompt: aiPrompt,
+                                category: editingPost?.category || 'Tips and Trick',
+                                model: selectedModel,
+                                language: selectedLanguage
+                            })
+                        });
 
-            if (!response.ok || !result.success) {
-                throw new Error(result.error || 'AI generation failed')
-            }
+                        const result = await response.json();
+                        if (!response.ok || !result.success) throw new Error(result.error || 'Generation failed');
 
-            const article = result.article
-            if (!editingPost) return; // Should not happen but for TS
+                        const article = result.article;
 
-            // 1. Prepare updated post object
-            const updatedPost: BlogPost = {
-                ...editingPost,
-                title: article.title || editingPost.title,
-                slug: article.slug || editingPost.slug,
-                excerpt: article.excerpt || editingPost.excerpt,
-                category: article.category || editingPost.category,
-                image: article.image || editingPost.image,
-                customContent: {
-                    introduction: article.introduction || '',
-                    keyPoints: article.keyPoints || [],
-                    language: (article.language as LanguageCode) || selectedLanguage || 'id',
-                    sections: article.sections || [],
-                    conclusion: article.conclusion || ''
+                        // Suggest image
+                        let finalImage = article.image || '';
+                        try {
+                            const imgRes = await fetch('/api/admin/suggest-image', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({
+                                    title: article.title,
+                                    excerpt: article.excerpt,
+                                    model: selectedModel
+                                })
+                            });
+                            const imgData = await imgRes.json();
+                            if (imgRes.ok && imgData.success && imgData.image) {
+                                finalImage = imgData.image;
+                            }
+                        } catch (e) { console.warn("Image suggest failed for item", i); }
+
+                        const currentPostsCombined = [...posts, ...bulkNewPosts];
+                        const nextId = currentPostsCombined.length > 0
+                            ? Math.max(...currentPostsCombined.map(p => p.id)) + 1
+                            : 1;
+
+                        const newPost: BlogPost = {
+                            id: nextId,
+                            title: article.title || 'Untitled AI Post',
+                            slug: article.slug || `ai-post-${nextId}`,
+                            excerpt: article.excerpt || '',
+                            category: article.category || editingPost?.category || 'Tips and Trick',
+                            image: finalImage,
+                            date: getLocalTime(),
+                            author: getAuthor(),
+                            status: 'draft',
+                            customContent: {
+                                introduction: article.introduction || '',
+                                keyPoints: article.keyPoints || [],
+                                language: (article.language as LanguageCode) || selectedLanguage || 'id',
+                                sections: article.sections || [],
+                                conclusion: article.conclusion || ''
+                            }
+                        };
+                        bulkNewPosts.push(newPost);
+                        successCount++;
+                    } catch (err) {
+                        console.error(`Bulk item ${i} failed:`, err);
+                    }
                 }
-            };
 
-            // 2. Set the post state
-            setEditingPost(updatedPost);
-            setShowAIModal(false);
-            setAiPrompt('');
-            setMessage({ type: 'success', text: '✨ Article generated! Now searching for a matching cover image...' });
+                if (bulkNewPosts.length > 0) {
+                    setPosts(prev => [...prev, ...bulkNewPosts]);
+                    setShowAIModal(false);
+                    setAiPrompt('');
+                    setMessage({
+                        type: 'success',
+                        text: `✨ Successfully generated ${successCount} articles! They are saved as drafts in your list.`
+                    });
+                } else {
+                    throw new Error('All article generations failed. Please check your AI model or prompt.');
+                }
 
-            // 3. Automatically trigger Suggest Cover using the NEW article data
-            try {
-                const imgResponse = await fetch('/api/admin/suggest-image', {
+            } else {
+                // Original single generation logic
+                const response = await fetch('/api/admin/generate-article', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        title: updatedPost.title,
-                        excerpt: updatedPost.excerpt,
-                        model: selectedModel
+                        prompt: aiPrompt,
+                        category: editingPost?.category,
+                        model: selectedModel,
+                        language: selectedLanguage
                     })
-                });
+                })
 
-                const imgResult = await imgResponse.json();
-                if (imgResponse.ok && imgResult.success && imgResult.image) {
-                    setEditingPost(current => current ? { ...current, image: imgResult.image } : null);
-                    setMessage({
-                        type: 'success',
-                        text: `✨ Article generated & Found a perfect cover: "${imgResult.searchQuery}"`,
-                        imageUrl: imgResult.image
-                    });
-                } else {
-                    setMessage({ type: 'success', text: '✨ Article generated successfully! (No matching cover found, you can add one manually)' });
+                const result = await response.json()
+
+                if (!response.ok || !result.success) {
+                    throw new Error(result.error || 'AI generation failed')
                 }
-            } catch (err) {
-                console.error('Auto-suggest image error:', err);
-                // Don't fail the whole process if only the image fails
-            }
 
+                const article = result.article
+                if (!editingPost) return; // Should not happen but for TS
+
+                // 1. Prepare updated post object
+                const updatedPost: BlogPost = {
+                    ...editingPost,
+                    title: article.title || editingPost.title,
+                    slug: article.slug || editingPost.slug,
+                    excerpt: article.excerpt || editingPost.excerpt,
+                    category: article.category || editingPost.category,
+                    image: article.image || editingPost.image,
+                    customContent: {
+                        introduction: article.introduction || '',
+                        keyPoints: article.keyPoints || [],
+                        language: (article.language as LanguageCode) || selectedLanguage || 'id',
+                        sections: article.sections || [],
+                        conclusion: article.conclusion || ''
+                    }
+                };
+
+                // 2. Set the post state
+                setEditingPost(updatedPost);
+                setShowAIModal(false);
+                setAiPrompt('');
+                setMessage({ type: 'success', text: '✨ Article generated! Now searching for a matching cover image...' });
+
+                // 3. Automatically trigger Suggest Cover using the NEW article data
+                try {
+                    const imgResponse = await fetch('/api/admin/suggest-image', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            title: updatedPost.title,
+                            excerpt: updatedPost.excerpt,
+                            model: selectedModel
+                        })
+                    });
+
+                    const imgResult = await imgResponse.json();
+                    if (imgResponse.ok && imgResult.success && imgResult.image) {
+                        setEditingPost(current => current ? { ...current, image: imgResult.image } : null);
+                        setMessage({
+                            type: 'success',
+                            text: `✨ Article generated & Found a perfect cover: "${imgResult.searchQuery}"`,
+                            imageUrl: imgResult.image
+                        });
+                    } else {
+                        setMessage({ type: 'success', text: '✨ Article generated successfully! (No matching cover found, you can add one manually)' });
+                    }
+                } catch (err) {
+                    console.error('Auto-suggest image error:', err);
+                    // Don't fail the whole process if only the image fails
+                }
+            }
         } catch (error) {
             console.error('AI generation error:', error)
             setMessage({ type: 'error', text: `AI generation failed: ${error instanceof Error ? error.message : 'Unknown error'}` })
         } finally {
             setIsGenerating(false)
+            setBulkProgress(0)
             if (currentStep === 8) nextStep(); // Move to Review step after generation
         }
     }
@@ -1301,6 +1406,23 @@ const AdminBlogManager: React.FC = () => {
                                 </select>
                             </div>
 
+                            <div className="input-group">
+                                <label>How many articles you want? (Max 10)</label>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '15px' }}>
+                                    <input
+                                        type="range"
+                                        min="1"
+                                        max="10"
+                                        value={numArticles}
+                                        onChange={(e) => setNumArticles(parseInt(e.target.value))}
+                                        disabled={isGenerating}
+                                        style={{ flex: 1, accentColor: '#004D2C' }}
+                                    />
+                                    <span style={{ fontWeight: '800', fontSize: '1.2rem', color: '#004D2C', minWidth: '30px' }}>{numArticles}</span>
+                                </div>
+                            </div>
+
+
                             <label style={{ fontSize: '13px', fontWeight: '700', color: '#444', marginBottom: '8px', display: 'block' }}>What would you like to write about?</label>
                             <textarea
                                 id="admin-ai-prompt-input"
@@ -1338,15 +1460,16 @@ const AdminBlogManager: React.FC = () => {
                                 {isGenerating ? (
                                     <>
                                         <Loader2 size={18} className="animate-spin" />
-                                        Generating...
+                                        {numArticles > 1 ? `Generating ${bulkProgress}/${numArticles}...` : 'Generating...'}
                                     </>
                                 ) : (
                                     <>
                                         <Sparkles size={18} />
-                                        Generate Article
+                                        {numArticles > 1 ? `Generate ${numArticles} Articles` : 'Generate Article'}
                                     </>
                                 )}
                             </button>
+
                         </div>
                     </div>
                 </div>
