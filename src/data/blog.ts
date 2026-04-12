@@ -2134,7 +2134,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1758520144705-71d4813b0e0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHBlb3BsZSUyMHNoYWtpbmclMjBoYW5kcyUyMGluJTIwb2ZmaWNlJTIwYnVpbGRpbmclMjBsb2JieXxlbnwwfDB8fHwxNzc1OTk5NDc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-12 20:11",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "选择合适的供應商對于企業的成功至關重要，尤其是對于初學者。然而，如何找到一個可靠的供應商呢？在這篇文章中，我們將為您提供一些實用的步驟和小提示，幫助您找到合適的供應商，讓您的企業順利發展。<br> 作为一家全球性的大宗商品交易公司，Naturra Extal 致力于为客户提供高质量的产品和服务，包括可可粉、香料、椰壳纖維等。我们相信，通过與我們合作，您將能找到最適合您的供應商，共同推動企業的成長。",
       "keyPoints": [
@@ -2177,7 +2177,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1765729003706-355ca161736d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjb3Jwb3JhdGUlMjBtZWV0aW5nJTIwcm9vbSUyMHdpdGglMjBjaXR5JTIwc2t5bGluZSUyMHZpZXd8ZW58MHwwfHx8MTc3NTk5OTQ4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-12 20:11",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "在当今的全球市场中，供应商的选择对于企业的成功至关重要。一个好的供应商不仅可以提供高质量的产品，还可以帮助企业节省成本、提高效率。那么，如何找到最好的供应商呢？在本文中，我们将分享一些高级策略和市场洞察，帮助您找到最适合您的企业的供应商。",
       "keyPoints": [
@@ -2220,7 +2220,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1734213025320-1aa0c14d01b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxzdXN0YWluYWJsZSUyMHN1cHBseSUyMGNoYWluJTIwd2FyZWhvdXNlJTIwbG9naXN0aWNzfGVufDB8MHx8fDE3NzU5OTk0ODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-12 20:11",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "在现代商业中，企业不仅需要考虑自身的利益，还需要考虑对环境的影响。因此，找到一个环保的供应商对于企业来说是非常重要的。Naturra Extal 作为一家专业的商品交易公司，致力于提供高质量的环保产品和服务。",
       "keyPoints": [
@@ -2261,7 +2261,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1766021736631-d2f15082aa59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwd2FyZWhvdXNlJTIwaW50ZXJpb3IlMjB3aXRoJTIwc2hpcHBpbmclMjBjb250YWluZXJzJTIwYW5kJTIwZm9ya2xpZnRzfGVufDB8MHx8fDE3NzU5OTk0OTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-12 20:11",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": " , . Naturra Extal . ",
       "keyPoints": [
@@ -2302,7 +2302,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1769355104335-acef3aa4c9b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxsb2dpc3RpY3MlMjB3YXJlaG91c2UlMjBpbnRlcmlvciUyMHdpdGglMjBjb250YWluZXJzJTIwYW5kJTIwZm9ya2xpZnRzfGVufDB8MHx8fDE3NzU5OTk1MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-12 20:11",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "在全球化的市场中，供应链的优化成为企业竞争力的关键因素。然而，供应链的复杂性和不确定性使得企业难以应对挑战。 Naturra Extal作为一家专业的印度尼西亚大宗商品交易公司，了解供应链挑战的重要性，并致力于提供高质量的产品和优化的供应链解决方案。",
       "keyPoints": [
@@ -2335,6 +2335,225 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "供应链优化是企业竞争力的关键因素，Naturra Extal作为一家专业的印度尼西亚大宗商品交易公司，致力于提供高质量的产品和优化的供应链解决方案。通过我们的供应链优势和专业知识，客户可以更好地应对供应链挑战和提高运营效率。"
+    }
+  },
+  {
+    "id": 62,
+    "title": "Panduan Pemula: Mengapa Naturra Extal?",
+    "slug": "mengapa-memilih-naturra-extal-panduan-pemula",
+    "excerpt": "Temukan alasan memilih Naturra Extal sebagai mitra bisnis Anda",
+    "category": "Tips and Trick",
+    "image": "https://images.unsplash.com/photo-1721305254301-bc22475ccf14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxzdXN0YWluYWJsZSUyMG5hdHVyYWwlMjByZXNvdXJjZXMlMjBwYXJ0bmVyc2hpcCUyMGNvbmNlcHR8ZW58MHwwfHx8MTc3NjAwOTQ2Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-12 22:57",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Dalam dunia perdagangan komoditas, memilih mitra bisnis yang tepat sangat penting. Naturra Extal hadir sebagai solusi bagi Anda yang mencari kualitas terbaik dengan pendekatan berkelanjutan. Dalam artikel ini, kita akan menjelajahi mengapa memilih Naturra Extal sebagai mitra bisnis Anda.",
+      "keyPoints": [
+        "Mengapa memilih Naturra Extal",
+        "Kelebihan Naturra Extal",
+        "Tips memulai bisnis dengan Naturra Extal"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengenal Naturra Extal",
+          "content": "Naturra Extal adalah perusahaan perdagangan komoditas premium asal Indonesia yang fokus pada kualitas terbaik dan pendekatan berkelanjutan. Dengan jaringan global yang luas, Naturra Extal siap memenuhi kebutuhan Anda akan komoditas terbaik.",
+          "imageSearchQuery": "indonesian commodity export",
+          "image": "https://images.unsplash.com/photo-1691074818164-0904aa6b056f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwY29tbW9kaXR5JTIwZXhwb3J0fGVufDB8MHx8fDE3NzYwMDk0NjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "indonesian commodity export"
+        },
+        {
+          "heading": "Kelebihan Naturra Extal",
+          "content": "Naturra Extal memiliki beberapa kelebihan yang membuatnya berbeda dari mitra bisnis lainnya. <strong>Kualitas terbaik</strong>, <em>pendekatan berkelanjutan</em>, dan <strong>partnership langsung dengan petani</strong> adalah beberapa kelebihan yang membuat Naturra Extal menjadi pilihan terbaik."
+        },
+        {
+          "heading": "Tips Memulai Bisnis dengan Naturra Extal",
+          "content": "Jika Anda ingin memulai bisnis dengan Naturra Extal, berikut beberapa tips yang dapat membantu. Pertama, <strong>kenali produk yang ditawarkan</strong> oleh Naturra Extal, seperti <strong>Cocoa Powder V10</strong> (produk dengan id: 1) dan <strong>Cocopeat Block 5kg Low EC</strong> (produk dengan id: 4). Kedua, <em>pastikan Anda memahami proses pengiriman dan pembayaran</em> yang ditawarkan oleh Naturra Extal.",
+          "productId": 1
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Setelah memahami kelebihan dan tips memulai bisnis dengan Naturra Extal, sekarang saatnya untuk mengambil langkah selanjutnya. <strong>Hubungi Naturra Extal</strong> untuk mendapatkan informasi lebih lanjut tentang produk dan layanan yang ditawarkan.",
+          "productId": 4
+        }
+      ],
+      "conclusion": "Dengan memilih Naturra Extal sebagai mitra bisnis, Anda dapat meningkatkan kualitas produk dan memenuhi kebutuhan pelanggan Anda. Jangan ragu untuk menghubungi Naturra Extal dan mulai bisnis Anda hari ini!"
+    }
+  },
+  {
+    "id": 63,
+    "title": "Mengoptimalkan Kualitas Komoditas",
+    "slug": "mengoptimalkan-kualitas-komoditas-dengan-naturra-extal",
+    "excerpt": "Tingkatkan kualitas komoditas Anda dengan strategi canggih dari Naturra Extal",
+    "category": "Tips and Trick",
+    "image": "https://images.unsplash.com/photo-1664802460256-5e1ea9edea42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGFncmljdWx0dXJlJTIwcHJvZHVjdHMlMjBvbiUyMHdvb2RlbiUyMHRhYmxlfGVufDB8MHx8fDE3NzYwMDk0NzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-12 22:57",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Dalam dunia perdagangan komoditas, kualitas produk sangat menentukan kesuksesan bisnis. Naturra Extal, sebagai perusahaan perdagangan komoditas terkemuka di Indonesia, memahami pentingnya kualitas dalam meningkatkan kepercayaan pelanggan dan meningkatkan pendapatan. Dalam artikel ini, kita akan membahas strategi canggih untuk mengoptimalkan kualitas komoditas dengan Naturra Extal.",
+      "keyPoints": [
+        "Menggunakan teknologi mutakhir untuk meningkatkan kualitas komoditas",
+        "Menerapkan praktik pertanian berkelanjutan untuk mengurangi dampak lingkungan",
+        "Membangun kerjasama dengan petani lokal untuk meningkatkan kualitas produk"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengapa Kualitas Komoditas Penting?",
+          "content": "Kualitas komoditas sangat penting dalam menentukan kesuksesan bisnis. <strong>Komoditas berkualitas tinggi</strong> dapat meningkatkan kepercayaan pelanggan, meningkatkan pendapatan, dan membedakan bisnis Anda dari kompetitor. Oleh karena itu, penting untuk memahami faktor-faktor yang mempengaruhi kualitas komoditas dan bagaimana mengoptimalkannya.",
+          "imageSearchQuery": "kualitas komoditas pertanian",
+          "image": "https://images.unsplash.com/photo-1560321941-84a23c5fce8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxrdWFsaXRhcyUyMGtvbW9kaXRhcyUyMHBlcnRhbmlhbnxlbnwwfDB8fHwxNzc2MDA5NDcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "kualitas komoditas pertanian"
+        },
+        {
+          "heading": "Strategi Canggih untuk Mengoptimalkan Kualitas Komoditas",
+          "content": "Naturra Extal memiliki beberapa strategi canggih untuk mengoptimalkan kualitas komoditas. <em>Pertama</em>, kami menggunakan teknologi mutakhir untuk meningkatkan kualitas komoditas. <em>Kedua</em>, kami menerapkan praktik pertanian berkelanjutan untuk mengurangi dampak lingkungan. <em>Ketiga</em>, kami membangun kerjasama dengan petani lokal untuk meningkatkan kualitas produk."
+        },
+        {
+          "heading": "Manfaat Menggunakan Jasa Naturra Extal",
+          "content": "Dengan menggunakan jasa Naturra Extal, Anda dapat meningkatkan kualitas komoditas Anda dan meningkatkan kepercayaan pelanggan. Kami memiliki <strong>pengalaman lebih dari 10 tahun</strong> dalam perdagangan komoditas dan memiliki jaringan yang luas dengan petani lokal dan pelanggan internasional. Produk kami yang paling populer adalah <strong>Natural Cocoa Powder V10 (productId: 1)</strong>.",
+          "productId": 1
+        },
+        {
+          "heading": "Kesimpulan",
+          "content": "Mengoptimalkan kualitas komoditas sangat penting dalam menentukan kesuksesan bisnis. Dengan menggunakan strategi canggih dan teknologi mutakhir, Naturra Extal dapat membantu Anda meningkatkan kualitas komoditas Anda dan meningkatkan kepercayaan pelanggan. <br> Jangan ragu untuk menghubungi kami untuk mempelajari lebih lanjut tentang bagaimana kami dapat membantu bisnis Anda."
+        }
+      ],
+      "conclusion": "Dengan demikian, Naturra Extal dapat menjadi mitra yang tepat untuk membantu Anda meningkatkan kualitas komoditas dan meningkatkan kesuksesan bisnis Anda."
+    }
+  },
+  {
+    "id": 64,
+    "title": "Pilih Naturra Extal",
+    "slug": "mengapa-memilih-naturra-extal-untuk-komoditas-berkelanjutan",
+    "excerpt": "Naturra Extal: Pilihan Terbaik untuk Komoditas Berkelanjutan",
+    "category": "Tips and Trick",
+    "image": "https://images.unsplash.com/photo-1732024695910-4b43293ecc87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxzdXN0YWluYWJsZSUyMGFncmljdWx0dXJlJTIwbGFuZHNjYXBlfGVufDB8MHx8fDE3NzYwMDk0ODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-12 22:57",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Dalam beberapa tahun terakhir, kesadaran akan pentingnya praktik berkelanjutan dalam pertanian telah meningkat. Naturra Extal memahami hal ini dan berkomitmen untuk menyediakan komoditas pertanian berkualitas tinggi dengan cara yang ramah lingkungan. Dalam artikel ini, kita akan membahas mengapa memilih Naturra Extal untuk komoditas pertanian Anda.",
+      "keyPoints": [
+        "Praktik pertanian berkelanjutan",
+        "Kualitas komoditas tinggi",
+        "Dampak lingkungan minimal"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengapa Praktik Berkelanjutan Penting?",
+          "content": "Praktik pertanian berkelanjutan sangat penting untuk menjaga keseimbangan ekosistem dan memastikan kelangsungan hidup planet kita. Dengan memilih Naturra Extal, Anda mendukung praktik pertanian yang ramah lingkungan dan berkelanjutan. <br> Kami berkomitmen untuk mengurangi dampak lingkungan dari operasi pertanian kami, sehingga Anda dapat merasa nyaman dengan pilihan Anda.",
+          "imageSearchQuery": "ekosistem pertanian berkelanjutan",
+          "image": "https://images.unsplash.com/photo-1676281945195-7a7b0ba93b75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxla29zaXN0ZW0lMjBwZXJ0YW5pYW4lMjBiZXJrZWxhbmp1dGFufGVufDB8MHx8fDE3NzYwMDk0Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "ekosistem pertanian berkelanjutan"
+        },
+        {
+          "heading": "Kelebihan Komoditas Naturra Extal",
+          "content": "Naturra Extal menawarkan komoditas pertanian berkualitas tinggi yang diperoleh dari sumber daya alam yang terjaga dengan baik. Kami bekerja sama dengan petani lokal untuk memastikan bahwa komoditas kami diproduksi dengan cara yang berkelanjutan dan ramah lingkungan. <br> Dengan memilih Naturra Extal, Anda dapat yakin bahwa Anda mendapatkan komoditas pertanian terbaik untuk kebutuhan Anda."
+        },
+        {
+          "heading": "Dampak Lingkungan Minimal",
+          "content": "Naturra Extal berkomitmen untuk mengurangi dampak lingkungan dari operasi pertanian kami. Kami menggunakan praktik pertanian yang ramah lingkungan, seperti penggunaan pupuk alami dan pengelolaan air yang efektif. <br> Dengan memilih Naturra Extal, Anda mendukung upaya kami untuk menjaga keseimbangan ekosistem dan memastikan kelangsungan hidup planet kita. Kami menawarkan produk <strong>Cocopeat Block 5kg Low EC</strong> (produk ID: 4) yang sangat ramah lingkungan.",
+          "productId": 4
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda ingin mendukung praktik pertanian berkelanjutan dan memastikan kelangsungan hidup planet kita, pilihlah Naturra Extal untuk komoditas pertanian Anda. <br> Kami menawarkan berbagai macam komoditas pertanian berkualitas tinggi, termasuk <strong>Natural Cocoa Powder V10</strong> (produk ID: 1) yang diproduksi dengan cara yang berkelanjutan. Kunjungi situs web kami untuk mempelajari lebih lanjut tentang produk kami dan bagaimana Anda dapat mendukung upaya kami.",
+          "productId": 1
+        }
+      ],
+      "conclusion": "Dengan memilih Naturra Extal, Anda tidak hanya mendapatkan komoditas pertanian berkualitas tinggi, tetapi juga mendukung praktik pertanian berkelanjutan dan ramah lingkungan. <br> Kami berkomitmen untuk menjaga keseimbangan ekosistem dan memastikan kelangsungan hidup planet kita. Pilihlah Naturra Extal untuk komoditas pertanian Anda dan bergabunglah dengan upaya kami untuk menciptakan masa depan yang lebih berkelanjutan."
+    }
+  },
+  {
+    "id": 65,
+    "title": "Mengapa Naturra Extal",
+    "slug": "mengapa-memilih-naturra-extal",
+    "excerpt": "Mengapa memilih Naturra Extal untuk komoditas pertanian berkualitas",
+    "category": "Tips and Trick",
+    "image": "https://images.unsplash.com/photo-1664802460256-5e1ea9edea42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMGFncmljdWx0dXJhbCUyMHByb2R1Y3RzJTIwb24lMjB3b29kZW4lMjB0YWJsZXxlbnwwfDB8fHwxNzc2MDA5NDg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-12 22:58",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Dalam memilih penyedia komoditas pertanian, kualitas dan keamanan pangan menjadi prioritas utama. Naturra Extal merupakan salah satu perusahaan yang memahami pentingnya kualitas dan keamanan pangan dalam produknya. Dalam artikel ini, kita akan membahas mengapa memilih Naturra Extal untuk komoditas pertanian berkualitas.",
+      "keyPoints": [
+        "Kualitas produk yang terjamin",
+        "Sertifikasi dan standar keamanan pangan internasional",
+        "Proses produksi yang berkelanjutan dan ramah lingkungan"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengapa Kualitas Produk Penting?",
+          "content": "Kualitas produk menjadi salah satu faktor penting dalam memilih penyedia komoditas pertanian. <strong>Naturra Extal</strong> memahami pentingnya kualitas dan telah menerapkan standar kualitas yang ketat dalam proses produksinya. Dengan demikian, produk yang dihasilkan tidak hanya berkualitas tinggi tetapi juga aman untuk dikonsumsi.",
+          "imageSearchQuery": "indonesian cocoa quality control laboratory",
+          "image": "https://images.unsplash.com/photo-1678998645644-691112b54c7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwY29jb2ElMjBxdWFsaXR5JTIwY29udHJvbCUyMGxhYm9yYXRvcnl8ZW58MHwwfHx8MTc3NjAwOTQ4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "indonesian cocoa quality control laboratory"
+        },
+        {
+          "heading": "Sertifikasi dan Standar Keamanan Pangan",
+          "content": "Naturra Extal telah mendapatkan <em>sertifikasi internasional</em> seperti ISO 22000 dan HACCP, yang menunjukkan komitmen perusahaan terhadap keamanan pangan. Selain itu, perusahaan juga menerapkan standar keamanan pangan yang ketat dalam proses produksinya, sehingga produk yang dihasilkan aman untuk dikonsumsi."
+        },
+        {
+          "heading": "Proses Produksi yang Berkelanjutan",
+          "content": "Naturra Extal juga menerapkan proses produksi yang berkelanjutan dan ramah lingkungan. Perusahaan bekerja sama dengan petani lokal untuk menghasilkan produk yang berkualitas tinggi dan berkelanjutan. Dengan demikian, produk yang dihasilkan tidak hanya berkualitas tinggi tetapi juga ramah lingkungan.",
+          "productId": 1
+        },
+        {
+          "heading": "Keuntungan Memilih Naturra Extal",
+          "content": "Dengan memilih Naturra Extal, Anda dapat menikmati keuntungan seperti kualitas produk yang terjamin, sertifikasi dan standar keamanan pangan internasional, dan proses produksi yang berkelanjutan. Selain itu, perusahaan juga menawarkan harga yang kompetitif dan layanan yang baik.",
+          "productId": 3
+        }
+      ],
+      "conclusion": "Dalam memilih penyedia komoditas pertanian, kualitas dan keamanan pangan menjadi prioritas utama. Naturra Extal merupakan salah satu perusahaan yang memahami pentingnya kualitas dan keamanan pangan dalam produknya. Dengan kualitas produk yang terjamin, sertifikasi dan standar keamanan pangan internasional, dan proses produksi yang berkelanjutan, Naturra Extal menjadi pilihan yang tepat untuk komoditas pertanian berkualitas."
+    }
+  },
+  {
+    "id": 66,
+    "title": "Manfaat Kesehatan dari Produk Naturra Extal",
+    "slug": "manfaat-kesehatan-dari-produk-naturra-extal",
+    "excerpt": "Temukan manfaat kesehatan dari produk Naturra Extal dan bagaimana kami memprioritaskan kualitas dan keamanan pangan",
+    "category": "Tips and Trick",
+    "image": "https://images.unsplash.com/photo-1738757056049-9e545e1b2432?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxuYXR1cmFsJTIwZm9vZCUyMHN1cHBsZW1lbnRzJTIwb24lMjB3b29kZW4lMjB0YWJsZXxlbnwwfDB8fHwxNzc2MDA5NTA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-12 22:58",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Dalam era modern ini, kesadaran akan kesehatan dan kualitas hidup meningkat. Banyak orang mencari produk yang tidak hanya lezat tetapi juga sehat dan aman untuk dikonsumsi. Naturra Extal, sebagai perusahaan yang memprioritaskan kualitas dan keamanan pangan, menawarkan berbagai produk yang kaya akan manfaat kesehatan. Dalam artikel ini, kita akan membahas mengapa memilih Naturra Extal dan manfaat kesehatan yang bisa Anda dapatkan dari produk kami.",
+      "keyPoints": [
+        "Manfaat kesehatan dari produk cokelat",
+        "Kandungan gizi yang tinggi pada rempah-rempah",
+        "Keamanan pangan yang terjamin"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengenal Manfaat Kesehatan dari Cokelat",
+          "content": "Cokelat, terutama cokelat hitam, kaya akan antioksidan dan flavonoid yang dapat membantu melindungi tubuh dari kerusakan akibat radikal bebas. Selain itu, cokelat juga dapat membantu meningkatkan aliran darah ke otak dan jantung, sehingga baik untuk kesehatan jantung dan otak. Naturra Extal menawarkan <strong>Natural Cocoa Powder V10</strong> yang diproses dengan teknologi mutakhir untuk menjaga kandungan gizinya.",
+          "imageSearchQuery": "dark chocolate benefits",
+          "image": "https://images.unsplash.com/photo-1737976685095-833ed51e7fcc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxkYXJrJTIwY2hvY29sYXRlJTIwYmVuZWZpdHN8ZW58MHwwfHx8MTc3NjAwOTUwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "dark chocolate benefits"
+        },
+        {
+          "heading": "Rempah-rempah dan Kandungan Gizinya",
+          "content": "Rempah-rempah seperti <em>kayu manis, lada, dan vanila</em> tidak hanya memberikan rasa yang unik pada makanan, tetapi juga kaya akan kandungan gizi. Lada, misalnya, mengandung antioksidan yang tinggi dan dapat membantu meningkatkan pencernaan. Sementara itu, vanila memiliki sifat anti-inflamasi yang dapat membantu mengurangi peradangan dalam tubuh. Naturra Extal menyediakan berbagai rempah-rempah berkualitas tinggi, seperti <strong>Premium Indonesian Cloves Lal Pari</strong> dan <strong>Vanilla Planifolia Beans Gourmet</strong>, yang dipilih dengan hati-hati untuk memastikan kualitas dan keamanan pangan."
+        },
+        {
+          "heading": "Keamanan Pangan yang Terjamin",
+          "content": "Naturra Extal sangat memprioritaskan keamanan pangan. Kami bekerja sama dengan petani langsung untuk memastikan bahwa produk kami dipanen, diproses, dan didistribusikan dengan standar keamanan pangan yang tinggi. Dengan demikian, konsumen dapat merasa aman dan nyaman saat mengonsumsi produk kami, seperti <strong>Cocopeat Block 5kg Low EC</strong> yang ideal untuk kebutuhan pertanian dan berkebun.",
+          "productId": 4
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda tertarik untuk mengetahui lebih lanjut tentang produk Naturra Extal dan bagaimana kami dapat membantu Anda dalam memilih produk yang sehat dan aman, silakan kunjungi situs web kami atau hubungi tim kami. Kami senang membantu Anda dalam memilih produk yang tepat untuk kebutuhan Anda.",
+          "productId": 1
+        }
+      ],
+      "conclusion": "Dengan memilih Naturra Extal, Anda tidak hanya memilih produk yang lezat, tetapi juga memilih kesehatan dan keamanan pangan yang terjamin. Kami berkomitmen untuk terus menyediakan produk-produk yang berkualitas tinggi dan kaya akan manfaat kesehatan, sehingga Anda dapat menikmati hidup yang lebih sehat dan lebih baik."
     }
   }
 ];
