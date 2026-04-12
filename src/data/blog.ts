@@ -1698,7 +1698,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1619385006990-e5734fa74bef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMHBlcHBlcmNvcm5zJTIwb24lMjB3b29kZW4lMjBzcG9vbnxlbnwwfDB8fHwxNzc1OTYzMzkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-12 10:09",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Lada adalah salah satu bumbu yang paling umum digunakan dalam masakan. Namun, untuk mendapatkan rasa yang optimal, Anda perlu memilih lada yang berkualitas. Dalam artikel ini, kita akan membahas tips dan trik untuk memilih lada yang tepat untuk kebutuhan Anda.",
       "keyPoints": [
@@ -1731,6 +1731,50 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dalam memilih lada, Anda perlu memahami jenis-jenis lada, mengenali ciri-ciri lada berkualitas, dan mengetahui tips penyimpanan lada. Dengan demikian, Anda dapat mendapatkan lada yang berkualitas dan membuat masakan Anda menjadi lebih lezat. Naturra Extal adalah solusi untuk kebutuhan lada Anda, dengan pengalaman yang luas dan jaringan yang luas dengan petani dan produsen lada di Indonesia."
+    }
+  },
+  {
+    "id": 47,
+    "slug": "tips-menggunakan-rempah",
+    "title": "Tips Menggunakan Rempah",
+    "category": "Tips and Trick",
+    "excerpt": "Maksimalkan rasa dengan tips menggunakan rempah yang tepat",
+    "image": "https://images.unsplash.com/photo-1643824562770-f94d32874f72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGluZG9uZXNpYW4lMjBzcGljZSUyMG1hcmtldCUyMHN0YWxsfGVufDB8MHx8fDE3NzU5NjM0Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-12 10:11",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Rempah-rempah adalah salah satu komponen penting dalam memasak. Dengan menggunakan rempah yang tepat, Anda dapat meningkatkan rasa dan aroma makanan. Namun, bagaimana cara menggunakan rempah dengan benar? Berikut beberapa tips yang dapat Anda ikuti.",
+      "keyPoints": [
+        "Pilih rempah yang segar",
+        "Gunakan rempah dalam jumlah yang tepat",
+        "Campur rempah dengan bahan lainnya"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengenal Jenis Rempah",
+          "content": "Indonesia dikenal sebagai negara dengan kekayaan rempah-rempah yang luar biasa. Dari lada, kemiri, hingga kunyit, setiap jenis rempah memiliki keunikan dan kegunaannya sendiri. <strong>Pemilihan rempah yang tepat</strong> dapat menentukan hasil akhir masakan Anda.",
+          "imageSearchQuery": "variasi rempah indonesia",
+          "image": "https://images.unsplash.com/photo-1643357774422-d975ae18161f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHx2YXJpYXNpJTIwcmVtcGFoJTIwaW5kb25lc2lhfGVufDB8MHx8fDE3NzU5NjM0NzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "variasi rempah indonesia"
+        },
+        {
+          "heading": "Tips Menggunakan Rempah",
+          "content": "Untuk mendapatkan hasil maksimal, Anda perlu menggunakan rempah dengan benar. <em>Pastikan Anda menyimpan rempah dalam wadah tertutup</em> untuk menjaga kesegarannya. Selain itu, <em>gunakan rempah dalam jumlah yang tepat</em> untuk menghindari rasa yang terlalu kuat atau terlalu lemah."
+        },
+        {
+          "heading": "Menggunakan Rempah dalam Resep",
+          "content": "Naturra Extal menawarkan berbagai jenis rempah berkualitas, termasuk <strong>Premium Indonesian Cloves Lal Pari</strong> (produk ID: 3) yang dapat digunakan dalam berbagai resep. Dengan menggunakan rempah yang berkualitas, Anda dapat meningkatkan rasa dan aroma makanan Anda.",
+          "productId": 3
+        },
+        {
+          "heading": "Menghindari Kesalahan Umum",
+          "content": "Beberapa kesalahan umum yang dilakukan saat menggunakan rempah adalah <em>melebihi jumlah rempah yang diperlukan</em> atau <em>tidak menyimpan rempah dengan benar</em>. Dengan menghindari kesalahan-kesalahan ini, Anda dapat mendapatkan hasil masakan yang lebih baik.",
+          "productId": 7
+        }
+      ],
+      "conclusion": "Dengan mengikuti tips dan trik di atas, Anda dapat meningkatkan kemampuan memasak Anda dan menghasilkan makanan yang lebih lezat. Jangan ragu untuk mencoba berbagai jenis rempah dan bereksperimen dengan resep baru. <br> Naturra Extal siap membantu Anda dalam memilih rempah yang berkualitas dan memberikan saran-saran untuk meningkatkan kemampuan memasak Anda."
     }
   }
 ];
