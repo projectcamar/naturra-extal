@@ -1786,7 +1786,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1579705745177-b13f157e7f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxzcGljZXMlMjBvbiUyMHdvb2RlbiUyMGtpdGNoZW4lMjB0YWJsZXxlbnwwfDB8fHwxNzc1OTYzOTYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-12 10:19",
     "author": "Moh Rifki",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Rempah-rempah merupakan salah satu komponen penting dalam memasak, karena dapat menambahkan rasa dan aroma yang khas pada hidangan. Namun, banyak orang yang masih belum memahami cara memilih dan menggunakan rempah dengan tepat. Dalam artikel ini, kita akan membahas beberapa tips dan trik untuk menggunakan rempah dengan efektif.",
       "keyPoints": [
@@ -1819,6 +1819,50 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dengan mengikuti tips dan trik di atas, Anda dapat menjadi lebih mahir dalam menggunakan rempah dan menciptakan hidangan yang lezat dan aromatik. Ingatlah untuk selalu memilih rempah yang segar dan berkualitas, serta menggunakan jumlah yang tepat untuk mendapatkan rasa yang optimal."
+    }
+  },
+  {
+    "id": 49,
+    "slug": "mengoptimalkan-rasa-dengan-rempah",
+    "title": "Mengoptimalkan Rasa Dengan Rempah",
+    "category": "Tips and Trick",
+    "excerpt": "Tips memilih dan menggunakan rempah untuk meningkatkan rasa masakan",
+    "image": "https://images.unsplash.com/photo-1579705745177-b13f157e7f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxhc3NvcnRtZW50JTIwb2YlMjB3aG9sZSUyMHNwaWNlcyUyMG9uJTIwd29vZGVuJTIwdGFibGV8ZW58MHwwfHx8MTc3NTk4MTE1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-12 15:05",
+    "author": "Angga",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Rempah-rempah adalah bagian penting dalam masakan Indonesia, memberikan rasa dan aroma yang khas. Namun, memilih dan menggunakan rempah yang tepat bisa menjadi tantangan. Dalam artikel ini, kita akan membahas beberapa tips untuk mengoptimalkan rasa dengan rempah.",
+      "keyPoints": [
+        "Memilih rempah yang segar dan berkualitas",
+        "Menggunakan rempah dalam jumlah yang tepat",
+        "Mengkombinasikan rempah untuk menciptakan rasa unik"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengenal Jenis Rempah yang Umum Digunakan",
+          "content": "Indonesia dikenal sebagai negara dengan kekayaan rempah yang luar biasa. Beberapa jenis rempah yang umum digunakan dalam masakan Indonesia adalah <strong>lada</strong>, <strong>kapulaga</strong>, dan <strong>ketumbar</strong>. Setiap jenis rempah memiliki rasa dan aroma yang unik, sehingga penting untuk memahami cara menggunakan mereka dengan benar.",
+          "imageSearchQuery": "indonesian spices on wooden spoon",
+          "image": "https://images.unsplash.com/photo-1723879682967-bc344881f2ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwc3BpY2VzJTIwb24lMjB3b29kZW4lMjBzcG9vbnxlbnwwfDB8fHwxNzc1OTgxMTUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "indonesian spices on wooden spoon"
+        },
+        {
+          "heading": "Tips Memilih Rempah yang Berkualitas",
+          "content": "Memilih rempah yang berkualitas adalah kunci untuk mendapatkan rasa yang optimal. Pastikan untuk memilih rempah yang <em>segar</em> dan <em>tidak terlalu lama disimpan</em>. Rempah yang sudah lama disimpan bisa kehilangan rasa dan aromanya, sehingga tidak akan memberikan hasil yang diinginkan."
+        },
+        {
+          "heading": "Menggunakan Rempah dari Naturra Extal",
+          "content": "Naturra Extal menawarkan berbagai jenis rempah yang berkualitas, termasuk <strong>Lampung Black Pepper B1</strong> (productId: 7) dan <strong>Premium Indonesian Cloves Lal Pari</strong> (productId: 3). Dengan menggunakan rempah dari Naturra Extal, Anda dapat yakin bahwa Anda mendapatkan rasa dan aroma yang optimal untuk masakan Anda.",
+          "productId": 7
+        },
+        {
+          "heading": "Kombinasi Rempah untuk Rasa Unik",
+          "content": "Mengkombinasikan rempah dapat menciptakan rasa unik dan menarik. Contohnya, Anda dapat mencampur <strong>lada</strong> dengan <strong>kapulaga</strong> untuk menciptakan rasa yang hangat dan aromatik. <br> Dengan bereksperimen dan mencari kombinasi rempah yang tepat, Anda dapat meningkatkan rasa masakan Anda dan membuatnya lebih menarik.",
+          "productId": 3
+        }
+      ],
+      "conclusion": "Dengan memahami cara memilih dan menggunakan rempah yang tepat, Anda dapat meningkatkan rasa masakan Anda dan membuatnya lebih menarik. Pastikan untuk memilih rempah yang segar dan berkualitas, dan jangan ragu untuk bereksperimen dengan kombinasi rempah yang unik. Dengan Naturra Extal, Anda dapat yakin bahwa Anda mendapatkan rempah yang berkualitas untuk memenuhi kebutuhan masakan Anda."
     }
   }
 ];
