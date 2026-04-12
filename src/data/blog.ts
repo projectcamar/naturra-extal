@@ -1874,7 +1874,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1746474072546-9fbda10daffe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxzZWVkcyUyMGluJTIwYSUyMGZhcm1lciUyN3MlMjBoYW5kJTIwd2l0aCUyMGElMjBnbG9iZSUyMGluJTIwdGhlJTIwYmFja2dyb3VuZHxlbnwwfDB8fHwxNzc1OTk4MTk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-12 19:50",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "As a key player in the global commodity market, Naturra Extal understands the importance of a well-planned export seed strategy. With years of experience in sourcing high-quality seeds from Indonesian farmers, we've compiled expert tips to help manufacturers, food & beverage industries, and agricultural retailers succeed in the export market. In this article, we'll explore the best practices for exporting seeds and how to leverage Naturra Extal's sustainable sourcing and direct farmer partnerships to drive business growth.",
       "keyPoints": [
@@ -1919,7 +1919,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1716034353314-8d4d8b9b95cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxzZWVkcyUyMGluJTIwc21hbGwlMjBwb3RzJTIwb24lMjB3b29kZW4lMjB0YWJsZXxlbnwwfDB8fHwxNzc1OTk4NzA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-12 19:58",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Les biji, ou graines de cacao, sont à la base de la fabrication du chocolat. Mais savez-vous comment les utiliser pour créer des produits délicieux ? Dans cet article, nous allons vous présenter des conseils pratiques pour démarrer avec les biji. <br> Nous allons aborder les étapes de base pour préparer les biji, ainsi que quelques astuces pour les utiliser dans vos recettes.",
       "keyPoints": [
@@ -1963,7 +1963,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1758356860542-a2df92aad294?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxzb3JnaHVtJTIwZmFybSUyMGFlcmlhbCUyMHZpZXd8ZW58MHwwfHx8MTc3NTk5ODcxNHww&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-12 19:58",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Le biji, également connu sous le nom de vanille, est l'une des épices les plus précieuses au monde. Les producteurs et les exportateurs de biji doivent être à la pointe des dernières tendances et stratégies pour rester compétitifs sur le marché mondial. Dans cet article, nous allons explorer les stratégies avancées pour optimiser votre production de biji et maximiser vos profits.",
       "keyPoints": [
@@ -2002,7 +2002,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1608604897874-a086af52701c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwY29mZmVlJTIwYmVhbnMlMjBxdWFsaXR5JTIwY29udHJvbHxlbnwwfDB8fHwxNzc1OTk4NzI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-12 19:58",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Les biji, ou graines, sont un ingrédient essentiel dans de nombreux produits alimentaires. Cependant, leur qualité peut varier en fonction de facteurs tels que la source, le traitement et la conservation. Dans cet article, nous allons explorer les normes de qualité, les certifications et les normes de sécurité alimentaire pour les biji.",
       "keyPoints": [
@@ -2046,7 +2046,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1711060266983-92bd378c850c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwdHJhZGl0aW9uYWwlMjByaWNlJTIwZ3JhaW5zJTIwY2xvc2V1cHxlbnwwfDB8fHwxNzc1OTk4NzM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-12 19:58",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Les biji, ou graines, sont une partie intégrante de la culture indonésienne. Depuis des siècles, les Indonésiens cultivent et utilisent ces graines pour diverses applications. Dans cet article, nous allons explorer l'histoire, la signification culturelle et les traditions entourant les biji.",
       "keyPoints": [
