@@ -1654,7 +1654,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "https://images.unsplash.com/photo-1614897920852-72084376cd9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxjb2NvYSUyMHBvZHMlMjBvbiUyMHdvb2RlbiUyMHRhYmxlfGVufDB8MHx8fDE3NzUzOTgzOTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-05 21:12",
     "author": "Angga",
-    "status": "draft",
+    "status": "synced",
     "customContent": {
       "introduction": "Kakao adalah salah satu komoditas yang paling populer di Indonesia, dengan kegunaan yang luas dalam industri makanan dan minuman. Namun, mengolah kakao dengan benar sangat penting untuk mendapatkan hasil terbaik. Dalam artikel ini, kita akan membahas beberapa tips dan trik mengolah kakao.",
       "keyPoints": [
@@ -1687,6 +1687,48 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       "conclusion": "Dengan mengikuti tips dan trik mengolah kakao yang telah kita bahas, Anda dapat mendapatkan hasil terbaik dari komoditas ini. <strong>Naturra Extal</strong> siap membantu Anda dalam mengolah kakao dengan menggunakan teknologi canggih dan tim ahli yang berpengalaman. Hubungi kami sekarang juga untuk mendapatkan informasi lebih lanjut!"
+    }
+  },
+  {
+    "id": 46,
+    "slug": "tips-memilih-rempah",
+    "title": "Tips Memilih Rempah",
+    "category": "Tips and Trick",
+    "excerpt": "Panduan memilih rempah yang berkualitas untuk mendapatkan rasa yang optimal",
+    "image": "https://images.unsplash.com/photo-1652282561002-7a9d8542c26e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMHNwaWNlcyUyMG9uJTIwd29vZGVuJTIwc3Bvb258ZW58MHwwfHx8MTc3NTk2MzM4MHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "date": "2026-04-12 10:09",
+    "author": "Moh Rifki",
+    "status": "draft",
+    "customContent": {
+      "introduction": "Rempah-rempah merupakan salah satu bahan penting dalam memasak, karena dapat menambahkan rasa dan aroma yang khas pada makanan. Namun, memilih rempah yang berkualitas tidaklah mudah. Berikut beberapa tips untuk memilih rempah yang tepat.",
+      "keyPoints": [
+        "Pilih rempah yang segar dan berkualitas",
+        "Perhatikan warna dan aroma rempah",
+        "Beli rempah dari sumber yang terpercaya"
+      ],
+      "language": "id",
+      "sections": [
+        {
+          "heading": "Mengapa Rempah yang Berkualitas Penting?",
+          "content": "Rempah yang berkualitas dapat menambahkan rasa dan aroma yang khas pada makanan, sehingga membuat makanan menjadi lebih lezat. Selain itu, rempah yang berkualitas juga dapat membantu menjaga kesehatan, karena mengandung senyawa yang bermanfaat bagi tubuh. <br> <strong>Beberapa contoh rempah yang berkualitas</strong> adalah lada, kunyit, dan jahe.",
+          "imageSearchQuery": "indonesian spice stall"
+        },
+        {
+          "heading": "Tips Memilih Rempah yang Berkualitas",
+          "content": "Untuk memilih rempah yang berkualitas, perlu memperhatikan beberapa hal, seperti warna, aroma, dan tekstur. <em>Rempah yang segar</em> biasanya memiliki warna yang cerah dan aroma yang kuat. Selain itu, juga perlu memperhatikan sumber rempah, karena rempah yang dibeli dari sumber yang terpercaya biasanya lebih berkualitas."
+        },
+        {
+          "heading": "Solusi Naturra Extal",
+          "content": "Naturra Extal menyediakan berbagai jenis rempah yang berkualitas, seperti lada, kunyit, dan jahe. <strong>Produk kami</strong> dipilih dari sumber yang terpercaya dan diproses dengan teknologi yang canggih, sehingga dapat menjaga kualitas dan kesegaran rempah. Salah satu produk unggulan kami adalah <strong>Premium Indonesian Cloves Lal Pari (Produk ID: 3)</strong>.",
+          "productId": 3
+        },
+        {
+          "heading": "Langkah Selanjutnya",
+          "content": "Jika Anda ingin memilih rempah yang berkualitas, maka Anda dapat mengunjungi website Naturra Extal untuk melihat berbagai jenis rempah yang tersedia. <strong>Kami</strong> juga menyediakan layanan konsultasi untuk membantu Anda memilih rempah yang tepat untuk kebutuhan Anda.",
+          "productId": 6
+        }
+      ],
+      "conclusion": "Dengan memilih rempah yang berkualitas, Anda dapat membuat makanan yang lezat dan sehat. <strong>Naturra Extal</strong> siap membantu Anda memilih rempah yang tepat untuk kebutuhan Anda."
     }
   }
 ];
