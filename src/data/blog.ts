@@ -1691,44 +1691,46 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     "id": 46,
-    "slug": "tips-memilih-rempah",
-    "title": "Tips Memilih Rempah",
+    "slug": "tips-memilih-lada-berkualitas",
+    "title": "Tips Memilih Lada Berkualitas",
     "category": "Tips and Trick",
-    "excerpt": "Panduan memilih rempah yang berkualitas untuk mendapatkan rasa yang optimal",
-    "image": "https://images.unsplash.com/photo-1652282561002-7a9d8542c26e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMHNwaWNlcyUyMG9uJTIwd29vZGVuJTIwc3Bvb258ZW58MHwwfHx8MTc3NTk2MzM4MHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "excerpt": "Panduan memilih lada berkualitas untuk meningkatkan rasa masakan",
+    "image": "https://images.unsplash.com/photo-1619385006990-e5734fa74bef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcXVhbGl0eSUyMHBlcHBlcmNvcm5zJTIwb24lMjB3b29kZW4lMjBzcG9vbnxlbnwwfDB8fHwxNzc1OTYzMzkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
     "date": "2026-04-12 10:09",
-    "author": "Moh Rifki",
+    "author": "Angga",
     "status": "draft",
     "customContent": {
-      "introduction": "Rempah-rempah merupakan salah satu bahan penting dalam memasak, karena dapat menambahkan rasa dan aroma yang khas pada makanan. Namun, memilih rempah yang berkualitas tidaklah mudah. Berikut beberapa tips untuk memilih rempah yang tepat.",
+      "introduction": "Lada adalah salah satu bumbu yang paling umum digunakan dalam masakan. Namun, untuk mendapatkan rasa yang optimal, Anda perlu memilih lada yang berkualitas. Dalam artikel ini, kita akan membahas tips dan trik untuk memilih lada yang tepat untuk kebutuhan Anda.",
       "keyPoints": [
-        "Pilih rempah yang segar dan berkualitas",
-        "Perhatikan warna dan aroma rempah",
-        "Beli rempah dari sumber yang terpercaya"
+        "Memahami jenis-jenis lada",
+        "Mengenali ciri-ciri lada berkualitas",
+        "Tips penyimpanan lada"
       ],
       "language": "id",
       "sections": [
         {
-          "heading": "Mengapa Rempah yang Berkualitas Penting?",
-          "content": "Rempah yang berkualitas dapat menambahkan rasa dan aroma yang khas pada makanan, sehingga membuat makanan menjadi lebih lezat. Selain itu, rempah yang berkualitas juga dapat membantu menjaga kesehatan, karena mengandung senyawa yang bermanfaat bagi tubuh. <br> <strong>Beberapa contoh rempah yang berkualitas</strong> adalah lada, kunyit, dan jahe.",
-          "imageSearchQuery": "indonesian spice stall"
+          "heading": "Mengenal Jenis-Jenis Lada",
+          "content": "Lada memiliki beberapa jenis, seperti lada hitam, lada putih, dan lada hijau. Lada hitam adalah yang paling umum digunakan dan memiliki rasa yang paling kuat. Lada putih memiliki rasa yang lebih lembut dan sering digunakan dalam masakan yang memerlukan rasa lada yang tidak terlalu kuat. Lada hijau memiliki rasa yang sangat kuat dan sering digunakan dalam masakan yang memerlukan rasa lada yang sangat kuat.",
+          "imageSearchQuery": "black pepper, white pepper, and green pepper on a plate",
+          "image": "https://images.unsplash.com/photo-1706707250965-1a0455b67fec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzU2ODd8MHwxfHNlYXJjaHwxfHxibGFjayUyMHBlcHBlciUyQyUyMHdoaXRlJTIwcGVwcGVyJTJDJTIwYW5kJTIwZ3JlZW4lMjBwZXBwZXIlMjBvbiUyMGElMjBwbGF0ZXxlbnwwfDB8fHwxNzc1OTYzMzkyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "imageAlt": "black pepper, white pepper, and green pepper on a plate"
         },
         {
-          "heading": "Tips Memilih Rempah yang Berkualitas",
-          "content": "Untuk memilih rempah yang berkualitas, perlu memperhatikan beberapa hal, seperti warna, aroma, dan tekstur. <em>Rempah yang segar</em> biasanya memiliki warna yang cerah dan aroma yang kuat. Selain itu, juga perlu memperhatikan sumber rempah, karena rempah yang dibeli dari sumber yang terpercaya biasanya lebih berkualitas."
+          "heading": "Mengenali Ciri-Ciri Lada Berkualitas",
+          "content": "Lada berkualitas memiliki beberapa ciri-ciri yang dapat dikenali. Pertama, lada harus memiliki aroma yang kuat dan khas. Kedua, lada harus memiliki warna yang cerah dan tidak kusam. Ketiga, lada harus memiliki ukuran yang seragam dan tidak terlalu kecil atau terlalu besar. Keempat, lada harus memiliki rasa yang kuat dan tidak terlalu lembut atau terlalu kuat."
         },
         {
-          "heading": "Solusi Naturra Extal",
-          "content": "Naturra Extal menyediakan berbagai jenis rempah yang berkualitas, seperti lada, kunyit, dan jahe. <strong>Produk kami</strong> dipilih dari sumber yang terpercaya dan diproses dengan teknologi yang canggih, sehingga dapat menjaga kualitas dan kesegaran rempah. Salah satu produk unggulan kami adalah <strong>Premium Indonesian Cloves Lal Pari (Produk ID: 3)</strong>.",
-          "productId": 3
+          "heading": "Tips Penyimpanan Lada",
+          "content": "Penyimpanan lada yang tepat dapat membantu menjaga kualitas lada. Pertama, lada harus disimpan dalam wadah yang tertutup rapat. Kedua, lada harus disimpan di tempat yang kering dan tidak lembab. Ketiga, lada harus disimpan di tempat yang jauh dari sinar matahari langsung. Dengan menyimpan lada dengan tepat, Anda dapat menjaga kualitas lada dan membuatnya tetap segar untuk waktu yang lama. Produk yang kami rekomendasikan untuk penyimpanan lada adalah <strong>Lampung Black Pepper B1</strong> dengan kode produk 7.",
+          "productId": 7
         },
         {
-          "heading": "Langkah Selanjutnya",
-          "content": "Jika Anda ingin memilih rempah yang berkualitas, maka Anda dapat mengunjungi website Naturra Extal untuk melihat berbagai jenis rempah yang tersedia. <strong>Kami</strong> juga menyediakan layanan konsultasi untuk membantu Anda memilih rempah yang tepat untuk kebutuhan Anda.",
-          "productId": 6
+          "heading": "Naturra Extal Solusi untuk Kebutuhan Lada Anda",
+          "content": "Naturra Extal adalah perusahaan yang bergerak dalam bidang perdagangan komoditas dan memiliki pengalaman yang luas dalam menyediakan lada berkualitas. Kami memiliki jaringan yang luas dengan petani dan produsen lada di Indonesia, sehingga kami dapat menyediakan lada yang segar dan berkualitas. Kami juga memiliki tim yang berpengalaman dalam menyediakan solusi untuk kebutuhan lada Anda.",
+          "productId": 8
         }
       ],
-      "conclusion": "Dengan memilih rempah yang berkualitas, Anda dapat membuat makanan yang lezat dan sehat. <strong>Naturra Extal</strong> siap membantu Anda memilih rempah yang tepat untuk kebutuhan Anda."
+      "conclusion": "Dalam memilih lada, Anda perlu memahami jenis-jenis lada, mengenali ciri-ciri lada berkualitas, dan mengetahui tips penyimpanan lada. Dengan demikian, Anda dapat mendapatkan lada yang berkualitas dan membuat masakan Anda menjadi lebih lezat. Naturra Extal adalah solusi untuk kebutuhan lada Anda, dengan pengalaman yang luas dan jaringan yang luas dengan petani dan produsen lada di Indonesia."
     }
   }
 ];
